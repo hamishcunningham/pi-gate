@@ -1,0 +1,9 @@
+Working notes for PiMo Learn
+
+- can't get pelican to process markdown or html; only rst works
+- for html
+  - no valid files found in content
+  - adding -m html gets critical error
+- stuff to try
+  - the virtual env install
+  - different python version (e.g. 3.3)
