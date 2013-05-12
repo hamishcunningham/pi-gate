@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
-#
-# template.sh
 
 # standard locals
 alias cd='builtin cd'
 P="$0"
-USAGE="`basename ${P}` [-h(elp)] [-d(ebug)] [-n(no dns)] [-i [1|2|3|...]"
+USAGE="`basename ${P}` [-h(elp)] [-d(ebug)] file(s)\n
+\tmunge html files to conform to pelican expectations"
 DBG=:
-OPTIONSTRING=hdni:
+OPTIONSTRING=hd
 
 # specific locals
-INSTANCE=0
-DNS=""
-USEDNS="1"
+FILES=
+#D=`date +"%b %d %Y"`
+#D=`date +"%a %d %B %Y"`
+D=`date +"%Y-%d-%m %H:%M"`
 
 # message & exit if exit num present
 usage() { echo -e Usage: $USAGE; [ ! -z "$1" ] && exit $1; }
@@ -29,8 +29,26 @@ do
   esac
 done 
 shift `expr $OPTIND - 1`
+FILES=$*
 
 # do some stuff
 afunction() {
-  ...
+  for f in $*
+  do
+    TITLE=`grep -i '<title' $f |sed -e 's,<title>,,I' -e 's,</title>,,I'`
+    METAS="\n\
+<meta name=\"tags\" contents=\"pimoroni,learn\" />\n\
+<meta name=\"date\" contents=\"${D}\" />\n\
+<meta name=\"category\" contents=\"pimo\" />\n\
+<meta name=\"author\" contents=\"Hamish Cunningham\" />\n\
+<meta name=\"summary\" contents=\"${TITLE}\" />\n\
+"
+    (
+      sed -n '1,/<meta /Ip' $f |grep -vi '<meta '
+      echo -e $METAS
+      tac $f |sed -n -e '1,/<meta/Ip' |tac |sed -n '2,$p'
+    ) > ${f}-$$
+    mv ${f}-$$ $f
+  done
 }
+afunction $FILES
