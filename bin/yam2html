@@ -1,0 +1,185 @@
+#!/usr/bin/env bash
+# yam2html
+
+# parameters
+P="$0"
+## resolve links - $0 may be a link
+
+# need this for relative symlinks
+while [ -h "$P" ] ; do
+  ls=`ls -ld "$P"`
+  link=`expr "$ls" : '.*-> \(.*\)$'`
+  if expr "$link" : '/.*' > /dev/null; then
+  P="$link"
+  else
+  P=`dirname "$P"`"/$link"
+  fi
+done
+
+DIR=`dirname "$P"`/..
+
+# make it fully qualified
+DIR=`cd "$DIR" > /dev/null && pwd`
+
+USAGE="`basename ${P}` [-h(elp)] [-F] [-i(ndex) index-title] file.yam ... "\
+"| -a(ll) | -r(recurse) | -t(alk) |\n"\
+"-l(anguage html|tree|latex|pretty file.yam \n"\
+"[i.e. either give it a list of yam files, or tell it to do all the .yams \n"\
+"in the current directory that are newer than their respective .htmls \n"\
+"-i builds an index.yam; -a does all in the current dir; -r recurses dirs \n"\
+"-t looks for the script to create a talk within the yam file \n"\
+"-F allows backticks in output HTMLs] \n"
+OPTIONSTRING=hai:nrtl:F
+DOALL=""
+DOINDEX=""
+RECURSE=""
+VERSION5="(YAM version 6)"
+NEW="1"
+TALK=""
+LANGUAGE="html"
+BACKTICKS=""
+if [ x"$GATEWIKI" = x ]
+then
+  GATEWIKI=$DIR
+fi
+
+# message & exit if exit num present
+usage() { echo -e Usage: $USAGE; [ ! -z "$1" ] && exit $1; }
+
+# process options
+while getopts $OPTIONSTRING OPTION
+do
+  case $OPTION in
+    h)	usage 0 ;;
+    a)	DOALL=1 ;;
+    r)	RECURSE=1 ;;
+    i)  DOINDEX=1; INDEXTITLE="$OPTARG" ;;
+    n)  NEW=1; VERSION5='(YAM version 6)' ;;
+    t)  TALK=1 ;;
+    l)  LANGUAGE="$OPTARG" ;;
+    F)  BACKTICKS=1 ;;
+    *)	usage 1 ;;
+  esac   
+done 
+shift `expr $OPTIND - 1`
+
+# convert a single file ($1)
+yamconvert() {
+  YAMFILE=
+  OUTFILE=
+  FLAGS=
+  IO=
+  SUFFIX=html
+  case $1 in
+    -?) FLAGS="$1 $2"; shift; shift; ;;
+  esac
+  case $FLAGS in
+    *latex) SUFFIX=tex; ;;
+    *tree) SUFFIX=tree; ;;
+    *pretty) SUFFIX=pretty; ;;
+  esac
+  ARG=$1
+  case $1 in
+    *\.) echo "$1 can't end in ."; exit 1; ;;
+    *.html) echo "$1 shouldn't be html"; exit 1; ;;
+    *.yam) ARG=`echo $1 |sed 's,\.yam$,,'`; ;;
+  esac
+  YAMFILE=$ARG.yam
+  OUTFILE=$ARG.$SUFFIX
+  IO="-i $YAMFILE -o $OUTFILE"
+  # to get latex output: IO="-l latex -i $YAMFILE -o $OUTFILE"
+  echo `basename $P`: converting $YAMFILE to $OUTFILE $VERSION5
+
+  # classpath:
+  # use local classes and libs (prob linked temporarily)
+  CPATH=`dirname ${P}`/../dot-grails/1.1.1/projects/cow/classes
+  CPATH=${CPATH}:`dirname ${P}`/../dot-grails/1.1.1/projects/cow/resources
+  for f in `dirname ${P}`/../lib/*.jar; do CPATH=${CPATH}:$f; done
+  for f in `dirname ${P}`/../../grails/lib/*.jar; do CPATH=${CPATH}:$f; done
+  [ -d ./grails-lib ] && \
+    for f in `dirname ${P}`/../grails-lib/*.jar; do CPATH=${CPATH}:$f; done
+
+  # ...or if we've got an installed composite jar next to the script, use that
+  [ -f `dirname $P`/yam2html.jar ] && CPATH=`dirname $P`/yam2html.jar
+  case `uname` in CYGWIN*|cygwin*) CPATH=`cygpath -wp $CPATH`; esac
+  # echo; echo $CPATH; echo
+
+  SCP=`echo ${CPATH} \
+    |sed 's,\(.............\).*\(..................\)$,\1...\2,'`
+  if [ x$NEW != x1 ]
+  then
+    echo    \
+      "java -classpath '${SCP}' ${JAVA_OPTS} gate.wiki.antlr.Tool $FLAGS ${IO}"
+    bash -c \
+      "java -classpath '${CPATH}' ${JAVA_OPTS} gate.wiki.antlr.Tool $FLAGS ${IO}"
+  else
+    echo \
+      "java -classpath '${SCP}' ${JAVA_OPTS} gate.yam.YamCommand $FLAGS ${IO}"
+    bash -c \
+      "java -classpath '${CPATH}' ${JAVA_OPTS} gate.yam.YamCommand $FLAGS ${IO}" \
+      2>&1 |grep -v '^log4j'
+  fi
+
+  # replace non-escaped forward quotes in .htmls
+  if [ ! x${BACKTICKS} = x1 -a x${SUFFIX} = xhtml ]
+  then
+    sed \
+      -e 's,\\`,xxxBACKTICKxxx,g' \
+      -e 's,`,'"'"',g' \
+      -e 's,xxxBACKTICKxxx,`,g' \
+      ${OUTFILE} >$$  # fix vim highlighting: '
+    mv $$ ${OUTFILE}
+  fi
+}
+
+# create or update index if required
+if [ "$DOINDEX" == 1 ]
+then
+  [ -f index.yam ] && mv index.yam index.yam.bak
+  [ -f index.html ] && mv index.html index.html.bak
+  echo "$INDEXTITLE" >index.yam
+  echo >>index.yam
+  echo >>index.yam
+  for f in *.yam
+  do
+    H=`echo $f |sed 's,\..*,,'`
+    echo '- %('${H}'.html)' >>index.yam
+  done
+fi
+
+# do the work
+if [ "$TALK" == 1 ]
+then
+  COMMAND=`grep '^%%% yam2html' $1 |sed 's,^%%% ,,'`
+  if [ -z "${COMMAND}" ]
+  then
+    COMMAND=`sed -n '/^yam2html/,/^[^ ]/p' $1 |sed -n '$!p'`
+  fi
+  echo "|${COMMAND}|"
+  sh -c "$COMMAND"
+elif [ "$RECURSE" == 1 ]
+then
+  DIRS=`find -type d |sed 's,^..,,' |egrep -v '/\.|^\.'`
+  for d in $DIRS
+  do
+    # echo $d
+    ( cd $d; set *.yam && [ $1 == '*.yam' ] && continue; \
+      for f in $*; do $0 -n $f; done )
+  done
+elif [ "$DOALL" != 1 ]
+then
+  for f in $*
+  do
+    yamconvert -l $LANGUAGE $f
+  done
+else
+  for f in *.yam
+  do
+    [ -f "$f" ] || break
+    BASE=`echo $f |sed 's,\.yam$,,'`
+    if [ ! -e $BASE.html -o $BASE.yam -nt $BASE.html ]
+    then
+      yamconvert -l $LANGUAGE $f
+    fi
+  done
+fi
