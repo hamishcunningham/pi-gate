@@ -30,6 +30,7 @@ do
 done 
 shift `expr $OPTIND - 1`
 FILES=$*
+$DBG doing summut on $D
 
 # do some stuff
 afunction() {

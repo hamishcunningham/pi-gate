@@ -26,6 +26,8 @@ DROPBOX_DIR=~/Dropbox/Public/
 
 
 # other vars ################################################################
+GROOVY=groovy
+JAVA=java
 SCRIPTS=${BASEDIR}/bin
 Y2H=${SCRIPTS}/yam2html
 EPI=${SCRIPTS}/enpelicanise.sh
