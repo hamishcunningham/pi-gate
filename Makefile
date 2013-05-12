@@ -1,3 +1,6 @@
+# Makefile
+
+# generated vars ############################################################
 PY=python
 PELICAN=pelican
 PELICANOPTS=
@@ -21,6 +24,14 @@ S3_BUCKET=my_s3_bucket
 
 DROPBOX_DIR=~/Dropbox/Public/
 
+
+# other vars ################################################################
+SCRIPTS=${BASEDIR}/bin
+Y2H=${SCRIPTS}/yam2html
+EPI=${SCRIPTS}/enpelicanise.sh
+
+
+# generated targets #########################################################
 help:
 	@echo 'Makefile for a pelican Web site                                        '
 	@echo '                                                                       '
@@ -86,3 +97,6 @@ github: publish
 	git push origin gh-pages
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github
+
+
+# other targets #############################################################
