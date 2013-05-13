@@ -52,11 +52,12 @@ help:
 	@echo '   s3_upload                        upload the web site via S3         '
 	@echo '   github                           upload the web site via gh-pages   '
 	@echo '                                                                       '
+	@echo '   check                            check prerequisites                '
 	@echo '   prepare                          regenerate the sources             '
 	@echo '                                                                       '
 
 
-html: clean prepare $(OUTPUTDIR)/index.html
+html: check clean prepare $(OUTPUTDIR)/index.html
 
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -104,7 +105,10 @@ github: publish
 
 
 # other targets #############################################################
+check: ; @which $(JAVA) >/dev/null && which $(GROOVY) >/dev/null || \
+	echo 'oops! no java and/or no groovy in your path? try apt-get install ...?'
+
 prepare:
 	cd $(INPUTDIR) && $(Y2H) -na && $(EPI) *.html
 
-.PHONY: prepare
+.PHONY: check prepare
