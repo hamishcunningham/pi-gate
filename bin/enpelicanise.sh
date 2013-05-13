@@ -12,7 +12,7 @@ OPTIONSTRING=hd
 FILES=
 #D=`date +"%b %d %Y"`
 #D=`date +"%a %d %B %Y"`
-D=`date +"%Y-%d-%m %H:%M"`
+D=`date +"%Y-%m-%d %H:%M"`
 
 # message & exit if exit num present
 usage() { echo -e Usage: $USAGE; [ ! -z "$1" ] && exit $1; }

@@ -28,9 +28,9 @@ DROPBOX_DIR=~/Dropbox/Public/
 # other vars ################################################################
 GROOVY=groovy
 JAVA=java
-SCRIPTS=${BASEDIR}/bin
-Y2H=${SCRIPTS}/yam2html
-EPI=${SCRIPTS}/enpelicanise.sh
+SCRIPTS=$(BASEDIR)/bin
+Y2H=$(SCRIPTS)/yam2html
+EPI=$(SCRIPTS)/enpelicanise.sh
 
 
 # generated targets #########################################################
@@ -52,9 +52,11 @@ help:
 	@echo '   s3_upload                        upload the web site via S3         '
 	@echo '   github                           upload the web site via gh-pages   '
 	@echo '                                                                       '
+	@echo '   prepare                          regenerate the sources             '
+	@echo '                                                                       '
 
 
-html: clean $(OUTPUTDIR)/index.html
+html: clean prepare $(OUTPUTDIR)/index.html
 
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -102,3 +104,7 @@ github: publish
 
 
 # other targets #############################################################
+prepare:
+	cd $(INPUTDIR) && $(Y2H) -na && $(EPI) *.html
+
+.PHONY: prepare

@@ -6,7 +6,7 @@ AUTHOR = u'Hamish Cunningham'
 SITENAME = u'Learn Pi stuff with Pimoroni'
 SITEURL = ''
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = u'en'
 
@@ -32,3 +32,4 @@ DEFAULT_PAGINATION = 10
 
 MARKUP = ('rst', 'md', 'html')
 
+#DEFAULT_DATE_FORMAT = ('%Y-%d-%m %H:%M')
