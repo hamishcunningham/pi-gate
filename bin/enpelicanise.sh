@@ -33,7 +33,7 @@ FILES=$*
 $DBG doing summut on $D
 
 # do some stuff
-afunction() {
+replace-meta-tags() {
   for f in $*
   do
     TITLE=`grep -i '<title' $f |sed -e 's,<title>,,I' -e 's,</title>,,I'`
@@ -52,4 +52,4 @@ afunction() {
     mv ${f}-$$ $f
   done
 }
-afunction $FILES
+replace-meta-tags $FILES

@@ -105,8 +105,11 @@ github: publish
 
 
 # other targets #############################################################
-check: ; @which $(JAVA) >/dev/null && which $(GROOVY) >/dev/null || \
-	echo 'oops! no java and/or no groovy in your path? try apt-get install ...?'
+# use this one if we need groovy:
+#check: ; @which $(JAVA) >/dev/null && which $(GROOVY) >/dev/null || \
+#	echo 'oops! no java and/or no groovy in your path? try apt-get install ...?'
+check: ; @which $(JAVA) >/dev/null >/dev/null || \
+	echo 'oops! no java in your path? try apt-get install ...?'
 
 prepare:
 	cd $(INPUTDIR) && $(Y2H) -na && $(EPI) *.html
