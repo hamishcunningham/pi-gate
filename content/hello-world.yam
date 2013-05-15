@@ -27,7 +27,7 @@ Circuit diagrams) were drawn and debugged using the excellent
 %(http://circuitlab.com/, CircuitLab).):
 
 %(https://www.circuitlab.com/circuit/m4rfw9/just-an-led-raspberry-pi/,
-%image(just-an-led-ras-pi.svg, just an LED, 500))
+%image(images/just-an-led-ras-pi.svg, just an LED, 500))
 
 Here D1 is the LED we're lighting up and R1 is a resistor that prevents too
 much current flowing in the circuit. V1 represents the 3.3 volt power supply
@@ -39,7 +39,7 @@ pins, however, and several _gotchas_ along the way -- for more detail see the
 discussion on %(#gpio-pins, GPIO pins) below).
 
 If we transfer this design onto our breadboard, we end up with something
-looking like this: %br %image(bbd-simple-led.jpg, simple LED breadboard, 500)
+looking like this: %br %image(images/bbd-simple-led.jpg, simple LED breadboard, 500)
 
 So far, so boring: this is pretty much the equivalent of connecting a torch
 bulb to a battery and going "ahhh" at the pretty light. More interesting,
@@ -50,7 +50,7 @@ a different pin on the GPIO header, in this case pin 11. Now spot the
 difference:
 
 %(https://www.circuitlab.com/circuit/vxz53u/driving-an-led-via-software-raspberry-pi/,
-%image(driving-an-led-via-software-ras-pi.svg, driving an LED, 500))
+%image(images/driving-an-led-via-software-ras-pi.svg, driving an LED, 500))
 
 Note the shift from pin 1 to pin 11 on the GPIO header. That's all! Now we're
 almost ready to start turning the LED on and off using software running on the
@@ -93,13 +93,13 @@ on the Pi with the pins positionned in the top right corner, not the other way
 around, so that the numbers on the diagram match up with the orientation of
 the Pi. So _do not_ do the following if you value your sanity (assuming you
 still have some left, that is%footnote(This product may contain (or have been
-written by) nuts.)): %br %image(upside-down-gpio.jpg, wrong!, 500)
+written by) nuts.)): %br %image(images/upside-down-gpio.jpg, wrong!, 500)
 
 The Pi's GPIO facilities cover a lot of other useful functions that we've not
 even hinted at so far. Consult one of %(#pi-books, the Pi books) for details,
 or see this %(http://t.co/JIRxM6qBAm, nice summary one-pager) from
 %(http://pimoroni.com/, Pimoroni), makers of the fabulously cute PiBow case --
-%br %image(pibow.jpg, PiBow, 300) %br -- and home of the
+%br %image(images/pibow.jpg, PiBow, 300) %br -- and home of the
 %(http://www.raspberrypi.org/archives/221, Pi logo's creator), Paul
 Beech%footnote(Bet you didn't know the logo incorporates a 3D buckyball. Like
 I know what one is%footnote(And to think I work just round the corner from the
@@ -145,7 +145,7 @@ to decide which mode the pins we're working with should be in, and ask
 WiringPi to set them up accordingly. Refering back to our circuit diagram,
 %br
 %(https://www.circuitlab.com/circuit/vxz53u/driving-an-led-via-software-raspberry-pi/,
-%image(driving-an-led-via-software-ras-pi.svg, driving an LED, 500)) %br
+%image(images/driving-an-led-via-software-ras-pi.svg, driving an LED, 500)) %br
 we see that header pin 11 is what we're using to drive the LED -- i.e. make an
 _output_ -- and that therefore we need to set pin 11 into output mode. For
 reasons %(#gpio-pins, discussed above) header pin 11 is known to WiringPi as
@@ -205,7 +205,7 @@ strictly speaking this is inaccurate, but it does allow us to run simulations
 on the circuits in CircuitLab. If you know a better way please let me know!):
 %br
 %(https://www.circuitlab.com/circuit/2475qd/switch-with-pull-down-resistor-raspberry-pi/,
-%image(switch-with-pull-down-resistor.svg, reading from switch, 450)) %br
+%image(images/switch-with-pull-down-resistor.svg, reading from switch, 450)) %br
 We connect the switch SW1 to the (always on) 3.3v supply (header pin 1), so
 that when the switch is in the on position it will supply the logical high
 value. Resistor R1 prevents mishaps if we accidentally set header pin 11 to
@@ -221,7 +221,7 @@ above, and a much more detailed presentation
 is in relation to the Arduino but the principles are the same.)
 
 The breadboard to implement this circuit looks like this: %br
-%image(bbd-simple-switch.jpg, simple switch breadboard, 500)
+%image(images/bbd-simple-switch.jpg, simple switch breadboard, 500)
 
 All we need now is some code to test what position the switch is in. We're
 sensing on header pin 11, which is WiringPi's 0, so we set 0 to input mode:
@@ -249,16 +249,16 @@ is that we will now both sense from the switch and respond to the sensor data
 from software.
 
 %(https://www.circuitlab.com/circuit/886nta/sensing-from-switch-and-driving-led-raspberry-pi/,
-%image(sensing-from-switch-and-driving-led.svg, switch and LED, 550))
+%image(images/sensing-from-switch-and-driving-led.svg, switch and LED, 550))
 
 Nothing new here -- we've just combined with LED driver circuit that we began
 with and the switch reader circuit that in the previous section. Here we have
 the switch sensor to the left and the LED driver to the right.
 
 The breadboard to implement this circuit looks like this: %br
-%image(bbd-switch-plus-led.jpg, switch plus LED breadboard, 500)
+%image(images/bbd-switch-plus-led.jpg, switch plus LED breadboard, 500)
 
-%image(bbd-switch-plus-led-detail.jpg, switch plus LED breadboard detail, 500)
+%image(images/bbd-switch-plus-led-detail.jpg, switch plus LED breadboard detail, 500)
 %br
 We've use a four-way switch (in "dual in line" or DIL pin style) because we
 had one handy and because it was easy to connect to the breadboard, but we're

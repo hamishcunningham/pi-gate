@@ -33,7 +33,7 @@ FILES=$*
 $DBG doing summut on $D
 
 # do some stuff
-replace-meta-tags() {
+replace-meta-tags-etc() {
   for f in $*
   do
     TITLE=`grep -i '<title' $f |sed -e 's,<title>,,I' -e 's,</title>,,I'`
@@ -48,8 +48,10 @@ replace-meta-tags() {
       sed -n '1,/<meta /Ip' $f |grep -vi '<meta '
       echo -e $METAS
       tac $f |sed -n -e '1,/<meta/Ip' |tac |sed -n '2,$p'
-    ) > ${f}-$$
+    ) | sed \
+        -e 's,\(src="\)\(images/\),\1|filename|\2,g' \
+    > ${f}-$$
     mv ${f}-$$ $f
   done
 }
-replace-meta-tags $FILES
+replace-meta-tags-etc $FILES
