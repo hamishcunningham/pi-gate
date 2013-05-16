@@ -112,8 +112,9 @@ check: ; @which $(JAVA) >/dev/null >/dev/null || \
 	echo 'oops! no java in your path? try apt-get install ...?'
 
 prepare:
-	cd $(INPUTDIR) && $(Y2H) -na && $(EPI) *.html
-	cd $(INPUTDIR)/pages && $(Y2H) -na && $(EPI) *.html
-#cd $(INPUTDIR) && mv *.html /tmp && $(Y2H) -na && $(EPI) *.html
+	cd $(INPUTDIR) && $(Y2H) -na && $(EPI) `ls *.html`
+	cd $(INPUTDIR)/basics && $(Y2H) -na && cp basics.html ../pages
+	cd $(INPUTDIR)/pages && $(Y2H) -na && \
+          $(EPI) about.html basics.html schools.html
 
 .PHONY: check prepare

@@ -35,7 +35,7 @@ MARKUP = ('rst', 'md', 'html')
 
 #DEFAULT_DATE_FORMAT = ('%Y-%d-%m %H:%M')
 #FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
-STATIC_PATHS = (['images'])
+STATIC_PATHS = (['images', 'pages/images'])
 FILENAME_METADATA = ('(?P<date>\d{4}-\d{2}-\d{2}).*')
 PAGE_EXCLUDES = (['basics'])
 ARTICLE_EXCLUDES = (['pages', 'basics'])

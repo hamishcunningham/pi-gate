@@ -53,7 +53,7 @@ replace-meta-tags-etc() {
       :
       # set date from filename instead
     else
-      METAS="${METAS}\n
+      METAS="${METAS}\n\
 <meta name=\"date\" contents=\"${TODAY}\" />\n\
 "
     fi
