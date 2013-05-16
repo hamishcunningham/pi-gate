@@ -1,0 +1,23 @@
+Basics
+
+_%(http://gate.ac.uk/hamish/, Hamish Cunningham), April 11th 2013_
+
+%contents
+
+%#interaction-electronics
+%include(0, useTitle, interaction-electronics.yam)
+
+%#hello-world
+%include(0, useTitle, hello-world.yam)
+
+%#parent-alarm
+%include(0, useTitle, parent-alarm.yam)
+
+%#flood-alarm
+%include(0, useTitle, flood-alarm.yam)
+
+%#resources
+%include(0, useTitle, resources.yam)
+
+%#warning
+%include(0, useTitle, warning.yam)
