@@ -1,0 +1,9 @@
+Sensing and Responding
+
+First things first: to begin learning about hacking electronics with the Pi, a
+good first step is to get the little beast to start interacting with the
+outside world -- lighting LEDs, responding to switches of various types,
+making alerts via Twitter or SMS.
+
+A %(pages/basics.html, tutorial on the basics) of sensing and responsing with the
+Pi.
