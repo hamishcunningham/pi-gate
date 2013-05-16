@@ -10,9 +10,9 @@ OPTIONSTRING=hd
 
 # specific locals
 FILES=
-#D=`date +"%b %d %Y"`
-#D=`date +"%a %d %B %Y"`
-D=`date +"%Y-%m-%d %H:%M"`
+#TODAY=`date +"%b %d %Y"`
+#TODAY=`date +"%a %d %B %Y"`
+TODAY=`date +"%Y-%m-%d %H:%M"`
 
 # message & exit if exit num present
 usage() { echo -e Usage: $USAGE; [ ! -z "$1" ] && exit $1; }
@@ -30,15 +30,17 @@ do
 done 
 shift `expr $OPTIND - 1`
 FILES=$*
-$DBG doing summut on $D
+$DBG doing summut on $TODAY
 
 # do some stuff
 replace-meta-tags-etc() {
   for f in $*
   do
     TITLE=`grep -i '<title' $f |sed -e 's,<title>,,I' -e 's,</title>,,I'`
+    FBASE=`basename $f |sed 's,\.html$,,'`
     METAS="\n\
-<meta name=\"date\" contents=\"${D}\" />\n\
+<meta name=\"date\" contents=\"${TODAY}\" />\n\
+<meta name=\"slug\" contents=\"${FBASE}\" />\n\
 <meta name=\"category\" contents=\"Tutorials\" />\n\
 <meta name=\"author\" contents=\"Hamish Cunningham\" />\n\
 <meta name=\"summary\" contents=\"${TITLE}\" />\n\
