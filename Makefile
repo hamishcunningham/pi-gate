@@ -113,5 +113,7 @@ check: ; @which $(JAVA) >/dev/null >/dev/null || \
 
 prepare:
 	cd $(INPUTDIR) && $(Y2H) -na && $(EPI) *.html
+	cd $(INPUTDIR)/pages && $(Y2H) -na && $(EPI) *.html
+#cd $(INPUTDIR) && mv *.html /tmp && $(Y2H) -na && $(EPI) *.html
 
 .PHONY: check prepare
