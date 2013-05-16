@@ -37,9 +37,8 @@ replace-meta-tags-etc() {
   for f in $*
   do
     TITLE=`grep -i '<title' $f |sed -e 's,<title>,,I' -e 's,</title>,,I'`
-    FBASE=`basename $f |sed 's,\.html$,,'`
+    FBASE=`basename $f |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
     METAS="\n\
-<meta name=\"date\" contents=\"${TODAY}\" />\n\
 <meta name=\"slug\" contents=\"${FBASE}\" />\n\
 <meta name=\"category\" contents=\"Tutorials\" />\n\
 <meta name=\"author\" contents=\"Hamish Cunningham\" />\n\
@@ -47,6 +46,17 @@ replace-meta-tags-etc() {
 "
 # no tags for now, use categories instead
 # <meta name=\"tags\" contents=\"pimoroni,learn\" />\n\
+
+    # set date from filename, or use TODAY
+    if `echo $f | grep -q '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-'`
+    then
+      :
+      # set date from filename instead
+    else
+      METAS="${METAS}\n
+<meta name=\"date\" contents=\"${TODAY}\" />\n\
+"
+    fi
 
     (
       sed -n '1,/<meta /Ip' $f |grep -vi '<meta '
