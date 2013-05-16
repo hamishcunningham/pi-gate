@@ -38,12 +38,14 @@ replace-meta-tags-etc() {
   do
     TITLE=`grep -i '<title' $f |sed -e 's,<title>,,I' -e 's,</title>,,I'`
     METAS="\n\
-<meta name=\"tags\" contents=\"pimoroni,learn\" />\n\
 <meta name=\"date\" contents=\"${D}\" />\n\
-<meta name=\"category\" contents=\"pimo\" />\n\
+<meta name=\"category\" contents=\"Tutorials\" />\n\
 <meta name=\"author\" contents=\"Hamish Cunningham\" />\n\
 <meta name=\"summary\" contents=\"${TITLE}\" />\n\
 "
+# no tags for now, use categories instead
+# <meta name=\"tags\" contents=\"pimoroni,learn\" />\n\
+
     (
       sed -n '1,/<meta /Ip' $f |grep -vi '<meta '
       echo -e $METAS
