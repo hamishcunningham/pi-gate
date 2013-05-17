@@ -1,0 +1,9 @@
+AuthName "Temporary site-level password for pimo-learn"
+AuthType Basic
+AuthUserFile htpasswd
+
+order deny,allow
+deny from all
+
+require user pimo
+satisfy any
