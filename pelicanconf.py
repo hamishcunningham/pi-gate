@@ -34,7 +34,7 @@ DEFAULT_PAGINATION = 10
 MARKUP = ('rst', 'md', 'html')
 
 #DEFAULT_DATE_FORMAT = ('%Y-%d-%m %H:%M')
-#FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
+FILES_TO_COPY = (('.htaccess', '.htaccess'), ('.htpasswd', '.htpasswd'),)
 STATIC_PATHS = (['images', 'pages/images'])
 FILENAME_METADATA = ('(?P<date>\d{4}-\d{2}-\d{2}).*')
 PAGE_EXCLUDES = (['basics'])
