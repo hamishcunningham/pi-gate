@@ -71,6 +71,7 @@ replace-meta-tags-etc() {
     # remove first h1 heading
     sed -n '1,/^<h1 class/p' ${f}-$$ | grep -v '^<h1 class' >${f}
     sed -n '/^<h1 class/,$p' ${f}-$$ | sed -n '2,$p' >>${f}
+    rm ${f}-$$
   done
 }
 replace-meta-tags-etc $FILES
