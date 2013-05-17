@@ -111,6 +111,7 @@ github: publish
 check: ; @which $(JAVA) >/dev/null >/dev/null || \
 	echo 'oops! no java in your path? try apt-get install ...?'
 
+# this does regeneration from GATEwiki sources and the like
 prepare:
 	cd $(INPUTDIR) && $(Y2H) -na && $(EPI) `ls *.html`
 	cd $(INPUTDIR)/basics && $(Y2H) -na && cp basics.html ../pages

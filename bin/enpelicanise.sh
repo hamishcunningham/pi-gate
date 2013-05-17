@@ -36,6 +36,7 @@ $DBG doing summut on $TODAY
 replace-meta-tags-etc() {
   for f in $*
   do
+    # set up metadata for this file
     TITLE=`grep -i '<title' $f |sed -e 's,<title>,,I' -e 's,</title>,,I'`
     FBASE=`basename $f |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
     METAS="\n\
@@ -58,6 +59,7 @@ replace-meta-tags-etc() {
 "
     fi
 
+    # add the metas
     (
       sed -n '1,/<meta /Ip' $f |grep -vi '<meta '
       echo -e $METAS
@@ -65,7 +67,10 @@ replace-meta-tags-etc() {
     ) | sed \
         -e 's,\(src="\)\(images/\),\1|filename|\2,g' \
     > ${f}-$$
-    mv ${f}-$$ $f
+
+    # remove first h1 heading
+    sed -n '1,/^<h1 class/p' ${f}-$$ | grep -v '^<h1 class' >${f}
+    sed -n '/^<h1 class/,$p' ${f}-$$ | sed -n '2,$p' >>${f}
   done
 }
 replace-meta-tags-etc $FILES
