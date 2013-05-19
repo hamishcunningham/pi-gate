@@ -41,7 +41,7 @@ replace-meta-tags-etc() {
     FBASE=`basename $f |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
     METAS="\n\
 <meta name=\"slug\" contents=\"${FBASE}\" />\n\
-<meta name=\"category\" contents=\"Tutorials\" />\n\
+<meta name=\"category\" contents=\"Posts\" />\n\
 <meta name=\"author\" contents=\"Hamish Cunningham\" />\n\
 <meta name=\"summary\" contents=\"${TITLE}\" />\n\
 "
