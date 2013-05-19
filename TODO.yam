@@ -1,5 +1,9 @@
 PimoLearn TODOs
 
+- infrastructure
+  - change all relative URLs to be prefixed "|filename|" (and revert the
+    pigs-and-pi links)
+  - facility for more authors in the metadata
 - content
   - finish the initial topical posts re. the 3 main categories
   - finish TODOs in Basics
