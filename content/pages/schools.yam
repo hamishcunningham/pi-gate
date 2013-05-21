@@ -45,12 +45,12 @@ from elegant, but computing was creative, it was hands-on, it was even
 %(http://www.theregister.co.uk/2013/04/09/feature_ten_sexy_computers_roundup/page5.html,
 quite cool).
 
-Today the UK Government believes in '_preparing children for the digital
+Today the UK Government believes in `_preparing children for the digital
 world_', especially if the UK is to keep up with emerging economies where
 schools focus on computer skills from an early age. In fact, children already
 live in a digital world. They are quick to pick up and use whatever devices
 they have around them. Where schools come in is giving them a different way of
-thinking about computers. A way of creating and participating as well as
+thinking about computers. A way of _creating and participating_ as well as
 consuming digital media. Of understanding how computers work, and how they
 shape our way of life.
 
@@ -71,15 +71,16 @@ certain this will include a much stronger element of
 %(http://en.wikipedia.org/wiki/Computer_science, computer science). That's
 understanding how computers work and making them do things, to you and me.
 It's writing your own apps and games, creating animations, or carrying out
-some of the %(basics.html, projects) you'll find on this site.
-That has to be good news for students with an interest in ICT.
+some of the %(basics.html, projects) you'll find on this site. That has to be
+good news for students with an interest in getting beyond word processing or
+spreadsheets and finding out How Stuff Works for a change.
 
 But it might be good news for other subject areas too. Understanding how
 digital systems work means thinking logically, and often mathematically.
 Patterns in data can open our eyes to the world around us -- to how birds
-flock or populations grow. And whether we are writing elegant programs or
-building fabulous digital artefacts, using computers can develop our
-creativity, our concentration and our artistry.
+flock, or populations grow, or economic crises play out. And whether we are
+writing elegant programs or building fabulous digital artefacts, using
+computers can develop our creativity, our concentration and our artistry.
 
 Perhaps most importantly, the new curriculum asks schools to build '_a
 critical understanding of technology's impact on the individual and society_'.
@@ -120,7 +121,6 @@ going to provide a great learning experience. How do teachers get confident
 and skilful enough to make programming fun? Who can help them to see the
 opportunities across the curriculum, not just in ICT? 
 
-Pimoroni is working with schools to make the new ICT curriculum a reality. We
-offer coding days, hack-tivities (raspberry pi activities mapped to specific
-aspects of the national curriculum), an online support community and online
-tutorials aimed specifically at school staff and students...
+One of our ambitions for %(http://learn.pimoroni.com/, learn.pimoroni.com) is
+to collect some of the materials and discussions that can help get this ball
+rolling. Watch this space!

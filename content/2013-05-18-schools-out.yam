@@ -3,13 +3,25 @@ School's Out?
 The argument goes like this:
 
 Back in the Good Old Days (a period of time roughly co-extensive with the Lush
-Growth Age of Eben Upton's tonsorial offering) there were hackable devices of
-an affordable nature (think BBC Micro, ZX Spectum and the like). 
+Growth Age of %(TODO, Eben Upton)'s tonsorial offering) there were hackable
+devices of an affordable nature (think BBC Micro, ZX Spectum and the like).
+Fast forward to the tennies and the home computers are either expensive
+machines that no one wants the rugrats to hack at, or games machines which the
+industry wastes billions on locking down so tightly that only an experienced
+hacker can get in. 
 
-...
+One of the main aims of the Pi's inventors was to get back to a situation
+where kids can get their hands on a cheap, open platform that they can take
+control of, write code on, and generally be creative with while learning to
+intervene in the digital world as more than just a consumer. (If all these
+skills migrate into mega-corp multinationals, the UK's computer science and
+engineering base -- not to mention your ordinary citizen in general -- stands
+less and less chance of joining the magic circles that dictate our
+technological futures.)
 
-One of the main aims of the Pi's inventors ...
-
-The UK's school curriculum for computing and IT is ...
-
-%(pages/schools.html, some stuff here) ...
+That I'm writing this now, that %(http://shop.pimoroni.com/, PiMoroni) exists,
+and that there are more than 1 million Raspberry Pis in the world demonstrates
+the wide currency of this type of idea, and even the UK government has woken
+up and taken notice. The UK's school curriculum for computing and IT is now in
+fermet, and with luck there will be a whole new ethos coming to 
+%(pages/schools.html, schools computing) not too long from now.
