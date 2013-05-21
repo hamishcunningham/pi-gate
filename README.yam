@@ -1,0 +1,33 @@
+README
+
+How to work with these sources:
+
+- send your github ID to hamish and get authorised
+- install git, java and pelican
+- git clone git@github.com:hamishcunningham/pimo-learn.git
+- cd pimo-learn
+- make html
+- make serve
+
+hey presto you should have the site running on http://localhost:8000
+
+you can then edit content/... to your heart's content; when you want to regen
+the on-line version just do "make html" again
+
+new posts should be in the form content/YYYY-MM-DD-the-title.html (you can use
+GATEwiki syntax -- .yam -- or markdown or other Pelican-friendly formats if
+you like)
+
+when you want to share your changes:
+
+git commit -vam "what I just did"
+git push
+
+latest draft is at http://tinyurl.com/pimo-draft  (u: pimo   p: learn)
+
+*relative links* between pages, images etc. should just work within the
+content tree (no need to use Pelican's |filename| syntax). the exception is
+links that reference another page and an anchor (e.g.
+^basics.html#parent-alarm^). the workaround for pages (which live in the
+^content/pages^ directory) is to prefix these with /pages). there's currently
+no workaround for posts...
