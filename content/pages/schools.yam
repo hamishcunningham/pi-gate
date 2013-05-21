@@ -1,17 +1,17 @@
 Schools
 
-_%(|filename|about.html, An Other), May 20th 2013_
+_%(about.html#elearn, Anne Other), May 20th 2013_
 
 %contents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%1 Computers in the world
+%1 Computers in the World
 
 The real world is saturated with computer code. It's in everything from
 fridges to singing birthday cards. Right now, you are standing in a place rich
 in %(http://youtu.be/bfkCdir-yO8, geospatial data), where if you can get a
 mobile signal you can upload a photograph,
-%(http://en.wikipedia.org/wiki/Tag_(metadata), tag it), and let your friends
+%(http://en.wikipedia.org/wiki/Tag_\(metadata\), tag it), and let your friends
 know what it feels like. Unless you cycle, or use a very old car, you'll be
 depending on computers to get to wherever you're going next. 
 
@@ -32,7 +32,7 @@ or be programmed).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%1 Computers in education
+%1 Computers in Education
 
 When the first computers started appearing in
 %(http://en.wikipedia.org/wiki/BASIC_programming_language#Explosive_growth:_the_home_computer_era,
@@ -71,7 +71,7 @@ certain this will include a much stronger element of
 %(http://en.wikipedia.org/wiki/Computer_science, computer science). That's
 understanding how computers work and making them do things, to you and me.
 It's writing your own apps and games, creating animations, or carrying out
-some of the %(|filename|basics.html, projects) you'll find on this site.
+some of the %(basics.html, projects) you'll find on this site.
 That has to be good news for students with an interest in ICT.
 
 But it might be good news for other subject areas too. Understanding how
@@ -103,7 +103,7 @@ The Pi isn't just a programming device, though. The processor is powerful
 enough to support excellent multimedia, making it attractive to kids who are
 into design and animation as well. With a range of devices and add-ons, it can
 be many different things -- a robot remote control, a
-%(|filename|basics.html#parent-alarm, parent alarm), a window on the
+%(basics.html#parent-alarm, parent alarm), a window on the
 internet. And the Pi can be used for home-school learning: light and robust
 enough to be carried in a school bag, cheap enough for kids to have one each.
 It also has its own %(http://www.raspberrypi.org/phpBB3/, community) where
@@ -112,7 +112,7 @@ they are doing for schoolwork, for fun.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%1 Getting started with Raspberry Pi
+%1 Getting Started With Raspberry Pi
 
 By now you probably have your own ideas about how the Pi could be valuable in
 your school curriculum. But you know the technology by itself isn't going to

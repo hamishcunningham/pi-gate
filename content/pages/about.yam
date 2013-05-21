@@ -6,6 +6,7 @@ Jon Williamson). On %(http://learn.pimoroni.com/, learn.pimoroni.com) we're
 building a Pi hacking space for kids, teachers, nerds and other misfits with
 guest Pi-isms from:
 ---
+%#hamish
 %[
 |
 *Hamish Cunningham*
@@ -30,6 +31,7 @@ Tracey Emin's bed, 150)
 |
 %]
 ---
+%#pete
 %[
 |
 *Peter Wallis*
@@ -52,14 +54,15 @@ When you take an EEG image of Pete's brain it looks like this:
 |
 %]
 ---
+%#elearn
 %[
 |
-*Helen Beetham*
+*Anne Other*
 
-%image(https://si0.twimg.com/profile_images/1555234046/HelenAltC11_small.jpg,
-Helen Beetham, 125) |
+%image(http://upload.wikimedia.org/wikipedia/en/a/af/Question_mark.png,
+Anne Other, 125) |
 %br %br
-%(http://design-4-learning.blogspot.com/, Helen) is an eLearning guru
+Anne is an eLearning guru
 who's working on filling the skills gap between the UK's ambitions to replace
 word processing with something actually worth knowing on the one hand, and the
 ability of our schools to start teach computing at very short notice on the
@@ -68,11 +71,9 @@ other.
 | %\ %\ %\ %\ %\ %\ %\  %\ %\ %\ %\ %\ %\ %\  %\ %\ %\ %\ %\ %\ %\ 
 |
 %br %br
-%(http://www.beyondcurrenthorizons.org.uk/helen-beetham/,
 %image(http://www.transitiontogether.org.uk/wp-content/uploads/2012/06/contactbike.jpg,
-Tandem++, 150))
+Tandem++, 150)
 (Cycling on Dartmoor is easier if you bring your friends, apparently.)
 |
 %]
-%%% %(http://www.transitiontogether.org.uk/wp-content/uploads/2012/07/SocialimpactsofTransitionStreets-finalreport.pdf,
 ---
