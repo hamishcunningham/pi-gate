@@ -1,5 +1,126 @@
 Schools
 
-TODO
+_%(|filename|about.html, An Other), May 20th 2013_
 
-One of the main aims of the Pi's inventors ...
+%contents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Computers in the world
+
+The real world is saturated with computer code. It's in everything from
+fridges to singing birthday cards. Right now, you are standing in a place rich
+in %(http://youtu.be/bfkCdir-yO8, geospatial data), where if you can get a
+mobile signal you can upload a photograph,
+%(http://en.wikipedia.org/wiki/Tag_(metadata), tag it), and let your friends
+know what it feels like. Unless you cycle, or use a very old car, you'll be
+depending on computers to get to wherever you're going next. 
+
+But forget about the real world for a minute. Think about how much of your
+life goes on in virtual spaces. Shopping, booking appointments, catching up
+with friends, looking for the next thing to do -- or the next person to do it
+with. Think about how many of the messages that shape your thinking arrive
+through
+%(http://www.pbs.org/teachers/digital-media-literacy/pbs-resources/understanding-media-messages/,
+digital media).
+
+In a very real sense, the people who write our code, create our world.
+And the power of code is only going to get bigger. Shouldn't everyone
+have the chance to create their own world, and not simply wander
+through the creations of other people? Because that is really the
+choice -- to %(http://www.rushkoff.com/program-or-be-programmed/, programme
+or be programmed).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Computers in education
+
+When the first computers started appearing in
+%(http://en.wikipedia.org/wiki/BASIC_programming_language#Explosive_growth:_the_home_computer_era,
+homes and schools), back in the late 1970s, that was what kids used them for
+-- programming. OK the
+%(http://www.flickr.com/photos/anachrocomputer/4721079554/, graphics were
+rubbish), and the language --
+%(http://en.wikipedia.org/wiki/BASIC_programming_language, BASIC) -- was far
+from elegant, but computing was creative, it was hands-on, it was even
+%(http://www.theregister.co.uk/2013/04/09/feature_ten_sexy_computers_roundup/page5.html,
+quite cool).
+
+Today the UK Government believes in '_preparing children for the digital
+world_', especially if the UK is to keep up with emerging economies where
+schools focus on computer skills from an early age. In fact, children already
+live in a digital world. They are quick to pick up and use whatever devices
+they have around them. Where schools come in is giving them a different way of
+thinking about computers. A way of creating and participating as well as
+consuming digital media. Of understanding how computers work, and how they
+shape our way of life.
+
+A recent European %(http://ec.europa.eu/education/news/20130419_en.htm, survey
+of ICT in education) found that teachers and students alike are keen to make
+more creative use of computers. But teachers often lack the specialist
+training they need, and there may not be enough computers to go round, or
+enough time in the curriculum to cover more than the basics.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Computers in the UK Curriculum
+
+This is where the new UK
+%(http://academy.bcs.org/sites/academy.bcs.org/files/ICT%20POS%20Final%20Draft%2030%20Nov%202012_0.pdf,
+ICT Curriculum for Schools) comes in. Though the debate goes on, it seems
+certain this will include a much stronger element of
+%(http://en.wikipedia.org/wiki/Computer_science, computer science). That's
+understanding how computers work and making them do things, to you and me.
+It's writing your own apps and games, creating animations, or carrying out
+some of the %(|filename|basics.html, projects) you'll find on this site.
+That has to be good news for students with an interest in ICT.
+
+But it might be good news for other subject areas too. Understanding how
+digital systems work means thinking logically, and often mathematically.
+Patterns in data can open our eyes to the world around us -- to how birds
+flock or populations grow. And whether we are writing elegant programs or
+building fabulous digital artefacts, using computers can develop our
+creativity, our concentration and our artistry.
+
+Perhaps most importantly, the new curriculum asks schools to build '_a
+critical understanding of technology's impact on the individual and society_'.
+How much easier that is if you have been behind the screen, and had a chance
+to experience hands-on how these amazing, world-creating tools work.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Why the Pi?
+
+The Raspberry Pi is a computer that schools don't need to worry about kids
+breaking, or abusing, or using to endanger their safety -- providing they are
+careful with the soldering iron. The Pi is designed to spend much of its life
+in pieces. It runs a free, open source operating system (Linux) and uses the
+cheapest components that are robust enough to do the job. But the Pi is mainly
+cheap because it isn't a finished, out-of-the-box product. It's a project --
+or rather, it's a series of projects. Getting it to do the many useful things
+it can do requires brainwork and some old-fashioned skills of the hand. 
+
+The Pi isn't just a programming device, though. The processor is powerful
+enough to support excellent multimedia, making it attractive to kids who are
+into design and animation as well. With a range of devices and add-ons, it can
+be many different things -- a robot remote control, a
+%(|filename|basics.html#parent-alarm, parent alarm), a window on the
+internet. And the Pi can be used for home-school learning: light and robust
+enough to be carried in a school bag, cheap enough for kids to have one each.
+It also has its own %(http://www.raspberrypi.org/phpBB3/, community) where
+anyone can share projects and swap ideas, so kids can see people doing what
+they are doing for schoolwork, for fun.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Getting started with Raspberry Pi
+
+By now you probably have your own ideas about how the Pi could be valuable in
+your school curriculum. But you know the technology by itself isn't going to
+going to provide a great learning experience. How do teachers get confident
+and skilful enough to make programming fun? Who can help them to see the
+opportunities across the curriculum, not just in ICT? 
+
+Pimoroni is working with schools to make the new ICT curriculum a reality. We
+offer coding days, hack-tivities (raspberry pi activities mapped to specific
+aspects of the national curriculum), an online support community and online
+tutorials aimed specifically at school staff and students...
