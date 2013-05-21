@@ -13,7 +13,7 @@ environment. His son, in contrast, was served up with a diet of Microsoft word
 processing, and knows enough about computing to fill in the back of a postage
 stamp as a result.
 
-So: let's %(|filename|pages/basics.html, get hacking on the Pi), and help get
-%(|filename|pages/schools.html, Pi stuff into schools) so that kids have a
+So: let's %(pages/basics.html, get hacking on the Pi), and help get
+%(pages/schools.html, Pi stuff into schools) so that kids have a
 chance to stay ahead of the technology wave as producers and not just
 consumers!

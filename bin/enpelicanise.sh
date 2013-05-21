@@ -36,12 +36,14 @@ $DBG doing summut on $TODAY
 replace-meta-tags-etc() {
   for f in $*
   do
+    echo enpelicanisating $f ...
+
     # set up metadata for this file
     TITLE=`grep -i '<title' $f |sed -e 's,<title>,,I' -e 's,</title>,,I'`
     FBASE=`basename $f |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
     METAS="\n\
 <meta name=\"slug\" contents=\"${FBASE}\" />\n\
-<meta name=\"category\" contents=\"Posts\" />\n\
+<meta name=\"category\" contents=\"News\" />\n\
 <meta name=\"author\" contents=\"Hamish Cunningham\" />\n\
 <meta name=\"summary\" contents=\"${TITLE}\" />\n\
 "
@@ -64,8 +66,17 @@ replace-meta-tags-etc() {
       sed -n '1,/<meta /Ip' $f |grep -vi '<meta '
       echo -e $METAS
       tac $f |sed -n -e '1,/<meta/Ip' |tac |sed -n '2,$p'
+
+    # tell pelican about relative links
     ) | sed \
         -e 's,\(src="\)\(images/\),\1|filename|\2,g' \
+        -e 's,?m=1",",g' \
+        -e 's,h\(ref="#\),hX\1,g' \
+        -e 's,h\(ref="/\),hX\1,g' \
+        -e 's,h\(ref="http\),hX\1,g' \
+        -e 's,h\(ref=".filename\),hX\1,g' \
+        -e 's,\(href="\),\1|filename|,g' \
+        -e 's,hXref,href,g' \
     > ${f}-$$
 
     # remove first h1 heading
