@@ -1,9 +1,39 @@
 Sensing and Responding
 
+%2* _(parent avoidance with the Raspberry Pi, and other simple electronics
+projects)_
+
 First things first: to begin learning about hacking electronics with the Pi, a
 good first step is to get the little beast to start interacting with the
 outside world -- lighting LEDs, responding to switches of various types,
 making alerts via Twitter or SMS.
 
-A %(pages/basics.html, tutorial on the basics) of sensing and responsing with the
-Pi.
+We've made this %(pages/basics.html, tutorial on the basics) of sensing and
+responsing with the Pi, including:
+
+- %(/pages/basics.html#parent-alarm, a parent alarm)
+- %(/pages/basics.html#flood-alarm, a flood alert)
+- %(/pages/basics.html#resources, where to find out more)
+
+Getting busy with a breadboard and a few simple components is a great way to
+get kids interested in the potential of the device (in ways that just
+introducing them to Scratch or Python may not). For example, when I gave a Pi
+to my niece (who's in her early teens) she was politely interested, but no
+more than that. She has already done some Scratch programming at school, and
+regularly uses a PC, a Kindle and a Blackberry. The Pi is just another
+computer for her -- and rather a slow one, at that. 
+
+I've had similar experiences with several other people. For those who are
+lucky enough to have lots of access to computers already, the fact that the Pi
+delivers a magical amount of oomph for such a cheap package is not enough to
+really spark their interest.
+
+To try and make things more interesting, we've started some tutorial materials
+that hook up simple electronics to do things like warning you if your parent
+is coming up the stairs, or sending you an SMS if the bathroom is flooded, and
+the like. The first few projects are all about %(pages/basics.html, sensing
+and responding): getting the Pi to interact with the outside world. All you'll
+need is a basic electronics kit (breadboard, resistors, LEDs, switches, a
+transistor or two, a buzzer, ...), some spare time and, preferably, no
+%(/pages/basics.html#warning, allergy to nerds).
+
