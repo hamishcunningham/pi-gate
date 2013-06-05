@@ -2,10 +2,15 @@ PimoLearn TODOs
 
 - infrastructure
   - facility for more authors in the metadata
+  - tag and/or category metadata (e.g. notipi should be "software", "linux";
+    basics should be "hardware", "gpio", "pi-tronics")
 - content
-  - finish the initial topical posts re. the 3 main categories
+  - blog post > 5th june < 10 june to break the run of flood alarm referants
+  - finish notipi
   - finish TODOs in Basics
   - add some videos
 - misc
   - fix styling of <sup>
   - reshoot the breadboard images?
+  - some better CSS
+  - social media links
