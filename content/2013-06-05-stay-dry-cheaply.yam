@@ -1,0 +1,30 @@
+Stay Dry Cheaply
+
+One of the projects in our %(pages/basics.html, basic pi-tronics) tutorial is
+a %(/pages/basics.html#flood-alarm, simple flooding alarm) which senses
+unwanted water flows and sends a text message (or makes a tweet, or etc.) to
+give you a heads up before things get extremely damp.
+
+This type of thing is a good illustration of how the Pi can result in *really
+cheap* solutions -- I just came across a commercial alternative to this
+circuit (but without the SMS functions) that costs more than £400! The
+Pi-based version has a total materials cost of around £50. Quite a saving.
+
+%%% http://www.serverscheck.com/
+
+That's not to say that the commercial version is overpriced; it comes in a
+lovely metal box, has full service and support behind it, etc. etc. But for
+someone who just wants something simple and cheap (and fun to build!) the Pi
+really wins on price.
+
+Some of the reasons for this are:
+
+- DIY is cheap, at least when the base materials are also cheap
+- a general purpose computer means much less need for (expensive) specialist
+  hardware
+- sharing: the rapid growth of the Pi community and their philosophy of
+  openness and sharing means it is easy to build on the work of others (which
+  also goes for the Linux operating system that the Pi runs on)
+
+Ok, I used up several evenings and weekends, but it was more fun than watching
+the telly :-)
