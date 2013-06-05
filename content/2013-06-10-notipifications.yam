@@ -1,0 +1,23 @@
+Help! My Toast is Burning!
+
+No matter how much you love your Pi, some time or other you will inevitably be
+forced to leave it behind while you do something boring like go to work, or
+listen to your parents bang on about the need to get qualified, or another of
+those little annoyances that life seems so full of. If your Pi is
+%(/posts/2013/04/11/sensing-and-responding/, running a sensor) that you need
+to be kept in touch with, then you need a way of getting your Pi to notify you
+when something important happens. %(/pages/about.html#hamish, Hamish) uses the
+%(/pages/basics.html#flood-alarm, flood alarm) to keep a check on some dodgy
+plumbing in his basement, for example, and needs to know PDQ if the house
+starts to fill up with cold wet stuff.
+
+Our latest tutorial takes us through three options for telling the outside
+world about Stuff Going On from your Pi:
+
+# via SMS text message to your phone, using %(/pages/notipi.html#bulk-sms,
+  a web service)
+# via SMS text message to your phone, using %(/pages/notipi.html#nokia-sms, a
+  phone) attached to the Pi
+# via a %(/pages/notipi.html#pi-twitter, Twitter post)
+
+Happy notipifications ☺

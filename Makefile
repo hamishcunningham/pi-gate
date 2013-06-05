@@ -98,6 +98,6 @@ prepare:
 	cd $(INPUTDIR) && $(Y2H) -na && $(EPI) `ls *.html`
 	cd $(INPUTDIR)/basics && $(Y2H) -na && cp basics.html ../pages
 	cd $(INPUTDIR)/pages && $(Y2H) -na && \
-          $(EPI) about.html basics.html schools.html
+          $(EPI) about.html basics.html schools.html notipi.html
 
 .PHONY: check prepare

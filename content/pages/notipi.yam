@@ -1,0 +1,29 @@
+NotiPi
+
+_Notifications via SMS Text or Twitter from the Pi_
+
+_%(/pages/about.html#lego, Fred Sonnenwald) and
+%(/pages/about.html#hamish, Hamish Cunningham), June 2013_
+
+%contents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#bulk-sms
+%1 Pi Texting via a Web Service
+
+TODO Fred
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#nokia-sms
+%1 Pi Texting via a Phone Handset
+
+TODO Fred
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#pi-twitter
+%1 Pi Messaging via Twitter
+
+TODO Hamish & Dominic
