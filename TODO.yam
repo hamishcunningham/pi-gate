@@ -1,6 +1,8 @@
 PimoLearn TODOs
 
 - infrastructure
+  - move pifi-git to git@github.com:hamishcunningham/pi-tronics.git
+    - help pete add his sources there
   - facility for more authors in the metadata
   - tag and/or category metadata (e.g. notipi should be "software", "linux";
     basics should be "hardware", "gpio", "pi-tronics")
