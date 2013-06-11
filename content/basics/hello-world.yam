@@ -4,8 +4,7 @@ Pretty much the simplest thing we can do with the Pi's GPIO header is to light
 up an LED%footnote(LED: Light Emitting Diode.) -- let's make this our _Hello
 World!_%footnote('Hello world!' is
 %(https://en.wikipedia.org/wiki/Hello_world_program, by convention) the first
-program we write in a new language or for a new device.). (If you've not done
-this type of thing before, please read %(#warning, this warning) first.)
+program we write in a new language or for a new device.) example.
 
 Materials used:
 - a breadboard
