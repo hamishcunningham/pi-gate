@@ -19,6 +19,11 @@
         <style type="text/css">
         sup {font-size: 80%; position: relative; bottom: .8ex;}
         </style>
+
+        <!-- sharethis -->
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "e5977250-e340-464c-922e-c1b521b27184", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 </head>
 
 <body id="index" class="home">
@@ -41,6 +46,15 @@
                 {% endfor %}
                 {% endif %}
                 </ul></nav>
+<span class='st_twitter_large' st_via='{{TWITTER_USERNAME}}' displayText='Tweet'></span>
+<span class='st_identi_large' displayText='identi.ca'></span>
+<span class='st_email_large' displayText='Email'></span>
+<span class='st_sharethis_large' displayText='ShareThis'></span>
+<span class='st_linkedin_large' displayText='LinkedIn'></span>
+<span class='st_googleplus_large' displayText='Google +'></span>
+<span class='st_facebook_large' displayText='Facebook'></span>
+<span class='st_citeulike_large' displayText='CiteULike'></span>
+<span class='st_tumblr_large' displayText='Tumblr'></span>
         </header><!-- /#banner -->
         {% block content %}
         {% endblock %}
@@ -73,11 +87,12 @@
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
+                <!-- <address id="about" class="vcard body">
                 Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+                </address> --><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                <!-- <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing
+                Magazine</a>, thanks!</p> -->
         </footer><!-- /#contentinfo -->
 
 {% include 'analytics.html' %}
