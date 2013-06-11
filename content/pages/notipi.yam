@@ -44,11 +44,13 @@ guys use. (I keep getting messages about debt consolidation annoyingly.)
 Unfortunately we can't just use any company that provides this service. The
 RaspberryPi is running Linux and isn't on an Intel so we need a service
 that's platform and architecture independent. Browsing and googling around
-led us to %(http://www.bulksms.co.uk/, BulkSMS). They quite nicely have
-published documentation for their %(https://www.bulksms.co.uk/docs/eapi/, HTTP API).
-This is the written explanation of how programs can talk to their service,
-which in thise case is done in a way similar accessing a web-page, but
-through a program. Quite happily there are lots of ways to do this on Linux.
+led us to %(http://www.bulksms.co.uk/, BulkSMS). Sending a text with them
+costs about 5.4p, and you have to get at least 200 texts to send. Even
+better though, they quite nicely have published documentation for their
+%(https://www.bulksms.co.uk/docs/eapi/, HTTP API). This is the written
+explanation of how programs can talk to their service, which in thise case
+is done in a way similar accessing a web-page, but  a program. Quite
+happily there are lots of ways to do this on Linux.
 
 For understanding the API, or really any programming concept or protocol, I
 find that you can approach it in two ways. You can read the documentation
