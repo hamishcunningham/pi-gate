@@ -41,6 +41,7 @@ PAGE_EXCLUDES = (['basics'])
 ARTICLE_EXCLUDES = (['pages', 'basics', 'piroomba'])
 MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
 YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
+THEME = 'large-blue-fish'
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
