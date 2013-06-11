@@ -11,8 +11,8 @@ when something important happens. %(/pages/about.html#hamish, I) use our
 plumbing in my basement, for example, and need to know PDQ if the house starts
 to fill up with cold wet stuff.
 
-Our latest tutorial takes us through three options for telling the outside
-world about Stuff Going On from your Pi:
+Our latest tutorial takes us through three options for %(pages/notipi.html, 
+telling the outside world) about Stuff Going On from your Pi:
 
 # via SMS text message to your phone, using %(/pages/notipi.html#bulk-sms,
   a web service)
