@@ -3,16 +3,17 @@
 # standard locals
 alias cd='builtin cd'
 P="$0"
-USAGE="`basename ${P}` [-h(elp)] [-d(ebug)] file(s)\n
+USAGE="`basename ${P}` [-h(elp)] [-d(ebug)] [-n(o) metas] file(s)\n
 \tmunge html files to conform to pelican expectations"
 DBG=:
-OPTIONSTRING=hd
+OPTIONSTRING=hdn
 
 # specific locals
 FILES=
 #TODAY=`date +"%b %d %Y"`
 #TODAY=`date +"%a %d %B %Y"`
 TODAY=`date +"%Y-%m-%d %H:%M"`
+NOMETAS=
 
 # message & exit if exit num present
 usage() { echo -e Usage: $USAGE; [ ! -z "$1" ] && exit $1; }
@@ -23,7 +24,7 @@ do
   case $OPTION in
     h)	usage 0 ;;
     d)	DBG=echo ;;
-    n)	USEDNS="" ;;
+    n)	NOMETAS=1 ;;
     i)	INSTANCE="${OPTARG}" ;;
     *)	usage 1 ;;
   esac
@@ -62,27 +63,35 @@ replace-meta-tags-etc() {
     fi
 
     # add the metas
-    (
-      sed -n '1,/<meta /Ip' $f |grep -vi '<meta '
-      echo -e $METAS
-      tac $f |sed -n -e '1,/<meta/Ip' |tac |sed -n '2,$p'
+    if [ x"${NOMETAS}" != x1 ]
+    then
+      (
+        sed -n '1,/<meta /Ip' $f |grep -vi '<meta '
+        echo -e $METAS
+        tac $f |sed -n -e '1,/<meta/Ip' |tac |sed -n '2,$p'
+      ) >${f}-$$
+    else
+      cp $f ${f}-$$
+    fi
 
     # tell pelican about relative links
-    ) | sed \
-        -e 's,\(src="\)\(images/\),\1|filename|\2,g' \
-        -e 's,?m=1",",g' \
-        -e 's,h\(ref="#\),hX\1,g' \
-        -e 's,h\(ref="/\),hX\1,g' \
-        -e 's,h\(ref="http\),hX\1,g' \
-        -e 's,h\(ref=".filename\),hX\1,g' \
-        -e 's,\(href="\),\1|filename|,g' \
-        -e 's,hXref,href,g' \
-    > ${f}-$$
+    sed \
+      -e 's,\(src="\)\(images/\),\1|filename|\2,g' \
+      -e 's,?m=1",",g' \
+      -e 's,h\(ref="#\),hX\1,g' \
+      -e 's,h\(ref="/\),hX\1,g' \
+      -e 's,h\(ref="http\),hX\1,g' \
+      -e 's,h\(ref=".filename\),hX\1,g' \
+      -e 's,\(href="\),\1|filename|,g' \
+      -e 's,hXref,href,g' \
+      ${f}-$$ \
+    > ${f}-$$-2
 
     # remove first h1 heading
-    sed -n '1,/^<h1 class/p' ${f}-$$ | grep -v '^<h1 class' >${f}
-    sed -n '/^<h1 class/,$p' ${f}-$$ | sed -n '2,$p' >>${f}
-    rm ${f}-$$
+    sed -n '1,/^<h1 class/p' ${f}-$$-2 | grep -v '^<h1 class' >${f}
+    sed -n '/^<h1 class/,$p' ${f}-$$-2 | sed -n '2,$p' >>${f}
+    echo rm ${f}-$$*
+    rm ${f}-$$*
   done
 }
 replace-meta-tags-etc $FILES

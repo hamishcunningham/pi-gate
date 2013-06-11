@@ -8,10 +8,6 @@
 <meta name="date" contents="2013-05-16 15:59" />
 
 <title>PiRoomba</title>
-<base href="" target="_blank"/>
-<style>
-img{padding:20px;}
-</style>
 </head>
 <body>
 <p><em><a href="http://www.cfpm.org/~peter/">Peter Wallis</a>, May 16th
@@ -29,9 +25,9 @@ company has done a great job of making robot hardware available to
 hackers, but what can we do with it?
 <h2>Add a <a href="http://www.raspberrypi.org/quick-start-guide">
 Raspberry Pi</a> to the Roomba</h2>
-<img src="|filename|images/roopiTop.jpg" alt="A raspberry pi on a Roomba - top
+<img src="images/roopiTop.jpg" alt="A raspberry pi on a Roomba - top
 view" width="33%"/>
-<img src="|filename|images/roopiSide.jpg" alt="A raspberry pi on a Roomba - side
+<img src="images/roopiSide.jpg" alt="A raspberry pi on a Roomba - side
 view" width="33%"/>
 <p>
 I have put the pi in a plastic case that is connected to the bumper.
@@ -39,7 +35,7 @@ That way when it goes under a chair and catches the case, the force is
 transmitted to the bump sensors and the standard software figures out
 what to do.
 <p>
-<img src="|filename|images/plug.jpg" alt="The home made 7 pin DIN plug"
+<img src="images/plug.jpg" alt="The home made 7 pin DIN plug"
 width="44%" align="right"/>
 Unfortunately the clear plastic bowl I could get to cut
 down was slightly too small and so I ended up making a 7 pin DIN plug
@@ -52,7 +48,7 @@ dries, take the plug out (carefully) and "back fill" the plug from the
 pin side and push it back into its vaseline covered socket.  Let it
 dry and clean up.
 <p>
-<img src="|filename|images/powerBrd.jpg" alt="The pi - Roomba interface board"
+<img src="images/powerBrd.jpg" alt="The pi - Roomba interface board"
 width="44%" align="right"/>
 There are two electrical challenges.  First the serial interface to
 the rpi is 3.3v and the serial interface to the Roomba is 5v.  To
@@ -62,7 +58,7 @@ connection is fine as 3.3v seems to be enough to drive the Roomba RxD
 signal.
 <p>
 <br/>
-<img src="|filename|images/rooPieCircuit.png" alt="The pi - Roomba interface board
+<img src="images/rooPieCircuit.png" alt="The pi - Roomba interface board
 circuit" width="400px" align="left"/>
 The second challenge is that, although there 18-14v available directly
 from the Roomba battery via the serial plug, there is a 200mA poly

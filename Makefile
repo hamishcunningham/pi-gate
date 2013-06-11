@@ -97,7 +97,9 @@ check: ; @which $(JAVA) >/dev/null >/dev/null || \
 prepare:
 	cd $(INPUTDIR) && $(Y2H) -na && $(EPI) `ls *.html`
 	cd $(INPUTDIR)/basics && $(Y2H) -na && cp basics.html ../pages
+	cp $(INPUTDIR)/piroomba/piroomba.html $(INPUTDIR)/pages
 	cd $(INPUTDIR)/pages && $(Y2H) -na && \
-          $(EPI) about.html basics.html schools.html notipi.html
+          $(EPI) about.html basics.html schools.html notipi.html && \
+          $(EPI) -n piroomba.html
 
 .PHONY: check prepare

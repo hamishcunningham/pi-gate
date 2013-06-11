@@ -38,8 +38,10 @@ FILES_TO_COPY = (('.htaccess', '.htaccess'), ('.htpasswd', '.htpasswd'),)
 STATIC_PATHS = (['images', 'pages/images'])
 FILENAME_METADATA = ('(?P<date>\d{4}-\d{2}-\d{2}).*')
 PAGE_EXCLUDES = (['basics'])
-ARTICLE_EXCLUDES = (['pages', 'basics'])
+ARTICLE_EXCLUDES = (['pages', 'basics', 'piroomba'])
 MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
 YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+
+TWITTER_USERNAME = 'pimoroni'
