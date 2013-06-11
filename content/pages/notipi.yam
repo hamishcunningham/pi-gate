@@ -7,17 +7,121 @@ _%(/pages/about.html#lego, Fred Sonnenwald) and
 
 %contents
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#intro
+%1 Introduction
+
+The general idea of NotiPi, or notifications, is to let the Raspberry Pi
+interact with you in ways not tied to sitting in front of the monitor. That
+is to say, to let you know what's going on at a distance. There are different
+ways to go about this, but they all boil down to sending a bit of text to you
+in some fashion so that you are aware you've recieved a bit of text. The
+RasperryPi is all about hacking and therefore it is elemental to take
+advantage of existing services...
+
+Who hasn't felt the buzz of receiving an SMS on their phone or seen a pop-up
+saying they have a new Tweet?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#bulk-sms
-%1 Pi Texting via a Web Service
+%1 Pi Texting (SMS) via a Web Service
 
-TODO Fred
+The general idea here is that there are loads of companies out there that
+offer what is called SMS gateway service. You usually see them in the form
+of a webpage where you type in some text and a phone number and off it goes -
+you get a message on your phone. This is the same principle as what we'll
+have the Pi do, except the Pi will be using something a bit more industrial
+strength.
 
+The webpage method is a sort of end-user thing that's friendly to you and I,
+but is a bit more complex to get the Pi talking to. What we want really is a
+company that specializes in providing the service that those webpages use.
+If you've ever received an advert on your phone via text, it's what those
+guys use. (I keep getting messages about debt consolidation annoyingly.)
+
+%2* BulkSMS
+
+Unfortunately we can't just use any company that provides this service. The
+RaspberryPi is running Linux and isn't on an Intel so we need a service
+that's platform and architecture independent. Browsing and googling around
+led us to %(http://www.bulksms.co.uk/, BulkSMS). Sending a text with them
+costs about 5.4p, and you have to get at least 200 texts to send. Even
+better though, they quite nicely have published documentation for their
+%(https://www.bulksms.co.uk/docs/eapi/, HTTP API). This is the written
+explanation of how programs can talk to their service, which in thise case
+is done in a way similar accessing a web-page, but  a program. Quite
+happily there are lots of ways to do this on Linux.
+
+For understanding the API, or really any programming concept or protocol, I
+find that you can approach it in two ways. You can read the documentation
+and piece together what needs to be done, or you can look at some code that's
+already been written and work out how that needs to be changed to do what
+you want it to instead. I prefer the latter, learning from example. BulkSMS
+has quite a few %(https://www.bulksms.co.uk/docs/eapi/code_samples/, code samples)
+available. My strongest language of the ones they have available there is
+PHP and so I dissected that one. The comprehensive example is quite complete.
+
+I am quite happy however, to save you the tedium of working through either
+the API or the example code and provide you with a rough outline of how it
+works. Communication with BulkSMS is done over a %(https://en.wikipedia.org/wiki/POST_%28HTTP%29, HTTP POST)
+request. This is the sort of thing that your browser does when you hit the
+"login" button on a website. Your username and password are encoding
+together in a key-pair format and sent off down the tubes. The technical
+details are of less interest to us than the key-pair bit. We need to craft
+together the correct key-pairs (e.g. username=fred&password=imnottelling)
+so that BulkSMS on the other side knows what we want to do.
+
+%2* The key-pairs
+
+There are 5 bits of information that BulkSMS absolutely needs to get things
+done. These are as follows:
+- A unique message ID (*stop\_dup\_id*). This is an integer (whole number) value between 1 and 2147483647.
+- Your BulkSMS username (*username*).
+- Your BulkSMS password (*password*).
+- The message text you're sending (*message*).
+- The phone number (*msisdn*). This is including the country code, but without the leading +.
+All of this information is pretty easy to get a hold of. The next half of
+the battle is actually sending the message.
+
+%2* curl
+
+The absolute easiest way to send a message is to use a bit of software that's
+already been written. We don't need to deal with the tedious creation of HTTP
+packets, we can let someone else do that bit. Again, we just need to deal
+with those key-pairs. So we turn to a program called %(http://curl.haxx.se/docs/manpage.html, curl)
+which is a command line utility for HTTP and other useful things. What is
+of particular interest to us is that it can do HTTP POST communications
+quite easily via the *--data-urlencode* argument which takes the key=data as
+its parameter. Add one of these to the command for each key-pair and tell
+curl to go after the service url, http://www.bulksms.co.uk/eapi/submission/send_sms/2/2.0,
+and that's it. Simple!
+
+%<curl http://www.bulksms.co.uk/eapi/submission/send_sms/2/2.0 \ 
+    --data-urlencode stop_dup_id="some random number" \ 
+    --data-urlencode username="your username" \ 
+    --data-urlencode password="your password" \ 
+    --data-urlencode message="golly wow it works!" \ 
+    --data-urlencode msisdn="441632960123" %>
+
+It can be taken a step further and the whole thing can be wrapped around with
+a shell script that stores your username and password and can be manipulated
+from the command line a bit easier. I've written a script which does this,
+availble %(https://gitorious.org/pifi/pifi/blobs/master/bin/sendbulksms.sh, here).
+More information of shell programing with bash is available from
+%(http://tldp.org/LDP/abs/html/, The Linux Documentation Project), or TLDP.
+It's a bit heavy reading but it's very comprehensive.
+
+You may get a warning when running the script under Rasbian, it's not necessary,
+but you can make it go away by editing /etc/locale.gen and uncommenting
+(delete the #) with the line which has en\_GB.iso8859-1 in it. Then running
+sudo locale-gen. This has to do with the script changing character encoding
+to the older latin1, which BulkSMS recommends to be used. Character encoding
+has to do with the way letters are stored digitally. There's no real practical
+difference here, but there's more info on %(https://en.wikipedia.org/wiki/Character_encoding, Wikipedia)!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#nokia-sms
-%1 Pi Texting via a Phone Handset
+%1 Pi Texting (SMS) via a Phone Handset
 
 TODO Fred
 
