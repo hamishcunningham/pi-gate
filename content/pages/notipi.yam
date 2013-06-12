@@ -12,15 +12,16 @@ _%(/pages/about.html#lego, Fred Sonnenwald) and
 %1 Introduction
 
 The general idea of NotiPi, or notifications, is to let the Raspberry Pi
-interact with you in ways not tied to sitting in front of the monitor. That
-is to say, to let you know what's going on at a distance. There are different
+interact with you in ways not tied to sitting in front of the monitor. That is
+to say, to let you know what's going on at a distance. There are different
 ways to go about this, but they all boil down to sending a bit of text to you
-in some fashion so that you are aware you've recieved a bit of text. The
-RasperryPi is all about hacking and therefore it is elemental to take
-advantage of existing services...
+in some fashion so that you are aware you've received it. The RasperryPi is a
+general purpose machine, so it is easy to take advantage of existing services
+like texting phones, or Tweets.
 
-Who hasn't felt the buzz of receiving an SMS on their phone or seen a pop-up
-saying they have a new Tweet?
+Here we'll look at two options for texting (using the net or using a mobile
+phone handset) and finish up with the Twitter option.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#bulk-sms
@@ -131,3 +132,35 @@ TODO Fred
 %1 Pi Messaging via Twitter
 
 TODO Hamish & Dominic
+
+Dominic says:
+
+a library for the purpose:
+
+https://github.com/domrout/python-twitter-wrapper
+
+I recommend using pip for installation, running:
+
+pip install -e git+https://github.com/domrout/python-twitter-wrapper.git#egg=TwitterWrapper
+
+Once installed, you need a Twitter API consumer key & secret. You can get
+these by logging into https://dev.twitter.com/ and setting up an application.
+
+Once you've done that, there's a script at
+https://github.com/domrout/python-twitter-wrapper/blob/master/scripts/authenticate_twitter
+that requests a proper OAuth token for your application and user. It sends you
+to the Twitter site wherein you can enter your username and password.
+
+Once all of that has been done, the snippet goes like:
+
+%<
+import twitterwrapper
+
+api = twitterwrapper.Api()
+
+# Post an update
+new_status = api.statuses.update("I'm tweeting programmatically!")
+
+# Delete that update.
+new_status.destroy()
+%>
