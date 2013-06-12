@@ -118,18 +118,20 @@ Simple!
 It can be taken a step further and the whole thing can be wrapped around with
 a shell script that stores your username and password and can be manipulated
 from the command line a bit easier. I've written a script which does this,
-availble %(https://gitorious.org/pifi/pifi/blobs/master/bin/sendbulksms.sh,
-here). More information of shell programing with bash is available from
-%(http://tldp.org/LDP/abs/html/, The Linux Documentation Project) (TLDP).
+%(https://gitorious.org/pifi/pifi/blobs/master/bin/sendbulksms.sh,
+available here). More information of shell programing with bash is available
+from %(http://tldp.org/LDP/abs/html/, The Linux Documentation Project) (TLDP).
 It's a bit heavy reading but it's very comprehensive.
 
-You may get a warning when running the script under Rasbian, it's not necessary,
-but you can make it go away by editing /etc/locale.gen and uncommenting
-(delete the #) with the line which has en\_GB.iso8859-1 in it. Then running
-sudo locale-gen. This has to do with the script changing character encoding
-to the older latin1, which BulkSMS recommends to be used. Character encoding
-has to do with the way letters are stored digitally. There's no real practical
-difference here, but there's more info on %(https://en.wikipedia.org/wiki/Character_encoding, Wikipedia)!
+(*Note*: you may get a warning when running the script under Rasbian, it's not
+necessary, but you can make it go away by editing ^/etc/locale.gen^ and
+uncommenting (delete the ^#^) with the line which has ^en\_GB.iso8859-1^ in
+it. Then running sudo locale-gen. This has to do with the script changing
+character encoding to the older latin1, which BulkSMS recommends to be used.
+Character encoding has to do with the way letters are stored digitally.
+There's no real practical difference here, but there's more info on
+%(https://en.wikipedia.org/wiki/Character_encoding, Wikipedia)!)
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#nokia-sms
