@@ -28,74 +28,85 @@ phone handset) and finish up with the Twitter option.
 %1 Pi Texting (SMS) via a Web Service
 
 The general idea here is that there are loads of companies out there that
-offer what is called SMS gateway service. You usually see them in the form
-of a webpage where you type in some text and a phone number and off it goes -
-you get a message on your phone. This is the same principle as what we'll
-have the Pi do, except the Pi will be using something a bit more industrial
+offer what is called SMS gateway service. You usually see them in the form of
+a webpage where you type in some text and a phone number and off it goes --
+you get a message on your phone. This is the same principle as what we'll have
+the Pi do, except the Pi will be using something a bit more industrial
 strength.
 
 The webpage method is a sort of end-user thing that's friendly to you and I,
 but is a bit more complex to get the Pi talking to. What we want really is a
 company that specializes in providing the service that those webpages use.
 If you've ever received an advert on your phone via text, it's what those
-guys use. (I keep getting messages about debt consolidation annoyingly.)
+guys use. (I keep getting messages about debt consolidation, annoyingly!)
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2* BulkSMS
 
 Unfortunately we can't just use any company that provides this service. The
-RaspberryPi is running Linux and isn't on an Intel so we need a service
-that's platform and architecture independent. Browsing and googling around
-led us to %(http://www.bulksms.co.uk/, BulkSMS). Sending a text with them
-costs about 5.4p, and you have to get at least 200 texts to send. Even
-better though, they quite nicely have published documentation for their
+RaspberryPi is running Linux and isn't on an Intel so we need a service that's
+platform and architecture independent. Browsing and googling around led us to
+%(http://www.bulksms.co.uk/, BulkSMS). Sending a text with them costs about 5
+pence (you have to buy at least 200 texts to send). Even better though, they
+quite nicely have published documentation for their
 %(https://www.bulksms.co.uk/docs/eapi/, HTTP API). This is the written
-explanation of how programs can talk to their service, which in thise case
-is done in a way similar accessing a web-page, but  a program. Quite
-happily there are lots of ways to do this on Linux.
+explanation of how programs can talk to their service, which in thise case is
+done in a way similar accessing a web-page, only using a program. Happily
+there are lots of ways to do this on Linux.
 
-For understanding the API, or really any programming concept or protocol, I
-find that you can approach it in two ways. You can read the documentation
-and piece together what needs to be done, or you can look at some code that's
-already been written and work out how that needs to be changed to do what
-you want it to instead. I prefer the latter, learning from example. BulkSMS
-has quite a few %(https://www.bulksms.co.uk/docs/eapi/code_samples/, code samples)
-available. My strongest language of the ones they have available there is
-PHP and so I dissected that one. The comprehensive example is quite complete.
+To understand the API (or really any programming concept or protocol) I find
+that you can approach it in two ways. You can read the documentation and piece
+together what needs to be done, or you can look at some code that's already
+been written and work out how that needs to be changed to do what you want it
+to instead. I prefer the latter, learning from example. BulkSMS has quite a
+few %(https://www.bulksms.co.uk/docs/eapi/code_samples/, code samples)
+available. My strongest language of the ones they have available there is PHP
+and so I dissected that one. The example is comprehensive and quite complete.
 
-I am quite happy however, to save you the tedium of working through either
-the API or the example code and provide you with a rough outline of how it
-works. Communication with BulkSMS is done over a %(https://en.wikipedia.org/wiki/POST_%28HTTP%29, HTTP POST)
-request. This is the sort of thing that your browser does when you hit the
-"login" button on a website. Your username and password are encoding
+To save you the tedium of working through either the API or the example code
+and here we'll provide you with a rough outline of how it works. Communication
+with BulkSMS is done over an %(https://en.wikipedia.org/wiki/POST_%28HTTP%29,
+HTTP POST) request. This is the sort of thing that your browser does when you
+hit the "login" button on a website -- your username and password are encoded
 together in a key-pair format and sent off down the tubes. The technical
 details are of less interest to us than the key-pair bit. We need to craft
-together the correct key-pairs (e.g. username=fred&password=imnottelling)
-so that BulkSMS on the other side knows what we want to do.
+together the correct key-pairs (e.g. ^username=fred&password=imnottelling^) so
+that BulkSMS on the other side knows what we want to do.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2* The key-pairs
 
 There are 5 bits of information that BulkSMS absolutely needs to get things
 done. These are as follows:
-- A unique message ID (*stop\_dup\_id*). This is an integer (whole number) value between 1 and 2147483647.
+
+- A unique message ID (*stop\_dup\_id*). This is an integer (whole number)
+  value between 1 and 2147483647.
 - Your BulkSMS username (*username*).
 - Your BulkSMS password (*password*).
 - The message text you're sending (*message*).
-- The phone number (*msisdn*). This is including the country code, but without the leading +.
+- The phone number (*msisdn*). This is including the country code, but without
+  the leading `+'.
+
 All of this information is pretty easy to get a hold of. The next half of
 the battle is actually sending the message.
 
-%2* curl
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2* Curl
 
 The absolute easiest way to send a message is to use a bit of software that's
 already been written. We don't need to deal with the tedious creation of HTTP
-packets, we can let someone else do that bit. Again, we just need to deal
-with those key-pairs. So we turn to a program called %(http://curl.haxx.se/docs/manpage.html, curl)
-which is a command line utility for HTTP and other useful things. What is
-of particular interest to us is that it can do HTTP POST communications
-quite easily via the *--data-urlencode* argument which takes the key=data as
-its parameter. Add one of these to the command for each key-pair and tell
-curl to go after the service url, http://www.bulksms.co.uk/eapi/submission/send_sms/2/2.0,
-and that's it. Simple!
+packets, we can let someone else do that bit. Again, we just need to deal with
+those key-pairs. So we turn to a program called
+%(http://curl.haxx.se/docs/manpage.html, curl) which is a command line utility
+for HTTP and other useful things. What is of particular interest to us is that
+it can do HTTP POST communications quite easily via the *--data-urlencode*
+argument which takes the key=data pair as its parameter. Add one of these to
+the command for each key-pair and tell curl to go after the service url,
+http://www.bulksms.co.uk/eapi/submission/send_sms/2/2.0, and that's it.
+Simple!
 
 %<curl http://www.bulksms.co.uk/eapi/submission/send_sms/2/2.0 \ 
     --data-urlencode stop_dup_id="some random number" \ 
@@ -107,9 +118,9 @@ and that's it. Simple!
 It can be taken a step further and the whole thing can be wrapped around with
 a shell script that stores your username and password and can be manipulated
 from the command line a bit easier. I've written a script which does this,
-availble %(https://gitorious.org/pifi/pifi/blobs/master/bin/sendbulksms.sh, here).
-More information of shell programing with bash is available from
-%(http://tldp.org/LDP/abs/html/, The Linux Documentation Project), or TLDP.
+availble %(https://gitorious.org/pifi/pifi/blobs/master/bin/sendbulksms.sh,
+here). More information of shell programing with bash is available from
+%(http://tldp.org/LDP/abs/html/, The Linux Documentation Project) (TLDP).
 It's a bit heavy reading but it's very comprehensive.
 
 You may get a warning when running the script under Rasbian, it's not necessary,
@@ -131,25 +142,35 @@ TODO Fred
 %#pi-twitter
 %1 Pi Messaging via Twitter
 
-TODO Hamish & Dominic
+Did you bump into a lamp-post last time you walked down the street? Are you
+developing hunched shoulders and a cricked neck? Do your thumbs have more
+muscle on them than your arms? These are all classic signs of becoming a
+twitter-head... those conversations are just so important and fast-moving that
+you've got to keep track at all times.
 
-Dominic says:
+Don't worry -- we're here for you. Your trusty Pi can tweet at you, so now you
+can programme a cron script to pull data out of Google Calendar and remind you
+about your Granny's birthday or your dentist appointment or whatever.
 
-a library for the purpose:
-
+The main hoop we have to jump through to do this is _authentication_.
+%(http://staffwww.dcs.shef.ac.uk/people/D.Rout/, Dom Rout) has written a
+Python library to make this easier, which lives on GitHub at
 https://github.com/domrout/python-twitter-wrapper
 
-I recommend using pip for installation, running:
+To install it, use PIP (^sudo apt-get install python-pip^ to get hold of it)
+like this:
 
+%<
 pip install -e git+https://github.com/domrout/python-twitter-wrapper.git#egg=TwitterWrapper
+%>
 
-Once installed, you need a Twitter API consumer key & secret. You can get
+Once installed, you need a Twitter API consumer key and secret. You can get
 these by logging into https://dev.twitter.com/ and setting up an application.
 
 Once you've done that, there's a script at
 https://github.com/domrout/python-twitter-wrapper/blob/master/scripts/authenticate_twitter
-that requests a proper OAuth token for your application and user. It sends you
-to the Twitter site wherein you can enter your username and password.
+that requests a proper ^OAuth^ token for your application and user. It sends
+you to the Twitter site wherein you can enter your username and password.
 
 Once all of that has been done, the snippet goes like:
 
@@ -164,3 +185,6 @@ new_status = api.statuses.update("I'm tweeting programmatically!")
 # Delete that update.
 new_status.destroy()
 %>
+
+Happy tweeting -- but do try to straighten up now and then, just to keep the
+blood flowing!
