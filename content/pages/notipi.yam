@@ -364,7 +364,7 @@ We have one
 ^/etc/gnokiirc^ is already in place and the lines to be edited are the same.
 There's just one more to be done:
 
-- Line 127: ^use_locking = yes^ should be changed to ^no^.
+- Line 127: ^use\_locking = yes^ should be changed to ^no^.
 
 We also have
 %(https://github.com/hamishcunningham/pi-tronics/blob/master/conf/gnokii/fedora/gnokiirc, one done too).
