@@ -118,7 +118,7 @@ Simple!
 It can be taken a step further and the whole thing can be wrapped around with
 a shell script that stores your username and password and can be manipulated
 from the command line a bit easier. I've written a script which does this,
-%(https://gitorious.org/pifi/pifi/blobs/master/bin/sendbulksms.sh,
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/bin/sendbulksms.sh,
 available here). More information of shell programing with bash is available
 from %(http://tldp.org/LDP/abs/html/, The Linux Documentation Project) (TLDP).
 It's a bit heavy reading but it's very comprehensive.
