@@ -155,12 +155,13 @@ Just the sort of bit of kit you want for a fun project.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2* Equipment
 
-We had an old Nokia 6230i lying around.  It uses the DKU-2 USB cable to connect
-to the Pi.  Check the %(http://wiki.gnokii.org/index.php/Config, list of phones)
-to see if what you already have will work.  The USB based setups are ideal, but
-there are other phones with only serial cables.  To use those you'll need a USB
-to RS-232 (serial) adapter.  If all you have is the phone, you can usually find
-the cables and adapters you need pretty cheaply on Amazon.
+We had an old %(http://www.gsmarena.com/nokia_6230i-1087.php, Nokia 6230i) lying
+around, so our directions are releveant to that.  It uses the DKU-2 USB cable to
+connect to the Pi.  Check the %(http://wiki.gnokii.org/index.php/Config, list of
+phones) to see if what you already have will work.  The USB based setups are
+ideal, but there are other phones with only serial cables.  To use those you'll
+need a USB to RS-232 (serial) adapter.  If all you have is the phone, you can
+usually find the cables and adapters you need pretty cheaply on Amazon.
 
 You'll also need mobile service to get this to work.  A pre-paid SIM chip is
 ideal as it's cheap.  We've got a giffgaff chip as they offer the cheapest SMS
@@ -171,7 +172,13 @@ out what you've got.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2* Installing gnokii
+%2* Setup
+
+We'll have a few things to do before we can get going...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3* Installing gnokii
 
 First, install gnokii by running sudo apt-get install gnokii in a terminal and
 hitting Y when prompted to conform the installation.  If you're in the default
@@ -180,11 +187,165 @@ terminal.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2* Setting up gnokii
+%3* Kernel module blacklisting
+
+A kernel module need to be blacklisted to allow gnokii to work. Edit
+^/etc/modprobe.d/raspi-blacklist.conf^ and add a line which reads:
+
+%<blacklist cdc_acm %>
+
+See how our raspi-blacklist.conf file looks
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/conf/gnokii/rasbian/raspi-blacklist.conf, here).
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3* The /etc/gnokiirc configuration file
+
+Rasbian does not install a default configuration file for gnokii so it will have
+to be copied out of the documentation files.  This results in a nice global
+configuration file, ^/etc/gnokiirc^, being in place.  These command should be run
+as root, so sudo bash must be executed first.
+
+%<sudo bash
+cp /usr/share/doc/gnokii-common/sample/gnokiirc.gz /etc/
+cd /etc/
+gunzip gnokiirc.gz %>
+
+The ^/etc/gnokiirc^ needs to be edited next.  There is a lot of stuff in here,
+and most of it isn't relevant, so the bits to be edited will need to be picked
+out.  I use vim as my editor, which can happily show line numbers and make
+this easier. ^:set number^ to get them turned on.  Note that the file will need
+to be edited as root, so the command for me is ^sudo vim /etc/gnokiirc^.
+
+- Line 13: ^port = none^ should be commented (add # in front of the line).
+- Line 47: ^# port = 1^ should be uncommented (remove # from the the front of the line).
+- Line 54: ^model = fake^ should be changed to ^model = series40^.
+- Line 94: ^# connection = dku2libusb^ should be uncommented.
+- Line 104: ^connection = serial^ should be commented.
+
+Make these changes and save.  Alternatively you can download our already
+modified configuration file.
+
+%<cd /etc
+sudo wget https://raw.github.com/hamishcunningham/pi-tronics/master/conf/gnokii/rasbian/gnokiirc %>
+
+For some reason, Rasbian's compilation of gnokii is not set to recognize the
+/etc/gnokiirc file as a global configuration file. To work around this ^--config
+/etc/gnokiirc^ will have to be added to every gnokii command run later on.
+Alternatively a softlink can be setup between where Raspbian expects the config
+file and where we've placed it.
+
+%<mkdir ~/.config/
+mkdir ~/.config/gnokii/
+ln -s /etc/gnokiirc ~/.config/gnokii/config %>
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3* udev rules
+
+By default when the phone is plugged in, only root will be allowed to access it.
+This is somewhat less than useful in many cases.  Fortunately we can get around
+this by adding what are called udev rules.  This is a special configuration file
+which lets the system know to do something special in terms of permissions when
+the phone is plugged in.  A file for this is already included in Rasbian, and
+just needs to be installed.
+
+%<sudo cp /usr/share/doc/gnokii-common/sample/45-nokiadku2.rules /etc/udev/rules.d/ %>
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2* Using gnokii
+
+Now that it's all setup, we should be able to get going with gnokii and start
+sending messages.  Connect the DKU-2 data cable to the Raspberry Pi and the
+phone.  When the Nokia 6230i is connected, it asks about being a data storage
+device hit no to that.  According to lsusb (usbutils package) it shows up like
+the following to the system:
+
+%<Bus 001 Device 010: ID 0421:0428 Nokia Mobile Phones 6230i Modem %>
+
+To get rid of the data storage device query, simply remove the memory card from
+the phone.  You'll need to do this if you're planning to use the phone with the
+Pi in an automated environment.
+
+Test the phone's connection by running gnokii --identify.  Output should be
+something like this:
+
+%<GNOKII Version 0.6.30
+LOG: debug mask is 0x1
+Config read from file /etc/gnokiirc.
+Cannot open logfile /root/.cache/gnokii/gnokii-errors
+WARNING: cannot open logfile, logs will be directed to stderr
+phone instance config:
+model = series40
+port = 1
+connection = dku2libusb
+initlength = default
+serial_baudrate = 19200
+serial_write_usleep = -1
+handshake = software
+require_dcd = 0
+smsc_timeout = 10
+rfcomm_channel = 0
+sm_retry = 0
+Connecting
+Serial device: opening device USB
+Ignoring extra header, type 171, length 5
+Found FBUS interface
+Getting model...
+Message sent: 0x1b / 0x0006
+00 01 00 07 01 00                               |                 
+Message received: 0x1b / 0x0032
+01 44 00 08 00 01 58 2c 00 26 56 20 30 33 2e 36 |  D    X, &V 03.6
+32 0a 30 34 2d 4e 6f 76 2d 30 35 0a 52 4d 37 32 | 2 04-Nov-05 RM72
+5f 37 33 5f 2d 0a 47 53 4d 20 50 31 2e 0a 43 00 | _73_- GSM P1. C 
+00 00                                           |                 
+Received message type 1b
+model length: 9
+Received model RM72_73_-
+Found model "RM72_73_-"
+Identifying...
+Message sent: 0x1b / 0x0005
+00 01 00 00 41                                  |     A           
+Message sent: 0x1b / 0x0006
+00 01 00 07 01 00                               |                 
+Message received: 0x1b / 0x001a
+01 44 00 01 00 01 41 14 00 10 XX XX XX XX XX XX |  D    A   XXXXXX
+XX XX XX XX XX XX XX XX XX 00                   | XXXXXXXXX       
+Received message type 1b
+Received imei [REDACTED]
+Message received: 0x1b / 0x0032
+01 44 00 08 00 01 58 2c 00 26 56 20 30 33 2e 36 |  D    X, &V 03.6
+32 0a 30 34 2d 4e 6f 76 2d 30 35 0a 52 4d 37 32 | 2 04-Nov-05 RM72
+5f 37 33 5f 2d 0a 47 53 4d 20 50 31 2e 0a 43 00 | _73_- GSM P1. C 
+00 00                                           |                 
+Received message type 1b
+Received revision V 03.62
+model length: 9
+Received model RM72_73_-
+IMEI         : [REDACTED]
+Manufacturer : Nokia
+No flags section in the config file.
+Model        : RM72_73_-
+Product name : RM72_73_-
+Revision     : V 03.62
+Serial device: closing device %>
+
+To send a text message is now simple:
+
+%<echo “Message.” | gnokii --sendsms <phone number> %>
+
+Let a text be sent!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3* Errors!
+
+You may have some problems running gnokii.  If you get a PHONET error, the
+kernel module hasn't black listed properly.  Re-check that.  If it's a complaint
+about permissions try running as root and with the ^--config^ option set as
+mentioned above.  There may be a problem with udev not having taken up the rules
+correctly.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
