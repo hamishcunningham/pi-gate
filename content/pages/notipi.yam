@@ -148,7 +148,7 @@ Linux, or in our case Raspbian, talk with older mobile phones. This is not
 Android or Windows smartphone territory, but rather that of everyone’s favorite
 candy-bar bricks of the 90s and early 00s. It's the perfect use for that old
 phone you've had lying around for years, and let's face it, Nokias are
-indestructable. If you don't have one they're pretty cheap these days too.
+indestructible. If you don't have one they're pretty cheap these days too.
 Just the sort of bit of kit you want for a fun project.
 
 
@@ -156,7 +156,7 @@ Just the sort of bit of kit you want for a fun project.
 %2* Equipment
 
 We had an old %(http://www.gsmarena.com/nokia_6230i-1087.php, Nokia 6230i) lying
-around, so our directions are releveant to that.  It uses the DKU-2 USB cable to
+around, so our directions are relevant to that.  It uses the DKU-2 USB cable to
 connect to the Pi.  Check the %(http://wiki.gnokii.org/index.php/Config, list of
 phones) to see if what you already have will work.  The USB based setups are
 ideal, but there are other phones with only serial cables.  To use those you'll
@@ -351,12 +351,36 @@ correctly.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2* I'm using Fedora!
 
+It's OK! Lots of stuff is the same or similar. The blacklist file is instead
+^/etc/modprobe.d/blacklist.conf^ and requires three modules to be added:
+
+%<blacklist cdc_acm
+blacklist cdc_phonet
+blacklist phonet%>
+
+We have one
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/conf/gnokii/fedora/blacklist.conf, already done).
+
+^/etc/gnokiirc^ is already in place and the lines to be edited are the same.
+There's just one more to be done:
+
+- Line 127: ^use_locking = yes^ should be changed to ^no^.
+
+We also have
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/conf/gnokii/fedora/gnokiirc, one done too).
+
+Fedora however doesn't include an set of udev rules. We've made our own.
+
+%<cd /etc/udev/rules.d/
+sudo wget https://raw.github.com/hamishcunningham/pi-tronics/master/conf/gnokii/fedora/40-basic-permissions.rules %>
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2* Other resources
 
-We're not the first ones to look into this.  We're not even the first ones to do
-it with a Raspberry Pi.  Some other guides:
+Hopefully we've covered everything you need to get started. If you need more
+help we're not the first ones to look into this.  We're not even the first ones
+to do it with a Raspberry Pi.  Some other guides:
 
 - http://rolfblijleven.blogspot.co.uk/2013/01/raspberry-pi-as-sms-gateway.html
 - http://researchandscience.wordpress.com/tag/sms-via-raspberry-pi/
@@ -375,8 +399,7 @@ trouble:
 - http://wiki.gnokii.org/index.php/DKU2
 - https://wiki.archlinux.org/index.php/Nokia6230i
 
-Most of this stuff is specific to the 6230i, apologies, but a bit of googling
-should turn up relevent stuff for your phone too!
+A bit of googling should turn up more stuff too!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
