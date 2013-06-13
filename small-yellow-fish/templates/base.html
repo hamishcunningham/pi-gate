@@ -36,6 +36,7 @@
         <header id="banner" class="body">
                 <h1><a href="{{ SITEURL }}/">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
                 <nav><ul>
+                <li><a href="http://pimoroni.com/"><img width="35" src="{{ SITEURL }}/theme/images/pimoroni-logo.jpg"/></a></li>
                 {% for title, link in MENUITEMS %}
                     <li><a href="{{ link }}">{{ title }}</a></li>
                 {% endfor %}
