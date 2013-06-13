@@ -19,8 +19,8 @@ FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 # Blogroll
-LINKS =  (('Raspberry Pi', 'http://www.raspberrypi.org/'),
-          ('Pimoroni', 'http://shop.pimoroni.com/'),)
+#LINKS =  (('Raspberry Pi', 'http://www.raspberrypi.org/'),
+#          ('Pimoroni', 'http://shop.pimoroni.com/'),)
 
 # Social widget
 #SOCIAL = (('You can add links in your config file', '#'),
