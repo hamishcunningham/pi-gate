@@ -15,7 +15,7 @@ The general idea of NotiPi, or notifications, is to let the Raspberry Pi
 interact with you in ways not tied to sitting in front of the monitor. That is
 to say, to let you know what's going on at a distance. There are different
 ways to go about this, but they all boil down to sending a bit of text to you
-in some fashion so that you are aware you've received it. The RasperryPi is a
+in some fashion so that you are aware you've received it. The Raspberry Pi is a
 general purpose machine, so it is easy to take advantage of existing services
 like texting phones, or Tweets.
 
@@ -45,13 +45,13 @@ guys use. (I keep getting messages about debt consolidation, annoyingly!)
 %2* BulkSMS
 
 Unfortunately we can't just use any company that provides this service. The
-RaspberryPi is running Linux and isn't on an Intel so we need a service that's
+Raspberry Pi is running Linux and isn't on an Intel so we need a service that's
 platform and architecture independent. Browsing and googling around led us to
 %(http://www.bulksms.co.uk/, BulkSMS). Sending a text with them costs about 5
 pence (you have to buy at least 200 texts to send). Even better though, they
 quite nicely have published documentation for their
 %(https://www.bulksms.co.uk/docs/eapi/, HTTP API). This is the written
-explanation of how programs can talk to their service, which in thise case is
+explanation of how programs can talk to their service, which in this case is
 done in a way similar accessing a web-page, only using a program. Happily
 there are lots of ways to do this on Linux.
 
@@ -82,12 +82,12 @@ There are 5 bits of information that BulkSMS absolutely needs to get things
 done. These are as follows:
 
 - A unique message ID (*stop\_dup\_id*). This is an integer (whole number)
-  value between 1 and 2147483647.
+ value between 1 and 2147483647.
 - Your BulkSMS username (*username*).
 - Your BulkSMS password (*password*).
 - The message text you're sending (*message*).
 - The phone number (*msisdn*). This is including the country code, but without
-  the leading `+'.
+ the leading `+'.
 
 All of this information is pretty easy to get a hold of. The next half of
 the battle is actually sending the message.
@@ -109,11 +109,11 @@ http://www.bulksms.co.uk/eapi/submission/send_sms/2/2.0, and that's it.
 Simple!
 
 %<curl http://www.bulksms.co.uk/eapi/submission/send_sms/2/2.0 \ 
-    --data-urlencode stop_dup_id="some random number" \ 
-    --data-urlencode username="your username" \ 
-    --data-urlencode password="your password" \ 
-    --data-urlencode message="golly wow it works!" \ 
-    --data-urlencode msisdn="441632960123" %>
+  --data-urlencode stop_dup_id="some random number" \ 
+  --data-urlencode username="your username" \ 
+  --data-urlencode password="your password" \ 
+  --data-urlencode message="golly wow it works!" \ 
+  --data-urlencode msisdn="441632960123" %>
 
 It can be taken a step further and the whole thing can be wrapped around with
 a shell script that stores your username and password and can be manipulated
@@ -123,7 +123,7 @@ available here). More information of shell programing with bash is available
 from %(http://tldp.org/LDP/abs/html/, The Linux Documentation Project) (TLDP).
 It's a bit heavy reading but it's very comprehensive.
 
-(*Note*: you may get a warning when running the script under Rasbian, it's not
+(*Note*: you may get a warning when running the script under Raspbian, it's not
 necessary, but you can make it go away by editing ^/etc/locale.gen^ and
 uncommenting (delete the ^#^) with the line which has ^en\_GB.iso8859-1^ in
 it. Then running sudo locale-gen. This has to do with the script changing
@@ -137,7 +137,85 @@ There's no real practical difference here, but there's more info on
 %#nokia-sms
 %1 Pi Texting (SMS) via a Phone Handset
 
-TODO Fred
+In the last section, we looked at sending a text over the internet. What if
+isn't available? You may find yourself in situations where the ethernet cable
+or the wifi doesn't reach. Well don't panic, because Linux has you covered.
+A real, physical cell connection can provide a second mechanism for sending
+notifications -- actually sending SMS messages on a cell phone proper.
+
+There's a handy bit of software called %(http://gnokii.org/, gnokii) which lets
+Linux, or in our case Raspbian, talk with older mobile phones. This is not
+Android or Windows smartphone territory, but rather that of everyone’s favorite
+candy-bar bricks of the 90s and early 00s. It's the perfect use for that old
+phone you've had lying around for years, and let's face it, Nokias are
+indestructable. If you don't have one they're pretty cheap these days too.
+Just the sort of bit of kit you want for a fun project.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2* Equipment
+
+We had an old Nokia 6230i lying around.  It uses the DKU-2 USB cable to connect
+to the Pi.  Check the %(http://wiki.gnokii.org/index.php/Config, list of phones)
+to see if what you already have will work.  The USB based setups are ideal, but
+there are other phones with only serial cables.  To use those you'll need a USB
+to RS-232 (serial) adapter.  If all you have is the phone, you can usually find
+the cables and adapters you need pretty cheaply on Amazon.
+
+You'll also need mobile service to get this to work.  A pre-paid SIM chip is
+ideal as it's cheap.  We've got a giffgaff chip as they offer the cheapest SMS
+rates here in England -- a mere 6p a text.  Make sure you're phone's unlocked
+before you get a chip that doesn't work with it! See the Wikipedia page on
+%(https://en.wikipedia.org/wiki/SIM_lock, SIM lock) for more info there to work
+out what you've got.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2* Installing gnokii
+
+First, install gnokii by running sudo apt-get install gnokii in a terminal and
+hitting Y when prompted to conform the installation.  If you're in the default
+Rasbian GUI, double clicking the LXTerminal icon on the desktop starts a
+terminal.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2* Setting up gnokii
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2* I'm using Fedora!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2* Other resources
+
+We're not the first ones to look into this.  We're not even the first ones to do
+it with a Raspberry Pi.  Some other guides:
+
+- http://rolfblijleven.blogspot.co.uk/2013/01/raspberry-pi-as-sms-gateway.html
+- http://researchandscience.wordpress.com/tag/sms-via-raspberry-pi/
+- http://www.youtube.com/watch?v=PtPzWZWHqfI
+
+Guides with just a regular setup:
+
+- http://www.debian.co.il/2007/12/howto-sms-gateway-with-nokia-6230i-gsm/
+- http://blogs.nopcode.org/brainstorm/2006/06/27/sms-with-gnokii-and-nokia-6230i/
+- http://siddharthdawara.blogspot.co.uk/2006/09/gnokii-dku-2-nokia-6230-linux.html
+
+There are also some more generic pages which might be of use if you're having
+trouble:
+
+- http://wiki.gnokii.org/index.php/Nokia6230iConfig
+- http://wiki.gnokii.org/index.php/DKU2
+- https://wiki.archlinux.org/index.php/Nokia6230i
+
+Most of this stuff is specific to the 6230i, apologies, but a bit of googling
+should turn up relevent stuff for your phone too!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
