@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Hamish Cunningham'
-SITENAME = u'Learn Pi stuff with Pimoroni'
+SITENAME = u'Pi GATE'
 SITEURL = ''
 
 TIMEZONE = 'Europe/London'
@@ -20,7 +20,7 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 # Blogroll
 #LINKS =  (('Raspberry Pi', 'http://www.raspberrypi.org/'),
-#          ('Pimoroni', 'http://shop.pimoroni.com/'),)
+#          ('GATE', 'http://gate.ac.uk/'),)
 
 # Social widget
 #SOCIAL = (('You can add links in your config file', '#'),
@@ -46,4 +46,4 @@ THEME = 'small-yellow-fish'
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
-TWITTER_USERNAME = 'pimoroni'
+TWITTER_USERNAME = 'hcunningham'

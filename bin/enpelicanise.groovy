@@ -14,9 +14,9 @@ System.exit(1)
 
 // meta tags template
 def metaTemplate = '''
-<meta name=\"tags\" contents=\"pimoroni,learn\" />\n\
+<meta name=\"tags\" contents=\"pi,gate,raspberrypi,raspi\" />\n\
 <meta name=\"date\" contents=\"${postDate}\" />\n\
-<meta name=\"category\" contents=\"pimo\" />\n\
+<meta name=\"category\" contents=\"pi-gate\" />\n\
 <meta name=\"author\" contents=\"Hamish Cunningham\" />\n\
 <meta name=\"summary\" contents=\"${title}\" />\n\
 '''
