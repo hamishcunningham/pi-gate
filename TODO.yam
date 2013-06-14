@@ -1,5 +1,7 @@
 PiGate TODOs
 
+- bugs
+  - the left column includes the middle and right ones
 - infrastructure
   - move pifi-git to git@github.com:hamishcunningham/pi-tronics.git
     - help pete add his sources there
@@ -15,4 +17,3 @@ PiGate TODOs
   - reshoot the breadboard images?
   - google analytics
   - disqus
-  - footer with CC licence

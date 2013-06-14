@@ -436,3 +436,16 @@ div.banner a:hover {
   color: #FFFFFF;
 }
 
+#leftColumn {
+  margin: 0 20px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+#middleColumn {
+  margin: 10px 20px;
+}
+#rightColumn {
+  margin: 40px 0px;
+}
