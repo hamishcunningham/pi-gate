@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Hamish Cunningham'
-SITENAME = u'Pi GATE'
+SITENAME = u'Pi GATE — Sheffield Pi-Tronics'
 SITEURL = ''
 
 TIMEZONE = 'Europe/London'
