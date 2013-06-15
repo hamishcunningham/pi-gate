@@ -409,33 +409,6 @@ ul.dirList li span.deleteCheckbox {
   background: #EDEDED;
 }
 
-/* the following banner styles are from the old gate site so that we
- * can display legacy non-yam html in a similar style to before.
- * I'm guessing that once we have updated these pages to YAM then
- * these could be removed
- */
-
-div.banner {
-  border: none;
-  margin-right: 0px;
-  margin-left: 0px;
-  padding: 0.09em;
-  text-align: center;
-  font-weight: bold; 
-}
-div.banner a:link, div.banner {
-  background: #A0D0F0;
-  color: #000000;
-}
-div.banner a:active {
-  background: #000000;
-  color: #FFFFFF;
-}
-div.banner a:hover {
-  background: #000000;
-  color: #FFFFFF;
-}
-
 #leftColumn {
   margin: 10px 10px;
 }
