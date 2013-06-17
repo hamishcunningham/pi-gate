@@ -9,7 +9,7 @@
 */
 
 /* Imports */
-@import url("reset.css");
+/* HC @import url("reset.css"); */
 @import url("pygment.css");
 @import url("typogrify.css");
 @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz&subset=latin);
@@ -47,7 +47,7 @@ h3, h4, h5, h6 { margin-top: .8em; }
 hr { border: 2px solid #EEEEEE; }
 
 /* Anchors */
-a {outline: 0;}
+/* HC a {outline: 0;} */
 a img {border: 0px; text-decoration: none;}
 a:link, a:visited {
 	color: #C74350;
