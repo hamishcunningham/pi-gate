@@ -50,10 +50,11 @@ help:
 	@echo '                                                                       '
 	@echo '   check                            check prerequisites                '
 	@echo '   prepare                          regenerate the sources             '
+	@echo '   google-site-verify               install web tools verification     '
 	@echo '                                                                       '
 
 
-html: check clean prepare $(OUTPUTDIR)/index.html
+html: check clean prepare $(OUTPUTDIR)/index.html google-site-verify
 
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -107,4 +108,7 @@ prepare:
           $(EPI) about.html basics.html schools.html notipi.html && \
           $(EPI) -n piroomba.html
 
-.PHONY: check prepare
+google-site-verify:
+	echo 'google-site-verification: google2bff225e702ae7d8.html' >output/google2bff225e702ae7d8.html
+
+.PHONY: check prepare google-site-verify
