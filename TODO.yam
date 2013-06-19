@@ -1,6 +1,6 @@
 PiGate TODOs
 
-- add summary to metadata and including in index.html list
+- add summary to metadata and include in index.html list
 - put contents table in col 2 of pages?
 - articles:
   - Prism, Onion Pi
@@ -19,6 +19,5 @@ PiGate TODOs
   - finish TODOs in Basics
   - add some videos
 - misc
-  - google analytics
-    - working? https://www.google.com/analytics/web/?et&authuser=0#management/Property/a41812045w71383507p73622557/%3FpropertyComposite.tabId%3DtrackingCodeTab%26propertyComposite-trackingCodeTab.tabId%3DtrackingCodeTab/
   - disqus
+  - possible better menu: http://wiki.jqueryui.com/w/page/38666403/Menubar
