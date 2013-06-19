@@ -98,7 +98,7 @@ background: #ffffff;
 }
 .cow-non-existant-url {
   /*color:#0D5798; */
-  color:red !important;
+  /* HC color:red !important; */
 }
 .inlineForm {
   display: inline;
