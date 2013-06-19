@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Hamish Cunningham'
-SITENAME = u'Learn Pi stuff with Pimoroni'
+SITENAME = u'Pi GATE — Sheffield Pi-Tronics'
 SITEURL = ''
 
 TIMEZONE = 'Europe/London'
@@ -20,7 +20,7 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 # Blogroll
 #LINKS =  (('Raspberry Pi', 'http://www.raspberrypi.org/'),
-#          ('Pimoroni', 'http://shop.pimoroni.com/'),)
+#          ('GATE', 'http://gate.ac.uk/'),)
 
 # Social widget
 #SOCIAL = (('You can add links in your config file', '#'),
@@ -41,9 +41,11 @@ PAGE_EXCLUDES = (['basics'])
 ARTICLE_EXCLUDES = (['pages', 'basics', 'piroomba'])
 MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
 YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
-#THEME = 'large-blue-fish'
-THEME = 'small-yellow-fish'
+#THEME = 'theming/large-blue-fish'
+#THEME = 'theming/small-yellow-fish'
+THEME = 'theming/medium-red-fish'
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
-TWITTER_USERNAME = 'pimoroni'
+TWITTER_USERNAME = 'hcunningham'
+GOOGLE_ANALYTICS = 'UA-41812045-1'

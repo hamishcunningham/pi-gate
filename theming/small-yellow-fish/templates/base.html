@@ -35,9 +35,17 @@
 
 {% include 'github.html' %}
         <header id="banner" class="body">
-                <h1><a href="{{ SITEURL }}/">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
+                <table>
+                <tr align="left"><td>
+                  <h1><a href="{{ SITEURL }}/">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
+                </td><td>
+                  <a href="http://raspberrypi.org/"><img height="50" src="{{ SITEURL }}/theme/images/raspi-logo.png"/></a>
+                </td><td>
+                  <a href="http://gate.ac.uk/"><img height="50" src="{{ SITEURL }}/theme/images/logo-gate.png"/></a>
+                </td>
+                </tr>
+                </table>
                 <nav><ul>
-                <li><a href="http://pimoroni.com/"><img width="35" src="{{ SITEURL }}/theme/images/pimoroni-logo.jpg"/></a></li>
                 {% for title, link in MENUITEMS %}
                     <li><a href="{{ link }}">{{ title }}</a></li>
                 {% endfor %}
@@ -99,24 +107,29 @@
         {% endif %}
         </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <!-- <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address> --><!-- /#about -->
-
-                <!-- <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing
-                Magazine</a>, thanks!</p> -->
-        </footer><!-- /#contentinfo -->
-
 {% include 'analytics.html' %}
 {% include 'piwik.html' %}
 {% include 'disqus_script.html' %}
 
   </div>
   <div id="right-column" class="yui3-u-1-5"> <!-- column 3 -->
-    <a class="twitter-timeline" href="https://twitter.com/pimoroni" data-widget-id="342665484719767553">Tweets by @pimoroni</a>
+    <a class="twitter-timeline" href="https://twitter.com/search?q=%23raspi" data-widget-id="345540484359393280">Tweets about "#raspi"</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </div>
 </div>
+
+<div>
+  <footer id="contentinfo" class="body">
+    <!-- <address id="about" class="vcard body">
+    Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+    </address> --><!-- /#about -->
+
+    <!-- <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing
+    Magazine</a>, thanks!</p> -->
+
+    <em>Raspberry Pi</em> is a trademark of the <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>.
+  </footer><!-- /#contentinfo -->
+</div>
+
 </body>
 </html>

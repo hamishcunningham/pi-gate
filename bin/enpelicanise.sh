@@ -49,7 +49,7 @@ replace-meta-tags-etc() {
 <meta name=\"summary\" contents=\"${TITLE}\" />\n\
 "
 # no tags for now, use categories instead
-# <meta name=\"tags\" contents=\"pimoroni,learn\" />\n\
+# <meta name=\"tags\" contents=\"pi,gate,raspberrypi,raspi\" />\n\
 
     # set date from filename, or use TODAY
     if `echo $f | grep -q '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-'`

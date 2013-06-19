@@ -23,6 +23,8 @@ when you want to share your changes:
 git commit -vam "what I just did"
 git push
 
+latest published version is at http://pi.gate.ac.uk/
+
 latest draft is at http://tinyurl.com/pimo-draft  (u: pimo   p: learn)
 
 *relative links* between pages, images etc. should just work within the

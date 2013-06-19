@@ -45,14 +45,16 @@ help:
 	@echo '   make serve                       serve site at http://localhost:8000'
 	@echo '   make devserver                   start/restart develop_server.sh    '
 	@echo '   make stopserver                  stop local server                  '
-	@echo '   upload                           upload the web site via rsync+ssh  '
+	@echo '   ec2-upload                       upload the web site via rsync+ssh  '
+	@echo '   pigate-upload                    upload the web site via rsync+ssh  '
 	@echo '                                                                       '
 	@echo '   check                            check prerequisites                '
 	@echo '   prepare                          regenerate the sources             '
+	@echo '   google-site-verify               install web tools verification     '
 	@echo '                                                                       '
 
 
-html: check clean prepare $(OUTPUTDIR)/index.html
+html: check clean prepare $(OUTPUTDIR)/index.html google-site-verify
 
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -79,9 +81,12 @@ publish:
 
 # not using publish conf at present:
 #upload: publish
-upload:
+ec2upload:
 	rsync -e "ssh -p $(SSH_PORT) -i $${EC2_PEM}" \
           -P -rvz --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
+gateupload:
+	rsync -e "ssh -p $(SSH_PORT)" \
+          -P -rvz --delete --delete-excluded $(OUTPUTDIR)/ $${GE1_USER}@gate.ac.uk:/data/herd/pi.gate.ac.uk/html --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
 
 .PHONY: html help clean regenerate serve devserver publish upload
 
@@ -103,4 +108,7 @@ prepare:
           $(EPI) about.html basics.html schools.html notipi.html && \
           $(EPI) -n piroomba.html
 
-.PHONY: check prepare
+google-site-verify:
+	echo 'google-site-verification: google2bff225e702ae7d8.html' >output/google2bff225e702ae7d8.html
+
+.PHONY: check prepare google-site-verify

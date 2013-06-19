@@ -1,4 +1,11 @@
-PimoLearn TODOs
+PiGate TODOs
+
+- add summary to metadata and include in index.html list
+- put contents table in col 2 of pages?
+- articles:
+  - Prism, Onion Pi
+  - Guy's ambassadors thing http://ambassadors.rcweb.dcs.shef.ac.uk/
+  - EEE quadcopter guest post?
 
 - infrastructure
   - move pifi-git to git@github.com:hamishcunningham/pi-tronics.git
@@ -12,7 +19,5 @@ PimoLearn TODOs
   - finish TODOs in Basics
   - add some videos
 - misc
-  - reshoot the breadboard images?
-  - google analytics
   - disqus
-  - footer with CC licence
+  - possible better menu: http://wiki.jqueryui.com/w/page/38666403/Menubar

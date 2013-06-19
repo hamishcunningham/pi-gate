@@ -1,4 +1,4 @@
-AuthName "Temporary site-level password for pimo-learn"
+AuthName "Temporary site-level password for pi-gate"
 AuthType Basic
 AuthUserFile htpasswd
 
