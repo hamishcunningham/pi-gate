@@ -15,7 +15,8 @@ img{padding: 6px;}
 <body>
 <h1>Piroomba - controlling a Roomba with a raspberry pi</h1>
 <p>
-<img src="images/Roomba3g.jpg" attr="Creative Commons 'Roomba3g.jpg'" alt="A Roomba 530 on its charge station." align="right" width="30%">
+<img src="images/Roomba3g.jpg" attr="Creative
+Commons 'Roomba3g.jpg'" alt="A Roomba 530 on its charge station." align="right" width="30%">
 I have put a <a href="http://www.raspberrypi.org/">raspberry pi</a> on my 
 <a href="http://en.wikipedia.org/wiki/Roomba">Roomba</a>.  Below you
 will find links to how, but this page deals with the why.
@@ -39,7 +40,8 @@ of location, the roomba is often seen as little more than a toy by
 computer scientists but there are historical reasons for the Roomba to
 take this approach.  Ignoring the history is of course likely to lead
 to one repeating it.
-<img src="images/800px-Roomba_time-lapse.jpg" attr="Chris Bartle Creative Commons 'Roomba time-lapse.jpg'" alt="A time-lapse photo of the roomba's path" width="92%">
+<img src="images/800px-Roomba_time-lapse.jpg" attr="Chris Bartle Creative Commons 'Roomba time-lapse.jpg'" alt="A
+time-lapse photo of the roomba's path" width="92%">
 </p>
 <p>
 There are three good reasons for using a Roomba as the basis of
@@ -51,18 +53,15 @@ My Roomba is currently sitting on its charging platform and later
 today will clean the front room floor.  It is a system that regularly
 runs for <i>years</i> rather than minutes.  The system is well made
 with spares available. Indeed my Roomba is a second hand unit that was
-suffering the "<a
-href="http://www.schneordesign.com/Avi/irobot/roomba_mod2.htm"> 9 beep dance</a>".
-I fixed it with a soldering iron and a 60p component from Maplin
+suffering the "<a href="http://www.schneordesign.com/Avi/irobot/roomba_mod2.htm"> 9 beep
+dance</a>". I fixed it with a soldering iron and a 60p component from Maplin
 Electronics.  The thing has been chased by the children, dropped (not
 too far) and tells me when it needs a clean.  What you get with a
 Roomba is something with lots of development behind it.
 </li><li>The Roomba has an application that means it is <b>always on</b>.  
-You get all the above if you buy a <a
-href="http://en.wikipedia.org/wiki/IRobot_Create">iRobot Create</a>
+You get all the above if you buy a <a href="http://en.wikipedia.org/wiki/IRobot_Create">iRobot Create</a>
 but if I was using a Create, why would I leave it on?
-Like <a href="http://cfpm.org/%7Epeter/OldWebpage/index.html"
->my previous robots</a>, there is no doubt something I made with
+Like <a href="http://cfpm.org/%7Epeter/OldWebpage/index.html">my previous robots</a>, there is no doubt something I made with
 the Create would end up being disassembled or in the back of a
 cupboard with the batteries out.  My Roomba is there and I am
 continually temped to modify it.
@@ -84,14 +83,12 @@ How this thinking links into serious robot research is an on going issue.
 The link however does bring us back to an interesting feature of the
 Roomba.  There is a problem with representation and Brooks grand
 agenda (in the early days at least) was to see what could be done
-<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.12.1680"
->without representation</a>.  The Roomba's random walk is not a quick
+<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.12.1680">
+without representation</a>.  The Roomba's random walk is not a quick
 fix that ought to be replaced with an algorithm based on some sort of
 map, but rather it is a considered solution to a classic problem.
 Indeed when one looks at the Roomba Open Interface, the
-architecture is very much <a
-href="http://mitpress.mit.edu/books/behavior-based-robotics/"
->Behaviour Based Robotics</a>
+architecture is very much <a href="http://mitpress.mit.edu/books/behavior-based-robotics/">Behaviour Based Robotics</a>
 with "primitive" commands for "clean", "seek dock" and so on. In the
 same way one might like to start with two motors and a chassis and not
 use the excellent work done by iRobot to make a Roomba, one could also
@@ -100,87 +97,16 @@ a iRobot Create.  I however think the Roomba is a better place to
 start thinking about robotics.
 <p></p>
 <p>
-</p>
-
-<!-- <ul>
-<li>Step 1: <a href="connectingItUp.html"
->How I connected the roomba to my raspberry pi</a>
+</p><ul>
+<li>Step 1: <a href="connectingItUp.html">How I connected the roomba
+to my raspberry pi</a>
 </li><li>Simultanious Location And Mapping (SLAM)?
 </li><li>Step 2: <a href="">"Here Roomba!" - making it come when called</a>
+
 </li></ul>
--->
 
-<h1>Connecting a Pi to the Roomba</h1>
-<img src="images/roopiTop.jpg" alt="A raspberry pi on a Roomba - top view" width="33%">
-<img src="images/roopiSide.jpg" alt="A raspberry pi on a Roomba - side
-view" width="33%">
-<p>
-I have a Roomba 530 with a serial interface and open API as specified
-<a href="http://cfpm.org/%7Epeter/bfz/iRobot_Roomba_500_Open_Interface_Spec.pdf">here</a>.
-Connecting the pi requires a serial connection between the pi an the
-roomba's serial port, and some way of powering the pi from the 18volt
-supply on the roomba.
-I have put the pi in a plastic case that is connected to the bumper.
-That way when it goes under a chair and catches the case, the force is
-transmitted to the bump sensors and the standard software figures out
-what to do.
-</p><p>
-<img src="images/plug.jpg" alt="The home made 7 pin DIN plug" align="right" width="44%">
-Unfortunately the clear plastic bowl I could get to cut
-down was slightly too small and so I ended up making a 7 pin DIN plug
-out of a piece of brass tube, some bass wire and some epoxy putty from
-the local hobby shop.  The process was to solder the wires onto the
-pins, take the battery out of the Roomba and put vaseline on the
-serial plug on the Roomba. Put the pins (and earth ring) in the Roomba
-socket, and then push putty over the top of the pins.  When it
-dries, take the plug out (carefully) and "back fill" the plug from the
-pin side and push it back into its vaseline covered socket.  Let it
-dry and clean up.
-</p><p>
-<img src="images/powerBrd.jpg" alt="The pi - Roomba interface board" align="right" width="44%">
-There are two electrical challenges.  First the serial interface to
-the rpi is 3.3v and the serial interface to the Roomba is 5v.  To
-address this I simply used a voltage divider on the Roomba TxD to rpi
-RxD connection (see circuit below).  The rpi TxD to Roomba RxD
-connection is fine as 3.3v seems to be enough to drive the Roomba RxD
-signal.
-</p><p>
-<img src="images/RooPieCircuit.png" alt="The pi - Roomba interface board
-circuit" align="left" width="200px">
-The second challenge is that, although there 18-14v available directly
-from the Roomba battery via the serial plug, there is a 200mA poly
-fuse on that supply and the Roomba draws up to 700mA. It actually only
-draws 330 mA when running but round 420 on boot.  The difference
-between what it normally draws and the specified required current is
-to drive things hanging off the USB ports.  The solution was to use a
-DC to DC converter (available through Farnell in the UK) that would
-provide 400mA.  This turns out to be enough to boot and so my 4
-rechargeable batteries are redundant until I put something weighty on
-the USB connections.  Here is the circuit I used - there are some
-strange choices (the inductor is surface mount; the schottiky diode is
-too big ...) but these decisions were based on what I had and could
-get.  The original idea was to tune the potentiometer to deliver a
-trickle charge (via a current regulator) to the batteries and have the
-the power to the pi go via a voltage regulator. This doesn't work as I
-don't seem to be able to find a voltage regulator that will take 5.45v
-down to between 4.8 and 5.2 volts.  Please mail me if you have any
-suggestions.
-</p><p>
-Finally the code. I have written (most) of the Roomba Open Interface
-as a Java package that uses RXTX behind the scenes to communicate with
-the robot.  In addition I have written a user interface that provides
-a "joystick" to steer the roomba, and a set of level meters that indicate
-the output from the 6 "light bump sensors":
-
-TODO
-<img src="images/remoteControl.html" alt="my laptop running
-the Roo Pie remote control interface with the roomba finding the sofa.">
-<br>
-The code is in Java and uses Sockets to communicate between a computer
-running the user interface and the rpi, and RXTX to communicate
-between the rpi and the roomba.
-The code is available for download <a href="http://cfpm.org/%7Epeter/PetersSourceCode.tar">here</a> as a tar ball.
-
-</p>
+<hr>
+<a href="http://cfpm.org/%7Epeter/index.html"><small>back to Peter's home page</small></a>
+<p></p>
 
 </body></html>
