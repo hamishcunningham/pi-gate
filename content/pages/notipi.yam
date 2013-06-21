@@ -82,12 +82,12 @@ There are 5 bits of information that BulkSMS absolutely needs to get things
 done. These are as follows:
 
 - A unique message ID (*stop\_dup\_id*). This is an integer (whole number)
- value between 1 and 2147483647.
+  value between 1 and 2147483647.
 - Your BulkSMS username (*username*).
 - Your BulkSMS password (*password*).
 - The message text you're sending (*message*).
 - The phone number (*msisdn*). This is including the country code, but without
- the leading `+'.
+  the leading `+'.
 
 All of this information is pretty easy to get a hold of. The next half of
 the battle is actually sending the message.
