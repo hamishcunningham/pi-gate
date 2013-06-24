@@ -51,10 +51,11 @@ help:
 	@echo '   check                            check prerequisites                '
 	@echo '   prepare                          regenerate the sources             '
 	@echo '   google-site-verify               install web tools verification     '
+	@echo '   robots                           create output/robots.txt           '
 	@echo '                                                                       '
 
 
-html: check clean prepare $(OUTPUTDIR)/index.html google-site-verify
+html: check clean prepare $(OUTPUTDIR)/index.html google-site-verify robots
 
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -111,4 +112,7 @@ prepare:
 google-site-verify:
 	echo 'google-site-verification: google2bff225e702ae7d8.html' >output/google2bff225e702ae7d8.html
 
-.PHONY: check prepare google-site-verify
+robots:
+	cp robots.txt output/robots.txt
+
+.PHONY: check prepare google-site-verify robots
