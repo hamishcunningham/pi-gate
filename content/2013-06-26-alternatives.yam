@@ -1,43 +1,68 @@
-Its a Jungle Out There
+It's a Jungle Out There
+
+For a couple of years now I've been working on some cheap home computing stuff
+that might scratch a couple of itches with one stone%footnote(Mixed metaphors?
+Love 'em!):
+
+- a set-top media center that doesn't cost a fortune, but does have a decent
+  web browser
+- a way of communicating with family and friends that doesn't involve getting
+  all those dodgy adverts from Facebook%footnote("Meet your dream partner at
+  our new site, exclusively for the balding and podgy!" A friend of mine
+  claims that the only reason I get dodgy adverts is because I visit dodgy
+  sites with my cookies turned on, but I'm sure there's no truth in that at
+  all. And I'll sue.)
+- a worm-hole generator piped into 1980 and localised on my bald patch
+
+I'm still waiting for the worm-hole thing, but the other stuff is getting very
+do-able, and the Raspberry Pi is definitely part of the picture. To test out
+various options I picked up a bunch of different bits of hardware that do jobs
+similar to the Pi in one way or other... And %(/pages/about.html#lego, Fred)
+is busy putting them through their paces for a future article. He's taken some
+pics:
 
 %[
 |
-%image(images/hardware/thumbs/apc8750.jpg, APC 8750, 150)
+%(images/hardware/apc8750.jpg, %image(images/hardware/thumbs/apc8750.jpg, APC 8750, 150))
 |
-APC 8750
+%(http://apc.io/products/8750a/, APC 8750)
 | %\ %\ %\ %\ |
-%image(images/hardware/thumbs/beagleboneblack.jpg, Beagle Bone Black, 150)
+%(images/hardware/beagleboneblack.jpg, %image(images/hardware/thumbs/beagleboneblack.jpg, Beagle Bone Black, 150))
 |
-APC 8750
+%(http://beagleboard.org/Products/BeagleBone%20Black, Beagle Bone Black)
 |
 ---
 |
-%image(images/hardware/thumbs/cubieboard.jpg, CubieBoard, 150)
+%(images/hardware/cubieboard.jpg, %image(images/hardware/thumbs/cubieboard.jpg, CubieBoard, 150))
 |
-APC 8750
+%(http://cubieboard.org/, Cubieboard)
 | %\ %\ %\ %\ |
-%image(images/hardware/thumbs/dreamplug.jpg, DreamPlug, 150)
+%(images/hardware/dreamplug.jpg, %image(images/hardware/thumbs/dreamplug.jpg, DreamPlug, 150))
 |
-APC 8750
+%(http://www.globalscaletechnologies.com/t-dreamplugdetails.aspx, DreamPlug)
 |
 ---
 |
-%image(images/hardware/thumbs/minipc.jpg, MiniPC, 150)
+%(images/hardware/minipc.jpg, %image(images/hardware/thumbs/minipc.jpg, MiniPC, 150))
 |
-APC 8750
+%(https://www.miniand.com/products/MK802%20Android%20Mini%20PC, MK802 Mini PC)
 | %\ %\ %\ %\ |
-%image(images/hardware/thumbs/pimodela.jpg, Pimodel A, 150)
+%(images/hardware/pimodela.jpg, %image(images/hardware/thumbs/pimodela.jpg, Pi Model A, 150))
 |
-APC 8750
+%(http://www.raspberrypi.org/archives/3215, Pi Model A)
 |
 ---
 |
-%image(images/hardware/thumbs/pimodelbrev2.jpg, Pimodel B rev2, 150)
+%(images/hardware/pimodelbrev2.jpg, %image(images/hardware/thumbs/pimodelbrev2.jpg, Pi Model B rev2, 150))
 |
-APC 8750
+%(http://www.raspberrypi.org/faqs, Pi Model B)
 | %\ %\ %\ %\ |
-%image(images/hardware/thumbs/tonidoplug.jpg, Tonido Plug, 150)
+%(images/hardware/tonidoplug.jpg, %image(images/hardware/thumbs/tonidoplug.jpg, Tonido Plug, 150))
 |
-APC 8750
+%(http://www.tonidoplug.com/, TonidoPlug)
 |
 %]
+
+We'll keep you posted as he digs the dirt on this bunch... But if he figures
+out the worm-hole generator thing I'm off to see all the Clash gigs again
+before anything else.
