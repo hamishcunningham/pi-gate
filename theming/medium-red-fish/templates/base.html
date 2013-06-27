@@ -49,7 +49,6 @@
 </head>
 
 <body id="index" class="home">
-
   <div id="topBar">
     <span id="topLogo">
       <span id="piLogo"><a href="http://raspberrypi.org/"><img src="{{ SITEURL }}/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0" height="55"></a></span>
@@ -60,15 +59,20 @@
     <div class="horizontal menu">
     <ul>
     <li><img src="{{ SITEURL }}/theme/images/arrow-right.jpg"/></li>
-    <li><b><a href="{{ SITEURL }}">Projects</a></b> <!-- TODO need a page at /pages to link from the top level here -->
+    <!-- TODO need a page at /pages to link from the top level here -->
+    <!--
+    <li><b><a href="{{ SITEURL }}">Projects</a></b>
       <ul>
+    -->
       {% for page in PAGES %}
         {% if page.title != "About" %}
           <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
         {% endif %}
       {% endfor %}
+    <!--
       </ul></li>
-    <li><a href="{{ SITEURL }}/category/news.html">News</a></li>
+    -->
+    <!-- <li><a href="{{ SITEURL }}/category/news.html">News</a></li> -->
     <li><a href="{{ SITEURL }}/pages/about.html">About</a></li>
     </ul>
     </div>
@@ -152,10 +156,12 @@
 {% include 'disqus_script.html' %}
 
   </div>
-  <div id="rightColumn" class="yui3-u-1-5"> <!-- column 3 -->
-    <a class="twitter-timeline" href="https://twitter.com/search?q=%23raspi" data-widget-id="345540484359393280">Tweets about "#raspi"</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  </div>
+  {% if page_name == "index" %}
+    <div id="rightColumn" class="yui3-u-1-5"> <!-- column 3 -->
+      <a class="twitter-timeline" href="https://twitter.com/search?q=%23raspi" data-widget-id="345540484359393280">Tweets about "#raspi"</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+  {% endif %}
 </div>
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
