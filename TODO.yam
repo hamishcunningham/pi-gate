@@ -26,15 +26,15 @@ PiGate TODOs
   - facility for more authors in the metadata
   - tag and/or category metadata (e.g. notipi should be "software", "linux";
     basics should be "hardware", "gpio", "pi-tronics")
-  - scale the images and add dimensions with wwwis.pl
 - content
   - blog post > 5th june < 10 june to break the run of flood alarm referants
   - finish notipi
-  - finish TODOs in Basics
+  - finish TODOs in Resources
   - add some videos
 - misc
   - disqus
   - possible better menu: http://wiki.jqueryui.com/w/page/38666403/Menubar
+  - scale the images and add dimensions with wwwis.pl
   - center images
     - add cow-img class to img elements from yam2html and then put something
       like this in main.css:

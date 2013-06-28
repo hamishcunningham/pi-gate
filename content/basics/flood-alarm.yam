@@ -68,13 +68,135 @@ Here's the complete circuit diagram:
 %br %(https://www.circuitlab.com/circuit/at8v7f/flood-alarm-raspberry-pi/,
 %image(images/flood-alarm.svg, flood alarm, 500))
 
+The software for the beast is a bit more complex than we've worked with before
+-- it loops forever and takes care of sending an %(notipi.html, SMS
+notification) when things get wet, etc.:
 
-The software for the beast is a bit more complex than we've worked with before 
+%<
+#!/usr/bin/env bash
+# flood-alarm.sh
 
+# standard locals
+alias cd='builtin cd'
+P="$0"
+USAGE="`basename ${P}` [-h(elp)] [-w(et)] [-d(ry)]\n
+\twet and dry are for testing; normally we are run without options\n
+\tand loop forever waiting for state changes on GPIO 2..."
+OPTIONSTRING=hwd
+
+# specific locals
+WET=0
+DRY=0
+STATUS=none
+
+# message & exit if exit num present
+usage() { echo -e Usage: $USAGE; [ ! -z "$1" ] && exit $1; }
+
+# process options
+while getopts $OPTIONSTRING OPTION
+do
+  case $OPTION in
+    h)	usage 0 ;;
+    d)	DRY=1; WET=0 ;;
+    w)	WET=1; DRY=0 ;;
+    *)	usage 1 ;;
+  esac
+done 
+shift `expr $OPTIND - 1`
+
+# get started
+echo Hello! no flooding today, we hope...
+
+# set up the gpio pins
+gpio mode 0 out # pin 0 is the buzzer and red led
+gpio mode 1 out # pin 1 is the green led
+gpio mode 2 in  # pin 2 is the water sensing circuit
+
+# helpers for processing state changes
+statusDry() {
+  if [ $STATUS == wet ]
+  then
+    echo Becoming dry...
+  else
+    echo Staying dry...
+  fi
+  STATUS=dry
+  gpio write 0 0
+  gpio write 1 1
+}
+statusWet() {
+  if [ $STATUS == dry ]
+  then
+    echo Eek! Becoming wet!
+  else
+    echo Bugger. Staying wet!
+  fi
+  STATUS=wet
+  gpio write 0 1
+  gpio write 1 0
+}
+
+# helper to send notifications when wetness persists
+notifyFlooding() {
+  DATE_TIME=`date '+%b %d %Y %T'`
+
+  # send an SMS over the net
+  PW=`cat flood-alarm-data-efs/bulksms.txt`
+  SMS_STATUS=`./hc-sendbulksms.sh -u hamishcunningham \
+    -p "${PW}" -n 447740149842 -m "Flooding in the basement? $DATE_TIME"`
+  echo "BulkSMS says: ${SMS_STATUS}"
+
+  # send an SMS over the phone
+# TODO
+}
+
+# either do a state change (for debugging), or loop
+if [ $DRY == 1 ]
+then
+  statusDry
+elif [ $WET == 1 ]
+then
+  statusWet
+else
+  # after an alarm wait at least 30 mins before re-testing
+  MIN_DELAY=30
+  DELAY=${MIN_DELAY}
+  while :
+  do
+    WET=`gpio read 2`
+    if [ $WET == 0 ]
+    then
+      statusDry
+      DELAY=${MIN_DELAY}
+      sleep 1
+    else
+      # raise the alarm
+      statusWet
+      notifyFlooding
+      echo Taking a break for ${DELAY} minutes...
+      sleep ${DELAY}m
+
+      # if it is still wet we want to sleep longer next time
+      DELAY=`expr 2 \* ${DELAY}`
+      if [ $DELAY -gt 1440 ] 
+      then
+        # max delay is 24 hours
+        DELAY=1440
+      fi
+    fi
+  done
+fi
+%>
+
+And it works!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#alarm-build
 %2 Building and Installing
+
+Now, I want my breadboard for other things, and I want to box up the beastie
+for installation in my basement, so the final step is to solder it all
+together onto a permanent fixture -- in this case a piece of stripboard.
 
 TODO the stripboard version installation
