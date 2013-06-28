@@ -23,12 +23,13 @@ a penance.).)
 
 Fast forward ahem years (ok -- 32, to be precise). As part of a
 ground-breaking excursion to the very frontiers of human knowledge (otherwise
-known as %(http://pi.gate.ac.uk)) I'm building circuits, figuring out which
-combinations of components will solve a particular problem, prototyping them
-virtually on %(https://www.circuitlab.com/, CircuitLab), prototyping them in
-hardware on a breadboard, and, finally, soldering up "production prototypes"
-on a stripboard. All good clean family fun, and useful to boot. (Thanks,
-%(http://www.raspberrypi.org/, Raspberry Pi), for making all this possible!)
+known as %(http://pi.gate.ac.uk/, pi.gate.ac.uk)) I'm building circuits,
+figuring out which combinations of components will solve a particular problem,
+prototyping them virtually on %(https://www.circuitlab.com/, CircuitLab),
+prototyping them in hardware on a breadboard, and, finally, soldering up
+"production prototypes" on a stripboard. All good clean family fun, and useful
+to boot. (Thanks, %(http://www.raspberrypi.org/, Raspberry Pi), for making all
+this possible!)
 
 A lot of the skills and knowledge that I'm using is stuff that I haven't used
 for the intervening thirty-odd years -- but they're still there. What you
