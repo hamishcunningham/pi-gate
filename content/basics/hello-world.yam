@@ -322,7 +322,11 @@ using a much smaller flow. Amongst many other things this is the basis of the
 amplification that pretty much every hifi, TV, phone, MP3 player, etc. etc.
 uses to drive their loudspeakers. If it wasn't for transistors we'd all be
 carrying around car batteries and keeping nice and warm from the
-%(http://en.wikipedia.org/wiki/Vacuum_tube, thermionic valves) in our devices:
+%(http://en.wikipedia.org/wiki/Vacuum_tube, thermionic valves)%footnote(You
+can still see valves -- or _vacuum tubes_ -- in action in some music kit. One
+reason for this is that when they're driven hard they distort an analogue
+music signal in interesting ways -- that's the origin of the "fuzz box" guitar
+effect, or Jimmy Hendrix's entire sound repertoire, or etc.) in our devices:
 
 %(http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/5651RegulatorTubeInOperation.jpg/200px-5651RegulatorTubeInOperation.jpg,
 %image(images/thermionic-valve.jpg, Thermionic valve, 300))
@@ -349,8 +353,10 @@ Here's the circuit wired up on our trusty breadboard: %br
 %image(images/bbd-transistor-driving-buzzer.jpg, transistor driving buzzer,
 500)
 
-So we've now written a program on the Pi that is both sensing from the outside
-world (the position of the switch) and sending out a response (lighting or
+---
+
+So we've now written programs on the Pi that can both sense from the outside
+world (e.g. the position of the switch) and send out a response (lighting or
 extinguishing an LED, or buzzing a buzzer). We've taken our first steps in
 interaction electronics; now its time to look at a couple of simple projects
 that we can build using the techniques that we've learned so far.
