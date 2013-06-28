@@ -47,13 +47,3 @@ Here's what happens in our three cases:
 The code to read from our water sensor is very simple: ^gpio mode 0 in^ sets
 things up, and ^gpio read 0^ takes a reading. When things get wet (or there's
 a short circuit) the read statement will return 1; otherwise it will return 0.
-
-%(https://www.circuitlab.com/circuit/p989jw/using-a-transistor-to-drive-a-buzzer-raspberry-pi/,
-%image(images/using-a-transistor-to-drive-a-buzzer.svg, transistor driving buzzer,
-500))
-
-TODO
-- explain buzzer
-- Fred's notification stuff, one using BulkSMS.co.uk and the other using the
-  Nokia 6230i
-- Dom's Twitter notifications setup

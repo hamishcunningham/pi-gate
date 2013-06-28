@@ -300,8 +300,52 @@ is driving the LED (so the LED will turn on). If the switch is off, then GPIO
 0 will read low, returning 0 which will then be written to the output pin and
 turn the LED off.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 I Get a Buzz Out of Trannies
+
+We've done the _let there be light!_ bit -- how about making a noise to go
+with it? We'll finish up this part by hooking up buzzer to make an annoying
+whiney sound, partly because we'll need one of these later for our 
+%(#flood-alarm, flood alarm) project, and partly because it will introduce us
+to a new component, the _transistor_ (or _trannie_ in British English --
+North Americans please change your Google Translate preferences accordingly).
+
+Transistors are incredibly powerfull little gizmos, and their invention was
+one of the biggest steps in the history of solid state electronics, leading
+directly to the creation of integrated circuits (or _silicon chips_ in the
+popular vernacular) and the whole miniaturisation feeding frenzy that the
+techy world has been enthralled by for the last half century or so.
+
+Transistors allow the rapid and efficient switching of a large flow of current
+using a much smaller flow. Amongst many other things this is the basis of
+the amplification that pretty much every hifi, TV, phone, MP3 player, etc.
+etc. uses to drive loadspeakers.
+
+In the circuits above we've done our LED switching using the Pi's GPIO pins
+directly. These pins are only designed to deliver a very small current flow;
+if we want to drive a loudspeaker or a buzzer then we need more juice, and an
+easy and efficient way to supply it is to add a transistor to the mix. Our
+GPIO pin will still do the basic switching, but the transistor will mediate
+between GPIO and buzzer. Here's the circuit diagram:
+
+%(https://www.circuitlab.com/circuit/p989jw/using-a-transistor-to-drive-a-buzzer-raspberry-pi/,
+%image(images/using-a-transistor-to-drive-a-buzzer.svg, transistor driving buzzer,
+500))
+
+The transistor, Q1, has three pins, called base (b), collector (c) and emitter
+(e). When the base is set high (via GPIO header pin 11 in this case) the
+resistance between the collector and emitter is switched low. We place the
+buzzer in series with the transistor's collector/emitter pair and feed
+positive voltage through header pin 1. The effect is that the signal we send
+on header pin 11 (Wiring Pi's GPIO 0) will now turn the buzzer on or off.
+
+Here's the circuit wired up on our trusty breadboard: %br
+%image(images/bbd-transistor-driving-buzzer.jpg, transistor driving buzzer,
+500)
+
 So we've now written a program on the Pi that is both sensing from the outside
 world (the position of the switch) and sending out a response (lighting or
-extinguishing the LED). We've taken our first steps in interaction
-electronics; now its time to look at a couple of simple projects that we can
-build using the techniques that we've learned so far.
+extinguishing an LED, or buzzing a buzzer). We've taken our first steps in
+interaction electronics; now its time to look at a couple of simple projects
+that we can build using the techniques that we've learned so far.
