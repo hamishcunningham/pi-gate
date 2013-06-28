@@ -53,8 +53,23 @@ a short circuit) the read statement will return 1; otherwise it will return 0.
 %#alarm-integration
 %2 Hooking it all Together
 
+Finishing off the flood alarm is a matter of combining the LED and buzzer
+notification circuits with the water sensor just above. The breadboard looks
+like this:
+
+%image(images/bbd-flood-alarm-detail.jpg, final flood alarm breadboard, 500)
+
+Here it is in context, with a fantastically expensive test rig consisting of a
+length of bell wire to dip in a plastic box full of wet stuff:
+
+%image(images/flood-alarm-context.jpg, final flood alarm context, 500)
+
+The software for the beast is a bit more complex than we've worked with before 
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#alarm-build
-%2 Building the Final Version
+%2 Building and Installing
 
+TODO the stripboard version installation
