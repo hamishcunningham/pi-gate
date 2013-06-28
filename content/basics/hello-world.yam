@@ -160,7 +160,9 @@ and see our LED light up:
 ^gpio write 0 1^
 
 Again we're operating on pin 0, this time setting it high (to 3.3 volts -- see
-next section). And now turn it off again (to 0 volts):
+next section).
+
+And now turn it off again (to 0 volts):
 
 ^gpio write 0 0^
 
@@ -250,19 +252,20 @@ from software.
 %(https://www.circuitlab.com/circuit/886nta/sensing-from-switch-and-driving-led-raspberry-pi/,
 %image(images/sensing-from-switch-and-driving-led.svg, switch and LED, 550))
 
-Nothing new here -- we've just combined with LED driver circuit that we began
-with and the switch reader circuit that in the previous section. Here we have
-the switch sensor to the left and the LED driver to the right.
+Nothing new here -- we've just combined the LED driver circuit that we began
+with and the switch reader circuit from the previous section. Here we have the
+switch sensor to the left and the LED driver to the right.
 
 The breadboard to implement this circuit looks like this: %br
 %image(images/bbd-switch-plus-led.jpg, switch plus LED breadboard, 500)
 
-%image(images/bbd-switch-plus-led-detail.jpg, switch plus LED breadboard detail, 500)
-%br
-We've use a four-way switch (in "dual in line" or DIL pin style) because we
-had one handy and because it was easy to connect to the breadboard, but we're
-only using one of its channels -- the equivalent of an SPST or "single pole
-single throw" switch.
+%image(images/bbd-switch-plus-led-detail.jpg, switch plus LED breadboard
+detail, 500) %br We've use a four-way switch (in "dual in line" or DIL pin
+style) because we had one handy and because it was easy to connect to the
+breadboard, but we're only using one of its channels -- the equivalent of an
+SPST or
+"%(http://en.wikipedia.org/wiki/Single_pole\,_single_throw#Contact_terminology,
+single pole single throw)" switch.
 
 The code to drive this uses some neat features of Unix shell script:
 

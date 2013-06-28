@@ -48,5 +48,5 @@ quickly and easily. For introductions to this way of working, and to hacker
 electronics in general, see the %(#electronics-resources, electronics
 resources section).
 
-*Disclaimer*: it is possible fry your Pi and other nasties by doing this type
-of thing -- please see %(#warning, this warning) for details.
+*Disclaimer*: it is possible fry your Pi by doing this type of thing -- please
+see %(#warning, this warning) for details.
