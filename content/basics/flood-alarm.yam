@@ -64,6 +64,11 @@ length of bell wire to dip in a plastic box full of wet stuff:
 
 %image(images/flood-alarm-context.jpg, final flood alarm context, 500)
 
+Here's the complete circuit diagram:
+%br %(https://www.circuitlab.com/circuit/at8v7f/flood-alarm-raspberry-pi/,
+%image(images/flood-alarm.svg, flood alarm, 500))
+
+
 The software for the beast is a bit more complex than we've worked with before 
 
 
