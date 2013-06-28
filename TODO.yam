@@ -35,3 +35,7 @@ PiGate TODOs
 - misc
   - disqus
   - possible better menu: http://wiki.jqueryui.com/w/page/38666403/Menubar
+  - center images
+    - add cow-img class to img elements from yam2html and then put something
+      like this in main.css:
+    - img { display: block; margin-left: auto; margin-right: auto; }
