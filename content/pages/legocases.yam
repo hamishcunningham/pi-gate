@@ -1,0 +1,54 @@
+LegoCases
+
+_House the Pi with kit you've already got_
+
+_%(/pages/about.html#lego, Fred Sonnenwald), June 2013_
+
+%contents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#intro
+%1 Introduction
+
+%(http://www.lego.com/en-gb/, LEGO) is an amazing thing. I spent large chunks
+of time in my childhood playing with these magic bricks. It's one of the few
+toys out there I think that really lets your imagination have free reign. The
+things you can do range from building detailed models to the abstract. Who's
+to say that two bricks aren't a ship? But I digress.
+
+June last year liz posted on the RaspberryPi site a
+%(http://www.raspberrypi.org/archives/1354, set of directions for building a
+lego case) by Biz. I was enchanted. Why had I not thought of this earlier?
+Building a case of LEGO was a fantastic idea. Even better I still have all my
+LEGO bricks. They're just at my parents house, so I had to put the project on
+hold. But now I've got the oppotunity to share a bit about building my case
+after having finally gotten to do so.
+
+At the same time, I also thought I'd do a little overview of some of the other
+cases out there. Maybe put my Civil Engineering degree to use, eh? Because
+really, a set of directions for a specific case takes away a lot of the fun
+of LEGO I think. Yes, every set you can get comes with directions, but it's
+what you do afterwards sometimes that the real magic starts. So instead of
+a specific set of directions, I'm going to talk design features and
+limitations.
+
+My goal here is not to say "here's how you build a case" but like the Pi
+itself I believe, tickle your imagination into thinking how you might take
+the LEGO you've got and build your own case. The number one reason for doing
+this? I saw Biz' directions and immediately thought, "Awesome. Only I don't
+have those bricks and I can't afford to get them." (Being a poor University
+student does have it's downsides.)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#mycase
+%1 The case I built and why
+
+Because of my degree I approached building my case with a specific set of
+design goals. Criterion I wanted to meet. And just like a real Civil
+Engineering project I found myself with a balancing act. I needed to balance
+the design features I wanted against the bricks I actually had. (In Civil
+Engineering this is a balance between the design features wanted and how much
+someone is willing to pay $$$.)
+
+More to be written.
