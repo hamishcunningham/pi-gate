@@ -44,11 +44,192 @@ student does have it's downsides.)
 %#mycase
 %1 The case I built and why
 
-Because of my degree I approached building my case with a specific set of
-design goals. Criterion I wanted to meet. And just like a real Civil
-Engineering project I found myself with a balancing act. I needed to balance
-the design features I wanted against the bricks I actually had. (In Civil
-Engineering this is a balance between the design features wanted and how much
-someone is willing to pay $$$.)
+%(images/case/01case.jpg, %image(images/case/thumbs/01case.jpg, My case))
 
-More to be written.
+Because of my degree I approached building my case with a specific set of
+design goals. Criterion I wanted to meet.  After reviewing Biz' case and
+deciding I didn't have the pieces, I considered building a clone. That is the
+same final design, but using different pieces. Unfortunately, I felt that I
+wanted the case to perform in ways I thought Biz' design didn't accomplish.
+
+I was a little worried about how sturdy the design was. At that point in time
+I was doing quite a bit of traveling and I wanted my case to be able to travel
+with me. Traveling means surviving either banging around in checked luggage of
+my backpack. Neither the best environment for precision electronics. That also
+meant I needed to design a case that protects the ports.
+
+I also felt that getting the cover off would be a pain. That sucker is held
+down proper and if I ever wanted to look inside to admire the pretty
+electronics, or mess with the GPIO, I was gonna have a bad time. The case
+should also be no larger than necessary and look cool. (That meant keeping Biz'
+logo in some way - that bit is awesome.)
+
+So just like a real Civil Engineering project I found myself with a balancing
+act. I needed to balance my design goals against the bricks I actually had. And
+similar to a proper project I had my own set of design codes to follow. You
+don't just willy-nilly pour concrete floors and hope they don't crack. In the
+same way I don't just put bricks on top of each other.
+
+Specifically, I don't allow for multiple vertical cracks to aling. This makes
+for what's called in Civil Engineering a plane of weakness or a slip surface.
+A place where a material will slide with little to no effort. In LEGO this
+translates to what you build falling apart at awkward times. Usually bad news,
+definetely so when sturdiness is a goal.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#details
+%2 Design details
+
+Essentially my case can be considered a derivative of Biz' design, so again,
+a tip of the hat to her. The easiest possible modification was a way to get
+the top off easier. Simply replacing a portion of the outer rim with the tile
+pieces acheives this effect. All of it can be tile, or only a portion as I've
+done. The former will have the lid just sitting on, which is great for easy
+access. The few studs I've left is a perfect compromize for travel.
+
+%(images/case/02empty.jpg, %image(images/case/thumbs/02empty.jpg, Partially tiled))
+%(images/case/03empty.jpg, %image(images/case/thumbs/03empty.jpg, Partially tiled 2))
+
+For port access you can see I've used shuttered windows. The RCA, VGA, and
+HDMI ports all extend from the circuit board of the Pi, and the shuttered
+windows provide solid cover for them without having to extend the case wall
+away from the board at all. A small window has been used to let the diagnostic
+lights be seen. 
+
+You can also see the positioning of the risers on the bottom is different
+than Biz'. These were chosen to be in locations where there is nothing
+soldered onto the bottom of the Pi's circuit board. This lets it sit smoothe
+and evenly.
+
+%(images/case/04pieces.jpg, %image(images/case/thumbs/04pieces.jpg, Exploded view))
+%(images/case/05pieces.jpg, %image(images/case/thumbs/05pieces.jpg, Exploded view 2))
+
+There is also a bit of tile in red at the southern area of the bottom. This
+supports the SD card and the card slot. The 2x1 in red at the north and south
+minimize the area from the two fully exposed ports - the ethernet and micro
+USB. When designing I could find no good way to protect every single port.
+These two are the two that are most likely to be used full time in my use
+cases so they got left exposed.
+
+%(images/case/06pi.jpg, %image(images/case/thumbs/06pi.jpg, Pi sitting))
+
+The pi is also lifted up an extra 1/3rd tile on its risers. This is for
+multiple reasons. It allows for: better support of the SD card; airflow
+underneath the board; the GPIO pins won't hit stud heads; the ports line up
+in the window frames better; and finally, it allows for a side panel piece
+to be placed. This is critical, as this is the piece primarily responsible
+for keeping the board from wiggling when you plug things in and during
+travel. Also note that the base is 2/3rds thick - this is extra sturdy. Due
+to the interlocking thin tiles, but also isn't too bulky.
+
+%(images/case/07lid.jpg, %image(images/case/thumbs/07lid.jpg, Pi sitting))
+%(images/case/08pi.jpg, %image(images/case/thumbs/08pi.jpg, Pi sitting))
+
+You'll also have noticed that this lid is rather bulky. This is what keeps
+the pi from shifting vertically in the case. It also comes down inside the
+main case walls on the other sides of the windows to make plugging cables
+in easier. It also provides protection at the top.Those clear tiles in the
+sides are pure decoration - I also didn't have enough 1x1x1/3rd pieces to
+make up the gaps. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#othercases
+%1 Other cases
+
+So hopefully you've got an idea now of what I've built. You can try building
+it yourself if you've got the pieces, and it'll be even more fun to try if
+you haven't. More importantly though, you'll have an idea now of why I've
+done certain things. This should have given you some ideas for how to build
+your own case what sorts of things you'll consider. It'll also have by the by
+given you a little appreciation into what Civil Engineers consider when
+designing that new building.
+
+You've probably got your own great ideas now. If you haven't though, let's
+take a look at some other designs I found while googling "raspberry pi lego
+case" - there are plenty of results. Here are a few things I found really
+cool while looking at them all. I've included a list of more cases at the
+end of the article.
+
+%(http://www.flickr.com/photos/rooreynolds/7155708427/sizes/l/, %image(images/case/thumbs_ext/labels.jpg, Labels!))
+
+I love the use of tiles for labeling. This case is also one of the ones that
+I'm now thinking of as "half height" - Primarily only 2 bricks tall as
+opposed to the three that Biz and I have both used.
+
+%(http://www.flickr.com/photos/attilaacs/8060076112/sizes/l/, %image(images/case/thumbs_ext/shutters.jpg, Shutters!))
+
+Someone else had the same idea and used shutters! I'm trhilled! Also another
+nice red, green, white color scheme going on.
+
+%(http://www.flickr.com/photos/pikesley/7157136321/sizes/l/, %image(images/case/thumbs_ext/sculpture.jpg, Sculpture!))
+
+LEGO really is only limited by your imagination. Turn your case into a work
+of art!
+
+%(http://www.raspberrypi-spy.co.uk/2012/06/my-raspberry-pi-lego-case/, %image(images/case/thumbs_ext/slick.jpg, Slick!))
+
+I like how slick this back panel feels. It also lets you get away with a
+slightly shorter case.
+
+%(http://sparky0815.de/2012/05/raspberry-pi-lego-case-uberarbeitet-3/, %image(images/case/thumbs_ext/notch.jpg, Notch!))
+
+This notch on the etherport is nice. Gets away from a rectangle case. The
+windows on the top make really stylish vents and the little Pi logo is there
+too!
+
+%(http://www.weekendcontent.com/how-to-make-your-own-lego-raspberry-pi-computer-case/, %image(images/case/thumbs_ext/hinge.jpg, Hinge!))
+
+Consider as well that the lid of the case doesn't have to be fixed or
+resting, that it might be hinged as well!
+
+%(http://glynrob.com/hardware/my-lego-pi-case/, %image(images/case/thumbs_ext/open.jpg, Open!))
+
+The open bottom here I thought was pretty clever. A nice way to lighten up
+the case or save on finding bricks for the bottom.
+
+%(http://www.flickr.com/photos/jole/sets/72157630028613267/, %image(images/case/thumbs_ext/roof.jpg, Roof!))
+
+The top doesn't have to be flat. Sloped roof bricks have been used to good
+effect. Loads of extras make this one into another example of a work of art.
+
+%(http://anoved.net/2013/06/raspberry-pi-lego-case/, %image(images/case/thumbs_ext/slide.jpg, Slide!))
+
+Rather than open out the top, the Pi slides in and out. Clever detailing to
+make that work and fix the Pi in place.
+
+%(http://www.instructables.com/id/Lego-Raspberry-Pi-Case/, %image(images/case/thumbs_ext/vents.jpg, Vents!))
+
+Ah, LEGO Technic. I don't know if it was intended this way, but the Technic
+holes form perfect vents for passive cooling. Very clever use of the doors
+to cover the ports. If I had some of these pieces I think I'd want to do it
+this way.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#links
+%2 More links
+
+So now you should really be brimming with ideas. Mix, match, create. Just in
+case, here are more links, in no particular order:
+
+- http://miriamelewis.blogspot.co.uk/2012/02/raspberry-pi-lego-case.html
+- http://arstechnica.com/information-technology/2012/09/university-builds-cheap-supercomputer-with-raspberry-pi-and-legos/
+- http://elinux.org/RPi_Cases#Lego_Case
+- http://www.jakebyrne.com/adding-web-connectivity-via-usb-to-remote-controlled-sockets-part-2-software/
+- http://imgur.com/XBlwp
+- http://www.raspberrypi.org/phpBB3/viewtopic.php?f=40&t=10510
+- http://www.flickr.com/photos/rooreynolds/7159652835/
+- http://www.raspberrypi.org/phpBB3/viewtopic.php?t=17654&p=183835
+- http://netzpirat.blogspot.co.uk/2012/07/hier-mein-lego-case-fur-den-raspberry.html
+- http://blog.stuart.shelton.me/archives/918
+- http://www.overclock.net/t/1381518/raspberry-pi-battletank-lego-case-with-a-fan
+- http://news.sean.co.uk/2012/10/building-lego-case-for-raspberry-pi.html
+- http://www.bit-tech.net/modding/2013/05/07/raspberry-pi-case-competition-voting/8
+- https://sites.google.com/site/legoraspberrypicase/
+- http://makelehighvalley.com/blog/2012/08/lego-case-for-the-raspberry-pi/
+- http://flikto.de/2013/05/09/pibrick/
+- http://www.wiredfatherhood.com/2013/03/27/my-new-raspberry-pi-lego-case/
+- http://www.bitrebels.com/technology/a-geeky-collection-of-creative-raspberry-pi-cases-15-pics/
+- http://riscpi.co.uk/raspberry-pi-case-in-lego/
+- http://www.makeuseof.com/tag/8-interesting-diy-raspberry-pi-case-ideas/
