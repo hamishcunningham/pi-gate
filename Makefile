@@ -52,10 +52,11 @@ help:
 	@echo '   prepare                          regenerate the sources             '
 	@echo '   google-site-verify               install web tools verification     '
 	@echo '   robots                           create output/robots.txt           '
+	@echo '   favicon                          create output/favicon.ico          '
 	@echo '                                                                       '
 
 
-html: check clean prepare $(OUTPUTDIR)/index.html google-site-verify robots
+html: check clean prepare $(OUTPUTDIR)/index.html google-site-verify robots favicon
 
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -114,5 +115,7 @@ google-site-verify:
 
 robots:
 	cp robots.txt output/robots.txt
+favicon:
+	cp content/images/favicon.ico output
 
-.PHONY: check prepare google-site-verify robots
+.PHONY: check prepare google-site-verify robots favicon
