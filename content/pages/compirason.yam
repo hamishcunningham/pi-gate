@@ -66,15 +66,18 @@ I've loaded up the Lubuntu 1GB 1080p image and everything I've tested has
 worked out of the box. It is slow though. I originally tried the Ubuntu image
 but found it to be pretty much unusable. Really slow and a DNS resolution bug
 which would need to be manually fixed. Lubuntu manages OK but it's just slow.
-For some reason the onboard wifi seems to cap out at about 50 KB/s so
-internet browsing is slow too. I had this problem under the original Android
-as well.
+I suspect most of this slow down is due to running regular desktop software,
+while in comparison the Pi runs a more stripped down system. I also think
+it's running softfloat rather than hardfloat, which is what Rasbian is
+especially compiled for. Effectively this means there are calculations which
+could be sped up but which aren't.
 
 Hardware wise, having only 1 USB port is a bit annoying as well as you really
 need a hub to get things up and running normally. This goes right along with
 the special AC adapter needed to power it. Fortuantely, the onboard Wifi is
 a redeeming feature in this respect meaning that there aren't any more extra
-cables to deal with. 
+cables to deal with. Unfortunately though the onboard wifi seems to cap out at
+about 50 KB/s. I had this problem under the original Android as well.
 
 Lubuntu comes with sshd enabled so after setting up Wifi the first time you
 can actually get away with completely remote access. That along with its case
