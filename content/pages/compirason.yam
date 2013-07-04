@@ -52,7 +52,36 @@ To be written.
 %#minipc
 %1 MK802 Mini PC
 
-To be written.
+Immediately, the Mini PC has one thing going for it. It's size. It's an order
+of magnitude smaller than any of the other systems we're looking at here and
+it's in a case to boot. That makes it devilishly easy to transport. It ships
+with Android 4(.X?) which means you boot into a familiar interface. However,
+it is also armed with a microSD card slot which with the help of
+%(https://www.miniand.com/forums/forums/2/topics/1, disk images) lets it run
+standard Ubuntu Linux and derivatives. Just write the image to a card, pop it
+in to the slot, and it turns the Mini PC into something more directly
+comparable with the other systems.
+
+I've loaded up the Lubuntu 1GB 1080p image and everything I've tested has
+worked out of the box. It is slow though. I originally tried the Ubuntu image
+but found it to be pretty much unusable. Really slow and a DNS resolution bug
+which would need to be manually fixed. Lubuntu manages OK but it's just slow.
+For some reason the onboard wifi seems to cap out at about 50 KB/s so
+internet browsing is slow too. I had this problem under the original Android
+as well.
+
+Hardware wise, having only 1 USB port is a bit annoying as well as you really
+need a hub to get things up and running normally. This goes right along with
+the special AC adapter needed to power it. Fortuantely, the onboard Wifi is
+a redeeming feature in this respect meaning that there aren't any more extra
+cables to deal with. 
+
+Lubuntu comes with sshd enabled so after setting up Wifi the first time you
+can actually get away with completely remote access. That along with its case
+means you can more or less leave it plugged into a wall pretty much anywhere
+and have a box for running small stuff on. I think it'd be perfect for
+running irssi (IRC client) inside of a screen on. I've run my benchmarks this
+way instead though.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
