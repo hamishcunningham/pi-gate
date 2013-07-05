@@ -19,6 +19,7 @@ PiGate TODOs
     - http://www.cyntech.co.uk/
     - http://www.amazon.co.uk/gp/aag/main?ie=UTF8&asin=&isAmazonFulfilled=&isCBA=&marketplaceID=A1F83G8C2ARO7P&orderID=&seller=AHJUZBLY5C2JK
     - http://www.cooking-hacks.com/
+    - http://www.pi-supply.com/
 
 - infrastructure
   - move pifi-git to git@github.com:hamishcunningham/pi-tronics.git
@@ -39,3 +40,7 @@ PiGate TODOs
     - add cow-img class to img elements from yam2html and then put something
       like this in main.css:
     - img { display: block; margin-left: auto; margin-right: auto; }
+
+- analytics, webmaster tools
+  - https://www.google.com/analytics/web/?et&authuser=0#report/visitors-overview/a41812045w71383507p73622557/%3Foverview-graphOptions.selected%3Danalytics.nthWeek/
+  - https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http://pi.gate.ac.uk/&authuser=0

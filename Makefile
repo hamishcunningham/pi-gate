@@ -52,10 +52,11 @@ help:
 	@echo '   prepare                          regenerate the sources             '
 	@echo '   google-site-verify               install web tools verification     '
 	@echo '   robots                           create output/robots.txt           '
+	@echo '   favicon                          create output/favicon.ico          '
 	@echo '                                                                       '
 
 
-html: check clean prepare $(OUTPUTDIR)/index.html google-site-verify robots
+html: check clean prepare $(OUTPUTDIR)/index.html google-site-verify robots favicon
 
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -106,7 +107,7 @@ prepare:
           $(Y2H) -Fna && cp basics.html ../pages
 	cp $(INPUTDIR)/piroomba/piroomba.html $(INPUTDIR)/pages
 	cd $(INPUTDIR)/pages && $(Y2H) -na && \
-          $(EPI) about.html basics.html schools.html notipi.html && \
+          $(EPI) about.html basics.html schools.html notipi.html legocases.html && \
           $(EPI) -n piroomba.html
 
 google-site-verify:
@@ -114,5 +115,7 @@ google-site-verify:
 
 robots:
 	cp robots.txt output/robots.txt
+favicon:
+	cp content/images/favicon.ico output
 
-.PHONY: check prepare google-site-verify robots
+.PHONY: check prepare google-site-verify robots favicon
