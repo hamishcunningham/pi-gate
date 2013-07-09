@@ -24,7 +24,31 @@ To be written.
 %#apc
 %1 APC 8750
 
-To be written.
+The APC 8750 is big and clunky. It's a big fat board with a big fat power
+brick to go along with it. But it does some good things with that space.
+Primarily, ports. Ports everywhere. VGA output for old screens, enough USB
+ports so that you don't have to have a hub. Good things. There's also a
+proper power button on the circuit board. Speaking of which it's also ATX
+compatibile, which means there's a slew of cases out there it will fit in,
+even if they will be way bigger than necessary.
+
+While the APC 8750 ships with Android it does run Linux, and in this case
+it's actually Rasbian. Write the %(http://www.raspbian.org/ApricotImages,
+image) to an microSD card and then pause. Because it's a pretty much packed
+2GB image it really needs to be resized up after being written. I ran out of
+space running apt updates because I didn't.
+
+After boot it's a relatively snappy setup. It doesn't stick out as "wow
+that's fast but it doesns't make me cringe a lot either. The system really is
+just par for the course. The only exception is an apparent bug that keeps the
+system from booting if there's no monitor attached. That cuts down on a lot
+of use cases for a low power system. There also aren't any sort of GPIO
+headers so there's nothing doing on that front.
+
+Ultimately I see the system as a desktop replacement for scenarios where you
+don't need the power of a proper desktop. A PC that sits in the kitchen
+playing music is where I would put it. That's just what pops into my head
+though, doubtless other folks will have other good ideas.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
