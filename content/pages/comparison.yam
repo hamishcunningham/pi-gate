@@ -1,0 +1,139 @@
+ComPiRason
+
+_Let's take a look at some of the other low cost computers_
+
+_%(/pages/about.html#lego, Fred Sonnenwald), July 2013_
+
+%contents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#intro
+%1 Introduction
+
+To be written.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#method
+%2 Methodology
+
+To be written.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#apc
+%1 APC 8750
+
+The APC 8750 is big and clunky. It's a big fat board with a big fat power
+brick to go along with it. But it does some good things with that space.
+Primarily, ports. Ports everywhere. VGA output for old screens, enough USB
+ports so that you don't have to have a hub. Good things. There's also a
+proper power button on the circuit board. Speaking of which it's also ATX
+compatibile, which means there's a slew of cases out there it will fit in,
+even if they will be way bigger than necessary.
+
+While the APC 8750 ships with Android it does run Linux, and in this case
+it's actually Rasbian. Write the %(http://www.raspbian.org/ApricotImages,
+image) to an microSD card and then pause. Because it's a pretty much packed
+2GB image it really needs to be resized up after being written. I ran out of
+space running apt updates because I didn't.
+
+After boot it's a relatively snappy setup. It doesn't stick out as "wow
+that's fast but it doesns't make me cringe a lot either. The system really is
+just par for the course. The only exception is an apparent bug that keeps the
+system from booting if there's no monitor attached. That cuts down on a lot
+of use cases for a low power system. There also aren't any sort of GPIO
+headers so there's nothing doing on that front.
+
+Ultimately I see the system as a desktop replacement for scenarios where you
+don't need the power of a proper desktop. A PC that sits in the kitchen
+playing music is where I would put it. That's just what pops into my head
+though, doubtless other folks will have other good ideas.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#bbb
+%1 Beagle Bone Black
+
+To be written.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#cubie
+%1 Cubieboard
+
+To be written.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#dreamplug
+%1 DreamPlug
+
+To be written.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#minipc
+%1 MK802 Mini PC
+
+Immediately, the Mini PC has one thing going for it. It's size. It's an order
+of magnitude smaller than any of the other systems we're looking at here and
+it's in a case to boot. That makes it devilishly easy to transport. It ships
+with Android 4(.X?) which means you boot into a familiar interface. However,
+it is also armed with a microSD card slot which with the help of
+%(https://www.miniand.com/forums/forums/2/topics/1, disk images) lets it run
+standard Ubuntu Linux and derivatives. Just write the image to a card, pop it
+in to the slot, and it turns the Mini PC into something more directly
+comparable with the other systems.
+
+I've loaded up the Lubuntu 1GB 1080p image and everything I've tested has
+worked out of the box. It is slow though. I originally tried the Ubuntu image
+but found it to be pretty much unusable. Really slow and a DNS resolution bug
+which would need to be manually fixed. Lubuntu manages OK but it's just slow.
+I suspect most of this slow down is due to running regular desktop software,
+while in comparison the Pi runs a more stripped down system. I also think
+it's running softfloat rather than hardfloat, which is what Rasbian is
+especially compiled for. Effectively this means there are calculations which
+could be sped up but which aren't.
+
+Hardware wise, having only 1 USB port is a bit annoying as well as you really
+need a hub to get things up and running normally. This goes right along with
+the special AC adapter needed to power it. Fortuantely, the onboard Wifi is
+a redeeming feature in this respect meaning that there aren't any more extra
+cables to deal with. Unfortunately though the onboard wifi seems to cap out at
+about 50 KB/s. I had this problem under the original Android as well.
+
+Lubuntu comes with sshd enabled so after setting up Wifi the first time you
+can actually get away with completely remote access. That along with its case
+means you can more or less leave it plugged into a wall pretty much anywhere
+and have a box for running small stuff on. I think it'd be perfect for
+running irssi (IRC client) inside of a screen on. I've run my benchmarks this
+way instead though.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#modela
+%1 Pi Model A
+
+To be written.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#modelb
+%1 Pi Model B
+
+To be written.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#tonido
+%1 TonidoPlug
+
+To be written.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#conclusions
+%1 Conclusions
+
+To be written.
