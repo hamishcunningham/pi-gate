@@ -4,8 +4,8 @@ How to work with these sources:
 
 - send your github ID to hamish and get authorised
 - install git, java and pelican
-- git clone git@github.com:hamishcunningham/pimo-learn.git
-- cd pimo-learn
+- git clone git@github.com:hamishcunningham/pi-gate.git
+- cd pi-gate
 - make html
 - make serve
 
