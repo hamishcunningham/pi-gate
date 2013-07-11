@@ -53,9 +53,44 @@ though, doubtless other folks will have other good ideas.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#bbb
-%1 Beagle Bone Black
+%1 BeagleBone Black
 
-To be written.
+About the size of a Pi, the BeagleBone Black is a hacker's board, pure and
+simple. Primary evidence of this comes in the guise of more I/O pins than one
+can conviently shake a stick at. More evidence comes along as you get up and
+running with it. It ships with a stripped down Angstrom linux, but for
+comparative purposes I've put
+%(http://elinux.org/BeagleBoardUbuntu#Quantal_12.10_armhf, Ubuntu) on it.
+The install approach is somewhat different. Rather than writing a pure image,
+there's a script which formats the card and extracts a system image archive.
+To my mind it's a much more Gentoo like approach.
+
+To boot off the SD card you need to hold down a little button by it.
+Unfortunately to me this wasn't obvious at first, so I spent quite a while
+wondering what was going on until I figured that out. Oops moment there.
+Apparently this can be fixed so that the SD card is the default boot location
+with a uBoot flash. Another thing smacking of hackery.
+
+Once the system boots, you're in a frame buffer console. Forunately a script
+is provided to apt-get install LXDE for you to get up and running in GUI
+land. Ethernet works right off the bat and it was a relatively quick install.
+After it was up the GUI experience is a bit below average. Like most of these
+systems, it's a framebuffer driver for Xorg, so one expects a lower level of
+performance. In that sense responsiveness was average. What was poorer was
+the occaisional glitching of the screen, wrapping around horizontally a few
+pixels. Impressions were not helped with the two system lock ups I
+experienced, both of which occurred on the same imgur page - in two different
+browsers. All of this adds to the feeling of it's a hackers system.
+You'd need an incredible patient child to get through all of this.
+
+Hardware wise it's respectable, although the close placemnt of the micro HDMI
+and USB port mean connectors bump heads. No sound means it won't be a media
+center, but the comprehensive LEDs (Power, CPU, SD, and MMC activity) and
+buttons on the board are a nice touch. Overall (and I won't get tired of
+saying this I think) everything points it towards being a hacker's system.
+Three years ago it would probably have been my choice for a project if I had
+one, but I wouldn't have gotten it on an impulse like the Pi. At this point I
+think I'd need something really, really specific to get one now.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -107,8 +142,7 @@ Lubuntu comes with sshd enabled so after setting up Wifi the first time you
 can actually get away with completely remote access. That along with its case
 means you can more or less leave it plugged into a wall pretty much anywhere
 and have a box for running small stuff on. I think it'd be perfect for
-running irssi (IRC client) inside of a screen on. I've run my benchmarks this
-way instead though.
+running irssi (IRC client) inside of a screen on.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
