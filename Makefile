@@ -54,6 +54,8 @@ help:
 	@echo '   robots                           create output/robots.txt           '
 	@echo '   favicon                          create output/favicon.ico          '
 	@echo '                                                                       '
+	@echo '   minify                           compress the output html           '
+	@echo '                                                                       '
 
 
 html: check clean prepare $(OUTPUTDIR)/index.html google-site-verify robots favicon
@@ -118,4 +120,10 @@ robots:
 favicon:
 	cp content/images/favicon.ico output
 
-.PHONY: check prepare google-site-verify robots favicon
+# compress html using http://code.google.com/p/htmlcompressor/
+minify:
+	java -jar bin/htmlcompressor-1.5.3.jar --preserve-line-breaks -r output/ -o compressed-output/
+	cd compressed-output && for f in `find . -name '*.html'`; do mv $$f ../output/$${f}; done
+	rm -rf compressed-output
+
+.PHONY: check prepare google-site-verify robots favicon minify
