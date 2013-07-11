@@ -1,0 +1,11 @@
+Lego Engineering
+
+There's Lego, and then there's LEGO:
+
+%(http://www.wired.com/underwire/2013/05/largest-lego-x-wing/,
+%image(images/thumbs/wired-lego-xwing.jpg, BIG LEGO))
+%%% %http://www.wired.com/images_blogs/underwire/2013/05/X-wing1.jpg,
+%%% %image(images/wired-lego-xwing.jpg, BIG LEGO, 660, 440)
+
+%(images/case/01case.jpg, %image(images/case/thumbs/01case.jpg, A lego Pi case))
+

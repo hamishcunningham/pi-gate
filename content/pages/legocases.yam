@@ -2,7 +2,7 @@ LegoCases
 
 _House the Pi with kit you've already got_
 
-_%(/pages/about.html#lego, Fred Sonnenwald), June 2013_
+_%(/pages/about.html#fred, Fred Sonnenwald), June 2013_
 
 %contents
 
@@ -16,28 +16,29 @@ toys out there I think that really lets your imagination have free reign. The
 things you can do range from building detailed models to the abstract. Who's
 to say that two bricks aren't a ship? But I digress.
 
-June last year %(http://www.raspberrypi.org/archives/author/liz, Liz) posted
-on the RaspberryPi site a %(http://www.raspberrypi.org/archives/1354, set of
-directions for building a LEGO case) by Biz. I was enchanted. Why hadn't I
-thought of this earlier? Building a case of LEGO was a fantastic idea. Even
-better I still have all my LEGO bricks. They're just at my parents house, so I
-had to put the project on hold. But now I've got the opportunity to share a bit
-about building my case after having finally gotten to do so.
+In June of last year %(http://www.raspberrypi.org/archives/author/liz, Liz
+Upton) posted on %(http://raspberrypi.org, RaspberryPi.org) a set of
+directions %(http://www.raspberrypi.org/archives/1354, for building a LEGO Pi
+case), by a kid called Biz. I was enchanted. Why hadn't I thought of this
+earlier? Building a case of LEGO was a fantastic idea. Even better I still
+have all my LEGO bricks. Only they're all at my parents house, so I had to put
+the project on hold. But now I've got the opportunity to share a bit about
+building my case after having finally gotten around to picking up my kit.
 
-At the same time, I also thought I'd do a little overview of some of the other
-cases out there. Maybe put my Civil Engineering degree to use, eh? Because
-really, a set of directions for a specific case takes away a lot of the fun
-of LEGO I think. Yes, every set you can get comes with directions, but it's
-what you do afterwards sometimes that the real magic starts. So instead of
-a specific set of directions, I'm going to talk design features and
-limitations.
+While we're at it I'll also do a little overview of some of the other cases
+out there. Maybe put my %(http://www.shef.ac.uk/civil, Civil Engineering
+degree) to some use, eh? Because really, a set of directions for a specific
+case takes away a lot of the fun of LEGO I think. Yes, every set you can get
+comes with directions, but it's often what you do afterwards that really
+starts the magic. So instead of a specific set of directions, I'm going to
+talk design features and limitations.
 
-My goal here is not to say "here's how you build a case" but like the Pi
-itself I believe, tickle your imagination into thinking how you might take
-the LEGO you've got and build your own case. The number one reason for doing
-this? I saw Biz' directions and immediately thought, "Awesome. Only I don't
-have those bricks and I can't afford to get them." (Being a poor University
-student does have it's downsides.)
+My goal here is not to say "here's how you build a case" but, like the Pi
+itself, to tickle your imagination into thinking how you might take the LEGO
+you've got and build your own case. The number one reason for doing this? I
+saw Biz's directions and immediately thought, "Awesome. Only I don't have
+those bricks and I can't afford to get them." (Being a poor University student
+does have it's downsides.) No matter -- just grab what you've got and dive in!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -47,21 +48,24 @@ student does have it's downsides.)
 %(images/case/01case.jpg, %image(images/case/thumbs/01case.jpg, My case))
 
 Because of my degree I approached building my case with a specific set of
-design goals. Criterion I wanted to meet.  After reviewing Biz' case and
-deciding I didn't have the pieces, I considered building a clone. That is the
-same final design, but using different pieces. Unfortunately, I felt that I
-wanted the case to perform in ways I thought Biz' design didn't accomplish.
+design goals. Criteria I wanted to meet and the like. After reviewing Biz's
+case and deciding I didn't have the pieces, I considered building a clone.
+That is the same final design, but using different pieces. Unfortunately, I
+felt that I wanted the case to perform in ways I thought Biz's design didn't
+accomplish.
 
 I was a little worried about how sturdy the design was. At that point in time
-I was doing quite a bit of travelling and I wanted my case to be able to travel
-with me. Travelling means surviving either banging around in checked luggage of
-my backpack. Neither the best environment for precision electronics. That also
-meant I needed to design a case that protects the ports.
+I was doing quite a bit of travelling and I wanted my case to be able to
+travel with me. Travelling means surviving either banging around in checked
+luggage or in my backpack. Neither of them the best environment for precision
+electronics. That also meant I needed to design a case that protects the
+Pi's ports.
 
 I also felt that getting the cover off would be a pain. That sucker is held
 down proper and if I ever wanted to look inside to admire the pretty
 electronics, or mess with the GPIO, I was gonna have a bad time. The case
-should also be no larger than necessary and look cool. (That meant keeping Biz'
+should also be no larger than necessary and look cool. (That meant keeping
+Biz's
 logo in some way - that bit is awesome.)
 
 So just like a real Civil Engineering project I found myself with a balancing
@@ -81,7 +85,7 @@ definitely so when sturdiness is a goal.
 %#details
 %2 Design details
 
-Essentially my case can be considered a derivative of Biz' design, so again,
+Essentially my case can be considered a derivative of Biz's design, so again,
 a tip of the hat to her. The easiest possible modification was a way to get
 the top off easier. Simply replacing a portion of the outer rim with the tile
 pieces achieves this effect. All of it can be tile, or only a portion as I've
@@ -98,7 +102,7 @@ away from the board at all. A small window has been used to let the diagnostic
 lights be seen. 
 
 You can also see the positioning of the risers on the bottom is different
-than Biz'. These were chosen to be in locations where there is nothing
+than Biz's. These were chosen to be in locations where there is nothing
 soldered onto the bottom of the Pi's circuit board. This lets it sit smooth
 and evenly.
 
