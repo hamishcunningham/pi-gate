@@ -107,7 +107,7 @@ prepare:
           $(Y2H) -Fna && cp basics.html ../pages
 	cp $(INPUTDIR)/piroomba/piroomba.html $(INPUTDIR)/pages
 	cd $(INPUTDIR)/pages && $(Y2H) -na && \
-          $(EPI) about.html basics.html schools.html notipi.html legocases.html comparison.html && \
+          $(EPI) about.html basics.html schools.html notipi.html legocases.html hardware.html && \
           $(EPI) -n piroomba.html
 
 google-site-verify:
