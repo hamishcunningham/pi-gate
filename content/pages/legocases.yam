@@ -18,10 +18,10 @@ to say that two bricks aren't a ship? But I digress.
 
 June last year %(http://www.raspberrypi.org/archives/author/liz, Liz) posted
 on the RaspberryPi site a %(http://www.raspberrypi.org/archives/1354, set of
-directions for building a lego case) by Biz. I was enchanted. Why hadn't I
+directions for building a LEGO case) by Biz. I was enchanted. Why hadn't I
 thought of this earlier? Building a case of LEGO was a fantastic idea. Even
 better I still have all my LEGO bricks. They're just at my parents house, so I
-had to put the project on hold. But now I've got the oppotunity to share a bit
+had to put the project on hold. But now I've got the opportunity to share a bit
 about building my case after having finally gotten to do so.
 
 At the same time, I also thought I'd do a little overview of some of the other
@@ -53,8 +53,8 @@ same final design, but using different pieces. Unfortunately, I felt that I
 wanted the case to perform in ways I thought Biz' design didn't accomplish.
 
 I was a little worried about how sturdy the design was. At that point in time
-I was doing quite a bit of traveling and I wanted my case to be able to travel
-with me. Traveling means surviving either banging around in checked luggage of
+I was doing quite a bit of travelling and I wanted my case to be able to travel
+with me. Travelling means surviving either banging around in checked luggage of
 my backpack. Neither the best environment for precision electronics. That also
 meant I needed to design a case that protects the ports.
 
@@ -70,11 +70,11 @@ similar to a proper project I had my own set of design codes to follow. You
 don't just willy-nilly pour concrete floors and hope they don't crack. In the
 same way I don't just put bricks on top of each other.
 
-Specifically, I don't allow for multiple vertical cracks to aling. This makes
+Specifically, I don't allow for multiple vertical cracks to align. This makes
 for what's called in Civil Engineering a plane of weakness or a slip surface.
 A place where a material will slide with little to no effort. In LEGO this
 translates to what you build falling apart at awkward times. Usually bad news,
-definetely so when sturdiness is a goal.
+definitely so when sturdiness is a goal.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -84,9 +84,9 @@ definetely so when sturdiness is a goal.
 Essentially my case can be considered a derivative of Biz' design, so again,
 a tip of the hat to her. The easiest possible modification was a way to get
 the top off easier. Simply replacing a portion of the outer rim with the tile
-pieces acheives this effect. All of it can be tile, or only a portion as I've
+pieces achieves this effect. All of it can be tile, or only a portion as I've
 done. The former will have the lid just sitting on, which is great for easy
-access. The few studs I've left is a perfect compromize for travel.
+access. The few studs I've left is a perfect compromise for travel.
 
 %(images/case/02empty.jpg, %image(images/case/thumbs/02empty.jpg, Partially tiled))
 %(images/case/03empty.jpg, %image(images/case/thumbs/03empty.jpg, Partially tiled 2))
@@ -99,7 +99,7 @@ lights be seen.
 
 You can also see the positioning of the risers on the bottom is different
 than Biz'. These were chosen to be in locations where there is nothing
-soldered onto the bottom of the Pi's circuit board. This lets it sit smoothe
+soldered onto the bottom of the Pi's circuit board. This lets it sit smooth
 and evenly.
 
 %(images/case/04pieces.jpg, %image(images/case/thumbs/04pieces.jpg, Exploded view))
@@ -107,7 +107,7 @@ and evenly.
 
 There is also a bit of tile in red at the southern area of the bottom. This
 supports the SD card and the card slot. The 2x1 in red at the north and south
-minimize the area from the two fully exposed ports - the ethernet and micro
+minimise the area from the two fully exposed ports - the ethernet and micro
 USB. When designing I could find no good way to protect every single port.
 These two are the two that are most likely to be used full time in my use
 cases so they got left exposed.
@@ -154,14 +154,14 @@ end of the article.
 
 %(http://www.flickr.com/photos/rooreynolds/7155708427/sizes/l/, %image(images/case/thumbs_ext/labels.jpg, Labels!))
 
-I love the use of tiles for labeling. This case is also one of the ones that
+I love the use of tiles for labelling. This case is also one of the ones that
 I'm now thinking of as "half height" - Primarily only 2 bricks tall as
 opposed to the three that Biz and I have both used.
 
 %(http://www.flickr.com/photos/attilaacs/8060076112/sizes/l/, %image(images/case/thumbs_ext/shutters.jpg, Shutters!))
 
-Someone else had the same idea and used shutters! I'm trhilled! Also another
-nice red, green, white color scheme going on.
+Someone else had the same idea and used shutters! I'm thrilled! Also another
+nice red, green, white colour scheme going on.
 
 %(http://www.flickr.com/photos/pikesley/7157136321/sizes/l/, %image(images/case/thumbs_ext/sculpture.jpg, Sculpture!))
 
