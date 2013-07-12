@@ -42,12 +42,10 @@ replace-meta-tags-etc() {
     # set up metadata for this file
     TITLE=`grep -i '<title' $f |sed -e 's,<title>,,I' -e 's,</title>,,I'`
     FBASE=`basename $f |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
-    METAS="\n\
-<meta name=\"slug\" contents=\"${FBASE}\" />\n\
+    METAS="<meta name=\"slug\" contents=\"${FBASE}\" />\n\
 <meta name=\"category\" contents=\"News\" />\n\
 <meta name=\"author\" contents=\"Hamish Cunningham\" />\n\
-<meta name=\"summary\" contents=\"${TITLE}\" />\n\
-"
+<meta name=\"summary\" contents=\"${TITLE}\" />"
 # no tags for now, use categories instead
 # <meta name=\"tags\" contents=\"pi,gate,raspberrypi,raspi\" />\n\
 
@@ -58,8 +56,7 @@ replace-meta-tags-etc() {
       # set date from filename instead
     else
       METAS="${METAS}\n\
-<meta name=\"date\" contents=\"${TODAY}\" />\n\
-"
+<meta name=\"date\" contents=\"${TODAY}\" />"
     fi
 
     # add the metas

@@ -1,6 +1,7 @@
 PiGate TODOs
 
 - cache the sharethis stuff (too slow to load)
+- fix missing footnotes headers
 - add summary to metadata and include in index.html list
 - put contents table in col 2 of pages?
 - articles:
