@@ -40,9 +40,19 @@ EPI=$(SCRIPTS)/enpelicanise.sh
 
 # generated targets #########################################################
 help:
-	@echo 'Makefile for a pelican Web site                                        '
+	@echo 'Makefile for pi.gate.ac.uk                                             '
 	@echo '                                                                       '
 	@echo 'Usage:                                                                 '
+	@echo '                                                                       '
+	@echo '- to regenerate do "make html"                                         '
+	@echo '- to add new posts, just put a new text in content/                    '
+	@echo '- to add a new pages, put a new text in content/pages and add to       '
+	@echo '  the list STANDARD_PAGES in the Makefile                              '
+	@echo '- to upload, do "GE1_USER=my-account-name make gateupload"             '
+	@echo '- to upload a draft, do "EC2_PEM=my-id.pem make ec2upload"             '
+	@echo '                                                                       '
+	@echo 'More details of targets below, or see README.html                      '
+	@echo '                                                                       '
 	@echo '   make html                        (re)generate the web site          '
 	@echo '   make clean                       remove the generated files         '
 	@echo '   make regenerate                  regenerate files upon modification '
@@ -50,8 +60,8 @@ help:
 	@echo '   make serve                       serve site at http://localhost:8000'
 	@echo '   make devserver                   start/restart develop_server.sh    '
 	@echo '   make stopserver                  stop local server                  '
-	@echo '   ec2-upload                       upload the web site via rsync+ssh  '
-	@echo '   pigate-upload                    upload the web site via rsync+ssh  '
+	@echo '   ec2upload                        upload the web site via rsync+ssh  '
+	@echo '   gateupload                       upload the web site via rsync+ssh  '
 	@echo '                                                                       '
 	@echo '   check                            check prerequisites                '
 	@echo '   prepare                          regenerate the sources             '
@@ -97,7 +107,7 @@ gateupload:
 	rsync -e "ssh -p $(SSH_PORT)" \
           -P -rvz --delete --delete-excluded $(OUTPUTDIR)/ $${GE1_USER}@gate.ac.uk:/data/herd/pi.gate.ac.uk/html --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
 
-.PHONY: html help clean regenerate serve devserver publish upload
+.PHONY: html help clean regenerate serve devserver publish ec2upload gateupload
 
 
 # other targets #############################################################
