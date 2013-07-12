@@ -18,6 +18,11 @@ new posts should be in the form content/YYYY-MM-DD-the-title.html (you can use
 GATEwiki syntax -- .yam -- or markdown or other Pelican-friendly formats if
 you like)
 
+to add a new page (as opposed to a new post) add to the STANDARD_PAGES list in
+the Makefile (or the NO_META_PAGES if you want to avoid insertion of metadata
+in the new page, probably because it is a bare HTML with meta tags already
+present).
+
 when you want to share your changes:
 
 git commit -vam "what I just did"

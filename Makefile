@@ -25,6 +25,11 @@ S3_BUCKET=my_s3_bucket
 DROPBOX_DIR=~/Dropbox/Public/
 
 
+# list of pages etc. ########################################################
+STANDARD_PAGES=about.html basics.html schools.html notipi.html legocases.html hardware.html
+NO_META_PAGES=piroomba.html
+
+
 # other vars ################################################################
 GROOVY=groovy
 JAVA=java
@@ -105,12 +110,9 @@ check: ; @which $(JAVA) >/dev/null >/dev/null || \
 # this does regeneration from GATEwiki sources and the like
 prepare:
 	cd $(INPUTDIR) && $(Y2H) -na && $(EPI) `ls *.html`
-	cd $(INPUTDIR)/basics && touch basics.yam && \
-          $(Y2H) -Fna && cp basics.html ../pages
+	cd $(INPUTDIR)/basics && touch basics.yam && $(Y2H) -Fna && cp basics.html ../pages
 	cp $(INPUTDIR)/piroomba/piroomba.html $(INPUTDIR)/pages
-	cd $(INPUTDIR)/pages && $(Y2H) -na && \
-          $(EPI) about.html basics.html schools.html notipi.html legocases.html hardware.html && \
-          $(EPI) -n piroomba.html
+	cd $(INPUTDIR)/pages && $(Y2H) -na && $(EPI) $(STANDARD_PAGES) && $(EPI) -n $(NO_META_PAGES)
 
 google-site-verify:
 	echo 'google-site-verification: google2bff225e702ae7d8.html' >output/google2bff225e702ae7d8.html
