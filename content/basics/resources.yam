@@ -7,16 +7,16 @@ TODO
 %#code
 %2 Source Code
 
-Source code for the projects is available on the %(http://gitorious.org/,
-Gitorious) open source hosting site. The project is called
-%(https://gitorious.org/pifi/, PiFi). To get started install git and clone
-the master branch:
+Source code for the projects is available on the %(http://github.com/, Git
+Hub) open source hosting site. The project is called
+%(https://github.com/hamishcunningham/pi-tronics, Pi-Tronics). To get started
+install git and clone the master branch:
 
 %<
-git clone git@gitorious.org:pifi/pifi.git
+git clone git@github.com:hamishcunningham/pi-tronics.git
 %>
 
-This will create a directory ^pifi^ on your local system. See the file
+This will create a directory ^pi-tronics^ on your local system. See the file
 ^README.txt^ in that directory for details of what is where.
 
 

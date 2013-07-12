@@ -69,6 +69,11 @@ Here's the complete circuit diagram:
 %(https://www.circuitlab.com/circuit/vhp9ma/flood-alarm-raspberry-pi/,
 %image(images/flood-alarm.svg, flood alarm, 850))
 
+This combines the buzzer and LED driver circuits (one for the buzzer and red
+LED, using a transistor driver, and one for the green LED using GPIO alone)
+and the water sensor circuit. With a working and tested version running on the
+breadboard, we're all ready to build it, box it and install it!
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#alarm-build
@@ -96,7 +101,7 @@ And here it is from the reverse angle:
 
 Here is the complete build, all ready for installation:
 
-%image(images/flood-alarm-stripboard-2.jpg, build: stripboard 2, 500)
+%%% %image(images/flood-alarm-stripboard-2.jpg, build: stripboard 2, 500)
 %image(images/flood-alarm-stripboard-5.jpg, build: stripboard 5, 500)
 
 
@@ -106,7 +111,12 @@ Here is the complete build, all ready for installation:
 
 The software for the beast is a bit more complex than we've worked with before
 -- it loops forever and takes care of sending an %(notipi.html, SMS
-notification) when things get wet, etc.:
+notification) when it senses a flood, but it also does some standard shell
+magic like processing command-line options, giving help messages and the like.
+To prevent too many messages, when it finds a flood that doesn't go away it
+also waits progressively longer periods before testing again.
+
+Here's the code:
 
 %<
 #!/usr/bin/env bash
@@ -182,9 +192,9 @@ notifyFlooding() {
   DATE_TIME=`date '+%b %d %Y %T'`
 
   # send an SMS over the net
-  PW=`cat flood-alarm-data-efs/bulksms.txt`
-  SMS_STATUS=`./hc-sendbulksms.sh -u hamishcunningham \
-    -p "${PW}" -n 447740149842 -m "Flooding in the basement? $DATE_TIME"`
+  PW=`cat flood-alarm-data-secure-store/bulksms.txt`
+  SMS_STATUS=`./hc-sendbulksms.sh -u hcunningham \
+    -p "${PW}" -n 447712341234 -m "Flooding in the basement? $DATE_TIME"`
   echo "BulkSMS says: ${SMS_STATUS}"
 
   # we could also use our NotiPi code here to send an SMS over the phone...
@@ -246,7 +256,8 @@ water collects when there's flooding. Here's an example of the former:
 
 %image(images/flood-alarm-sensor.jpg, installation: sensor, 500)
 
-These were joined by twisting the wires together, like this:
+The separate cable runs were then joined by twisting the wires together, like
+this:
 
 %%% %image(images/flood-alarm-twisted-wires.jpg, installation: wires, 500)
 %image(images/flood-alarm-twisted-wires-2.jpg, installation: wires 2, 500)
@@ -254,13 +265,14 @@ These were joined by twisting the wires together, like this:
 %%% %image(images/flood-alarm-twisted-wires-4.jpg, installation: wires 4, 500)
 %image(images/flood-alarm-twisted-wires-5.jpg, installation: wires 5, 500)
 
-This arrangement created a level of capacitance in the wiring rig that was,
-over time, enough to trigger the GPIO pin in reading state. After a few
-seconds, it would trigger. To fix the problem, I did two things:
+This arrangement created a level of
+%(https://en.wikipedia.org/wiki/Capacitance, capacitance) in the wiring rig
+that was, over time, enough to trigger the GPIO pin in reading state. After a
+few seconds, it would trigger. To fix the problem, I did two things:
 
 - reduced the capacitance by using a different jointing method (a
   mini-breadboard), and removing one of the wire runs
-- a software delay of three seconds before raising an alarm
+- added a software delay of three seconds before raising an alarm
 
 The latter appears in the script above and looks like this:
 
