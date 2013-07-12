@@ -69,6 +69,41 @@ Here's the complete circuit diagram:
 %(https://www.circuitlab.com/circuit/vhp9ma/flood-alarm-raspberry-pi/,
 %image(images/flood-alarm.svg, flood alarm, 850))
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#alarm-build
+%2 Building and Installing
+
+Now, I want my breadboard for other things, and I want to box up the beastie
+for installation in my basement, so the final step is to solder it all
+together onto a permanent fixture -- in this case a piece of stripboard:
+
+%image(images/flood-alarm-stripboard.jpg, build: stripboard, 500)
+
+Stripboard is very like breadboard in layout, with a sequence of conductive
+strips on the underneath of the board:
+
+%image(images/bare-stripboard.png, bare stripboard, 500)
+
+If we need to we can make breaks in the strips, which I did underneath the row
+of resistors that you can see at the left-hand end of the board here:
+
+%image(images/flood-alarm-stripboard-3.jpg, build: stripboard 3, 500)
+
+And here it is from the reverse angle:
+
+%image(images/flood-alarm-stripboard-4.jpg, build: stripboard 4, 500)
+
+Here is the complete build, all ready for installation:
+
+%image(images/flood-alarm-stripboard-2.jpg, build: stripboard 2, 500)
+%image(images/flood-alarm-stripboard-5.jpg, build: stripboard 5, 500)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#alarm-software-and-install
+%3 The Software
+
 The software for the beast is a bit more complex than we've worked with before
 -- it loops forever and takes care of sending an %(notipi.html, SMS
 notification) when things get wet, etc.:
@@ -89,6 +124,7 @@ OPTIONSTRING=hwd
 WET=0
 DRY=0
 STATUS=none
+pdate() { date '+%b %d %Y %T'; }
 
 # message & exit if exit num present
 usage() { echo -e Usage: $USAGE; [ ! -z "$1" ] && exit $1; }
@@ -106,7 +142,11 @@ done
 shift `expr $OPTIND - 1`
 
 # get started
+echo
+echo ========================================================================
 echo Hello! no flooding today, we hope...
+pdate
+echo
 
 # set up the gpio pins
 gpio mode 0 out # pin 0 is the buzzer and red led
@@ -117,9 +157,9 @@ gpio mode 2 in  # pin 2 is the water sensing circuit
 statusDry() {
   if [ $STATUS == wet ]
   then
-    echo Becoming dry...
+    echo Becoming dry at `pdate`...
   else
-    echo Staying dry...
+    echo Staying dry at `pdate`...
   fi
   STATUS=dry
   gpio write 0 0
@@ -128,9 +168,9 @@ statusDry() {
 statusWet() {
   if [ $STATUS == dry ]
   then
-    echo Eek! Becoming wet!
+    echo Eek! Becoming wet! `pdate`
   else
-    echo Bugger. Staying wet!
+    echo Bugger. Staying wet! `pdate`
   fi
   STATUS=wet
   gpio write 0 1
@@ -147,8 +187,7 @@ notifyFlooding() {
     -p "${PW}" -n 447740149842 -m "Flooding in the basement? $DATE_TIME"`
   echo "BulkSMS says: ${SMS_STATUS}"
 
-  # send an SMS over the phone
-# TODO
+  # we could also use our NotiPi code here to send an SMS over the phone...
 }
 
 # either do a state change (for debugging), or loop
@@ -171,6 +210,11 @@ else
       DELAY=${MIN_DELAY}
       sleep 1
     else
+      # wait a little and test again, just to be sure
+      sleep 3
+      WET=`gpio read 2`
+      [ $WET == 0 ] && echo 'Hmmm... false alarm!' && statusDry && continue
+      
       # raise the alarm
       statusWet
       notifyFlooding
@@ -191,13 +235,42 @@ fi
 
 And it works!
 
+Almost.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%#alarm-build
-%2 Building and Installing
+It worked fine in the office, but when I wired it up in the basement I started
+getting false triggers. This seemed to be an effect of the cable runs that I
+chose -- whereas my initial test rig was just one long length of wire, I
+initially attached four separate runs in the basement, to cover joints on two
+of the pipes that had leaked previously and also two floor locations where
+water collects when there's flooding. Here's an example of the former:
 
-Now, I want my breadboard for other things, and I want to box up the beastie
-for installation in my basement, so the final step is to solder it all
-together onto a permanent fixture -- in this case a piece of stripboard.
+%image(images/flood-alarm-sensor.jpg, installation: sensor, 500)
 
-TODO the stripboard version installation
+These were joined by twisting the wires together, like this:
+
+%%% %image(images/flood-alarm-twisted-wires.jpg, installation: wires, 500)
+%image(images/flood-alarm-twisted-wires-2.jpg, installation: wires 2, 500)
+%image(images/flood-alarm-twisted-wires-3.jpg, installation: wires 3, 500)
+%%% %image(images/flood-alarm-twisted-wires-4.jpg, installation: wires 4, 500)
+%image(images/flood-alarm-twisted-wires-5.jpg, installation: wires 5, 500)
+
+This arrangement created a level of capacitance in the wiring rig that was,
+over time, enough to trigger the GPIO pin in reading state. After a few
+seconds, it would trigger. To fix the problem, I did two things:
+
+- reduced the capacitance by using a different jointing method (a
+  mini-breadboard), and removing one of the wire runs
+- a software delay of three seconds before raising an alarm
+
+The latter appears in the script above and looks like this:
+
+%<
+      sleep 3
+      WET=`gpio read 2`
+      [ $WET == 0 ] && echo 'Hmmm... false alarm!' && statusDry && continue
+%>
+
+This code branch is followed whenever we get a "wet" reading, and says "first
+sleep for 3 seconds, then test the indication again". When we find that the
+wet reading has gone away we treat it as a false alarm and continue waiting
+for a new reading.
