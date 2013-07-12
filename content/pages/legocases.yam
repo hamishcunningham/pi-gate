@@ -65,8 +65,7 @@ I also felt that getting the cover off would be a pain. That sucker is held
 down proper and if I ever wanted to look inside to admire the pretty
 electronics, or mess with the GPIO, I was gonna have a bad time. The case
 should also be no larger than necessary and look cool. (That meant keeping
-Biz's
-logo in some way - that bit is awesome.)
+Biz's logo in some way -- that bit is awesome.)
 
 So just like a real Civil Engineering project I found myself with a balancing
 act. I needed to balance my design goals against the bricks I actually had. And
@@ -78,7 +77,7 @@ Specifically, I don't allow for multiple vertical cracks to align. This makes
 for what's called in Civil Engineering a plane of weakness or a slip surface.
 A place where a material will slide with little to no effort. In LEGO this
 translates to what you build falling apart at awkward times. Usually bad news,
-definitely so when sturdiness is a goal.
+and definitely so when sturdiness is a goal.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -101,9 +100,9 @@ windows provide solid cover for them without having to extend the case wall
 away from the board at all. A small window has been used to let the diagnostic
 lights be seen. 
 
-You can also see the positioning of the risers on the bottom is different
+You can also see that the positioning of the risers on the bottom is different
 than Biz's. These were chosen to be in locations where there is nothing
-soldered onto the bottom of the Pi's circuit board. This lets it sit smooth
+soldered onto the bottom of the Pi's circuit board. This lets it sit smoothly
 and evenly.
 
 %(images/case/04pieces.jpg, %image(images/case/thumbs/04pieces.jpg, Exploded view))
@@ -111,30 +110,30 @@ and evenly.
 
 There is also a bit of tile in red at the southern area of the bottom. This
 supports the SD card and the card slot. The 2x1 in red at the north and south
-minimise the area from the two fully exposed ports - the ethernet and micro
+minimise the area from the two fully exposed ports -- the ethernet and micro
 USB. When designing I could find no good way to protect every single port.
 These two are the two that are most likely to be used full time in my use
 cases so they got left exposed.
 
 %(images/case/06pi.jpg, %image(images/case/thumbs/06pi.jpg, Pi sitting))
 
-The pi is also lifted up an extra 1/3rd tile on its risers. This is for
+The Pi is also lifted up an extra 1/3rd tile on its risers. This is for
 multiple reasons. It allows for: better support of the SD card; airflow
-underneath the board; the GPIO pins won't hit stud heads; the ports line up
-in the window frames better; and finally, it allows for a side panel piece
-to be placed. This is critical, as this is the piece primarily responsible
-for keeping the board from wiggling when you plug things in and during
-travel. Also note that the base is 2/3rds thick - this is extra sturdy. Due
-to the interlocking thin tiles, but also isn't too bulky.
+underneath the board; the GPIO pins won't hit stud heads; the ports line up in
+the window frames better; and finally, it allows for a side panel piece to be
+placed. This is critical, as this is the piece primarily responsible for
+keeping the board from wiggling when you plug things in and during travel.
+Also note that the base is 2/3rds thick -- this is extra sturdy -- but due to
+the interlocking thin tiles it isn't too bulky.
 
 %(images/case/07lid.jpg, %image(images/case/thumbs/07lid.jpg, Pi sitting))
 %(images/case/08pi.jpg, %image(images/case/thumbs/08pi.jpg, Pi sitting))
 
-You'll also have noticed that this lid is rather bulky. This is what keeps
-the pi from shifting vertically in the case. It also comes down inside the
-main case walls on the other sides of the windows to make plugging cables
-in easier. It also provides protection at the top.Those clear tiles in the
-sides are pure decoration - I also didn't have enough 1x1x1/3rd pieces to
+You'll also have noticed that this lid is rather bulky. This is what keeps the
+Pi from shifting vertically in the case. It also comes down inside the main
+case walls on the other sides of the windows to make plugging cables in
+easier. Finally it provides protection at the top. Those clear tiles in the
+sides are pure decoration -- I also didn't have enough 1x1x1/3rd pieces to
 make up the gaps. 
 
 
@@ -143,23 +142,23 @@ make up the gaps.
 %1 Other cases
 
 So hopefully you've got an idea now of what I've built. You can try building
-it yourself if you've got the pieces, and it'll be even more fun to try if
-you haven't. More importantly though, you'll have an idea now of why I've
-done certain things. This should have given you some ideas for how to build
-your own case what sorts of things you'll consider. It'll also have by the by
-given you a little appreciation into what Civil Engineers consider when
-designing that new building.
+it yourself if you've got the pieces, and it'll be even more fun to try if you
+haven't. More importantly though, you'll have an idea now of why I've done
+certain things. This should have given you some ideas for how to build your
+own case and what sorts of things you'll consider. It might also by the by
+give you a little appreciation of what Civil Engineers consider when designing
+a new building!
 
 You've probably got your own great ideas now. If you haven't though, let's
 take a look at some other designs I found while googling "raspberry pi lego
-case" - there are plenty of results. Here are a few things I found really
+case" -- there are plenty of results. Here are a few things I found really
 cool while looking at them all. I've included a list of more cases at the
 end of the article.
 
 %(http://www.flickr.com/photos/rooreynolds/7155708427/sizes/l/, %image(images/case/thumbs_ext/labels.jpg, Labels!))
 
 I love the use of tiles for labelling. This case is also one of the ones that
-I'm now thinking of as "half height" - Primarily only 2 bricks tall as
+I'm now thinking of as "half height" -- Primarily only 2 bricks tall as
 opposed to the three that Biz and I have both used.
 
 %(http://www.flickr.com/photos/attilaacs/8060076112/sizes/l/, %image(images/case/thumbs_ext/shutters.jpg, Shutters!))
