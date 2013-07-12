@@ -353,6 +353,11 @@ Here's the circuit wired up on our trusty breadboard: %br
 %image(images/bbd-transistor-driving-buzzer.jpg, transistor driving buzzer,
 500)
 
+Finallym here's an example data sheet for a common transistor, if you're
+curious about the gorey details, for the
+%(http://alltransistors.com/transistor.php?transistor=23414, BC549C
+transistor).
+
 ---
 
 So we've now written programs on the Pi that can both sense from the outside

@@ -1,8 +1,5 @@
 Books and Resources
 
-TODO
-- add http://electronicsclub.info/
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#code
 %2 Source Code
@@ -19,16 +16,37 @@ git clone git@github.com:hamishcunningham/pi-tronics.git
 This will create a directory ^pi-tronics^ on your local system. See the file
 ^README.txt^ in that directory for details of what is where.
 
+You can also browse the code on-line -- here's the
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/bin/flood-alarm.sh,
+flood alarm script), for example.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#pi-books
 %2 Books about the Pi
 
-TODO
+Books about the Pi are proliferating almost as rapidly as the community of Pi
+aficionados.%footnote(In July 2013 Google lists more than 12 million hits for
+the phrase "raspberry pi"!) These are three of my favourites:
 
-- Upton's book
-- the Haynes manual
-- others?
+- %(http://www.amazon.co.uk/Raspberry-User-Guide-Eben-Upton/dp/111846446X/,
+  Eben Upton and Gareth Halfacree's) book _The Raspberry Pi User Guide_ is
+  definitely the first place to start. Required reading.
+- %(http://www.amazon.co.uk/Raspberry-Pi-Manual-practical-revolutionary/dp/0857332953/,
+  Gray Girling's Haynes manual) is my all-time favourite so far, perhaps
+  because I remember my brother using these manuals to figure out how to fix
+  his %(http://en.wikipedia.org/wiki/Triumph_Herald, Triumph Herald) way back
+  when. It also has great graphics and an excellent mix of hardware and
+  software, plus some philosophy and history to boot. I love it.
+- Slightly off the beaten track, but a great fit for the Pi's mischievous
+  implications, I recommend
+  %(http://www.amazon.co.uk/Raspberry-Secret-Agents-Stefan-Sjogelid/dp/1849695784/,
+  Stefan Sjogelid's) _Raspberry Pi for Secret Agents_. If the NSA and GCHQ are
+  going to %(http://www.guardian.co.uk/world/prism, spy on every citizen) for
+  no good reason shouldn't we spy on them in return?!
+
+If it's your birthday, ask for a book token -- there's more to drool over in
+the next section.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -72,6 +90,8 @@ to hacker electronics in general, see for example:
   pages) include an excellent guide to
   %(http://learn.adafruit.com/adafruit-guide-excellent-soldering, soldering)
   (and one for %(http://learn.adafruit.com/multimeters, measuring)).
+- Another useful beginners' site is %(http://electronicsclub.info/,
+  Electronics Club).
 
 And lots and lots of others!%footnote(If you really want to get in deep, here
 are two comprehensive sources: %(http://www.allaboutcircuits.com/, All About
@@ -84,21 +104,16 @@ starter course in electrical engineering.)
 
 The circuit diagrams are available on
 %(https://www.circuitlab.com/browse/by-tag/hamish-cunningham/, Circuit Lab)
-under Creative Commons
+under the Creative Commons
 %(http://creativecommons.org/licenses/by-nc-sa/3.0/, BY-NC-SA
 licence).
 
-Voltage/Resistance/Current calculators
-- http://www.the12volt.com/ohm/ohmslawcalculators.asp
-- http://www.rapidtables.com/calc/electric/ohms-law-calculator.htm
-- http://www.sengpielaudio.com/calculator-ohm.htm
+For circuit debugging these Voltage/Resistance/Current calculators are useful:
+%(http://www.the12volt.com/ohm/ohmslawcalculators.asp, this one),
+%(http://www.rapidtables.com/calc/electric/ohms-law-calculator.htm, this one),
+and %(http://www.sengpielaudio.com/calculator-ohm.htm, this one) all worked
+well for me at one time or another.
 
-Pi hobby sites
-- http://raspberrypi.goddess-gate.com/
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 Components
-
-- BC549C NPN transistor
-  http://alltransistors.com/transistor.php?transistor=23414
+There are oodles and oodles of Pi hobby sites -- when I started
+%(http://raspberrypi.goddess-gate.com/, this one) stood out, but really there
+are too many to make a list these days!

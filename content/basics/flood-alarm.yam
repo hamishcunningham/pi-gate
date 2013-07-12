@@ -286,3 +286,30 @@ This code branch is followed whenever we get a "wet" reading, and says "first
 sleep for 3 seconds, then test the indication again". When we find that the
 wet reading has gone away we treat it as a false alarm and continue waiting
 for a new reading.
+
+A couple of other wrinkles: the alarm Pi has no monitor attached, so we need
+to set this going with %(http://en.wikipedia.org/wiki/Nohup, ^nohup^) to
+prevent the process dying when we log out. To be precise:
+
+%<
+nohup bash -c "`pwd`/flood-alarm.sh &"
+%>
+
+The output from the script is then collected in ^nohup.out^ and we can watch
+new entries being written like this:
+
+%<
+tail -f nohup.out
+%>
+
+Finally, the local network is protected by a firewall and
+%(https://en.wikipedia.org/wiki/Network_address_translation, network address
+translation) in our broadband router. To allow us to log in when not at home,
+I used the excellent %(https://pagekite.net/, PageKite) system to forward
+%(http://www.openssh.org/, Open SSH) traffic to the Pi running the alarm
+system. (If you don't know SSH, time to find out -- it is an essential tool
+for secure communication to your Pi-based systems (and others).%footnote(And
+make sure you change your Pi's password to something fiendish before putting
+it on a network!))
+
+And that's it. Now I can sleep easy... until my phone gets a text, that is!
