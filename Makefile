@@ -102,10 +102,10 @@ publish:
 #upload: publish
 ec2upload:
 	rsync -e "ssh -p $(SSH_PORT) -i $${EC2_PEM}" \
-          -P -rvz --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
+          -hP -rvz --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
 gateupload:
 	rsync -e "ssh -p $(SSH_PORT)" \
-          -P -rvz --delete --delete-excluded $(OUTPUTDIR)/ $${GE1_USER}@gate.ac.uk:/data/herd/pi.gate.ac.uk/html --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
+          -hP -rvz --delete --delete-excluded $(OUTPUTDIR)/ $${GE1_USER}@gate.ac.uk:/data/herd/pi.gate.ac.uk/html --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
 
 .PHONY: html help clean regenerate serve devserver publish ec2upload gateupload
 
