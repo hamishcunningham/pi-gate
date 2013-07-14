@@ -1,5 +1,6 @@
 PiGate TODOs
 
+- add the basics tutorial to the Pi app store
 - cache the sharethis stuff (too slow to load)
 - fix missing footnotes headers
 - add summary to metadata and include in index.html list
