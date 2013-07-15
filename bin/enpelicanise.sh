@@ -40,6 +40,7 @@ replace-meta-tags-etc() {
     echo enpelicanisating $f ...
 
     # set up metadata for this file
+# TODO allow over-riding of METAs from the file itself
     TITLE=`grep -i '<title' $f |sed -e 's,<title>,,I' -e 's,</title>,,I'`
     FBASE=`basename $f |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
     METAS="<meta name=\"slug\" contents=\"${FBASE}\" />\n\
@@ -52,8 +53,8 @@ replace-meta-tags-etc() {
     # set date from filename, or use TODAY
     if `echo $f | grep -q '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-'`
     then
+      # set date from filename instead (done by pelican)
       :
-      # set date from filename instead
     else
       METAS="${METAS}\n\
 <meta name=\"date\" contents=\"${TODAY}\" />"
