@@ -73,6 +73,9 @@ replace-meta-tags-etc() {
     fi
 
     # tell pelican about relative links
+    # (to workaround pelican bug with anchors in relative pathnames we 
+    # move anchors out of the way and enclose in XXX...XXX; the finalise
+    # target in the Makefile will put them back where they belong)
     sed \
       -e 's,\(src="\)\(images/\),\1|filename|\2,g' \
       -e 's,?m=1",",g' \
@@ -80,6 +83,7 @@ replace-meta-tags-etc() {
       -e 's,h\(ref="/\),hX\1,g' \
       -e 's,h\(ref="http\),hX\1,g' \
       -e 's,h\(ref=".filename\),hX\1,g' \
+      -e 's,href="\([^"#]*\)\(#[^"]*\)">,href="\1">XXX\2XXX,g' \
       -e 's,\(href="\),\1|filename|,g' \
       -e 's,hXref,href,g' \
       ${f}-$$ \

@@ -33,8 +33,7 @@ latest published version is at http://pi.gate.ac.uk/
 latest draft is at http://tinyurl.com/pimo-draft  (u: pimo   p: learn)
 
 *relative links* between pages, images etc. should just work within the
-content tree (no need to use Pelican's |filename| syntax). the exception is
-links that reference another page and an anchor (e.g.
-^basics.html#parent-alarm^). the workaround for pages (which live in the
-^content/pages^ directory) is to prefix these with /pages). there's currently
-no workaround for posts...
+content tree (no need to use Pelican's |filename| syntax). [note: there used
+to be an exception for links that reference another page and an anchor (e.g.
+^basics.html#parent-alarm^), which Pelican doesn't like; this is now fixed by
+^enpelicanise.sh^ and the ^finalise^ ^Makefile^ target.]

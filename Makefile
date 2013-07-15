@@ -65,6 +65,7 @@ help:
 	@echo '                                                                       '
 	@echo '   check                            check prerequisites                '
 	@echo '   prepare                          regenerate the sources             '
+	@echo '   finalise                         fixup the generated output         '
 	@echo '   google-site-verify               install web tools verification     '
 	@echo '   robots                           create output/robots.txt           '
 	@echo '   favicon                          create output/favicon.ico          '
@@ -73,7 +74,7 @@ help:
 	@echo '                                                                       '
 
 
-html: check clean prepare $(OUTPUTDIR)/index.html google-site-verify robots favicon
+html: check clean prepare $(OUTPUTDIR)/index.html finalise google-site-verify robots favicon
 
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -131,8 +132,17 @@ prepare:
 	cd $(INPUTDIR)/pages && $(Y2H) -na && \
           $(EPI) $(STANDARD_PAGES) && $(EPI) -n $(NO_META_PAGES)
 
+finalise:
+	# to workaround pelican bug with anchors in relative pathnames we do
+	# a final fixup over the generated htmls in the output directory
+	for f in `find $(OUTPUTDIR) -name '*.html'`; do \
+          sed -e 's,">XXX\(.*\)XXX,\1">,g' $${f} >$${f}-$$$$; \
+          mv $${f}-$$$$ $${f}; \
+	done
+
 google-site-verify:
-	echo 'google-site-verification: google2bff225e702ae7d8.html' >output/google2bff225e702ae7d8.html
+	echo 'google-site-verification: google2bff225e702ae7d8.html' \
+          >output/google2bff225e702ae7d8.html
 
 robots:
 	cp robots.txt output/robots.txt
@@ -145,4 +155,4 @@ minify:
 	cd compressed-output && for f in `find . -name '*.html'`; do mv $$f ../output/$${f}; done
 	rm -rf compressed-output
 
-.PHONY: check prepare google-site-verify robots favicon minify
+.PHONY: check prepare finalise google-site-verify robots favicon minify

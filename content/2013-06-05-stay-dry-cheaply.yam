@@ -1,7 +1,7 @@
 Stay Dry Cheaply
 
 One of the projects in our %(pages/basics.html, basic pi-tronics) tutorial is
-a %(/pages/basics.html#flood-alarm, simple flooding alarm) which senses
+a %(pages/basics.html#flood-alarm, simple flooding alarm) which senses
 unwanted water flows and sends a text message (or makes a tweet, or etc.) to
 give you a heads up before things get extremely damp.
 
