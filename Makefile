@@ -121,7 +121,12 @@ check: ; @which $(JAVA) >/dev/null >/dev/null || \
 prepare:
 	cd $(INPUTDIR) && $(Y2H) -na && $(EPI) `ls *.html`
 	cd $(INPUTDIR)/basics && \
-          touch basics.yam && $(Y2H) -Fna && cp basics.html ../pages
+          for f in *.yam; do \
+	    BASE=`echo $$f |sed 's,\.yam$$,,'`; \
+	    [ ! -e $$BASE.html -o $$BASE.yam -nt basics.html ] && \
+	      $(Y2H) basics.yam && break; \
+	  done; \
+          cp basics.html ../pages
 	cp $(INPUTDIR)/piroomba/piroomba.html $(INPUTDIR)/pages
 	cd $(INPUTDIR)/pages && $(Y2H) -na && \
           $(EPI) $(STANDARD_PAGES) && $(EPI) -n $(NO_META_PAGES)
