@@ -101,10 +101,10 @@ publish:
 
 # not using publish conf at present:
 #upload: publish
-ec2upload:
+ec2upload: minify
 	rsync -e "ssh -p $(SSH_PORT) -i $${EC2_PEM}" \
           -hP -rvz --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
-gateupload:
+gateupload: minify
 	rsync -e "ssh -p $(SSH_PORT)" \
           -hP -rvz --delete --delete-excluded $(OUTPUTDIR)/ $${GE1_USER}@gate.ac.uk:/data/herd/pi.gate.ac.uk/html --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
 
