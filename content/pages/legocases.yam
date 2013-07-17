@@ -46,6 +46,7 @@ does have it's downsides.) No matter -- just grab what you've got and dive in!
 %1 The case I built and why
 
 %(images/case/01case.jpg, %image(images/case/thumbs/01case.jpg, My case))
+%(images/case/01caseb.jpg, %image(images/case/thumbs/01caseb.jpg, My case 2))
 
 Because of my degree I approached building my case with a specific set of
 design goals. Criteria I wanted to meet and the like. After reviewing Biz's
