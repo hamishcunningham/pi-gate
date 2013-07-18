@@ -97,7 +97,38 @@ think I'd need something really, really specific to get one now.
 %#cubie
 %1 Cubieboard
 
-To be written.
+The Cubieboard is just a little bit bigger than a Pi, and for taking up a
+similar amount of space, they've jammed a whole lot of stuff in there. A lot
+of expansion pins, but also audio in and out, SATA, IR... It's impressive.
+The board I've got came in what's called the "rich packaging" which includes
+some nice extras like a cardboard case, SATA power cable, and a debugging
+serial cable.
+
+Getting up and going is quick with the default Android install and runs well.
+There are a variety of
+%(http://linux-sunxi.org/Install_Ubuntu_Linux_for_Cubieboard, Ubuntu)
+options for the board but only one easy SD card lubuntu. I've gone ahead and
+installed that. The image size is large, but comes with pretty much
+everything installed. Apparently
+%(http://cubieboard.org/2012/11/15/install-ubuntu-with-berryboot/, Berryboot)
+makes more distributions available, but I haven't tested this.
+
+Usable performance is par for the course, and there's plenty of free memory
+after the system finishes booting into LXDE. What's a nice feature is that
+the board can properly turn off from a "sudo poweroff" command and then has
+a power button to get it started again. On the board itself the ports are
+well positioned making it easy to get at everything, although like the Pi
+it's all at right angles along the different edges. This can be annoying if
+you want to tidy it away. On a plus power and ethernet are on the same side
+so if that's all you need it is tidy. (They're on opposite sides on the Pi.)
+
+The absolute number one thing going for this board though? One word: NAS.
+The onboard SATA gives you scope to do a lot more than normal. I think it'd
+be worth it just for that. I also think the infrared port could be a lot of
+fun, and there are probably some interesting applications with the audio in.
+Are these extras enough to really justify the extra price? The board still
+is hacky. More so than the Pi I feel, but not as bad as the BeagleBoard. It's
+hard to say, but there are indeed things to do with the Cubieboard.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

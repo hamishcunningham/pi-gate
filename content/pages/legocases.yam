@@ -1,4 +1,4 @@
-LegoCases
+LEGOCases
 
 _House the Pi with kit you've already got_
 
@@ -46,6 +46,7 @@ does have it's downsides.) No matter -- just grab what you've got and dive in!
 %1 The case I built and why
 
 %(images/case/01case.jpg, %image(images/case/thumbs/01case.jpg, My case))
+%(images/case/01caseb.jpg, %image(images/case/thumbs/01caseb.jpg, My case 2))
 
 Because of my degree I approached building my case with a specific set of
 design goals. Criteria I wanted to meet and the like. After reviewing Biz's
@@ -138,22 +139,55 @@ make up the gaps.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#building
+%2 Building it
+
+Hopefully you've got an idea now of what I've built, but I'm not going to
+give explicit directions on how to build this case. I want to share the fun I
+have with LEGO, which is the creation process. Finding just the right
+combination of pieces. Picking out the colors. I think from the photos that
+most of it can be built anyway with a bit of sense.
+
+The other thing is that as far as I know some of the pieces I've used you
+can't get new anymore. That may make it extra hard to build. You'll either
+have to find them in your collection or find them second hand. I've found
+%(http://www.peeron.com/inv/sets/631-1, Peeron) to be pretty good. eBay may
+work as well. Maybe you can find substitute parts on the LEGO
+%(http://shop.lego.com/en-US/Pick-A-Brick-ByTheme#suppressXlink, Pick a Brick)
+page.
+
+I will say in general that what I did was find enough 1/3rd height pieces in
+gray to make up a solid 2/3rd thick base. (This means no slip surfaces!) At
+this point if the risers are stuck on and the Pi put into position, and this
+reveals where the windows should go. The walls were built up around to match
+the window heights. Smooth tiles were used over the window tops to keep them
+in position and the few studed white bricks over the rest to anchor the roof.
+
+The roof itself was built more or less seperately, after the rest of the case
+was constructed. A 1/3rd thick loose conglomeration of red bricks to make a
+solid cover was collected, and a second 1/3rd layer placed below (level with
+the white rim) to tie it together without making the case any higher. That's
+probably sufficient, but as I mentioned before I built it down more in order
+to make the case sturdier.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#othercases
 %1 Other cases
 
-So hopefully you've got an idea now of what I've built. You can try building
-it yourself if you've got the pieces, and it'll be even more fun to try if you
-haven't. More importantly though, you'll have an idea now of why I've done
-certain things. This should have given you some ideas for how to build your
-own case and what sorts of things you'll consider. It might also by the by
-give you a little appreciation of what Civil Engineers consider when designing
-a new building!
+Now, as I've said it may be tricky to build my case because of parts issues.
+Hopefully though, you now have an idea of why I've made the descisions I
+have. What sorts of things to consider. It might also by the by give you a
+little appreciation of what Civil Engineers consider when designing a new
+building. I think this gives you the power to build your own case to your own
+specification.
 
-You've probably got your own great ideas now. If you haven't though, let's
-take a look at some other designs I found while googling "raspberry pi lego
-case" -- there are plenty of results. Here are a few things I found really
-cool while looking at them all. I've included a list of more cases at the
-end of the article.
+You now know what sort of thing to look for and what you might want to put in
+or do with your case and can consciously aim for that. But don't just be
+limited by what I've done. Let's take a look at some other designs out there
+that I found while googling "raspberry pi LEGO case" -- there are plenty of
+results. Here are a few things I found really cool while looking at them all.
+(I've included a list of even more cases at the end of the article.)
 
 %(http://www.flickr.com/photos/rooreynolds/7155708427/sizes/l/, %image(images/case/thumbs_ext/labels.jpg, Labels!))
 
@@ -209,12 +243,12 @@ holes form perfect vents for passive cooling. Very clever use of the doors
 to cover the ports. If I had some of these pieces I think I'd want to do it
 this way.
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#links
 %2 More links
 
-So now you should really be brimming with ideas. Mix, match, create. Just in
-case, here are more links, in no particular order:
+More to cases links, in no particular order:
 
 - http://miriamelewis.blogspot.co.uk/2012/02/raspberry-pi-lego-case.html
 - http://arstechnica.com/information-technology/2012/09/university-builds-cheap-supercomputer-with-raspberry-pi-and-legos/
@@ -236,3 +270,10 @@ case, here are more links, in no particular order:
 - http://www.bitrebels.com/technology/a-geeky-collection-of-creative-raspberry-pi-cases-15-pics/
 - http://riscpi.co.uk/raspberry-pi-case-in-lego/
 - http://www.makeuseof.com/tag/8-interesting-diy-raspberry-pi-case-ideas/
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#conclusion
+%1 Conclusion
+
+What else? After seeing all this how can you do anything but go out and build!
