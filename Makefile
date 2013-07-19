@@ -28,6 +28,7 @@ DROPBOX_DIR=~/Dropbox/Public/
 # list of pages etc. ########################################################
 STANDARD_PAGES=about.html basics.html schools.html notipi.html legocases.html hardware.html
 NO_META_PAGES=piroomba.html
+DRAFT_PAGES=mopi.html
 
 
 # other vars ################################################################
@@ -139,6 +140,8 @@ finalise:
           sed -e 's,">XXX\(.*\)XXX,\1">,g' $${f} >$${f}-$$$$; \
           mv $${f}-$$$$ $${f}; \
 	done
+	# copy bare drafts as they are
+	for f in $(DRAFT_PAGES); do cp content/pages/$${f} output/pages; done
 
 google-site-verify:
 	echo 'google-site-verification: google2bff225e702ae7d8.html' \
