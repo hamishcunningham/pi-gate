@@ -135,7 +135,42 @@ hard to say, but there are indeed things to do with the Cubieboard.
 %#dreamplug
 %1 DreamPlug
 
-To be written.
+The DreamPlug is polished - at least on the outside. It's router sized and
+is cased similarly, although the casing actually feels more robust than a
+typical router. It's an impressive solid feel. Unlike a router the DreamPlug
+is filled with lots of IO though. SD, eSATA, S/PDIF & 1/8" jacks, USB, and
+the crown jewel I think, dual gigabit ethernet ports. All of this essentially
+makes it a proper low power server.
+
+Unlike the rest of the devices, the DreamPlug we've got shipped proper with
+Debian 6.0 Squeeze, which means out of the box we've only got to concern
+ourselves with logging in before we can start doing. No extra writing to SD
+card, although that can be done if you want. Unfortunately, logging in can be
+a bit of a trick - there's no display after all. The first time I turned it
+on I couldn't work out what was going on. It was necessary to 
+%(http://dreamplug.googlecode.com/files/DreamPlug-User%20Guide_US_v1.2-Aug-28-2012.pdf,
+connect the little JTAG USB<->serial adapter) to see what was happening.
+
+Some fun and games with minicom and we're in business. The default setup of
+Debian here is to setup the onboard Wifi as an acesspoint, with an IP address
+of 192.168.1.1. This nicely conflicted with my router's address of
+192.168.1.254. Commenting out a line in /etc/rc.local disables that and I
+could finally get things into a usable state. The DreamPlug I think turns out
+to be kind of fun like this. Instead of fiddling around with hardware it's
+almost straight up Linux hacking. I think you'll need to be compentent at the
+command line or at least wanting to learn to really get things done.
+
+Once you surmount that little command line hurdle though, you're in business
+with something you can really use. The system has a snappy response and
+there's a site,
+%(http://www.spinifex.com.au/plugs/dplugintro.html, Spinifex), with some good
+directions to help you navigate through the oddities of the Debian setup on
+the DreamPlug. It's a bit out of date, but still useful. More of this fun
+Linux hacking reinterpreting the directions. Overall I think the DreamPlug
+makes a perfect step up from an OpenWRT router. You want more power and
+flexibility in what you do on your LAN or want to run some more major
+services, like a proper file server. (Yes, you can do this with some OpenWRT
+routers, but I would not consider 2 MB/s to be proper.)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
