@@ -9,7 +9,7 @@ Hub) open source hosting site. The project is called
 %(https://github.com/hamishcunningham/pi-tronics, Pi-Tronics). To get started
 install git and clone the master branch:
 
-%<
+%code(lang=Bash)<
 git clone git@github.com:hamishcunningham/pi-tronics.git
 %>
 

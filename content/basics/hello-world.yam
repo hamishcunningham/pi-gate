@@ -269,7 +269,7 @@ single pole single throw)" switch.
 
 The code to drive this uses some neat features of Unix shell script:
 
-%<
+%code(lang=Bash)<
 gpio mode 0 in
 gpio mode 1 out
 

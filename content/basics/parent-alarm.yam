@@ -71,7 +71,7 @@ We need a new program to drive the extra LED (which is on Wiring Pi's GPIO 2,
 connected on physical header pin 13). In Unix shell script a suitable
 program is this:
 
-%<
+%code(lang=Bash)<
 gpio mode 0 in
 gpio mode 1 out
 gpio mode 2 out

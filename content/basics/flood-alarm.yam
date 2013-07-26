@@ -118,7 +118,7 @@ also waits progressively longer periods before testing again.
 
 Here's the code:
 
-%<
+%code(lang=Bash)<
 #!/usr/bin/env bash
 # flood-alarm.sh
 
@@ -276,7 +276,7 @@ few seconds, it would trigger. To fix the problem, I did two things:
 
 The latter appears in the script above and looks like this:
 
-%<
+%code(lang=Bash)<
       sleep 3
       WET=`gpio read 2`
       [ $WET == 0 ] && echo 'Hmmm... false alarm!' && statusDry && continue
@@ -291,14 +291,14 @@ A couple of other wrinkles: the alarm Pi has no monitor attached, so we need
 to set this going with %(http://en.wikipedia.org/wiki/Nohup, ^nohup^) to
 prevent the process dying when we log out. To be precise:
 
-%<
+%code(lang=Bash)<
 nohup bash -c "`pwd`/flood-alarm.sh &"
 %>
 
 The output from the script is then collected in ^nohup.out^ and we can watch
 new entries being written like this:
 
-%<
+%code(lang=Bash)<
 tail -f nohup.out
 %>
 
