@@ -127,7 +127,7 @@ prepare:
           for f in *.yam; do \
 	    BASE=`echo $$f |sed 's,\.yam$$,,'`; \
 	    [ ! -e $$BASE.html -o $$BASE.yam -nt basics.html ] && \
-	      $(Y2H) basics.yam && break; \
+	      $(Y2H) -F basics.yam && break; \
 	  done; \
           cp basics.html ../pages
 	cp $(INPUTDIR)/piroomba/piroomba.html $(INPUTDIR)/pages
