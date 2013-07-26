@@ -1,12 +1,9 @@
 PiGate TODOs
 
 - new Pi stuff from Ian
+  - metas
+  - code highlight
 - PiAlikes not hardware
-- fix missing footnotes headers
-  - cause: EPI run twice on posts in place will delete 2nd header after
-    deleting first
-  - fix: 
-- meta
 - thumbs and images based on slug
 
 
