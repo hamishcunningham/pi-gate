@@ -88,10 +88,19 @@ replace-meta-tags-etc() {
       -e 's,hXref,href,g' \
       ${f}-$$ \
     > ${f}-$$-2
+    mv ${f}-$$-2 ${f}
 
-    # remove first h1 heading
-    sed -n '1,/^<h1 class/p' ${f}-$$-2 | grep -v '^<h1 class' >${f}
-    sed -n '/^<h1 class/,$p' ${f}-$$-2 | sed -n '2,$p' >>${f}
+    # remove the title h1 heading, if it exists as first line after the start
+    # of the body element
+    sed -n '1,/^<body /p' ${f}                  >${f}-$$-head
+    sed -n '/^<body /,$p' ${f} | sed -n '2,$p'  >${f}-$$-tail
+    FIRST_LINE="`head -1 ${f}-$$-tail`"
+    ${DBG} "===${FIRST_LINE}==="
+    case "${FIRST_LINE}" in
+      '<h1 class'*) mv ${f}-$$-head ${f}; sed -n '2,$p' ${f}-$$-tail >>${f} ;;
+    esac
+
+    # clean up
     rm ${f}-$$*
   done
 }
