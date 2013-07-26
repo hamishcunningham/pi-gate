@@ -37,12 +37,12 @@ $DBG doing summut on $TODAY
 replace-meta-tags-etc() {
   for f in $*
   do
-    echo enpelicanisating $f ...
+    echo enpelicanisating ${f} ...
 
     # set up metadata for this file
 # TODO allow over-riding of METAs from the file itself
-    TITLE=`grep -i '<title' $f |sed -e 's,<title>,,I' -e 's,</title>,,I'`
-    FBASE=`basename $f |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
+    TITLE=`grep -i '<title' ${f} |sed -e 's,<title>,,I' -e 's,</title>,,I'`
+    FBASE=`basename ${f} |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
     METAS="<meta name=\"slug\" contents=\"${FBASE}\" />\n\
 <meta name=\"category\" contents=\"News\" />\n\
 <meta name=\"author\" contents=\"Hamish Cunningham\" />\n\
@@ -51,7 +51,7 @@ replace-meta-tags-etc() {
 # <meta name=\"tags\" contents=\"pi,gate,raspberrypi,raspi\" />\n\
 
     # set date from filename, or use TODAY
-    if `echo $f | grep -q '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-'`
+    if `echo ${f} | grep -q '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-'`
     then
       # set date from filename instead (done by pelican)
       :
@@ -64,12 +64,12 @@ replace-meta-tags-etc() {
     if [ x"${NOMETAS}" != x1 ]
     then
       (
-        sed -n '1,/<meta /Ip' $f |grep -vi '<meta '
+        sed -n '1,/<meta /Ip' ${f} |grep -vi '<meta '
         echo -e $METAS
-        tac $f |sed -n -e '1,/<meta/Ip' |tac |sed -n '2,$p'
+        tac ${f} |sed -n -e '1,/<meta/Ip' |tac |sed -n '2,$p'
       ) >${f}-$$
     else
-      cp $f ${f}-$$
+      cp ${f} ${f}-$$
     fi
 
     # tell pelican about relative links
