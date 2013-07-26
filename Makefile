@@ -72,6 +72,7 @@ help:
 	@echo '   favicon                          create output/favicon.ico          '
 	@echo '                                                                       '
 	@echo '   minify                           compress the output html           '
+	@echo '   archive                          make an archive copy of .htmls     '
 	@echo '                                                                       '
 
 
@@ -158,4 +159,11 @@ minify:
 	cd compressed-output && for f in `find . -name '*.html'`; do mv $$f ../output/$${f}; done
 	rm -rf compressed-output
 
-.PHONY: check prepare finalise google-site-verify robots favicon minify
+# make an archival copy of the .html files from the output directory
+archive:
+	rsync -aH --include='*.html' --exclude='*.*' \
+          output/ archives/archive-`date "+%Y-%m-%d"`
+	@echo archived these files:
+	@find archives/archive-`date "+%Y-%m-%d"` -type f
+
+.PHONY: check prepare finalise google-site-verify robots favicon minify archive
