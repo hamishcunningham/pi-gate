@@ -1,8 +1,17 @@
 PiGate TODOs
 
+- new Pi stuff from Ian
+- PiAlikes not hardware
+- fix missing footnotes headers
+  - cause: EPI run twice on posts in place will delete 2nd header after
+    deleting first
+  - fix: 
+- meta
+- thumbs and images based on slug
+
+
 - add the basics tutorial to the Pi app store
 - cache the sharethis stuff (too slow to load)
-- fix missing footnotes headers
 - add summary to metadata and include in index.html list
 - put contents table in col 2 of pages?
 - articles:

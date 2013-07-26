@@ -65,6 +65,11 @@ the on-line version just do &quot;make html&quot; again</p>
 GATEwiki syntax &mdash; .yam &mdash; or markdown or other Pelican-friendly formats if
 you like)</p>
 
+<p>to add a new page (as opposed to a new post) add to the STANDARD<em>PAGES list in
+the Makefile (or the NO</em>META<em>PAGES if you want to avoid insertion of metadata
+in the new page, probably because it is a bare HTML with meta tags already
+present).</p>
+
 <p>when you want to share your changes:</p>
 
 <p>git commit -vam &quot;what I just did&quot;
@@ -75,9 +80,8 @@ git push</p>
 <p>latest draft is at <a class="cow-url" href="http://tinyurl.com/pimo-draft">http://tinyurl.com/pimo-draft</a>  (u: pimo   p: learn)</p>
 
 <p><b>relative links</b> between pages, images etc. should just work within the
-content tree (no need to use Pelican's |filename| syntax). the exception is
-links that reference another page and an anchor (e.g.
-<tt>basics.html#parent-alarm</tt>). the workaround for pages (which live in the
-<tt>content/pages</tt> directory) is to prefix these with /pages). there's currently
-no workaround for posts...</p>
+content tree (no need to use Pelican's |filename| syntax). [note: there used
+to be an exception for links that reference another page and an anchor (e.g.
+<tt>basics.html#parent-alarm</tt>), which Pelican doesn't like; this is now fixed by
+<tt>enpelicanise.sh</tt> and the <tt>finalise</tt> <tt>Makefile</tt> target.]</p>
 </body></html>
