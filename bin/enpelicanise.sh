@@ -40,27 +40,31 @@ replace-meta-tags-etc() {
     echo enpelicanisating ${f} ...
 
     # allow over-riding of METAs from the file itself
-# <meta name=\"tags\" contents=\"pi,gate,raspberrypi,raspi\" />\n\
+    unset AUTHOR CATEGORY PUBDATE SLUG SUMMARY TAGS
+    DEFAULT_TAGS='pi,gate,raspberrypi,raspi'
     #TODO
-    unset SUMMARY AUTHOR SLUG PUBDATE TAGS
 
     # default the metadata if not supplied
-    [ -z "$SUMMARY" ] && SUMMARY=`grep -i '<title' ${f} |sed -e 's,<title>,,I' -e 's,</title>,,I'`
-    [ -z "$AUTHOR" ]  && AUTHOR='Hamish Cunningham'
-    [ -z "$SLUG" ]    && SLUG=`basename ${f} |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
+    [ -z "$AUTHOR" ]   && AUTHOR='Hamish Cunningham'
+    [ -z "$CATEGORY" ] && CATEGORY='News'
+    [ -z "$SLUG" ]     && SLUG=`basename ${f} |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
+    [ -z "$SUMMARY" ]  && SUMMARY=`grep -i '<title' ${f} |sed -e 's,<title>,,I' -e 's,</title>,,I'`
+
+    #TODO
+# tag and/or category metadata (e.g. notipi should be "software", "linux";
+# basics should be "hardware", "gpio", "pi-tronics")
 
     # the base text to add into the header
-    METAS="<meta name=\"slug\" contents=\"${SLUG}\" />\n\
-<meta name=\"category\" contents=\"News\" />\n\
-<meta name=\"author\" contents=\"${AUTHOR}\" />\n\
+    METAS="<meta name=\"author\" contents=\"${AUTHOR}\" />\n\
+<meta name=\"category\" contents=\"${CATEGORY}\" />\n\
+<meta name=\"slug\" contents=\"${SLUG}\" />\n\
 <meta name=\"summary\" contents=\"${SUMMARY}\" />"
 
-    # add tags if we got any
-    if [ ! -z "${TAGS}" ]
-    then
-      METAS="${METAS}\n\
+    # add any default tags, plus any additional tags
+    [ ! -z "${TAGS}" ] && THE_TAGS="${TAGS},"
+    TAGS="${TAGS}${DEFAULT_TAGS}"
+    METAS="${METAS}\n\
 <meta name=\"tags\" contents=\"${TAGS}\" />"
-    fi
 
     # set date from filename, or PUBDATE from file, or use TODAY
     if `echo ${f} | grep -q '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-'`
