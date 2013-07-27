@@ -461,18 +461,16 @@ SPST or
 
 <p>The code to drive this uses some neat features of Unix shell script:</p>
 
-<pre>
+<p><pre class="prettyprint lang-bash">
 gpio mode 0 in
 gpio mode 1 out
 
 while :
 do
-  gpio write 1 'gpio read 0'
+  gpio write 1 `gpio read 0`
   sleep 1
 done
-</pre>
-
-<p>The <tt>while :</tt> loop repeats forever (in shell &quot;:&quot; is a no-op command which
+</pre>The <tt>while :</tt> loop repeats forever (in shell &quot;:&quot; is a no-op command which
 always returns true, so the loop never hits a termination condition). We do
 this so that the program keeps testing to see if the switch position has
 changed. We don't really need to do this every few milliseconds, so to make
@@ -481,7 +479,7 @@ program and set a wakeup timer in the operating system. The value of &quot;1&quo
 passed to <tt>sleep</tt> means &quot;one second&quot;, so our loop will run once per second, or
 thereabouts.<span class="cow-footnote" name="footnote10"><sup><a href="#footnote10">10</a></sup></span></p>
 
-<p>The forward quotes (or backticks) in <tt>gpio write 1 'gpio read 0'</tt> do &quot;command
+<p>The forward quotes (or backticks) in <tt>gpio write 1 `gpio read 0`</tt> do &quot;command
 substitution&quot;: they run the command contained between the two quotes and
 replace the command with whatever is returned, then running the enclosing
 command. Here we're saying &quot;read a value from GPIO 0&quot; and then &quot;write that
@@ -625,14 +623,14 @@ time to hide the particle accelerator and pretend to be doing the homework.</p>
 connected on physical header pin 13). In Unix shell script a suitable
 program is this:</p>
 
-<pre>
+<p><pre class="prettyprint lang-bash">
 gpio mode 0 in
 gpio mode 1 out
 gpio mode 2 out
 
 while :
 do
-  if [ 'gpio read 0' == 1 ]
+  if [ `gpio read 0` == 1 ]
   then
     gpio write 1 1
     gpio write 2 0
@@ -642,9 +640,7 @@ do
   fi
   sleep 1
 done
-</pre>
-
-<p>Here the two LEDs are controlled on GPIO 1 and 2, and as before we're reading
+</pre>Here the two LEDs are controlled on GPIO 1 and 2, and as before we're reading
 the input on GPIO 0. When someone stands on the pressure mat the input is 1,
 and the first branch of the <tt>if</tt> statement will turn the first LED on and the
 second one off; otherwise the reverse will happen. So of our two LEDs, one
@@ -776,14 +772,14 @@ also waits progressively longer periods before testing again.</p>
 
 <p>Here's the code:</p>
 
-<pre>
+<p><pre class="prettyprint lang-bash">
 #!/usr/bin/env bash
 # flood-alarm.sh
 
 # standard locals
 alias cd='builtin cd'
 P=&quot;$0&quot;
-USAGE=&quot;'basename ${P}' [-h(elp)] [-w(et)] [-d(ry)]\n
+USAGE=&quot;`basename ${P}` [-h(elp)] [-w(et)] [-d(ry)]\n
 \twet and dry are for testing; normally we are run without options\n
 \tand loop forever waiting for state changes on GPIO 2...&quot;
 OPTIONSTRING=hwd
@@ -807,7 +803,7 @@ do
     *)	usage 1 ;;
   esac
 done 
-shift 'expr $OPTIND - 1'
+shift `expr $OPTIND - 1`
 
 # get started
 echo
@@ -825,9 +821,9 @@ gpio mode 2 in  # pin 2 is the water sensing circuit
 statusDry() {
   if [ $STATUS == wet ]
   then
-    echo Becoming dry at 'pdate'...
+    echo Becoming dry at `pdate`...
   else
-    echo Staying dry at 'pdate'...
+    echo Staying dry at `pdate`...
   fi
   STATUS=dry
   gpio write 0 0
@@ -836,9 +832,9 @@ statusDry() {
 statusWet() {
   if [ $STATUS == dry ]
   then
-    echo Eek! Becoming wet! 'pdate'
+    echo Eek! Becoming wet! `pdate`
   else
-    echo Bugger. Staying wet! 'pdate'
+    echo Bugger. Staying wet! `pdate`
   fi
   STATUS=wet
   gpio write 0 1
@@ -847,12 +843,12 @@ statusWet() {
 
 # helper to send notifications when wetness persists
 notifyFlooding() {
-  DATE_TIME='date '+%b %d %Y %T''
+  DATE_TIME=`date '+%b %d %Y %T'`
 
   # send an SMS over the net
-  PW='cat flood-alarm-data-secure-store/bulksms.txt'
-  SMS_STATUS='./hc-sendbulksms.sh -u hcunningham \
-    -p &quot;${PW}&quot; -n 447712341234 -m &quot;Flooding in the basement? $DATE_TIME&quot;'
+  PW=`cat flood-alarm-data-secure-store/bulksms.txt`
+  SMS_STATUS=`./hc-sendbulksms.sh -u hcunningham \
+    -p &quot;${PW}&quot; -n 447712341234 -m &quot;Flooding in the basement? $DATE_TIME&quot;`
   echo &quot;BulkSMS says: ${SMS_STATUS}&quot;
 
   # we could also use our NotiPi code here to send an SMS over the phone...
@@ -871,7 +867,7 @@ else
   DELAY=${MIN_DELAY}
   while :
   do
-    WET='gpio read 2'
+    WET=`gpio read 2`
     if [ $WET == 0 ]
     then
       statusDry
@@ -880,7 +876,7 @@ else
     else
       # wait a little and test again, just to be sure
       sleep 3
-      WET='gpio read 2'
+      WET=`gpio read 2`
       [ $WET == 0 ] &amp;&amp; echo 'Hmmm... false alarm!' &amp;&amp; statusDry &amp;&amp; continue
       
       # raise the alarm
@@ -890,7 +886,7 @@ else
       sleep ${DELAY}m
 
       # if it is still wet we want to sleep longer next time
-      DELAY='expr 2 \* ${DELAY}'
+      DELAY=`expr 2 \* ${DELAY}`
       if [ $DELAY -gt 1440 ] 
       then
         # max delay is 24 hours
@@ -899,9 +895,7 @@ else
     fi
   done
 fi
-</pre>
-
-<p>And it works!</p>
+</pre>And it works!</p>
 
 <p>Almost.</p>
 
@@ -938,13 +932,11 @@ few seconds, it would trigger. To fix the problem, I did two things:</p>
 
 <p>The latter appears in the script above and looks like this:</p>
 
-<pre>
+<p><pre class="prettyprint lang-bash">
       sleep 3
-      WET='gpio read 2'
+      WET=`gpio read 2`
       [ $WET == 0 ] &amp;&amp; echo 'Hmmm... false alarm!' &amp;&amp; statusDry &amp;&amp; continue
-</pre>
-
-<p>This code branch is followed whenever we get a &quot;wet&quot; reading, and says &quot;first
+</pre>This code branch is followed whenever we get a &quot;wet&quot; reading, and says &quot;first
 sleep for 3 seconds, then test the indication again&quot;. When we find that the
 wet reading has gone away we treat it as a false alarm and continue waiting
 for a new reading.</p>
@@ -953,18 +945,14 @@ for a new reading.</p>
 to set this going with <a class="cow-url" href="http://en.wikipedia.org/wiki/Nohup"><tt>nohup</tt></a> to
 prevent the process dying when we log out. To be precise:</p>
 
-<pre>
-nohup bash -c &quot;'pwd'/flood-alarm.sh &amp;&quot;
-</pre>
-
-<p>The output from the script is then collected in <tt>nohup.out</tt> and we can watch
+<p><pre class="prettyprint lang-bash">
+nohup bash -c &quot;`pwd`/flood-alarm.sh &amp;&quot;
+</pre>The output from the script is then collected in <tt>nohup.out</tt> and we can watch
 new entries being written like this:</p>
 
-<pre>
+<p><pre class="prettyprint lang-bash">
 tail -f nohup.out
-</pre>
-
-<p>Finally, the local network is protected by a firewall and
+</pre>Finally, the local network is protected by a firewall and
 <a class="cow-url" href="https://en.wikipedia.org/wiki/Network_address_translation">network address
 translation</a> in our broadband router. To allow us to log in when not at home,
 I used the excellent <a class="cow-url" href="https://pagekite.net/">PageKite</a> system to forward
@@ -987,11 +975,9 @@ Hub</a> open source hosting site. The project is called
 <a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics">Pi-Tronics</a>. To get started
 install git and clone the master branch:</p>
 
-<pre>
+<p><pre class="prettyprint lang-bash">
 git clone git@github.com:hamishcunningham/pi-tronics.git
-</pre>
-
-<p>This will create a directory <tt>pi-tronics</tt> on your local system. See the file
+</pre>This will create a directory <tt>pi-tronics</tt> on your local system. See the file
 <tt>README.txt</tt> in that directory for details of what is where.</p>
 
 <p>You can also browse the code on-line &mdash; here's the
@@ -1241,6 +1227,13 @@ anyone who's watching.</span>
 </li>
 </ol></p>
 </span>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 
 </section>
 
