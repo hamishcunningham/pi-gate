@@ -17,3 +17,8 @@ So: let's %(pages/basics.html, get hacking on the Pi), and help get
 %(pages/schools.html, Pi stuff into schools) so that kids have a
 chance to stay ahead of the technology wave as producers and not just
 consumers!
+
+%meta(
+  summary=Pi-Tronics starter projects,
+  tags=hardware\,gpio\,pi-tronics\,schools\,pi\,raspberrypi\,gate,
+)

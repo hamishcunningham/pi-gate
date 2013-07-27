@@ -28,3 +28,8 @@ Some of the reasons for this are:
 
 Ok, I used up several evenings and weekends, but it was more fun than watching
 the telly :-)
+
+%meta(
+  summary=A simple DIY flood alarm,
+  tags=hardware\,gpio\,pi-tronics\,pi\,raspberrypi\,gate,
+)

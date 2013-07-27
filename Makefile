@@ -175,7 +175,7 @@ archive-diff:
 	@cd archives/latest >/dev/null; \
           for f in `find . -type f`; do \
             cmp -s $$f ../../output/$$f || \
-              ( echo $${f}: && diff -y -W 175 --suppress-common-lines $$f ../../output/$$f |more && echo ); \
+              ( echo $${f}: && diff -y -W 175 --suppress-common-lines $$f ../../output/$$f && echo ); \
           done
 	@echo 
 

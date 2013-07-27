@@ -1,11 +1,5 @@
 Lego Engineering
 
-%meta(
-  author=A Big Pig,
-  summary=There's Lego\, and then there's LEGO...,
-  tags=lego\,cases\,pi,
-)
-
 There's Lego, and then there's LEGO:
 
 %(http://www.wired.com/underwire/2013/05/largest-lego-x-wing/,
@@ -25,3 +19,9 @@ case)) %br -- with nothing but a slide rule and a copy of Newton's _Principia_ t
 help him.
 
 The result is not just a _thing_ of beauty, but a _process_ of beauty :-)
+
+%meta(
+  author=Hamish Cunningham,
+  summary=There's Lego\, and then there's LEGO...,
+  tags=lego\,cases\,pi\,raspberrypi\,gate,
+)

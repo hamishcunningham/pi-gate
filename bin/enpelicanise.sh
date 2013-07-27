@@ -33,7 +33,38 @@ shift `expr $OPTIND - 1`
 FILES=$*
 $DBG doing summut on $TODAY
 
-# do some stuff
+# function to extract existing META tags data from a .html
+extract-metadata() {
+  INFILE=$1
+
+  unset AUTHOR CATEGORY PUBDATE SLUG SUMMARY TAGS
+  OIFS="${IFS}"
+  IFS='
+'
+
+  for line in `grep '^<meta name=' ${INFILE}`
+  do
+    IFS="${OIFS}"
+    set `echo ${line} |sed -e 's,[^"]*",,' -e 's,"[^"]*", ,' -e 's,".*,,'`
+    KEY="$1"
+    $DBG -en "${KEY}= "
+    shift
+    $DBG $*
+
+    case "${KEY}" in
+      author)   AUTHOR="$*" ;;
+      category) CATEGORY="$*" ;;
+      pubdate)  PUBDATE="$*" ;;
+      slug)     SLUG="$*" ;;
+      summary)  SUMMARY="$*" ;;
+      tags)     TAGS="$*" ;;
+    esac
+  done
+  IFS="${OIFS}"
+  $DBG metadata for $INFILE is: AUTHOR=$AUTHOR, CATEGORY=$CATEGORY, PUBDATE=$PUBDATE, SLUG=$SLUG, SUMMARY=$SUMMARY, TAGS=$TAGS
+}
+
+# function to update the metatags in a set of .htmls, fix relative links, etc.
 replace-meta-tags-etc() {
   for f in $*
   do
@@ -41,29 +72,21 @@ replace-meta-tags-etc() {
 
     # allow over-riding of METAs from the file itself
     unset AUTHOR CATEGORY PUBDATE SLUG SUMMARY TAGS
-    DEFAULT_TAGS='pi,gate,raspberrypi,raspi'
-    #TODO
+    extract-metadata ${f}
 
     # default the metadata if not supplied
     [ -z "$AUTHOR" ]   && AUTHOR='Hamish Cunningham'
     [ -z "$CATEGORY" ] && CATEGORY='News'
     [ -z "$SLUG" ]     && SLUG=`basename ${f} |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
     [ -z "$SUMMARY" ]  && SUMMARY=`grep -i '<title' ${f} |sed -e 's,<title>,,I' -e 's,</title>,,I'`
-
-    #TODO
-# tag and/or category metadata (e.g. notipi should be "software", "linux";
-# basics should be "hardware", "gpio", "pi-tronics")
+    [ -z "$TAGS" ]     && TAGS="pi,raspberrypi,raspi,gate"
+#TODO build assoc array of tags and allow default set as previous line
 
     # the base text to add into the header
     METAS="<meta name=\"author\" contents=\"${AUTHOR}\" />\n\
 <meta name=\"category\" contents=\"${CATEGORY}\" />\n\
 <meta name=\"slug\" contents=\"${SLUG}\" />\n\
-<meta name=\"summary\" contents=\"${SUMMARY}\" />"
-
-    # add any default tags, plus any additional tags
-    [ ! -z "${TAGS}" ] && THE_TAGS="${TAGS},"
-    TAGS="${TAGS}${DEFAULT_TAGS}"
-    METAS="${METAS}\n\
+<meta name=\"summary\" contents=\"${SUMMARY}\" />\n\
 <meta name=\"tags\" contents=\"${TAGS}\" />"
 
     # set date from filename, or PUBDATE from file, or use TODAY
@@ -124,4 +147,5 @@ replace-meta-tags-etc() {
     rm ${f}-$$*
   done
 }
+
 replace-meta-tags-etc $FILES

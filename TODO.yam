@@ -1,16 +1,28 @@
 PiGate TODOs
 
-- new Pi stuff from Ian
-  - metas
-- PiAlikes not hardware
-- thumbs and images based on slug
-- backlinks from circuitlab stuff
-
-
-- add the basics tutorial to the Pi app store
-- cache the sharethis stuff (too slow to load)
-- add summary to metadata and include in index.html list
-- put contents table in col 2 of pages?
+- now
+  - thumbs and images based on slug
+  - improve articles list; use summary
+  - PiAlikes not hardware
+  - backlinks from circuitlab stuff
+  - yui menu
+  - add the basics tutorial to the Pi app store
+  - cache the sharethis stuff (too slow to load)
+  - put contents table in col 2 of pages?
+- infrastructure
+  - move pifi-git to git@github.com:hamishcunningham/pi-tronics.git
+    - help pete add his sources there
+- content
+  - blog post > 5th june < 10 june to break the run of flood alarm referants
+  - add some videos
+- misc
+  - disqus
+  - possible better menu: http://wiki.jqueryui.com/w/page/38666403/Menubar
+  - scale the images and add dimensions with wwwis.pl
+  - center images
+    - add cow-img class to img elements from yam2html and then put something
+      like this in main.css:
+    - img { display: block; margin-left: auto; margin-right: auto; }
 - articles:
   - Prism, Onion Pi
   - Guy's ambassadors thing http://ambassadors.rcweb.dcs.shef.ac.uk/
@@ -32,23 +44,6 @@ PiGate TODOs
     - slice of pi
       - http://shop.ciseco.co.uk/k002-slice-of-pi-o/
       - http://openmicros.org/index.php/articles/94-ciseco-product-documentation/raspberry-pi/223-slice-of-pio
-
-- infrastructure
-  - move pifi-git to git@github.com:hamishcunningham/pi-tronics.git
-    - help pete add his sources there
-- content
-  - blog post > 5th june < 10 june to break the run of flood alarm referants
-  - finish notipi
-  - add some videos
-- misc
-  - disqus
-  - possible better menu: http://wiki.jqueryui.com/w/page/38666403/Menubar
-  - scale the images and add dimensions with wwwis.pl
-  - center images
-    - add cow-img class to img elements from yam2html and then put something
-      like this in main.css:
-    - img { display: block; margin-left: auto; margin-right: auto; }
-
 - analytics, webmaster tools
   - https://www.google.com/analytics/web/?et&authuser=0#report/visitors-overview/a41812045w71383507p73622557/%3Foverview-graphOptions.selected%3Danalytics.nthWeek/
   - https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http://pi.gate.ac.uk/&authuser=0

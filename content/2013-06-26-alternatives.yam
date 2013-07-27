@@ -66,3 +66,8 @@ pics:
 We'll keep you posted as he digs the dirt on this bunch... But if he figures
 out the worm-hole generator thing I'm off to see all the Clash gigs again
 before anything else.
+
+%meta(
+  summary=A survey of Pi-alike hardware,
+  tags=hardware\,pi-alikes\,pi\,raspberrypi\,gate,
+)

@@ -27,3 +27,8 @@ Even the UK government has woken up and taken notice! The UK's school
 curriculum for computing and IT is now in ferment, and with luck there will be
 a whole new ethos coming to %(pages/schools.html, schools computing) not too
 long from now.
+
+%meta(
+  summary=The Pi and schools computing curriculum,
+  tags=schools\,education\,pi\,raspberrypi\,gate,
+)

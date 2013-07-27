@@ -57,3 +57,9 @@ are%footnote(Turn _safe search_ off first.):
 | %(images/flood-alarm-detail-2.jpg,
   %image(images/thumbs/flood-alarm-detail-2.jpg, p'eye candy))
 | %] | %]
+
+
+%meta(
+  summary=Learn when you're young\, remember when you're old,
+  tags=pi-tronics\,pi\,raspberrypi\,gate,
+)

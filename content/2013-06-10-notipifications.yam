@@ -20,3 +20,8 @@ telling the outside world) about Stuff Going On from your Pi:
 # via a %(pages/notipi.html#pi-twitter, Twitter post)
 
 Happy notipifications ☺
+
+%meta(
+  summary=Notifications via SMS Text or Twitter from the Pi,
+  tags=software\,linux\,pi\,raspberrypi\,gate,
+)

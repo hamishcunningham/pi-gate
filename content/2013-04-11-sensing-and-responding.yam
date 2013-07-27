@@ -37,3 +37,7 @@ need is a basic electronics kit (breadboard, resistors, LEDs, switches, a
 transistor or two, a buzzer, ...), some spare time and, preferably, no
 %(pages/basics.html#warning, allergy to nerds).
 
+%meta(
+  summary=Pi-Tronics starter projects,
+  tags=hardware\,gpio\,pi-tronics\,pi\,raspberrypi\,gate,
+)
