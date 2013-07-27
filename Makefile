@@ -73,6 +73,7 @@ help:
 	@echo '                                                                       '
 	@echo '   minify                           compress the output html           '
 	@echo '   archive                          make an archive copy of .htmls     '
+	@echo '   archive-diff                     diff the archive against the output'
 	@echo '                                                                       '
 
 
@@ -163,7 +164,20 @@ minify:
 archive:
 	rsync -aH --include='*.html' --exclude='*.*' \
           output/ archives/archive-`date "+%Y-%m-%d"`
+	cd archives && rm -f latest && ln -s archive-`date "+%Y-%m-%d"` latest
 	@echo archived these files:
 	@find archives/archive-`date "+%Y-%m-%d"` -type f
 
-.PHONY: check prepare finalise google-site-verify robots favicon minify archive
+# diff the most recent archive htmls with the current output
+archive-diff:
+	@echo differences between latest archive html and output html:
+	@echo 
+	@cd archives/latest; \
+        for f in `find . -type f`; do \
+          cmp -s $$f ../../output/$$f || \
+            ( echo $${f}: && diff $$f ../../output/$$f && echo ); \
+        done
+	@echo 
+
+.PHONY: check prepare finalise google-site-verify robots favicon minify
+.PHONY: archive archive-diff
