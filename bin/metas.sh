@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 DBG=:
-
 for f in $*
 do
-    unset SUMMARY AUTHOR SLUG PUBDATE TAGS
+    unset AUTHOR CATEGORY PUBDATE SLUG SUMMARY TAGS
     OIFS="${IFS}"
     IFS='
 '
@@ -17,13 +16,14 @@ do
       shift
       $DBG $*
       case "${KEY}" in
-        author)  AUTHOR="$*" ;;
-        summary) SUMMARY="$*" ;;
-        slug)    SLUG="$*" ;;
-        tags)    TAGS="$*" ;;
-        pubdate) PUBDATE="$*" ;;
+        author)   AUTHOR="$*" ;;
+        category) CATEGORY="$*" ;;
+        pubdate)  PUBDATE="$*" ;;
+        slug)     SLUG="$*" ;;
+        summary)  SUMMARY="$*" ;;
+        tags)     TAGS="$*" ;;
       esac
     done
     IFS="${OIFS}"
-    echo metadata for $f is: SUMMARY=$SUMMARY, AUTHOR=$AUTHOR, SLUG=$SLUG, PUBDATE=$PUBDATE, TAGS=$TAGS
+    echo metadata for $f is: AUTHOR=$AUTHOR, CATEGORY=$CATEGORY, PUBDATE=$PUBDATE, SLUG=$SLUG, SUMMARY=$SUMMARY, TAGS=$TAGS
 done
