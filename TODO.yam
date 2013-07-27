@@ -36,9 +36,6 @@ PiGate TODOs
 - infrastructure
   - move pifi-git to git@github.com:hamishcunningham/pi-tronics.git
     - help pete add his sources there
-  - facility for more authors in the metadata
-  - tag and/or category metadata (e.g. notipi should be "software", "linux";
-    basics should be "hardware", "gpio", "pi-tronics")
 - content
   - blog post > 5th june < 10 june to break the run of flood alarm referants
   - finish notipi
