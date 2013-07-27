@@ -172,11 +172,11 @@ archive:
 archive-diff:
 	@echo differences between latest archive html and output html:
 	@echo 
-	@cd archives/latest; \
-        for f in `find . -type f`; do \
-          cmp -s $$f ../../output/$$f || \
-            ( echo $${f}: && diff $$f ../../output/$$f && echo ); \
-        done
+	@cd archives/latest >/dev/null; \
+          for f in `find . -type f`; do \
+            cmp -s $$f ../../output/$$f || \
+              ( echo $${f}: && diff $$f ../../output/$$f && echo ); \
+          done
 	@echo 
 
 .PHONY: check prepare finalise google-site-verify robots favicon minify
