@@ -39,28 +39,44 @@ replace-meta-tags-etc() {
   do
     echo enpelicanisating ${f} ...
 
-    # set up metadata for this file
-# TODO allow over-riding of METAs from the file itself
-    TITLE=`grep -i '<title' ${f} |sed -e 's,<title>,,I' -e 's,</title>,,I'`
-    FBASE=`basename ${f} |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
-    METAS="<meta name=\"slug\" contents=\"${FBASE}\" />\n\
-<meta name=\"category\" contents=\"News\" />\n\
-<meta name=\"author\" contents=\"Hamish Cunningham\" />\n\
-<meta name=\"summary\" contents=\"${TITLE}\" />"
-# no tags for now, use categories instead
+    # allow over-riding of METAs from the file itself
 # <meta name=\"tags\" contents=\"pi,gate,raspberrypi,raspi\" />\n\
+    #TODO
+    unset SUMMARY AUTHOR SLUG PUBDATE TAGS
 
-    # set date from filename, or use TODAY
+    # default the metadata if not supplied
+    [ -z "$SUMMARY" ] && SUMMARY=`grep -i '<title' ${f} |sed -e 's,<title>,,I' -e 's,</title>,,I'`
+    [ -z "$AUTHOR" ]  && AUTHOR='Hamish Cunningham'
+    [ -z "$SLUG" ]    && SLUG=`basename ${f} |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
+
+    # the base text to add into the header
+    METAS="<meta name=\"slug\" contents=\"${SLUG}\" />\n\
+<meta name=\"category\" contents=\"News\" />\n\
+<meta name=\"author\" contents=\"${AUTHOR}\" />\n\
+<meta name=\"summary\" contents=\"${SUMMARY}\" />"
+
+    # add tags if we got any
+    if [ ! -z "${TAGS}" ]
+    then
+      METAS="${METAS}\n\
+<meta name=\"tags\" contents=\"${TAGS}\" />"
+    fi
+
+    # set date from filename, or PUBDATE from file, or use TODAY
     if `echo ${f} | grep -q '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-'`
     then
       # set date from filename instead (done by pelican)
       :
+    elif [ ! -z "${PUBDATE}" ]
+    then
+      METAS="${METAS}\n\
+<meta name=\"date\" contents=\"${PUBDATE}\" />"
     else
       METAS="${METAS}\n\
 <meta name=\"date\" contents=\"${TODAY}\" />"
     fi
 
-    # add the metas
+    # add the metas etext
     if [ x"${NOMETAS}" != x1 ]
     then
       (
