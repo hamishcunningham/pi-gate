@@ -227,9 +227,42 @@ To be written.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#tonido
-%1 TonidoPlug
+%1 TonidoPlug2
 
-To be written.
+In some aspects the TonidoPlug is one of the most interesting bits of
+hardware we have for testing because it's really designed more as appliance
+instead of a general purpose computing device. It's essentially a NAS device.
+The idea is that you pop in an internal 2.5" SATA disk or connect a USB hard
+drive and serve the files off it. As a result all it's got is the SATA bay,
+ethernet port, wifi, and a USB port. There's no debug interface -- it's a
+purpose built SheevaPlug. That puts it (roughly) in the same family of
+devices as the DreamPlug of above.
+
+What definetely is in the same class is that the TonidoPlug ships with a
+stripped down Debian Squeeze with special TonidoPlug software on top of it
+for management. Remember, think appliance. That's not to say that you can't
+mess around with it, it's just not recommended to. The onboard 512 MB flash
+doesn't leave much space. Fortunately it can boot off of other devices so,
+I've set it up to run off the
+%(http://www.tonido.com/communitywiki/doku.php?id=advanceduses:usbboot, SATA disk).
+
+Also like the DreamPlug the TonidoPlug is really more of an excercise in
+Linux hacking. The directions for setting up the SATA disk are straight
+forward, but I did hit a few minor issues along the way which really confirms
+it for me. What you've got then is something that in essence "just works" but
+that you can fiddle with if you want. The fiddling isn't required. As
+something to play with that really gives you options. What those are depends
+on how powerful the hardware is in the end. It's very simple but it's in a
+pretty slick case. You can move it easily but I'm not sure why you'd want to.
+The power is a mains input which means you're tied down through that, but it
+removes the complexity of an adapter too.
+
+In the end I think I see the TonidoPlug best used for exactly what it says on
+the tin - serving files. You just get a bit more control. Want to do it with
+apache? Can do. Samba? NFS? Anything with Linux can be done. The neatest
+scenario I think is to use the built-in DLNA server to create a centralized
+media store. Then put a Pi with XBMC on every TV in the house that doesn't
+already support DLNA. A neat little setup...
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
