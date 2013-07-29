@@ -36,9 +36,9 @@ help:
 	@echo '- to add a new pages, put a new text in content/pages and add '
 	@echo '  to the list STANDARD_PAGES in the Makefile                  '
 	@echo '- to upload, do "GE1_USER=my-account-name make gateupload"    '
-	@echo '- to upload a draft, do "EC2_PEM=my-id.pem make ec2upload"    '
+	@echo '- to upload draft, do "EC2_PEM=my-id.pem make ec2upload"      '
 	@echo '                                                              '
-	@echo 'More details of targets (or see README.html)                  '
+	@echo 'More details of targets (or see README.html):                 '
 	@echo '   html                  (re)generate the web site            '
 	@echo '   clean                 remove the generated files           '
 	@echo '   regenerate            regenerate files upon modification   '
@@ -49,7 +49,6 @@ help:
 	@echo '   ec2upload             upload the web site via rsync+ssh    '
 	@echo '   gateupload            upload the web site via rsync+ssh    '
 	@echo '                                                              '
-	@echo '   check                 check prerequisites                  '
 	@echo '   prepare               regenerate the sources               '
 	@echo '   finalise              fixup the generated output           '
 	@echo '   google-site-verify    install web tools verification       '
@@ -61,7 +60,7 @@ help:
 	@echo '   archive-diff          diff the archive against the output  '
 	@echo '                                                              '
 
-html: check clean prepare $(OUTPUTDIR)/index.html \
+html: clean prepare $(OUTPUTDIR)/index.html \
         finalise google-site-verify robots favicon
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -94,44 +93,48 @@ gateupload: minify
 
 
 # other targets ###############################################################
-# use this one if we need groovy:
-#check: ; @which $(JAVA) >/dev/null && which $(GROOVY) >/dev/null || \
-#	echo 'oops! no java and/or no groovy in your path? try apt-get install?'
-check: ; @which $(JAVA) >/dev/null >/dev/null || \
-	echo 'oops! no java in your path? try apt-get install ...?'
 
 # this does regeneration from GATEwiki sources and the like
 prepare:
-	cd $(INPUTDIR) && $(Y2H) -na && $(EPI) `ls *.html`
-	cd $(INPUTDIR)/basics && \
+	# special stuff specific to this site
+	@cd $(INPUTDIR)/basics && \
           for f in *.yam; do \
 	    BASE=`echo $$f |sed 's,\.yam$$,,'`; \
 	    [ ! -e $$BASE.html -o $$BASE.yam -nt basics.html ] && \
 	      $(Y2H) -F basics.yam && break; \
 	  done; \
           cp basics.html ../pages
-	cp $(INPUTDIR)/piroomba/piroomba.html $(INPUTDIR)/pages
-	cd $(INPUTDIR)/pages && $(Y2H) -na && \
+	@cp $(INPUTDIR)/piroomba/piroomba.html $(INPUTDIR)/pages
+	@cd $(INPUTDIR)/pages && $(Y2H) -na && \
           $(EPI) $(STANDARD_PAGES) && $(EPI) -n $(NO_META_PAGES)
+	# stuff for all sites
+	@YAMS=`find $(INPUTDIR) -name '*.yam'`; \
+        for f in $$YAMS; do \
+          BASE=`echo $$f |sed 's,\.yam$$,,'`; HTML=$${BASE}.html; \
+          [ ! -e $$HTML -o $$f -nt $$HTML ] && $(Y2H) $$f && $(EPI) $$HTML || :; \
+        done
 
+# finalise the output directory
 finalise:
 	# to workaround pelican bug with anchors in relative pathnames we do
 	# a final fixup over the generated htmls in the output directory
-	for f in `find $(OUTPUTDIR) -name '*.html'`; do \
+	@for f in `find $(OUTPUTDIR) -name '*.html'`; do \
           sed -e 's,">XXX\(.*\)XXX,\1">,g' $${f} >$${f}-$$$$; \
           mv $${f}-$$$$ $${f}; \
 	done
 	# copy bare drafts as they are
-	for f in $(DRAFT_PAGES); do cp content/pages/$${f} output/pages; done
+	@for f in $(DRAFT_PAGES); do \
+          cp $(INPUTDIR)/pages/$${f} $(OUTPUTDIR)/pages; \
+        done
 
+# various housekeeping files
 google-site-verify:
 	echo 'google-site-verification: google2bff225e702ae7d8.html' \
           >output/google2bff225e702ae7d8.html
-
 robots:
 	cp robots.txt output/robots.txt
 favicon:
-	cp content/images/favicon.ico output
+	cp $(INPUTDIR)/images/favicon.ico output
 
 # compress html using http://code.google.com/p/htmlcompressor/
 minify:
@@ -162,5 +165,4 @@ archive-diff:
           done
 	@echo 
 
-.PHONY: check prepare finalise google-site-verify robots favicon minify
-.PHONY: archive archive-diff
+.PHONY: prepare specials finalise minify archive archive-diff
