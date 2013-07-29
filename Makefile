@@ -15,7 +15,8 @@ SSH_USER=ubuntu
 SSH_TARGET_DIR=/var/www
 
 # list of pages etc. ########################################################
-STANDARD_PAGES=about.html basics.html schools.html notipi.html legocases.html hardware.html
+STANDARD_PAGES=\
+about.html basics.html schools.html notipi.html legocases.html hardware.html
 NO_META_PAGES=piroomba.html
 DRAFT_PAGES=mopi.html
 
@@ -76,7 +77,7 @@ devserver:
 stopserver:
 	kill -9 `cat pelican.pid`
 	kill -9 `cat srv.pid`
-	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
+	@echo 'Stopped Pelican and SimpleHTTPServer processes in background.'
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
@@ -111,7 +112,8 @@ prepare:
 	@YAMS=`find $(INPUTDIR) -name '*.yam'`; \
         for f in $$YAMS; do \
           BASE=`echo $$f |sed 's,\.yam$$,,'`; HTML=$${BASE}.html; \
-          [ ! -e $$HTML -o $$f -nt $$HTML ] && $(Y2H) $$f && $(EPI) $$HTML || :; \
+          [ ! -e $$HTML -o $$f -nt $$HTML ] && \
+            $(Y2H) $$f && $(EPI) $$HTML || :; \
         done
 
 # finalise the output directory
