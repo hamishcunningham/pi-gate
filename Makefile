@@ -165,4 +165,12 @@ archive-diff:
           done
 	@echo 
 
-.PHONY: prepare specials finalise minify archive archive-diff
+# delete all the .htmls dependent on .yams
+yam-clean:
+	@YAMS=`find $(INPUTDIR) -name '*.yam'`; \
+        for f in $$YAMS; do \
+          BASE=`echo $$f |sed 's,\.yam$$,,'`; HTML=$${BASE}.html; \
+          rm -f $$HTML; \
+        done
+
+.PHONY: prepare specials finalise minify archive archive-diff yam-clean
