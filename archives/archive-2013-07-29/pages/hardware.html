@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Hardware</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+    
+  <!-- replace with version in static/css/gatepage.css?
+  <link rel="stylesheet" href="http://gate.ac.uk/css/page.css"> -->
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="http://pi.gate.ac.uk/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- replace with versions in static/css? -->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('http://gate.ac.uk/_images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="http://gate.ac.uk/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css">
+    sup {font-size: 80%; position: relative; bottom: .8ex;}
+  </style>
+
+  <!-- sharethis -->
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "e5977250-e340-464c-922e-c1b521b27184", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css">
+</head>
+
+<body id="index" class="home">
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0" height="55"></a></span>
+      <span id="strapLine"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      <span id="gateLogo"><a href="http://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0" height="55"></a></span>
+      <!-- <a href="http://www.shef.ac.uk/dcs/"><img src="/theme/images/logo-usfd-shield.png" alt="The University of Sheffield" height="55"></a> -->
+    </span>
+    <div class="horizontal menu">
+    <ul>
+    <li><img src="/theme/images/arrow-right.jpg"/></li>
+    <!-- TODO need a page at /pages to link from the top level here -->
+    <!--
+    <li><b><a href="">Projects</a></b>
+      <ul>
+    -->
+                                      <li><a href="/pages/basics.html">Basics</a></li>
+                                <li><a href="/pages/hardware.html">Hardware</a></li>
+                                <li><a href="/pages/legocases.html">LEGOCases</a></li>
+                                <li><a href="/pages/notipi.html">NotiPi</a></li>
+                                <li><a href="/pages/piroomba.html">PiRoomba</a></li>
+                                <li><a href="/pages/schools.html">Schools</a></li>
+                  <!--
+      </ul></li>
+    -->
+    <!-- <li><a href="/category/news.html">News</a></li> -->
+    <li><a href="/pages/about.html">About</a></li>
+    </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="http://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
+
+  <!-- header menus -->
+  <div id="header">
+  </div>
+
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
+
+  <!-- main content div -->
+  <div id="mainContent">
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+                <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/basics.html">Basics</a></li>
+            <li><a href="/pages/hardware.html">Hardware</a></li>
+            <li><a href="/pages/legocases.html">LEGOCases</a></li>
+            <li><a href="/pages/notipi.html">NotiPi</a></li>
+            <li><a href="/pages/piroomba.html">PiRoomba</a></li>
+            <li><a href="/pages/schools.html">Schools</a></li>
+                    <li ><a href="/category/news.html">News</a></li>
+            </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+          
+<section id="content" class="body">    
+    <h1 class="entry-title">Hardware</h1>
+<div id="socialButtons">
+  <span class='st_twitter_large' st_via='hcunningham' displayText='Tweet'></span>
+  <span class='st_identi_large' displayText='identi.ca'></span>
+  <span class='st_email_large' displayText='Email'></span>
+  <span class='st_sharethis_large' displayText='ShareThis'></span>
+  <span class='st_linkedin_large' displayText='LinkedIn'></span>
+  <span class='st_googleplus_large' displayText='Google +'></span>
+  <span class='st_facebook_large' displayText='Facebook'></span>
+  <span class='st_citeulike_large' displayText='CiteULike'></span>
+  <span class='st_tumblr_large' displayText='Tumblr'></span>
+  <span><a href="/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate">
+      <img height="30" src='/theme/images/icons/rss-large.jpg'/>
+    </a></span>
+</div>        
+        
+
+<p><em>Let's take a look at some of the other low cost computers</em></p>
+
+<p><em><a class="cow-url" href="/pages/about.html#fred">Fred Sonnenwald</a>, July 2013</em></p>
+
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Introduction</a></li>
+<li>&nbsp;&nbsp;<a href="#section-1.1.">1.1. Methodology</a></li>
+<li><a href="#section-2.">2. APC 8750</a></li>
+<li><a href="#section-3.">3. BeagleBone Black</a></li>
+<li><a href="#section-4.">4. Cubieboard</a></li>
+<li><a href="#section-5.">5. DreamPlug</a></li>
+<li><a href="#section-6.">6. MK802 Mini PC</a></li>
+<li><a href="#section-7.">7. Pi Model A</a></li>
+<li><a href="#section-8.">8. Pi Model B</a></li>
+<li><a href="#section-9.">9. TonidoPlug2</a></li>
+<li><a href="#section-10.">10. Conclusions</a></li>
+</ul></p></div>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="intro"></a></p><a class="cow-section-anchor" name="section-1."></a><h1 class="cow-heading"><span class="cow-sec-number">1. </span>Introduction</h1>
+
+<p>To be written.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="method"></a></p><a class="cow-section-anchor" name="section-1.1."></a><h2 class="cow-heading"><span class="cow-sec-number">1.1. </span>Methodology</h2>
+
+<p>To be written.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="apc"></a></p><a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>APC 8750</h1>
+
+<p>The APC 8750 is big and clunky. It's a big fat board with a big fat power
+brick to go along with it. But it does some good things with that space.
+Primarily, ports. Ports everywhere. VGA output for old screens, enough USB
+ports so that you don't have to have a hub. Good things. There's also a
+proper power button on the circuit board. Speaking of which it's also ATX
+compatibile, which means there's a slew of cases out there it will fit in,
+even if they will be way bigger than necessary.</p>
+
+<p>While the APC 8750 ships with Android it does run Linux, and in this case
+it's actually Rasbian. Write the <a class="cow-url" href="http://www.raspbian.org/ApricotImages">image</a> to an microSD card and then pause. Because it's a pretty much packed
+2GB image it really needs to be resized up after being written. I ran out of
+space running apt updates because I didn't.</p>
+
+<p>After boot it's a relatively snappy setup. It doesn't stick out as &quot;wow
+that's fast but it doesns't make me cringe a lot either. The system really is
+just par for the course. The only exception is an apparent bug that keeps the
+system from booting if there's no monitor attached. That cuts down on a lot
+of use cases for a low power system. There also aren't any sort of GPIO
+headers so there's nothing doing on that front.</p>
+
+<p>Ultimately I see the system as a desktop replacement for scenarios where you
+don't need the power of a proper desktop. A PC that sits in the kitchen
+playing music is where I would put it. That's just what pops into my head
+though, doubtless other folks will have other good ideas.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="bbb"></a></p><a class="cow-section-anchor" name="section-3."></a><h1 class="cow-heading"><span class="cow-sec-number">3. </span>BeagleBone Black</h1>
+
+<p>About the size of a Pi, the BeagleBone Black is a hacker's board, pure and
+simple. Primary evidence of this comes in the guise of more I/O pins than one
+can conviently shake a stick at. More evidence comes along as you get up and
+running with it. It ships with a stripped down Angstrom linux, but for
+comparative purposes I've put
+<a class="cow-url" href="http://elinux.org/BeagleBoardUbuntu#Quantal_12.10_armhf">Ubuntu</a> on it.
+The install approach is somewhat different. Rather than writing a pure image,
+there's a script which formats the card and extracts a system image archive.
+To my mind it's a much more Gentoo like approach.</p>
+
+<p>To boot off the SD card you need to hold down a little button by it.
+Unfortunately to me this wasn't obvious at first, so I spent quite a while
+wondering what was going on until I figured that out. Oops moment there.
+Apparently this can be fixed so that the SD card is the default boot location
+with a uBoot flash. Another thing smacking of hackery.</p>
+
+<p>Once the system boots, you're in a frame buffer console. Forunately a script
+is provided to apt-get install LXDE for you to get up and running in GUI
+land. Ethernet works right off the bat and it was a relatively quick install.
+After it was up the GUI experience is a bit below average. Like most of these
+systems, it's a framebuffer driver for Xorg, so one expects a lower level of
+performance. In that sense responsiveness was average. What was poorer was
+the occaisional glitching of the screen, wrapping around horizontally a few
+pixels. Impressions were not helped with the two system lock ups I
+experienced, both of which occurred on the same imgur page - in two different
+browsers. All of this adds to the feeling of it's a hackers system.
+You'd need an incredible patient child to get through all of this.</p>
+
+<p>Hardware wise it's respectable, although the close placemnt of the micro HDMI
+and USB port mean connectors bump heads. No sound means it won't be a media
+center, but the comprehensive LEDs (Power, CPU, SD, and MMC activity) and
+buttons on the board are a nice touch. Overall (and I won't get tired of
+saying this I think) everything points it towards being a hacker's system.
+Three years ago it would probably have been my choice for a project if I had
+one, but I wouldn't have gotten it on an impulse like the Pi. At this point I
+think I'd need something really, really specific to get one now.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="cubie"></a></p><a class="cow-section-anchor" name="section-4."></a><h1 class="cow-heading"><span class="cow-sec-number">4. </span>Cubieboard</h1>
+
+<p>The Cubieboard is just a little bit bigger than a Pi, and for taking up a
+similar amount of space, they've jammed a whole lot of stuff in there. A lot
+of expansion pins, but also audio in and out, SATA, IR... It's impressive.
+The board I've got came in what's called the &quot;rich packaging&quot; which includes
+some nice extras like a cardboard case, SATA power cable, and a debugging
+serial cable.</p>
+
+<p>Getting up and going is quick with the default Android install and runs well.
+There are a variety of
+<a class="cow-url" href="http://linux-sunxi.org/Install_Ubuntu_Linux_for_Cubieboard">Ubuntu</a>
+options for the board but only one easy SD card lubuntu. I've gone ahead and
+installed that. The image size is large, but comes with pretty much
+everything installed. Apparently
+<a class="cow-url" href="http://cubieboard.org/2012/11/15/install-ubuntu-with-berryboot/">Berryboot</a>
+makes more distributions available, but I haven't tested this.</p>
+
+<p>Usable performance is par for the course, and there's plenty of free memory
+after the system finishes booting into LXDE. What's a nice feature is that
+the board can properly turn off from a &quot;sudo poweroff&quot; command and then has
+a power button to get it started again. On the board itself the ports are
+well positioned making it easy to get at everything, although like the Pi
+it's all at right angles along the different edges. This can be annoying if
+you want to tidy it away. On a plus power and ethernet are on the same side
+so if that's all you need it is tidy. (They're on opposite sides on the Pi.)</p>
+
+<p>The absolute number one thing going for this board though? One word: NAS.
+The onboard SATA gives you scope to do a lot more than normal. I think it'd
+be worth it just for that. I also think the infrared port could be a lot of
+fun, and there are probably some interesting applications with the audio in.
+Are these extras enough to really justify the extra price? The board still
+is hacky. More so than the Pi I feel, but not as bad as the BeagleBoard. It's
+hard to say, but there are indeed things to do with the Cubieboard.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="dreamplug"></a></p><a class="cow-section-anchor" name="section-5."></a><h1 class="cow-heading"><span class="cow-sec-number">5. </span>DreamPlug</h1>
+
+<p>The DreamPlug is polished - at least on the outside. It's router sized and
+is cased similarly, although the casing actually feels more robust than a
+typical router. It's an impressive solid feel. Unlike a router the DreamPlug
+is filled with lots of IO though. SD, eSATA, S/PDIF &amp; 1/8&quot; jacks, USB, and
+the crown jewel I think, dual gigabit ethernet ports. All of this essentially
+makes it a proper low power server.</p>
+
+<p>Unlike the rest of the devices, the DreamPlug we've got shipped proper with
+Debian 6.0 Squeeze, which means out of the box we've only got to concern
+ourselves with logging in before we can start doing. No extra writing to SD
+card, although that can be done if you want. Unfortunately, logging in can be
+a bit of a trick - there's no display after all. The first time I turned it
+on I couldn't work out what was going on. It was necessary to 
+<a class="cow-url" href="http://dreamplug.googlecode.com/files/DreamPlug-User%20Guide_US_v1.2-Aug-28-2012.pdf">connect the little JTAG USB&lt;-&gt;serial adapter</a> to see what was happening.</p>
+
+<p>Some fun and games with minicom and we're in business. The default setup of
+Debian here is to setup the onboard Wifi as an acesspoint, with an IP address
+of 192.168.1.1. This nicely conflicted with my router's address of
+192.168.1.254. Commenting out a line in /etc/rc.local disables that and I
+could finally get things into a usable state. The DreamPlug I think turns out
+to be kind of fun like this. Instead of fiddling around with hardware it's
+almost straight up Linux hacking. I think you'll need to be compentent at the
+command line or at least wanting to learn to really get things done.</p>
+
+<p>Once you surmount that little command line hurdle though, you're in business
+with something you can really use. The system has a snappy response and
+there's a site,
+<a class="cow-url" href="http://www.spinifex.com.au/plugs/dplugintro.html">Spinifex</a>, with some good
+directions to help you navigate through the oddities of the Debian setup on
+the DreamPlug. It's a bit out of date, but still useful. More of this fun
+Linux hacking reinterpreting the directions. Overall I think the DreamPlug
+makes a perfect step up from an OpenWRT router. You want more power and
+flexibility in what you do on your LAN or want to run some more major
+services, like a proper file server. (Yes, you can do this with some OpenWRT
+routers, but I would not consider 2 MB/s to be proper.)</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="minipc"></a></p><a class="cow-section-anchor" name="section-6."></a><h1 class="cow-heading"><span class="cow-sec-number">6. </span>MK802 Mini PC</h1>
+
+<p>Immediately, the Mini PC has one thing going for it. It's size. It's an order
+of magnitude smaller than any of the other systems we're looking at here and
+it's in a case to boot. That makes it devilishly easy to transport. It ships
+with Android 4(.X?) which means you boot into a familiar interface. However,
+it is also armed with a microSD card slot which with the help of
+<a class="cow-url" href="https://www.miniand.com/forums/forums/2/topics/1">disk images</a> lets it run
+standard Ubuntu Linux and derivatives. Just write the image to a card, pop it
+in to the slot, and it turns the Mini PC into something more directly
+comparable with the other systems.</p>
+
+<p>I've loaded up the Lubuntu 1GB 1080p image and everything I've tested has
+worked out of the box. It is slow though. I originally tried the Ubuntu image
+but found it to be pretty much unusable. Really slow and a DNS resolution bug
+which would need to be manually fixed. Lubuntu manages OK but it's just slow.
+I suspect most of this slow down is due to running regular desktop software,
+while in comparison the Pi runs a more stripped down system. I also think
+it's running softfloat rather than hardfloat, which is what Rasbian is
+especially compiled for. Effectively this means there are calculations which
+could be sped up but which aren't.</p>
+
+<p>Hardware wise, having only 1 USB port is a bit annoying as well as you really
+need a hub to get things up and running normally. This goes right along with
+the special AC adapter needed to power it. Fortuantely, the onboard Wifi is
+a redeeming feature in this respect meaning that there aren't any more extra
+cables to deal with. Unfortunately though the onboard wifi seems to cap out at
+about 50 KB/s. I had this problem under the original Android as well.</p>
+
+<p>Lubuntu comes with sshd enabled so after setting up Wifi the first time you
+can actually get away with completely remote access. That along with its case
+means you can more or less leave it plugged into a wall pretty much anywhere
+and have a box for running small stuff on. I think it'd be perfect for
+running irssi (IRC client) inside of a screen on.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="modela"></a></p><a class="cow-section-anchor" name="section-7."></a><h1 class="cow-heading"><span class="cow-sec-number">7. </span>Pi Model A</h1>
+
+<p>To be written.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="modelb"></a></p><a class="cow-section-anchor" name="section-8."></a><h1 class="cow-heading"><span class="cow-sec-number">8. </span>Pi Model B</h1>
+
+<p>To be written.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="tonido"></a></p><a class="cow-section-anchor" name="section-9."></a><h1 class="cow-heading"><span class="cow-sec-number">9. </span>TonidoPlug2</h1>
+
+<p>In some aspects the TonidoPlug is one of the most interesting bits of
+hardware we have for testing because it's really designed more as appliance
+instead of a general purpose computing device. It's essentially a NAS device.
+The idea is that you pop in an internal 2.5&quot; SATA disk or connect a USB hard
+drive and serve the files off it. As a result all it's got is the SATA bay,
+ethernet port, wifi, and a USB port. There's no debug interface &mdash; it's a
+purpose built SheevaPlug. That puts it (roughly) in the same family of
+devices as the DreamPlug of above.</p>
+
+<p>What definetely is in the same class is that the TonidoPlug ships with a
+stripped down Debian Squeeze with special TonidoPlug software on top of it
+for management. Remember, think appliance. That's not to say that you can't
+mess around with it, it's just not recommended to. The onboard 512 MB flash
+doesn't leave much space. Fortunately it can boot off of other devices so,
+I've set it up to run off the
+<a class="cow-url" href="http://www.tonido.com/communitywiki/doku.php?id=advanceduses:usbboot">SATA disk</a>.</p>
+
+<p>Also like the DreamPlug the TonidoPlug is really more of an excercise in
+Linux hacking. The directions for setting up the SATA disk are straight
+forward, but I did hit a few minor issues along the way which really confirms
+it for me. What you've got then is something that in essence &quot;just works&quot; but
+that you can fiddle with if you want. The fiddling isn't required. As
+something to play with that really gives you options. What those are depends
+on how powerful the hardware is in the end. It's very simple but it's in a
+pretty slick case. You can move it easily but I'm not sure why you'd want to.
+The power is a mains input which means you're tied down through that, but it
+removes the complexity of an adapter too.</p>
+
+<p>In the end I think I see the TonidoPlug best used for exactly what it says on
+the tin - serving files. You just get a bit more control. Want to do it with
+apache? Can do. Samba? NFS? Anything with Linux can be done. The neatest
+scenario I think is to use the built-in DLNA server to create a centralized
+media store. Then put a Pi with XBMC on every TV in the house that doesn't
+already support DLNA. A neat little setup...</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="conclusions"></a></p><a class="cow-section-anchor" name="section-10."></a><h1 class="cow-heading"><span class="cow-sec-number">10. </span>Conclusions</h1>
+
+<p>To be written.</p>
+
+</section>
+
+</div>
+<!-- <div id="emptyMiddleColumn" class="yui3-u-1-24"> --> <!-- column 2 -->
+  <section id="extras" class="body">
+      </section><!-- /#extras -->
+
+
+  </div>
+  </div>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  </div> <!-- #mainContent -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © The <a href="http://www.shef.ac.uk/">University of Sheffield</a>, 1995-2013.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="http://gate.ac.uk/">GATE</a> is <a href="http://www.fsf.org/">free software</a> under
+        <a href="http://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="http://www.shef.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png" alt="The University of Sheffield" height="70"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
