@@ -1,6 +1,6 @@
 README
 
-How to work with these sources:
+how to work with these sources:
 
 - send your github ID to hamish and get authorised
 - install git, java and pelican
@@ -37,3 +37,7 @@ content tree (no need to use Pelican's |filename| syntax). [note: there used
 to be an exception for links that reference another page and an anchor (e.g.
 ^basics.html#parent-alarm^), which Pelican doesn't like; this is now fixed by
 ^enpelicanise.sh^ and the ^finalise^ ^Makefile^ target.]
+
+google analytics, webmaster tools
+- https://www.google.com/analytics/web/?et&authuser=0#report/visitors-overview/a41812045w71383507p73622557/%3Foverview-graphOptions.selected%3Danalytics.nthWeek/
+- https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http://pi.gate.ac.uk/&authuser=0

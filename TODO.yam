@@ -1,23 +1,17 @@
 PiGate TODOs
 
-- now
-  - thumbs and images based on slug
+- infrastructure
   - improve articles list; use summary
+  - thumbs and images based on slug
+  - put contents table in col 2 of pages?
+- content
   - PiAlikes not hardware
   - backlinks from circuitlab stuff
-  - yui menu
-  - add the basics tutorial to the Pi app store
-  - cache the sharethis stuff (too slow to load)
-  - put contents table in col 2 of pages?
-- infrastructure
-  - move pifi-git to git@github.com:hamishcunningham/pi-tronics.git
-    - help pete add his sources there
-- content
   - blog post > 5th june < 10 june to break the run of flood alarm referants
   - add some videos
 - misc
   - disqus
-  - possible better menu: http://wiki.jqueryui.com/w/page/38666403/Menubar
+  - add the basics tutorial to the Pi app store
   - scale the images and add dimensions with wwwis.pl
   - center images
     - add cow-img class to img elements from yam2html and then put something
@@ -26,7 +20,6 @@ PiGate TODOs
 - articles:
   - Prism, Onion Pi
   - Guy's ambassadors thing http://ambassadors.rcweb.dcs.shef.ac.uk/
-  - EEE quadcopter guest post?
   - pi-tronics shops
     - http://www.pimoroni.com/
     - http://www.newit.co.uk/shop/
@@ -45,6 +38,10 @@ PiGate TODOs
       - http://shop.ciseco.co.uk/k002-slice-of-pi-o/
       - http://openmicros.org/index.php/articles/94-ciseco-product-documentation/raspberry-pi/223-slice-of-pio
     - https://www.olimex.com/
-- analytics, webmaster tools
-  - https://www.google.com/analytics/web/?et&authuser=0#report/visitors-overview/a41812045w71383507p73622557/%3Foverview-graphOptions.selected%3Danalytics.nthWeek/
-  - https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http://pi.gate.ac.uk/&authuser=0
+    - http://www.open-electronics.org/
+- possibles
+  - js menu?
+    - possible better menu: http://wiki.jqueryui.com/w/page/38666403/Menubar
+    - yui menu: cd output && ln -s ../ymenu
+      - http://yuilibrary.com/yui/docs/node-menunav/node-menunav-3.html
+      - http://yuilibrary.com/yui/docs/node-menunav/node-menunav-3-example.html

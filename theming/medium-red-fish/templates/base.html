@@ -13,39 +13,35 @@
   <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
   {% endif %}
 
-  <!-- replace with version in static/css/gatepage.css?
-  <link rel="stylesheet" href="http://gate.ac.uk/css/page.css"> -->
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/gatepage.css">
-  <link rel="shortcut icon" href="http://pi.gate.ac.uk/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ SITEURL }}/favicon.ico" type="image/x-icon">
 
   <!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="{{ SITEURL }}/theme/js/html5shiv-googlecode-com-html5.js"></script>
   <![endif]-->
-
-  <!-- replace with versions in static/css? -->
   <!--[if lt IE 7]>
     <style type="text/css" media="screen">
     body {
-      behavior: url('http://gate.ac.uk/_images/menu/csshover.htc');
+      behavior: url('{{ SITEURL }}/theme/images/menu/csshover.htc');
       font-size: 100%;
     }
     </style>
-    <link rel="stylesheet" href="http://gate.ac.uk/css/ie-menus.css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/ie-menus.css" />
   <![endif]-->
 
   <!-- workaround for sup styling prob in default pelican theme -->
-  <style type="text/css">
-    sup {font-size: 80%; position: relative; bottom: .8ex;}
-  </style>
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
 
   <!-- sharethis -->
   <script type="text/javascript">var switchTo5x=true;</script>
-  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript" src="{{ SITEURL }}/theme/js/w-sharethis-com-button-buttons.js"></script>
   <script type="text/javascript">stLight.options({publisher: "e5977250-e340-464c-922e-c1b521b27184", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
   <!-- yui grids -->
-  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css">
-  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
 </head>
 
 <body id="index" class="home">
