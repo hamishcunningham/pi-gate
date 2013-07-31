@@ -1,0 +1,427 @@
+/* gatepage.css -- derived from gate.ac.uk's page.css */
+
+html, body {
+  background: #fff;
+  color: #000;
+  font-family: Verdana, Arial, sans-serif;
+}
+pre, code, tt {
+  font-family: Courier, monospace, sans-serif; 
+}
+img {
+  border: 0;
+}
+#topBar {
+  width: 100%;
+}
+#topLogo {
+  float: left;
+  margin-right: 6px;
+}
+#topLoginEtc {
+  /*float: right;*/
+  text-align: right;
+  padding: 10px 5px;
+}
+#topBreadcrumbs {
+  clear: right;
+  text-align: right;
+  margin-bottom: 6px;
+}
+#topPageSpecific {
+  /* float: right; */
+}
+#topPageSpecific a, #topBreadcrumbs a, #topLoginEtc a {
+  padding: 2px;
+  /* background: #EDEDED; */
+}
+#header {
+  width: 100%;
+  float: left;
+/*  border:2px dotted red;*/
+/*  border:2px dashed;*/
+/*  border-top: 3px solid;*/
+  border-bottom: 3px solid;
+  border-color: red;
+}
+#topSeparator {
+  clear: both;
+  width: 100%;
+  padding: 2px 0;
+/*  background: #578BB8;*/
+background: #ffffff;
+}
+#sideBarsAndMain {
+  clear: both;
+}
+#leftBar {
+  float: left;
+/*  border:2px dotted red;*/
+/*  border:2px dashed;*/
+/*  border-color: red;*/
+}
+#main {
+}
+/* Trick to make the left menu background extend to the bottom of the page.
+ * The width and colour of this border must match the width and
+ * 'background-color' of the ".menu ul" rule below.
+ */
+.wideBorder {
+/*  border-left: 10em solid #578BB8;*/
+  border-left: 10em solid #FFFFFF;
+/*  padding-left: 1em;*/
+  padding-left: 1.5em;
+}
+/* class for spacer divs at the top and bottom of #main to prevent collapsing
+ * margins.
+ */
+.cowSpacer {
+  font-size: 1px;
+}
+#rightBar {
+  float: right;
+}
+#footer {
+  clear: both;
+  padding: 4px 0;
+  width: 100%;
+  /* background: #578BB8;*/
+  background: #FFFFFF;
+  text-align: center;
+  /*border:2px dotted red;*/
+  border-top: 3px solid;
+  border-color: red;
+}
+.pageLink {
+  margin-left: 0px;
+  /* padding-right: 6px; */
+}
+.cow-non-existant-url {
+  /*color:#0D5798; */
+  /* HC color:red !important; */
+}
+.inlineForm {
+  display: inline;
+  margin-left: 0px;
+  padding-right: 6px;
+}
+
+/*
+.inlineForm label {
+  background: #EDEDED;
+}
+*/
+
+.editForm {
+}
+.confirmForm {
+}
+.message {
+  border: 1px solid #FFCC00;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#yamSyntaxPane {
+}
+.editInput {
+  font-size: 100%;
+  font-family: Verdana, Arial, sans-serif;
+}
+.pageText {
+  font-size: 100%;
+  font-family: Verdana, Arial, sans-serif;
+}
+.actionButtons {
+}
+.paginateButtons {
+  text-align: center;
+  padding: 6px;
+}
+div.errors {
+  overflow: auto;
+  border: 2px solid red;
+  padding: 5px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+.currentStep, .step, .nextLink, .prevLink {
+  text-align: center;
+  border: 1px solid black /*#578BB8*/;
+  padding: 6px;
+  margin-right: 12px;
+}
+
+
+a:link {
+	/*color: #8ec812;*/
+	/*color: #005f00;*/
+	color: #009b00;
+	text-decoration: underline;
+}
+
+a:visited {
+	/*color: #3b5307;*/
+	color: #005f00;
+	/*color: #2D2E2D;*/
+	/*color: #8c0000;*/
+	text-decoration: underline;
+        /*font-style: italic;*/
+	/*border-bottom:2px dashed; */
+}
+
+a:hover {
+	color: red;
+	border-bottom:0px solid #009b00; 
+	text-decoration: underline ;
+}
+
+td {
+  vertical-align: top;
+}
+
+/*a:active,a:link,a:visited,a:hover {
+  color:#0D5798;
+}*/
+
+.actionButton {
+}
+#wikiList {
+  text-align: center;
+}
+#wikiList th {
+  background-color: #578BB8;
+  color: white;
+  width: 30px;
+  font-family: Arial, sans-serif;
+  padding: 5px;
+}
+#wikiList td {
+  background-color: #F0F0F0;
+  text-align: center;
+}
+
+/* The way pagination should look */
+span.currentStep, a.step, a.nextLink, a.prevLink, a.backlink {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid rgb(230, 230, 230);
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: black;
+}
+
+span.currentStep {
+    background-color: rgb(240, 240, 240);
+}
+
+a.step:hover, a.nextLink:hover, a.prevLink:hover, a.backlink:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+/* Directory listings */
+ul.dirList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.dirList li {
+  position: relative;
+  padding: 2px 0 2px 42px;
+  background-position: 22px center;
+  background-repeat: no-repeat;
+  background-image: url(../images/filetypes/unknown.png);
+}
+
+ul.dirList li.ft_html {
+  background-image: url(../images/filetypes/html.png);
+}
+
+ul.dirList li.ft_htmlWithYam {
+  background-image: url(../images/filetypes/html+yam.png);
+}
+
+ul.dirList li.ft_directory {
+  background-image: url(../images/filetypes/directory.png);
+}
+
+ul.dirList li.ft_pdf {
+  background-image: url(../images/filetypes/pdf.png);
+}
+
+ul.dirList li.ft_doc {
+  background-image: url(../images/filetypes/word.png);
+}
+
+ul.dirList li.ft_gif,
+ul.dirList li.ft_jpg,
+ul.dirList li.ft_png {
+  background-image: url(../images/filetypes/image.png);
+}
+
+ul.dirList li span.deleteCheckbox {
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
+/* Menu support */
+.menu{
+  list-style: none;
+  background-color: #FFFFFF;
+  margin:0px;
+  border:0px;
+  padding: 5px;	
+  float: left;
+}
+
+.menu ul {
+  list-style: none;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.horizontal {
+  /* width: 100%; */
+}
+
+.vertical ul {
+  width: 10em;
+}
+
+.horizontal ul {
+  position: relative;
+  float: left;
+}
+
+.horizontal li {
+  display: inline;
+  float: left;
+}
+
+.horizontal ul ul li {
+  width: 100%;
+  display: block;
+  float: none;
+}
+
+.menu a {
+  display: block;
+  padding: 8px 10px;
+  border-right: 1px solid #778;
+  border-left: 1px solid #778;
+  border-bottom: 1px solid #778;
+  border-top: 1px solid #778;
+  margin: 0;
+  color: #000;
+  /* to push menu bar items behind overlapping popups */
+  z-index: 100;
+  text-decoration: underline;
+}
+
+.menu a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+#piLogo {
+  float:   left;
+}
+#strapLine a {
+  padding: 10px 15px;
+  color:   black !important;
+  float:   left;
+}
+
+#strapLine,
+.menu li {
+  position: relative;
+  font-family: Verdana,Arial,sans-serif;
+  font-weight: bold;
+}
+
+/* Treat links nested in a <b> tag as submenus, to make it easier to define
+ * menus in yam. */
+.horizontal b a,
+.vertical b a {
+  padding-right: 23px;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.horizontal b a {
+  background-image: url('../images/menu/down.gif');
+}
+
+.vertical b a,
+.horizontal ul ul b a {
+  background-image: url('../images/menu/right.gif');
+}
+
+.menu ul ul {
+  position: absolute;
+  width: 15em;
+  display: none;
+  z-index: 200;
+}
+
+.menu ul ul li {
+  font-family: Verdana,Arial,sans-serif;
+  font-weight: normal;
+  z-index: 300;
+}
+
+.menu ul ul li a {
+  padding: 5px;
+  margin: 0;
+  /*border-top-width: 0;*/
+  border-bottom: 1px solid gray;
+  font-weight: normal;
+}
+
+/* Pop all vertical menus and all second-level-and-beyond horizontal ones out
+ * to the right.  First level horizontal drop-downs are already in the right
+ * place.
+ */
+.vertical ul ul, .horizontal ul ul ul {
+  top: 0;
+  left: 100%;
+}
+
+/* The hover magic */
+.menu ul li:hover ul ul,
+.menu ul ul li:hover ul ul,
+.menu ul ul ul li:hover ul ul,
+.menu ul ul ul ul li:hover ul ul {
+  display: none;
+}
+
+.menu ul li:hover ul,
+.menu ul ul li:hover ul,
+.menu ul ul ul li:hover ul,
+.menu ul ul ul ul li:hover ul {
+  display: block;
+}
+
+#twitter_div {
+  background: #EDEDED;
+}
+
+#leftColumn {
+  margin: 10px 10px;
+}
+#middleColumn {
+  margin: 10px 0px;
+}
+#rightColumn {
+  margin: 10px 10px;
+}
+#leftColumn,
+#middleColumn {
+  border: 2px solid #eee;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}

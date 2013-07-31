@@ -148,7 +148,8 @@ minify:
 
 # make an archival copy of the .html files from the output directory
 archive:
-	rsync -aH --include='*.html' --exclude='*.*' \
+	rsync -aH --include='*.html' --include='*.css' --include='*.js' \
+          --include='*.htc' --exclude='*.*' \
           output/ archives/archive-`date "+%Y-%m-%d"`
 	cd archives && rm -f latest && ln -s archive-`date "+%Y-%m-%d"` latest
 	@echo archived these files:
