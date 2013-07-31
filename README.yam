@@ -1,6 +1,11 @@
 README
 
-how to work with these sources:
+%contents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 The basics
+
+How to work with these sources:
 
 - send your github ID to hamish and get authorised
 - install git, java and pelican
@@ -9,35 +14,55 @@ how to work with these sources:
 - make html
 - make serve
 
-hey presto you should have the site running on http://localhost:8000
+Hey presto you should have the site running on http://localhost:8000
 
-you can then edit content/... to your heart's content; when you want to regen
-the on-line version just do "make html" again
+You can then edit content/... to your heart's content; when you want to regen
+the on-line version just do "make html" again.
 
-new posts should be in the form content/YYYY-MM-DD-the-title.html (you can use
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 New posts, new pages
+
+New posts should be in the form content/YYYY-MM-DD-the-title.html (you can use
 GATEwiki syntax -- .yam -- or markdown or other Pelican-friendly formats if
-you like)
+you like). For each new post add 
 
-to add a new page (as opposed to a new post) add to the STANDARD_PAGES list in
-the Makefile (or the NO_META_PAGES if you want to avoid insertion of metadata
-in the new page, probably because it is a bare HTML with meta tags already
-present).
+- content/images/articles/the-title.png -- a characteristic image for the post
+- content/images/articles/thumbs/the-title.png -- a thumbnail of the image
 
-when you want to share your changes:
+To add a new page (as opposed to a new post) add to the STANDARD\_PAGES list
+in the Makefile (or the NO\_META\_PAGES if you want to avoid insertion of
+metadata in the new page, probably because it is a bare HTML with meta tags
+already present).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Checking in etc.
+
+When you want to share your changes:
 
 git commit -vam "what I just did"
 git push
 
-latest published version is at http://pi.gate.ac.uk/
+The latest published version is at http://pi.gate.ac.uk/
 
-latest draft is at http://tinyurl.com/pimo-draft  (u: pimo   p: learn)
+The latest draft is at http://tinyurl.com/pimo-draft  (u: pimo   p: learn)
 
-*relative links* between pages, images etc. should just work within the
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Relative links
+
+*Relative links* between pages, images etc. should just work within the
 content tree (no need to use Pelican's |filename| syntax). [note: there used
 to be an exception for links that reference another page and an anchor (e.g.
 ^basics.html#parent-alarm^), which Pelican doesn't like; this is now fixed by
 ^enpelicanise.sh^ and the ^finalise^ ^Makefile^ target.]
 
-google analytics, webmaster tools
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Misc
+
+Google analytics, webmaster tools:
+
 - https://www.google.com/analytics/web/?et&authuser=0#report/visitors-overview/a41812045w71383507p73622557/%3Foverview-graphOptions.selected%3Danalytics.nthWeek/
 - https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http://pi.gate.ac.uk/&authuser=0

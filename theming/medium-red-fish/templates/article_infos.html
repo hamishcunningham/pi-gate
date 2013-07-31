@@ -10,7 +10,7 @@
 {% include 'taglist.html' %}
 {% import 'translations.html' as translations with context %}
 {{ translations.translations_for(article) }}
-<a class="article-thumb" href="{{ SITEURL }}/static/images/article-images/{{ article.slug }}.png">
-<img src="{{ SITEURL }}/static/images/article-images/thumbs/{{ article.slug }}.png" alt="{{ article.slug }}">
+<a class="article-thumb" href="{{ SITEURL }}/static/images/article/{{ article.slug }}.png">
+<img src="{{ SITEURL }}/static/images/articles/thumbs/{{ article.slug }}.png" alt="{{ article.slug }}">
 </a>
 </footer><!-- /.post-info -->
