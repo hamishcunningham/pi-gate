@@ -352,7 +352,7 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
   position: relative;
   float: left;
   top: 0.5em;
-  width: 190px;
+  /* HC width: 190px; */
 }
 
 /* About the Author */
@@ -398,3 +398,37 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 #add-comment p.req {clear: both; margin: 0 .5em 1em 0; text-align: right;}
 #add-comment input[type='submit'] {float: right; margin: 0 .5em;}
 #add-comment * {margin-bottom: .5em;}
+
+/* After the revolution CSS will be taken outside and shot. */
+#posts-list > li > article {
+  list-style: none inside;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  padding-left: 0px !important;
+}
+footer.post-info {
+  padding-left: 0px !important;
+}
+#posts-list > li > article > div {
+  padding-left: 0px !important;
+}
+#posts-list {
+  list-style: none inside;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+#posts-list > li > article > div > a:nth-child(2) {
+  padding: 15px 0px 0px 0px;
+}
+#posts-list > li > article > div > footer > span > em {
+  font-style: italic;
+}
+#posts-list > li > article > div > footer {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+#posts-list > li > article > header > h1 {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+/* if want to delete summary in featured: #featured span.article-summary { display: none; } */
