@@ -431,4 +431,4 @@ footer.post-info {
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
 }
-/* if want to delete summary in featured: #featured span.article-summary { display: none; } */
+#featured a.article-thumb { display: none; }
