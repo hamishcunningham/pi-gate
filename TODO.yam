@@ -1,14 +1,12 @@
 PiGate TODOs
 
-- content
+- misc
   - PiAlikes not hardware
   - backlinks from circuitlab stuff
-  - blog post > 5th june < 10 june to break the run of flood alarm referants
-  - add some videos
-- misc
+  - better top menu
   - disqus
+  - add some videos
   - add the basics tutorial to the Pi app store
-  - scale the images and add dimensions with wwwis.pl
   - center images
     - add cow-img class to img elements from yam2html and then put something
       like this in main.css:
