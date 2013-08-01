@@ -2,7 +2,6 @@ PiGate TODOs
 
 - infrastructure
   - thumbs and images based on slug
-  - put contents table in col 2 of pages?
 - content
   - PiAlikes not hardware
   - backlinks from circuitlab stuff
@@ -44,3 +43,4 @@ PiGate TODOs
     - yui menu: cd output && ln -s ../ymenu
       - http://yuilibrary.com/yui/docs/node-menunav/node-menunav-3.html
       - http://yuilibrary.com/yui/docs/node-menunav/node-menunav-3-example.html
+  - put contents table in col 2 of pages?
