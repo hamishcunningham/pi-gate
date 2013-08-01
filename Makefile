@@ -181,12 +181,14 @@ yam-clean:
 
 # post; assumed TITLE has the title/slug...
 post:
-	@[ -z "$${TITLE}" ] && { echo 'oops: set TITLE to something!'; exit 1; }
-	@POSTFILE=`date "+%Y-%m-%d"`-$${TITLE}; \
+	@[ -z "$${TITLE}" ] && { echo 'set TITLE to something!'; exit 1; } || :
+	@POSTFILE=`date "+%Y-%m-%d"`-$${TITLE}.yam; \
           echo "A post about $${TITLE}..." > content/$${POSTFILE}; \
-          cd content/images/articles && cp default.jpg $${TITLE}.jpg && \
-          cd thumbs && cp default.jpg $${TITLE}.jpg; \
-          cd .. && echo \
-          "now create better versions of $${TITLE}.jpg / thumbs/$${TITLE}.jpg"
+          echo "created content/$${POSTFILE}"; \
+          cd content/images/articles >/dev/null && \
+          cp default.jpg $${TITLE}.jpg && cd thumbs >/dev/null && \
+          cp default.jpg $${TITLE}.jpg && cd .. && \
+          echo "now supply better versions of "\
+          "$${TITLE}.jpg and thumbs/$${TITLE}.jpg in content/images/articles"
 
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post
