@@ -127,6 +127,10 @@ finalise:
           sed -e 's,">XXX\(.*\)XXX,\1">,g' $${f} >$${f}-$$$$; \
           mv $${f}-$$$$ $${f}; \
 	done
+	@for f in `find $(OUTPUTDIR) -name '*.xml'`; do \
+          sed -e 's,"&gt;XXX\(.*\)XXX,\1"\&gt;,g' $${f} >$${f}-$$$$; \
+          mv $${f}-$$$$ $${f}; \
+	done
 	# copy bare drafts as they are
 	@for f in $(DRAFT_PAGES); do \
           cp $(INPUTDIR)/pages/$${f} $(OUTPUTDIR)/pages; \

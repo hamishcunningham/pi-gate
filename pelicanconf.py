@@ -5,16 +5,13 @@ from __future__ import unicode_literals
 AUTHOR = u'Hamish Cunningham'
 SITENAME = u'Pi GATE — Sheffield Pi-Tronics'
 SITEURL = ''
-
 TIMEZONE = 'Europe/London'
-
 DEFAULT_LANG = u'en'
 
-# Feed generation is usually not desired when developing
-#FEED_ALL_ATOM = None
-#CATEGORY_FEED_ATOM = None
+# Feeds
+CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
-
+FEED_DOMAIN = 'http://pi.gate.ac.uk'
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
