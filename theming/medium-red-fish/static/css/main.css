@@ -12,7 +12,18 @@
 /* HC @import url("reset.css"); */
 @import url("pygment.css");
 @import url("typogrify.css");
-@import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz&subset=latin);
+
+/* we used to import this from google, but that makes the site non-static, so
+ * now it is cached...
+ * @import * url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz&subset=latin);
+ */
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yanone Kaffeesatz Regular'), local('YanoneKaffeesatz-Regular'),
+       url('../fonts/yanone-kaffeesatz.woff') format('woff');
+}
 
 /***** Global *****/
 /* Body */
@@ -331,7 +342,7 @@ img.left, figure.left { float: left; margin: 0 2em 2em 0; }
 }
 li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 #content > .hentry {padding: 1em 0;}
-.hentry img{display : none ;}
+/* HC .hentry img{display : none ;} */
 .entry-title {font-size: 3em; margin-bottom: 10px; margin-top: 0;}
 .entry-title a:link, .entry-title a:visited {text-decoration: none; color: #333;}
 .entry-title a:visited {background-color: #fff;}
@@ -431,4 +442,8 @@ footer.post-info {
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
 }
+.article-thumb {
+  float: right;
+}
 #featured a.article-thumb { display: none; }
+span.tag-list a { font-style: italic !important; }
