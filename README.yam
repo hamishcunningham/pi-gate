@@ -9,23 +9,39 @@ How to work with these sources:
 
 - send your github ID to hamish and get authorised
 - install git, java and pelican
-- git clone git@github.com:hamishcunningham/pi-gate.git
-- cd pi-gate
-- make html
-- make serve
+- fire up a shell and:
+
+%code(lang=Bash)<
+git clone git@github.com:hamishcunningham/pi-gate.git
+cd pi-gate
+make html
+make serve
+%>
 
 Hey presto you should have the site running on http://localhost:8000
 
 You can then edit content/... to your heart's content; when you want to regen
 the on-line version just do "make html" again.
 
+Note that the source code examples live in another repo:
+
+%code(lang=Bash)<
+git clone git@github.com:hamishcunningham/pi-tronics.git
+%>
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 New posts, new pages
 
-New posts should be in the form content/YYYY-MM-DD-the-title.html (you can use
-GATEwiki syntax -- .yam -- or markdown or other Pelican-friendly formats if
-you like). For each new post add 
+The easy way to *make a new post* is to choose a title (e.g.
+"martians-landing") and do
+
+%code(lang=Bash)< TITLE=martians-landing make post %>
+
+Then follow the instructions. The longer story is that new posts should be in
+the form content/YYYY-MM-DD-the-title.html (you can use GATEwiki syntax --
+.yam -- or markdown or other Pelican-friendly formats if you like). For each
+new post also add 
 
 - content/images/articles/the-title.jpg -- a characteristic image for the post
 - content/images/articles/thumbs/the-title.jpg -- a 75x75 thumbnail of the
@@ -34,7 +50,8 @@ you like). For each new post add
 Tip: you can generate the latter from the former with:
 %code(lang=Bash)< convert -thumbnail 75 the-title.jpg thumbs/the-title.jpg %>
 
-To add a new page (as opposed to a new post) add to the STANDARD\_PAGES list
+TODO is this unnesc now, at least for "normal" pages?
+*To add a new page* (as opposed to a new post) add to the STANDARD\_PAGES list
 in the Makefile (or the NO\_META\_PAGES if you want to avoid insertion of
 metadata in the new page, probably because it is a bare HTML with meta tags
 already present).
@@ -45,8 +62,10 @@ already present).
 
 When you want to share your changes:
 
+%code(lang=Bash)<
 git commit -vam "what I just did"
 git push
+%>
 
 The latest published version is at http://pi.gate.ac.uk/
 

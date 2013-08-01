@@ -1,7 +1,7 @@
 PiGate TODOs
 
 - misc
-  - editorial on Pi-Roomba
+  - editorial on Pi-Roomba, Pi-Alikes
   - backlinks from circuitlab stuff
   - better top menu
   - disqus
@@ -11,6 +11,7 @@ PiGate TODOs
     - add cow-img class to img elements from yam2html and then put something
       like this in main.css:
     - img { display: block; margin-left: auto; margin-right: auto; }
+  - TODO in the README and "make page" target
 - articles:
   - Prism, Onion Pi
   - Guy's ambassadors thing http://ambassadors.rcweb.dcs.shef.ac.uk/
