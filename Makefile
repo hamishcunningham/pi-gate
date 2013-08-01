@@ -38,6 +38,7 @@ help:
 	@echo '  to the list STANDARD_PAGES in the Makefile                  '
 	@echo '- to upload, do "GE1_USER=my-account-name make gateupload"    '
 	@echo '- to upload draft, do "EC2_PEM=my-id.pem make ec2upload"      '
+	@echo '- to create post, do "TITLE=my-title make post"               '
 	@echo '                                                              '
 	@echo 'More details of targets (or see README.html):                 '
 	@echo '   html                  (re)generate the web site            '
@@ -59,6 +60,8 @@ help:
 	@echo '   minify                compress the output html             '
 	@echo '   archive               make an archive copy of .htmls       '
 	@echo '   archive-diff          diff the archive against the output  '
+	@echo '                                                              '
+	@echo '   post                  create files for a new post          '
 	@echo '                                                              '
 
 html: clean prepare $(OUTPUTDIR)/index.html \
@@ -176,4 +179,14 @@ yam-clean:
           rm -f $$HTML; \
         done
 
-.PHONY: prepare specials finalise minify archive archive-diff yam-clean
+# post; assumed TITLE has the title/slug...
+post:
+	@[ -z "$${TITLE}" ] && { echo 'oops: set TITLE to something!'; exit 1; }
+	@POSTFILE=`date "+%Y-%m-%d"`-$${TITLE}; \
+          echo "A post about $${TITLE}..." > content/$${POSTFILE}; \
+          cd content/images/articles && cp default.jpg $${TITLE}.jpg && \
+          cd thumbs && cp default.jpg $${TITLE}.jpg; \
+          cd .. && echo \
+          "now create better versions of $${TITLE}.jpg / thumbs/$${TITLE}.jpg"
+
+.PHONY: prepare specials finalise minify archive archive-diff yam-clean post
