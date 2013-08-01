@@ -14,15 +14,15 @@ To be written.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%#method
-%2 Methodology
+%#setup
+%1 Initial impressions and setup
 
-To be written.
+A series of short introductions and starting points for each device.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#apc
-%1 APC 8750
+%2 APC 8750
 
 The APC 8750 is big and clunky. It's a big fat board with a big fat power
 brick to go along with it. But it does some good things with that space.
@@ -53,7 +53,7 @@ though, doubtless other folks will have other good ideas.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#bbb
-%1 BeagleBone Black
+%2 BeagleBone Black
 
 About the size of a Pi, the BeagleBone Black is a hacker's board, pure and
 simple. Primary evidence of this comes in the guise of more I/O pins than one
@@ -95,7 +95,7 @@ think I'd need something really, really specific to get one now.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#cubie
-%1 Cubieboard
+%2 Cubieboard
 
 The Cubieboard is just a little bit bigger than a Pi, and for taking up a
 similar amount of space, they've jammed a whole lot of stuff in there. A lot
@@ -133,7 +133,7 @@ hard to say, but there are indeed things to do with the Cubieboard.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#dreamplug
-%1 DreamPlug
+%2 DreamPlug
 
 The DreamPlug is polished - at least on the outside. It's router sized and
 is cased similarly, although the casing actually feels more robust than a
@@ -175,7 +175,7 @@ routers, but I would not consider 2 MB/s to be proper.)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#minipc
-%1 MK802 Mini PC
+%2 MK802 Mini PC
 
 Immediately, the Mini PC has one thing going for it. It's size. It's an order
 of magnitude smaller than any of the other systems we're looking at here and
@@ -212,22 +212,49 @@ running irssi (IRC client) inside of a screen on.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%#modela
-%1 Pi Model A
+%#modelb
+%2 Pi Model B
 
-To be written.
+To be honest, it's a bit late in the game to have first impressions of the
+RaspberryPi. I first got mine over a year ago, and so much has changed in
+that time as well. The Model B we have here is a Revision 2, while I started
+out on the Revision 1. Still, a general overview is in order.
+
+The Pi, while not the oldest of the devices here was the game changer. There
+have been SheevaPlugs and BeagleBoards (and other things like
+%(https://www.gumstix.com/, Gumstix) as well) for quite a few years.
+The RaspberryPi, well, I think it's the iPod of these computers. It did it
+well enough (and here cheap counts towards well) that it brought this sort of
+computing to mainstream attention. The Pi somehow brought to life a much
+larger community, filled with people who are slightly less technical, making
+it accessible.
+
+The Pi is also an order of magnitude easier to get ahold of. Here in the UK
+I could walk into Maplin and walk out with a Pi in my hand. Then it's a
+simple matter to write the
+%(http://www.raspberrypi.org/downloads, SD card image) and get going. That
+counts for a lot because really, the hardware in the Pi isn't hugely better
+than these others. The biggest difference is probably the composite video
+out. That's the connection for one of those cheap car reversing monitors.
+
+And you know what? The hardware only got better with the Revision 2. Mounting
+holes to make it easier to use in projects. More RAM for better performance.
+Changed around GPIO. My personal favorite: the removed fuses on the USB ports.
+That for me is really what sells it. There are devices that simply won't work
+with a Revision 1 that will with the Revision 2. In general when using the
+Revision 2 everything is snappier.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%#modelb
-%1 Pi Model B
+%#modela
+%2 Pi Model A
 
 To be written.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#tonido
-%1 TonidoPlug2
+%2 TonidoPlug2
 
 In some aspects the TonidoPlug is one of the most interesting bits of
 hardware we have for testing because it's really designed more as appliance
@@ -264,6 +291,20 @@ scenario I think is to use the built-in DLNA server to create a centralized
 media store. Then put a Pi with XBMC on every TV in the house that doesn't
 already support DLNA. A neat little setup...
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#benchmarks
+%1 Benchmarks
+
+To be written.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#media
+%1 Practical application - media player
+
+
+To be written.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#conclusions
