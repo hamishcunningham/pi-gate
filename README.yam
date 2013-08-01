@@ -27,8 +27,9 @@ New posts should be in the form content/YYYY-MM-DD-the-title.html (you can use
 GATEwiki syntax -- .yam -- or markdown or other Pelican-friendly formats if
 you like). For each new post add 
 
-- content/images/articles/the-title.png -- a characteristic image for the post
-- content/images/articles/thumbs/the-title.png -- a thumbnail of the image
+- content/images/articles/the-title.jpg -- a characteristic image for the post
+- content/images/articles/thumbs/the-title.jpg -- a 75x75 thumbnail of the
+  image
 
 To add a new page (as opposed to a new post) add to the STANDARD\_PAGES list
 in the Makefile (or the NO\_META\_PAGES if you want to avoid insertion of
