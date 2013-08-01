@@ -31,6 +31,9 @@ you like). For each new post add
 - content/images/articles/thumbs/the-title.jpg -- a 75x75 thumbnail of the
   image
 
+Tip: you can generate the latter from the former with:
+%code(lang=Bash)< convert -thumbnail 75 the-title.jpg thumbs/the-title.jpg %>
+
 To add a new page (as opposed to a new post) add to the STANDARD\_PAGES list
 in the Makefile (or the NO\_META\_PAGES if you want to avoid insertion of
 metadata in the new page, probably because it is a bare HTML with meta tags
