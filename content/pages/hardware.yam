@@ -249,7 +249,35 @@ Revision 2 everything is snappier.
 %#modela
 %2 Pi Model A
 
-To be written.
+The Model A was always designed to be a stripped down Model B. The same PCB,
+but with fewer components on it making it cheaper. No ethernet, only one USB
+port, and less RAM. How much worse could it be? In terms of setup it's
+exactly the same. It's a little glimpse of the Apple ecosystem in a sense,
+all Pis are fundamentally the same hardware so we can just swap SD cards
+around - just like all Macs run OS X.
+
+You would think that the lack of ethernet and USB doesn't have an impact, and
+to some extent that's true. Usability of Rasbian is pretty much the same.
+In that sense it's no worse than being on a Revision 1 Model B. For me though
+I think it's summed up in two words: "USB Hub". Mouse _and_ keyboard? Hub.
+Want internet too? A USB ethernet or Wifi adapter. They're not
+insurmountable. Linux and Wifi is in a much better state than it was 5 years
+ago.
+
+I think that if you're going to use the Model A like you'd use a Model B, you
+should just get the Model B. The "extra" cost comes out of money you'd end up
+spending on USB accessories. It's all around just a better experience. The
+Model A still has a place though. It's the more hardware project oriented
+version of he Pi.
+
+Like the Model B Revision 2, the polyfuses are removed so the Model A can be
+be back powered through the USB port. Fewer components means overall lower
+power consumption for when on batteries. This can be lowered even further
+by
+%(http://www.bitwizard.nl/wiki/index.php?title=Reducing_power_consumption_of_a_raspberry_Pi,
+replacing the power regulator). There are lots of projects where the lower
+power makes it ideal and the lack of USB and ethernet doesn't mean much.
+Robotics, weather baloons - plenty of fun things to do.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
