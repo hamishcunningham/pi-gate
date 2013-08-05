@@ -192,7 +192,7 @@ post:
           [ -f content/$${POSTFILE} ] || \
             echo "A post about $${TITLE}..." > content/$${POSTFILE}; \
           echo "created content/$${POSTFILE}"; \
-          git add -v content/$${POSTFILE}"; \
+          git add -v content/$${POSTFILE}; \
           cd content/images/articles >/dev/null && \
           cp -n default.jpg $${TITLE}.jpg && cd thumbs >/dev/null && \
           cp -n default.jpg $${TITLE}.jpg && cd .. && \
