@@ -16,9 +16,10 @@ SSH_TARGET_DIR=/var/www
 
 # list of pages etc. ########################################################
 STANDARD_PAGES=\
-about.html basics.html schools.html notipi.html legocases.html hardware.html
+about.html basics.html schools.html notipi.html legocases.html hardware.html \
+mopi.html
 NO_META_PAGES=piroomba.html
-DRAFT_PAGES=mopi.html
+DRAFT_PAGES=
 
 # other vars ################################################################
 GROOVY=groovy

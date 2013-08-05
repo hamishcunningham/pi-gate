@@ -1,1 +1,45 @@
-A post about chasing-pine-martens...
+Chasing Pine Martens
+
+I'm in Bulgaria in a house at the foot of mount Vitosha on the outskirts of
+the capital, Sofia. %br %(http://en.wikipedia.org/wiki/Vitosha,
+%image(images/vitosha-1.jpg, Mount Vitosha, 500)) %br Sofia is home to some
+1.3 million people (which more than 10% of the population of the whole
+country), and many more travel in and out each week to find work in the big
+city. Vitosha is the lungs of the city, and its slopes are the perfect place
+to stay if you're keen to walk in its forests, or ski, or just get some cool
+air in the heat of the summer.
+
+Sitting in the garden at dusk the other day, we spotted a couple of dark
+shapes scurrying along -- pine martens! Or possibly their smaller cousin the
+beech marten: %br
+%(http://en.wikipedia.org/wiki/Beech_marten, %image(images/beech-marten-1.jpg,
+A beech marten, 300)) %br
+They are beautiful creatures, but quite shy, and they only come out after
+dark... You can see where this is going -- I wonder if I can capture some
+images with a Pi, a motion sensor and a camera module?
+
+Well, first things first, I'm going to need to put it on top of next door's
+shed in the path of the night-time run that the martens make on their way to
+hunt mice or steal chicken's eggs from our neighbours. So I need a good
+battery pack...
+
+As Gray Girling points out in his excellent
+%(http://www.amazon.co.uk/Raspberry-Pi-Manual-practical-revolutionary/dp/0857332953/,
+Haynes manual) battery power for the Pi is harder than it looks at first
+sight. The Pi requires both fairly high current (at least for the Model B) and
+a quite stable voltage. And, as I found out when I when testing my first
+efforts, an unscheduled low voltage shutdown can corrupt the SD card image and
+leave you with an unbootable setup :-(
+
+Time for an analysis of %(pages/mopi.html, the perfect Pi battery pack), and
+Bulgaria is the perfect place to experiment with this stuff -- Lubo Bontchev
+of %(http://www.selcomltd.com/, Selcom custom electronics) has worked on
+everything from solar panels to sattelites and has built these prototypes for
+hot-swap mobile Pi power:
+
+%image(images/mopi/proto-regulator-01.jpg, the first prototype regulator, 500)
+
+%meta(
+  summary=Battery packs for Pi-Mobility,
+  tags=batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate,
+)
