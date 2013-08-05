@@ -189,11 +189,14 @@ yam-clean:
 post:
 	@[ -z "$${TITLE}" ] && { echo 'set TITLE to something!'; exit 1; } || :
 	@POSTFILE=`date "+%Y-%m-%d"`-$${TITLE}.yam; \
-          echo "A post about $${TITLE}..." > content/$${POSTFILE}; \
+          [ -f content/$${POSTFILE} ] || \
+            echo "A post about $${TITLE}..." > content/$${POSTFILE}; \
           echo "created content/$${POSTFILE}"; \
+          git add -v content/$${POSTFILE}"; \
           cd content/images/articles >/dev/null && \
-          cp default.jpg $${TITLE}.jpg && cd thumbs >/dev/null && \
-          cp default.jpg $${TITLE}.jpg && cd .. && \
+          cp -n default.jpg $${TITLE}.jpg && cd thumbs >/dev/null && \
+          cp -n default.jpg $${TITLE}.jpg && cd .. && \
+          git add -v $${TITLE}.jpg thumbs/$${TITLE}.jpg && \
           echo "now supply better versions of "\
           "$${TITLE}.jpg and thumbs/$${TITLE}.jpg in content/images/articles"
 
