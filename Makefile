@@ -9,7 +9,7 @@ INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
-SSH_HOST=
+SSH_HOST=ec2-46-137-21-97.eu-west-1.compute.amazonaws.com
 SSH_PORT=22
 SSH_USER=ubuntu
 SSH_TARGET_DIR=/var/www
@@ -87,7 +87,9 @@ publish:
 # (not using publish conf at present: ...upload: publish)
 ec2upload: minify
 	rsync -e "ssh -p $(SSH_PORT) -i $${EC2_PEM}" -hP -rvz --delete \
-          $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
+          --delete-excluded \
+          $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) \
+          --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
 gateupload: minify
 	rsync -e "ssh -p $(SSH_PORT)" -hP -rvz --delete --delete-excluded \
           $(OUTPUTDIR)/ $${GE1_USER}@gate.ac.uk:/data/herd/pi.gate.ac.uk/html \
