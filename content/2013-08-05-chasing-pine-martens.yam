@@ -25,19 +25,67 @@ battery pack...
 
 As Gray Girling points out in his excellent
 %(http://www.amazon.co.uk/Raspberry-Pi-Manual-practical-revolutionary/dp/0857332953/,
-Haynes manual) battery power for the Pi is harder than it looks at first
+Haynes manual), battery power for the Pi is harder than it looks at first
 sight. The Pi requires both fairly high current (at least for the Model B) and
 a quite stable voltage. And, as I found out when I when testing my first
 efforts, an unscheduled low voltage shutdown can corrupt the SD card image and
 leave you with an unbootable setup :-(
 
 Time for an analysis of %(pages/mopi.html, the perfect Pi battery pack), and
-Bulgaria is the perfect place to experiment with this stuff -- Lubo Bontchev
-of %(http://www.selcomltd.com/, Selcom custom electronics) has worked on
-everything from solar panels to sattelites and has built these prototypes for
-hot-swap mobile Pi power:
+Bulgaria is the perfect place to experiment with this stuff as it's crawling
+with electronics and computing engineers (having at one time been supplier of
+around half of the USSR's computer hardware). Lubo Bontchev of
+%(http://www.selcomltd.com/, Selcom custom electronics) has worked on
+everything from solar panels to satelites and has now built Pi.GATE some
+prototypes for hot-swap mobile Pi power. Here's the regulator circuit on the
+left and the controller on the right:
 
-%image(images/mopi/proto-regulator-01.jpg, the first prototype regulator, 500)
+%[ | %\ %\ |
+%(images/mopi/prototype-regulator-05.jpg,
+%image(images/mopi/thumbs/prototype-regulator-05.jpg, mopi prototype 5))
+| %\ %\ %\  |
+%(images/mopi/prototype-controller-01.jpg,
+%image(images/mopi/thumbs/prototype-controller-01.jpg, mopi prototype 6))
+| %]
+
+The _regulator_ supplies the 5 volts at 1 amp that the Pi wants, and it has
+two input connectors and some clever circuitry to support hot-swap of battery
+packs. (In the picture we've got two packs attached, one full one and one
+discharged one, while we swap from one to the other.) The _controller_
+monitors battery levels and reports them to the Pi (over 3 binary-coded GPIO
+pins, for example) and also drives an indicator LED.
+
+Now, figuring out how to test all this stuff is a lot of hard work, so,
+natural shirker that I am, I borrowed my nephew Vlady to help. He came up with
+a great idea -- why not take a picture of the indicator LED whenever the GPIO
+level monitoring code detects a change? Here he is (in a photo taken from the
+Pi cam) at the _Eureka!_ moment:
+
+%image(images/vladi.jpg, Vladimir, 400)
+
+Nice one V, I think you've got yourself a job :-;
+
+Our first test managed to run the model B for nine hours using eight AA NiMH
+batteries -- definitely promising!
+
+Some more views of the regulator:
+
+%[ | %\ %\ |
+%(images/mopi/prototype-regulator-01.jpg,
+%image(images/mopi/thumbs/prototype-regulator-01.jpg, mopi prototype 1))
+| %\ %\ %\ %\ %\ |
+%(images/mopi/prototype-regulator-02.jpg,
+%image(images/mopi/thumbs/prototype-regulator-02.jpg, mopi prototype 2))
+|
+--- | %\ %\ |
+%(images/mopi/prototype-regulator-03.jpg,
+%image(images/mopi/thumbs/prototype-regulator-03.jpg, mopi prototype 3))
+| %\ %\ %\ %\ %\ |
+%(images/mopi/prototype-regulator-04.jpg,
+%image(images/mopi/thumbs/prototype-regulator-04.jpg, mopi prototype 4))
+| %]
+
+Now, where have those pine martens got to?
 
 %meta(
   summary=Battery packs for Pi-Mobility,

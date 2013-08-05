@@ -15,6 +15,14 @@ _%(about.html#hamish, Hamish Cunningham), and Lubo Bontchev, August 2013_
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Monitoring
+
+SimBaMon: a Simple Battery Monitor daemon
+
+https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Testing and Troubleshooting
 
 Nine hours! That's how long my first test lasted on a full charge. Which is
