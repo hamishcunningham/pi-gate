@@ -140,6 +140,20 @@ Another useful part of the Pi-oneer's toolkit is the excellent
 %(http://www.raspberrypi.org/archives/4100, NOOBS) setup from the Pi
 foundation, which makes it easier to restore your SD card after failures.
 
+And here's an amusing gotcha:
+
+- Step 1: have the bright idea of reusing the _battery totally empty_ state as
+  the _shutdown button pressed_ state.
+- Step 2: implement the code changes in the daemon and install.
+- Step 3: oops, my Pi just shut down. Hmmm.
+- Step 4: oh yeah, that's also the default state of the GPIO pins when the
+  MoPi rig isn't connected. Ah. That means that my Pi is going to shutdown
+  every time I start it up. Um.
+- Step 5: waste half an hour remembering how to mount the SD card read-write
+  on another machine and manually editing the daemon.
+
+We learn from our mistakes -- that's why I make as many as possible.
+
 Finally, the current author has found it useful to run around in circles,
 screaming and shouting. (It doesn't fix the electronics, of course, but if
 you're lucky it generates sympathy in those around you, or at least a desire
