@@ -1,7 +1,5 @@
 PiGate TODOs
 
-  - Devil worship for beginners: SimBaMon post
-
 - misc
   - editorial on Pi-Roomba, Pi-Alikes
   - backlinks from circuitlab stuff
@@ -9,12 +7,9 @@ PiGate TODOs
   - disqus
   - add some videos
   - add the basics tutorial to the Pi app store
-  - center images
-    - add cow-img class to img elements from yam2html and then put something
-      like this in main.css:
-    - img { display: block; margin-left: auto; margin-right: auto; }
   - TODO in the README and "make page" target
 - articles:
+  - Devil worship for beginners: SimBaMon post
   - Prism, Onion Pi
     - http://git-annex.branchable.com
     - http://retroshare.sourceforge.net
@@ -41,6 +36,7 @@ PiGate TODOs
       - http://openmicros.org/index.php/articles/94-ciseco-product-documentation/raspberry-pi/223-slice-of-pio
     - https://www.olimex.com/
     - http://www.open-electronics.org/
+    - http://lowpowerlab.com/
 - possibles
   - js menu?
     - possible better menu: http://wiki.jqueryui.com/w/page/38666403/Menubar

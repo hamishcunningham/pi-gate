@@ -9,72 +9,95 @@ _%(about.html#hamish, Hamish Cunningham), and Lubo Bontchev, August 2013_
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Introduction
 
+The Pi has many advantages as a mobile platform: if the rain gets in, or a dog
+eats it, a replacement doesn't break the bank, and, for a general-purpose
+device, power requirements are very low.
+
+Below we'll run through the characteristics of mobile power for the Pi, and
+follow through with the design of _MoPi_, an add-on battery pack circuit with
+Raspbian-friendly software that does lots of useful stuff for the Mobile Pi.
+
+There are three dimensions to the problem of mobile power for the Pi:
+
+- _regulation_, to supply the constant 5 volts at up to around 1 amp that the
+  (Model B) Pi requires
+- _control_:  keeping a check on battery charge, switching the regulator off
+  when charge is getting low, and reporting the current level to a monitor
+- _monitoring_: reading level indications from %(basics.html#gpio-pins, a GPIO
+  connection), reporting it to the Pi user and shutting the operating system
+  down cleanly when levels get critically low
+
+The first two of these need some special hardware; the third is written as a
+software _daemon_. Here are prototype regulator and controller boards:
+
+%[ | %\ %\ |
+%(images/mopi/prototype-regulator-05.jpg,
+%image(images/mopi/thumbs/prototype-regulator-05.jpg, mopi prototype 5))
+| %\ %\ %\  |
+%(images/mopi/prototype-controller-01.jpg,
+%image(images/mopi/thumbs/prototype-controller-01.jpg, mopi prototype 6))
+| %]
+
+The software is %(http://www.fsf.org/about/what-is-free-software, open source)
+(of course) and available at
+%(https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon, our
+Pi-Tronics repository).
+
+The next section discusses the design of the boards and the daemon software.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 The Perfect Pack
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 PUPS -- battery UPS packs for _PiMobility_
-
-Good battery packs are an opportunity for both an interesting and useful
-self-build project, and a popular pre-assembled module (or modules). Elements:
-
-- use of standard rechargeables (AA)
-- charge level indicators (via ACPI?)
-- ability to trickle charge while the batteries while running the Pi
-- ability to hot-swap a new charged pack
-- car cigarette lighter option
-- solar option
-- ability to drive kit like a USB hub
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 Design goals
-
-The idea is to support:
-
-- ordinary AA rechargeable batteries
-- two charging options: trickle charging while the Pi is running; quick
-  charging while the Pi is off
-- multiple supply options (car battery, USB, mains)
-
-So, for example, you might plug it into your car cigarette lighter (12v), or a
-USB supply (5v), or a mains-powered 12v DC supply. In each case you can work
-on the Pi and plug/unplug the external power supply, with the batteries taking
-over when needed. And in each case when the Pi is running if there is spare
-current the batteries will trickle charge. (I.e. it will behave like a UPS.)
-
-One difficulty is that the Model B Pi can draw up to 700mA (at 5v) when
-working hard -- which is quite a heavy load for a small battery supply, I
-guess. (The Model A is less demanding: perhaps 300mA.) There is also sometimes
-a need to power other peripherals, e.g. a USB hard drive or wifi dongle. I
-imagine using eight high-spec AA batteries, e.g. 3000mAh Li-ion, producing 12v
-when full.
-
-Other items on the wishlist:
-
-- ability to hot-swap a new charged battery pack (perhaps using a large
-  capacitor in line with the connection to the Pi?)
-- ability to charge from a portable solar panel
-- notify the Pi's operating system of battery levels (I can do the software
-  for this but need to get data from the battery pack somehow)
-- ability to chain multiple supplies for longer battery life
-
-For voltage regulation UBECs seem fairly small and cheap, e.g.:
-http://www.giantshark.co.uk/hobbywing-3amp-ubec-p-402342.html
-http://www.modelaccessories.co.uk/hobbywing-3amp-ubec.html
-http://www.hobbyking.co.uk/hobbyking/store/uh_viewItem.asp?idProduct=28160
-
-Some links about Pi batteries:
-http://www.raspberrypi-spy.co.uk/2013/02/running-a-raspberry-pi-from-6-aa-batteries/
-http://www.raspberrypiforums.com/forums/tutorials/article/17-how-to-portably-power-your-raspberry-pi-with-a-battery/
-
+TODO
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Monitoring
 
-SimBaMon: a Simple Battery Monitor daemon
+When your're running your laptop on battery and it runs out of juice it gives
+you a nice polite warning message or two, and, when the level gets really low,
+automagically shuts down the machine. This is important to allow the operating
+system (e.g. %(basics.html#footnote1, Raspbian Linux) on the Pi) to close up
+any open files or other resources and generally tidy the house before power
+disappears. Just killing the power without warning is risky -- sometimes
+nothing bad happens, but in the worst case you can end up with a machine that
+won't boot and needs a complete reinstall.
+
+There are a variety of ways that laptops communicate with and control their
+batteries, including
+%(http://batteryuniversity.com/learn/article/inner_workings_of_a_smart_battery,
+the Smart Battery specification) (which often uses SMBus, a variant of the I2C
+interface that the Pi supports). In Linux the data is then modelled using a
+power management abstraction (of which ACPI is the most recent) and
+manipulated using a driver specific to the battery in use.
+
+Sounds like a good idea? Yes, in the abstract, but implementing a new driver
+is quite a job --
+%(https://github.com/torvalds/linux/blob/master/drivers/acpi/battery.c, here's
+one) that runs to 1200 lines of C code, for example. It is also not clear how
+to do this when we have the ability to plug in batteries of different types,
+which is something we really wanted to support.
+
+What to do?
+
+If in doubt, take the simple option. All Linux systems share the concept of a
+_daemon_, which is a system-level service which gets run during operating
+system startup. It is quite easy implement a battery monitor daemon that
+listens on the Pi's GPIO pins for level changes signalled by the MoPi
+microcontroller board. The daemon then makes entries in the standard system
+logs as a simple way to share data with other subsystems, and can be
+configured to send a warning message to all users if levels are low. Best of
+all, the daemon can easily shut down the Pi cleanly before the regulator
+voltage gets too low for reliable operations.
+
+The rest of this section describes the implementation of the daemon. It is
+designed for the MoPi boards, but should be quite easily reusable for other
+battery power projects.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 SimBaMon: a Simple Battery Monitor daemon
 
 https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon
 
@@ -95,3 +118,29 @@ For comparison I set up the same rig with a USB battery pack from RS
 (%(http://uk.rs-online.com/web/p/power-banks/7757508/, this one), a 5200 mAh
 Lithium polymer model). The results were remarkably similar, with the RS pack
 lasting for 9 hours and 21 minutes.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Troubleshooting
+
+In early testing we often reach states that cause error conditions of one sort
+or another on the Pi. For example
+
+- the red power indicator LED may blink if the battery charge is very low and
+  it is failing to drive the Pi (and if the microcontroller is not properly
+  shutting down the regulator)
+- the green indicator LED repeatedly blinks three times when the ^loader.bin^
+  bootloader file is not present -- in our case this was because a hard
+  power shutdown caused corruption of the SD card
+
+In cases like these the Embedded Linux wiki page on
+%(http://elinux.org/R-Pi_Troubleshooting, RPI troubleshooting) is your friend!
+
+Another useful part of the Pi-oneer's toolkit is the excellent
+%(http://www.raspberrypi.org/archives/4100, NOOBS) setup from the Pi
+foundation, which makes it easier to restore your SD card after failures.
+
+Finally, the current author has found it useful to run around in circles,
+screaming and shouting. (It doesn't fix the electronics, of course, but if
+you're lucky it generates sympathy in those around you, or at least a desire
+on their part to give you a beer to shut you up.)

@@ -447,3 +447,4 @@ footer.post-info {
 }
 #featured a.article-thumb { display: none; }
 span.tag-list a { font-style: italic !important; }
+img.cow-img { display: block; margin-left: auto; margin-right: auto; }

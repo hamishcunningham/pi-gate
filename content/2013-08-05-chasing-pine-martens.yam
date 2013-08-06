@@ -2,18 +2,18 @@ Chasing Pine Martens
 
 I'm in Bulgaria in a house at the foot of mount Vitosha, on the outskirts of
 the capital, Sofia. %br %(http://en.wikipedia.org/wiki/Vitosha,
-%image(images/vitosha-1.jpg, Mount Vitosha, 500)) %br Sofia is home to some
-1.3 million people (which more than 10% of the population of the whole
-country), and many more travel in and out each week to find work in the big
-city. Vitosha is the lungs of the city, and its slopes are the perfect place
-to stay if you're keen to walk in its forests, or ski, or just get some cool
-air in the heat of the summer.
+%image(images/vitosha-1.jpg, Mount Vitosha, 400)) %br Sofia is home to
+something approaching 2 million people (which is more than 10% of the
+population of the whole country), and many travel in and out each week to find
+work in the big city. Vitosha is the lungs of the city, and its slopes are the
+perfect place to stay if you're keen to walk in its forests, or ski, or just
+get some cool air in the heat of the summer.
 
 Sitting in the garden at dusk the other day, we spotted a couple of dark
 shapes scurrying along -- pine martens! Or possibly their smaller cousin the
 beech marten: %br
 %(http://en.wikipedia.org/wiki/Beech_marten, %image(images/beech-marten-1.jpg,
-A beech marten, 300)) %br
+A beech marten, 200)) %br
 They are beautiful creatures, but quite shy, and they only come out after
 dark... You can see where this is going -- I wonder if I can capture some
 images with a Pi, a motion sensor and a camera module?
@@ -61,7 +61,7 @@ a great idea -- why not take a picture of the indicator LED whenever the GPIO
 level monitoring code detects a change? Here he is (in a photo taken from the
 Pi cam) at the _Eureka!_ moment:
 
-%image(images/vladi.jpg, Vladimir, 400)
+%image(images/vladi.jpg, Vladimir, 300)
 
 Nice one V, I think you've got yourself a job :-;
 
