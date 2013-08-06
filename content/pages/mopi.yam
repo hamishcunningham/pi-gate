@@ -13,6 +13,63 @@ _%(about.html#hamish, Hamish Cunningham), and Lubo Bontchev, August 2013_
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 The Perfect Pack
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 PUPS -- battery UPS packs for _PiMobility_
+
+Good battery packs are an opportunity for both an interesting and useful
+self-build project, and a popular pre-assembled module (or modules). Elements:
+
+- use of standard rechargeables (AA)
+- charge level indicators (via ACPI?)
+- ability to trickle charge while the batteries while running the Pi
+- ability to hot-swap a new charged pack
+- car cigarette lighter option
+- solar option
+- ability to drive kit like a USB hub
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Design goals
+
+The idea is to support:
+
+- ordinary AA rechargeable batteries
+- two charging options: trickle charging while the Pi is running; quick
+  charging while the Pi is off
+- multiple supply options (car battery, USB, mains)
+
+So, for example, you might plug it into your car cigarette lighter (12v), or a
+USB supply (5v), or a mains-powered 12v DC supply. In each case you can work
+on the Pi and plug/unplug the external power supply, with the batteries taking
+over when needed. And in each case when the Pi is running if there is spare
+current the batteries will trickle charge. (I.e. it will behave like a UPS.)
+
+One difficulty is that the Model B Pi can draw up to 700mA (at 5v) when
+working hard -- which is quite a heavy load for a small battery supply, I
+guess. (The Model A is less demanding: perhaps 300mA.) There is also sometimes
+a need to power other peripherals, e.g. a USB hard drive or wifi dongle. I
+imagine using eight high-spec AA batteries, e.g. 3000mAh Li-ion, producing 12v
+when full.
+
+Other items on the wishlist:
+
+- ability to hot-swap a new charged battery pack (perhaps using a large
+  capacitor in line with the connection to the Pi?)
+- ability to charge from a portable solar panel
+- notify the Pi's operating system of battery levels (I can do the software
+  for this but need to get data from the battery pack somehow)
+- ability to chain multiple supplies for longer battery life
+
+For voltage regulation UBECs seem fairly small and cheap, e.g.:
+http://www.giantshark.co.uk/hobbywing-3amp-ubec-p-402342.html
+http://www.modelaccessories.co.uk/hobbywing-3amp-ubec.html
+http://www.hobbyking.co.uk/hobbyking/store/uh_viewItem.asp?idProduct=28160
+
+Some links about Pi batteries:
+http://www.raspberrypi-spy.co.uk/2013/02/running-a-raspberry-pi-from-6-aa-batteries/
+http://www.raspberrypiforums.com/forums/tutorials/article/17-how-to-portably-power-your-raspberry-pi-with-a-battery/
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Monitoring
@@ -25,5 +82,16 @@ https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Testing and Troubleshooting
 
-Nine hours! That's how long my first test lasted on a full charge. Which is
-pretty good.
+So, how long will the batteries last? My first test was a Model B Pi with
+almost no load (USB keyboard and mouse; monitor attached over HDMI but
+switched off after starting the test; no network or other peripherals). Using
+eight rechargeable Duracell AA NiMH 2400 mAh batteries (like
+%(http://www.amazon.co.uk/Duracell-Rechargeable-Accu-2400-Batteries/dp/B0031OE6LG/ref=sr_1_2?ie=UTF8&qid=1375768484&sr=8-2&keywords=duracell+nimh,
+these ones)) the Pi ran for 9 hours 31 minutes. Not bad! Especially when you
+consider that the MoPi regulator supports hot-swap of new charged packs this
+looks very viable for mobile Pi applications of all shapes and sizes.
+
+For comparison I set up the same rig with a USB battery pack from RS
+(%(http://uk.rs-online.com/web/p/power-banks/7757508/, this one), a 5200 mAh
+Lithium polymer model). The results were remarkably similar, with the RS pack
+lasting for 9 hours and 21 minutes.
