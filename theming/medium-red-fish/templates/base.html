@@ -60,11 +60,23 @@
     <li><b><a href="{{ SITEURL }}">Projects</a></b>
       <ul>
     -->
+
+    <!--
+done a custom menu for now to compress it a little...
       {% for page in PAGES %}
         {% if page.title != "About" %}
           <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
         {% endif %}
       {% endfor %}
+    -->
+<li><a href="/pages/basics.html">Basics</a></li>
+<li><a href="/pages/hardware.html">Pi-Alikes</a></li>
+<li><a href="/pages/legocases.html">LEGO</a></li>
+<li><a href="/pages/mopi.html">Mobile</a></li>
+<li><a href="/pages/notipi.html">NotiPi</a></li>
+<li><a href="/pages/piroomba.html">Roomba</a></li>
+<li><a href="/pages/schools.html">Schools</a></li>
+
     <!--
       </ul></li>
     -->
