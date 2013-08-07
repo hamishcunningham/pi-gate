@@ -10,14 +10,64 @@ _%(about.html#fred, Fred Sonnenwald), July 2013_
 %#intro
 %1 Introduction
 
-To be written.
+The Pi is not the only kid on the block -- what are some of the alternatives
+like? And do they give us a clue about where the Pi will go next? As Eben
+Upton said %(http://www.tuxradar.com/content/%EF%BB%BFinterview-eben-upton, in
+a TuxRadar interview) `I  think it would be really sad, and probably fatal for
+us, if we were still shipping the same Raspberry Pi in 2016, say' (July 17th
+2013) -- but what will the Pi Model C look like?
+
+Read on for some possibilities.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#setup
 %1 Initial impressions and setup
 
-A series of short introductions and starting points for each device.
+We'll start off with a series of short introductions and starting points for
+each device. Here's what they all look like (click for larger images):
+
+%[
+|
+%(images/hardware/apc8750.jpg, %image(images/hardware/thumbs/apc8750.jpg, APC 8750, 150))
+|
+%(http://apc.io/products/8750a/, APC 8750)
+| %\ %\ %\ %\ |
+%(images/hardware/beagleboneblack.jpg, %image(images/hardware/thumbs/beagleboneblack.jpg, Beagle Bone Black, 150))
+|
+%(http://beagleboard.org/Products/BeagleBone%20Black, Beagle Bone Black)
+|
+---
+|
+%(images/hardware/cubieboard.jpg, %image(images/hardware/thumbs/cubieboard.jpg, CubieBoard, 150))
+|
+%(http://cubieboard.org/, Cubieboard)
+| %\ %\ %\ %\ |
+%(images/hardware/dreamplug.jpg, %image(images/hardware/thumbs/dreamplug.jpg, DreamPlug, 150))
+|
+%(http://www.globalscaletechnologies.com/t-dreamplugdetails.aspx, DreamPlug)
+|
+---
+|
+%(images/hardware/minipc.jpg, %image(images/hardware/thumbs/minipc.jpg, MiniPC, 150))
+|
+%(https://www.miniand.com/products/MK802%20Android%20Mini%20PC, MK802 Mini PC)
+| %\ %\ %\ %\ |
+%(images/hardware/pimodela.jpg, %image(images/hardware/thumbs/pimodela.jpg, Pi Model A, 150))
+|
+%(http://www.raspberrypi.org/archives/3215, Pi Model A)
+|
+---
+|
+%(images/hardware/pimodelbrev2.jpg, %image(images/hardware/thumbs/pimodelbrev2.jpg, Pi Model B rev2, 150))
+|
+%(http://www.raspberrypi.org/faqs, Pi Model B)
+| %\ %\ %\ %\ |
+%(images/hardware/tonidoplug.jpg, %image(images/hardware/thumbs/tonidoplug.jpg, Tonido Plug, 150))
+|
+%(http://www.tonidoplug.com/, TonidoPlug)
+|
+%]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -72,18 +122,18 @@ Apparently this can be fixed so that the SD card is the default boot location
 with a uBoot flash. Another thing smacking of hackery.
 
 Once the system boots, you're in a frame buffer console. Forunately a script
-is provided to apt-get install LXDE for you to get up and running in GUI
-land. Ethernet works right off the bat and it was a relatively quick install.
-After it was up the GUI experience is a bit below average. Like most of these
+is provided to apt-get install LXDE for you to get up and running in GUI land.
+Ethernet works right off the bat and it was a relatively quick install. After
+it was up the GUI experience is a bit below average. Like most of these
 systems, it's a framebuffer driver for Xorg, so one expects a lower level of
-performance. In that sense responsiveness was average. What was poorer was
-the occaisional glitching of the screen, wrapping around horizontally a few
+performance. In that sense responsiveness was average. What was poorer was the
+occaisional glitching of the screen, wrapping around horizontally a few
 pixels. Impressions were not helped with the two system lock ups I
-experienced, both of which occurred on the same imgur page - in two different
-browsers. All of this adds to the feeling of it's a hackers system.
-You'd need an incredible patient child to get through all of this.
+experienced, both of which occurred on the same imgur page -- in two different
+browsers. All of this adds to the feeling of it's a hackers system. You'd need
+an incredible patient child to get through all of this.
 
-Hardware wise it's respectable, although the close placemnt of the micro HDMI
+Hardware wise it's respectable, although the close placement of the micro HDMI
 and USB port mean connectors bump heads. No sound means it won't be a media
 center, but the comprehensive LEDs (Power, CPU, SD, and MMC activity) and
 buttons on the board are a nice touch. Overall (and I won't get tired of
@@ -135,7 +185,7 @@ hard to say, but there are indeed things to do with the Cubieboard.
 %#dreamplug
 %2 DreamPlug
 
-The DreamPlug is polished - at least on the outside. It's router sized and
+The DreamPlug is polished -- at least on the outside. It's router sized and
 is cased similarly, although the casing actually feels more robust than a
 typical router. It's an impressive solid feel. Unlike a router the DreamPlug
 is filled with lots of IO though. SD, eSATA, S/PDIF & 1/8" jacks, USB, and
@@ -146,7 +196,7 @@ Unlike the rest of the devices, the DreamPlug we've got shipped proper with
 Debian 6.0 Squeeze, which means out of the box we've only got to concern
 ourselves with logging in before we can start doing. No extra writing to SD
 card, although that can be done if you want. Unfortunately, logging in can be
-a bit of a trick - there's no display after all. The first time I turned it
+a bit of a trick -- there's no display after all. The first time I turned it
 on I couldn't work out what was going on. It was necessary to 
 %(http://dreamplug.googlecode.com/files/DreamPlug-User%20Guide_US_v1.2-Aug-28-2012.pdf,
 connect the little JTAG USB<->serial adapter) to see what was happening.
@@ -254,7 +304,7 @@ but with fewer components on it making it cheaper. No ethernet, only one USB
 port, and less RAM. How much worse could it be? In terms of setup it's
 exactly the same. It's a little glimpse of the Apple ecosystem in a sense,
 all Pis are fundamentally the same hardware so we can just swap SD cards
-around - just like all Macs run OS X.
+around -- just like all Macs run OS X.
 
 You would think that the lack of ethernet and USB doesn't have an impact, and
 to some extent that's true. Usability of Rasbian is pretty much the same.
@@ -277,7 +327,7 @@ by
 %(http://www.bitwizard.nl/wiki/index.php?title=Reducing_power_consumption_of_a_raspberry_Pi,
 replacing the power regulator). There are lots of projects where the lower
 power makes it ideal and the lack of USB and ethernet doesn't mean much.
-Robotics, weather baloons - plenty of fun things to do.
+Robotics, weather baloons -- plenty of fun things to do.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -313,7 +363,7 @@ The power is a mains input which means you're tied down through that, but it
 removes the complexity of an adapter too.
 
 In the end I think I see the TonidoPlug best used for exactly what it says on
-the tin - serving files. You just get a bit more control. Want to do it with
+the tin -- serving files. You just get a bit more control. Want to do it with
 apache? Can do. Samba? NFS? Anything with Linux can be done. The neatest
 scenario I think is to use the built-in DLNA server to create a centralized
 media store. Then put a Pi with XBMC on every TV in the house that doesn't
@@ -329,7 +379,7 @@ To be written.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#media
-%1 Practical application - media player
+%1 Practical application -- media player
 
 
 To be written.
