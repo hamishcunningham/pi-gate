@@ -1,14 +1,24 @@
 PiGate TODOs
 
 - misc
-  - editorial on Pi-Roomba, Pi-Alikes
-  - backlinks from circuitlab stuff
-  - better top menu
+  - final editorial on Pi-Roomba, Pi-Alikes
   - disqus
+    - and add link to this from flood alarm stuff:
+      http://www.youtube.com/watch?v=OD3SaZSpFeo
   - add some videos
   - add the basics tutorial to the Pi app store
   - TODO in the README and "make page" target
 - articles:
+  - Pi Model C, Sneak Preview
+    - Ok, I lied, this isn't really a preview of the model C, whatever and
+      whenever that will be. But we do know that the Pi foundation is going to
+      move on -- as Eben Upton said last month ...
+    - We've put together %(pages/hardware.html, a review of other single board
+      systems) that cover some of the same ground as the Pi -- perhaps there
+      are some clues here about what the next generation may look like?
+    - Another clue from that interview with Eben: `We’re teaching kids to
+      program a single core processor. We’re actually teaching kids about what
+      computers used to be.' Multicore Pi, anyone?
   - Devil worship for beginners: SimBaMon post
   - Prism, Onion Pi
     - http://git-annex.branchable.com
@@ -38,10 +48,16 @@ PiGate TODOs
     - http://www.open-electronics.org/
     - http://lowpowerlab.com/
     - http://www.seeedstudio.com/
-- possibles
-  - js menu?
-    - possible better menu: http://wiki.jqueryui.com/w/page/38666403/Menubar
-    - yui menu: cd output && ln -s ../ymenu
-      - http://yuilibrary.com/yui/docs/node-menunav/node-menunav-3.html
-      - http://yuilibrary.com/yui/docs/node-menunav/node-menunav-3-example.html
-  - put contents table in col 2 of pages?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Backlog
+
+- better top menu -- how to do hierarchy that is easy to navigate on tablets
+  etc.?
+- js menu?
+  - possible better menu: http://wiki.jqueryui.com/w/page/38666403/Menubar
+  - yui menu: cd output && ln -s ../ymenu
+    - http://yuilibrary.com/yui/docs/node-menunav/node-menunav-3.html
+    - http://yuilibrary.com/yui/docs/node-menunav/node-menunav-3-example.html
+- put contents table in col 2 of pages? but only on wide screens

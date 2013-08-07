@@ -103,10 +103,11 @@ starter course in electrical engineering.)
 %2 Circuits: Calculators, Simulators, Diagrams
 
 The circuit diagrams are available on
-%(https://www.circuitlab.com/browse/by-tag/hamish-cunningham/, Circuit Lab)
-under the Creative Commons
-%(http://creativecommons.org/licenses/by-nc-sa/3.0/, BY-NC-SA
+%(https://www.circuitlab.com/user/hamish/, Circuit Lab) under the Creative
+Commons %(http://creativecommons.org/licenses/by-nc-sa/3.0/, BY-NC-SA
 licence).
+
+%%% %(https://www.circuitlab.com/browse/by-tag/hamish-cunningham/, Circuit Lab)
 
 For circuit debugging these Voltage/Resistance/Current calculators are useful:
 %(http://www.the12volt.com/ohm/ohmslawcalculators.asp, this one),
