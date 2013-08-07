@@ -14,8 +14,9 @@ eats it, a replacement doesn't break the bank, and, for a general-purpose
 device, power requirements are very low.
 
 Below we'll run through the characteristics of mobile power for the Pi, and
-follow through with the design of _MoPi_, an add-on battery pack circuit with
-Raspbian-friendly software that does lots of useful stuff for the Mobile Pi.
+follow through with the design of *_MoPi_*, an add-on battery pack circuit
+with Raspbian-friendly software that does lots of useful stuff for the Mobile
+Pi.
 
 There are three dimensions to the problem of mobile power for the Pi:
 
@@ -28,7 +29,8 @@ There are three dimensions to the problem of mobile power for the Pi:
   down cleanly when levels get critically low
 
 The first two of these need some special hardware; the third is written as a
-software _daemon_. Here are prototype regulator and controller boards:
+software _daemon_. Here are the prototype MoPi regulator and controller
+boards (click to zoom):
 
 %[ | %\ %\ |
 %(images/mopi/prototype-regulator-05.jpg,
@@ -73,7 +75,7 @@ be recycled. Standard commodity batteries and the chargers that serve them are
 well-established and already present in many households. They're the cheapest
 and most flexible option.
 
-*Polite*. When your're running your laptop on battery and it runs out of juice
+*Polite*. When you're running your laptop on battery and it runs out of juice
 it gives you a nice polite warning message or two, and, when the level gets
 really low, automagically shuts down the machine. This is important to allow
 the operating system (e.g. %(basics.html#footnote1, Raspbian Linux) on the Pi)
@@ -144,6 +146,8 @@ battery power projects.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 SimBaMon: a Simple Battery Monitor daemon
 
+TODO
+
 https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon
 
 
@@ -172,8 +176,8 @@ Watch this space for the results of further tests...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Troubleshooting
 
-In early testing we often reach states that cause error conditions of one sort
-or another on the Pi. For example
+In early testing we often reached states that caused error conditions of one
+sort or another on the Pi. For example:
 
 - the red power indicator LED may blink if the battery charge is very low and
   it is failing to drive the Pi (and if the microcontroller is not properly
@@ -189,13 +193,14 @@ Another useful part of the Pi-oneer's toolkit is the excellent
 %(http://www.raspberrypi.org/archives/4100, NOOBS) setup from the Pi
 foundation, which makes it easier to restore your SD card after failures.
 
-The life of prototype electronics is full of mystery -- why have my GPIO
-indicator interface pins all gone low, all of a sudden, when the indicator LED
-and the microcontroller still works? Cue much head scratching and serious
-faces. Followed by a session with the debug header and the diagnostics rig on
-the mic -- and it turns out that a single page of memory (which happenned to
-contain the code running the IO pins) has been wiped, presumably by power
-fluctuations at the low battery state. Time to add some more diodes!
+But inevitably the life of electronics prototyping brings its fair share of
+mystery -- why have my GPIO monitoring interface pins all gone low, all of a
+sudden, when the indicator LED and the microcontroller still works? Cue much
+head scratching and serious faces. Followed by a session with the debug header
+and the diagnostics rig on the mic -- and it turns out that a single page of
+memory (which happenned to contain the code running the IO pins) has been
+wiped, presumably by power fluctuations at the low battery state. Time to add
+some more diodes!
 
 And here's an amusing gotcha:
 
@@ -205,7 +210,9 @@ And here's an amusing gotcha:
 - Step 3: oops, my Pi just shut down. Hmmm.
 - Step 4: oh yeah, that's also the default state of the GPIO pins when the
   MoPi rig isn't connected. Ah. That means that my Pi is going to shutdown
-  every time I start it up. Um.
+  every time I start it up. And Lubo just took the prototype boards back to
+  the lab. Um. Looks like the _Donkey of the Day_ award is coming my way
+  again.
 - Step 5: waste half an hour remembering how to mount the SD card read-write
   on another machine and manually editing the daemon.
 
@@ -215,3 +222,29 @@ Finally, the current author has found it useful to run around in circles,
 screaming and shouting. (It doesn't fix the electronics, of course, but if
 you're lucky it generates sympathy in those around you, or at least a desire
 on their part to give you a beer to shut you up.)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Other Directions
+
+For voltage regulation another option is a UBEC%footnote(UBEC stands for
+Universal Battery Elimination Circuit, which is rather a misnomer as they're
+often used to regulate battery supplies. Hey ho.) -- a device popular with
+radio-controlled aircraft people, and hence nice and light-weight, but also
+fairly cheap, e.g.:
+%(http://www.giantshark.co.uk/hobbywing-3amp-ubec-p-402342.html, this one),
+%(http://www.modelaccessories.co.uk/hobbywing-3amp-ubec.html, this one) or
+%(http://www.hobbyking.co.uk/hobbyking/store/uh_viewItem.asp?idProduct=28160,
+this one). UBECs are switched-mode regulators, just like our MoPi regulator
+board, so they don't waste power when converting high DC to 5 volt DC.
+
+Some other useful links about Pi battery projects:
+%(http://www.raspberrypi-spy.co.uk/2013/02/running-a-raspberry-pi-from-6-aa-batteries/,
+Raspberry Spy),
+%(http://www.raspberrypiforums.com/forums/tutorials/article/17-how-to-portably-power-your-raspberry-pi-with-a-battery/,
+Raspberry Pi Forums).
+
+%(http://www.amazon.co.uk/Raspberry-Pi-Manual-practical-revolutionary/dp/0857332953/,
+Gray Girling's Pi owners' manual) also has a good discussion about battery
+supplies and their subtleties (and is generally an excellent investment for
+the Pi enthusiast).
