@@ -172,15 +172,16 @@ it's all at right angles along the different edges. This can be annoying if
 you want to tidy it away. On a plus power and ethernet are on the same side
 so if that's all you need it is tidy. (They're on opposite sides on the Pi.)
 
-The absolute number one thing going for this board though? One word: NAS.
-The onboard SATA gives you scope to do a lot more than normal. I think it'd
-be worth it just for that. I also think the infrared port could be a lot of
-fun, and there are probably some interesting applications with the audio in.
-Are these extras enough to really justify the extra price? The board still
-is hacky. More so than the Pi I feel, but not as bad as the BeagleBoard. 
-Then there's the fact that we're going to be seeing the dual core
+The absolute number one thing going for this board though? One word: NAS. The
+onboard SATA gives you scope to do a lot more than normal. I think it'd be
+worth it just for that. I also think the infrared port could be a lot of fun,
+and there are probably some interesting applications with the audio in. Are
+these extras enough to really justify the extra price? The board still is
+hacky. More so than the Pi I feel, but not as bad as the BeagleBoard. Then
+there's the fact that we're going to be seeing the dual core
 %(http://cubieboard.org/2013/06/19/cubieboard2-is-here/, Cubieboard2) in the
-future. It does indeed look like an interesting with multiple uses system.
+near future. It does indeed look like an interesting system with multiple
+potential uses.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
