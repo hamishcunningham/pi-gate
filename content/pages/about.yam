@@ -57,7 +57,7 @@ Fred wants a quadcopter for his next birthday.
 |
 *Peter Wallis*
 
-%image(images/roopiTop.jpg, Pete's hoover, 150)
+%image(images/piroomba/roopiTop.jpg, Pete's hoover, 250)
 |
 %br %br
 %(http://www.cfpm.org/~peter/, Pete) is an old school electronics hacker and
@@ -71,7 +71,7 @@ can't run away in the middle of the conversation?!)
 %br %br
 When you take an EEG image of Pete's brain it looks like this:
 
-%image(images/rooPieCircuit.png, PiRoomba, 150)
+%image(images/piroomba/rooPieCircuit.png, PiRoomba, 150)
 |
 %]
 ---
