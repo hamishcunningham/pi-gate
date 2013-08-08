@@ -1,15 +1,20 @@
 PiGate TODOs
 
-- misc
+Sprintish
+- next
   - finish simbamon and document
-  - infrastructure
-    - get make regenerate to work
-    - experiment with "status=draft" in the metas for delayed publishing
-    - eliminate special cases and filenames from the Makefile
-    - TODO in the README and "make page" target
+  - delete trannies etc.
   - add some videos
   - add the basics tutorial to the Pi app store
   - twitter, and add a twitter name in the disqus settings
+- infrastructure
+  - get make regenerate to work
+  - experiment with "status=draft" in the metas for delayed publishing
+  - eliminate special cases and filenames from the Makefile
+  - delete piwiki etc
+  - parameterise disqus code, google analytics code, etc.
+  - TODO in the README and "make page" target
+  - empty site template to pi-tronics (and/or make pi-gate public)
 - articles:
   - ask Gordon Henderson for a post
   - Pi Model C, Sneak Preview
@@ -52,10 +57,7 @@ PiGate TODOs
     - http://lowpowerlab.com/
     - http://www.seeedstudio.com/
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%1 Backlog
-
+Backlog
 - better top menu -- how to do hierarchy that is easy to navigate on tablets
   etc.?
 - js menu?
