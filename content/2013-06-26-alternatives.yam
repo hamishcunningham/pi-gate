@@ -18,7 +18,7 @@ I'm still waiting for the worm-hole thing, but the other stuff is getting very
 do-able, and the Raspberry Pi is definitely part of the picture. To test out
 various options I picked up a bunch of different bits of hardware that do jobs
 similar to the Pi in one way or other... And %(pages/about.html#fred, Fred) is
-busy putting them through their paces for %(pages/hardware.html, this future
+busy putting them through their paces for %(pages/hardware.html, this review
 article). He's taken some pics:
 
 %[
@@ -71,3 +71,5 @@ before anything else.
   summary=A survey of Pi-alike hardware,
   tags=hardware\,pi-alikes\,pi\,raspberrypi\,gate,
 )
+
+*%(pages/hardware.html, Read the main article).*

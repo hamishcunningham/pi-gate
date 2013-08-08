@@ -1,8 +1,5 @@
 Sensing and Responding
 
-%2* _(parent avoidance with the Raspberry Pi, and other simple electronics
-projects)_
-
 First things first: to begin learning about hacking electronics with the Pi, a
 good first step is to get the little beast to start interacting with the
 outside world -- lighting LEDs, responding to switches of various types,
@@ -38,6 +35,8 @@ transistor or two, a buzzer, ...), some spare time and, preferably, no
 %(pages/basics.html#warning, allergy to nerds).
 
 %meta(
-  summary=Pi-Tronics starter projects,
+  summary=Parent avoidance with the Raspberry Pi\, and other simple electronics projects,
   tags=hardware\,gpio\,pi-tronics\,pi\,raspberrypi\,gate,
 )
+
+*%(pages/basics.html, Read the main article).*
