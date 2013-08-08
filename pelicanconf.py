@@ -46,3 +46,4 @@ ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 TWITTER_USERNAME = 'hcunningham'
 GOOGLE_ANALYTICS = 'UA-41812045-1'
+DISQUS_SITENAME = 'pi-gate'

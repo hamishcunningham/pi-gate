@@ -2,9 +2,6 @@ PiGate TODOs
 
 - misc
   - finish simbamon and document
-  - disqus
-    - and add link to this from flood alarm stuff:
-      http://www.youtube.com/watch?v=OD3SaZSpFeo
   - infrastructure
     - read main article links from bottom of all posts
     - eliminate special cases and filenames from the Makefile
