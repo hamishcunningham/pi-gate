@@ -6,9 +6,12 @@ PiGate TODOs
     - eliminate special cases and filenames from the Makefile
     - get make regenerate to work
     - TODO in the README and "make page" target
+    - experiment with "status=draft" in the metas for delayed publishing
+    - add a "home image" link in the footer
   - add some videos
   - add the basics tutorial to the Pi app store
 - articles:
+  - ask Gordon Henderson for a post
   - Pi Model C, Sneak Preview
     - Ok, I lied, this isn't really a preview of the model C, whatever and
       whenever that will be. But we do know that the Pi foundation is going to
@@ -27,7 +30,7 @@ PiGate TODOs
     - http://prism-break.org
     - http://docs.mediagoblin.org
   - Guy's ambassadors thing http://ambassadors.rcweb.dcs.shef.ac.uk/
-  - pi-tronics shops
+  - Shop! page; pi-tronics shops
     - http://www.pimoroni.com/
     - http://www.newit.co.uk/shop/
     - http://thepihut.com/

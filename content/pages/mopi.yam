@@ -164,6 +164,18 @@ TODO
 
 https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon
 
+The MoPi signal states are defined like this:
+%<
+7 -- battery full [LED blue]
+6 -- battery good [LED green]
+5 -- battery good [LED green]
+4 -- battery low -- send warning message [LED amber]
+3 -- battery critical -- send "urgent" warning message [LED red]
+2 -- lowest battery level -- shut down with no delay [LED flashing red]
+1 -- power off button pressed -- shut down with no delay [LED flashing red]
+0 -- unused to avoid confusion with non-functional gpio
+%>
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#measures
