@@ -1,0 +1,18 @@
+/* Miscellaneous fixes for things IE < 8 screws up in the menus.  This css is
+ * conditionally included by IE only.
+ */
+
+.vertical ul li {
+  float:left;
+  width:100%;
+}
+
+.menu ul li a {
+  height: 1%;
+} 
+/* Have to float the first-level a's to get them to appear in a line... */
+.horizontal ul li a {float:left;}
+.horizontal ul ul li a {float:none;}
+
+/* ... but this makes the drop-downs appear in the wrong place.  To fix: */
+.horizontal ul ul {clear:left;}
