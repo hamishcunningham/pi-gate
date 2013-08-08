@@ -5,10 +5,13 @@ PiGate TODOs
   - disqus
     - and add link to this from flood alarm stuff:
       http://www.youtube.com/watch?v=OD3SaZSpFeo
-  - read main article links from bottom of all posts
+  - infrastructure
+    - read main article links from bottom of all posts
+    - eliminate special cases and filenames from the Makefile
+    - get make regenerate to work
+    - TODO in the README and "make page" target
   - add some videos
   - add the basics tutorial to the Pi app store
-  - TODO in the README and "make page" target
 - articles:
   - Pi Model C, Sneak Preview
     - Ok, I lied, this isn't really a preview of the model C, whatever and
