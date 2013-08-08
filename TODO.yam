@@ -7,7 +7,6 @@ PiGate TODOs
     - get make regenerate to work
     - TODO in the README and "make page" target
     - experiment with "status=draft" in the metas for delayed publishing
-    - add a "home image" link in the footer
   - add some videos
   - add the basics tutorial to the Pi app store
   - twitter, and add a twitter name in the disqus settings
