@@ -84,13 +84,13 @@ compatibile, which means there's a slew of cases out there it will fit in,
 even if they will be way bigger than necessary.
 
 While the APC 8750 ships with Android it does run Linux, and in this case
-it's actually Rasbian. Write the %(http://www.raspbian.org/ApricotImages,
+it's actually Raspbian. Write the %(http://www.raspbian.org/ApricotImages,
 image) to an microSD card and then pause. Because it's a pretty much packed
 2GB image it really needs to be resized up after being written. I ran out of
 space running apt updates because I didn't.
 
 After boot it's a relatively snappy setup. It doesn't stick out as "wow
-that's fast but it doesns't make me cringe a lot either. The system really is
+that's fast" but it doesns't make me cringe a lot either. The system really is
 just par for the course. The only exception is an apparent bug that keeps the
 system from booting if there's no monitor attached. That cuts down on a lot
 of use cases for a low power system. There also aren't any sort of GPIO
@@ -122,7 +122,7 @@ wondering what was going on until I figured that out. Oops moment there.
 Apparently this can be fixed so that the SD card is the default boot location
 with a uBoot flash. Another thing smacking of hackery.
 
-Once the system boots, you're in a frame buffer console. Forunately a script
+Once the system boots, you're in a frame buffer console. Fortunately a script
 is provided to apt-get install LXDE for you to get up and running in GUI land.
 Ethernet works right off the bat and it was a relatively quick install. After
 it was up the GUI experience is a bit below average. Like most of these
@@ -131,8 +131,8 @@ performance. In that sense responsiveness was average. What was poorer was the
 occaisional glitching of the screen, wrapping around horizontally a few
 pixels. Impressions were not helped with the two system lock ups I
 experienced, both of which occurred on the same imgur page -- in two different
-browsers. All of this adds to the feeling of it's a hackers system. You'd need
-an incredible patient child to get through all of this.
+browsers. All of this adds to the feeling that it's a hackers system. You'd
+need an incredibly patient child to get through all of this.
 
 Hardware wise it's respectable, although the close placement of the micro HDMI
 and USB port mean connectors bump heads. No sound means it won't be a media
@@ -150,17 +150,16 @@ think I'd need something really, really specific to get one now.
 
 The Cubieboard is just a little bit bigger than a Pi, and for taking up a
 similar amount of space, they've jammed a whole lot of stuff in there. A lot
-of expansion pins, but also audio in and out, SATA, IR... It's impressive.
-The board I've got came in what's called the "rich packaging" which includes
-some nice extras like a cardboard case, SATA power cable, and a debugging
-serial cable.
+of expansion pins, but also audio in and out, SATA, IR... It's impressive. The
+board I've got came in what's called "rich packaging" which includes some nice
+extras like a cardboard case, SATA power cable, and a debugging serial cable.
 
 Getting up and going is quick with the default Android install and runs well.
 There are a variety of
 %(http://linux-sunxi.org/Install_Ubuntu_Linux_for_Cubieboard, Ubuntu)
 options for the board but only one easy SD card lubuntu. I've gone ahead and
-installed that. The image size is large, but comes with pretty much
-everything installed. Apparently
+installed that. The image size is large, but comes with pretty much everything
+installed. Apparently
 %(http://cubieboard.org/2012/11/15/install-ubuntu-with-berryboot/, Berryboot)
 makes more distributions available, but I haven't tested this.
 
@@ -170,7 +169,7 @@ the board can properly turn off from a "sudo poweroff" command and then has
 a power button to get it started again. On the board itself the ports are
 well positioned making it easy to get at everything, although like the Pi
 it's all at right angles along the different edges. This can be annoying if
-you want to tidy it away. On a plus power and ethernet are on the same side
+you want to tidy it away. As a plus power and ethernet are on the same side
 so if that's all you need it is tidy. (They're on opposite sides on the Pi.)
 
 The absolute number one thing going for this board though? One word: NAS. The
@@ -192,22 +191,22 @@ potential uses.
 The DreamPlug is polished -- at least on the outside. It's router sized and
 is cased similarly, although the casing actually feels more robust than a
 typical router. It's an impressive solid feel. Unlike a router the DreamPlug
-is filled with lots of IO though. SD, eSATA, S/PDIF & 1/8" jacks, USB, and
+is filled with lots of i/o: SD, eSATA, S/PDIF & 1/8" jacks, USB, and
 the crown jewel I think, dual gigabit ethernet ports. All of this essentially
 makes it a proper low power server.
 
-Unlike the rest of the devices, the DreamPlug we've got shipped proper with
-Debian 6.0 Squeeze, which means out of the box we've only got to concern
-ourselves with logging in before we can start doing. No extra writing to SD
-card, although that can be done if you want. Unfortunately, logging in can be
-a bit of a trick -- there's no display after all. The first time I turned it
-on I couldn't work out what was going on. It was necessary to 
+Unlike the rest of the devices, the DreamPlug we've got shipped with a proper
+version of Debian 6.0 Squeeze, which means out of the box we've only got to
+concern ourselves with logging in before we can start doing stuff. No extra
+writing to SD card, although that can be done if you want. Unfortunately,
+logging in can be a bit of a trick -- there's no display after all. The first
+time I turned it on I couldn't work out what was going on. It was necessary to 
 %(http://dreamplug.googlecode.com/files/DreamPlug-User%20Guide_US_v1.2-Aug-28-2012.pdf,
 connect the little JTAG USB<->serial adapter) to see what was happening.
 
 Some fun and games with minicom and we're in business. The default setup of
-Debian here is to setup the onboard Wifi as an acesspoint, with an IP address
-of 192.168.1.1. This nicely conflicted with my router's address of
+Debian here is to configure the onboard Wifi as an acesspoint, with an IP
+address of 192.168.1.1. This nicely conflicted with my router's address of
 192.168.1.254. Commenting out a line in /etc/rc.local disables that and I
 could finally get things into a usable state. The DreamPlug I think turns out
 to be kind of fun like this. Instead of fiddling around with hardware it's
@@ -216,15 +215,15 @@ command line or at least wanting to learn to really get things done.
 
 Once you surmount that little command line hurdle though, you're in business
 with something you can really use. The system has a snappy response and
-there's a site,
-%(http://www.spinifex.com.au/plugs/dplugintro.html, Spinifex), with some good
-directions to help you navigate through the oddities of the Debian setup on
-the DreamPlug. It's a bit out of date, but still useful. More of this fun
-Linux hacking reinterpreting the directions. Overall I think the DreamPlug
-makes a perfect step up from an OpenWRT router. You want more power and
-flexibility in what you do on your LAN or want to run some more major
-services, like a proper file server. (Yes, you can do this with some OpenWRT
-routers, but I would not consider 2 MB/s to be proper.)
+there's a site, %(http://www.spinifex.com.au/plugs/dplugintro.html, Spinifex),
+with some good directions to help you navigate through the oddities of the
+Debian setup on the DreamPlug. It's a bit out of date, but still useful. More
+of this fun Linux hacking reinterpreting the directions. Overall I think the
+DreamPlug makes a perfect step up for an OpenWRT router when you want more
+power and flexibility in what you do on your LAN or want to run some more
+major services, like a proper file server. (Yes, you can do this with some
+OpenWRT routers, but I would not consider 2 MB/s to be good for a file
+server.)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -247,22 +246,22 @@ but found it to be pretty much unusable. Really slow and a DNS resolution bug
 which would need to be manually fixed. Lubuntu manages OK but it's just slow.
 I suspect most of this slow down is due to running regular desktop software,
 while in comparison the Pi runs a more stripped down system. I also think
-it's running softfloat rather than hardfloat, which is what Rasbian is
+it's running softfloat rather than hardfloat, which is what Raspbian is
 especially compiled for. Effectively this means there are calculations which
 could be sped up but which aren't.
 
-Hardware wise, having only 1 USB port is a bit annoying as well as you really
-need a hub to get things up and running normally. This goes right along with
-the special AC adapter needed to power it. Fortuantely, the onboard Wifi is
-a redeeming feature in this respect meaning that there aren't any more extra
+Hardware wise, having only 1 USB port is a bit annoying as you really need a
+hub to get things up and running normally. This goes right along with the
+special AC adapter needed to power it. Fortunately, the onboard Wifi is a
+redeeming feature in this respect meaning that there aren't any more extra
 cables to deal with. Unfortunately though the onboard wifi seems to cap out at
 about 50 KB/s. I had this problem under the original Android as well.
 
 Lubuntu comes with sshd enabled so after setting up Wifi the first time you
 can actually get away with completely remote access. That along with its case
 means you can more or less leave it plugged into a wall pretty much anywhere
-and have a box for running small stuff on. I think it'd be perfect for
-running irssi (IRC client) inside of a screen on.
+and have a box for running small stuff on. I think it'd be perfect for running
+irssi (IRC client) inside of a screen.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -270,26 +269,26 @@ running irssi (IRC client) inside of a screen on.
 %2 Pi Model B
 
 To be honest, it's a bit late in the game to have first impressions of the
-RaspberryPi. I first got mine over a year ago, and so much has changed in
+Raspberry Pi! I first got mine over a year ago, and so much has changed in
 that time as well. The Model B we have here is a Revision 2, while I started
 out on the Revision 1. Still, a general overview is in order.
 
-The Pi, while not the oldest of the devices here was the game changer. There
-have been SheevaPlugs and BeagleBoards (and other things like
+The Pi, while not the oldest of the devices here, was _the_ game changer.
+There have been SheevaPlugs and BeagleBoards (and other things like
 %(https://www.gumstix.com/, Gumstix) as well) for quite a few years.
-The RaspberryPi, well, I think it's the iPod of these computers. It did it
+The Raspberry Pi, well, I think it's the iPod of these computers. It did it
 well enough (and here cheap counts towards well) that it brought this sort of
 computing to mainstream attention. The Pi somehow brought to life a much
 larger community, filled with people who are slightly less technical, making
 it accessible.
 
-The Pi is also an order of magnitude easier to get ahold of. Here in the UK
-I could walk into Maplin and walk out with a Pi in my hand. Then it's a
-simple matter to write the
-%(http://www.raspberrypi.org/downloads, SD card image) and get going. That
-counts for a lot because really, the hardware in the Pi isn't hugely better
-than these others. The biggest difference is probably the composite video
-out. That's the connection for one of those cheap car reversing monitors.
+The Pi is also an order of magnitude easier to get hold of. Here in the UK I
+could walk into Maplin and walk out with a Pi in my hand. Then it's a simple
+matter to write the %(http://www.raspberrypi.org/downloads, SD card image) and
+get going. That counts for a lot because really, the hardware in the Pi isn't
+hugely better than these others. The biggest difference is probably the
+composite video out. That's the connection used for one of those cheap car
+reversing monitors, for example.
 
 And you know what? The hardware only got better with the Revision 2. Mounting
 holes to make it easier to use in projects. More RAM for better performance.
@@ -304,71 +303,69 @@ Revision 2 everything is snappier.
 %2 Pi Model A
 
 The Model A was always designed to be a stripped down Model B. The same PCB,
-but with fewer components on it making it cheaper. No ethernet, only one USB
-port, and less RAM. How much worse could it be? In terms of setup it's
-exactly the same. It's a little glimpse of the Apple ecosystem in a sense,
-all Pis are fundamentally the same hardware so we can just swap SD cards
-around -- just like all Macs run OS X.
+but with fewer components on it, making it cheaper. No ethernet, only one USB
+port, and less RAM. How much worse could it be? In terms of setup it's exactly
+the same. It's a little glimpse of the Apple ecosystem in a sense, all Pis are
+fundamentally the same hardware so we can just swap SD cards around -- just
+like all Macs run OS X.
 
 You would think that the lack of ethernet and USB doesn't have an impact, and
-to some extent that's true. Usability of Rasbian is pretty much the same.
-In that sense it's no worse than being on a Revision 1 Model B. For me though
-I think it's summed up in two words: "USB Hub". Mouse _and_ keyboard? Hub.
-Want internet too? A USB ethernet or Wifi adapter. They're not
-insurmountable. Linux and Wifi is in a much better state than it was 5 years
-ago.
+to some extent that's true. Usability of Raspbian is pretty much the same. In
+that sense it's no worse than being on a Revision 1 Model B. For me though I
+think it's summed up in two words: "USB Hub". Mouse _and_ keyboard? Hub. Want
+internet too? A USB ethernet or Wifi adapter. They're not insurmountable.
+Linux and Wifi is in a much better state than it was 5 years ago.
 
 I think that if you're going to use the Model A like you'd use a Model B, you
 should just get the Model B. The "extra" cost comes out of money you'd end up
 spending on USB accessories. It's all around just a better experience. The
 Model A still has a place though. It's the more hardware project oriented
-version of he Pi.
+version of the Pi.
 
 Like the Model B Revision 2, the polyfuses are removed so the Model A can be
 be back powered through the USB port. Fewer components means overall lower
-power consumption for when on batteries. This can be lowered even further
-by
+power consumption for when on batteries. This can be lowered even further by
 %(http://www.bitwizard.nl/wiki/index.php?title=Reducing_power_consumption_of_a_raspberry_Pi,
 replacing the power regulator). There are lots of projects where the lower
 power makes it ideal and the lack of USB and ethernet doesn't mean much.
-Robotics, weather baloons -- plenty of fun things to do.
+Robotics, weather balloons -- plenty of fun things to do.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#tonido
 %2 TonidoPlug2
 
-In some aspects the TonidoPlug is one of the most interesting bits of
+In some respects the TonidoPlug is one of the most interesting bits of
 hardware we have for testing because it's really designed more as appliance
 instead of a general purpose computing device. It's essentially a NAS device.
 The idea is that you pop in an internal 2.5" SATA disk or connect a USB hard
 drive and serve the files off it. As a result all it's got is the SATA bay,
 ethernet port, wifi, and a USB port. There's no debug interface -- it's a
-purpose built SheevaPlug. That puts it (roughly) in the same family of
-devices as the DreamPlug of above.
+purpose built SheevaPlug. That puts it (roughly) in the same family of devices
+as the DreamPlug as above.
 
 What definetely is in the same class is that the TonidoPlug ships with a
 stripped down Debian Squeeze with special TonidoPlug software on top of it
 for management. Remember, think appliance. That's not to say that you can't
 mess around with it, it's just not recommended to. The onboard 512 MB flash
-doesn't leave much space. Fortunately it can boot off of other devices so,
+doesn't leave much space. Fortunately it can booted off of other devices so
 I've set it up to run off the
 %(http://www.tonido.com/communitywiki/doku.php?id=advanceduses:usbboot, SATA disk).
 
-Also like the DreamPlug the TonidoPlug is really more of an excercise in
-Linux hacking. The directions for setting up the SATA disk are straight
-forward, but I did hit a few minor issues along the way which really confirms
-it for me. What you've got then is something that in essence "just works" but
-that you can fiddle with if you want. The fiddling isn't required. As
-something to play with that really gives you options. What those are depends
-on how powerful the hardware is in the end. It's very simple but it's in a
-pretty slick case. You can move it easily but I'm not sure why you'd want to.
-The power is a mains input which means you're tied down through that, but it
-removes the complexity of an adapter too.
+Also like the DreamPlug the TonidoPlug is really more of an excercise in Linux
+hacking. The directions for setting up the SATA disk are straight forward, but
+I did hit a few minor issues along the way which really confirms it for me.
+What you've got then is something that in essence "just works" but that you
+can fiddle with if you want. The fiddling isn't required. As something to play
+with that really gives you options. What those are depends on how powerful the
+hardware is in the end. It's very simple but it's in a pretty slick case. You
+can move it easily but I'm not sure why you'd want to. The power is a mains
+input which means you're tied down through that, but it removes the complexity
+of an adapter too.
 
 In the end I think I see the TonidoPlug best used for exactly what it says on
 the tin -- serving files. You just get a bit more control. Want to do it with
-apache? Can do. Samba? NFS? Anything with Linux can be done. The neatest
+Apache? Can do. Samba? NFS? Anything with Linux can be done. The neatest
 scenario I think is to use the built-in DLNA server to create a centralized
 media store. Then put a Pi with XBMC on every TV in the house that doesn't
 already support DLNA. A neat little setup...
