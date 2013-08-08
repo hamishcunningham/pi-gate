@@ -63,4 +63,3 @@ PiGate TODOs
   - yui menu: cd output && ln -s ../ymenu
     - http://yuilibrary.com/yui/docs/node-menunav/node-menunav-3.html
     - http://yuilibrary.com/yui/docs/node-menunav/node-menunav-3-example.html
-- put contents table in col 2 of pages? but only on wide screens
