@@ -12,5 +12,9 @@
 
 </div>
 <div id="middleColumn" class="yui3-u-1-5"> <!-- column 2 -->
+  <a class="article-thumb" href="{{ SITEURL }}/static/images/articles/{{ page.slug }}.jpg"><img
+    src="{{ SITEURL }}/static/images/articles/thumbs/{{ page.slug }}.jpg"
+    alt="{{ page.slug }}"></a>
+  {% if page.summary %} <span class="article-summary"><em>{{ page.summary }}</em>.</span> {% endif %}
 <!-- __CONTENTS__ -->
 {% endblock %}
