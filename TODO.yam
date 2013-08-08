@@ -3,10 +3,10 @@ PiGate TODOs
 - misc
   - finish simbamon and document
   - infrastructure
-    - eliminate special cases and filenames from the Makefile
     - get make regenerate to work
-    - TODO in the README and "make page" target
     - experiment with "status=draft" in the metas for delayed publishing
+    - eliminate special cases and filenames from the Makefile
+    - TODO in the README and "make page" target
   - add some videos
   - add the basics tutorial to the Pi app store
   - twitter, and add a twitter name in the disqus settings
