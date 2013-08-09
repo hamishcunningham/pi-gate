@@ -10,14 +10,14 @@ Hub) open source hosting site. The project is called
 install git and clone the master branch:
 
 %code(lang=Bash)<
-git clone git@github.com:hamishcunningham/pi-tronics.git
+git clone git://github.com/hamishcunningham/pi-tronics.git
 %>
 
 This will create a directory ^pi-tronics^ on your local system. See the file
 ^README.txt^ in that directory for details of what is where.
 
 You can also browse the code on-line -- here's the
-%(https://github.com/hamishcunningham/pi-tronics/blob/master/bin/flood-alarm.sh,
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/basics/bin/flood-alarm.sh,
 flood alarm script), for example.
 
 

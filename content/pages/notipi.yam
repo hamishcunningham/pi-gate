@@ -121,7 +121,7 @@ curl http://www.bulksms.co.uk/eapi/submission/send_sms/2/2.0 \
 It can be taken a step further and the whole thing can be wrapped around with
 a shell script that stores your username and password and can be manipulated
 from the command line a bit easier. I've written a script which does this,
-%(https://github.com/hamishcunningham/pi-tronics/blob/master/bin/sendbulksms.sh,
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/notipi/bin/sendbulksms.sh,
 available here). More information of shell programing with bash is available
 from %(http://tldp.org/LDP/abs/html/, The Linux Documentation Project) (TLDP).
 It's a bit heavy reading but it's very comprehensive.
@@ -198,7 +198,7 @@ A kernel module need to be blacklisted to allow gnokii to work. Edit
 %code(lang=Bash)<blacklist cdc_acm %>
 
 See how our raspi-blacklist.conf file looks
-%(https://github.com/hamishcunningham/pi-tronics/blob/master/conf/gnokii/rasbian/raspi-blacklist.conf, here).
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/notipi/conf/gnokii/rasbian/raspi-blacklist.conf, here).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -230,7 +230,7 @@ Make these changes and save.  Alternatively you can download our already
 modified configuration file.
 
 %code(lang=Bash)<cd /etc
-sudo wget https://raw.github.com/hamishcunningham/pi-tronics/master/conf/gnokii/rasbian/gnokiirc %>
+sudo wget https://raw.github.com/hamishcunningham/pi-tronics/master/notipi/conf/gnokii/rasbian/gnokiirc %>
 
 For some reason, Rasbian's compilation of gnokii is not set to recognize the
 /etc/gnokiirc file as a global configuration file. To work around this ^--config
@@ -362,7 +362,7 @@ blacklist cdc_phonet
 blacklist phonet%>
 
 We have one
-%(https://github.com/hamishcunningham/pi-tronics/blob/master/conf/gnokii/fedora/blacklist.conf, already done).
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/notipi/conf/gnokii/fedora/blacklist.conf, already done).
 
 ^/etc/gnokiirc^ is already in place and the lines to be edited are the same.
 There's just one more to be done:
@@ -370,12 +370,12 @@ There's just one more to be done:
 - Line 127: ^use\_locking = yes^ should be changed to ^no^.
 
 We also have
-%(https://github.com/hamishcunningham/pi-tronics/blob/master/conf/gnokii/fedora/gnokiirc, one done too).
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/notipi/conf/gnokii/fedora/gnokiirc, one done too).
 
 Fedora however doesn't include an set of udev rules. We've made our own.
 
 %code(lang=Bash)<cd /etc/udev/rules.d/
-sudo wget https://raw.github.com/hamishcunningham/pi-tronics/master/conf/gnokii/fedora/40-basic-permissions.rules %>
+sudo wget https://raw.github.com/hamishcunningham/pi-tronics/master/notipi/conf/gnokii/fedora/40-basic-permissions.rules %>
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
