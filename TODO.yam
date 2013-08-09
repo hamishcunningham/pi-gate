@@ -3,7 +3,12 @@ PiGate TODOs
 Sprintish
 - next
   - finish simbamon and document
+    - utils/test-driver.sh
+      - a here doc with levels in it
+      - at each state change check syslog, and take a pic of the led
+      - write to a .yam / .html
   - delete trannies etc.
+  - padding in page column twos
   - add some videos
   - add the basics tutorial to the Pi app store
   - twitter, and add a twitter name in the disqus settings
