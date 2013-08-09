@@ -20,6 +20,32 @@ us, if we were still shipping the same Raspberry Pi in 2016, say' (July 17th
 
 Read on for some possibilities.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#hardware
+%1 Hardware
+
+First, the devices we've got in some more detail.
+
+%[
+| *System* | *CPU* | *RAM* | *Power* | *Cost (MSRP)* | *OS* | *IO* |
+---
+| APC 8750 | VIA 800MHz ARMv6 | 512MB DDR3 | 4W/13.5W | $49.00 |  | HDMI, VGA, USB, Audio I/O, Ethernet |
+---
+| BeagleBone Black | TI 1GHz ARMv7, NEON | 512MB DDR3 | 1W/2.3W | $45.00 |  | MicroHDMI, USB, Ethernet, GPIO |
+---
+| Cubieboard | Allwinner 1GHz ARMv7, Neon | 512MB DDR3 | 2.5W/10W | $49.00 |  | HDMI, USB, Ethernet, Audio I/O, SATA, GPIO, Infrared |
+---
+| DreamPlug | Kirkwood 1.2GHz ARMv5 | 512MB DDR2 | 5W/15W | $149.00 |  | USB, 2x Ethernet, JTAG, Bluetooth, Wifi, Audio, SATA |
+---
+| MK802+ Mini PC | Allwinner 1GHz ARMv7, Neon | 1GB DDR3 | 3W/10W | $59.00 |  | MiniHDMI, USB, Wifi |
+---
+| Pi Model B Rev. 2 | Broadcom 700MHz ARMv6 | 512MB DDR2 | 3.5W | $35.00 |  | HDMI, RCA, Audio, Ethernet, GPIO, USB |
+---
+| Pi Model A | Broadcom 700MHz ARMv6 | 256MB DDR2 | 2.5W | $25.00 |  | HDMI, RCA, Audio, GPIO, USB |
+---
+| TonidoPlug2 | Kirkwood 800MHz ARMv5 | 512MB DDR3 | 5W/13W | $119.00 |  | Ethernet, Wifi, USB, SATA |
+%]
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#setup
