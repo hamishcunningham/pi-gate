@@ -158,6 +158,7 @@ battery power projects.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#simbamon
 %2 SimBaMon: a Simple Battery Monitor daemon
 
 SimBaMon is an open source Linux daemon for
