@@ -24,6 +24,7 @@ achieve them within a short space of time. This combination of general purpose
 computer with accessible electronics is a radical development. Welcome to the
 birth of Pi-tronics!
 
+%#gpio-intro
 The Pi's connections for getting data from sensors and for activating external
 gizmos are called _general purpose input output_ pins, or GPIO pins. The
 simplest of these will either sense or output a small voltage (3.3 volts, not

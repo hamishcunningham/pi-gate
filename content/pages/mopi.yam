@@ -160,21 +160,95 @@ battery power projects.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 SimBaMon: a Simple Battery Monitor daemon
 
-TODO
+SimBaMon is an open source Linux daemon for
 
-https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon
+- monitoring battery levels (on the Pi this is done via
+  %(http://wiringpi.com/the-gpio-utility/, the ^gpio^ command))
+- sending warning messages to the user if the battery is low
+- shutting down cleanly at critical battery levels
+- managing a power supply on/off switch
+- writing relevant data to the system logs
 
-The MoPi signal states are defined like this:
-%<
-7 -- battery full [LED blue]
-6 -- battery good [LED green]
-5 -- battery good [LED green]
-4 -- battery low -- send warning message [LED amber]
-3 -- battery critical -- send "urgent" warning message [LED red]
-2 -- lowest battery level -- shut down with no delay [LED flashing red]
-1 -- power off button pressed -- shut down with no delay [LED flashing red]
-0 -- unused to avoid confusion with non-functional gpio
+You can find
+%(https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon,
+the source code) on GitHub. The core of the daemon is defined in three files:
+
+- ^/etc/simbamon.conf^    -- configuration data
+- ^/usr/sbin/simbamon^    -- the daemon itself
+- ^/etc/init.d/simbamond^ -- an interface to the ^init^ subsystem that Linux
+  uses to manage daemons (amongst other things)
+
+The last of these, ^simbamond^, is used by the operating system to start and
+stop SimBaMon at boot or shutdown time, and can be used to control the daemon
+manually when required. For example this command will stop the daemon:
+
+%code(lang=Bash)<
+sudo service simbamon stop
 %>
+
+The configuration file, ^simbamon.conf^, defines a set of states in which the
+monitor will take some action:
+
+%code(lang=Bash)<
+POWER_OFF=1     # the user has pressed the power button, shutdown now
+BAT_SHUTDOWN=2  # the battery is just about empty, shutdown now
+BAT_CRITICAL=3  # the battery level is critically low, shutdown in a shortly
+BAT_WARNING=4   # the battery is low, warn the user
+BAT_FULL=7      # the battery is full
+%>
+
+The MoPi microcontroller board supplies these states via three Raspberry Pi
+%(basics.html#gpio-intro, GPIO pins) (and also sets on-board indicator LEDs
+accordingly). The core of SimBaMon, a shell script that lives in
+^/usr/sbin/simbamon^, implements an infinite loop that checks the levels being
+reported over GPIO every few seconds and takes any necessary action:
+
+%code(lang=Bash)<
+while :
+do
+  # check the level
+  BAT_LEVEL_BASE2=`gpio read ${IO_A}``gpio read ${IO_B}``gpio read ${IO_C}`
+  BAT_LEVEL=`echo "ibase=2;${BAT_LEVEL_BASE2}" |bc`
+
+  # make a log message if the level is low
+  [ $BAT_LEVEL -le $BAT_WARNING ] && \
+    logger "simbamon: battery is at or below warning level (${BAT_LEVEL})"
+
+  # check for action states
+  if   [ $BAT_LEVEL -eq $POWER_OFF ]
+  then
+    wall <<< "simbamon: power off requested: shutting down now!"
+    shutdown -h now
+  elif [ $BAT_LEVEL -eq $BAT_SHUTDOWN ]
+  then
+    wall <<< "simbamon: battery empty: shutting down now!!!"
+    shutdown -h now
+  elif [ $BAT_LEVEL -eq $BAT_CRITICAL ]
+  then
+    wall <<< \
+      "simbamon: battery critical! shutting down in ${SHUT_DELAY} seconds!"
+    sleep $SHUT_DELAY
+    shutdown -h now
+  elif [ $BAT_LEVEL -eq $BAT_WARNING ]
+  then
+    wall <<< "simbamon: battery is low! connect new battery or shut down"
+    sleep $WARNING_INTERVAL
+  fi
+
+  # take a break
+  sleep ${MONITOR_FREQUENCY}
+done &
+%>
+
+The three GPIO pins connected to MoPi are used as a 3-bit binary value, which
+we convert to decimal using the ^bc^ command. The ^wall^ (write all) command
+is used to send messages to any logged in user.
+
+Here is the full
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamon,
+current version of the code). There is a full test rig, including debug mode
+(no shutdowns, shorter intervals) and simulation mode (GPIO input is
+simulated).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -252,6 +326,40 @@ Finally, the current author has found it useful to run around in circles,
 screaming and shouting. (It doesn't fix the electronics, of course, but if
 you're lucky it generates sympathy in those around you, or at least a desire
 on their part to give you a beer to shut you up.)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#batteries
+%1 Batteries, Holders and Chargers
+
+Here are links to some of the batteries, battery holders and chargers that
+we've been testing MoPi with:
+
+From %(http://rs-online.com/, RS Components):
+- %(http://uk.rs-online.com/web/p/aa-rechargeable-batteries/6170773/,
+  RS AA NiMH battery, 1.2V 2600 mAh)
+- %(http://uk.rs-online.com/web/p/battery-chargers-aaa-aa-c-d-9-volt/0383241/,
+  UK plugtop AA/AAA charger 250 mA)
+
+From %(http://uk.farnell.com/, Farnell):
+- %(http://uk.farnell.com/multicomp/bt00839/battery-holder-8xaa-pk5/dp/3829583,
+  x8 AA battery holder)
+- %(http://uk.farnell.com/duracell/5000394065710/battery-nimh-1-2v-2400mah-pk4/dp/1330278,
+  Duracell AA NiMH 2400 mAh 4-pack)
+- %(http://uk.farnell.com/energizer/635429/battery-precision-ni-mh-aa-2400mah/dp/2075715,
+  Energiser AA NiMH 2400 mAh 4-pack)
+- %(http://uk.farnell.com/ansmann/5107343-uk/charger-basic-4-plus/dp/1294240,
+  x4 AA battery charger)
+
+From %(http://maplin.co.uk/, Maplin):
+- %(http://www.maplin.co.uk/extra-high-capacity-nimh-rechargeable-battery-value-packs-46414,
+  NiMH AA 2400 mAh 8-pack)
+- %(http://www.maplin.co.uk/hybrid-the-next-generation-rechargeable-battery-219932, 
+  Hybrid AA 2100 mAh 4-pack)
+- %(http://www.maplin.co.uk/batteries-and-power/batteries/battery-chargers, AA
+  chargers)
+- %(http://www.maplin.co.uk/aa-size-battery-holders-31427, x8 AA battery
+  holder RK44X)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

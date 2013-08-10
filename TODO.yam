@@ -2,9 +2,9 @@ PiGate TODOs
 
 Sprintish
 - next
-  - finish simbamon and document
-    - diff between simulation tests and real test driver? test-driver useful
-      for both?
+  - simbamon
+    - man page (ronn?)
+      - options: -d(ebug) -h(help) -s(imulation)
     - utils/test-driver.sh
       - a here doc with levels in it
       - at each state change check syslog, and take a pic of the led
