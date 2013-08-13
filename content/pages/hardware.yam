@@ -27,23 +27,23 @@ Read on for some possibilities.
 First, the devices we've got in some more detail.
 
 %[
-| *System* | *CPU* | *RAM* | *Power* | *Cost (MSRP)* | *OS* | *IO* |
+| *System* | *CPU* | *RAM* | *Power Consumption (Nominal/Max)* | *Cost (MSRP)* | *Original OS (Installed OS)* | *IO* |
 ---
-| APC 8750 | VIA 800MHz ARMv6 | 512MB DDR3 | 4W/13.5W | $49.00 |  | HDMI, VGA, USB, Audio I/O, Ethernet |
+| APC 8750 | VIA 800MHz ARMv6 | 512MB DDR3 | 4W/13.5W | $49.00 | Android 2.3 (Apricot R3 Debian 7.0) | HDMI, VGA, USB, Audio I/O, Ethernet |
 ---
-| BeagleBone Black | TI 1GHz ARMv7, NEON | 512MB DDR3 | 1W/2.3W | $45.00 |  | MicroHDMI, USB, Ethernet, GPIO |
+| BeagleBone Black | TI 1GHz ARMv7, Neon | 512MB DDR3 | 1W/2.3W | $45.00 | Angstrom (Ubuntu 12.10) | MicroHDMI, USB, Ethernet, GPIO |
 ---
-| Cubieboard | Allwinner 1GHz ARMv7, Neon | 512MB DDR3 | 2.5W/10W | $49.00 |  | HDMI, USB, Ethernet, Audio I/O, SATA, GPIO, Infrared |
+| Cubieboard | Allwinner 1GHz ARMv7, Neon | 512MB DDR3 | 2.5W/10W | $49.00 | Android 4.0.4 (Lubuntu 12.10) | HDMI, USB, Ethernet, Audio I/O, SATA, GPIO, Infrared |
 ---
-| DreamPlug | Kirkwood 1.2GHz ARMv5 | 512MB DDR2 | 5W/15W | $149.00 |  | USB, 2x Ethernet, JTAG, Bluetooth, Wifi, Audio, SATA |
+| DreamPlug | Kirkwood 1.2GHz ARMv5 | 512MB DDR2 | 5W/15W | $149.00 | Debian 6.0 | USB, 2x Ethernet, JTAG, Bluetooth, Wifi, Audio, SATA |
 ---
-| MK802+ Mini PC | Allwinner 1GHz ARMv7, Neon | 1GB DDR3 | 3W/10W | $59.00 |  | MiniHDMI, USB, Wifi |
+| MK802+ Mini PC | Allwinner 1GHz ARMv7, Neon | 1GB DDR3 | 3W/10W | $59.00 | Android 4.0 (Lubuntu 12.04) | MiniHDMI, USB, Wifi |
 ---
-| Pi Model B Rev. 2 | Broadcom 700MHz ARMv6 | 512MB DDR2 | 3.5W | $35.00 |  | HDMI, RCA, Audio, Ethernet, GPIO, USB |
+| Pi Model B Rev. 2 | Broadcom 700MHz ARMv6 | 512MB DDR2 | 3.5W | $35.00 | Raspbian Debian 7.0 | HDMI, RCA, Audio, Ethernet, GPIO, USB |
 ---
-| Pi Model A | Broadcom 700MHz ARMv6 | 256MB DDR2 | 2.5W | $25.00 |  | HDMI, RCA, Audio, GPIO, USB |
+| Pi Model A | Broadcom 700MHz ARMv6 | 256MB DDR2 | 2.5W | $25.00 | Raspbian Debian 7.0 | HDMI, RCA, Audio, GPIO, USB |
 ---
-| TonidoPlug2 | Kirkwood 800MHz ARMv5 | 512MB DDR3 | 5W/13W | $119.00 |  | Ethernet, Wifi, USB, SATA |
+| TonidoPlug2 | Kirkwood 800MHz ARMv5 | 512MB DDR3 | 5W/13W | $119.00 | Debian 6.0 | Ethernet, Wifi, USB, SATA |
 %]
 
 
@@ -401,7 +401,32 @@ already support DLNA. A neat little setup...
 %#benchmarks
 %1 Benchmarks
 
-To be written.
+To be written...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#io
+%2 Input/Output
+
+%image(images/hardware/results/network_graph.svg, Networking)
+%image(images/hardware/results/disk_cache.svg, Disk Cache)
+%image(images/hardware/results/disk_read.svg, Disk Read)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#theoretical
+%2 Theoretical
+
+%image(images/hardware/results/dhry_mips.svg, Integer Math)
+%image(images/hardware/results/whet_mflops.svg, Floating Point Math)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#Practical
+%2 Practical
+
+%image(images/hardware/results/bzip2_min.svg, Bzip2 Compression)
+%image(images/hardware/results/lame_min.svg, MP3 Encoding)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
