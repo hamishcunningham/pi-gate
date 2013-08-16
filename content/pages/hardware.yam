@@ -401,7 +401,18 @@ already support DLNA. A neat little setup...
 %#benchmarks
 %1 Benchmarks
 
-To be written...
+I will start by saying that these are not comprehensive benchmarks, but are
+instead _indicative_ benchmarks. There are here to give an overview of the
+potential performance of each device and aid in a less subjective comparison.
+Combined with the impressions of the previous section they will illustrate
+why you might want one device instead of another. They will also help us
+understand how the different hardware of each device impacts on performance
+so that we can evaluate future devices as well.
+
+Six different benchmarks have been carried out, which break down into three
+categories. Input/output, theoretical performance, and practical performance.
+
+More to be written...
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
