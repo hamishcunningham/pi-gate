@@ -1,5 +1,15 @@
 PiGate TODOs
 
+simbamond notes
+- dh_make -p=simbamond_1.0 --native
+- sudo dpkg -i simbamond_1.0_all.deb
+
+blinkip
+- call blinkip.sh from daemon
+- page and post
+- reply to the comment here
+  http://chrismeyers.org/2012/06/02/raspberry-pi-no-hdmi-cable-or-no-hdmi-display-blink-ip-address-to-ok-led/
+
 Sprintish
 - next
   - simbamon
