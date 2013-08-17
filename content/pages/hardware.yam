@@ -411,17 +411,65 @@ so that we can evaluate future devices as well.
 
 Six different benchmarks have been carried out, which break down into three
 categories. Input/output, theoretical performance, and practical performance.
+For I/O, iperf has been used to measure networking performance, and hdparm to
+measure hard disk cache and read performance. Theoretical performance was
+measured through the classic dhrystone and whetstone integer and floating
+point tests. The practical tests were a bzip2 compression of a 54 MB wav file
+and the MP3 encoding of it using lame.
 
-More to be written...
+Each benchmark has been run 3 times. Mean results are plotted below, with the
+error bars showing the minimum and maximum value. The script we used to run
+the benchmarks is available online in our
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/hardware/bin/dobm.sh, git repository).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#io
 %2 Input/Output
 
+For all I/O tests, higher numbers (greater bandwidth) is better.
+
+Networking performance quite nicely breaks down into three groups. We see top
+performance from the DreamPlug and TonidoPlug with their gigabit ethernet.
+The APC 8750, BeagleBone, CubieBoard, and Pi Model B all have a pretty good
+showing of their 100 megabit ethernet, although the Model B's performance is
+a bit sub bar at around 70 mbits. For this test the Model A, which doesns't
+have onboard ethernet, used a USB 1.1 ethernet adapter I had lying around.
+Performance pretty much topped out at the theoretical maximum there of 11
+mbits. The MK802 with its Wifi is the bottom performer. This echoes the
+comments I made earlier about its poor performance during setup.
+
 %image(images/hardware/results/network_graph.svg, Networking)
+
+Disk cache is a little bit mis-leading. This is more strictly speaking a test
+of memory throughput. Every time you read from the disk it's stored in memory
+in case the same disk read is requested again. In that case it's read from
+the faster memory cache instead of re-reading it off the disk.
+
+The disk cache results are a bit all over the board. It would be nice if they
+conviently matched up with memory speed or CPU, but they don't. The error
+bars are almost always pretty small as well indicating pretty consistent
+performance. In general these speeds are all so quick (greater than 120 MB/s)
+that the cache speed exceeds hard disk speeds and so the caching will have a
+positve impact.
+
+The worry here is the signifcantly lower cache speed of the CubieBoard. This
+indicates that cacheing will not have much of an impact. For certain use
+cases where there are many repeated small reads, such as serving web pages,
+this is less than ideal.
+
 %image(images/hardware/results/disk_cache.svg, Disk Cache)
+
+The CubieBoard, DreamPlug, and TonidoPlug were all benchmarked with a SATA
+hard disk, and consequently have significantly higher read speeds. The
+performance of the other devices is about as expected and consistent with
+mid-range flash memory. Obviously, better SD cards (e.g. Class 10) where
+applicable will speed things up, but that comes with increased costs.
+
 %image(images/hardware/results/disk_read.svg, Disk Read)
+
+Write performance, which we have not benchmarked, will always be slower than
+read performance. This is particularly true for flash memory like SD cards.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

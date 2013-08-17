@@ -35,28 +35,28 @@
 </g>
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
 	<path  d='M41.8,412.0 L41.8,421.0 M41.8,16.7 L41.8,7.7  h0.01'/>	<g transform="translate(46.3,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
-		<text>apc</text>
+		<text>APC</text>
 	</g>
 	<path  d='M63.1,412.0 L63.1,421.0 M63.1,16.7 L63.1,7.7  h0.01'/>	<g transform="translate(67.6,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
-		<text>beaglebone</text>
+		<text>BeagleBone</text>
 	</g>
 	<path  d='M84.5,412.0 L84.5,421.0 M84.5,16.7 L84.5,7.7  h0.01'/>	<g transform="translate(89.0,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
-		<text>cubieboard</text>
+		<text>CubieBoard</text>
 	</g>
 	<path  d='M105.9,412.0 L105.9,421.0 M105.9,16.7 L105.9,7.7  h0.01'/>	<g transform="translate(110.4,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
-		<text>dreamplug</text>
+		<text>DreamPlug</text>
 	</g>
 	<path  d='M127.2,412.0 L127.2,421.0 M127.2,16.7 L127.2,7.7  h0.01'/>	<g transform="translate(131.7,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
-		<text>miniand</text>
+		<text>MK802</text>
 	</g>
 	<path  d='M148.6,412.0 L148.6,421.0 M148.6,16.7 L148.6,7.7  h0.01'/>	<g transform="translate(153.1,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
-		<text>modelb</text>
+		<text>Model B</text>
 	</g>
 	<path  d='M170.0,412.0 L170.0,421.0 M170.0,16.7 L170.0,7.7  h0.01'/>	<g transform="translate(174.5,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
-		<text>modela</text>
+		<text>Model A</text>
 	</g>
 	<path  d='M191.3,412.0 L191.3,421.0 M191.3,16.7 L191.3,7.7  h0.01'/>	<g transform="translate(195.8,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
-		<text>tonidoplug</text>
+		<text>TonidoPlug</text>
 	</g>
 	<path  d='M202.0,412.0 L211.0,412.0  h0.01'/>	<g transform="translate(225.2,412.0) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
 		<text> 0</text>
