@@ -1,15 +1,16 @@
 PiGate TODOs
 
 Sprintish
+- ideas bazaar exhibit
 - mopi/simbamon
   - get the PPA to install on the Pi
-  - link the PPA from there and give pi-friendly install instructions
+    - http://www.astarix.co.uk/2011/05/using-ubuntu-ppa-packages-with-debian-or-crunchbang/
+    - http://aditya.vaidya.info/wordpress/?p=90
+    - http://forums.debian.net/viewtopic.php?f=5&t=96421
+  - link the PPA from the simbamon README and mopi.html and give pi-friendly
+    install instructions
   - set up a snapshot PPA
-  - set up a download page for the bare .deb and link from the simbamon README
-    and mopi 
-    - notes
-      - dh_make -p=simbamond_1.0 --native
-      - sudo dpkg -i simbamond_1.0_all.deb
+    - https://help.launchpad.net/Packaging/PPA/BuildingASourcePackage
 - blinkip
   - package
   - call blinkip.sh from daemon
@@ -31,6 +32,8 @@ Sprintish
 
 - articles
   - Devil worship for beginners: SimBaMon and BlinkIP and packaging
+    - notes
+      - seeding the package: dh\_make -p=simbamond\_1.0 --native
   - ask Gordon Henderson for a post
   - Pi Model C, Sneak Preview
     - Ok, I lied, this isn't really a preview of the model C, whatever and
