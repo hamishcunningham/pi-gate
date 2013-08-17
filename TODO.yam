@@ -17,6 +17,7 @@ Sprintish
   - reply to the comment here
     http://chrismeyers.org/2012/06/02/raspberry-pi-no-hdmi-cable-or-no-hdmi-display-blink-ip-address-to-ok-led/
 - pi.gate
+  - kill off sharethis
   - link this from lego
     http://raspberrypicloud.wordpress.com/2013/07/09/raspberry-pi-lego-rack-designs/
   - padding in page column twos
@@ -26,6 +27,7 @@ Sprintish
     - and link from both github readmes and the PPA front page
   - twitter, and add a twitter name in the disqus settings
   - add some videos
+  - TOC (below)
 
 - articles
   - Devil worship for beginners: SimBaMon and BlinkIP and packaging
@@ -97,3 +99,54 @@ Backlog
   - yui menu: cd output && ln -s ../ymenu
     - http://yuilibrary.com/yui/docs/node-menunav/node-menunav-3.html
     - http://yuilibrary.com/yui/docs/node-menunav/node-menunav-3-example.html
+
+TOC
+- Basics
+  - Interaction Electronics
+  - Lighting Lights, Listening to Switches
+    - Pins on the GPIO Header
+    - Talking to the GPIO from Software
+    - Reading from Switches
+    - Putting it Together: Sensor plus LED
+    - Getting a Buzz Out of Trannies
+  - Parent Alarm
+  - A Flood in the Basement
+    - Hooking it all Together
+    - Building and Installing
+      - The Software
+  - Books and Resources
+    - Software and Source Code
+    - Books about the Pi
+    - Electronics Books and Sites
+    - Circuits: Calculators, Simulators, Diagrams
+  - Warning!
+- Pi-Alikes
+- LEGO Cases
+- Mobile Pi
+  - Introduction
+  - The Perfect Pack
+  - Monitoring
+    - SimBaMon: a Simple Battery Monitor daemon
+  - Testing and Troubleshooting
+    - The Longer Lasting Snack
+    - Troubleshooting
+  - Batteries, Holders and Chargers
+  - Other Directions
+- Notifications
+  - Pi Texting (SMS) via a Web Service
+  - Pi Texting (SMS) via a Phone Handset
+  - Pi Messaging via Twitter
+- PiRoomba
+- Schools
+  - Computers in the World
+  - Computers in Education
+  - Computers in the UK Curriculum
+  - Why the Pi?
+  - Getting Started With Raspberry Pi
+- INCOMING
+  - Debian Packaging
+  - Writing a Daemon
+  - 2 Minute Guide
+  - About / Contact / Download
+  - Shops
+  - maybe: WiringPi page; Prism, SSH, GPG page; ...
