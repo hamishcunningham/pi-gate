@@ -11,22 +11,21 @@ Sprintish
       - dh_make -p=simbamond_1.0 --native
       - sudo dpkg -i simbamond_1.0_all.deb
 - blinkip
+  - package
   - call blinkip.sh from daemon
   - page and post
   - reply to the comment here
     http://chrismeyers.org/2012/06/02/raspberry-pi-no-hdmi-cable-or-no-hdmi-display-blink-ip-address-to-ok-led/
-- next
-  - simbamon
-    - utils/test-driver.sh
-      - a here doc with levels in it
-      - at each state change check syslog, and take a pic of the led
-      - write to a .yam / .html
+- pi.gate
   - padding in page column twos
-  - add some videos
   - add the basics tutorial to the Pi app store
+  - Contact
+  - Downloads (PPA, .deb, pi-tronics on github)
   - twitter, and add a twitter name in the disqus settings
+  - add some videos
 
 - articles
+  - Devil worship for beginners: SimBaMon and BlinkIP and packaging
   - ask Gordon Henderson for a post
   - Pi Model C, Sneak Preview
     - Ok, I lied, this isn't really a preview of the model C, whatever and
@@ -38,7 +37,6 @@ Sprintish
     - Another clue from that interview with Eben: `We’re teaching kids to
       program a single core processor. We’re actually teaching kids about what
       computers used to be.' Multicore Pi, anyone?
-  - Devil worship for beginners: SimBaMon post
   - Prism, Onion Pi
     - http://git-annex.branchable.com
     - http://retroshare.sourceforge.net
@@ -67,6 +65,18 @@ Sprintish
     - http://www.open-electronics.org/
     - http://lowpowerlab.com/
     - http://www.seeedstudio.com/
+  - Distinctive things about the Pi:
+    - low cost
+    - low power
+    - low footprint, because low power, no cooling needed, and, best of all,
+      made in the UK!
+    - combination of general purpose computer with easily accessible GPIO
+      electronics
+    - openness (almost no binary blobs involved now?)
+    - passion: the community response has been amazing
+    - child-friendly (and experimenter-friendly): most foobars can be repaired
+      by re-writing the SD card, and those that can't have a maximum cost of
+      the price of a new Pi
 
 Backlog
 - infrastructure
