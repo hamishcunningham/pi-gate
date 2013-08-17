@@ -1,5 +1,14 @@
 README
 
+=======================================================
+Warning -- you probably don't want this repository unless 
+you're developing the http://pi.gate.ac.uk/ site itself.
+
+For source code for projects on that site, links to our
+software downloads and the like, see
+https://github.com/hamishcunningham/pi-tronics
+=======================================================
+
 %contents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
