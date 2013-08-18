@@ -5,7 +5,7 @@ PiGate TODOs
   - deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main
 - import the encryption key from Ubuntu so that the Pi can verify the
   package's validity:
-  - gpg --keyserver keyserver.ubuntu.com --recv-key 6D011DF1 
+  - gpg --keyserver keyserver.ubuntu.com --recv-key 6C12C1CF
   - gpg -a --export 6C12C1CF |sudo apt-key add -
 - update your list of available packages (this may take a couple of
   minutes):
@@ -15,19 +15,19 @@ PiGate TODOs
   - sudo apt-get install package-name
 
 Add this line to /etc/apt/sources.list
-- deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main
+    deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main
 
-Import the encryption key from Ubuntu so that the Pi can verify the package's
-validity:
-- gpg --keyserver keyserver.ubuntu.com --recv-key 6D011DF1 
-- gpg -a --export 6C12C1CF |sudo apt-key add -
+Import the encryption key from Ubuntu so that the Pi can verify the
+package's validity:
+    gpg --keyserver keyserver.ubuntu.com --recv-key 6C12C1CF
+    gpg -a --export 6C12C1CF |sudo apt-key add -
 
 Update your list of available packages (this may take a couple of minutes):
-- sudo apt-get update
+    sudo apt-get update
 
 Install the package (where "package-name" is one of our software packages,
 e.g. "simbamond" for the battery monitor):
-- sudo apt-get install package-name
+    sudo apt-get install package-name
 
 
 Sprintish

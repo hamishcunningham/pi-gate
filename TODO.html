@@ -45,17 +45,51 @@ div.banner a:hover {
 <body bgcolor="#FFFFFF" text="#000000">
 <h1 class="cow-title-heading">PiGate TODOs</h1>
 
+<ul>
+<li>installing from the pi-gate PPA:</li>
+<li>add this line to /etc/apt/sources.list
+  <ul>
+  <li>deb <a class="cow-url" href="http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu">http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu</a> precise main</li>
+  </ul></li>
+<li>import the encryption key from Ubuntu so that the Pi can verify the
+  package's validity:
+  <ul>
+  <li>gpg &mdash;keyserver keyserver.ubuntu.com &mdash;recv-key 6C12C1CF</li>
+  <li>gpg -a &mdash;export 6C12C1CF |sudo apt-key add -</li>
+  </ul></li>
+<li>update your list of available packages (this may take a couple of
+  minutes):
+  <ul>
+  <li>sudo apt-get update</li>
+  </ul></li>
+<li>install the package (where <tt>package-name</tt> is one of our software packages,
+  e.g. <tt>simbamond</tt> for the battery monitor):
+  <ul>
+  <li>sudo apt-get install package-name</li>
+  </ul></li>
+</ul>
+
+<p>Add this line to /etc/apt/sources.list
+    deb <a class="cow-url" href="http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu">http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu</a> precise main</p>
+
+<p>Import the encryption key from Ubuntu so that the Pi can verify the
+package's validity:
+    gpg &mdash;keyserver keyserver.ubuntu.com &mdash;recv-key 6C12C1CF
+    gpg -a &mdash;export 6C12C1CF |sudo apt-key add -</p>
+
+<p>Update your list of available packages (this may take a couple of minutes):
+    sudo apt-get update</p>
+
+<p>Install the package (where &quot;package-name&quot; is one of our software packages,
+e.g. &quot;simbamond&quot; for the battery monitor):
+    sudo apt-get install package-name</p>
+
+
 <p>Sprintish</p>
 <ul>
 <li>ideas bazaar exhibit</li>
 <li>mopi/simbamon
   <ul>
-  <li>get the PPA to install on the Pi
-    <ul>
-    <li><a class="cow-url" href="http://www.astarix.co.uk/2011/05/using-ubuntu-ppa-packages-with-debian-or-crunchbang/">http://www.astarix.co.uk/2011/05/using-ubuntu-ppa-packages-with-debian-or-crunchbang/</a></li>
-    <li><a class="cow-url" href="http://aditya.vaidya.info/wordpress/?p=90">http://aditya.vaidya.info/wordpress/?p=90</a></li>
-    <li><a class="cow-url" href="http://forums.debian.net/viewtopic.php?f=5&t=96421">http://forums.debian.net/viewtopic.php?f=5&amp;t=96421</a></li>
-    </ul></li>
   <li>link the PPA from the simbamon README and mopi.html and give pi-friendly
     install instructions</li>
   <li>set up a snapshot PPA
@@ -67,7 +101,10 @@ div.banner a:hover {
   <ul>
   <li>package</li>
   <li>call blinkip.sh from daemon</li>
-  <li>page and post</li>
+  <li>page and post, the Wifi Catch-22, or my Pi winked at me
+    <ul>
+    <li>include pagekite</li>
+    </ul></li>
   <li>reply to the comment here
     <a class="cow-url" href="http://chrismeyers.org/2012/06/02/raspberry-pi-no-hdmi-cable-or-no-hdmi-display-blink-ip-address-to-ok-led/">http://chrismeyers.org/2012/06/02/raspberry-pi-no-hdmi-cable-or-no-hdmi-display-blink-ip-address-to-ok-led/</a></li>
   </ul></li>
