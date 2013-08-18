@@ -1,12 +1,38 @@
 PiGate TODOs
 
+- installing from the pi-gate PPA:
+- add this line to /etc/apt/sources.list
+  - deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main
+- import the encryption key from Ubuntu so that the Pi can verify the
+  package's validity:
+  - gpg --keyserver keyserver.ubuntu.com --recv-key 6D011DF1 
+  - gpg -a --export 6C12C1CF |sudo apt-key add -
+- update your list of available packages (this may take a couple of
+  minutes):
+  - sudo apt-get update
+- install the package (where ^package-name^ is one of our software packages,
+  e.g. ^simbamond^ for the battery monitor):
+  - sudo apt-get install package-name
+
+Add this line to /etc/apt/sources.list
+- deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main
+
+Import the encryption key from Ubuntu so that the Pi can verify the package's
+validity:
+- gpg --keyserver keyserver.ubuntu.com --recv-key 6D011DF1 
+- gpg -a --export 6C12C1CF |sudo apt-key add -
+
+Update your list of available packages (this may take a couple of minutes):
+- sudo apt-get update
+
+Install the package (where "package-name" is one of our software packages,
+e.g. "simbamond" for the battery monitor):
+- sudo apt-get install package-name
+
+
 Sprintish
 - ideas bazaar exhibit
 - mopi/simbamon
-  - get the PPA to install on the Pi
-    - http://www.astarix.co.uk/2011/05/using-ubuntu-ppa-packages-with-debian-or-crunchbang/
-    - http://aditya.vaidya.info/wordpress/?p=90
-    - http://forums.debian.net/viewtopic.php?f=5&t=96421
   - link the PPA from the simbamon README and mopi.html and give pi-friendly
     install instructions
   - set up a snapshot PPA
@@ -14,7 +40,8 @@ Sprintish
 - blinkip
   - package
   - call blinkip.sh from daemon
-  - page and post
+  - page and post, the Wifi Catch-22, or my Pi winked at me
+    - include pagekite
   - reply to the comment here
     http://chrismeyers.org/2012/06/02/raspberry-pi-no-hdmi-cable-or-no-hdmi-display-blink-ip-address-to-ok-led/
 - pi.gate
