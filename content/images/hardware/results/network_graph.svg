@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg 
- width="520" height="290" 
- viewBox="-520 0 520 290"
+ width="600" height="320" 
+ viewBox="-600 0 600 320"
  xmlns="http://www.w3.org/2000/svg"
  xmlns:xlink="http://www.w3.org/1999/xlink"
 >
@@ -13,7 +13,7 @@
 
 <g id="gnuplot_canvas" transform="rotate(90 0 0)" >
 
-<rect x="0" y="0" width="290" height="520" fill="none"/>
+<rect x="0" y="0" width="320" height="600" fill="none"/>
 <defs>
 
 	<circle id='gpDot' r='0.5' stroke-width='0.5'/>
@@ -31,105 +31,105 @@
 	<use xlink:href='#gpPt3' id='gpPt11' stroke='currentColor' transform='rotate(45)'/>
 	<use xlink:href='#gpPt11' id='gpPt12' fill='currentColor' stroke='none'/>
 </defs>
-<g style="fill:none; color:white; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+<g style="fill:none; color:white; stroke:currentColor; stroke-width:1.20; stroke-linecap:butt; stroke-linejoin:miter">
 </g>
-<g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path  d='M41.8,412.0 L41.8,421.0 M41.8,16.7 L41.8,7.7  h0.01'/>	<g transform="translate(46.3,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
+<g style="fill:none; color:black; stroke:currentColor; stroke-width:1.20; stroke-linecap:butt; stroke-linejoin:miter">
+	<path  d='M43.7,483.0 L43.7,492.0 M43.7,27.1 L43.7,18.1  h0.01'/>	<g transform="translate(48.2,500.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
 		<text>APC</text>
 	</g>
-	<path  d='M63.1,412.0 L63.1,421.0 M63.1,16.7 L63.1,7.7  h0.01'/>	<g transform="translate(67.6,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
+	<path  d='M68.8,483.0 L68.8,492.0 M68.8,27.1 L68.8,18.1  h0.01'/>	<g transform="translate(73.3,500.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
 		<text>BeagleBone</text>
 	</g>
-	<path  d='M84.5,412.0 L84.5,421.0 M84.5,16.7 L84.5,7.7  h0.01'/>	<g transform="translate(89.0,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
-		<text>CubieBoard</text>
+	<path  d='M93.9,483.0 L93.9,492.0 M93.9,27.1 L93.9,18.1  h0.01'/>	<g transform="translate(98.4,500.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
+		<text>Cubieboard</text>
 	</g>
-	<path  d='M105.9,412.0 L105.9,421.0 M105.9,16.7 L105.9,7.7  h0.01'/>	<g transform="translate(110.4,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
+	<path  d='M119.0,483.0 L119.0,492.0 M119.0,27.1 L119.0,18.1  h0.01'/>	<g transform="translate(123.5,500.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
 		<text>DreamPlug</text>
 	</g>
-	<path  d='M127.2,412.0 L127.2,421.0 M127.2,16.7 L127.2,7.7  h0.01'/>	<g transform="translate(131.7,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
+	<path  d='M144.1,483.0 L144.1,492.0 M144.1,27.1 L144.1,18.1  h0.01'/>	<g transform="translate(148.6,500.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
 		<text>MK802</text>
 	</g>
-	<path  d='M148.6,412.0 L148.6,421.0 M148.6,16.7 L148.6,7.7  h0.01'/>	<g transform="translate(153.1,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
+	<path  d='M169.2,483.0 L169.2,492.0 M169.2,27.1 L169.2,18.1  h0.01'/>	<g transform="translate(173.7,500.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
 		<text>Model B</text>
 	</g>
-	<path  d='M170.0,412.0 L170.0,421.0 M170.0,16.7 L170.0,7.7  h0.01'/>	<g transform="translate(174.5,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
+	<path  d='M194.3,483.0 L194.3,492.0 M194.3,27.1 L194.3,18.1  h0.01'/>	<g transform="translate(198.8,500.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
 		<text>Model A</text>
 	</g>
-	<path  d='M191.3,412.0 L191.3,421.0 M191.3,16.7 L191.3,7.7  h0.01'/>	<g transform="translate(195.8,429.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
+	<path  d='M219.4,483.0 L219.4,492.0 M219.4,27.1 L219.4,18.1  h0.01'/>	<g transform="translate(223.9,500.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:end">
 		<text>TonidoPlug</text>
 	</g>
-	<path  d='M202.0,412.0 L211.0,412.0  h0.01'/>	<g transform="translate(225.2,412.0) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
+	<path  d='M232.0,483.0 L241.0,483.0  h0.01'/>	<g transform="translate(255.2,483.0) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
 		<text> 0</text>
 	</g>
-	<path  d='M202.0,368.1 L211.0,368.1  h0.01'/>	<g transform="translate(225.2,368.1) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
+	<path  d='M232.0,432.3 L241.0,432.3  h0.01'/>	<g transform="translate(255.2,432.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
 		<text> 100</text>
 	</g>
-	<path  d='M202.0,324.2 L211.0,324.2  h0.01'/>	<g transform="translate(225.2,324.2) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
+	<path  d='M232.0,381.7 L241.0,381.7  h0.01'/>	<g transform="translate(255.2,381.7) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
 		<text> 200</text>
 	</g>
-	<path  d='M202.0,280.2 L211.0,280.2  h0.01'/>	<g transform="translate(225.2,280.2) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
+	<path  d='M232.0,331.0 L241.0,331.0  h0.01'/>	<g transform="translate(255.2,331.0) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
 		<text> 300</text>
 	</g>
-	<path  d='M202.0,236.3 L211.0,236.3  h0.01'/>	<g transform="translate(225.2,236.3) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
+	<path  d='M232.0,280.4 L241.0,280.4  h0.01'/>	<g transform="translate(255.2,280.4) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
 		<text> 400</text>
 	</g>
-	<path  d='M202.0,192.4 L211.0,192.4  h0.01'/>	<g transform="translate(225.2,192.4) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
+	<path  d='M232.0,229.7 L241.0,229.7  h0.01'/>	<g transform="translate(255.2,229.7) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
 		<text> 500</text>
 	</g>
-	<path  d='M202.0,148.5 L211.0,148.5  h0.01'/>	<g transform="translate(225.2,148.5) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
+	<path  d='M232.0,179.1 L241.0,179.1  h0.01'/>	<g transform="translate(255.2,179.1) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
 		<text> 600</text>
 	</g>
-	<path  d='M202.0,104.5 L211.0,104.5  h0.01'/>	<g transform="translate(225.2,104.5) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
+	<path  d='M232.0,128.4 L241.0,128.4  h0.01'/>	<g transform="translate(255.2,128.4) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
 		<text> 700</text>
 	</g>
-	<path  d='M202.0,60.6 L211.0,60.6  h0.01'/>	<g transform="translate(225.2,60.6) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
+	<path  d='M232.0,77.8 L241.0,77.8  h0.01'/>	<g transform="translate(255.2,77.8) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
 		<text> 800</text>
 	</g>
-	<path  d='M202.0,16.7 L211.0,16.7  h0.01'/>	<g transform="translate(225.2,16.7) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
+	<path  d='M232.0,27.1 L241.0,27.1  h0.01'/>	<g transform="translate(255.2,27.1) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
 		<text> 900</text>
 	</g>
-	<path  d='M31.1,16.7 L31.1,412.0 L202.0,412.0 L202.0,16.7 L31.1,16.7 Z  h0.01'/>	<g transform="translate(17.6,214.4) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
+	<path  d='M31.1,27.1 L31.1,483.0 L232.0,483.0 L232.0,27.1 L31.1,27.1 Z  h0.01'/>	<g transform="translate(17.6,255.1) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
 		<text>Networking</text>
 	</g>
-	<g transform="translate(257.7,214.4) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
+	<g transform="translate(287.7,255.1) rotate(270)" style="stroke:none; fill:black; font-family:Bitstream Vera Sans; font-size:12.00pt; text-anchor:middle">
 		<text>Bandwidth (Mbits/sec)</text>
 	</g>
 </g>
 	<g id="gnuplot_plot_1" ><title>gnuplot_plot_1</title>
-<g style="fill:none; color:red; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+<g style="fill:none; color:red; stroke:currentColor; stroke-width:1.20; stroke-linecap:butt; stroke-linejoin:miter">
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '34.8,412.0 48.8,412.0 48.8,365.9 34.8,365.9 '/>
+		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '35.5,483.0 51.9,483.0 51.9,429.9 35.5,429.9 '/>
 	</g>
-	<path  d='M34.8,412.0 L34.8,366.0 L48.7,366.0 L48.7,412.0 L34.8,412.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '56.2,412.0 70.2,412.0 70.2,366.3 56.2,366.3 '/>
+	<path  d='M35.5,483.0 L35.5,430.0 L51.8,430.0 L51.8,483.0 L35.5,483.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
+		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '60.6,483.0 77.0,483.0 77.0,430.3 60.6,430.3 '/>
 	</g>
-	<path  d='M56.2,412.0 L56.2,366.4 L70.1,366.4 L70.1,412.0 L56.2,412.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '77.6,412.0 91.5,412.0 91.5,366.9 77.6,366.9 '/>
+	<path  d='M60.6,483.0 L60.6,430.4 L76.9,430.4 L76.9,483.0 L60.6,483.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
+		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '85.7,483.0 102.1,483.0 102.1,431.0 85.7,431.0 '/>
 	</g>
-	<path  d='M77.6,412.0 L77.6,367.0 L91.4,367.0 L91.4,412.0 L77.6,412.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '98.9,412.0 112.9,412.0 112.9,182.9 98.9,182.9 '/>
+	<path  d='M85.7,483.0 L85.7,431.1 L102.0,431.1 L102.0,483.0 L85.7,483.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
+		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '110.8,483.0 127.3,483.0 127.3,218.8 110.8,218.8 '/>
 	</g>
-	<path  d='M98.9,412.0 L98.9,183.0 L112.8,183.0 L112.8,412.0 L98.9,412.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '120.3,412.0 134.3,412.0 134.3,411.7 120.3,411.7 '/>
+	<path  d='M110.8,483.0 L110.8,218.9 L127.2,218.9 L127.2,483.0 L110.8,483.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
+		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '135.9,483.0 152.4,483.0 152.4,482.6 135.9,482.6 '/>
 	</g>
-	<path  d='M120.3,412.0 L120.3,411.8 L134.2,411.8 L134.2,412.0 L120.3,412.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '141.7,412.0 155.6,412.0 155.6,376.1 141.7,376.1 '/>
+	<path  d='M135.9,483.0 L135.9,482.7 L152.3,482.7 L152.3,483.0 L135.9,483.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
+		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '161.1,483.0 177.5,483.0 177.5,441.6 161.1,441.6 '/>
 	</g>
-	<path  d='M141.7,412.0 L141.7,376.2 L155.5,376.2 L155.5,412.0 L141.7,412.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '163.0,412.0 177.0,412.0 177.0,409.0 163.0,409.0 '/>
+	<path  d='M161.1,483.0 L161.1,441.7 L177.4,441.7 L177.4,483.0 L161.1,483.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
+		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '186.2,483.0 202.6,483.0 202.6,479.6 186.2,479.6 '/>
 	</g>
-	<path  d='M163.0,412.0 L163.0,409.1 L176.9,409.1 L176.9,412.0 L163.0,412.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '184.4,412.0 198.4,412.0 198.4,16.6 184.4,16.6 '/>
+	<path  d='M186.2,483.0 L186.2,479.7 L202.5,479.7 L202.5,483.0 L186.2,483.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
+		<polygon fill = 'currentColor' fill-opacity = '0.300000' points = '211.3,483.0 227.7,483.0 227.7,27.0 211.3,27.0 '/>
 	</g>
-	<path  d='M184.4,412.0 L184.4,16.7 L198.3,16.7 L198.3,412.0 L184.4,412.0 Z  h0.01'/>	<path  d='M41.8,366.1 L41.8,366.0 M37.3,366.1 L46.3,366.1 M37.3,366.0 L46.3,366.0 M63.1,366.5 L63.1,366.4 
-		M58.6,366.5 L67.6,366.5 M58.6,366.4 L67.6,366.4 M84.5,367.0 L84.5,366.9 M80.0,367.0 L89.0,367.0 
-		M80.0,366.9 L89.0,366.9 M105.9,187.2 L105.9,179.9 M101.4,187.2 L110.4,187.2 M101.4,179.9 L110.4,179.9 
-		M127.2,411.8 L127.2,411.7 M122.7,411.8 L131.7,411.8 M122.7,411.7 L131.7,411.7 M148.6,376.2 M144.1,376.2 
-		L153.1,376.2 M144.1,376.2 L153.1,376.2 M170.0,409.1 M165.5,409.1 L174.5,409.1 M165.5,409.1 L174.5,409.1 
-		M191.3,45.5 L191.3,16.7 M186.8,45.5 L195.8,45.5 M186.8,16.7 L195.8,16.7  h0.01'/></g>
+	<path  d='M211.3,483.0 L211.3,27.1 L227.6,27.1 L227.6,483.0 L211.3,483.0 Z  h0.01'/>	<path  d='M43.7,430.0 M39.2,430.0 L48.2,430.0 M39.2,430.0 L48.2,430.0 M68.8,430.5 L68.8,430.4 M64.3,430.5 
+		L73.3,430.5 M64.3,430.4 L73.3,430.4 M93.9,431.1 L93.9,431.0 M89.4,431.1 L98.4,431.1 M89.4,431.0 
+		L98.4,431.0 M119.0,223.7 L119.0,215.4 M114.5,223.7 L123.5,223.7 M114.5,215.4 L123.5,215.4 M144.1,482.8 
+		L144.1,482.7 M139.6,482.8 L148.6,482.8 M139.6,482.7 L148.6,482.7 M169.2,441.7 M164.7,441.7 L173.7,441.7 
+		M164.7,441.7 L173.7,441.7 M194.3,479.7 M189.8,479.7 L198.8,479.7 M189.8,479.7 L198.8,479.7 M219.4,60.4 
+		L219.4,27.1 M214.9,60.4 L223.9,60.4 M214.9,27.1 L223.9,27.1  h0.01'/></g>
 	</g>
-<g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path  d='M31.1,16.7 L31.1,412.0 L202.0,412.0 L202.0,16.7 L31.1,16.7 Z  h0.01'/></g>
+<g style="fill:none; color:black; stroke:currentColor; stroke-width:1.20; stroke-linecap:butt; stroke-linejoin:miter">
+	<path  d='M31.1,27.1 L31.1,483.0 L232.0,483.0 L232.0,27.1 L31.1,27.1 Z  h0.01'/></g>
 </g>
 </svg>
 
