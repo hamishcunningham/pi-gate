@@ -29,19 +29,19 @@ First, the devices we've got in some more detail.
 %[
 | *System* | *CPU* | *RAM* | *Power Consumption (Nominal/Max)* | *Cost (MSRP)* | *Original OS (Installed OS)* | *IO* |
 ---
-| APC 8750 | VIA 800MHz ARMv6 | 512MB DDR3 | 4W/13.5W | $49.00 | Android 2.3 (Apricot R3 Debian 7.0) | HDMI, VGA, USB, Audio I/O, Ethernet |
+| APC 8750 | VIA 800MHz ARMv6, VFPv2 | 512MB DDR3 | 4W/13.5W | $49.00 | Android 2.3 (Apricot R3 Debian 7.0) | HDMI, VGA, USB, Audio I/O, Ethernet |
 ---
-| BeagleBone Black | TI 1GHz ARMv7, Neon | 512MB DDR3 | 1W/2.3W | $45.00 | Angstrom (Ubuntu 12.10) | MicroHDMI, USB, Ethernet, GPIO |
+| BeagleBone Black | TI 1GHz ARMv7, NEON | 512MB DDR3 | 1W/2.3W | $45.00 | Angstrom (Ubuntu 12.10) | MicroHDMI, USB, Ethernet, GPIO |
 ---
-| Cubieboard | Allwinner 1GHz ARMv7, Neon | 512MB DDR3 | 2.5W/10W | $49.00 | Android 4.0.4 (Lubuntu 12.10) | HDMI, USB, Ethernet, Audio I/O, SATA, GPIO, Infrared |
+| Cubieboard | Allwinner 1GHz ARMv7, NEON | 512MB DDR3 | 2.5W/10W | $49.00 | Android 4.0.4 (Lubuntu 12.10) | HDMI, USB, Ethernet, Audio I/O, SATA, GPIO, Infrared |
 ---
 | DreamPlug | Kirkwood 1.2GHz ARMv5 | 512MB DDR2 | 5W/15W | $149.00 | Debian 6.0 | USB, 2x Ethernet, JTAG, Bluetooth, Wifi, Audio, SATA |
 ---
-| MK802+ Mini PC | Allwinner 1GHz ARMv7, Neon | 1GB DDR3 | 3W/10W | $59.00 | Android 4.0 (Lubuntu 12.04) | MiniHDMI, USB, Wifi |
+| MK802+ Mini PC | Allwinner 1GHz ARMv7, NEON | 1GB DDR3 | 3W/10W | $59.00 | Android 4.0 (Lubuntu 12.04) | MiniHDMI, USB, Wifi |
 ---
-| Pi Model B Rev. 2 | Broadcom 700MHz ARMv6 | 512MB DDR2 | 3.5W | $35.00 | Raspbian Debian 7.0 | HDMI, RCA, Audio, Ethernet, GPIO, USB |
+| Pi Model B Rev. 2 | Broadcom 700MHz ARMv6, VFPv2 | 512MB DDR2 | 3.5W | $35.00 | Raspbian Debian 7.0 | HDMI, RCA, Audio, Ethernet, GPIO, USB |
 ---
-| Pi Model A | Broadcom 700MHz ARMv6 | 256MB DDR2 | 2.5W | $25.00 | Raspbian Debian 7.0 | HDMI, RCA, Audio, GPIO, USB |
+| Pi Model A | Broadcom 700MHz ARMv6, VFPv2 | 256MB DDR2 | 2.5W | $25.00 | Raspbian Debian 7.0 | HDMI, RCA, Audio, GPIO, USB |
 ---
 | TonidoPlug2 | Kirkwood 800MHz ARMv5 | 512MB DDR3 | 5W/13W | $119.00 | Debian 6.0 | Ethernet, Wifi, USB, SATA |
 %]
@@ -66,7 +66,7 @@ each device. Here's what they all look like (click for larger images):
 |
 ---
 |
-%(images/hardware/cubieboard.jpg, %image(images/hardware/thumbs/cubieboard.jpg, CubieBoard, 150))
+%(images/hardware/cubieboard.jpg, %image(images/hardware/thumbs/cubieboard.jpg, Cubieboard, 150))
 |
 %(http://cubieboard.org/, Cubieboard)
 | %\ %\ %\ %\ |
@@ -411,11 +411,15 @@ so that we can evaluate future devices as well.
 
 Six different benchmarks have been carried out, which break down into three
 categories. Input/output, theoretical performance, and practical performance.
-For I/O, iperf has been used to measure networking performance, and hdparm to
-measure hard disk cache and read performance. Theoretical performance was
-measured through the classic dhrystone and whetstone integer and floating
-point tests. The practical tests were a bzip2 compression of a 54 MB wav file
-and the MP3 encoding of it using lame.
+For I/O, %(http://iperf.sourceforge.net/, iperf) has been used to measure
+networking performance, and
+%(http://sourceforge.net/projects/hdparm/, hdparm) to measure hard disk cache
+and read performance. Theoretical performance was measured through the
+classic %(http://en.wikipedia.org/wiki/Dhrystone, Dhrystone) integer and
+%(http://en.wikipedia.org/wiki/Whetstone_%28benchmark%29, Whetstone) floating
+point tests. The practical tests were a %(http://www.bzip.org/, bzip2)
+compression of a 54 MB wav file  the MP3 encoding of it using
+%(http://lame.sourceforge.net/, lame).
 
 Each benchmark has been run 3 times. Mean results are plotted below, with the
 error bars showing the minimum and maximum value. The script we used to run
@@ -431,7 +435,7 @@ For all I/O tests, higher numbers (greater bandwidth) is better.
 
 Networking performance quite nicely breaks down into three groups. We see top
 performance from the DreamPlug and TonidoPlug with their gigabit ethernet.
-The APC 8750, BeagleBone, CubieBoard, and Pi Model B all have a pretty good
+The APC 8750, BeagleBone, Cubieboard, and Pi Model B all have a pretty good
 showing of their 100 megabit ethernet, although the Model B's performance is
 a bit sub bar at around 70 mbits. For this test the Model A, which doesns't
 have onboard ethernet, used a USB 1.1 ethernet adapter I had lying around.
@@ -453,14 +457,14 @@ performance. In general these speeds are all so quick (greater than 120 MB/s)
 that the cache speed exceeds hard disk speeds and so the caching will have a
 positve impact.
 
-The worry here is the signifcantly lower cache speed of the CubieBoard. This
+The worry here is the signifcantly lower cache speed of the Cubieboard. This
 indicates that cacheing will not have much of an impact. For certain use
 cases where there are many repeated small reads, such as serving web pages,
 this is less than ideal.
 
 %image(images/hardware/results/disk_cache.svg, Disk Cache)
 
-The CubieBoard, DreamPlug, and TonidoPlug were all benchmarked with a SATA
+The Cubieboard, DreamPlug, and TonidoPlug were all benchmarked with a SATA
 hard disk, and consequently have significantly higher read speeds. The
 performance of the other devices is about as expected and consistent with
 mid-range flash memory. Obviously, better SD cards (e.g. Class 10) where
@@ -476,7 +480,55 @@ read performance. This is particularly true for flash memory like SD cards.
 %#theoretical
 %2 Theoretical
 
+Higher MIPS and MFLOPS values indicate greater performance.
+
+MIPS, or million instructions per second, provides a rough indicator of
+what I think of as base system performance. Most regular program functions
+take advantage of only integer math operations, such as pointers in C
+programs, and so the Dhrystone helps us evaluate what many system operations
+will perform like. MFLOPS, or million floating point operations per second,
+gives an evaluation of a processor's performance in executing the more
+complex mathmatical operations we use, for example, in most games.
+
+For integer math, we can quite clearly see the impact of processer
+architecture and clock speed. The TonidoPlug ranks rock bottom as an ARMv5
+chip, despite having a higher clock than a Raspberry Pi with its ARMv6 - 
+800 vs 700 MHz. The DreamPlug uses the same ARMv5 and just about matches the
+Pi, but at a 50% faster clock speed of 1.2 GHz.
+
+The APC uses the same ARMv6 as the Pi, but at 800 MHz just out performs it.
+The dynamic overclocking of the Pi, if enabled, should easily match or exceed
+this performance it. The real winners here though are the ARMv7 based
+systems -- the BeagleBone Black, Cubieboard, and MK802 -- with performance
+more than double the Pi, despite only a 1 GHz clock speed.
+
 %image(images/hardware/results/dhry_mips.svg, Integer Math)
+
+In contrast however, it is interesting to see how the ARMv7 chips perform in
+terms of floating point performance. All of them integrate NEON
+%(http://en.wikipedia.org/wiki/Floating-point_unit, FPUs), or floating
+point units. FPUs are special additional chips added next to, or in this case
+integrated into, the main CPU. They aid in carrying out floating point math
+as a specialized sub-processor. The NEON FPU is designed for carrying out
+vector mathmatics, which are typically associated with multimedia functions
+such as H.264 decoding.
+
+The benchmark results show a worse performance for the NEON FPU than the
+ARMv6 based systems -- the APC and Pi -- which are armed with more generic
+previous generation VFPv2 FPUS. The lower performance is probably a result
+of the fact that the Whetstone test is a generic benchmark. It's not
+optimized for vector mathmatics and takes no real advantage of the potential
+parallelization that the NEON FPU can add.
+
+Unfortuantely, the lack of vectorization is typical of most software running
+under Linux which suggests that for most cases of pure processing that the
+ARMv6 systems are the way to go. Based on the in performance between the APC
+and Pi with their 100 MHz clock difference, the Pi over clocked could probably
+hit MFLOPS of around 350. While this is still about 1/10th the perforamcen of
+my desktop, it still represents the best available in terms of thes low-cost
+computing devices. The ARMv5 Tonido and DreamPlug systems have no FPU and 
+clearly have lower performance.
+
 %image(images/hardware/results/whet_mflops.svg, Floating Point Math)
 
 
