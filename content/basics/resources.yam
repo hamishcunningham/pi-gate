@@ -9,7 +9,8 @@ battery monitor)) is available from
 https://launchpad.net/~hamish-dcs/+archive/pi-gate (an Ubuntu
 PPA%footnote(PPA: Personal Package Archive. Usually used for Ubuntu software
 packages but also useful for certain types of packages for the Raspberry Pi.)
-set up to be suitable for Raspbian).
+set up to be suitable for Raspbian). See %(#installing, the next section) for
+installation instructions.
 
 Source code for all the projects is available on the %(http://github.com/, Git
 Hub) open source hosting site. The project is called
@@ -26,6 +27,57 @@ This will create a directory ^pi-tronics^ on your local system. See the file
 You can also browse the code on-line -- here's the
 %(https://github.com/hamishcunningham/pi-tronics/blob/master/basics/bin/flood-alarm.sh,
 flood alarm script), for example.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#installing
+%3 Installing Pi-GATE Software
+
+To install from our Ubuntu personal archive:
+
+*1.* Add this line to /etc/apt/sources.list:
+
+%code(lang=Bash)<
+deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main
+%>
+
+You can use a text editor (e.g. nano) to do this, or paste this one-liner into
+a terminal prompt:
+
+%code(lang=Bash)<
+echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main |sudo tee -a /etc/apt/sources.list
+%>
+
+*2.* Import the %(http://www.gnupg.org/, GPG) encryption key from Ubuntu so
+that the Pi can verify the package's validity:
+
+%code(lang=Bash)<
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com --recv-key 6C12C1CF
+%>
+
+*3.* Update your list of available packages (this may take a couple of
+minutes):
+
+%code(lang=Bash)<
+  sudo apt-get update
+%>
+
+*4.* Install the package (where "package-name" is one of our packages, e.g.
+"%(mopi.html#simbamon, simbamond)" for %(mopi.html, the battery monitor)):
+
+%code(lang=Bash)<
+  sudo apt-get install package-name
+%>
+
+And that's it!
+
+Note: the above gets you the most recent stable release; if you want to live
+on the edge, you can get more recent experimental builds by adding the
+snapshot PPA to your sources list, e.g.:
+
+%code(lang=Bash)<
+echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate-snapshots/ubuntu precise main |sudo tee -a /etc/apt/sources.list
+%>
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

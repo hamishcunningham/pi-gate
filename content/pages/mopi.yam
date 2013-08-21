@@ -257,7 +257,10 @@ simulated).
 %3 Installing SimBaMon
 
 The battery monitor software is available from an Ubuntu Personal Package
-Archive (PPA). To install from this archive the following four steps:
+Archive (PPA).%footnote(The main archive (for stable releases) is at
+https://launchpad.net/~hamish-dcs/+archive/pi-gate with a development snapshot
+archive at %(https://launchpad.net/~hamish-dcs/+archive/pi-gate-snapshots).)
+To install from this archive:
 
 *1.* Add this line to /etc/apt/sources.list:
 
@@ -272,14 +275,15 @@ a terminal prompt:
 echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main |sudo tee -a /etc/apt/sources.list
 %>
 
-*2.* Import the %(http://www.gnupg.org/, GPG) encryption key from Ubuntu so that
-the Pi can verify the package's validity:
+*2.* Import the %(http://www.gnupg.org/, GPG) encryption key from Ubuntu so
+that the Pi can verify the package's validity:
 
 %code(lang=Bash)<
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com --recv-key 6C12C1CF
 %>
 
-*3.* Update your list of available packages (this may take a couple of minutes):
+*3.* Update your list of available packages (this may take a couple of
+minutes):
 
 %code(lang=Bash)<
   sudo apt-get update
