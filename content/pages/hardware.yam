@@ -524,7 +524,7 @@ Unfortuantely, the lack of vectorization is typical of most software running
 under Linux which suggests that for most cases of pure processing that the
 ARMv6 systems are the way to go. Based on the in performance between the APC
 and Pi with their 100 MHz clock difference, the Pi over clocked could probably
-hit MFLOPS of around 350. While this is still about 1/10th the perforamcen of
+hit MFLOPS of around 350. While this is still about 1/10th the performance of
 my desktop, it still represents the best available in terms of thes low-cost
 computing devices. The ARMv5 Tonido and DreamPlug systems have no FPU and 
 clearly have lower performance.
@@ -536,7 +536,22 @@ clearly have lower performance.
 %#Practical
 %2 Practical
 
-%image(images/hardware/results/bzip2_min.svg, Bzip2 Compression)
+Lower times indicate greater performance.
+
+These two benchmarks, bzip2 compression and MP3 encoding, have been run to
+give a more practical indicating of relative performance through relatively
+common complex computational tasks. bzip2, as a lossless compression
+algorithm consists almost entirely of integer math and places load on memory
+and disk I/O.
+
+MP3 encoding is on the other hand a "lossy" compression technique. Not all
+of the data is retained, which allows for signficantly smaller file sizes.
+This is what can cause the distortions we hear in low quality MP3 recordings
+when compared to the original uncompressed audio file. MP3 encoding consists
+mostly of floating point arithmetic, such as Fast Fourier Transforms, and
+some load on memory.
+
+%image(images/hardware/results/bzip2_min.svg, bzip2 Compression)
 %image(images/hardware/results/lame_min.svg, MP3 Encoding)
 
 
