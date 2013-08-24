@@ -1,0 +1,287 @@
+Blink IP
+
+_What's My IP? Tools to Find the Pi's IP Address_
+%meta(summary=What's My IP? Tools to Find the Pi's IP Address)
+
+_%(about.html#hamish, Hamish Cunningham), August 2013_
+
+%contents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Introduction: Catch-22
+
+There's a familiar problem when you work with a Pi without a monitor -- how to
+log in?
+
+You've plugged your Pi onto a perfectly ethernet connection, the operating
+system has worked its magic and the LINK LED is merrily blinking away to tell
+you that there's traffic on the wire... but you don't know the address! (Or:
+you've got a USB WiFi dongle, and an available network, but your Pi doesn't
+know the passphrase.)
+
+You need to IP address so you can log in (e.g. via ^ssh^), but you need to log
+in to find out the IP address.
+%(http://en.wikipedia.org/wiki/Catch-22_(logic\), Catch-22)!
+
+This page discusses various solutions to the problem:
+
+# using the Pi'd status LED to %(#blink, blink the IP number)
+# writing the IP address %(#file, to file) on the SD card
+# using the %(#pagekite, PageKite) proxy system
+
+We'll also note %(#other, some other approaches) at the end (e.g. sending an
+SMS).
+
+The rest of this section describes how to %(#ifconfig, find the Pi's IP
+address) which will then be used by all the other methods, and also how to get
+your Pi to %(#wifi, connect to a WiFi network) without logging in.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#ifconfig
+%2 Getting the IP Address via ^ifconfig^
+
+All methods for informing you of the IP address require a way to get that
+address in the first place. For this we'll use the ^ifconfig^ command, which
+stands for "interface configuration", the interfaces in question being the
+wired and wireless network ports on the Pi.
+
+If you open a terminal on your Pi and run ^ifconfig^ you'll see output
+something like this:
+
+%<
+eth0      Link encap:Ethernet  HWaddr b8:00:eb:73:00:9a
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:75 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:75 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:10493 (10.2 KiB)  TX bytes:10493 (10.2 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr 00:0f:00:38:00:8a
+          inet addr:192.168.68.189  Bcast:192.168.68.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:856 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:499 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:122622 (119.7 KiB)  TX bytes:58536 (57.1 KiB)
+%>
+
+This describes three network interfaces:
+
+# the wired link, ^eth0^
+# the "loopback" link, which is a virtual interface pointing back at the local
+  machine (or _localhost_)
+# the wireless link, if one is connected, ^wlan0^
+
+Each link may (or may not) have an IP address. In the above, the wired link is
+not connected so has no address. The loopback link always has the same address
+-- ^127.0.0.1^, and is not interesting in this context as we can't use that
+address for logging in to our Pi. So in this case we're interested in the IP
+address given for ^wlan0^, which is ^192.168.68.189^.
+
+Here's a shell command which takes the output of ^ifconfig^, picks out the
+first non-local IP address and splits it into it's four number groups:
+
+%code(lang=Bash)<
+MYIP=`ifconfig |grep -v 127.0.0.1 |grep 'addr:' | head -1 |\
+  sed -e 's,.*addr:,,' -e 's, .*,,' -e 's,\., ,g'`
+echo $MYIP
+%>
+
+The two ^grep^s filter out
+
+- the localhost address (using the ^-v^ flag to exclude all matching lines),
+  and then
+- all lines that don't match the "addr:" pattern
+
+We use ^head -1^ to select only the first address. Finally, the ^sed^ (stream
+editor) command removes the "addr:" part of the line, then everything after
+the first space, and then changes all the "."s to spaces.
+
+The output will be something like ^192 168 68 189^. Now let's see how we can
+communicate that to the Pi's user.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#wifi
+%2 Connecting to WiFi
+
+Another conundrum hits us when we've got a WiFi dongle connected to the Pi and
+there's a network available, but no way to tell the Pi about the network SSID
+and passphrase.
+
+The solution is to take the SD card to another machine, mount the filesystem
+and add the network details to the file
+^/etc/wpa_supplicant/wpa_supplicant.conf^. The simple cases look like this:
+
+%code(lang=Bash)<
+network={
+  ssid="MyWifi"
+  psk="1133557799"
+  key_mgmt=WPA-PSK
+}
+%>
+
+One very good policy, if you have a phone or a laptop that can create a wifi
+hotspot, is to put those details into your Pi's WPA config -- then whenever
+you need to log into the Pi you can fire up your phone's network and your Pi
+will connect automagically.
+
+Now let's look at how to get the IP from the Pi without logging in.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#blink
+%1 Blink the Status LED
+
+The Pi has a set of LEDs in one corner of the board that convey various
+messages:
+
+%image(images/status-led.jpg, The status LED, 500) %br
+(Image from:
+%(http://www.rpiblog.com/2012/12/raspberry-pi-status-indicator-led-info.html,
+RPIBlog).)
+
+One good option for IP address discovery is to make the status LED (which is
+marked either "ACT" -- as in the image above -- or "OK" depending on which
+revision you have). The question then, is "who's going to run the code to
+blink the LED?" I've written a daemon to do this -- the code is
+%(https://github.com/hamishcunningham/pi-tronics/tree/master/blinkip,
+available on GitHub), and described in the rest of this section.
+
+To access the Pi's status LED, we use the ^/sys/class^ tree, which makes the
+hardware available as ^leds/led0/brightness^. We can define functions to turn
+the LED on and off like this%footnote(All the code here is in the
+%(http://www.gnu.org/software/bash/manual/bashref.html, Bash) shell, a
+standard piece of free software kit on the Pi and many other systems.):
+
+%code(lang=Bash)<
+  LED=/sys/class/leds/led0/brightness
+
+  bright() { echo 1 >$LED; }
+  dark()   { echo 0 >$LED; }
+%>
+
+And here are a couple of utility functions to pause for various durations:
+
+%code(lang=Bash)<
+  pause() { dark; sleep 2.5; }
+  shortpause() { dark; sleep 1; }
+%>
+
+We'll use these functions to blink the IP address, along with three
+conventions:
+
+- each IP number group is separated from the rest by a period of rapid
+  blinking (which also signals the start and end of the whole sequence)
+- each digit is blinked as a series of bright periods (of about a third of a
+  second each)
+- when we have a zero we represent it as ten (so that we can distinguish zero
+  from the pauses between digits)
+
+These conventions are implemented like this:
+
+%code(lang=Base)<
+  rapid()  {                                # rapid blinking function
+    i=0
+    while [ $i -lt 15 ]                     # 15 rapid blinks
+    do
+      bright; sleep 0.05; dark; sleep 0.05  # 5 hundredths of a second
+      i=`expr $i + 1`                       # increment the loop index
+    done
+  }
+
+  showdigit() {                             # individual digit function
+    d=$1
+    [ $d = 0 ] && d=10                      # show "0" as "10"
+    for((b=0; b<$d; b++))                   # loop from 0 to the digit value
+    do
+      bright; sleep 0.3; dark; sleep 0.4
+    done
+  }
+%>
+
+Putting it all together, here's the function to blink the whole IP address:
+
+%code(lang=Bash)<
+  blink() {
+    rapid; rapid                            # blink rapidly to start with
+
+    for block in $1 $2 $3 $4                # cycle through each address block
+    do
+      numdigits=${#block}
+      for ((i=0; i < $numdigits; i++))      # for each digit
+      do
+        pause
+        showdigit ${block:$i:1}             # call showdigit on 1 character
+      done
+
+      shortpause; rapid
+      shift
+    done
+  }
+%>
+
+We then call the function like this (using the code from %(#ifconfig, the
+section on finding the IP)):
+
+%code(lang=Bash)<
+  MYIP=`ifconfig |grep -v 127.0.0.1 |grep 'addr:' | head -1 |\
+    sed -e 's,.*addr:,,' -e 's, .*,,' -e 's,\., ,g'`
+  blink $MYIP
+%>
+
+The complete code
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/blinkip/blinkip.sh,
+is here).
+
+There's one final problem, though -- who is going to call this program if I
+can't log in?!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#file
+%1 Write a File to the SD Card
+
+Another option is to have the IP address written to a file on your Pi's SD
+card, then to shutdown and read the file on another device (if you have one
+handy with a card reader). The BlinkIP code described in the previous section
+also does this for you.
+
+It isn't quite as reliable as the other methods, because it is possible that
+the IP address will change when you put the card back in the Pi and boot up
+again.
+
+BlinkIP puts the IP data into ^/home/pi/.blink-ip.txt^ by default.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#pagekite
+%1 Run PageKite
+
+TODO using the %(https://pagekite.net/, PageKite) system
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#other
+%1 Other Approaches
+
+Robbie Wiggins has
+%(http://raspberrypihell.blogspot.com/2013/08/send-ip-info-on-boot-up.html,
+a nice script) to send a text message with the IP address on boot up.
+
+It should also be very possible to Tweet your IP, e.g. using the
+%(notipi.html#pi-twitter, programmatic Twitter) code in our %(notipi.html,
+Notifications) material.
+
+Finally, if you're psychic, you don't need any of these methods -- just put
+your forehead close to the ethernet cable and listen for the magic numbers.

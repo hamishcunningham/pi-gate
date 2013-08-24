@@ -17,7 +17,7 @@ SSH_TARGET_DIR=/var/www
 # list of pages etc. ########################################################
 STANDARD_PAGES=\
 about.html basics.html schools.html notipi.html legocases.html hardware.html \
-mopi.html
+mopi.html blinkip.html
 NO_META_PAGES=piroomba.html
 DRAFT_PAGES=
 
