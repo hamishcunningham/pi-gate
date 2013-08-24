@@ -1,8 +1,8 @@
 Blink IP
 
-_What's My IP? Tools to Find the Pi's IP Address Without Logging In_
-%meta(summary=What's My IP? Tools to Find the Pi's IP Address Without Logging
-In)
+_What's my IP? Tools to find the Pi's IP address without logging in_
+%meta(summary=What's my IP? Tools to find the Pi's IP address without logging
+in)
 
 _%(about.html#hamish, Hamish Cunningham), August 2013_
 
@@ -121,7 +121,7 @@ and passphrase.
 
 The solution is to take the SD card to another machine, mount the filesystem
 and add the network details to the file
-^/etc/wpa_supplicant/wpa_supplicant.conf^. The simple cases look like this:
+^/etc/wpa\_supplicant/wpa\_supplicant.conf^. The simple cases look like this:
 
 %code(lang=Bash)<
 network={
@@ -301,10 +301,10 @@ network address translation (NAT) gateways and the like, and so we can't
 easily serve files or make connections. PageKite solves this problem by
 providing a secure proxy service. A tiny amount of data is stored on a server
 in Iceland%footnote(You can also run a PageKite server on your own machine if
-you like, though this is probably an advanced topic.) (which now has some of
-the best Internet legal protection in the world, incidentally) -- the rest of
-it stays safe on your own machines, and the spies just have to pick their
-noses and twiddle their thumbs instead.
+you like, though this is quite an advanced topic.) (which now has some of the
+best Internet legal protection in the world, incidentally) -- the rest of it
+stays safe on your own machines, and the spies just have to pick their noses
+and twiddle their thumbs instead.
 
 I first used PageKite to get access to the %(basics.html#flood-alarm, flood
 alarm in my basement). It allows me to log into that Pi by doing:
@@ -334,6 +334,10 @@ To install the system on your Pi, run these commands in a terminal:
   apt-get install pagekite
 %>
 
+You also need the _netcat_, or ^nc^ command installed if it isn't already.
+This is a standard gizmo, so you can install it with ^sudo apt-get install
+netcat^.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Configuring PageKite
@@ -348,9 +352,8 @@ Run this command in a terminal:
   pagekite --add 22 ssh:MY_KITE_NAME.pagekite.me
 %>
 
-Add this to the file ^~/.ssh/config^:
-
-TODO on clients too?
+Add this to the file ^~/.ssh/config^ *on your client, not the Pi* (i.e. on the
+machine that you want to connect _from_):
 
 %code(lang=Bash)<
   Host *.pagekite.me
