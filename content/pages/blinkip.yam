@@ -318,7 +318,7 @@ PageKite isn't that easy to set up though -- I'll finish this section with a
 short guide to how I got SSH login to work.
 
 First, head on over to https://pagekite.net/ and get a kite (they operate a
-%(https://pagekite.net/signup/?more=bw, "pay as you like") arrangement). We'll
+"%(https://pagekite.net/signup/?more=bw, pay as you like)" arrangement). We'll
 refer to your kite as ^MY\_KITE\_NAME^ below.
 
 
@@ -336,8 +336,11 @@ To install the system on your Pi, run these commands in a terminal:
 %>
 
 You also need the _netcat_, or ^nc^ command installed if it isn't already.
-This is a standard gizmo, so you can install it with ^sudo apt-get install
-netcat^.
+This is a standard gizmo, so you can install it with
+
+%code(lang=Bash)<
+  sudo apt-get install netcat
+%>
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
