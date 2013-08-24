@@ -134,7 +134,8 @@ network={
 One very good policy, if you have a phone or a laptop that can create a wifi
 hotspot, is to put those details into your Pi's WPA config -- then whenever
 you need to log into the Pi you can fire up your phone's network and your Pi
-will connect automagically.
+will connect automagically. (A handy command to see what the connection is
+getting up to when logged in is this: ^wpa\_cli status^.)
 
 Now let's look at how to get the IP from the Pi without logging in.
 
