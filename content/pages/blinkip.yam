@@ -308,11 +308,14 @@ stays safe on your own machines, and the spies just have to pick their noses
 and twiddle their thumbs instead.
 
 I first used PageKite to get access to the %(basics.html#flood-alarm, flood
-alarm in my basement). It allows me to log into that Pi by doing:
+alarm in my basement), which is behind my home router and a NAT. It allows me
+to log into that Pi by doing:
 
 %code(lang=Bash)<
   ssh -l pi flooding.pagekite.me
 %>
+
+Very nice.
 
 PageKite isn't that easy to set up though -- I'll finish this section with a
 short guide to how I got SSH login to work.
@@ -336,7 +339,7 @@ To install the system on your Pi, run these commands in a terminal:
 %>
 
 You also need the _netcat_, or ^nc^ command installed if it isn't already.
-This is a standard gizmo, so you can install it with
+This is a standard gizmo, so you can install it with:
 
 %code(lang=Bash)<
   sudo apt-get install netcat
@@ -346,34 +349,31 @@ This is a standard gizmo, so you can install it with
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Configuring PageKite
 
-To configure the system:
-
-- at https://pagekite.net/ create MY\_KITE\_NAME and copy the "secret"
-
-Run this command in a terminal:
+To configure the system, first go to https://pagekite.net/ create
+MY\_KITE\_NAME and copy the "secret" (we'll call this YOURSECRET below). Then
+run this command in a terminal (on the Pi):
 
 %code(lang=Bash)<
   pagekite --add 22 ssh:MY_KITE_NAME.pagekite.me
 %>
 
-Add this to the file ^~/.ssh/config^ *on your client, not the Pi* (i.e. on the
-machine that you want to connect _from_):
+Edit ^/etc/pagekite.d/10\_account.rc^ and:
+
+- replace "NAME.pagekite.me" with MY\_KITE\_NAME
+- replace "YOURSECRET" with the shared secret (available at
+  https://pagekite.net/home/)
+- remove the line "abort\_not\_configured" and the comment above it.
+
+Now rename the file ^/etc/pagekite.d/80\_sshd.rc.sample^ to ^80\_sshd.rc^.
+
+Finally, add this to the file ^~/.ssh/config^ *on your client, not the Pi*
+(i.e. on the machine that you want to connect _from_):
 
 %code(lang=Bash)<
   Host *.pagekite.me
     CheckHostIP no
     ProxyCommand /bin/nc -X connect -x %h:443 %h %p
 %>
-
-Edit ^/etc/pagekite.d/10\_account.rc^ and:
-
-- replace "NAME.pagekite.me" with the name of one of your pagekites
-- replace "YOURSECRET" with the shared secret value from
-  https://pagekite.net/home/
-- remove the line "abort\_not\_configured" and the comment above it.
-
-Finally, rename the file ^/etc/pagekite.d/80\_sshd.rc.sample^ to
-^80\_sshd.rc^.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
