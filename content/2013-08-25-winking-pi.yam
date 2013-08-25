@@ -1,0 +1,30 @@
+Winking Pi: Solving the IP Address Catch-22
+
+I can fit a Pi in my overnight bag, but I can't fit a monitor. How can I
+remote log into my Pi when I'm on the road? This is a Catch-22 -- I need a
+network address (an _IP address_) to log in, but to get the address I need to
+be logged in. 
+
+A related question: I want to connect my Pi to a new WiFi network, but to
+connect I need to give the beast the network SSID and passphrase -- and again
+I need to log in first...
+
+There are several solutions to the first problem -- one good one is to set up
+your Pi so that it blinks its IP address on the status LED. For the second
+problem there are also several solutions, including editing the WiFi config on
+another machine that has an SD card reader, or setting up access to your
+phone's WiFi hotspot.
+
+I've written a %(pages/blinkip.html, Raspbian package called BlinkIP) to do
+some of this stuff, and you can download it from our new
+%(https://launchpad.net/~hamish-dcs/+archive/pi-gate, Ubuntu-hosted package
+archive).
+
+Happy networking :-)
+
+%meta(
+  summary=Logging into the Pi without a monitor,
+  tags=network\,ip address\,wifi\,gpio\,pi-tronics\,pi\,raspberrypi\,gate,
+)
+
+*%(pages/blinkip.html, Read the main article).*

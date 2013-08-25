@@ -445,7 +445,7 @@ footer.post-info {
 .article-thumb {
   float: right;
 }
-#featured a.article-thumb { display: none; }
+/* #featured a.article-thumb { display: none; } */
 span.tag-list a { font-style: italic !important; }
 img.cow-img { display: block; margin-left: auto; margin-right: auto; }
 #footer-home-link a {

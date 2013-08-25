@@ -39,7 +39,7 @@ help:
 	@echo '  to the list STANDARD_PAGES in the Makefile                  '
 	@echo '- to upload, do "GE1_USER=my-account-name make gateupload"    '
 	@echo '- to upload draft, do "EC2_PEM=my-id.pem make ec2upload"      '
-	@echo '- to create post, do "TITLE=my-title make post"               '
+	@echo '- to create post, do "SLUG=my-slug make post"                 '
 	@echo '                                                              '
 	@echo 'More details of targets (or see README.html):                 '
 	@echo '   html                  (re)generate the web site            '
@@ -192,19 +192,19 @@ yam-clean:
           rm -f $$HTML; \
         done
 
-# post; assumed TITLE has the title/slug...
+# post; assume SLUG has the title/slug...
 post:
-	@[ -z "$${TITLE}" ] && { echo 'set TITLE to something!'; exit 1; } || :
-	@POSTFILE=`date "+%Y-%m-%d"`-$${TITLE}.yam; \
+	@[ -z "$${SLUG}" ] && { echo 'set SLUG to something!'; exit 1; } || :
+	@POSTFILE=`date "+%Y-%m-%d"`-$${SLUG}.yam; \
           [ -f content/$${POSTFILE} ] || \
-            echo "A post about $${TITLE}..." > content/$${POSTFILE}; \
+            echo "A post about $${SLUG}..." > content/$${POSTFILE}; \
           echo "created content/$${POSTFILE}"; \
           git add -v content/$${POSTFILE}; \
           cd content/images/articles >/dev/null && \
-          cp -n default.jpg $${TITLE}.jpg && cd thumbs >/dev/null && \
-          cp -n default.jpg $${TITLE}.jpg && cd .. && \
-          git add -v $${TITLE}.jpg thumbs/$${TITLE}.jpg && \
+          cp -n default.jpg $${SLUG}.jpg && cd thumbs >/dev/null && \
+          cp -n default.jpg $${SLUG}.jpg && cd .. && \
+          git add -v $${SLUG}.jpg thumbs/$${SLUG}.jpg && \
           echo "now supply better versions of "\
-          "$${TITLE}.jpg and thumbs/$${TITLE}.jpg in content/images/articles"
+          "$${SLUG}.jpg and thumbs/$${SLUG}.jpg in content/images/articles"
 
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post
