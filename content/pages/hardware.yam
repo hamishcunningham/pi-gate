@@ -551,8 +551,54 @@ when compared to the original uncompressed audio file. MP3 encoding consists
 mostly of floating point arithmetic, such as Fast Fourier Transforms, and
 some load on memory.
 
+In general bzip2 performance is pretty similar between devices. Everything
+performs on the same order of magnitude and in general looks to be pretty
+well linked to clock speed. The BeagleBone, Cubieboard, MK802, and DreamPlug
+all with 1 GHz+ CPUs are perform better. You'd ordinarily expect in this case
+then that the DreamPlug would exceed the other three with the 1.2 GHz clock,
+but in this case the older ARMv5 performs sligthly poorer. The Pi takes the
+longest to compress with its 700 MHz CPU, with the APC and TonidoPlug just
+ahead of it with slightly faster 800 MHz CPUs. The APC comes out just ahead
+though possibly due to it's newer ARMv6 architecture.
+
 %image(images/hardware/results/bzip2_min.svg, bzip2 Compression)
+
+Variation in MP3 encoding performance as expected follows floating point
+performance, with the DreamPlug and TonidoPlug at rock bottom with their lack
+of FPU. The three NEON ARMv7 systems come in approximately second, with the
+ARMv6 systems coming in first.
+
 %image(images/hardware/results/lame_min.svg, MP3 Encoding)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#Thoughts
+%2 Some thoughts
+
+What we've seen evidenced in the benchmarks are mostly architectural
+differences rather than fundamental differences between devices. Gigabit
+ethernet is of course faster, and so are hard drives. Faster CPUs go faster,
+and FPUs do indeed aid performance. The lackluster perforamnce of NEON is a
+bit of an upset. In general though there's been no real difference between
+devices.
+
+However, we can see some interesting performance differences by factoring in
+power consumption. (After all, CPU usuage usually is the greatest drain in
+power in these sorts of devices.) Bearing in mind that the power information
+presented here is theoretical, not measured, we can see some interesting
+things.
+
+- The APC which performs better than the Pi due to its faster clock may not \
+really be that much better due to its higher power consumption. There's only \
+a 0.5 W difference from the Model B, the Model A draws 1.5 W less.
+
+- The BeagleBone draws only 1 W, which the lowest of any of the devices. \
+For the same power you could have three BeagleBones or one CubieBoard or \
+MK802. Five instead of a DreamPlug. In terms of absolute processing \
+capability for power use this makes much more sense.
+
+The same sort of analysis can be carried out on device cost. One DreamPlug or
+six Model A Pis...
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
