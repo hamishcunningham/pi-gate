@@ -57,7 +57,7 @@ Fred wants a quadcopter for his next birthday.
 |
 *Peter Wallis*
 
-%image(images/piroomba/roopiTop.jpg, Pete's hoover, 250)
+%image(images/piroomba/roopiTop.jpg, Pete's hoover, 150)
 |
 %br %br
 %(http://www.cfpm.org/~peter/, Pete) is an old school electronics hacker and
@@ -96,6 +96,29 @@ other.
 %image(http://www.transitiontogether.org.uk/wp-content/uploads/2012/06/contactbike.jpg,
 Tandem++, 150))
 (Cycling on Dartmoor is easier if you bring your friends, apparently.)
+|
+%]
+---
+%#lubo
+%[
+|
+*Lubo Bonchev* 
+
+%image(images/lubo.jpg, Lubomir Bonchev, 150) |
+%br %br
+%(http://bg.linkedin.com/pub/lubomir-bonchev/9/355/751, Lubo)
+has worked on everything from solar panels to satelites, and is now
+building %(mopi.html, hot-swap mobile Pi power supplies).
+(And he has an encyclopaedic knowledge of the post-fermentation properties of
+the Mavrud grape!)
+
+| %\ %\ %\ %\ %\ %\ %\  %\ %\ %\ %\ %\ %\ %\  %\ %\ %\ %\ %\ %\ %\ 
+|
+%br %br
+%(http://bg.linkedin.com/pub/lubomir-bonchev/9/355/751,
+%image(images/selcom.jpg, Selcom, 100))
+(Lubo is head honcho
+at %(http://www.selcomltd.com/, Selcom Custom Electronics).)
 |
 %]
 ---

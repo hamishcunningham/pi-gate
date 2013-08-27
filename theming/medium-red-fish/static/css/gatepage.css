@@ -340,6 +340,7 @@ ul.dirList li span.deleteCheckbox {
   position: relative;
   font-family: Verdana,Arial,sans-serif;
   font-weight: bold;
+  margin-top: 0.0em;
 }
 
 /* Treat links nested in a <b> tag as submenus, to make it easier to define

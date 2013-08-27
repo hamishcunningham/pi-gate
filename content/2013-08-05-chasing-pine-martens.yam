@@ -31,11 +31,11 @@ leave you with an unbootable setup :-(
 Time for an analysis of %(pages/mopi.html, the perfect Pi battery pack), and
 Bulgaria is the perfect place to experiment with this stuff as it's crawling
 with electronics and computing engineers (having at one time been supplier of
-around half of the USSR's computer hardware). Lubo Bontchev of
-%(http://www.selcomltd.com/, Selcom custom electronics) has worked on
-everything from solar panels to satelites and has now built Pi.GATE some
-prototypes for hot-swap mobile Pi power. Here's the regulator circuit on the
-left and the controller on the right:
+around half of the USSR's computer hardware). %(pages/about.html#lubo, Lubo
+Bontchev) of %(http://www.selcomltd.com/, Selcom custom electronics) has
+worked on everything from solar panels to satelites and has now built Pi.GATE
+some prototypes for hot-swap mobile Pi power. Here's the regulator circuit on
+the left and the controller on the right:
 
 %[ | %\ %\ |
 %(images/mopi/prototype-regulator-05.jpg,
