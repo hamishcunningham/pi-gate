@@ -11,14 +11,20 @@ _%(about.html#fred, Fred Sonnenwald), July 2013_
 %#intro
 %1 Introduction
 
-The Pi is not the only kid on the block -- what are some of the alternatives
-like? And do they give us a clue about where the Pi will go next? As Eben
-Upton said %(http://www.tuxradar.com/content/%EF%BB%BFinterview-eben-upton, in
-a TuxRadar interview) `I  think it would be really sad, and probably fatal for
-us, if we were still shipping the same Raspberry Pi in 2016, say' (July 17th
-2013) -- but what will the Pi Model C look like?
+The Pi is not the only device of its type. It's just the one that's recieved
+by far the most attention. What are some of the alternatives like? Perhaps
+they give us some clues about where the Pi will go next? Eben Upton said
+%(http://www.tuxradar.com/content/%EF%BB%BFinterview-eben-upton, in
+a TuxRadar interview) "I  think it would be really sad, and probably fatal for
+us, if we were still shipping the same Raspberry Pi in 2016, say" (July 17th
+2013). What will the next generation of Pis look like?
 
-Read on for some possibilities.
+We've collected 6 other similar devices to look at. These are the APC 8750,
+BeagleBone Black, Cubieboard, DreamPlug, MK802, and TonidoPlug. They are
+based on similar hardware specifications and have in general similar
+specifications. We've looked at what's involved with getting them up and
+running and how they compare in a series of direct benchmarks.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#hardware
@@ -27,32 +33,39 @@ Read on for some possibilities.
 First, the devices we've got in some more detail.
 
 %[
-| *System* | *CPU* | *RAM* | *Power Consumption (Nominal/Max)* | *Cost (MSRP)* | *Original OS (Installed OS)* | *IO* |
+| *System* | *CPU* | *RAM* | *Power Consumption (Nominal/Max)* | *Cost (MSRP)* | *Original OS (Installed OS)* | *I/O* |
 ---
-| APC 8750 | VIA 800MHz ARMv6, VFPv2 | 512MB DDR3 | 4W/13.5W | $49.00 | Android 2.3 (Apricot R3 Debian 7.0) | HDMI, VGA, USB, Audio I/O, Ethernet |
+| APC 8750 | VIA 800MHz ARMv6, VFPv2 | 512 MB DDR3 | 4W/13.5W | $49.00 | Android 2.3 (Apricot R3 Debian 7.0) | HDMI, VGA, USB, Audio I/O, Ethernet |
 ---
-| BeagleBone Black | TI 1GHz ARMv7, NEON | 512MB DDR3 | 1W/2.3W | $45.00 | Angstrom (Ubuntu 12.10) | MicroHDMI, USB, Ethernet, GPIO |
+| BeagleBone Black | TI 1GHz ARMv7, NEON | 512 MB DDR3 | 1W/2.3W | $45.00 | Angstrom (Ubuntu 12.10) | MicroHDMI, USB, Ethernet, GPIO |
 ---
-| Cubieboard | Allwinner 1GHz ARMv7, NEON | 512MB DDR3 | 2.5W/10W | $49.00 | Android 4.0.4 (Lubuntu 12.10) | HDMI, USB, Ethernet, Audio I/O, SATA, GPIO, Infrared |
+| Cubieboard | Allwinner 1GHz ARMv7, NEON | 512 MB DDR3 | 2.5W/10W | $49.00 | Android 4.0.4 (Lubuntu 12.10) | HDMI, USB, Ethernet, Audio I/O, SATA, GPIO, Infrared |
 ---
-| DreamPlug | Kirkwood 1.2GHz ARMv5 | 512MB DDR2 | 5W/15W | $149.00 | Debian 6.0 | USB, 2x Ethernet, JTAG, Bluetooth, Wifi, Audio, SATA |
+| DreamPlug | Kirkwood 1.2GHz ARMv5 | 512 MB DDR2 | 5W/15W | $149.00 | Debian 6.0 | USB, 2x Ethernet, JTAG, Bluetooth, Wifi, Audio, SATA |
 ---
-| MK802+ Mini PC | Allwinner 1GHz ARMv7, NEON | 1GB DDR3 | 3W/10W | $59.00 | Android 4.0 (Lubuntu 12.04) | MiniHDMI, USB, Wifi |
+| MK802+ Mini PC | Allwinner 1GHz ARMv7, NEON | 1 GB DDR3 | 3W/10W | $59.00 | Android 4.0 (Lubuntu 12.04) | MiniHDMI, USB, Wifi |
 ---
-| Pi Model B Rev. 2 | Broadcom 700MHz ARMv6, VFPv2 | 512MB DDR2 | 3.5W | $35.00 | Raspbian Debian 7.0 | HDMI, RCA, Audio, Ethernet, GPIO, USB |
+| Pi Model B Rev. 2 | Broadcom 700MHz ARMv6, VFPv2 | 512 MB DDR2 | 3.5W | $35.00 | Raspbian Debian 7.0 | HDMI, RCA, Audio, Ethernet, GPIO, USB |
 ---
-| Pi Model A | Broadcom 700MHz ARMv6, VFPv2 | 256MB DDR2 | 2.5W | $25.00 | Raspbian Debian 7.0 | HDMI, RCA, Audio, GPIO, USB |
+| Pi Model A | Broadcom 700MHz ARMv6, VFPv2 | 256 MB DDR2 | 2.5W | $25.00 | Raspbian Debian 7.0 | HDMI, RCA, Audio, GPIO, USB |
 ---
-| TonidoPlug2 | Kirkwood 800MHz ARMv5 | 512MB DDR3 | 5W/13W | $119.00 | Debian 6.0 | Ethernet, Wifi, USB, SATA |
+| TonidoPlug2 | Kirkwood 800MHz ARMv5 | 512 MB DDR3 | 5W/13W | $119.00 | Debian 6.0 | Ethernet, Wifi, USB, SATA |
 %]
 
+All of them are ARM powered and generally have at least 512 MB of RAM. The
+one exception is the Model A Raspberry Pi with only 256 MB. Costs are
+all pretty similar too, except for the more expensive DreamPlug and TonidoPlug.
+Power consumption, OS, also similar. The biggest differences are in the
+I/O ports -- USB, Audio, Ethernet, GPIO, etc. -- and surely has a direct
+impact on what the devices can be used for.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#setup
 %1 Initial impressions and setup
 
-We'll start off with a series of short introductions and starting points for
-each device. Here's what they all look like (click for larger images):
+We'll start with a series of short introductions and starting points for each
+device, and how we got up and running with them. Here's what look like (click
+for larger images):
 
 %[
 |
@@ -101,31 +114,33 @@ each device. Here's what they all look like (click for larger images):
 %#apc
 %2 APC 8750
 
-The APC 8750 is big and clunky. It's a big fat board with a big fat power
-brick to go along with it. But it does some good things with that space.
-Primarily, ports. Ports everywhere. VGA output for old screens, enough USB
-ports so that you don't have to have a hub. Good things. There's also a
-proper power button on the circuit board. Speaking of which it's also ATX
-compatibile, which means there's a slew of cases out there it will fit in,
-even if they will be way bigger than necessary.
+The first impression you get of the APC 8750 is that it is big and clunky.
+It's a big fat board with a big fat power brick to go along with it. But it
+does some good things with that space -- %(http://www.livememe.com/ib3d6ip,
+Ports. Ports everywhere.) There's VGA output for old screens and enough USB
+ports so that you won't need a hub. There's also a proper power button on
+the circuit board. It's also ATX compatibile meaning there's a slew of cases
+out there it will fit in, even if they're going to  bigger than necessary.
 
 While the APC 8750 ships with Android it does run Linux, and in this case
-it's actually Raspbian. Write the %(http://www.raspbian.org/ApricotImages,
-image) to an microSD card and then pause. Because it's a pretty much packed
-2GB image it really needs to be resized up after being written. I ran out of
-space running apt updates because I didn't.
+it's actually Raspbian, the Raspberry Pi distribution. Start writing the
+%(http://www.raspbian.org/ApricotImages, image) to an microSD card and then
+have a tea, because the image is a full 2 GB. It really needs to be resized
+to larger even after being written. I ran out of space running apt updates
+because I didn't the first time.
 
-After boot it's a relatively snappy setup. It doesn't stick out as "wow
-that's fast" but it doesns't make me cringe a lot either. The system really is
-just par for the course. The only exception is an apparent bug that keeps the
-system from booting if there's no monitor attached. That cuts down on a lot
-of use cases for a low power system. There also aren't any sort of GPIO
-headers so there's nothing doing on that front.
+After booting system response is relatively snappy. It doesn't stick out as
+"wow that's fast" but it doesns't make me cringe either. The system feels
+very average to me, which I think is the best you can expect from these
+sorts of devices considering that I use Core i5 and i7 devices daily. The
+only issue I'm aware of is an apparent bug that keeps the system from
+booting if there's no monitor attached. That cuts down on a lot of use
+cases for a low power system. There also aren't any sort of GPIO headers
+so there's very little fun to be had from electronics experiments.
 
 Ultimately I see the system as a desktop replacement for scenarios where you
 don't need the power of a proper desktop. A PC that sits in the kitchen
-playing music is where I would put it. That's just what pops into my head
-though, doubtless other folks will have other good ideas.
+playing music is how I would place it.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -133,41 +148,42 @@ though, doubtless other folks will have other good ideas.
 %2 BeagleBone Black
 
 About the size of a Pi, the BeagleBone Black is a hacker's board, pure and
-simple. Primary evidence of this comes in the guise of more I/O pins than one
-can conviently shake a stick at. More evidence comes along as you get up and
-running with it. It ships with a stripped down Angstrom linux, but for
+simple. Primary evidence of this comes in the guise of more GPIO pins than
+one can conviently shake a stick at. More evidence comes along as you get up
+and running with it. It ships with a stripped down Angstrom linux, but for
 comparative purposes I've put
 %(http://elinux.org/BeagleBoardUbuntu#Quantal_12.10_armhf, Ubuntu) on it.
-The install approach is somewhat different. Rather than writing a pure image,
-there's a script which formats the card and extracts a system image archive.
-To my mind it's a much more Gentoo like approach.
+The install approach is somewhat different. Rather than just writing a dist
+image, a script formats the card and extracts a system image archive. This
+means you get to avoid resizing partitions, even if it feels less
+straight forward.
 
-To boot off the SD card you need to hold down a little button by it.
-Unfortunately to me this wasn't obvious at first, so I spent quite a while
-wondering what was going on until I figured that out. Oops moment there.
+To boot off the SD card there's a little button by the slot that you need to
+hold down. Unfortunately, this wasn't obvious at first, so I spent some time
+wondering what was going on until I figured that out. An "oops" moment there.
 Apparently this can be fixed so that the SD card is the default boot location
-with a uBoot flash. Another thing smacking of hackery.
+with a uBoot flash. More system hacking.
 
-Once the system boots, you're in a frame buffer console. Fortunately a script
-is provided to apt-get install LXDE for you to get up and running in GUI land.
-Ethernet works right off the bat and it was a relatively quick install. After
-it was up the GUI experience is a bit below average. Like most of these
-systems, it's a framebuffer driver for Xorg, so one expects a lower level of
-performance. In that sense responsiveness was average. What was poorer was the
-occaisional glitching of the screen, wrapping around horizontally a few
-pixels. Impressions were not helped with the two system lock ups I
-experienced, both of which occurred on the same imgur page -- in two different
-browsers. All of this adds to the feeling that it's a hackers system. You'd
-need an incredibly patient child to get through all of this.
+Once the system boots, you're in a console. A script is provided to apt-get
+install LXDE to get up and running with a GUI. Ethernet works right off the
+bat and so the install was relatively quick and painless. Overall I felt the
+GUI experience is a bit below average. It's a framebuffer driver for Xorg
+which is always slow. What was poorer was the occaisional glitching of the
+screen, wrapping around horizontally a few pixels. Impressions were not
+helped with the two system lock ups I experienced, both of which occurred on
+the same imgur page -- in two different browsers. All of this adds to the
+feeling that it's a hackers system. You'd need to be an incredibly patient
+child to do anything.
 
-Hardware wise it's respectable, although the close placement of the micro HDMI
-and USB port mean connectors bump heads. No sound means it won't be a media
-center, but the comprehensive LEDs (Power, CPU, SD, and MMC activity) and
-buttons on the board are a nice touch. Overall (and I won't get tired of
-saying this I think) everything points it towards being a hacker's system.
-Three years ago it would probably have been my choice for a project if I had
-one, but I wouldn't have gotten it on an impulse like the Pi. At this point I
-think I'd need something really, really specific to get one now.
+On the other hand the hardware is pretty respectable, although the close
+placement of the micro HDMI and USB port meant for me the connectors were 
+pushing each other apart. There's no 1/8" audio, but there is sound on the
+HDMI. The comprehensive LEDs (Power, CPU, SD, and MMC activity) and buttons
+on the board are a nice touch. The large number of GPIO pins also points it
+towards being a hacker's system. Three years ago it might have been my
+choice for a project, but I would never have gotten it "just because". It's
+simply too much work to setup. At this point I think I'd need something
+really specific in mind to buy one.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -175,39 +191,40 @@ think I'd need something really, really specific to get one now.
 %2 Cubieboard
 
 The Cubieboard is just a little bit bigger than a Pi, and for taking up a
-similar amount of space, they've jammed a whole lot of stuff in there. A lot
-of expansion pins, but also audio in and out, SATA, IR... It's impressive. The
-board I've got came in what's called "rich packaging" which includes some nice
-extras like a cardboard case, SATA power cable, and a debugging serial cable.
+similar amount of space, they've jammed a whole lot of stuff in. Similar to
+the BeagleBone there are a lot of expansion pins, but there's also audio
+in/out, SATA, IR... It's impressive. The board I've got came in what's called
+"rich packaging" which includes some nice extras like a cardboard case, SATA
+power cable, and a debugging serial cable.
 
 Getting up and going is quick with the default Android install and runs well.
 There are a variety of
 %(http://linux-sunxi.org/Install_Ubuntu_Linux_for_Cubieboard, Ubuntu)
-options for the board but only one easy SD card lubuntu. I've gone ahead and
-installed that. The image size is large, but comes with pretty much everything
+options for the board but only one easy SD card lubuntu, which I've gone ahead
+and installed. The image size is large, but comes with pretty much everything
 installed. Apparently
 %(http://cubieboard.org/2012/11/15/install-ubuntu-with-berryboot/, Berryboot)
 makes more distributions available, but I haven't tested this.
 
-Usable performance is par for the course, and there's plenty of free memory
-after the system finishes booting into LXDE. What's a nice feature is that
-the board can properly turn off from a "sudo poweroff" command and then has
-a power button to get it started again. On the board itself the ports are
-well positioned making it easy to get at everything, although like the Pi
-it's all at right angles along the different edges. This can be annoying if
-you want to tidy it away. As a plus power and ethernet are on the same side
-so if that's all you need it is tidy. (They're on opposite sides on the Pi.)
+Usable performance is again average, and there's plenty of free memory after
+the system finishes booting into LXDE. A nice feature is that the board can
+properly turn off from a "sudo poweroff" command and then has a power button
+to get it started again. On the board itself the ports are well positioned
+making it easy to get at everything, although like the Pi it's all along the
+different edges. This can be annoying if you want to tidy it away. As a plus
+power and ethernet are on the same side so if that's all you need it is tidy.
+(They're on opposite sides on the Pi.)
 
 The absolute number one thing going for this board though? One word: NAS. The
 onboard SATA gives you scope to do a lot more than normal. I think it'd be
 worth it just for that. I also think the infrared port could be a lot of fun,
 and there are probably some interesting applications with the audio in. Are
 these extras enough to really justify the extra price? The board still is
-hacky. More so than the Pi I feel, but not as bad as the BeagleBoard. Then
-there's the fact that we're going to be seeing the dual core
+still a little bit hacky. More than the Pi, less than the BeagleBoard. The
+fact that we're going to be seeing the dual core
 %(http://cubieboard.org/2013/06/19/cubieboard2-is-here/, Cubieboard2) in the
-near future. It does indeed look like an interesting system with multiple
-potential uses.
+near future probably means it is worth the price. It's an interesting system
+with multiple potential uses.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -215,13 +232,13 @@ potential uses.
 %2 DreamPlug
 
 The DreamPlug is polished -- at least on the outside. It's router sized and
-is cased similarly, although the casing actually feels more robust than a
-typical router. It's an impressive solid feel. Unlike a router the DreamPlug
-is filled with lots of i/o: SD, eSATA, S/PDIF & 1/8" jacks, USB, and
-the crown jewel I think, dual gigabit ethernet ports. All of this essentially
-makes it a proper low power server.
+is cased similarly, although it actually feels more robust than a typical
+router. It's an solid, impressive feel. Unlike a router the DreamPlug 
+is filled with lots of I/O: SD, eSATA, optical S/PDIF out & 1/8" jacks, USB,
+and the crown jewel I think, dual gigabit ethernet ports. All of this
+makes it essentially a low power server.
 
-Unlike the rest of the devices, the DreamPlug we've got shipped with a proper
+Unlike the rest of the devices, the DreamPlug we've got ships with a proper
 version of Debian 6.0 Squeeze, which means out of the box we've only got to
 concern ourselves with logging in before we can start doing stuff. No extra
 writing to SD card, although that can be done if you want. Unfortunately,
@@ -230,58 +247,59 @@ time I turned it on I couldn't work out what was going on. It was necessary to
 %(http://dreamplug.googlecode.com/files/DreamPlug-User%20Guide_US_v1.2-Aug-28-2012.pdf,
 connect the little JTAG USB<->serial adapter) to see what was happening.
 
-Some fun and games with minicom and we're in business. The default setup of
-Debian here is to configure the onboard Wifi as an acesspoint, with an IP
-address of 192.168.1.1. This nicely conflicted with my router's address of
-192.168.1.254. Commenting out a line in /etc/rc.local disables that and I
-could finally get things into a usable state. The DreamPlug I think turns out
-to be kind of fun like this. Instead of fiddling around with hardware it's
-almost straight up Linux hacking. I think you'll need to be compentent at the
-command line or at least wanting to learn to really get things done.
+Some fun and games with
+%(https://alioth.debian.org/projects/minicom/, minicom), a serial terminal
+emulator, and we're in business. The default setup configures the onboard
+Wifi as an acesspoint, with an IP address of 192.168.1.1. This nicely
+conflicted with my router's address of 192.168.1.254. Commenting out a line
+in /etc/rc.local disables that and I could finally get things into a usable
+state. The DreamPlug I think turns out to be kind of fun like this. It's
+almost straight up, traditional, Linux hacking. It's the good kind, where
+you can find solutions on the %(http://ubuntuforums.org/, Ubuntu Forums) or
+%(http://www.linuxquestions.org/, LinuxQuestions). The catch is you'll need
+to be compentent with the command line or at least be willing to learn to
+get things done.
 
 Once you surmount that little command line hurdle though, you're in business
 with something you can really use. The system has a snappy response and
 there's a site, %(http://www.spinifex.com.au/plugs/dplugintro.html, Spinifex),
 with some good directions to help you navigate through the oddities of the
-Debian setup on the DreamPlug. It's a bit out of date, but still useful. More
-of this fun Linux hacking reinterpreting the directions. Overall I think the
-DreamPlug makes a perfect step up for an OpenWRT router when you want more
-power and flexibility in what you do on your LAN or want to run some more
-major services, like a proper file server. (Yes, you can do this with some
-OpenWRT routers, but I would not consider 2 MB/s to be good for a file
-server.)
+Debian setup on the DreamPlug. It's a bit out of date, but still useful.
+Overall I think the DreamPlug makes a perfect step up for an OpenWRT router
+when you want more power and flexibility in what you do on your LAN or want
+to run some more major services, like a proper file server. (Yes, you can do
+this with some OpenWRT routers, but I would not consider 2 MB/s to be good
+for a file server.)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#minipc
-%2 MK802 Mini PC
+%2 MK802+ Mini PC
 
-Immediately, the Mini PC has one thing going for it. It's size. It's an order
-of magnitude smaller than any of the other systems we're looking at here and
-it's in a case to boot. That makes it devilishly easy to transport. It ships
-with Android 4(.X?) which means you boot into a familiar interface. However,
-it is also armed with a microSD card slot which with the help of
+Immediately, the MK802+ Mini PC has one thing going for it. It's size. It's
+an order of magnitude smaller than any of the other systems we're looking at
+here and it's in a case to boot. That makes it devilishly easy to transport.
+It ships with Android 4.0 which means you boot into a familiar interface.
+However, it is also armed with a microSD card slot which with the help of
 %(https://www.miniand.com/forums/forums/2/topics/1, disk images) lets it run
 standard Ubuntu Linux and derivatives. Just write the image to a card, pop it
-in to the slot, and it turns the Mini PC into something more directly
+in to the slot, and it turns the MK802 into something more directly
 comparable with the other systems.
 
 I've loaded up the Lubuntu 1GB 1080p image and everything I've tested has
-worked out of the box. It is slow though. I originally tried the Ubuntu image
-but found it to be pretty much unusable. Really slow and a DNS resolution bug
-which would need to be manually fixed. Lubuntu manages OK but it's just slow.
-I suspect most of this slow down is due to running regular desktop software,
-while in comparison the Pi runs a more stripped down system. I also think
-it's running softfloat rather than hardfloat, which is what Raspbian is
-especially compiled for. Effectively this means there are calculations which
-could be sped up but which aren't.
+worked out of the box. I originally tried the Ubuntu image but found it to be
+pretty much unusably slow. Really slow and a DNS resolution bug which would
+need to be manually fixed. Lubuntu manages OK but it's more just average
+slow. I suspect most of this slow down is due to running regular desktop
+software, while in comparison the Pi runs a more stripped down system.
 
 Hardware wise, having only 1 USB port is a bit annoying as you really need a
 hub to get things up and running normally. This goes right along with the
 special AC adapter needed to power it. Fortunately, the onboard Wifi is a
 redeeming feature in this respect meaning that there aren't any more extra
 cables to deal with. Unfortunately though the onboard wifi seems to cap out at
-about 50 KB/s. I had this problem under the original Android as well.
+about 50 KB/s. I had this problem under the original Android as well. That
+might just be a poor internal antenna though as I'm in the basement here.
 
 Lubuntu comes with sshd enabled so after setting up Wifi the first time you
 can actually get away with completely remote access. That along with its case
@@ -295,33 +313,35 @@ irssi (IRC client) inside of a screen.
 %2 Pi Model B
 
 To be honest, it's a bit late in the game to have first impressions of the
-Raspberry Pi! I first got mine over a year ago, and so much has changed in
+Raspberry Pi. I first got mine over a year ago, and so much has changed in
 that time as well. The Model B we have here is a Revision 2, while I started
 out on the Revision 1. Still, a general overview is in order.
 
-The Pi, while not the oldest of the devices here, was _the_ game changer.
+The Pi, while not the oldest of the devices here, was the game changer,
+drawing %(http://www.bbc.co.uk/search/?q=raspberry%20pi, media attention).
 There have been SheevaPlugs and BeagleBoards (and other things like
-%(https://www.gumstix.com/, Gumstix) as well) for quite a few years.
-The Raspberry Pi, well, I think it's the iPod of these computers. It did it
-well enough (and here cheap counts towards well) that it brought this sort of
-computing to mainstream attention. The Pi somehow brought to life a much
-larger community, filled with people who are slightly less technical, making
-it accessible.
+%(https://www.gumstix.com/, Gumstix) as well) for quite a few years, but
+nothing so big. The Raspberry Pi, can be thought of as the iPod of low
+powered ARM computers. It did it well enough (and here cheap counts towards
+well) that it brought this sort of computing to mainstream attention. The Pi
+brings to life a large community, filled with people of all ages and
+specialties, even those less technical, and makes computing accessible.
 
 The Pi is also an order of magnitude easier to get hold of. Here in the UK I
 could walk into Maplin and walk out with a Pi in my hand. Then it's a simple
 matter to write the %(http://www.raspberrypi.org/downloads, SD card image) and
 get going. That counts for a lot because really, the hardware in the Pi isn't
-hugely better than these others. The biggest difference is probably the
-composite video out. That's the connection used for one of those cheap car
-reversing monitors, for example.
+hugely better than these others. The biggest difference is the composite
+video out (RCA). That's allows for connection to old TVs, or more
+interestingly %(http://dx.com/s/reversing+monitor, a cheap reversing
+monitor).
 
 And you know what? The hardware only got better with the Revision 2. Mounting
 holes to make it easier to use in projects. More RAM for better performance.
 Changed around GPIO. My personal favorite: the removed fuses on the USB ports.
-That for me is really what sells it. There are devices that simply won't work
-with a Revision 1 that will with the Revision 2. In general when using the
-Revision 2 everything is snappier.
+There are USB devices that simply won't work with a Revision 1 that will with
+the Revision 2 because of this. In general when using the Revision 2
+everything feels better.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -353,48 +373,43 @@ be back powered through the USB port. Fewer components means overall lower
 power consumption for when on batteries. This can be lowered even further by
 %(http://www.bitwizard.nl/wiki/index.php?title=Reducing_power_consumption_of_a_raspberry_Pi,
 replacing the power regulator). There are lots of projects where the lower
-power makes it ideal and the lack of USB and ethernet doesn't mean much.
-Robotics, weather balloons -- plenty of fun things to do.
+power comsumption makes it ideal and the lack of USB and ethernet doesn't
+mean much. Robotics, weather balloons -- plenty of fun things to do. Locally
+there's a guy using one for %(http://xkcd.com/442/, kite photography).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#tonido
 %2 TonidoPlug2
 
-In some respects the TonidoPlug is one of the most interesting bits of
-hardware we have for testing because it's really designed more as appliance
-instead of a general purpose computing device. It's essentially a NAS device.
-The idea is that you pop in an internal 2.5" SATA disk or connect a USB hard
-drive and serve the files off it. As a result all it's got is the SATA bay,
-ethernet port, wifi, and a USB port. There's no debug interface -- it's a
-purpose built SheevaPlug. That puts it (roughly) in the same family of devices
-as the DreamPlug as above.
+The TonidoPlug is an interesting bit of hardware for testing because it's
+really designed as appliance instead of a general purpose computing device.
+It's a NAS device. The idea is that you pop in an internal 2.5" SATA disk or
+connect a USB hard drive and serve the files off it. As a result all it's got
+is the SATA bay, ethernet port, wifi, and a USB port. There's no debug
+interface -- it's a purpose built %(http://en.wikipedia.org/wiki/SheevaPlug,
+SheevaPlug), which puts it in the same family of devices as the DreamPlug as
+above.
 
-What definetely is in the same class is that the TonidoPlug ships with a
-stripped down Debian Squeeze with special TonidoPlug software on top of it
-for management. Remember, think appliance. That's not to say that you can't
-mess around with it, it's just not recommended to. The onboard 512 MB flash
-doesn't leave much space. Fortunately it can booted off of other devices so
-I've set it up to run off the
+The TonidoPlug ships with a stripped down Debian Squeeze with special
+TonidoPlug software on top of it for management. Remember, think appliance.
+That's not to say that you can't mess around with it, it's just not really 
+designed for it.e onboard 512 MB flash doesn't leave much space. Fortunately
+it can booted off of other devices so I've set it up to run off the internal
 %(http://www.tonido.com/communitywiki/doku.php?id=advanceduses:usbboot, SATA disk).
 
-Also like the DreamPlug the TonidoPlug is really more of an excercise in Linux
+Also like the DreamPlug the TonidoPlug is something of an excercise in Linux
 hacking. The directions for setting up the SATA disk are straight forward, but
-I did hit a few minor issues along the way which really confirms it for me.
-What you've got then is something that in essence "just works" but that you
-can fiddle with if you want. The fiddling isn't required. As something to play
-with that really gives you options. What those are depends on how powerful the
-hardware is in the end. It's very simple but it's in a pretty slick case. You
-can move it easily but I'm not sure why you'd want to. The power is a mains
-input which means you're tied down through that, but it removes the complexity
-of an adapter too.
+I did hit a few minor issues along the way which confirmed it for me. The
+TonidoPlug is something that generally "just works" but that you can mess
+around with if you want to, but don't have to. That really gives you options.
 
-In the end I think I see the TonidoPlug best used for exactly what it says on
-the tin -- serving files. You just get a bit more control. Want to do it with
-Apache? Can do. Samba? NFS? Anything with Linux can be done. The neatest
-scenario I think is to use the built-in DLNA server to create a centralized
-media store. Then put a Pi with XBMC on every TV in the house that doesn't
-already support DLNA. A neat little setup...
+The TonidoPlug is very simple and it's in a pretty slick case. You can move
+it easily but I'm not sure why you'd want to. The power is a mains input
+which means it's tied down, but it also removes the complexity of an adapter
+too. In the end, I think I see the TonidoPlug best used for exactly what it
+says on the tin -- serving files. You just get a bit more control. Want to
+do it with Apache? Can do. Samba? NFS? Anything with Linux can be done.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -404,15 +419,13 @@ already support DLNA. A neat little setup...
 I will start by saying that these are not comprehensive benchmarks, but are
 instead _indicative_ benchmarks. There are here to give an overview of the
 potential performance of each device and aid in a less subjective comparison.
-Combined with the impressions of the previous section they will illustrate
-why you might want one device instead of another. They will also help us
-understand how the different hardware of each device impacts on performance
-so that we can evaluate future devices as well.
+They will also help us understand how the different hardware of each device
+impacts on performance so that we can evaluate future devices as well.
 
 Six different benchmarks have been carried out, which break down into three
-categories. Input/output, theoretical performance, and practical performance.
-For I/O, %(http://iperf.sourceforge.net/, iperf) has been used to measure
-networking performance, and
+categories. Input/output performance, theoretical performance, and practical
+performance. For I/O, %(http://iperf.sourceforge.net/, iperf) has been used
+to measure networking performance, and
 %(http://sourceforge.net/projects/hdparm/, hdparm) to measure hard disk cache
 and read performance. Theoretical performance was measured through the
 classic %(http://en.wikipedia.org/wiki/Dhrystone, Dhrystone) integer and
@@ -424,14 +437,17 @@ compression of a 54 MB wav file  the MP3 encoding of it using
 Each benchmark has been run 3 times. Mean results are plotted below, with the
 error bars showing the minimum and maximum value. The script we used to run
 the benchmarks is available online in our
-%(https://github.com/hamishcunningham/pi-tronics/blob/master/hardware/bin/dobm.sh, git repository).
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/hardware/bin/dobm.sh,
+git repository).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#io
-%2 Input/Output
+%2 Input/Output performance
 
-For all I/O tests, higher numbers (greater bandwidth) is better.
+For all I/O tests, higher values indicate better performance.
+
+%image(images/hardware/results/network_graph.svg, Networking)
 
 Networking performance quite nicely breaks down into three groups. We see top
 performance from the DreamPlug and TonidoPlug with their gigabit ethernet.
@@ -443,12 +459,12 @@ Performance pretty much topped out at the theoretical maximum there of 11
 mbits. The MK802 with its Wifi is the bottom performer. This echoes the
 comments I made earlier about its poor performance during setup.
 
-%image(images/hardware/results/network_graph.svg, Networking)
+%image(images/hardware/results/disk_cache.svg, Disk Cache)
 
-Disk cache is a little bit mis-leading. This is more strictly speaking a test
-of memory throughput. Every time you read from the disk it's stored in memory
-in case the same disk read is requested again. In that case it's read from
-the faster memory cache instead of re-reading it off the disk.
+Disk cache is a little bit mis-leading. This is more accurately an effective
+test of memory throughput. Every time you read from the disk it's stored in
+memory in case the same disk read is requested again. In that case it's read
+from the faster memory cache instead of re-reading it off the disk.
 
 The disk cache results are a bit all over the board. It would be nice if they
 conviently matched up with memory speed or CPU, but they don't. The error
@@ -457,28 +473,30 @@ performance. In general these speeds are all so quick (greater than 120 MB/s)
 that the cache speed exceeds hard disk speeds and so the caching will have a
 positve impact.
 
-The worry here is the signifcantly lower cache speed of the Cubieboard. This
-indicates that cacheing will not have much of an impact. For certain use
+My main worry here is the signifcantly lower cache speed of the Cubieboard.
+This indicates that cacheing will not have much of an impact. For certain use
 cases where there are many repeated small reads, such as serving web pages,
 this is less than ideal.
 
-%image(images/hardware/results/disk_cache.svg, Disk Cache)
+%image(images/hardware/results/disk_read.svg, Disk Read)
 
 The Cubieboard, DreamPlug, and TonidoPlug were all benchmarked with a SATA
 hard disk, and consequently have significantly higher read speeds. The
 performance of the other devices is about as expected and consistent with
 mid-range flash memory. Obviously, better SD cards (e.g. Class 10) where
-applicable will speed things up, but that comes with increased costs.
-
-%image(images/hardware/results/disk_read.svg, Disk Read)
+applicable will speed things up, but that comes with increased costs. A USB
+hard drive could speed things up too, but with the same caveat.
 
 Write performance, which we have not benchmarked, will always be slower than
 read performance. This is particularly true for flash memory like SD cards.
+In many cases this won't be a problem as data will written to the file system
+cache and be stored in memory, then gradually written to disk while other
+tasks are carried out.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#theoretical
-%2 Theoretical
+%2 Theoretical performance
 
 Higher MIPS and MFLOPS values indicate greater performance.
 
@@ -490,11 +508,13 @@ will perform like. MFLOPS, or million floating point operations per second,
 gives an evaluation of a processor's performance in executing the more
 complex mathmatical operations we use, for example, in most games.
 
+%image(images/hardware/results/dhry_mips.svg, Integer Math)
+
 For integer math, we can quite clearly see the impact of processer
 architecture and clock speed. The TonidoPlug ranks rock bottom as an ARMv5
 chip, despite having a higher clock than a Raspberry Pi with its ARMv6 - 
 800 vs 700 MHz. The DreamPlug uses the same ARMv5 and just about matches the
-Pi, but at a 50% faster clock speed of 1.2 GHz.
+Pi, but at a 70% faster clock speed of 1.2 GHz.
 
 The APC uses the same ARMv6 as the Pi, but at 800 MHz just out performs it.
 The dynamic overclocking of the Pi, if enabled, should easily match or exceed
@@ -502,7 +522,7 @@ this performance it. The real winners here though are the ARMv7 based
 systems -- the BeagleBone Black, Cubieboard, and MK802 -- with performance
 more than double the Pi, despite only a 1 GHz clock speed.
 
-%image(images/hardware/results/dhry_mips.svg, Integer Math)
+%image(images/hardware/results/whet_mflops.svg, Floating Point Math)
 
 In contrast however, it is interesting to see how the ARMv7 chips perform in
 terms of floating point performance. All of them integrate NEON
@@ -525,21 +545,19 @@ under Linux which suggests that for most cases of pure processing that the
 ARMv6 systems are the way to go. Based on the in performance between the APC
 and Pi with their 100 MHz clock difference, the Pi over clocked could probably
 hit MFLOPS of around 350. While this is still about 1/10th the performance of
-my desktop, it still represents the best available in terms of thes low-cost
-computing devices. The ARMv5 Tonido and DreamPlug systems have no FPU and 
+my desktop, it still represents the best available in terms of these low-cost
+computing devices. The ARMv5 Tonido and DreamPlug systems have no FPU and
 clearly have lower performance.
-
-%image(images/hardware/results/whet_mflops.svg, Floating Point Math)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#Practical
-%2 Practical
+%2 Practical performance
 
 Lower times indicate greater performance.
 
 These two benchmarks, bzip2 compression and MP3 encoding, have been run to
-give a more practical indicating of relative performance through relatively
+give a more practical indication of relative performance through relatively
 common complex computational tasks. bzip2, as a lossless compression
 algorithm consists almost entirely of integer math and places load on memory
 and disk I/O.
@@ -551,6 +569,8 @@ when compared to the original uncompressed audio file. MP3 encoding consists
 mostly of floating point arithmetic, such as Fast Fourier Transforms, and
 some load on memory.
 
+%image(images/hardware/results/bzip2_min.svg, bzip2 Compression)
+
 In general bzip2 performance is pretty similar between devices. Everything
 performs on the same order of magnitude and in general looks to be pretty
 well linked to clock speed. The BeagleBone, Cubieboard, MK802, and DreamPlug
@@ -561,14 +581,12 @@ longest to compress with its 700 MHz CPU, with the APC and TonidoPlug just
 ahead of it with slightly faster 800 MHz CPUs. The APC comes out just ahead
 though possibly due to it's newer ARMv6 architecture.
 
-%image(images/hardware/results/bzip2_min.svg, bzip2 Compression)
+%image(images/hardware/results/lame_min.svg, MP3 Encoding)
 
 Variation in MP3 encoding performance as expected follows floating point
 performance, with the DreamPlug and TonidoPlug at rock bottom with their lack
 of FPU. The three NEON ARMv7 systems come in approximately second, with the
 ARMv6 systems coming in first.
-
-%image(images/hardware/results/lame_min.svg, MP3 Encoding)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -597,16 +615,50 @@ For the same power you could have three BeagleBones or one CubieBoard or \
 MK802. Five instead of a DreamPlug. In terms of absolute processing \
 capability for power use this makes much more sense.
 
-The same sort of analysis can be carried out on device cost. One DreamPlug or
-six Model A Pis...
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#media
 %1 Practical application -- media player
 
+Say we want to setup a low-cost low-power home media center. Can we do it
+with these devices? The answer is generally "Yes" -- at least in part or to
+some extent. Let's take a look.
 
-To be written.
+First, about half of the devices come with Android, and with that comes
+access to %(http://play.google.com, Google Play) which means there's a wide
+variety of easily available software for playing media. Combined with an HDMI
+out, this means you can be up and running with the APC 8750, Cubieboard,
+or MK802 in no time flat. The Cubieboard would even let you hook up a SATA
+disk direct for storing media. All of them stream video off YouTube too.
+
+Then there are the Plug devices which don't have any video out. The
+TonidoPlug as a device designed as fileserver includes a
+%(http://en.wikipedia.org/wiki/Digital_Living_Network_Alliance, DLNA) server
+which lets it easily stream compatible media to many phones and TVs. This
+software can of course be setup on any device running Linux, which is what
+you would have to do with the DreamPlug, but it's a lot easier when it works
+out of the box. The audio out on the DreamPlug, which includes optical
+%(http://en.wikipedia.org/wiki/S/PDIF, S/PDIF), would allow certainly for
+playing media, using something like %(http://www.musicpd.org/, MPD) to
+remotely control it from a phone. Again, a hard drive can be direct
+connected to easily share media.
+
+For the Raspberry Pis, the %(http://www.raspbmc.com/, Raspbmc) project
+with easy install brings XBMC, or Xbox Media Center, to the Pi, turning the
+Pi into pretty much a full fledged Media Center. It needs some additional
+storage to be usesful, a SMB share over the network or a USB drive, but it's
+pretty painless, easy, and works well.
+
+By far the trickiest device to setup a media center I think is the
+BeagleBone. Or at least, it doesn't appear to be straight forward which I
+get the feeling is typical for the BeagleBone. It looks like a partial
+%(http://elinux.org/BeagleBoard/GSoC/2010_Projects/XBMC, XBMC port) was done
+as a Google Summer of Code project, but I get the feeling it's incomplete.
+%(http://sourceforge.net/projects/beagletomb/, BeagleTomb) looks to be a
+media player project available.
+%(http://circuitco.com/support/index.php?title=Android#Android_On_The_BeagleBone_Black,
+Installing Android) may be the best bet, although there's no Google Play.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#conclusions
