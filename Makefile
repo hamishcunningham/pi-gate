@@ -27,6 +27,7 @@ JAVA=java
 SCRIPTS=$(BASEDIR)/bin
 Y2H=$(SCRIPTS)/yam2html
 EPI=$(SCRIPTS)/enpelicanise.sh
+FIXIMGS=$(SCRIPTS)/fix-image-sizes.groovy
 
 # generated targets #########################################################
 help:
@@ -59,6 +60,7 @@ help:
 	@echo '   favicon               create output/favicon.ico            '
 	@echo '                                                              '
 	@echo '   minify                compress the output html             '
+	@echo '   fix-image-sizes       add missing dimensions to img tags   '
 	@echo '   archive               make an archive copy of .htmls       '
 	@echo '   archive-diff          diff the archive against the output  '
 	@echo '                                                              '
@@ -86,17 +88,23 @@ publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 # (not using publish conf at present: ...upload: publish)
-ec2upload: minify
+ec2upload: fix-image-sizes minify
 	rsync -e "ssh -p $(SSH_PORT) -i $${EC2_PEM}" -hP -rvz --delete \
           --delete-excluded \
           $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) \
           --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
-gateupload: minify
+gateupload: fix-image-sizes minify
 	rsync -e "ssh -p $(SSH_PORT)" -hP -rvz --delete --delete-excluded \
           $(OUTPUTDIR)/ $${GE1_USER}@gate.ac.uk:/data/herd/pi.gate.ac.uk/html \
           --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
+fix-image-sizes:
+	for f in `find $(OUTPUTDIR) -type f -name '*.html'`; do \
+          echo fixing $${f} image sizes...; \
+          $(FIXIMGS) $${f}; \
+        done
 
 .PHONY: html help clean regenerate serve devserver publish ec2upload gateupload
+.PHONY: fix-image-sizes
 
 
 # other targets ###############################################################
