@@ -39,36 +39,48 @@ def imageSize = { String urlStr ->
 for(htmlFile in args) {
   Document htmlDoc =
     Jsoup.parse(new File(htmlFile), null, new File(htmlFile).toURI().toString())
+
   htmlDoc.getElementsByTag("img").each { Element image ->
     String heightStr = image.attr("height")
     int height = heightStr.isInteger() ? heightStr.toInteger() : 0
     String widthStr = image.attr("width")
     int width = widthStr.isInteger() ? widthStr.toInteger() : 0
+
     if(!height || !width) {
       String imgUrl =
         image.attr("abs:src").replaceFirst("file:/", "file:./output/")
       if(!imgUrl) return
 
       def imgDetails = imageSize(imgUrl)
-      if(!height && !width) {
-        // case 1: neither height nor width
+      if(! imgDetails) {
+        println "no image details found for image ${imgUrl}"
+        return
+      } else if(! imgDetails.aspect) {
+        println "no aspect details found for image ${imgUrl}"
+        return
+      }
+
+      if(!height && !width) {   // case 1: neither height nor width
         if(imgDetails.height >= 0) {
           image.attr("height", "${imgDetails.height}")
         }
         if(imgDetails.width >= 0) {
           image.attr("width", "${imgDetails.width}")
         }
-      } else if(!height) {
-        // case 2: width specified but not height
-        def newHeight = (width / imgDetails.aspect).round()
+
+      } else if(!height) {      // case 2: width specified but not height
+        // for bizarre groovy reasons we need to take the float value of the
+        // division to avoid NPEs on BigDecimal values...
+        def newHeight = (width / imgDetails.aspect).floatValue().round()
         image.attr("height", "${newHeight}")
-      } else {
-        // case 3: height specified but not width
-        def newWidth = (height * imgDetails.aspect).round()
+
+      } else {                  // case 3: height specified but not width
+        def newWidth = (height * imgDetails.aspect).floatValue().round()
         image.attr("width", "${newWidth}")
       }
     }
-  }
+  } // each img element
+
   htmlDoc.outputSettings().prettyPrint(false)
   new File(htmlFile + "-new.html").write(
       htmlDoc.outerHtml(), htmlDoc.outputSettings().charset().name())

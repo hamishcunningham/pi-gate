@@ -100,7 +100,7 @@ gateupload: fix-image-sizes minify
 fix-image-sizes:
 	for f in `find $(OUTPUTDIR) -type f -name '*.html'`; do \
           echo fixing $${f} image sizes...; \
-          $(FIXIMGS) $${f}; \
+          $(FIXIMGS) $${f}; echo; \
         done
 
 .PHONY: html help clean regenerate serve devserver publish ec2upload gateupload
