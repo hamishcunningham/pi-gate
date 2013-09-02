@@ -33,7 +33,7 @@ running and how they compare in a series of direct benchmarks.
 First, the devices we've got in some more detail.
 
 %[
-| *System* | *CPU* | *RAM* | *Power Consumption (Nominal/Max)* | *Cost (MSRP)* | *Original OS (Installed OS)* | *I/O* |
+| *System* | *CPU* | *RAM* | *Power Consumption (Nominal /Max)* | *Cost (MSRP)* | *Original OS (Installed OS)* | *I/O* |
 ---
 | APC 8750 | VIA 800 MHz ARMv6, VFPv2 | 512 MB DDR3 | 4W/13.5W | $49.00 | Android 2.3 (Apricot R3 Debian 7.0) | HDMI, VGA, USB, Audio I/O, Ethernet |
 ---
