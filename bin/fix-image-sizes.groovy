@@ -37,6 +37,7 @@ def imageSize = { String urlStr ->
 }.memoize() // memoize so we don't have to parse the same image more than once
 
 for(htmlFile in args) {
+  boolean changesMade = false
   Document htmlDoc =
     Jsoup.parse(new File(htmlFile), null, new File(htmlFile).toURI().toString())
 
@@ -48,7 +49,7 @@ for(htmlFile in args) {
 
     if(!height || !width) {
       String imgUrl =
-        image.attr("abs:src").replaceFirst("file:/", "file:./output/")
+        image.attr("abs:src")  // .replaceFirst("file:/", "file:./output/")
       if(!imgUrl) return
 
       def imgDetails = imageSize(imgUrl)
@@ -62,9 +63,11 @@ for(htmlFile in args) {
 
       if(!height && !width) {   // case 1: neither height nor width
         if(imgDetails.height >= 0) {
+          changesMade = true
           image.attr("height", "${imgDetails.height}")
         }
         if(imgDetails.width >= 0) {
+          changesMade = true
           image.attr("width", "${imgDetails.width}")
         }
 
@@ -72,19 +75,23 @@ for(htmlFile in args) {
         // for bizarre groovy reasons we need to take the float value of the
         // division to avoid NPEs on BigDecimal values...
         def newHeight = (width / imgDetails.aspect).floatValue().round()
+        changesMade = true
         image.attr("height", "${newHeight}")
 
       } else {                  // case 3: height specified but not width
         def newWidth = (height * imgDetails.aspect).floatValue().round()
+        changesMade = true
         image.attr("width", "${newWidth}")
       }
     }
   } // each img element
 
 // TODO make changes in place, back up to /tmp
-  htmlDoc.outputSettings().prettyPrint(false)
-  new File(htmlFile + "-new.html").write(
+  if(changesMade) {
+    htmlDoc.outputSettings().prettyPrint(false)
+    new File(htmlFile + "-new.html").write(
       htmlDoc.outerHtml(), htmlDoc.outputSettings().charset().name())
+  }
 }
 
 // TODO work with .yam too

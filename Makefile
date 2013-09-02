@@ -88,20 +88,35 @@ publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 # (not using publish conf at present: ...upload: publish)
-ec2upload: fix-image-sizes minify
+ec2upload: minify
 	rsync -e "ssh -p $(SSH_PORT) -i $${EC2_PEM}" -hP -rvz --delete \
           --delete-excluded \
           $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) \
           --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
-gateupload: fix-image-sizes minify
+gateupload: minify
 	rsync -e "ssh -p $(SSH_PORT)" -hP -rvz --delete --delete-excluded \
           $(OUTPUTDIR)/ $${GE1_USER}@gate.ac.uk:/data/herd/pi.gate.ac.uk/html \
           --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
+
+# for each .yam in content/ fix missing image sizes in the .html and do diff
 fix-image-sizes:
-	for f in `find $(OUTPUTDIR) -type f -name '*.html'`; do \
-          echo fixing $${f} image sizes...; \
-          $(FIXIMGS) $${f}; echo; \
+	@YAMS=`find $(INPUTDIR) -name '*.yam'`; \
+        for f in $$YAMS; do \
+          echo "fixing $${f}..."; \
+          BASE=`echo $$f |sed 's,\.yam$$,,'`; HTML=$${BASE}.html; \
+          $(Y2H) $${f} >/dev/null; \
+          $(FIXIMGS) $${HTML} >/dev/null; \
+          [ -f $${HTML}-new.html ] && echo diffing $${HTML}* && \
+            diff $${HTML} $${HTML}-new.html |egrep 'image|width|height'; \
+          rm -f $${HTML}-new.html; \
+          echo; \
         done
+	cd $(OUTPUTDIR); sed 's, src="/, src="./,g' index.html >xindex.html; \
+        HTML=xindex.html; $(FIXIMGS) $${HTML} >/dev/null; \
+        [ -f $${HTML}-new.html ] && echo diffing $${HTML}* && \
+          diff $${HTML} $${HTML}-new.html |egrep 'image|width|height'; \
+        rm -f $${HTML}-new.html xindex.html; \
+        echo
 
 .PHONY: html help clean regenerate serve devserver publish ec2upload gateupload
 .PHONY: fix-image-sizes
@@ -204,15 +219,15 @@ yam-clean:
 post:
 	@[ -z "$${SLUG}" ] && { echo 'set SLUG to something!'; exit 1; } || :
 	@POSTFILE=`date "+%Y-%m-%d"`-$${SLUG}.yam; \
-          [ -f content/$${POSTFILE} ] || \
-            echo "A post about $${SLUG}..." > content/$${POSTFILE}; \
-          echo "created content/$${POSTFILE}"; \
-          git add -v content/$${POSTFILE}; \
-          cd content/images/articles >/dev/null && \
+          [ -f $(INPUTDIR)/$${POSTFILE} ] || \
+            echo "A post about $${SLUG}..." > $(INPUTDIR)/$${POSTFILE}; \
+          echo "created $(INPUTDIR)/$${POSTFILE}"; \
+          git add -v $(INPUTDIR)/$${POSTFILE}; \
+          cd $(INPUTDIR)/images/articles >/dev/null && \
           cp -n default.jpg $${SLUG}.jpg && cd thumbs >/dev/null && \
           cp -n default.jpg $${SLUG}.jpg && cd .. && \
           git add -v $${SLUG}.jpg thumbs/$${SLUG}.jpg && \
           echo "now supply better versions of "\
-          "$${SLUG}.jpg and thumbs/$${SLUG}.jpg in content/images/articles"
+          "$${SLUG}.jpg and thumbs/$${SLUG}.jpg in $(INPUTDIR)/images/articles"
 
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post

@@ -200,7 +200,8 @@ New menu pending CSS fix:
 <li>&nbsp;&nbsp;<a href="#section-4.3.">4.3. Practical performance</a></li>
 <li>&nbsp;&nbsp;<a href="#section-4.4.">4.4. Some thoughts</a></li>
 <li><a href="#section-5.">5. Practical application &mdash; media player</a></li>
-<li><a href="#section-6.">6. Conclusions</a></li>
+<li><a href="#section-6.">6. The Next Generation</a></li>
+<li><a href="#section-7.">7. Conclusions</a></li>
 </ul></p></div>
 
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
@@ -229,15 +230,15 @@ running and how they compare in a series of direct benchmarks.</p>
 <p>First, the devices we've got in some more detail.</p>
 
 <table>
-<tr><td> <b>System</b> </td><td> <b>CPU</b> </td><td> <b>RAM</b> </td><td> <b>Power Consumption (Nominal/Max)</b> </td><td> <b>Cost (MSRP)</b> </td><td> <b>Original OS (Installed OS)</b> </td><td> <b>I/O</b> </td></tr>
-<tr><td> APC 8750 </td><td> VIA 800MHz ARMv6, VFPv2 </td><td> 512 MB DDR3 </td><td> 4W/13.5W </td><td> $49.00 </td><td> Android 2.3 (Apricot R3 Debian 7.0) </td><td> HDMI, VGA, USB, Audio I/O, Ethernet </td></tr>
-<tr><td> BeagleBone Black </td><td> TI 1GHz ARMv7, NEON </td><td> 512 MB DDR3 </td><td> 1W/2.3W </td><td> $45.00 </td><td> Angstrom (Ubuntu 12.10) </td><td> MicroHDMI, USB, Ethernet, GPIO </td></tr>
-<tr><td> Cubieboard </td><td> Allwinner 1GHz ARMv7, NEON </td><td> 512 MB DDR3 </td><td> 2.5W/10W </td><td> $49.00 </td><td> Android 4.0.4 (Lubuntu 12.10) </td><td> HDMI, USB, Ethernet, Audio I/O, SATA, GPIO, Infrared </td></tr>
-<tr><td> DreamPlug </td><td> Kirkwood 1.2GHz ARMv5 </td><td> 512 MB DDR2 </td><td> 5W/15W </td><td> $149.00 </td><td> Debian 6.0 </td><td> USB, 2x Ethernet, JTAG, Bluetooth, Wifi, Audio, SATA </td></tr>
-<tr><td> MK802+ Mini PC </td><td> Allwinner 1GHz ARMv7, NEON </td><td> 1 GB DDR3 </td><td> 3W/10W </td><td> $59.00 </td><td> Android 4.0 (Lubuntu 12.04) </td><td> MiniHDMI, USB, Wifi </td></tr>
-<tr><td> Pi Model B Rev. 2 </td><td> Broadcom 700MHz ARMv6, VFPv2 </td><td> 512 MB DDR2 </td><td> 3.5W </td><td> $35.00 </td><td> Raspbian Debian 7.0 </td><td> HDMI, RCA, Audio, Ethernet, GPIO, USB </td></tr>
-<tr><td> Pi Model A </td><td> Broadcom 700MHz ARMv6, VFPv2 </td><td> 256 MB DDR2 </td><td> 2.5W </td><td> $25.00 </td><td> Raspbian Debian 7.0 </td><td> HDMI, RCA, Audio, GPIO, USB </td></tr>
-<tr><td> TonidoPlug2 </td><td> Kirkwood 800MHz ARMv5 </td><td> 512 MB DDR3 </td><td> 5W/13W </td><td> $119.00 </td><td> Debian 6.0 </td><td> Ethernet, Wifi, USB, SATA </td></tr>
+<tr><td> <b>System</b> </td><td> <b>CPU</b> </td><td> <b>RAM</b> </td><td> <b>Power Consumption (Nominal /Max)</b> </td><td> <b>Cost (MSRP)</b> </td><td> <b>Original OS (Installed OS)</b> </td><td> <b>I/O</b> </td></tr>
+<tr><td> APC 8750 </td><td> VIA 800 MHz ARMv6, VFPv2 </td><td> 512 MB DDR3 </td><td> 4W/13.5W </td><td> $49.00 </td><td> Android 2.3 (Apricot R3 Debian 7.0) </td><td> HDMI, VGA, USB, Audio I/O, Ethernet </td></tr>
+<tr><td> BeagleBone Black </td><td> TI 1 GHz ARMv7, NEON </td><td> 512 MB DDR3 </td><td> 1W/2.3W </td><td> $45.00 </td><td> Angstrom (Ubuntu 12.10) </td><td> MicroHDMI, USB, Ethernet, GPIO </td></tr>
+<tr><td> Cubieboard </td><td> Allwinner 1 GHz ARMv7, NEON </td><td> 512 MB DDR3 </td><td> 2.5W/10W </td><td> $49.00 </td><td> Android 4.0.4 (Lubuntu 12.10) </td><td> HDMI, USB, Ethernet, Audio I/O, SATA, GPIO, Infrared </td></tr>
+<tr><td> DreamPlug </td><td> Kirkwood 1.2 GHz ARMv5 </td><td> 512 MB DDR2 </td><td> 5W/15W </td><td> $149.00 </td><td> Debian 6.0 </td><td> USB, 2x Ethernet, JTAG, Bluetooth, Wifi, Audio, SATA </td></tr>
+<tr><td> MK802+ Mini PC </td><td> Allwinner 1 GHz ARMv7, NEON </td><td> 1 GB DDR3 </td><td> 3W/10W </td><td> $59.00 </td><td> Android 4.0 (Lubuntu 12.04) </td><td> MiniHDMI, USB, Wifi </td></tr>
+<tr><td> Pi Model B Rev. 2 </td><td> Broadcom 700 MHz ARMv6, VFPv2 </td><td> 512 MB DDR2 </td><td> 3.5W </td><td> $35.00 </td><td> Raspbian Debian 7.0 </td><td> HDMI, RCA, Audio, Ethernet, GPIO, USB </td></tr>
+<tr><td> Pi Model A </td><td> Broadcom 700 MHz ARMv6, VFPv2 </td><td> 256 MB DDR2 </td><td> 2.5W </td><td> $25.00 </td><td> Raspbian Debian 7.0 </td><td> HDMI, RCA, Audio, GPIO, USB </td></tr>
+<tr><td> TonidoPlug2 </td><td> Kirkwood 800 MHz ARMv5 </td><td> 512 MB DDR3 </td><td> 5W/13W </td><td> $119.00 </td><td> Debian 6.0 </td><td> Ethernet, Wifi, USB, SATA </td></tr>
 </table>
 
 <p>All of them are ARM powered and generally have at least 512 MB of RAM. The
@@ -404,11 +405,8 @@ onboard SATA gives you scope to do a lot more than normal. I think it'd be
 worth it just for that. I also think the infrared port could be a lot of fun,
 and there are probably some interesting applications with the audio in. Are
 these extras enough to really justify the extra price? The board still is
-still a little bit hacky. More than the Pi, less than the BeagleBoard. The
-fact that we're going to be seeing the dual core
-<a class="cow-url" href="http://cubieboard.org/2013/06/19/cubieboard2-is-here/">Cubieboard2</a> in the
-near future probably means it is worth the price. It's an interesting system
-with multiple potential uses.</p>
+still a little bit hacky. More than the Pi, less than the BeagleBoard. It's
+a really interesting system with multiple potential uses.</p>
 
 
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
@@ -845,9 +843,91 @@ media player project available.
 
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
-<p><a name="conclusions"></a></p><a class="cow-section-anchor" name="section-6."></a><h1 class="cow-heading"><span class="cow-sec-number">6. </span>Conclusions</h1>
+<p><a name="nextgen"></a></p><a class="cow-section-anchor" name="section-6."></a><h1 class="cow-heading"><span class="cow-sec-number">6. </span>The Next Generation</h1>
 
-<p>To be written.</p>
+<p><em>These are the voyages...</em> Well, no, not really. More like next generation
+hardware. Based on the devices we've looked at here and perhaps a perusal
+of the cell phone market, we can make educated guesses of what the next
+generation of Raspberry Pi devices might look like &mdash; the Mark II, Revision
+3, Model C, whatever it will be called.</p>
+
+<p>First let's consider what's already available in terms of newer hardware.
+There's the <a class="cow-url" href="http://apc.io/products/rock/">APC Rock</a> which is based on a
+a newer ARMv7 CPU, similar to what we've seen in some of the devices we've
+looked at. The <a class="cow-url" href="http://cubieboard.org/2013/06/19/cubieboard2-is-here/">Cubieboard2</a> has also been announced, which is a souped up Cubieboard with
+double RAM and a dual core CPU. The MK802 also at this point has
+<a class="cow-url" href="http://www.rikomagic.co.uk/">several successors</a>, the latest of which is
+the MK802IV. It features even more RAM &mdash; 2 GB &mdash; and a quad core CPU. As
+well as Bluetooth. These devices all still feature Android as the primary OS,
+but support other Linux variants.</p>
+
+<p>Those were just the devices directly related to the one's we've looked at
+there are others on the market as well, such as the
+<a class="cow-url" href="http://www.marsboard.com/">MarsBoard</a> and the
+<a class="cow-url" href="http://www.solid-run.com/cubox">CuBox</a>. These are ARMv7 devices with 1.2
+GHz and 800 MHz CPUs respectively and 1 GB of DDR3 each.</p>
+
+<p>Recent mid-range phones are shipping now dual core CPUs, like the
+<a class="cow-url" href="http://www.gsmarena.com/samsung_galaxy_ace_2_i8160-4559.php">Samsung Galaxy
+Ace 2</a> and the <a class="cow-url" href="http://www.gsmarena.com/nokia_lumia_520-5322.php">Nokia
+Lumia 520</a>, previously the purview of only the high-end phones like the 
+<a class="cow-url" href="http://www.gsmarena.com/samsung_i9100_galaxy_s_ii-3621.php">Samsung Galaxy
+S2</a> and the <a class="cow-url" href="http://www.gsmarena.com/motorola_atrix_4g-3708.php">Motorola
+Atrix 4G</a> just two short years ago. High-end phones today are equipped with
+quad core CPUs.</p>
+
+<p>We can look at the availability and specification of devices and see, as
+always a general trend of decreasing cost for components of similar
+specification. How much will the costs have dropped in 3 years to meet Eben's
+2016? It's hard to say. Any device out then will probably have had to have
+been in development for a year or more. Based on what we see today though I
+think we can make a few reasonable guesses.</p>
+
+<ul>
+<li>Almost everything will impact system specifications, while GPIO remains <span class="cow-escape">
+</span>relatively unchanged. Arduino today is much the same it was 2 years ago.</li>
+</ul>
+
+<ul>
+<li>DDR3, and more of it. Memory is one of the most effective ways to make a <span class="cow-escape">
+</span>system better. Power requirements will be shrinking and we already see it <span class="cow-escape">
+</span>in many devices now.</li>
+</ul>
+
+<ul>
+<li>Dual core. I'm not sure about this one, but there's a trend. This may <span class="cow-escape">
+</span>really be for Pi, Round 3 (<em>Voyager</em>).</li>
+</ul>
+
+<ul>
+<li>On board flash memory. If costs are low enough it may be added. It's been <span class="cow-escape">
+</span>common on lots of the devices we've looked at here, and could be a boon for <span class="cow-escape">
+</span>educational programs.</li>
+</ul>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="conclusions"></a></p><a class="cow-section-anchor" name="section-7."></a><h1 class="cow-heading"><span class="cow-sec-number">7. </span>Conclusions</h1>
+
+<p>In some respects we're looking at very fundamentally equivalent systems. Our
+benchmarks show very similar performance, and that's quite clearly linked
+with hardware specification. What's more different is the effort involved
+with system setup and the I/O ports, and the latter is probably most
+critical. That's what really determines the differences with what you can
+do. If you have a project in mind find the device that makes it easiest.
+There's probably not much all else different between them.</p>
+
+<p>If the I/O ports don't matter though (or even if in some cases they do), I'd
+personally recommend sticking with the Raspberry Pi. I would love dual
+ethernet, but I think I love the community around the Pi more.
+<a class="cow-url" href="http://raspberryjam.org.uk/">Raspberry Jams</a> are a lot of fun. It's easy
+to find support online because there are so many Pis out there. There are
+loads of good projects you can do with a Pi. I keep hearing about them from
+<a class="cow-url" href="https://twitter.com/Raspberry_Pi">@Raspberry<span class="cow-escape">_</span>Pi</a>. Most importantly to me
+I think is that the Pi was so much easier to approach than the other
+devices. Nothing else made me quite so excited. But hey, that's me &mdash; find
+something that works for you.</p>
 
 </section>
 
@@ -876,7 +956,8 @@ media player project available.
 <li>&nbsp;&nbsp;<a href="#section-4.3.">4.3. Practical performance</a></li>
 <li>&nbsp;&nbsp;<a href="#section-4.4.">4.4. Some thoughts</a></li>
 <li><a href="#section-5.">5. Practical application &mdash; media player</a></li>
-<li><a href="#section-6.">6. Conclusions</a></li>
+<li><a href="#section-6.">6. The Next Generation</a></li>
+<li><a href="#section-7.">7. Conclusions</a></li>
 </ul></p></div>
 
 <br/> <br/>
