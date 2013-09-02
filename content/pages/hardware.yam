@@ -719,4 +719,21 @@ educational programs.
 %#conclusions
 %1 Conclusions
 
-To be written.
+In some respects we're looking at very fundamentally equivalent systems. Our
+benchmarks show very similar performance, and that's quite clearly linked
+with hardware specification. What's more different is the effort involved
+with system setup and the I/O ports, and the latter is probably most
+critical. That's what really determines the differences with what you can
+do. If you have a project in mind find the device that makes it easiest.
+There's probably not much all else different between them.
+
+If the I/O ports don't matter though (or even if in some cases they do), I'd
+personally recommend sticking with the Raspberry Pi. I would love dual
+ethernet, but I think I love the community around the Pi more.
+%(http://raspberryjam.org.uk/, Raspberry Jams) are a lot of fun. It's easy
+to find support online because there are so many Pis out there. There are
+loads of good projects you can do with a Pi. I keep hearing about them from
+%(https://twitter.com/Raspberry_Pi, @Raspberry\_Pi). Most importantly to me
+I think is that the Pi was so much easier to approach than the other
+devices. Nothing else made me quite so excited. But hey, that's me -- find
+something that works for you.
