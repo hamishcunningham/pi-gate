@@ -81,7 +81,10 @@ for(htmlFile in args) {
     }
   } // each img element
 
+// TODO make changes in place, back up to /tmp
   htmlDoc.outputSettings().prettyPrint(false)
   new File(htmlFile + "-new.html").write(
       htmlDoc.outerHtml(), htmlDoc.outputSettings().charset().name())
 }
+
+// TODO work with .yam too
