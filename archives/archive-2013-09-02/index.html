@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Pi GATE — Sheffield Pi-Tronics</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+    <link href="http://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+    
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- sharethis -->
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="/theme/js/w-sharethis-com-button-buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "e5977250-e340-464c-922e-c1b521b27184", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0" height="55"></a></span>
+      <span id="strapLine"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      <span id="gateLogo"><a href="http://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0" height="55"></a></span>
+      <!-- <a href="http://www.shef.ac.uk/dcs/"><img src="/theme/images/logo-usfd-shield.png" alt="The University of Sheffield" height="55"></a> -->
+    </span>
+    <div class="horizontal menu">
+    <ul>
+    <li><img src="/theme/images/arrow-right.jpg"/></li>
+    <!-- TODO need a page at /pages to link from the top level here -->
+    <!--
+    <li><b><a href="">Projects</a></b>
+      <ul>
+    -->
+
+    <!--
+done a custom menu for now to compress it a little...
+                                      <li><a href="/pages/basics.html">Basics</a></li>
+                                <li><a href="/pages/blinkip.html">Blink IP</a></li>
+                                <li><a href="/pages/hardware.html">Pi-Alikes</a></li>
+                                <li><a href="/pages/legocases.html">LEGOCases</a></li>
+                                <li><a href="/pages/mopi.html">Mobile Pi</a></li>
+                                <li><a href="/pages/notipi.html">NotiPi</a></li>
+                                <li><a href="/pages/piroomba.html">PiRoomba</a></li>
+                                <li><a href="/pages/schools.html">Schools</a></li>
+                  -->
+<!--
+<li><a href="/pages/basics.html">Basics</a></li>
+<li><a href="/pages/hardware.html">Pi-Alikes</a></li>
+<li><a href="/pages/legocases.html">LEGO</a></li>
+<li><a href="/pages/mopi.html">Mobile</a></li>
+<li><a href="/pages/blinkip.html">BlinkIP</a></li>
+<li><a href="/pages/notipi.html">NotiPi</a></li>
+<li><a href="/pages/piroomba.html">Roomba</a></li>
+<li><a href="/pages/schools.html">Schools</a></li>
+-->
+
+<!--
+New menu pending CSS fix:
+  Tutorials
+  Blog
+  Download
+  Shop
+  Contact
+  About
+-->
+<li><b><a href="#">Projects</a></b>
+  <ul>
+  <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+  <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+  <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+  <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+  <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+  <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+  <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+  <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+  </ul></li>
+<li><a href="/">Blog</a></li>
+<li><a href="/pages/basics.html#resources">Download</a></li>
+<!--
+<li><a href="/pages/download.html">Download</a></li>
+<li><a href="/pages/shop.html">Shop</a></li>
+-->
+<li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
+
+    <!--
+      </ul></li>
+    -->
+    <!-- <li><a href="/category/news.html">News</a></li> -->
+    <li><a href="/pages/about.html">About</a></li>
+    </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="http://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
+
+  <!-- header menus -->
+  <div id="header">
+  </div>
+
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
+
+  <!-- main content div -->
+  <div id="mainContent">
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+                <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/basics.html">Basics</a></li>
+            <li><a href="/pages/blinkip.html">Blink IP</a></li>
+            <li><a href="/pages/hardware.html">Pi-Alikes</a></li>
+            <li><a href="/pages/legocases.html">LEGOCases</a></li>
+            <li><a href="/pages/mopi.html">Mobile Pi</a></li>
+            <li><a href="/pages/notipi.html">NotiPi</a></li>
+            <li><a href="/pages/piroomba.html">PiRoomba</a></li>
+            <li><a href="/pages/schools.html">Schools</a></li>
+                    <li ><a href="/category/news.html">News</a></li>
+            </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+      
+      
+
+              <aside id="featured" class="body">
+        <article>
+          <h1 class="entry-title"><a href="/posts/2013/08/25/winking-pi/">Winking Pi: Solving the IP Address Catch-22</a></h1> 
+<div id="socialButtons">
+  <span class='st_twitter_large' st_via='hcunningham' displayText='Tweet'></span>
+  <span class='st_identi_large' displayText='identi.ca'></span>
+  <span class='st_email_large' displayText='Email'></span>
+  <span class='st_sharethis_large' displayText='ShareThis'></span>
+  <span class='st_linkedin_large' displayText='LinkedIn'></span>
+  <span class='st_googleplus_large' displayText='Google +'></span>
+  <span class='st_facebook_large' displayText='Facebook'></span>
+  <span class='st_citeulike_large' displayText='CiteULike'></span>
+  <span class='st_tumblr_large' displayText='Tumblr'></span>
+  <span><a href="http://pi.gate.ac.uk/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate">
+      <img height="30" src='/theme/images/icons/rss-large.jpg'/>
+    </a></span>
+</div>          <footer class="post-info">
+  <a class="article-thumb" href="/static/images/articles/winking-pi.jpg"><img
+    src="/static/images/articles/thumbs/winking-pi.jpg" alt="winking-pi"></a>
+   <span class="article-summary"><em>Logging into the Pi without a monitor</em>.</span>   <!-- In <a href="/category/news.html">News</a> -->
+    
+  Tags:<span class="tag-list"> <a href="/tag/network.html">network</a> <a href="/tag/ip-address.html">ip address</a> <a href="/tag/wifi.html">wifi</a> <a href="/tag/gpio.html">gpio</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>   <span class="published" title="2013-08-25T00:00:00">Sun 25 August 2013,</span>
+    <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+  </footer><!-- /.post-info -->
+
+<p>I can fit a Pi in my overnight bag, but I can't fit a monitor. How can I
+remote log into my Pi when I'm on the road? This is a Catch-22 &mdash; I need a
+network address (an <em>IP address</em>) to log in, but to get the address I need to
+be logged in. </p>
+
+<p>A related question: I want to connect my Pi to a new WiFi network, but to
+connect I need to give the beast the network SSID and passphrase &mdash; and again
+I need to log in first...</p>
+
+<p>There are several solutions to the first problem &mdash; one good one is to set up
+your Pi so that it blinks its IP address on the status LED. For the second
+problem there are also several solutions, including editing the WiFi config on
+another machine that has an SD card reader, or setting up access to your
+phone's WiFi hotspot.</p>
+
+<p>I've written a <a class="cow-url" href="/pages/blinkip.html">Raspbian package called BlinkIP</a> to do
+some of this stuff, and you can download it from our new
+<a class="cow-url" href="https://launchpad.net/~hamish-dcs/+archive/pi-gate">Ubuntu-hosted package
+archive</a>.</p>
+
+<p>Happy networking :-)</p>
+
+
+
+<p><b><a class="cow-url" href="/pages/blinkip.html">Read the main article</a>.</b></p>
+<p>There are <a href="/posts/2013/08/25/winking-pi/#disqus_thread">comments</a>.</p>        </article>
+              </aside><!-- /#featured -->
+        </div>
+  <!-- column 2 -->
+  <div id="middleColumn" class="yui3-u-1-5">
+        <section id="content" class="body">
+          <h1>Other articles</h1>
+          <ol id="posts-list" class="hfeed">
+                        
+
+         
+            <li><article class="hentry">
+        <hr/>
+        <header>
+          <h1><a href="/posts/2013/08/05/chasing-pine-martens/" rel="bookmark"
+               title="Permalink to Chasing Pine Martens">Chasing Pine Martens</a></h1>
+        </header>
+        
+        <div class="entry-content">
+        <footer class="post-info">
+  <a class="article-thumb" href="/static/images/articles/chasing-pine-martens.jpg"><img
+    src="/static/images/articles/thumbs/chasing-pine-martens.jpg" alt="chasing-pine-martens"></a>
+   <span class="article-summary"><em>Battery packs for Pi-Mobility</em>.</span>   <!-- In <a href="/category/news.html">News</a> -->
+    
+  Tags:<span class="tag-list"> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>   <span class="published" title="2013-08-05T00:00:00">Mon 05 August 2013,</span>
+    <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+  </footer><!-- /.post-info -->        <!-- Battery packs for Pi-Mobility -->
+        <a class="readmore" href="/posts/2013/08/05/chasing-pine-martens/">read more</a>
+        <!-- <p>There are <a href="/posts/2013/08/05/chasing-pine-martens/#disqus_thread">comments</a>.</p> -->
+        </div><!-- /.entry-content -->
+      </article></li>
+              
+
+         
+            <li><article class="hentry">
+        <hr/>
+        <header>
+          <h1><a href="/posts/2013/07/11/lego-engineering/" rel="bookmark"
+               title="Permalink to Lego Engineering">Lego Engineering</a></h1>
+        </header>
+        
+        <div class="entry-content">
+        <footer class="post-info">
+  <a class="article-thumb" href="/static/images/articles/lego-engineering.jpg"><img
+    src="/static/images/articles/thumbs/lego-engineering.jpg" alt="lego-engineering"></a>
+   <span class="article-summary"><em>There's Lego, and then there's LEGO...</em>.</span>   <!-- In <a href="/category/news.html">News</a> -->
+    
+  Tags:<span class="tag-list"> <a href="/tag/lego.html">lego</a> <a href="/tag/cases.html">cases</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>   <span class="published" title="2013-07-11T00:00:00">Thu 11 July 2013,</span>
+    <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+  </footer><!-- /.post-info -->        <!-- There's Lego, and then there's LEGO... -->
+        <a class="readmore" href="/posts/2013/07/11/lego-engineering/">read more</a>
+        <!-- <p>There are <a href="/posts/2013/07/11/lego-engineering/#disqus_thread">comments</a>.</p> -->
+        </div><!-- /.entry-content -->
+      </article></li>
+              
+
+         
+            <li><article class="hentry">
+        <hr/>
+        <header>
+          <h1><a href="/posts/2013/06/28/neural-plasticity/" rel="bookmark"
+               title="Permalink to Learn When You're Young">Learn When You're Young</a></h1>
+        </header>
+        
+        <div class="entry-content">
+        <footer class="post-info">
+  <a class="article-thumb" href="/static/images/articles/neural-plasticity.jpg"><img
+    src="/static/images/articles/thumbs/neural-plasticity.jpg" alt="neural-plasticity"></a>
+   <span class="article-summary"><em>Learn when you're young, remember when you're old</em>.</span>   <!-- In <a href="/category/news.html">News</a> -->
+    
+  Tags:<span class="tag-list"> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>   <span class="published" title="2013-06-28T00:00:00">Fri 28 June 2013,</span>
+    <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+  </footer><!-- /.post-info -->        <!-- Learn when you're young, remember when you're old -->
+        <a class="readmore" href="/posts/2013/06/28/neural-plasticity/">read more</a>
+        <!-- <p>There are <a href="/posts/2013/06/28/neural-plasticity/#disqus_thread">comments</a>.</p> -->
+        </div><!-- /.entry-content -->
+      </article></li>
+              
+
+         
+            <li><article class="hentry">
+        <hr/>
+        <header>
+          <h1><a href="/posts/2013/06/26/alternatives/" rel="bookmark"
+               title="Permalink to It's a Jungle Out There">It's a Jungle Out There</a></h1>
+        </header>
+        
+        <div class="entry-content">
+        <footer class="post-info">
+  <a class="article-thumb" href="/static/images/articles/alternatives.jpg"><img
+    src="/static/images/articles/thumbs/alternatives.jpg" alt="alternatives"></a>
+   <span class="article-summary"><em>A survey of Pi-alike hardware</em>.</span>   <!-- In <a href="/category/news.html">News</a> -->
+    
+  Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-alikes.html">pi-alikes</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>   <span class="published" title="2013-06-26T00:00:00">Wed 26 June 2013,</span>
+    <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+  </footer><!-- /.post-info -->        <!-- A survey of Pi-alike hardware -->
+        <a class="readmore" href="/posts/2013/06/26/alternatives/">read more</a>
+        <!-- <p>There are <a href="/posts/2013/06/26/alternatives/#disqus_thread">comments</a>.</p> -->
+        </div><!-- /.entry-content -->
+      </article></li>
+              
+
+         
+            <li><article class="hentry">
+        <hr/>
+        <header>
+          <h1><a href="/posts/2013/06/10/notipifications/" rel="bookmark"
+               title="Permalink to Help! My Toast is Burning!">Help! My Toast is Burning!</a></h1>
+        </header>
+        
+        <div class="entry-content">
+        <footer class="post-info">
+  <a class="article-thumb" href="/static/images/articles/notipifications.jpg"><img
+    src="/static/images/articles/thumbs/notipifications.jpg" alt="notipifications"></a>
+   <span class="article-summary"><em>Notifications via SMS Text or Twitter from the Pi</em>.</span>   <!-- In <a href="/category/news.html">News</a> -->
+    
+  Tags:<span class="tag-list"> <a href="/tag/software.html">software</a> <a href="/tag/linux.html">linux</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>   <span class="published" title="2013-06-10T00:00:00">Mon 10 June 2013,</span>
+    <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+  </footer><!-- /.post-info -->        <!-- Notifications via SMS Text or Twitter from the Pi -->
+        <a class="readmore" href="/posts/2013/06/10/notipifications/">read more</a>
+        <!-- <p>There are <a href="/posts/2013/06/10/notipifications/#disqus_thread">comments</a>.</p> -->
+        </div><!-- /.entry-content -->
+      </article></li>
+              
+
+         
+            <li><article class="hentry">
+        <hr/>
+        <header>
+          <h1><a href="/posts/2013/06/05/stay-dry-cheaply/" rel="bookmark"
+               title="Permalink to Stay Dry Cheaply">Stay Dry Cheaply</a></h1>
+        </header>
+        
+        <div class="entry-content">
+        <footer class="post-info">
+  <a class="article-thumb" href="/static/images/articles/stay-dry-cheaply.jpg"><img
+    src="/static/images/articles/thumbs/stay-dry-cheaply.jpg" alt="stay-dry-cheaply"></a>
+   <span class="article-summary"><em>A simple DIY flood alarm</em>.</span>   <!-- In <a href="/category/news.html">News</a> -->
+    
+  Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/gpio.html">gpio</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>   <span class="published" title="2013-06-05T00:00:00">Wed 05 June 2013,</span>
+    <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+  </footer><!-- /.post-info -->        <!-- A simple DIY flood alarm -->
+        <a class="readmore" href="/posts/2013/06/05/stay-dry-cheaply/">read more</a>
+        <!-- <p>There are <a href="/posts/2013/06/05/stay-dry-cheaply/#disqus_thread">comments</a>.</p> -->
+        </div><!-- /.entry-content -->
+      </article></li>
+              
+
+         
+            <li><article class="hentry">
+        <hr/>
+        <header>
+          <h1><a href="/posts/2013/05/19/pigs-and-pi/" rel="bookmark"
+               title="Permalink to Pigs and Pi">Pigs and Pi</a></h1>
+        </header>
+        
+        <div class="entry-content">
+        <footer class="post-info">
+  <a class="article-thumb" href="/static/images/articles/pigs-and-pi.jpg"><img
+    src="/static/images/articles/thumbs/pigs-and-pi.jpg" alt="pigs-and-pi"></a>
+   <span class="article-summary"><em>Pi-Tronics starter projects</em>.</span>   <!-- In <a href="/category/news.html">News</a> -->
+    
+  Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/gpio.html">gpio</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/schools.html">schools</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>   <span class="published" title="2013-05-19T00:00:00">Sun 19 May 2013,</span>
+    <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+  </footer><!-- /.post-info -->        <!-- Pi-Tronics starter projects -->
+        <a class="readmore" href="/posts/2013/05/19/pigs-and-pi/">read more</a>
+        <!-- <p>There are <a href="/posts/2013/05/19/pigs-and-pi/#disqus_thread">comments</a>.</p> -->
+        </div><!-- /.entry-content -->
+      </article></li>
+              
+
+         
+            <li><article class="hentry">
+        <hr/>
+        <header>
+          <h1><a href="/posts/2013/05/18/schools-out/" rel="bookmark"
+               title="Permalink to School's Out?">School's Out?</a></h1>
+        </header>
+        
+        <div class="entry-content">
+        <footer class="post-info">
+  <a class="article-thumb" href="/static/images/articles/schools-out.jpg"><img
+    src="/static/images/articles/thumbs/schools-out.jpg" alt="schools-out"></a>
+   <span class="article-summary"><em>The Pi and schools computing curriculum</em>.</span>   <!-- In <a href="/category/news.html">News</a> -->
+    
+  Tags:<span class="tag-list"> <a href="/tag/schools.html">schools</a> <a href="/tag/education.html">education</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>   <span class="published" title="2013-05-18T00:00:00">Sat 18 May 2013,</span>
+    <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+  </footer><!-- /.post-info -->        <!-- The Pi and schools computing curriculum -->
+        <a class="readmore" href="/posts/2013/05/18/schools-out/">read more</a>
+        <!-- <p>There are <a href="/posts/2013/05/18/schools-out/#disqus_thread">comments</a>.</p> -->
+        </div><!-- /.entry-content -->
+      </article></li>
+              
+
+         
+            <li><article class="hentry">
+        <hr/>
+        <header>
+          <h1><a href="/posts/2013/05/16/feed-me-seymour/" rel="bookmark"
+               title="Permalink to Feed me Seymour">Feed me Seymour</a></h1>
+        </header>
+        
+        <div class="entry-content">
+        <footer class="post-info">
+  <a class="article-thumb" href="/static/images/articles/feed-me-seymour.jpg"><img
+    src="/static/images/articles/thumbs/feed-me-seymour.jpg" alt="feed-me-seymour"></a>
+   <span class="article-summary"><em>A Pi on a Roomba!</em>.</span>   <!-- In <a href="/category/news.html">News</a> -->
+    
+  Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/gpio.html">gpio</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/roomba.html">roomba</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>   <span class="published" title="2013-05-16T00:00:00">Thu 16 May 2013,</span>
+    <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+  </footer><!-- /.post-info -->        <!-- A Pi on a Roomba! -->
+        <a class="readmore" href="/posts/2013/05/16/feed-me-seymour/">read more</a>
+        <!-- <p>There are <a href="/posts/2013/05/16/feed-me-seymour/#disqus_thread">comments</a>.</p> -->
+        </div><!-- /.entry-content -->
+      </article></li>
+              </ol><!-- /#posts-list -->
+      </section><!-- /#content -->
+              <p class="paginator">
+        Page 1 / 2
+            <a href="/index2.html">&raquo;</a>
+    </p>
+              <section id="extras" class="body">
+      </section><!-- /#extras -->
+
+
+  </div>
+      <div id="rightColumn" class="yui3-u-1-5"> <!-- column 3 -->
+      <a class="twitter-timeline" href="https://twitter.com/search?q=%23raspi" data-widget-id="345540484359393280">Tweets about "#raspi"</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+<br/> <br/>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'pi-gate'; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </div>
+  </div>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  </div> <!-- #mainContent -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © The <a href="http://www.shef.ac.uk/">University of Sheffield</a>, 1995-2013.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="http://gate.ac.uk/">GATE</a> is <a href="http://www.fsf.org/">free software</a> under
+        <a href="http://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="http://www.shef.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png" alt="The University of Sheffield" height="70"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

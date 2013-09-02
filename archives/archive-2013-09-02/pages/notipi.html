@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>NotiPi</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+    <link href="http://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+    
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- sharethis -->
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="/theme/js/w-sharethis-com-button-buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "e5977250-e340-464c-922e-c1b521b27184", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0" height="55"></a></span>
+      <span id="strapLine"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      <span id="gateLogo"><a href="http://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0" height="55"></a></span>
+      <!-- <a href="http://www.shef.ac.uk/dcs/"><img src="/theme/images/logo-usfd-shield.png" alt="The University of Sheffield" height="55"></a> -->
+    </span>
+    <div class="horizontal menu">
+    <ul>
+    <li><img src="/theme/images/arrow-right.jpg"/></li>
+    <!-- TODO need a page at /pages to link from the top level here -->
+    <!--
+    <li><b><a href="">Projects</a></b>
+      <ul>
+    -->
+
+    <!--
+done a custom menu for now to compress it a little...
+                                      <li><a href="/pages/basics.html">Basics</a></li>
+                                <li><a href="/pages/blinkip.html">Blink IP</a></li>
+                                <li><a href="/pages/hardware.html">Pi-Alikes</a></li>
+                                <li><a href="/pages/legocases.html">LEGOCases</a></li>
+                                <li><a href="/pages/mopi.html">Mobile Pi</a></li>
+                                <li><a href="/pages/notipi.html">NotiPi</a></li>
+                                <li><a href="/pages/piroomba.html">PiRoomba</a></li>
+                                <li><a href="/pages/schools.html">Schools</a></li>
+                  -->
+<!--
+<li><a href="/pages/basics.html">Basics</a></li>
+<li><a href="/pages/hardware.html">Pi-Alikes</a></li>
+<li><a href="/pages/legocases.html">LEGO</a></li>
+<li><a href="/pages/mopi.html">Mobile</a></li>
+<li><a href="/pages/blinkip.html">BlinkIP</a></li>
+<li><a href="/pages/notipi.html">NotiPi</a></li>
+<li><a href="/pages/piroomba.html">Roomba</a></li>
+<li><a href="/pages/schools.html">Schools</a></li>
+-->
+
+<!--
+New menu pending CSS fix:
+  Tutorials
+  Blog
+  Download
+  Shop
+  Contact
+  About
+-->
+<li><b><a href="#">Projects</a></b>
+  <ul>
+  <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+  <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+  <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+  <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+  <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+  <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+  <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+  <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+  </ul></li>
+<li><a href="/">Blog</a></li>
+<li><a href="/pages/basics.html#resources">Download</a></li>
+<!--
+<li><a href="/pages/download.html">Download</a></li>
+<li><a href="/pages/shop.html">Shop</a></li>
+-->
+<li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
+
+    <!--
+      </ul></li>
+    -->
+    <!-- <li><a href="/category/news.html">News</a></li> -->
+    <li><a href="/pages/about.html">About</a></li>
+    </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="http://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
+
+  <!-- header menus -->
+  <div id="header">
+  </div>
+
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
+
+  <!-- main content div -->
+  <div id="mainContent">
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+                <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/basics.html">Basics</a></li>
+            <li><a href="/pages/blinkip.html">Blink IP</a></li>
+            <li><a href="/pages/hardware.html">Pi-Alikes</a></li>
+            <li><a href="/pages/legocases.html">LEGOCases</a></li>
+            <li><a href="/pages/mopi.html">Mobile Pi</a></li>
+            <li><a href="/pages/notipi.html">NotiPi</a></li>
+            <li><a href="/pages/piroomba.html">PiRoomba</a></li>
+            <li><a href="/pages/schools.html">Schools</a></li>
+                    <li ><a href="/category/news.html">News</a></li>
+            </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+          
+<section id="content" class="body">    
+    <h1 class="entry-title">NotiPi</h1>
+<div id="socialButtons">
+  <span class='st_twitter_large' st_via='hcunningham' displayText='Tweet'></span>
+  <span class='st_identi_large' displayText='identi.ca'></span>
+  <span class='st_email_large' displayText='Email'></span>
+  <span class='st_sharethis_large' displayText='ShareThis'></span>
+  <span class='st_linkedin_large' displayText='LinkedIn'></span>
+  <span class='st_googleplus_large' displayText='Google +'></span>
+  <span class='st_facebook_large' displayText='Facebook'></span>
+  <span class='st_citeulike_large' displayText='CiteULike'></span>
+  <span class='st_tumblr_large' displayText='Tumblr'></span>
+  <span><a href="http://pi.gate.ac.uk/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate">
+      <img height="30" src='/theme/images/icons/rss-large.jpg'/>
+    </a></span>
+</div>        
+        
+
+<p><em>Notifications via SMS Text or Twitter from the Pi</em></p>
+
+<p><em><a class="cow-url" href="/pages/about.html#fred">Fred Sonnenwald</a> and
+<a class="cow-url" href="/pages/about.html#hamish">Hamish Cunningham</a>, June 2013</em></p>
+
+
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Introduction</a></li>
+<li><a href="#section-2.">2. Pi Texting (SMS) via a Web Service</a></li>
+<li><a href="#section-3.">3. Pi Texting (SMS) via a Phone Handset</a></li>
+<li><a href="#section-4.">4. Pi Messaging via Twitter</a></li>
+</ul></p></div>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="intro"></a></p><a class="cow-section-anchor" name="section-1."></a><h1 class="cow-heading"><span class="cow-sec-number">1. </span>Introduction</h1>
+
+<p>The general idea of NotiPi, or notifications, is to let the Raspberry Pi
+interact with you in ways not tied to sitting in front of the monitor. That is
+to say, to let you know what's going on at a distance. There are different
+ways to go about this, but they all boil down to sending a bit of text to you
+in some fashion so that you are aware you've received it. The Raspberry Pi is a
+general purpose machine, so it is easy to take advantage of existing services
+like texting phones, or Tweets.</p>
+
+<p>Here we'll look at two options for texting (using the net or using a mobile
+phone handset) and finish up with the Twitter option.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="bulk-sms"></a></p><a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>Pi Texting (SMS) via a Web Service</h1>
+
+<p>The general idea here is that there are loads of companies out there that
+offer what is called SMS gateway service. You usually see them in the form of
+a webpage where you type in some text and a phone number and off it goes &mdash;
+you get a message on your phone. This is the same principle as what we'll have
+the Pi do, except the Pi will be using something a bit more industrial
+strength.</p>
+
+<p>The webpage method is a sort of end-user thing that's friendly to you and I,
+but is a bit more complex to get the Pi talking to. What we want really is a
+company that specializes in providing the service that those webpages use.
+If you've ever received an advert on your phone via text, it's what those
+guys use. (I keep getting messages about debt consolidation, annoyingly!)</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h2 class="cow-heading">BulkSMS</h2>
+
+<p>Unfortunately we can't just use any company that provides this service. The
+Raspberry Pi is running Linux and isn't on an Intel so we need a service that's
+platform and architecture independent. Browsing and googling around led us to
+<a class="cow-url" href="http://www.bulksms.co.uk/">BulkSMS</a>. Sending a text with them costs about 5
+pence (you have to buy at least 200 texts to send). Even better though, they
+quite nicely have published documentation for their
+<a class="cow-url" href="https://www.bulksms.co.uk/docs/eapi/">HTTP API</a>. This is the written
+explanation of how programs can talk to their service, which in this case is
+done in a way similar accessing a web-page, only using a program. Happily
+there are lots of ways to do this on Linux.</p>
+
+<p>To understand the API (or really any programming concept or protocol) I find
+that you can approach it in two ways. You can read the documentation and piece
+together what needs to be done, or you can look at some code that's already
+been written and work out how that needs to be changed to do what you want it
+to instead. I prefer the latter, learning from example. BulkSMS has quite a
+few <a class="cow-url" href="https://www.bulksms.co.uk/docs/eapi/code_samples/">code samples</a>
+available. My strongest language of the ones they have available there is PHP
+and so I dissected that one. The example is comprehensive and quite complete.</p>
+
+<p>To save you the tedium of working through either the API or the example code
+and here we'll provide you with a rough outline of how it works. Communication
+with BulkSMS is done over an <a class="cow-url" href="https://en.wikipedia.org/wiki/POST_%28HTTP%29">HTTP POST</a> request. This is the sort of thing that your browser does when you
+hit the &quot;login&quot; button on a website &mdash; your username and password are encoded
+together in a key-pair format and sent off down the tubes. The technical
+details are of less interest to us than the key-pair bit. We need to craft
+together the correct key-pairs (e.g. <tt>username=fred&amp;password=imnottelling</tt>) so
+that BulkSMS on the other side knows what we want to do.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h2 class="cow-heading">The key-pairs</h2>
+
+<p>There are 5 bits of information that BulkSMS absolutely needs to get things
+done. These are as follows:</p>
+
+<ul>
+<li>A unique message ID (<b>stop<span class="cow-escape">_</span>dup<span class="cow-escape">_</span>id</b>). This is an integer (whole number)
+  value between 1 and 2147483647.</li>
+<li>Your BulkSMS username (<b>username</b>).</li>
+<li>Your BulkSMS password (<b>password</b>).</li>
+<li>The message text you're sending (<b>message</b>).</li>
+<li>The phone number (<b>msisdn</b>). This is including the country code, but without
+  the leading '+'.</li>
+</ul>
+
+<p>All of this information is pretty easy to get a hold of. The next half of
+the battle is actually sending the message.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h2 class="cow-heading">Curl</h2>
+
+<p>The absolute easiest way to send a message is to use a bit of software that's
+already been written. We don't need to deal with the tedious creation of HTTP
+packets, we can let someone else do that bit. Again, we just need to deal with
+those key-pairs. So we turn to a program called
+<a class="cow-url" href="http://curl.haxx.se/docs/manpage.html">curl</a> which is a command line utility
+for HTTP and other useful things. What is of particular interest to us is that
+it can do HTTP POST communications quite easily via the <b>&mdash;data-urlencode</b>
+argument which takes the key=data pair as its parameter. Add one of these to
+the command for each key-pair and tell curl to go after the service url,
+<a class="cow-url" href="http://www.bulksms.co.uk/eapi/submission/send_sms/2/2.0">http://www.bulksms.co.uk/eapi/submission/send_sms/2/2.0</a>, and that's it.
+Simple!</p>
+
+<p><pre class="prettyprint lang-bash">
+curl http://www.bulksms.co.uk/eapi/submission/send_sms/2/2.0 \ 
+  --data-urlencode stop_dup_id=&quot;some random number&quot; \ 
+  --data-urlencode username=&quot;your username&quot; \ 
+  --data-urlencode password=&quot;your password&quot; \ 
+  --data-urlencode message=&quot;golly wow it works!&quot; \ 
+  --data-urlencode msisdn=&quot;441632960123&quot;
+</pre>It can be taken a step further and the whole thing can be wrapped around with
+a shell script that stores your username and password and can be manipulated
+from the command line a bit easier. I've written a script which does this,
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/notipi/bin/sendbulksms.sh">available here</a>. More information of shell programing with bash is available
+from <a class="cow-url" href="http://tldp.org/LDP/abs/html/">The Linux Documentation Project</a> (TLDP).
+It's a bit heavy reading but it's very comprehensive.</p>
+
+<p>(<b>Note</b>: you may get a warning when running the script under Raspbian, it's not
+necessary, but you can make it go away by editing <tt>/etc/locale.gen</tt> and
+uncommenting (delete the <tt>#</tt>) with the line which has <tt>en<span class="cow-escape">_</span>GB.iso8859-1</tt> in
+it. Then running sudo locale-gen. This has to do with the script changing
+character encoding to the older latin1, which BulkSMS recommends to be used.
+Character encoding has to do with the way letters are stored digitally.
+There's no real practical difference here, but there's more info on
+<a class="cow-url" href="https://en.wikipedia.org/wiki/Character_encoding">Wikipedia</a>!)</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="nokia-sms"></a></p><a class="cow-section-anchor" name="section-3."></a><h1 class="cow-heading"><span class="cow-sec-number">3. </span>Pi Texting (SMS) via a Phone Handset</h1>
+
+<p>In the last section, we looked at sending a text over the internet. What if
+isn't available? You may find yourself in situations where the ethernet cable
+or the wifi doesn't reach. Well don't panic, because Linux has you covered.
+A real, physical cell connection can provide a second mechanism for sending
+notifications &mdash; actually sending SMS messages on a cell phone proper.</p>
+
+<p>There's a handy bit of software called <a class="cow-url" href="http://gnokii.org/">gnokii</a> which lets
+Linux, or in our case Raspbian, talk with older mobile phones. This is not
+Android or Windows smartphone territory, but rather that of everyone&rsquo;s favorite
+candy-bar bricks of the 90s and early 00s. It's the perfect use for that old
+phone you've had lying around for years, and let's face it, Nokias are
+indestructible. If you don't have one they're pretty cheap these days too.
+Just the sort of bit of kit you want for a fun project.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h2 class="cow-heading">Equipment</h2>
+
+<p>We had an old <a class="cow-url" href="http://www.gsmarena.com/nokia_6230i-1087.php">Nokia 6230i</a> lying
+around, so our directions are relevant to that.  It uses the DKU-2 USB cable to
+connect to the Pi.  Check the <a class="cow-url" href="http://wiki.gnokii.org/index.php/Config">list of
+phones</a> to see if what you already have will work.  The USB based setups are
+ideal, but there are other phones with only serial cables.  To use those you'll
+need a USB to RS-232 (serial) adapter.  If all you have is the phone, you can
+usually find the cables and adapters you need pretty cheaply on Amazon.</p>
+
+<p>You'll also need mobile service to get this to work.  A pre-paid SIM chip is
+ideal as it's cheap.  We've got a giffgaff chip as they offer the cheapest SMS
+rates here in England &mdash; a mere 6p a text.  Make sure you're phone's unlocked
+before you get a chip that doesn't work with it! See the Wikipedia page on
+<a class="cow-url" href="https://en.wikipedia.org/wiki/SIM_lock">SIM lock</a> for more info there to work
+out what you've got.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h2 class="cow-heading">Setup</h2>
+
+<p>We'll have a few things to do before we can get going...</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h3 class="cow-heading">Installing gnokii</h3>
+
+<p>First, install gnokii by running sudo apt-get install gnokii in a terminal and
+hitting Y when prompted to conform the installation.  If you're in the default
+Rasbian GUI, double clicking the LXTerminal icon on the desktop starts a
+terminal.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h3 class="cow-heading">Kernel module blacklisting</h3>
+
+<p>A kernel module need to be blacklisted to allow gnokii to work. Edit
+<tt>/etc/modprobe.d/raspi-blacklist.conf</tt> and add a line which reads:</p>
+
+<p><pre class="prettyprint lang-bash">blacklist cdc_acm </pre>See how our raspi-blacklist.conf file looks
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/notipi/conf/gnokii/rasbian/raspi-blacklist.conf">here</a>.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h3 class="cow-heading">The /etc/gnokiirc configuration file</h3>
+
+<p>Rasbian does not install a default configuration file for gnokii so it will have
+to be copied out of the documentation files.  This results in a nice global
+configuration file, <tt>/etc/gnokiirc</tt>, being in place.  These command should be run
+as root, so sudo bash must be executed first.</p>
+
+<p><pre class="prettyprint lang-bash">sudo bash
+cp /usr/share/doc/gnokii-common/sample/gnokiirc.gz /etc/
+cd /etc/
+gunzip gnokiirc.gz </pre>The <tt>/etc/gnokiirc</tt> needs to be edited next.  There is a lot of stuff in here,
+and most of it isn't relevant, so the bits to be edited will need to be picked
+out.  I use vim as my editor, which can happily show line numbers and make
+this easier. <tt>:set number</tt> to get them turned on.  Note that the file will need
+to be edited as root, so the command for me is <tt>sudo vim /etc/gnokiirc</tt>.</p>
+
+<ul>
+<li>Line 13: <tt>port = none</tt> should be commented (add # in front of the line).</li>
+<li>Line 47: <tt># port = 1</tt> should be uncommented (remove # from the the front of the line).</li>
+<li>Line 54: <tt>model = fake</tt> should be changed to <tt>model = series40</tt>.</li>
+<li>Line 94: <tt># connection = dku2libusb</tt> should be uncommented.</li>
+<li>Line 104: <tt>connection = serial</tt> should be commented.</li>
+</ul>
+
+<p>Make these changes and save.  Alternatively you can download our already
+modified configuration file.</p>
+
+<p><pre class="prettyprint lang-bash">cd /etc
+sudo wget https://raw.github.com/hamishcunningham/pi-tronics/master/notipi/conf/gnokii/rasbian/gnokiirc </pre>For some reason, Rasbian's compilation of gnokii is not set to recognize the
+/etc/gnokiirc file as a global configuration file. To work around this <tt>&mdash;config
+/etc/gnokiirc</tt> will have to be added to every gnokii command run later on.
+Alternatively a softlink can be setup between where Raspbian expects the config
+file and where we've placed it.</p>
+
+<p><pre class="prettyprint lang-bash">mkdir ~/.config/
+mkdir ~/.config/gnokii/
+ln -s /etc/gnokiirc ~/.config/gnokii/config </pre></p><!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h3 class="cow-heading">udev rules</h3>
+
+<p>By default when the phone is plugged in, only root will be allowed to access it.
+This is somewhat less than useful in many cases.  Fortunately we can get around
+this by adding what are called udev rules.  This is a special configuration file
+which lets the system know to do something special in terms of permissions when
+the phone is plugged in.  A file for this is already included in Rasbian, and
+just needs to be installed.</p>
+
+<p><pre class="prettyprint lang-bash">sudo cp /usr/share/doc/gnokii-common/sample/45-nokiadku2.rules /etc/udev/rules.d/ </pre></p><!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h2 class="cow-heading">Using gnokii</h2>
+
+<p>Now that it's all setup, we should be able to get going with gnokii and start
+sending messages.  Connect the DKU-2 data cable to the Raspberry Pi and the
+phone.  When the Nokia 6230i is connected, it asks about being a data storage
+device hit no to that.  According to lsusb (usbutils package) it shows up like
+the following to the system:</p>
+
+<pre>Bus 001 Device 010: ID 0421:0428 Nokia Mobile Phones 6230i Modem </pre>
+
+<p>To get rid of the data storage device query, simply remove the memory card from
+the phone.  You'll need to do this if you're planning to use the phone with the
+Pi in an automated environment.</p>
+
+<p>Test the phone's connection by running gnokii &mdash;identify.  Output should be
+something like this:</p>
+
+<pre>GNOKII Version 0.6.30
+LOG: debug mask is 0x1
+Config read from file /etc/gnokiirc.
+Cannot open logfile /root/.cache/gnokii/gnokii-errors
+WARNING: cannot open logfile, logs will be directed to stderr
+phone instance config:
+model = series40
+port = 1
+connection = dku2libusb
+initlength = default
+serial_baudrate = 19200
+serial_write_usleep = -1
+handshake = software
+require_dcd = 0
+smsc_timeout = 10
+rfcomm_channel = 0
+sm_retry = 0
+Connecting
+Serial device: opening device USB
+Ignoring extra header, type 171, length 5
+Found FBUS interface
+Getting model...
+Message sent: 0x1b / 0x0006
+00 01 00 07 01 00                               |                 
+Message received: 0x1b / 0x0032
+01 44 00 08 00 01 58 2c 00 26 56 20 30 33 2e 36 |  D    X, &amp;V 03.6
+32 0a 30 34 2d 4e 6f 76 2d 30 35 0a 52 4d 37 32 | 2 04-Nov-05 RM72
+5f 37 33 5f 2d 0a 47 53 4d 20 50 31 2e 0a 43 00 | _73_- GSM P1. C 
+00 00                                           |                 
+Received message type 1b
+model length: 9
+Received model RM72_73_-
+Found model &quot;RM72_73_-&quot;
+Identifying...
+Message sent: 0x1b / 0x0005
+00 01 00 00 41                                  |     A           
+Message sent: 0x1b / 0x0006
+00 01 00 07 01 00                               |                 
+Message received: 0x1b / 0x001a
+01 44 00 01 00 01 41 14 00 10 XX XX XX XX XX XX |  D    A   XXXXXX
+XX XX XX XX XX XX XX XX XX 00                   | XXXXXXXXX       
+Received message type 1b
+Received imei [REDACTED]
+Message received: 0x1b / 0x0032
+01 44 00 08 00 01 58 2c 00 26 56 20 30 33 2e 36 |  D    X, &amp;V 03.6
+32 0a 30 34 2d 4e 6f 76 2d 30 35 0a 52 4d 37 32 | 2 04-Nov-05 RM72
+5f 37 33 5f 2d 0a 47 53 4d 20 50 31 2e 0a 43 00 | _73_- GSM P1. C 
+00 00                                           |                 
+Received message type 1b
+Received revision V 03.62
+model length: 9
+Received model RM72_73_-
+IMEI         : [REDACTED]
+Manufacturer : Nokia
+No flags section in the config file.
+Model        : RM72_73_-
+Product name : RM72_73_-
+Revision     : V 03.62
+Serial device: closing device </pre>
+
+<p>To send a text message is now simple:</p>
+
+<p><pre class="prettyprint lang-bash">echo &ldquo;Message.&rdquo; | gnokii --sendsms &lt;phone number&gt; </pre>Let a text be sent!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h3 class="cow-heading">Errors!</h3>
+
+<p>You may have some problems running gnokii.  If you get a PHONET error, the
+kernel module hasn't black listed properly.  Re-check that.  If it's a complaint
+about permissions try running as root and with the <tt>&mdash;config</tt> option set as
+mentioned above.  There may be a problem with udev not having taken up the rules
+correctly.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h2 class="cow-heading">I'm using Fedora!</h2>
+
+<p>It's OK! Lots of stuff is the same or similar. The blacklist file is instead
+<tt>/etc/modprobe.d/blacklist.conf</tt> and requires three modules to be added:</p>
+
+<p><pre class="prettyprint lang-bash">blacklist cdc_acm
+blacklist cdc_phonet
+blacklist phonet</pre>We have one
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/notipi/conf/gnokii/fedora/blacklist.conf">already done</a>.</p>
+
+<p><tt>/etc/gnokiirc</tt> is already in place and the lines to be edited are the same.
+There's just one more to be done:</p>
+
+<ul>
+<li>Line 127: <tt>use<span class="cow-escape">_</span>locking = yes</tt> should be changed to <tt>no</tt>.</li>
+</ul>
+
+<p>We also have
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/notipi/conf/gnokii/fedora/gnokiirc">one done too</a>.</p>
+
+<p>Fedora however doesn't include an set of udev rules. We've made our own.</p>
+
+<p><pre class="prettyprint lang-bash">cd /etc/udev/rules.d/
+sudo wget https://raw.github.com/hamishcunningham/pi-tronics/master/notipi/conf/gnokii/fedora/40-basic-permissions.rules </pre></p><!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h2 class="cow-heading">Other resources</h2>
+
+<p>Hopefully we've covered everything you need to get started. If you need more
+help we're not the first ones to look into this.  We're not even the first ones
+to do it with a Raspberry Pi.  Some other guides:</p>
+
+<ul>
+<li><a class="cow-url" href="http://rolfblijleven.blogspot.co.uk/2013/01/raspberry-pi-as-sms-gateway.html">http://rolfblijleven.blogspot.co.uk/2013/01/raspberry-pi-as-sms-gateway.html</a></li>
+<li><a class="cow-url" href="http://researchandscience.wordpress.com/tag/sms-via-raspberry-pi/">http://researchandscience.wordpress.com/tag/sms-via-raspberry-pi/</a></li>
+<li><a class="cow-url" href="http://www.youtube.com/watch?v=PtPzWZWHqfI">http://www.youtube.com/watch?v=PtPzWZWHqfI</a></li>
+</ul>
+
+<p>Guides with just a regular setup:</p>
+
+<ul>
+<li><a class="cow-url" href="http://www.debian.co.il/2007/12/howto-sms-gateway-with-nokia-6230i-gsm/">http://www.debian.co.il/2007/12/howto-sms-gateway-with-nokia-6230i-gsm/</a></li>
+<li><a class="cow-url" href="http://blogs.nopcode.org/brainstorm/2006/06/27/sms-with-gnokii-and-nokia-6230i/">http://blogs.nopcode.org/brainstorm/2006/06/27/sms-with-gnokii-and-nokia-6230i/</a></li>
+<li><a class="cow-url" href="http://siddharthdawara.blogspot.co.uk/2006/09/gnokii-dku-2-nokia-6230-linux.html">http://siddharthdawara.blogspot.co.uk/2006/09/gnokii-dku-2-nokia-6230-linux.html</a></li>
+</ul>
+
+<p>There are also some more generic pages which might be of use if you're having
+trouble:</p>
+
+<ul>
+<li><a class="cow-url" href="http://wiki.gnokii.org/index.php/Nokia6230iConfig">http://wiki.gnokii.org/index.php/Nokia6230iConfig</a></li>
+<li><a class="cow-url" href="http://wiki.gnokii.org/index.php/DKU2">http://wiki.gnokii.org/index.php/DKU2</a></li>
+<li><a class="cow-url" href="https://wiki.archlinux.org/index.php/Nokia6230i">https://wiki.archlinux.org/index.php/Nokia6230i</a></li>
+</ul>
+
+<p>A bit of googling should turn up more stuff too!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="pi-twitter"></a></p><a class="cow-section-anchor" name="section-4."></a><h1 class="cow-heading"><span class="cow-sec-number">4. </span>Pi Messaging via Twitter</h1>
+
+<p>Did you bump into a lamp-post last time you walked down the street? Are you
+developing hunched shoulders and a cricked neck? Do your thumbs have more
+muscle on them than your arms? These are all classic signs of becoming a
+twitter-head... those conversations are just so important and fast-moving that
+you've got to keep track at all times.</p>
+
+<p>Don't worry &mdash; we're here for you. Your trusty Pi can tweet at you, so now you
+can programme a cron script to pull data out of Google Calendar and remind you
+about your Granny's birthday or your dentist appointment or whatever.</p>
+
+<p>The main hoop we have to jump through to do this is <em>authentication</em>.
+<a class="cow-url" href="http://staffwww.dcs.shef.ac.uk/people/D.Rout/">Dom Rout</a> has written a
+Python library to make this easier, which lives on GitHub at
+<a class="cow-url" href="https://github.com/domrout/python-twitter-wrapper">https://github.com/domrout/python-twitter-wrapper</a></p>
+
+<p>To install it, use PIP (<tt>sudo apt-get install python-pip</tt> to get hold of it)
+like this:</p>
+
+<p><pre class="prettyprint lang-bash">
+pip install -e git+https://github.com/domrout/python-twitter-wrapper.git#egg=TwitterWrapper
+</pre>Once installed, you need a Twitter API consumer key and secret. You can get
+these by logging into <a class="cow-url" href="https://dev.twitter.com/">https://dev.twitter.com/</a> and setting up an application.</p>
+
+<p>Once you've done that, there's a script at
+<a class="cow-url" href="https://github.com/domrout/python-twitter-wrapper/blob/master/scripts/authenticate_twitter">https://github.com/domrout/python-twitter-wrapper/blob/master/scripts/authenticate_twitter</a>
+that requests a proper <tt>OAuth</tt> token for your application and user. It sends
+you to the Twitter site wherein you can enter your username and password.</p>
+
+<p>Once all of that has been done, the snippet goes like:</p>
+
+<p><pre class="prettyprint lang-python">
+import twitterwrapper
+
+api = twitterwrapper.Api()
+
+# Post an update
+new_status = api.statuses.update(&quot;I'm tweeting programmatically!&quot;)
+
+# Delete that update.
+new_status.destroy()
+</pre>Happy tweeting &mdash; but do try to straighten up now and then, just to keep the
+blood flowing!</p>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+</section>
+
+</div>
+<div id="middleColumn" class="yui3-u-1-5"> <!-- column 2 -->
+  <a class="article-thumb" href="/static/images/articles/notipi.jpg"><img
+    src="/static/images/articles/thumbs/notipi.jpg"
+    alt="notipi"></a>
+   <span class="article-summary"><em>Notifications via SMS Text or Twitter from the Pi</em>.</span> <!-- __CONTENTS__ -->
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Introduction</a></li>
+<li><a href="#section-2.">2. Pi Texting (SMS) via a Web Service</a></li>
+<li><a href="#section-3.">3. Pi Texting (SMS) via a Phone Handset</a></li>
+<li><a href="#section-4.">4. Pi Messaging via Twitter</a></li>
+</ul></p></div>
+
+<br/> <br/>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'pi-gate'; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  <section id="extras" class="body">
+      </section><!-- /#extras -->
+
+
+  </div>
+  </div>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  </div> <!-- #mainContent -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © The <a href="http://www.shef.ac.uk/">University of Sheffield</a>, 1995-2013.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="http://gate.ac.uk/">GATE</a> is <a href="http://www.fsf.org/">free software</a> under
+        <a href="http://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="http://www.shef.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png" alt="The University of Sheffield" height="70"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
