@@ -128,7 +128,7 @@ div.note {
 }
 
 /* Tables */
-table {margin: .5em auto 1.5em auto; width: 98%;}
+table {margin: .5em auto 1.5em auto; /* width: 98%; */}
 /* Thead */
 thead th {padding: .5em .4em; text-align: left;}
 thead td {}

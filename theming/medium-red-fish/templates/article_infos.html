@@ -1,6 +1,7 @@
 <footer class="post-info">
   <a class="article-thumb" href="{{ SITEURL }}/static/images/articles/{{ article.slug }}.jpg"><img
-    src="{{ SITEURL }}/static/images/articles/thumbs/{{ article.slug }}.jpg" alt="{{ article.slug }}"></a>
+    src="{{ SITEURL }}/static/images/articles/thumbs/{{ article.slug }}.jpg"
+    height="75" width="75" alt="{{ article.slug }}"></a>
   {% if article.summary %} <span class="article-summary"><em>{{ article.summary }}</em>.</span> {% endif %}
   <!-- In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> -->
   {% import 'translations.html' as translations with context %}

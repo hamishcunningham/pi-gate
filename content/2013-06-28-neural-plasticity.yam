@@ -41,7 +41,7 @@ are:
 
 %[ | %[
 | %(images/flood-alarm-detail-5.jpg,
-  %image(images/thumbs/flood-alarm-detail-5.jpg, p'eye candy))
+  %image(images/thumbs/flood-alarm-detail-5.jpg, p'eye candy, 400))
 | %(images/flood-alarm-detail-6.jpg,
   %image(images/thumbs/flood-alarm-detail-6.jpg, p'eye candy))
 | %] |
@@ -55,6 +55,23 @@ are:
   %image(images/thumbs/flood-alarm-detail-2.jpg, p'eye candy))
 | %] | %]
 
+%/*
+%[ | %[
+| %(images/flood-alarm-detail-5.jpg,
+  %image(images/thumbs/flood-alarm-detail-5.jpg, p'eye candy, 280, 133))
+| %(images/flood-alarm-detail-6.jpg,
+  %image(images/thumbs/flood-alarm-detail-6.jpg, p'eye candy, 280, 281))
+| %] |
+---
+| %[
+| %(images/flood-alarm-detail-3.jpg,
+  %image(images/thumbs/flood-alarm-detail-3.jpg, p'eye candy, 280, 214))
+| %(images/flood-alarm-detail-1.jpg,
+  %image(images/thumbs/flood-alarm-detail-1.jpg, p'eye candy, 280, 154))
+| %(images/flood-alarm-detail-2.jpg,
+  %image(images/thumbs/flood-alarm-detail-2.jpg, p'eye candy, 280, 166))
+| %] | %]
+%*/
 
 %meta(
   summary=Learn when you're young\, remember when you're old,
