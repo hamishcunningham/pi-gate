@@ -36,10 +36,10 @@ boards (click to zoom):
 
 %[ | %\ %\ |
 %(images/mopi/prototype-regulator-05.jpg,
-%image(images/mopi/thumbs/prototype-regulator-05.jpg, mopi prototype 5))
+%image(images/mopi/thumbs/prototype-regulator-05.jpg, mopi prototype 5, 200, 194))
 | %\ %\ %\  |
 %(images/mopi/prototype-controller-01.jpg,
-%image(images/mopi/thumbs/prototype-controller-01.jpg, mopi prototype 6))
+%image(images/mopi/thumbs/prototype-controller-01.jpg, mopi prototype 6, 270, 195))
 | %]
 
 The software is %(http://www.fsf.org/about/what-is-free-software, open source)

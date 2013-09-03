@@ -26,7 +26,7 @@ Circuit diagrams) were drawn and debugged using the excellent
 %(http://circuitlab.com/, CircuitLab).):
 
 %(https://www.circuitlab.com/circuit/m4rfw9/just-an-led-raspberry-pi/,
-%image(images/just-an-led-ras-pi.jpg, just an LED, 500))
+%image(images/just-an-led-ras-pi.jpg, just an LED, 500, 199))
 
 Here D1 is the LED we're lighting up and R1 is a resistor that prevents too
 much current flowing in the circuit. V1 represents the 3.3 volt power supply
@@ -38,7 +38,8 @@ pins, however, and several _gotchas_ along the way -- for more detail see the
 discussion on %(#gpio-pins, GPIO pins) below).
 
 If we transfer this design onto our breadboard, we end up with something
-looking like this: %br %image(images/bbd-simple-led.jpg, simple LED breadboard, 500)
+looking like this: %br %image(images/bbd-simple-led.jpg, simple LED
+breadboard, 500, 375)
 
 So far, so boring: this is pretty much the equivalent of connecting a torch
 bulb to a battery and going "ahhh" at the pretty light. More interesting,
@@ -49,7 +50,7 @@ a different pin on the GPIO header, in this case pin 11. Now spot the
 difference:
 
 %(https://www.circuitlab.com/circuit/vxz53u/driving-an-led-via-software-raspberry-pi/,
-%image(images/driving-an-led-via-software-ras-pi.jpg, driving an LED, 500))
+%image(images/driving-an-led-via-software-ras-pi.jpg, driving an LED, 500, 199))
 
 Note the shift from pin 1 to pin 11 on the GPIO header. That's all! Now we're
 almost ready to start turning the LED on and off using software running on the
@@ -92,13 +93,13 @@ on the Pi with the pins positionned in the top right corner, not the other way
 around, so that the numbers on the diagram match up with the orientation of
 the Pi. So _do not_ do the following if you value your sanity (assuming you
 still have some left, that is%footnote(This product may contain (or have been
-written by) nuts.)): %br %image(images/upside-down-gpio.jpg, wrong!, 500)
+written by) nuts.)): %br %image(images/upside-down-gpio.jpg, wrong!, 500, 356)
 
 The Pi's GPIO facilities cover a lot of other useful functions that we've not
 even hinted at so far. Consult one of %(#pi-books, the Pi books) for details,
 or see this %(http://t.co/JIRxM6qBAm, nice summary one-pager) from
 %(http://pimoroni.com/, Pimoroni), makers of the fabulously cute PiBow case --
-%br %image(images/pibow.jpg, PiBow, 300) %br -- and home of the
+%br %image(images/pibow.jpg, PiBow, 300, 267) %br -- and home of the
 %(http://www.raspberrypi.org/archives/221, Pi logo's creator), Paul
 Beech%footnote(Bet you didn't know the logo incorporates a 3D buckyball. Like
 I know what one is%footnote(And to think I work just round the corner from the
@@ -144,11 +145,12 @@ to decide which mode the pins we're working with should be in, and ask
 WiringPi to set them up accordingly. Refering back to our circuit diagram,
 %br
 %(https://www.circuitlab.com/circuit/vxz53u/driving-an-led-via-software-raspberry-pi/,
-%image(images/driving-an-led-via-software-ras-pi.jpg, driving an LED, 500)) %br
-we see that header pin 11 is what we're using to drive the LED -- i.e. make an
-_output_ -- and that therefore we need to set pin 11 into output mode. For
-reasons %(#gpio-pins, discussed above) header pin 11 is known to WiringPi as
-GPIO 0, so we use the ^gpio^ utility to set the mode for that pin like this:
+%image(images/driving-an-led-via-software-ras-pi.jpg, driving an LED, 500,
+199)) %br we see that header pin 11 is what we're using to drive the LED --
+i.e. make an _output_ -- and that therefore we need to set pin 11 into output
+mode. For reasons %(#gpio-pins, discussed above) header pin 11 is known to
+WiringPi as GPIO 0, so we use the ^gpio^ utility to set the mode for that pin
+like this:
 
 ^gpio mode 0 out^
 
@@ -206,15 +208,15 @@ strictly speaking this is inaccurate, but it does allow us to run simulations
 on the circuits in CircuitLab. If you know a better way please let me know!):
 %br
 %(https://www.circuitlab.com/circuit/2475qd/switch-with-pull-down-resistor-raspberry-pi/,
-%image(images/switch-with-pull-down-resistor.jpg, reading from switch, 450)) %br
-We connect the switch SW1 to the (always on) 3.3v supply (header pin 1), so
-that when the switch is in the on position it will supply the logical high
-value. Resistor R1 prevents mishaps if we accidentally set header pin 11 to
-output at low (i.e. try to get the poor thing to pull the 3.3v supply to 0v,
-with unhappy consequences). Then we use a _pull down resistor_, R2, to drag
-pin 11 low when the switch is open. When the switch is closed, R2 being much
-higher than R1 implies that pin 11 will be pulled high by the 3.3v supply from
-pin 1.
+%image(images/switch-with-pull-down-resistor.jpg, reading from switch, 450,
+243)) %br We connect the switch SW1 to the (always on) 3.3v supply (header pin
+1), so that when the switch is in the on position it will supply the logical
+high value. Resistor R1 prevents mishaps if we accidentally set header pin 11
+to output at low (i.e. try to get the poor thing to pull the 3.3v supply to
+0v, with unhappy consequences). Then we use a _pull down resistor_, R2, to
+drag pin 11 low when the switch is open. When the switch is closed, R2 being
+much higher than R1 implies that pin 11 will be pulled high by the 3.3v supply
+from pin 1.
 
 Confused? There's more explanation in the Embedded Linux tutorial linked
 above, and a much more detailed presentation 
@@ -222,7 +224,7 @@ above, and a much more detailed presentation
 is in relation to the Arduino but the principles are the same.)
 
 The breadboard to implement this circuit looks like this: %br
-%image(images/bbd-simple-switch.jpg, simple switch breadboard, 500)
+%image(images/bbd-simple-switch.jpg, simple switch breadboard, 500, 375)
 
 All we need now is some code to test what position the switch is in. We're
 sensing on header pin 11, which is WiringPi's 0, so we set 0 to input mode:
@@ -250,18 +252,19 @@ is that we will now both sense from the switch and respond to the sensor data
 from software.
 
 %(https://www.circuitlab.com/circuit/886nta/sensing-from-switch-and-driving-led-raspberry-pi/,
-%image(images/sensing-from-switch-and-driving-led.jpg, switch and LED, 550))
+%image(images/sensing-from-switch-and-driving-led.jpg, switch and LED, 550,
+229))
 
 Nothing new here -- we've just combined the LED driver circuit that we began
 with and the switch reader circuit from the previous section. Here we have the
 switch sensor to the left and the LED driver to the right.
 
 The breadboard to implement this circuit looks like this: %br
-%image(images/bbd-switch-plus-led.jpg, switch plus LED breadboard, 500)
+%image(images/bbd-switch-plus-led.jpg, switch plus LED breadboard, 500, 375)
 
 %image(images/bbd-switch-plus-led-detail.jpg, switch plus LED breadboard
-detail, 500) %br We've use a four-way switch (in "dual in line" or DIL pin
-style) because we had one handy and because it was easy to connect to the
+detail, 500, 468) %br We've use a four-way switch (in "dual in line" or DIL
+pin style) because we had one handy and because it was easy to connect to the
 breadboard, but we're only using one of its channels -- the equivalent of an
 SPST or
 "%(http://en.wikipedia.org/wiki/Single_pole\,_single_throw#Contact_terminology,
@@ -329,7 +332,7 @@ music signal in interesting ways -- that's the origin of the "fuzz box" guitar
 effect, or Jimmy Hendrix's entire sound repertoire, or etc.) in our devices:
 
 %(http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/5651RegulatorTubeInOperation.jpg/200px-5651RegulatorTubeInOperation.jpg,
-%image(images/thermionic-valve.jpg, Thermionic valve, 300))
+%image(images/thermionic-valve.jpg, Thermionic valve, 300, 410))
 
 In the circuits above we've done our LED switching using the Pi's GPIO pins
 directly. These pins are only designed to deliver a very small current flow;
@@ -339,8 +342,8 @@ GPIO pin will still do the basic switching, but the transistor will mediate
 between GPIO and buzzer. Here's the circuit diagram:
 
 %(https://www.circuitlab.com/circuit/p989jw/using-a-transistor-to-drive-a-buzzer-raspberry-pi/,
-%image(images/using-a-transistor-to-drive-a-buzzer.jpg, transistor driving buzzer,
-500))
+%image(images/using-a-transistor-to-drive-a-buzzer.jpg, transistor driving
+buzzer, 500, 266))
 
 The transistor, Q1, has three pins, called base (b), collector (c) and emitter
 (e). When the base is set high (via GPIO header pin 11 in this case) the
@@ -351,7 +354,7 @@ on header pin 11 (Wiring Pi's GPIO 0) will now turn the buzzer on or off.
 
 Here's the circuit wired up on our trusty breadboard: %br
 %image(images/bbd-transistor-driving-buzzer.jpg, transistor driving buzzer,
-500)
+500, 375)
 
 Finally here's an example data sheet for a common transistor, if you're
 curious about the gorey details, for the

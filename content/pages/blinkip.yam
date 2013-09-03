@@ -147,7 +147,7 @@ Now let's look at how to get the IP from the Pi without logging in.
 The Pi has a set of LEDs in one corner of the board that convey various
 messages:
 
-%image(images/status-led.jpg, The status LED, 500) %br
+%image(images/status-led.jpg, The status LED, 500, 498) %br
 (Image from:
 %(http://www.rpiblog.com/2012/12/raspberry-pi-status-indicator-led-info.html,
 RPIBlog).)

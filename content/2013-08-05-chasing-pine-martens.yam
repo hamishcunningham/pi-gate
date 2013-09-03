@@ -7,13 +7,14 @@ travel in and out each week to find work in the big city. Vitosha is the lungs
 of the city, and its slopes are the perfect place to stay if you're keen to
 walk in its forests, or ski, or just get some cool air in the heat of the
 summer. %br %(http://en.wikipedia.org/wiki/Vitosha,
-%image(images/vitosha-1.jpg, Mount Vitosha, 400)) %br Sitting in the garden at
-dusk the other day, we spotted a couple of dark shapes scurrying along -- pine
-martens! Or possibly their smaller cousin the beech marten: %br
+%image(images/vitosha-1.jpg, Mount Vitosha, 400, 243)) %br Sitting in the
+garden at dusk the other day, we spotted a couple of dark shapes scurrying
+along -- pine martens! Or possibly their smaller cousin the beech marten: %br
 %(http://en.wikipedia.org/wiki/Beech_marten, %image(images/beech-marten-1.jpg,
-A beech marten, 200)) %br They are beautiful creatures, but quite shy, and
-they only come out after dark... You can see where this is going -- I wonder
-if I can capture some images with a Pi, a motion sensor and a camera module?
+A beech marten, 200, 317)) %br They are beautiful creatures, but quite shy,
+and they only come out after dark... You can see where this is going -- I
+wonder if I can capture some images with a Pi, a motion sensor and a camera
+module?
 
 Well, first things first, I'm going to need to put it on top of next door's
 shed in the path of the night-time run that the martens make on their way to
@@ -39,10 +40,10 @@ the left and the controller on the right:
 
 %[ | %\ %\ |
 %(images/mopi/prototype-regulator-05.jpg,
-%image(images/mopi/thumbs/prototype-regulator-05.jpg, mopi prototype 5))
+%image(images/mopi/thumbs/prototype-regulator-05.jpg, mopi prototype 5, 200, 194))
 | %\ %\ %\  |
 %(images/mopi/prototype-controller-01.jpg,
-%image(images/mopi/thumbs/prototype-controller-01.jpg, mopi prototype 6))
+%image(images/mopi/thumbs/prototype-controller-01.jpg, mopi prototype 1, 270, 195))
 | %]
 
 The _regulator_ supplies the 5 volts at 1 amp that the Pi wants, and it has
@@ -69,17 +70,17 @@ Some more views of the regulator:
 
 %[ | %\ %\ |
 %(images/mopi/prototype-regulator-01.jpg,
-%image(images/mopi/thumbs/prototype-regulator-01.jpg, mopi prototype 1))
+%image(images/mopi/thumbs/prototype-regulator-01.jpg, mopi prototype 1, 200, 170))
 | %\ %\ %\ %\ %\ |
 %(images/mopi/prototype-regulator-02.jpg,
-%image(images/mopi/thumbs/prototype-regulator-02.jpg, mopi prototype 2))
+%image(images/mopi/thumbs/prototype-regulator-02.jpg, mopi prototype 2, 200, 155))
 |
 --- | %\ %\ |
 %(images/mopi/prototype-regulator-03.jpg,
-%image(images/mopi/thumbs/prototype-regulator-03.jpg, mopi prototype 3))
+%image(images/mopi/thumbs/prototype-regulator-03.jpg, mopi prototype 3, 200, 203))
 | %\ %\ %\ %\ %\ |
 %(images/mopi/prototype-regulator-04.jpg,
-%image(images/mopi/thumbs/prototype-regulator-04.jpg, mopi prototype 4))
+%image(images/mopi/thumbs/prototype-regulator-04.jpg, mopi prototype 4, 200, 233))
 | %]
 
 Now, where have those pine martens got to?

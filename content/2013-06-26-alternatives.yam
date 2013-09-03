@@ -23,41 +23,41 @@ article). He's taken some pics:
 
 %[
 |
-%(images/hardware/apc8750.jpg, %image(images/hardware/thumbs/apc8750.jpg, APC 8750, 150))
+%(images/hardware/apc8750.jpg, %image(images/hardware/thumbs/apc8750.jpg, APC 8750, 150, 93))
 |
 %(http://apc.io/products/8750a/, APC 8750)
 | %\ %\ %\ %\ |
-%(images/hardware/beagleboneblack.jpg, %image(images/hardware/thumbs/beagleboneblack.jpg, Beagle Bone Black, 150))
+%(images/hardware/beagleboneblack.jpg, %image(images/hardware/thumbs/beagleboneblack.jpg, Beagle Bone Black, 150, 100))
 |
 %(http://beagleboard.org/Products/BeagleBone%20Black, Beagle Bone Black)
 |
 ---
 |
-%(images/hardware/cubieboard.jpg, %image(images/hardware/thumbs/cubieboard.jpg, CubieBoard, 150))
+%(images/hardware/cubieboard.jpg, %image(images/hardware/thumbs/cubieboard.jpg, CubieBoard, 150, 109))
 |
 %(http://cubieboard.org/, Cubieboard)
 | %\ %\ %\ %\ |
-%(images/hardware/dreamplug.jpg, %image(images/hardware/thumbs/dreamplug.jpg, DreamPlug, 150))
+%(images/hardware/dreamplug.jpg, %image(images/hardware/thumbs/dreamplug.jpg, DreamPlug, 150, 96))
 |
 %(http://www.globalscaletechnologies.com/t-dreamplugdetails.aspx, DreamPlug)
 |
 ---
 |
-%(images/hardware/minipc.jpg, %image(images/hardware/thumbs/minipc.jpg, MiniPC, 150))
+%(images/hardware/minipc.jpg, %image(images/hardware/thumbs/minipc.jpg, MiniPC, 150, 104))
 |
 %(https://www.miniand.com/products/MK802%20Android%20Mini%20PC, MK802 Mini PC)
 | %\ %\ %\ %\ |
-%(images/hardware/pimodela.jpg, %image(images/hardware/thumbs/pimodela.jpg, Pi Model A, 150))
+%(images/hardware/pimodela.jpg, %image(images/hardware/thumbs/pimodela.jpg, Pi Model A, 150, 100))
 |
 %(http://www.raspberrypi.org/archives/3215, Pi Model A)
 |
 ---
 |
-%(images/hardware/pimodelbrev2.jpg, %image(images/hardware/thumbs/pimodelbrev2.jpg, Pi Model B rev2, 150))
+%(images/hardware/pimodelbrev2.jpg, %image(images/hardware/thumbs/pimodelbrev2.jpg, Pi Model B rev2, 150, 115))
 |
 %(http://www.raspberrypi.org/faqs, Pi Model B)
 | %\ %\ %\ %\ |
-%(images/hardware/tonidoplug.jpg, %image(images/hardware/thumbs/tonidoplug.jpg, Tonido Plug, 150))
+%(images/hardware/tonidoplug.jpg, %image(images/hardware/thumbs/tonidoplug.jpg, Tonido Plug, 150, 96))
 |
 %(http://www.tonidoplug.com/, TonidoPlug)
 |

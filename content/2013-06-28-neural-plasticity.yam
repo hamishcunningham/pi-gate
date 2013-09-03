@@ -9,7 +9,7 @@ reader.) I particularly remember a project that put an FM radio in a TicTac
 box -- kind of like this beautiful
 %(http://www.mds975.co.uk/Content/trfradios03.html, match box radio)... %br
 %(http://www.mds975.co.uk/Images/radios/austin_hellier_MK484-2-001.jpg,
-%image(images/match-box-radio.jpg, match box radio, 500)) %br
+%image(images/match-box-radio.jpg, match box radio, 500, 369)) %br
 ...only in a %(http://en.wikipedia.org/wiki/Tic_Tac, Tic Tac) box.
 
 Heady stuff. (Ok, not as heady as the third category of 16-year-old obsession,
@@ -41,18 +41,18 @@ are:
 
 %[ | %[
 | %(images/flood-alarm-detail-5.jpg,
-  %image(images/thumbs/flood-alarm-detail-5.jpg, p'eye candy, 600))
+  %image(images/thumbs/flood-alarm-detail-5.jpg, p'eye candy%/*, 600, 285%*/))
 | %(images/flood-alarm-detail-6.jpg,
-  %image(images/thumbs/flood-alarm-detail-6.jpg, p'eye candy))
+  %image(images/thumbs/flood-alarm-detail-6.jpg, p'eye candy%/*, 280%/*, 281%*/))
 | %] |
 ---
 | %[
 | %(images/flood-alarm-detail-3.jpg,
-  %image(images/thumbs/flood-alarm-detail-3.jpg, p'eye candy))
+  %image(images/thumbs/flood-alarm-detail-3.jpg, p'eye candy, 214%/*, 280%*/))
 | %(images/flood-alarm-detail-1.jpg,
-  %image(images/thumbs/flood-alarm-detail-1.jpg, p'eye candy, 300))
+  %image(images/thumbs/flood-alarm-detail-1.jpg, p'eye candy, 300%/*, 165%*/))
 | %(images/flood-alarm-detail-2.jpg,
-  %image(images/thumbs/flood-alarm-detail-2.jpg, p'eye candy))
+  %image(images/thumbs/flood-alarm-detail-2.jpg, p'eye candy, 166%/*, 280%*/))
 | %] | %]
 
 

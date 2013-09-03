@@ -24,7 +24,7 @@ mat or the wires connecting to it anywhere that someone is likely to trip over
 it. See also %(#warning, this warning). May contain nuts.). Here's an example
 mat:
 
-%image(images/pressure-mat.jpg, a pressure mat, 500)
+%image(images/pressure-mat.jpg, a pressure mat, 500, 375)
 
 This works just like a switch -- there are two wires to connect to, and when a
 heavy object (e.g. a parent) stands on the mat the two wires are connected
@@ -34,7 +34,8 @@ So we can use exactly the same circuit we used earlier for reading from a
 switch and turning an LED on or off:
 
 %(https://www.circuitlab.com/circuit/886nta/sensing-from-switch-and-driving-led-raspberry-pi/,
-%image(images/sensing-from-switch-and-driving-led.jpg, switch and LED, 550))
+%image(images/sensing-from-switch-and-driving-led.jpg, switch and LED, 550,
+229))
 
 One limitation of this circuit is that if Mum should happen to pop in one day
 and zap 50,000 volts across the Pi's GPIO pins the poor thing is unlikely to
@@ -49,7 +50,7 @@ to switch the thing on, or if one of the LEDs has died, or etc.
 
 The circuit: %br
 %(https://www.circuitlab.com/circuit/56x6hf/an-alarm-with-two-leds-raspberry-pi/,
-%image(images/an-alarm-with-two-leds.jpg, alarm with two LEDs, 600))
+%image(images/an-alarm-with-two-leds.jpg, alarm with two LEDs, 600, 187))
 
 The breadboard for this circuit looks like this: %br
 
@@ -57,7 +58,7 @@ The breadboard for this circuit looks like this: %br
 %%% switch on 12, or similar; we just ignore this in the text, but really we
 %%% should redo the breadboard and the local-bin/water-alarm.sh code
 
-%image(images/bbd-with-mat.jpg, breadboard with pressure mat, 500)
+%image(images/bbd-with-mat.jpg, breadboard with pressure mat, 500, 375)
 
 The green LED runs when the mat is _not_ being stood on, indicating that all
 is fine; the yellow LED (red would also be a good colour) lights up when it's
@@ -65,7 +66,8 @@ time to hide the particle accelerator and pretend to be doing the homework.
 
 A closer look:
 
-%image(images/bbd-with-mat-detail.jpg, breadboard with pressure mat detail, 500)
+%image(images/bbd-with-mat-detail.jpg, breadboard with pressure mat detail,
+500, 471)
 
 We need a new program to drive the extra LED (which is on Wiring Pi's GPIO 2,
 connected on physical header pin 13). In Unix shell script a suitable

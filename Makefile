@@ -107,7 +107,7 @@ fix-image-sizes:
           $(Y2H) $${f} >/dev/null; \
           $(FIXIMGS) $${HTML} >/dev/null; \
           [ -f $${HTML}-new.html ] && echo diffing $${HTML}* && \
-            diff $${HTML} $${HTML}-new.html |egrep 'image|width|height'; \
+            diff $${HTML} $${HTML}-new.html |egrep '<img|src=|width|height'; \
           rm -f $${HTML}-new.html; \
           echo; \
         done
@@ -117,9 +117,13 @@ fix-image-sizes:
           diff $${HTML} $${HTML}-new.html |egrep 'image|width|height'; \
         rm -f $${HTML}-new.html xindex.html; \
         echo
+record-image-size-diffs:
+	make fix-image-sizes 2>&1 \
+          |sed 's,.*\(src="[^"]*"\).*\(width=.*"\)[^"]*,\1 \2,g' \
+          |tee image-size-diffs.txt
 
 .PHONY: html help clean regenerate serve devserver publish ec2upload gateupload
-.PHONY: fix-image-sizes
+.PHONY: fix-image-sizes record-image-size-diffs
 
 
 # other targets ###############################################################
