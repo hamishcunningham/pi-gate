@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Mobile Pi</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+    <link href="http://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+    
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- sharethis -->
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="/theme/js/w-sharethis-com-button-buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "e5977250-e340-464c-922e-c1b521b27184", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0" height="55"></a></span>
+      <span id="strapLine"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      <span id="gateLogo"><a href="http://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0" height="55"></a></span>
+      <!-- <a href="http://www.shef.ac.uk/dcs/"><img src="/theme/images/logo-usfd-shield.png" alt="The University of Sheffield" height="55"></a> -->
+    </span>
+    <div class="horizontal menu">
+    <ul>
+    <li><img src="/theme/images/arrow-right.jpg"/></li>
+    <!-- TODO need a page at /pages to link from the top level here -->
+    <!--
+    <li><b><a href="">Projects</a></b>
+      <ul>
+    -->
+
+    <!--
+done a custom menu for now to compress it a little...
+                                      <li><a href="/pages/basics.html">Basics</a></li>
+                                <li><a href="/pages/blinkip.html">Blink IP</a></li>
+                                <li><a href="/pages/hardware.html">Pi-Alikes</a></li>
+                                <li><a href="/pages/legocases.html">LEGOCases</a></li>
+                                <li><a href="/pages/mopi.html">Mobile Pi</a></li>
+                                <li><a href="/pages/notipi.html">NotiPi</a></li>
+                                <li><a href="/pages/piroomba.html">PiRoomba</a></li>
+                                <li><a href="/pages/schools.html">Schools</a></li>
+                  -->
+<!--
+<li><a href="/pages/basics.html">Basics</a></li>
+<li><a href="/pages/hardware.html">Pi-Alikes</a></li>
+<li><a href="/pages/legocases.html">LEGO</a></li>
+<li><a href="/pages/mopi.html">Mobile</a></li>
+<li><a href="/pages/blinkip.html">BlinkIP</a></li>
+<li><a href="/pages/notipi.html">NotiPi</a></li>
+<li><a href="/pages/piroomba.html">Roomba</a></li>
+<li><a href="/pages/schools.html">Schools</a></li>
+-->
+
+<!--
+New menu pending CSS fix:
+  Tutorials
+  Blog
+  Download
+  Shop
+  Contact
+  About
+-->
+<li><b><a href="#">Projects</a></b>
+  <ul>
+  <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+  <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+  <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+  <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+  <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+  <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+  <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+  <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+  </ul></li>
+<li><a href="/">Blog</a></li>
+<li><a href="/pages/basics.html#resources">Download</a></li>
+<!--
+<li><a href="/pages/download.html">Download</a></li>
+<li><a href="/pages/shop.html">Shop</a></li>
+-->
+<li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
+
+    <!--
+      </ul></li>
+    -->
+    <!-- <li><a href="/category/news.html">News</a></li> -->
+    <li><a href="/pages/about.html">About</a></li>
+    </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="http://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
+
+  <!-- header menus -->
+  <div id="header">
+  </div>
+
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
+
+  <!-- main content div -->
+  <div id="mainContent">
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+                <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/basics.html">Basics</a></li>
+            <li><a href="/pages/blinkip.html">Blink IP</a></li>
+            <li><a href="/pages/hardware.html">Pi-Alikes</a></li>
+            <li><a href="/pages/legocases.html">LEGOCases</a></li>
+            <li><a href="/pages/mopi.html">Mobile Pi</a></li>
+            <li><a href="/pages/notipi.html">NotiPi</a></li>
+            <li><a href="/pages/piroomba.html">PiRoomba</a></li>
+            <li><a href="/pages/schools.html">Schools</a></li>
+                    <li ><a href="/category/news.html">News</a></li>
+            </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+          
+<section id="content" class="body">    
+    <h1 class="entry-title">Mobile Pi</h1>
+<div id="socialButtons">
+  <span class='st_twitter_large' st_via='hcunningham' displayText='Tweet'></span>
+  <span class='st_identi_large' displayText='identi.ca'></span>
+  <span class='st_email_large' displayText='Email'></span>
+  <span class='st_sharethis_large' displayText='ShareThis'></span>
+  <span class='st_linkedin_large' displayText='LinkedIn'></span>
+  <span class='st_googleplus_large' displayText='Google +'></span>
+  <span class='st_facebook_large' displayText='Facebook'></span>
+  <span class='st_citeulike_large' displayText='CiteULike'></span>
+  <span class='st_tumblr_large' displayText='Tumblr'></span>
+  <span><a href="http://pi.gate.ac.uk/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate">
+      <img height="30" src="/theme/images/icons/rss-large.jpg"/>
+    </a></span>
+</div>        
+        
+
+<p><em>Battery packs for Pi-Mobility</em></p>
+
+
+<p><em><a class="cow-url" href="/pages/about.html#hamish">Hamish Cunningham</a>, and
+<a class="cow-url" href="/pages/about.html#lubo">Lubo Bontchev</a>, August 2013</em></p>
+
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Introduction</a></li>
+<li><a href="#section-2.">2. The Perfect Pack</a></li>
+<li><a href="#section-3.">3. Monitoring</a></li>
+<li>&nbsp;&nbsp;<a href="#section-3.1.">3.1. SimBaMon: a Simple Battery Monitor daemon</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-3.1.1.">3.1.1. Installing SimBaMon</a></li>
+<li><a href="#section-4.">4. Testing and Troubleshooting</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.1.">4.1. The Longer Lasting Snack</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.2.">4.2. Troubleshooting</a></li>
+<li><a href="#section-5.">5. Batteries, Holders and Chargers</a></li>
+<li><a href="#section-6.">6. Other Directions</a></li>
+</ul></p></div>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-1."></a><h1 class="cow-heading"><span class="cow-sec-number">1. </span>Introduction</h1>
+
+<p>The Pi has many advantages as a mobile platform: if the rain gets in, or a dog
+eats it, a replacement doesn't break the bank, and, for a general-purpose
+device, power requirements are very low.</p>
+
+<p>Below we'll run through the characteristics of mobile power for the Pi, and
+follow through with the design of <b><em>MoPi</em></b>, an add-on battery pack circuit
+with Raspbian-friendly software that does lots of useful stuff for the Mobile
+Pi.</p>
+
+<p>There are three dimensions to the problem of mobile power for the Pi:</p>
+
+<ul>
+<li><em>regulation</em>, to supply the constant 5 volts at up to around 1 amp that the
+  (Model B) Pi requires</li>
+<li><em>control</em>:  keeping a check on battery charge, switching the regulator off
+  when charge is getting low, and reporting the current level to a monitor</li>
+<li><em>monitoring</em>: reading level indications from <a class="cow-url" href="/pages/basics.html#gpio-pins">a GPIO
+  connection</a>, reporting it to the Pi user and shutting the operating system
+  down cleanly when levels get critically low</li>
+</ul>
+
+<p>The first two of these need some special hardware; the third is written as a
+software <em>daemon</em>. Here are the prototype MoPi regulator and controller
+boards (click to zoom):</p>
+
+<table> <tr><td> &nbsp;&nbsp;</td><td>
+<p><a class="cow-url" href="/static/pages/images/mopi/prototype-regulator-05.jpg"><img class="cow-img" src="/static/pages/images/mopi/thumbs/prototype-regulator-05.jpg" alt="mopi prototype 5"></a></p>
+</td><td> &nbsp;&nbsp;&nbsp; </td><td>
+<p><a class="cow-url" href="/static/pages/images/mopi/prototype-controller-01.jpg"><img class="cow-img" src="/static/pages/images/mopi/thumbs/prototype-controller-01.jpg" alt="mopi prototype 6"></a></p>
+</td></tr>
+</table>
+
+<p>The software is <a class="cow-url" href="http://www.fsf.org/about/what-is-free-software">open source</a>
+(of course) and available at
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon">our
+Pi-Tronics repository</a>.</p>
+
+<p>The next two sections discusses the <a class="cow-url" href="#perfect">overall design</a> of MoPi and
+then the <a class="cow-url" href="#monitoring">monitoring software</a>. Then we look at <a class="cow-url" href="#measures">system performance</a> and measure how long a Pi can run with various
+configurations and battery types. Finally we link some
+<a class="cow-url" href="#other">useful resources</a>.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="perfect"></a></p><a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>The Perfect Pack</h1>
+
+<p>What would the perfect Pi battery pack look like? It should be:</p>
+
+<p><b>Uninterruptible</b>. I don't want to stop work when my battery is low if I've
+got a charged pack handy (or a different source of power, like a car cigarette
+lighter or the like). So I'd like my battery pack to support <b>hot-swap</b> of a
+new electricity supply, either a new set of batteries or some other new input.</p>
+
+<p><b>Eco-friendly</b>. One of the great things about the Pi is its low carbon
+footprint. The recent ones in my lab are made in Wales, so they haven't
+travelled half way around the world to reach me. The base system is
+bare-bones, which encourages reuse of power supplies, monitors, cables and the
+like. The power consumption is low &mdash; particularly for the Model A, which gets
+by on 300 mA or below (at 5 volts, or around 1.5 watts &mdash; contrast this with
+<a class="cow-url" href="https://secure.www.upenn.edu/computing/resources/category/hardware/article/computer-power-usage">50 watts and above</a> for a desktop PC!). There's no spare planet; there's no
+Plan B if we destroy this one. So we definitely want to support rechargeable
+batteries, and preferably not the built-in variety that are hard to recycle.</p>
+
+<p><b>Low cost</b>. Dedicated battery supplies like those sold as phone charging
+devices are great, but when they no longer hold charge the whole unit has to
+be recycled. Standard commodity batteries and the reusable chargers that serve
+them are well-established and already present in many households. They're the
+cheapest and most flexible option.</p>
+
+<p><b>Polite</b>. When you're running your laptop on battery and it runs out of juice
+it gives you a nice polite warning message or two, and, when the level gets
+really low, automagically shuts down the machine. This is important to allow
+the operating system (e.g. <a class="cow-url" href="/pages/basics.html#footnote1">Raspbian Linux</a> on the Pi)
+to close up any open files and generally tidy the house before power
+disappears. Just killing the power without warning is risky &mdash; sometimes
+nothing bad happens, but in the worst case you can end up with a machine that
+won't boot and needs a complete reinstall. So I want my battery pack to signal
+the Pi when levels are low, so that the Pi can shut itself down cleanly. Good
+manners are important, after all :-)</p>
+
+<p>(A related point: if the battery pack is going to tell the Pi when it is
+getting low and needs to shut down, why not have an <b>on/off switch</b> into the
+bargain? The &quot;off&quot; signal is also going to trigger clean shutdown, and is very
+convenient when you're using the Pi in any kind of kiosk or appliance context.
+Several projects have implemented this type of on/off function in its own
+right &mdash; e.g. 
+<a class="cow-url" href="http://lowpowerlab.com/atxraspi/">the ATX Pi supply</a> or the
+<a class="cow-url" href="http://www.susa.net/wordpress/2012/11/raspberry-pi-power-controller/">PIC
+controller</a> &mdash; so it is definitely a useful function to have on board.)</p>
+
+<p><b>Communicative</b>. I want to know when the battery is full, when it is starting
+to get low and when it is critical. I want to be able to get those signals
+both when logged in to the Pi and visually from the battery pack itself.</p>
+
+<p><b>Flexible</b>. Got a solar panel handy? I want to plug it into the circuitry and
+have it drive the Pi as long as the sun shines, then let a battery take over
+when the clouds come. Stuck for power but got an old laptop supply or 12 volt
+car charger handy? Strip the cables, connect, and power my Pi please! Plugging
+a bunch of peripherals? I want to be able to drive them all via my battery
+pack. And etc.</p>
+
+<p><b>Robust</b>. I'm pretty unreliable at the best of times. When crawling through
+the underbrush with a camera-equiped Pi rig
+<a class="cow-non-existant-url" href="/posts/2013/08/05/chasing-pine-martens/">in search of Pine Marten lairs</a> I'm
+very likely to plug the wrong end of the stick and end up with my foot in my
+mouth, to coin a mixed metaphor or three. Over-volt and spike protection are
+definitely requirements.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="monitoring"></a></p><a class="cow-section-anchor" name="section-3."></a><h1 class="cow-heading"><span class="cow-sec-number">3. </span>Monitoring</h1>
+
+<p>There are a variety of ways that laptops communicate with and control their
+batteries, including
+<a class="cow-url" href="http://batteryuniversity.com/learn/article/inner_workings_of_a_smart_battery">the Smart Battery specification</a> (which often uses SMBus, a variant of the I2C
+interface that the Pi supports). In Linux the resultant data feed is then
+modelled using a power management abstraction (of which ACPI is the most
+recent) and manipulated using a driver specific to the battery in use.</p>
+
+<p>Sounds like a good idea? Yes, in the abstract, but implementing a new driver
+is quite a job &mdash;
+<a class="cow-url" href="https://github.com/torvalds/linux/blob/master/drivers/acpi/battery.c">here's
+one</a> that runs to 1200 lines of C code, for example. It is also not clear how
+to do this when we have the ability to plug in batteries of different types,
+which is something we really wanted to support.</p>
+
+<p>What to do?</p>
+
+<p>If in doubt, take the simple option. All Linux systems share the concept of a
+<em>daemon</em>, which is a system-level service which gets run during operating
+system startup. It is quite easy implement a battery monitor daemon that
+listens on the Pi's GPIO pins for level changes signalled by the MoPi
+microcontroller board. The daemon then makes entries in the standard system
+logs as a simple way to share data with other subsystems, and can be
+configured to send a warning message to all users if levels are low. Best of
+all, the daemon can easily shut down the Pi cleanly before the regulator
+voltage gets too low for reliable operations.</p>
+
+<p>The rest of this section describes the implementation of the daemon. It is
+designed for the MoPi boards, but should be quite easily reusable for other
+battery power projects.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="simbamon"></a></p><a class="cow-section-anchor" name="section-3.1."></a><h2 class="cow-heading"><span class="cow-sec-number">3.1. </span>SimBaMon: a Simple Battery Monitor daemon</h2>
+
+<p>SimBaMon is an open source Linux daemon for</p>
+
+<ul>
+<li>monitoring battery levels (on the Pi this is done via
+  <a class="cow-url" href="http://wiringpi.com/the-gpio-utility/">the <tt>gpio</tt> command</a>)</li>
+<li>sending warning messages to the user if the battery is low</li>
+<li>shutting down cleanly at critical battery levels</li>
+<li>managing a power supply on/off switch</li>
+<li>writing relevant data to the system logs</li>
+</ul>
+
+<p>You can find
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon">the source code</a> on GitHub. The core of the daemon is defined in three files:</p>
+
+<ul>
+<li><tt>/etc/simbamon.conf</tt>    &mdash; configuration data</li>
+<li><tt>/usr/sbin/simbamon</tt>    &mdash; the daemon itself</li>
+<li><tt>/etc/init.d/simbamond</tt> &mdash; an interface to the <tt>init</tt> subsystem that Linux
+  uses to manage daemons (amongst other things)</li>
+</ul>
+
+<p>The last of these, <tt>simbamond</tt>, is used by the operating system to start and
+stop SimBaMon at boot or shutdown time, and can be used to control the daemon
+manually when required. For example this command will stop the daemon:</p>
+
+<p><pre class="prettyprint lang-bash">
+sudo service simbamon stop
+</pre>The configuration file, <tt>simbamon.conf</tt>, defines a set of states in which the
+monitor will take some action:</p>
+
+<p><pre class="prettyprint lang-bash">
+POWER_OFF=1     # the user has pressed the power button, shutdown now
+BAT_SHUTDOWN=2  # the battery is just about empty, shutdown now
+BAT_CRITICAL=3  # the battery level is critically low, shutdown in a shortly
+BAT_WARNING=4   # the battery is low, warn the user
+BAT_FULL=7      # the battery is full
+</pre>The MoPi microcontroller board supplies these states via three Raspberry Pi
+<a class="cow-url" href="/pages/basics.html#gpio-intro">GPIO pins</a> (and also sets on-board indicator LEDs
+accordingly). The core of SimBaMon, a shell script that lives in
+<tt>/usr/sbin/simbamon</tt>, implements an infinite loop that checks the levels being
+reported over GPIO every few seconds and takes any necessary action:</p>
+
+<p><pre class="prettyprint lang-bash">
+while :
+do
+  # check the level
+  BAT_LEVEL_BASE2='gpio read ${IO_A}''gpio read ${IO_B}''gpio read ${IO_C}'
+  BAT_LEVEL='echo &quot;ibase=2;${BAT_LEVEL_BASE2}&quot; |bc'
+
+  # make a log message if the level is low
+  [ $BAT_LEVEL -le $BAT_WARNING ] &amp;&amp; \
+    logger &quot;simbamon: battery is at or below warning level (${BAT_LEVEL})&quot;
+
+  # check for action states
+  if   [ $BAT_LEVEL -eq $POWER_OFF ]
+  then
+    wall &lt;&lt;&lt; &quot;simbamon: power off requested: shutting down now!&quot;
+    shutdown -h now
+  elif [ $BAT_LEVEL -eq $BAT_SHUTDOWN ]
+  then
+    wall &lt;&lt;&lt; &quot;simbamon: battery empty: shutting down now!!!&quot;
+    shutdown -h now
+  elif [ $BAT_LEVEL -eq $BAT_CRITICAL ]
+  then
+    wall &lt;&lt;&lt; \
+      &quot;simbamon: battery critical! shutting down in ${SHUT_DELAY} seconds!&quot;
+    sleep $SHUT_DELAY
+    shutdown -h now
+  elif [ $BAT_LEVEL -eq $BAT_WARNING ]
+  then
+    wall &lt;&lt;&lt; &quot;simbamon: battery is low! connect new battery or shut down&quot;
+    sleep $WARNING_INTERVAL
+  fi
+
+  # take a break
+  sleep ${MONITOR_FREQUENCY}
+done &amp;
+</pre>The three GPIO pins connected to MoPi are used as a 3-bit binary value, which
+we convert to decimal using the <tt>bc</tt> command. The <tt>wall</tt> (write all) command
+is used to send messages to any logged in user.</p>
+
+<p>Here is the full
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamon">current version of the code</a>. There is a full test rig, including debug mode
+(no shutdowns, shorter intervals) and simulation mode (GPIO input is
+simulated).</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="installing"></a></p><a class="cow-section-anchor" name="section-3.1.1."></a><h3 class="cow-heading"><span class="cow-sec-number">3.1.1. </span>Installing SimBaMon</h3>
+
+<p>The battery monitor software is available from an Ubuntu Personal Package
+Archive (PPA).<span class="cow-footnote" name="footnote1"><sup><a href="#footnote1">1</a></sup></span>
+To install from this archive:</p>
+
+<p><b>1.</b> Add this line to /etc/apt/sources.list:</p>
+
+<p><pre class="prettyprint lang-bash">
+deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main
+</pre>You can use a text editor (e.g. nano) to do this, or paste this one-liner into
+a terminal prompt:</p>
+
+<p><pre class="prettyprint lang-bash">
+echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main |sudo tee -a /etc/apt/sources.list
+</pre><b>2.</b> Import the <a class="cow-url" href="http://www.gnupg.org/">GPG</a> encryption key from Ubuntu so
+that the Pi can verify the package's validity:</p>
+
+<p><pre class="prettyprint lang-bash">
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com --recv-key 6C12C1CF
+</pre><b>3.</b> Update your list of available packages (this may take a couple of
+minutes):</p>
+
+<p><pre class="prettyprint lang-bash">
+  sudo apt-get update
+</pre><b>4.</b> Install the package:</p>
+
+<p><pre class="prettyprint lang-bash">
+  sudo apt-get install simbamond
+</pre>And that's it!</p>
+
+<p>Note: the above gets you the most recent stable release; if you want to live
+on the edge, you can get more recent experimental builds by adding the
+snapshot PPA to your sources list, e.g.:</p>
+
+<p><pre class="prettyprint lang-bash">
+echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate-snapshots/ubuntu precise main |sudo tee -a /etc/apt/sources.list
+</pre><a name="measures"></a></p><a class="cow-section-anchor" name="section-4."></a><h1 class="cow-heading"><span class="cow-sec-number">4. </span>Testing and Troubleshooting</h1>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-4.1."></a><h2 class="cow-heading"><span class="cow-sec-number">4.1. </span>The Longer Lasting Snack</h2>
+
+<p>So, how long will the batteries last? My first test was a Model B Pi with
+almost no load (USB keyboard and mouse; monitor attached over HDMI but
+switched off after starting the test; no network or other peripherals). Using
+eight rechargeable Duracell AA NiMH 2400 mAh batteries (like
+<a class="cow-url" href="http://www.amazon.co.uk/Duracell-Rechargeable-Accu-2400-Batteries/dp/B0031OE6LG/ref=sr_1_2?ie=UTF8&amp;qid=1375768484&amp;sr=8-2&amp;keywords=duracell+nimh">these ones</a>) the Pi ran for 9 hours 31 minutes. Not bad! Especially when you
+consider that the MoPi regulator supports hot-swap of new charged packs this
+looks very viable for mobile Pi applications of all shapes and sizes.</p>
+
+<p>For comparison I set up the same rig with a USB battery pack from RS
+(<a class="cow-url" href="http://uk.rs-online.com/web/p/power-banks/7757508/">this one</a>, a 5200 mAh
+Lithium polymer model). The results were remarkably similar, with the RS pack
+lasting for 9 hours and 21 minutes.</p>
+
+<p>Watch this space for the results of further tests...</p>
+
+<!--% TODO-->
+
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-4.2."></a><h2 class="cow-heading"><span class="cow-sec-number">4.2. </span>Troubleshooting</h2>
+
+<p>In early testing we often reached states that caused error conditions of one
+sort or another on the Pi. For example:</p>
+
+<ul>
+<li>the red power indicator LED may blink if the battery charge is very low and
+  it is failing to drive the Pi (and if the microcontroller is not properly
+  shutting down the regulator)</li>
+<li>the green indicator LED repeatedly blinks three times when the <tt>loader.bin</tt>
+  bootloader file is not present &mdash; in our case this was because a hard
+  power shutdown caused corruption of the SD card</li>
+</ul>
+
+<p>In cases like these the Embedded Linux wiki page on
+<a class="cow-url" href="http://elinux.org/R-Pi_Troubleshooting">RPI troubleshooting</a> is your friend!</p>
+
+<p>Another useful part of the Pi-oneer's toolkit is the excellent
+<a class="cow-url" href="http://www.raspberrypi.org/archives/4100">NOOBS</a> setup from the Pi
+foundation, which makes it easier to restore your SD card after failures.</p>
+
+<p>But inevitably the life of electronics prototyping brings its fair share of
+mystery &mdash; why have my GPIO monitoring interface pins all gone low, all of a
+sudden, when the indicator LED and the microcontroller still works? Cue much
+head scratching and serious faces. Followed by a session with the debug header
+and the diagnostics rig on the mic &mdash; and it turns out that a single page of
+memory (which happenned to contain the code running the IO pins) has been
+wiped, presumably by power fluctuations at the low battery state. Time to add
+some more diodes!</p>
+
+<p>And here's an amusing gotcha:</p>
+
+<ul>
+<li>Step 1: have the bright idea of reusing the <em>battery totally empty</em> state as
+  the <em>shutdown button pressed</em> state.</li>
+<li>Step 2: implement the code changes in the daemon and install.</li>
+<li>Step 3: oops, my Pi just shut down. Hmmm.</li>
+<li>Step 4: oh yeah, that's also the default state of the GPIO pins when the
+  MoPi rig isn't connected. Ah. That means that my Pi is going to shutdown
+  every time I start it up. And Lubo just took the prototype boards back to
+  the lab. Um. Looks like the <em>Donkey of the Day</em> award is coming my way
+  again.</li>
+<li>Step 5: waste half an hour remembering how to mount the SD card read-write
+  on another machine and manually editing the daemon.</li>
+</ul>
+
+<p>We learn from our mistakes &mdash; that's why I make as many as possible.</p>
+
+<p>Finally, the current author has found it useful to run around in circles,
+screaming and shouting. (It doesn't fix the electronics, of course, but if
+you're lucky it generates sympathy in those around you, or at least a desire
+on their part to give you a beer to shut you up.)</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="batteries"></a></p><a class="cow-section-anchor" name="section-5."></a><h1 class="cow-heading"><span class="cow-sec-number">5. </span>Batteries, Holders and Chargers</h1>
+
+<p>Here are links to some of the batteries, battery holders and chargers that
+we've been testing MoPi with:</p>
+
+<p>From <a class="cow-url" href="http://rs-online.com/">RS Components</a>:</p>
+<ul>
+<li><a class="cow-url" href="http://uk.rs-online.com/web/p/aa-rechargeable-batteries/6170773/">RS AA NiMH battery, 1.2V 2600 mAh</a></li>
+<li><a class="cow-url" href="http://uk.rs-online.com/web/p/battery-chargers-aaa-aa-c-d-9-volt/0383241/">UK plugtop AA/AAA charger 250 mA</a></li>
+</ul>
+
+<p>From <a class="cow-url" href="http://uk.farnell.com/">Farnell</a>:</p>
+<ul>
+<li><a class="cow-url" href="http://uk.farnell.com/multicomp/bt00839/battery-holder-8xaa-pk5/dp/3829583">x8 AA battery holder</a></li>
+<li><a class="cow-url" href="http://uk.farnell.com/duracell/5000394065710/battery-nimh-1-2v-2400mah-pk4/dp/1330278">Duracell AA NiMH 2400 mAh 4-pack</a></li>
+<li><a class="cow-url" href="http://uk.farnell.com/energizer/635429/battery-precision-ni-mh-aa-2400mah/dp/2075715">Energiser AA NiMH 2400 mAh 4-pack</a></li>
+<li><a class="cow-url" href="http://uk.farnell.com/ansmann/5107343-uk/charger-basic-4-plus/dp/1294240">x4 AA battery charger</a></li>
+</ul>
+
+<p>From <a class="cow-url" href="http://maplin.co.uk/">Maplin</a>:</p>
+<ul>
+<li><a class="cow-url" href="http://www.maplin.co.uk/extra-high-capacity-nimh-rechargeable-battery-value-packs-46414">NiMH AA 2400 mAh 8-pack</a></li>
+<li><a class="cow-url" href="http://www.maplin.co.uk/hybrid-the-next-generation-rechargeable-battery-219932">Hybrid AA 2100 mAh 4-pack</a></li>
+<li><a class="cow-url" href="http://www.maplin.co.uk/batteries-and-power/batteries/battery-chargers">AA
+  chargers</a></li>
+<li><a class="cow-url" href="http://www.maplin.co.uk/aa-size-battery-holders-31427">x8 AA battery
+  holder RK44X</a></li>
+</ul>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="other"></a></p><a class="cow-section-anchor" name="section-6."></a><h1 class="cow-heading"><span class="cow-sec-number">6. </span>Other Directions</h1>
+
+<p>For voltage regulation another option is a UBEC<span class="cow-footnote" name="footnote2"><sup><a href="#footnote2">2</a></sup></span> &mdash; a device popular with
+radio-controlled aircraft people, and hence nice and light-weight, but also
+fairly cheap, e.g.:
+<a class="cow-url" href="http://www.giantshark.co.uk/hobbywing-3amp-ubec-p-402342.html">this one</a>,
+<a class="cow-url" href="http://www.modelaccessories.co.uk/hobbywing-3amp-ubec.html">this one</a> or
+<a class="cow-url" href="http://www.hobbyking.co.uk/hobbyking/store/uh_viewItem.asp?idProduct=28160">this one</a>. UBECs are switched-mode regulators, just like our MoPi regulator
+board, so they don't waste power when converting high DC to 5 volt DC.</p>
+
+<p>Some other useful links about Pi battery projects:
+<a class="cow-url" href="http://www.raspberrypi-spy.co.uk/2013/02/running-a-raspberry-pi-from-6-aa-batteries/">Raspberry Spy</a>,
+<a class="cow-url" href="http://www.raspberrypiforums.com/forums/tutorials/article/17-how-to-portably-power-your-raspberry-pi-with-a-battery/">Raspberry Pi Forums</a>.</p>
+
+<p><a class="cow-url" href="http://www.amazon.co.uk/Raspberry-Pi-Manual-practical-revolutionary/dp/0857332953/">Gray Girling's Pi owners' manual</a> also has a good discussion about battery
+supplies and their subtleties (and is generally an excellent investment for
+the Pi enthusiast).</p>
+<span class="cow-footnote-section">
+<h1 class="cow-heading">Footnotes</h1>
+<p><ol>
+<li>
+<a class="cow-footnote-anchor" name="footnote1"></a>
+<span class="cow-footnote-text" name="footnote1">The main archive (for stable releases) is at
+<a class="cow-url" href="https://launchpad.net/~hamish-dcs/+archive/pi-gate">https://launchpad.net/~hamish-dcs/+archive/pi-gate</a> with a development snapshot
+archive at <a class="cow-url" href="https://launchpad.net/~hamish-dcs/+archive/pi-gate-snapshots">https://launchpad.net/~hamish-dcs/+archive/pi-gate-snapshots</a>.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote2"></a>
+<span class="cow-footnote-text" name="footnote2">UBEC stands for
+Universal Battery Elimination Circuit, which is rather a misnomer as they're
+often used to regulate battery supplies. Hey ho.</span>
+</li>
+</ol></p>
+</span>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+</section>
+
+</div>
+<div id="middleColumn" class="yui3-u-1-5"> <!-- column 2 -->
+  <a class="article-thumb" href="/static/images/articles/mopi.jpg"><img
+    src="/static/images/articles/thumbs/mopi.jpg"
+    alt="mopi"></a>
+   <span class="article-summary"><em>Battery packs for Pi-Mobility</em>.</span> <!-- __CONTENTS__ -->
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Introduction</a></li>
+<li><a href="#section-2.">2. The Perfect Pack</a></li>
+<li><a href="#section-3.">3. Monitoring</a></li>
+<li>&nbsp;&nbsp;<a href="#section-3.1.">3.1. SimBaMon: a Simple Battery Monitor daemon</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-3.1.1.">3.1.1. Installing SimBaMon</a></li>
+<li><a href="#section-4.">4. Testing and Troubleshooting</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.1.">4.1. The Longer Lasting Snack</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.2.">4.2. Troubleshooting</a></li>
+<li><a href="#section-5.">5. Batteries, Holders and Chargers</a></li>
+<li><a href="#section-6.">6. Other Directions</a></li>
+</ul></p></div>
+
+<br/> <br/>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'pi-gate'; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  <section id="extras" class="body">
+      </section><!-- /#extras -->
+
+
+  </div>
+  </div>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  </div> <!-- #mainContent -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © The <a href="http://www.shef.ac.uk/">University of Sheffield</a>, 1995-2013.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="http://gate.ac.uk/">GATE</a> is <a href="http://www.fsf.org/">free software</a> under
+        <a href="http://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="http://www.shef.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png" alt="The University of Sheffield" height="70"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

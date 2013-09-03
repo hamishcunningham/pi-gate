@@ -34,7 +34,7 @@ So we can use exactly the same circuit we used earlier for reading from a
 switch and turning an LED on or off:
 
 %(https://www.circuitlab.com/circuit/886nta/sensing-from-switch-and-driving-led-raspberry-pi/,
-%image(images/sensing-from-switch-and-driving-led.svg, switch and LED, 550))
+%image(images/sensing-from-switch-and-driving-led.jpg, switch and LED, 550))
 
 One limitation of this circuit is that if Mum should happen to pop in one day
 and zap 50,000 volts across the Pi's GPIO pins the poor thing is unlikely to
@@ -49,7 +49,7 @@ to switch the thing on, or if one of the LEDs has died, or etc.
 
 The circuit: %br
 %(https://www.circuitlab.com/circuit/56x6hf/an-alarm-with-two-leds-raspberry-pi/,
-%image(images/an-alarm-with-two-leds.svg, alarm with two LEDs, 500))
+%image(images/an-alarm-with-two-leds.jpg, alarm with two LEDs, 600))
 
 The breadboard for this circuit looks like this: %br
 

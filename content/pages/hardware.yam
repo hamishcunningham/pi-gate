@@ -444,7 +444,7 @@ git repository).
 
 For all I/O tests, higher values indicate better performance.
 
-%image(images/hardware/results/network_graph.svg, Networking)
+%image(images/hardware/results/network_graph.jpg, Networking)
 
 Networking performance quite nicely breaks down into three groups. We see top
 performance from the DreamPlug and TonidoPlug with their gigabit ethernet.
@@ -456,7 +456,7 @@ Performance pretty much topped out at the theoretical maximum there of 11
 mbits. The MK802 with its Wifi is the bottom performer. This echoes the
 comments I made earlier about its poor performance during setup.
 
-%image(images/hardware/results/disk_cache.svg, Disk Cache)
+%image(images/hardware/results/disk_cache.jpg, Disk Cache)
 
 Disk cache is a little bit mis-leading. This is more accurately an effective
 test of memory throughput. Every time you read from the disk it's stored in
@@ -475,7 +475,7 @@ This indicates that cacheing will not have much of an impact. For certain use
 cases where there are many repeated small reads, such as serving web pages,
 this is less than ideal.
 
-%image(images/hardware/results/disk_read.svg, Disk Read)
+%image(images/hardware/results/disk_read.jpg, Disk Read)
 
 The Cubieboard, DreamPlug, and TonidoPlug were all benchmarked with a SATA
 hard disk, and consequently have significantly higher read speeds. The
@@ -505,7 +505,7 @@ will perform like. MFLOPS, or million floating point operations per second,
 gives an evaluation of a processor's performance in executing the more
 complex mathmatical operations we use, for example, in most games.
 
-%image(images/hardware/results/dhry_mips.svg, Integer Math)
+%image(images/hardware/results/dhry_mips.jpg, Integer Math)
 
 For integer math, we can quite clearly see the impact of processer
 architecture and clock speed. The TonidoPlug ranks rock bottom as an ARMv5
@@ -519,7 +519,7 @@ this performance it. The real winners here though are the ARMv7 based
 systems -- the BeagleBone Black, Cubieboard, and MK802 -- with performance
 more than double the Pi, despite only a 1 GHz clock speed.
 
-%image(images/hardware/results/whet_mflops.svg, Floating Point Math)
+%image(images/hardware/results/whet_mflops.jpg, Floating Point Math)
 
 In contrast however, it is interesting to see how the ARMv7 chips perform in
 terms of floating point performance. All of them integrate NEON
@@ -566,7 +566,7 @@ when compared to the original uncompressed audio file. MP3 encoding consists
 mostly of floating point arithmetic, such as Fast Fourier Transforms, and
 some load on memory.
 
-%image(images/hardware/results/bzip2_min.svg, bzip2 Compression)
+%image(images/hardware/results/bzip2_min.jpg, bzip2 Compression)
 
 In general bzip2 performance is pretty similar between devices. Everything
 performs on the same order of magnitude and in general looks to be pretty
@@ -578,7 +578,7 @@ longest to compress with its 700 MHz CPU, with the APC and TonidoPlug just
 ahead of it with slightly faster 800 MHz CPUs. The APC comes out just ahead
 though possibly due to it's newer ARMv6 architecture.
 
-%image(images/hardware/results/lame_min.svg, MP3 Encoding)
+%image(images/hardware/results/lame_min.jpg, MP3 Encoding)
 
 Variation in MP3 encoding performance as expected follows floating point
 performance, with the DreamPlug and TonidoPlug at rock bottom with their lack

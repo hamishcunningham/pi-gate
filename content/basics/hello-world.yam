@@ -26,7 +26,7 @@ Circuit diagrams) were drawn and debugged using the excellent
 %(http://circuitlab.com/, CircuitLab).):
 
 %(https://www.circuitlab.com/circuit/m4rfw9/just-an-led-raspberry-pi/,
-%image(images/just-an-led-ras-pi.svg, just an LED, 500))
+%image(images/just-an-led-ras-pi.jpg, just an LED, 500))
 
 Here D1 is the LED we're lighting up and R1 is a resistor that prevents too
 much current flowing in the circuit. V1 represents the 3.3 volt power supply
@@ -49,7 +49,7 @@ a different pin on the GPIO header, in this case pin 11. Now spot the
 difference:
 
 %(https://www.circuitlab.com/circuit/vxz53u/driving-an-led-via-software-raspberry-pi/,
-%image(images/driving-an-led-via-software-ras-pi.svg, driving an LED, 500))
+%image(images/driving-an-led-via-software-ras-pi.jpg, driving an LED, 500))
 
 Note the shift from pin 1 to pin 11 on the GPIO header. That's all! Now we're
 almost ready to start turning the LED on and off using software running on the
@@ -144,7 +144,7 @@ to decide which mode the pins we're working with should be in, and ask
 WiringPi to set them up accordingly. Refering back to our circuit diagram,
 %br
 %(https://www.circuitlab.com/circuit/vxz53u/driving-an-led-via-software-raspberry-pi/,
-%image(images/driving-an-led-via-software-ras-pi.svg, driving an LED, 500)) %br
+%image(images/driving-an-led-via-software-ras-pi.jpg, driving an LED, 500)) %br
 we see that header pin 11 is what we're using to drive the LED -- i.e. make an
 _output_ -- and that therefore we need to set pin 11 into output mode. For
 reasons %(#gpio-pins, discussed above) header pin 11 is known to WiringPi as
@@ -206,7 +206,7 @@ strictly speaking this is inaccurate, but it does allow us to run simulations
 on the circuits in CircuitLab. If you know a better way please let me know!):
 %br
 %(https://www.circuitlab.com/circuit/2475qd/switch-with-pull-down-resistor-raspberry-pi/,
-%image(images/switch-with-pull-down-resistor.svg, reading from switch, 450)) %br
+%image(images/switch-with-pull-down-resistor.jpg, reading from switch, 450)) %br
 We connect the switch SW1 to the (always on) 3.3v supply (header pin 1), so
 that when the switch is in the on position it will supply the logical high
 value. Resistor R1 prevents mishaps if we accidentally set header pin 11 to
@@ -250,7 +250,7 @@ is that we will now both sense from the switch and respond to the sensor data
 from software.
 
 %(https://www.circuitlab.com/circuit/886nta/sensing-from-switch-and-driving-led-raspberry-pi/,
-%image(images/sensing-from-switch-and-driving-led.svg, switch and LED, 550))
+%image(images/sensing-from-switch-and-driving-led.jpg, switch and LED, 550))
 
 Nothing new here -- we've just combined the LED driver circuit that we began
 with and the switch reader circuit from the previous section. Here we have the
@@ -339,7 +339,7 @@ GPIO pin will still do the basic switching, but the transistor will mediate
 between GPIO and buzzer. Here's the circuit diagram:
 
 %(https://www.circuitlab.com/circuit/p989jw/using-a-transistor-to-drive-a-buzzer-raspberry-pi/,
-%image(images/using-a-transistor-to-drive-a-buzzer.svg, transistor driving buzzer,
+%image(images/using-a-transistor-to-drive-a-buzzer.jpg, transistor driving buzzer,
 500))
 
 The transistor, Q1, has three pins, called base (b), collector (c) and emitter
