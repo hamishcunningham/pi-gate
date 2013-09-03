@@ -41,18 +41,18 @@ are:
 
 %[ | %[
 | %(images/flood-alarm-detail-5.jpg,
-  %image(images/thumbs/flood-alarm-detail-5.jpg, p'eye candy%/*, 600, 285%*/))
+  %image(images/thumbs/flood-alarm-detail-5.jpg, p'eye candy))
 | %(images/flood-alarm-detail-6.jpg,
-  %image(images/thumbs/flood-alarm-detail-6.jpg, p'eye candy%/*, 280%/*, 281%*/))
+  %image(images/thumbs/flood-alarm-detail-6.jpg, p'eye candy))
 | %] |
 ---
 | %[
 | %(images/flood-alarm-detail-3.jpg,
-  %image(images/thumbs/flood-alarm-detail-3.jpg, p'eye candy, 214%/*, 280%*/))
+  %image(images/thumbs/flood-alarm-detail-3.jpg, p'eye candy))
 | %(images/flood-alarm-detail-1.jpg,
-  %image(images/thumbs/flood-alarm-detail-1.jpg, p'eye candy, 300%/*, 165%*/))
+  %image(images/thumbs/flood-alarm-detail-1.jpg, p'eye candy))
 | %(images/flood-alarm-detail-2.jpg,
-  %image(images/thumbs/flood-alarm-detail-2.jpg, p'eye candy, 166%/*, 280%*/))
+  %image(images/thumbs/flood-alarm-detail-2.jpg, p'eye candy))
 | %] | %]
 
 

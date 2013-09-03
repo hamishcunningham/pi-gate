@@ -118,9 +118,9 @@ fix-image-sizes:
         rm -f $${HTML}-new.html xindex.html; \
         echo
 record-image-size-diffs:
-	make fix-image-sizes 2>&1 \
-          |sed 's,.*\(src="[^"]*"\).*\(width=.*"\)[^"]*,\1 \2,g' \
-          |tee image-size-diffs.txt
+	make fix-image-sizes 2>&1 |tee image-size-diffs.txt
+	sed 's,.*\(src="[^"]*"\).*\(width=.*\)"[^"]*,\1 \2,g' \
+          image-size-diffs.txt >image-size-diffs2.txt
 
 .PHONY: html help clean regenerate serve devserver publish ec2upload gateupload
 .PHONY: fix-image-sizes record-image-size-diffs

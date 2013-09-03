@@ -59,7 +59,7 @@ a great idea -- why not take a picture of the indicator LED whenever the GPIO
 level monitoring code detects a change? Here he is (in a photo taken from the
 Pi cam) at the _Eureka!_ moment:
 
-%image(images/vladi.jpg, Vladimir, 300)
+%image(images/vladi.jpg, Vladimir, 300, 266)
 
 Nice one V, I think you've got yourself a job :-;
 

@@ -3,9 +3,7 @@ Lego Engineering
 There's Lego, and then there's LEGO:
 
 %(http://www.wired.com/underwire/2013/05/largest-lego-x-wing/,
-%image(images/thumbs/wired-lego-xwing.jpg, BIG LEGO))
-%%% %http://www.wired.com/images_blogs/underwire/2013/05/X-wing1.jpg,
-%%% %image(images/wired-lego-xwing.jpg, BIG LEGO, 660, 440)
+%image(images/thumbs/wired-lego-xwing.jpg, BIG LEGO, 280, 187))
 
 If you're planning on a monster like this with millions of bricks then you
 definitely need to call in the engineers (not least to move the beast around
@@ -15,8 +13,8 @@ Not to be outdone, our resident %(pages/about.html#fred, structural engineer)
 has put together a disquisition on the joys of %(pages/legocases.html, LEGO
 cases for the Pi), including this one that he built himself --
 %br %(images/case/01case.jpg, %image(images/case/thumbs/01case.jpg, A lego Pi
-case)) %br -- with nothing but a slide rule and a copy of Newton's _Principia_ to
-help him.
+case, 200, 150)) %br -- with nothing but a slide rule and a copy of Newton's
+_Principia_ to help him.
 
 The result is not just a _thing_ of beauty, but a _process_ of beauty :-)
 
