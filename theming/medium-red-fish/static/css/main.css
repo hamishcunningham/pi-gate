@@ -248,6 +248,9 @@ img.left, figure.left { float: left; margin: 0 2em 2em 0; }
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
 }
+.midColContent {
+  padding: 5px 5px;
+}
 
 /* Extras *****************/
 #extras {margin: 0 auto 3em auto; overflow: hidden;}
