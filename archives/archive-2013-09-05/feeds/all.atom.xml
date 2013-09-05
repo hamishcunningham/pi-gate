@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pi GATE — Sheffield Pi-Tronics</title><link href="/" rel="alternate"></link><link href="http://pi.gate.ac.uk/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2013-08-25T00:00:00+01:00</updated><entry><title>Winking Pi: Solving the IP Address Catch-22</title><link href="/posts/2013/08/25/winking-pi/" rel="alternate"></link><updated>2013-08-25T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-08-25:posts/2013/08/25/winking-pi/</id><summary type="html">
+
+&lt;p&gt;I can fit a Pi in my overnight bag, but I can't fit a monitor. How can I
+remote log into my Pi when I'm on the road? This is a Catch-22 &amp;mdash; I need a
+network address (an &lt;em&gt;IP address&lt;/em&gt;) to log in, but to get the address I need to
+be logged in. &lt;/p&gt;
+
+&lt;p&gt;A related question: I want to connect my Pi to a new WiFi network, but to
+connect I need to give the beast the network SSID and passphrase &amp;mdash; and again
+I need to log in first...&lt;/p&gt;
+
+&lt;p&gt;There are several solutions to the first problem &amp;mdash; one good one is to set up
+your Pi so that it blinks its IP address on the status LED. For the second
+problem there are also several solutions, including editing the WiFi config on
+another machine that has an SD card reader, or setting up access to your
+phone's WiFi hotspot.&lt;/p&gt;
+
+&lt;p&gt;I've written a &lt;a class="cow-url" href="/pages/blinkip.html"&gt;Raspbian package called BlinkIP&lt;/a&gt; to do
+some of this stuff, and you can download it from our new
+&lt;a class="cow-url" href="https://launchpad.net/~hamish-dcs/+archive/pi-gate"&gt;Ubuntu-hosted package
+archive&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Happy networking :-)&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/blinkip.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="network"></category><category term="ip address"></category><category term="wifi"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Chasing Pine Martens</title><link href="/posts/2013/08/05/chasing-pine-martens/" rel="alternate"></link><updated>2013-08-05T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-08-05:posts/2013/08/05/chasing-pine-martens/</id><summary type="html">
+
+&lt;p&gt;I'm in Bulgaria in a house at the foot of mount Vitosha, on the outskirts of
+the capital, Sofia. Sofia is home to something approaching 2 million people
+(which is more than 10% of the population of the whole country), and many
+travel in and out each week to find work in the big city. Vitosha is the lungs
+of the city, and its slopes are the perfect place to stay if you're keen to
+walk in its forests, or ski, or just get some cool air in the heat of the
+summer. &lt;br&gt; &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Vitosha"&gt;&lt;img class="cow-img" src="/static/images/vitosha-1.jpg" alt="Mount Vitosha" width="400" height="243"&gt;&lt;/a&gt; &lt;br&gt; Sitting in the
+garden at dusk the other day, we spotted a couple of dark shapes scurrying
+along &amp;mdash; pine martens! Or possibly their smaller cousin the beech marten: &lt;br&gt;
+&lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Beech_marten"&gt;&lt;img class="cow-img" src="/static/images/beech-marten-1.jpg" alt="A beech marten" width="200" height="317"&gt;&lt;/a&gt; &lt;br&gt; They are beautiful creatures, but quite shy,
+and they only come out after dark... You can see where this is going &amp;mdash; I
+wonder if I can capture some images with a Pi, a motion sensor and a camera
+module?&lt;/p&gt;
+
+&lt;p&gt;Well, first things first, I'm going to need to put it on top of next door's
+shed in the path of the night-time run that the martens make on their way to
+hunt mice or steal chicken's eggs from our neighbours. So I need a good
+battery pack...&lt;/p&gt;
+
+&lt;p&gt;As Gray Girling points out in his excellent
+&lt;a class="cow-url" href="http://www.amazon.co.uk/Raspberry-Pi-Manual-practical-revolutionary/dp/0857332953/"&gt;Haynes manual&lt;/a&gt;, battery power for the Pi is harder than it looks at first
+sight. The Pi requires both fairly high current (at least for the Model B) and
+a quite stable voltage. And, as I found out when I when testing my first
+efforts, an unscheduled low voltage shutdown can corrupt the SD card image and
+leave you with an unbootable setup :-(&lt;/p&gt;
+
+&lt;p&gt;Time for an analysis of &lt;a class="cow-url" href="/pages/mopi.html"&gt;the perfect Pi battery pack&lt;/a&gt;, and
+Bulgaria is the perfect place to experiment with this stuff as it's crawling
+with electronics and computing engineers (having at one time been supplier of
+around half of the USSR's computer hardware). &lt;a class="cow-url" href="/pages/about.html#lubo"&gt;Lubo
+Bontchev&lt;/a&gt; of &lt;a class="cow-url" href="http://www.selcomltd.com/"&gt;Selcom custom electronics&lt;/a&gt; has
+worked on everything from solar panels to satelites and has now built Pi.GATE
+some prototypes for hot-swap mobile Pi power. Here's the regulator circuit on
+the left and the controller on the right:&lt;/p&gt;
+
+&lt;table&gt; &lt;tr&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/mopi/prototype-regulator-05.jpg"&gt;&lt;img class="cow-img" src="/static/images/mopi/thumbs/prototype-regulator-05.jpg" alt="mopi prototype 5" width="200" height="194"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/mopi/prototype-controller-01.jpg"&gt;&lt;img class="cow-img" src="/static/images/mopi/thumbs/prototype-controller-01.jpg" alt="mopi prototype 1" width="270" height="195"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The &lt;em&gt;regulator&lt;/em&gt; supplies the 5 volts at 1 amp that the Pi wants, and it has
+two input connectors and some clever circuitry to support hot-swap of battery
+packs. (In the picture we've got two packs attached, one full one and one
+discharged one, while we swap from one to the other.) The &lt;em&gt;controller&lt;/em&gt;
+monitors battery levels and reports them to the Pi (over 3 binary-coded GPIO
+pins, for example) and also drives an indicator LED.&lt;/p&gt;
+
+&lt;p&gt;Now, figuring out how to test all this stuff is a lot of hard work, so,
+natural shirker that I am, I borrowed my nephew Vlady to help. He came up with
+a great idea &amp;mdash; why not take a picture of the indicator LED whenever the GPIO
+level monitoring code detects a change? Here he is (in a photo taken from the
+Pi cam) at the &lt;em&gt;Eureka!&lt;/em&gt; moment:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/static/images/vladi.jpg" alt="Vladimir" width="300" height="266"&gt;&lt;/p&gt;
+
+&lt;p&gt;Nice one V, I think you've got yourself a job :-;&lt;/p&gt;
+
+&lt;p&gt;Our first test managed to run the model B for nine hours using eight AA NiMH
+batteries (2400mAh cells) &amp;mdash; definitely promising!&lt;/p&gt;
+
+&lt;p&gt;Some more views of the regulator:&lt;/p&gt;
+
+&lt;table&gt; &lt;tr&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/mopi/prototype-regulator-01.jpg"&gt;&lt;img class="cow-img" src="/static/images/mopi/thumbs/prototype-regulator-01.jpg" alt="mopi prototype 1" width="200" height="170"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/mopi/prototype-regulator-02.jpg"&gt;&lt;img class="cow-img" src="/static/images/mopi/thumbs/prototype-regulator-02.jpg" alt="mopi prototype 2" width="200" height="155"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/mopi/prototype-regulator-03.jpg"&gt;&lt;img class="cow-img" src="/static/images/mopi/thumbs/prototype-regulator-03.jpg" alt="mopi prototype 3" width="200" height="203"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/mopi/prototype-regulator-04.jpg"&gt;&lt;img class="cow-img" src="/static/images/mopi/thumbs/prototype-regulator-04.jpg" alt="mopi prototype 4" width="200" height="233"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Now, where have those pine martens got to?&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Lego Engineering</title><link href="/posts/2013/07/11/lego-engineering/" rel="alternate"></link><updated>2013-07-11T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-07-11:posts/2013/07/11/lego-engineering/</id><summary type="html">
+
+&lt;p&gt;There's Lego, and then there's LEGO:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="http://www.wired.com/underwire/2013/05/largest-lego-x-wing/"&gt;&lt;img class="cow-img" src="/static/images/thumbs/wired-lego-xwing.jpg" alt="BIG LEGO" width="280" height="187"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you're planning on a monster like this with millions of bricks then you
+definitely need to call in the engineers (not least to move the beast around
+&amp;mdash; it weighs more than 20 tonnes!).&lt;/p&gt;
+
+&lt;p&gt;Not to be outdone, our resident &lt;a class="cow-url" href="/pages/about.html#fred"&gt;structural engineer&lt;/a&gt;
+has put together a disquisition on the joys of &lt;a class="cow-url" href="/pages/legocases.html"&gt;LEGO
+cases for the Pi&lt;/a&gt;, including this one that he built himself &amp;mdash;
+&lt;br&gt; &lt;a class="cow-url" href="/static/images/case/01case.jpg"&gt;&lt;img class="cow-img" src="/static/images/case/thumbs/01case.jpg" alt="A lego Pi
+case" width="200" height="150"&gt;&lt;/a&gt; &lt;br&gt; &amp;mdash; with nothing but a slide rule and a copy of Newton's
+&lt;em&gt;Principia&lt;/em&gt; to help him.&lt;/p&gt;
+
+&lt;p&gt;The result is not just a &lt;em&gt;thing&lt;/em&gt; of beauty, but a &lt;em&gt;process&lt;/em&gt; of beauty :-)&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/legocases.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="lego"></category><category term="cases"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Learn When You're Young</title><link href="/posts/2013/06/28/neural-plasticity/" rel="alternate"></link><updated>2013-06-28T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-06-28:posts/2013/06/28/neural-plasticity/</id><summary type="html">
+
+&lt;p&gt;Learn when you're young, remember when you're old.&lt;/p&gt;
+
+&lt;p&gt;When I was 16 or so I was totally obsessed by electronics of one sort or
+another. (Ok, not &lt;em&gt;totally&lt;/em&gt;; there was also space in there for thinking about
+food and about one other subject which I'll leave as an exercise for the
+reader.) I particularly remember a project that put an FM radio in a TicTac
+box &amp;mdash; kind of like this beautiful
+&lt;a class="cow-url" href="http://www.mds975.co.uk/Content/trfradios03.html"&gt;match box radio&lt;/a&gt;... &lt;br&gt;
+&lt;a class="cow-url" href="http://www.mds975.co.uk/Images/radios/austin_hellier_MK484-2-001.jpg"&gt;&lt;img class="cow-img" src="/static/images/match-box-radio.jpg" alt="match box radio" width="500" height="369"&gt;&lt;/a&gt; &lt;br&gt;
+...only in a &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Tic_Tac"&gt;Tic Tac&lt;/a&gt; box.&lt;/p&gt;
+
+&lt;p&gt;Heady stuff. (Ok, not as heady as the third category of 16-year-old obsession,
+but still I used to spend hours poring over a hot &lt;a class="cow-url" href="http://www.maplin.co.uk/"&gt;Maplin&lt;/a&gt; catalogue planning my next foray into the tantalising world of
+transistors (or trannies), tantalum capacitors, thin film resistors and the
+like.)&lt;/p&gt;
+
+&lt;p&gt;Fast forward ahem years (ok &amp;mdash; 32, to be precise). As part of a
+ground-breaking excursion to the very frontiers of human knowledge (otherwise
+known as &lt;a class="cow-url" href="http://pi.gate.ac.uk/"&gt;pi.gate.ac.uk&lt;/a&gt;) I'm building circuits,
+figuring out which combinations of components will solve a particular problem,
+prototyping them virtually on &lt;a class="cow-url" href="https://www.circuitlab.com/"&gt;CircuitLab&lt;/a&gt;,
+prototyping them in hardware on a breadboard, and, finally, soldering up
+&amp;quot;production prototypes&amp;quot; on a stripboard. All good clean family fun, and useful
+to boot. (Thanks, &lt;a class="cow-url" href="http://www.raspberrypi.org/"&gt;Raspberry Pi&lt;/a&gt;, for making all
+this possible!)&lt;/p&gt;
+
+&lt;p&gt;A lot of the skills and knowledge that I'm using is stuff that I haven't used
+for the intervening thirty-odd years &amp;mdash; but they're still there. What you
+learn when you're young, and what you learn when you're &lt;em&gt;interested&lt;/em&gt;, stays
+with you. It's a neural plasticity thing.&lt;/p&gt;
+
+&lt;p&gt;An upshot of all this, is that putting together a simple circuit board on a
+Friday afternoon (instead of doing what I'm paid for, ahem) is a whole lot of
+fun. And the pictures are almost as interesting as Category Three (this may
+also be an age thing). Do let me know if you agree... here they
+are: &lt;/p&gt;
+
+&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;table&gt;
+&lt;tr&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/static/images/flood-alarm-detail-5.jpg"&gt;&lt;img class="cow-img" src="/static/images/thumbs/flood-alarm-detail-5.jpg" alt="p'eye candy" width="400"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/static/images/flood-alarm-detail-6.jpg"&gt;&lt;img class="cow-img" src="/static/images/thumbs/flood-alarm-detail-6.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt; &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;table&gt;
+&lt;tr&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/static/images/flood-alarm-detail-3.jpg"&gt;&lt;img class="cow-img" src="/static/images/thumbs/flood-alarm-detail-3.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/static/images/flood-alarm-detail-1.jpg"&gt;&lt;img class="cow-img" src="/static/images/thumbs/flood-alarm-detail-1.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/static/images/flood-alarm-detail-2.jpg"&gt;&lt;img class="cow-img" src="/static/images/thumbs/flood-alarm-detail-2.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt; &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;!--
+%[ | %[
+| %(images/flood-alarm-detail-5.jpg,
+  %image(images/thumbs/flood-alarm-detail-5.jpg, p'eye candy, 280, 133))
+| %(images/flood-alarm-detail-6.jpg,
+  %image(images/thumbs/flood-alarm-detail-6.jpg, p'eye candy, 280, 281))
+| %] |
+---
+| %[
+| %(images/flood-alarm-detail-3.jpg,
+  %image(images/thumbs/flood-alarm-detail-3.jpg, p'eye candy, 280, 214))
+| %(images/flood-alarm-detail-1.jpg,
+  %image(images/thumbs/flood-alarm-detail-1.jpg, p'eye candy, 280, 154))
+| %(images/flood-alarm-detail-2.jpg,
+  %image(images/thumbs/flood-alarm-detail-2.jpg, p'eye candy, 280, 166))
+| %] | %]
+--&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>It's a Jungle Out There</title><link href="/posts/2013/06/26/alternatives/" rel="alternate"></link><updated>2013-06-26T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-06-26:posts/2013/06/26/alternatives/</id><summary type="html">
+
+&lt;p&gt;For a couple of years now I've been working on some cheap home computing stuff
+that might scratch a couple of itches with one stone&lt;span class="cow-footnote" name="footnote1"&gt;&lt;sup&gt;&lt;a href="#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a set-top media center that doesn't cost a fortune, but does have a decent
+  web browser&lt;/li&gt;
+&lt;li&gt;a way of communicating with family and friends that doesn't involve getting
+  all those dodgy adverts from Facebook&lt;span class="cow-footnote" name="footnote2"&gt;&lt;sup&gt;&lt;a href="#footnote2"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;a worm-hole generator piped into 1980 and localised on my bald patch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I'm still waiting for the worm-hole thing, but the other stuff is getting very
+do-able, and the Raspberry Pi is definitely part of the picture. To test out
+various options I picked up a bunch of different bits of hardware that do jobs
+similar to the Pi in one way or other... And &lt;a class="cow-url" href="/pages/about.html#fred"&gt;Fred&lt;/a&gt; is
+busy putting them through their paces for &lt;a class="cow-url" href="/pages/hardware.html"&gt;this review
+article&lt;/a&gt;. He's taken some pics:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/hardware/apc8750.jpg"&gt;&lt;img class="cow-img" src="/static/images/hardware/thumbs/apc8750.jpg" alt="APC 8750" width="150" height="93"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://apc.io/products/8750a/"&gt;APC 8750&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/hardware/beagleboneblack.jpg"&gt;&lt;img class="cow-img" src="/static/images/hardware/thumbs/beagleboneblack.jpg" alt="Beagle Bone Black" width="150" height="100"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://beagleboard.org/Products/BeagleBone%20Black"&gt;Beagle Bone Black&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/hardware/cubieboard.jpg"&gt;&lt;img class="cow-img" src="/static/images/hardware/thumbs/cubieboard.jpg" alt="CubieBoard" width="150" height="109"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://cubieboard.org/"&gt;Cubieboard&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/hardware/dreamplug.jpg"&gt;&lt;img class="cow-img" src="/static/images/hardware/thumbs/dreamplug.jpg" alt="DreamPlug" width="150" height="96"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://www.globalscaletechnologies.com/t-dreamplugdetails.aspx"&gt;DreamPlug&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/hardware/minipc.jpg"&gt;&lt;img class="cow-img" src="/static/images/hardware/thumbs/minipc.jpg" alt="MiniPC" width="150" height="104"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="https://www.miniand.com/products/MK802%20Android%20Mini%20PC"&gt;MK802 Mini PC&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/hardware/pimodela.jpg"&gt;&lt;img class="cow-img" src="/static/images/hardware/thumbs/pimodela.jpg" alt="Pi Model A" width="150" height="100"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://www.raspberrypi.org/archives/3215"&gt;Pi Model A&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/hardware/pimodelbrev2.jpg"&gt;&lt;img class="cow-img" src="/static/images/hardware/thumbs/pimodelbrev2.jpg" alt="Pi Model B rev2" width="150" height="115"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://www.raspberrypi.org/faqs"&gt;Pi Model B&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/static/images/hardware/tonidoplug.jpg"&gt;&lt;img class="cow-img" src="/static/images/hardware/thumbs/tonidoplug.jpg" alt="Tonido Plug" width="150" height="96"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://www.tonidoplug.com/"&gt;TonidoPlug&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;We'll keep you posted as he digs the dirt on this bunch... But if he figures
+out the worm-hole generator thing I'm off to see all the Clash gigs again
+before anything else.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/hardware.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;span class="cow-footnote-section"&gt;
+&lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
+&lt;p&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote1"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote1"&gt;Mixed metaphors?
+Love 'em!&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote2"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote2"&gt;&amp;quot;Meet your dream partner at
+  our new site, exclusively for the balding and podgy!&amp;quot; A friend of mine
+  claims that the only reason I get dodgy adverts is because I visit dodgy
+  sites with my cookies turned on, but I'm sure there's no truth in that at
+  all. And I'll sue.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+&lt;/span&gt;
+</summary><category term="hardware"></category><category term="pi-alikes"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Help! My Toast is Burning!</title><link href="/posts/2013/06/10/notipifications/" rel="alternate"></link><updated>2013-06-10T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-06-10:posts/2013/06/10/notipifications/</id><summary type="html">
+
+&lt;p&gt;No matter how much you love your Pi, some time or other you will inevitably be
+forced to leave it behind while you do something boring like go to work, or
+listen to your parents bang on about the need to get qualified, or another of
+those little annoyances that life seems so full of. Hey ho. If your Pi is
+&lt;a class="cow-non-existant-url" href="/posts/2013/04/11/sensing-and-responding/"&gt;running a sensor&lt;/a&gt; that you need
+to be kept in touch with, then you need a way of getting your Pi to notify you
+when something important happens. &lt;a class="cow-url" href="/pages/about.html#hamish"&gt;I&lt;/a&gt; use our
+&lt;a class="cow-url" href="/pages/basics.html#flood-alarm"&gt;flood alarm&lt;/a&gt; to keep a check on some dodgy
+plumbing in my basement, for example, and need to know PDQ if the house starts
+to fill up with cold wet stuff.&lt;/p&gt;
+
+&lt;p&gt;Our latest tutorial takes us through three options for &lt;a class="cow-url" href="/pages/notipi.html"&gt;telling the outside world&lt;/a&gt; about Stuff Going On from your Pi:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;via SMS text message to your phone, using &lt;a class="cow-url" href="/pages/notipi.html#bulk-sms"&gt;a web service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;via SMS using &lt;a class="cow-url" href="/pages/notipi.html#nokia-sms"&gt;a phone&lt;/a&gt; attached to the Pi&lt;/li&gt;
+&lt;li&gt;via a &lt;a class="cow-url" href="/pages/notipi.html#pi-twitter"&gt;Twitter post&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Happy notipifications ☺&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/notipi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="software"></category><category term="linux"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Stay Dry Cheaply</title><link href="/posts/2013/06/05/stay-dry-cheaply/" rel="alternate"></link><updated>2013-06-05T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-06-05:posts/2013/06/05/stay-dry-cheaply/</id><summary type="html">
+
+&lt;p&gt;One of the projects in our &lt;a class="cow-url" href="/pages/basics.html"&gt;basic pi-tronics&lt;/a&gt; tutorial is
+a &lt;a class="cow-url" href="/pages/basics.html#flood-alarm"&gt;simple flooding alarm&lt;/a&gt; which senses
+unwanted water flows and sends a text message (or makes a tweet, or etc.) to
+give you a heads up before things get extremely damp.&lt;/p&gt;
+
+&lt;p&gt;This type of thing is a good illustration of how the Pi can result in &lt;b&gt;really
+cheap&lt;/b&gt; solutions &amp;mdash; I just came across a commercial alternative to this
+circuit (but without the SMS functions) that costs more than &amp;pound;400! The
+Pi-based version has a total materials cost of around &amp;pound;50. Quite a saving.&lt;/p&gt;
+
+&lt;!--% http://www.serverscheck.com/--&gt;
+
+
+&lt;p&gt;That's not to say that the commercial version is overpriced; it comes in a
+lovely metal box, has full service and support behind it, etc. etc. But for
+someone who just wants something simple and cheap (and fun to build!) the Pi
+really wins on price.&lt;/p&gt;
+
+&lt;p&gt;Some of the reasons for this are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DIY is cheap, at least when the base materials are also cheap&lt;/li&gt;
+&lt;li&gt;a general purpose computer means much less need for (expensive) specialist
+  hardware&lt;/li&gt;
+&lt;li&gt;sharing: the rapid growth of the Pi community and their philosophy of
+  openness and sharing means it is easy to build on the work of others (which
+  also goes for the Linux operating system that the Pi runs on)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ok, I used up several evenings and weekends, but it was more fun than watching
+the telly :-)&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="hardware"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Pigs and Pi</title><link href="/posts/2013/05/19/pigs-and-pi/" rel="alternate"></link><updated>2013-05-19T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-05-19:posts/2013/05/19/pigs-and-pi/</id><summary type="html">
+
+&lt;p&gt;I have a friend and colleague called Angus (fellow member of the
+silly-name-for-an-Englishman club) who is one of surely very few people who
+are both computer programmers and pig farmers. Down on the farm Angus recently
+had some building work done, and the other day he had an illuminating chat
+with one of the guys who did the work. They were talking about smart phones,
+and this lad (he's 25) happenned to mention that his father (who's 49) had
+programmed several phone apps for the family business. It turned out that dad
+had (like Angus) been the proud owner of a ZX Spectrum in the 1980s, and had
+been inspired to progamme by the combination of cheap hardware and an open
+learning environment. His son, in contrast, was served up with a diet of
+Microsoft word processing, and knows enough about computing to fill in the
+back of a postage stamp as a result.&lt;/p&gt;
+
+&lt;p&gt;So: let's &lt;a class="cow-url" href="/pages/basics.html"&gt;get hacking on the Pi&lt;/a&gt;, and help get
+&lt;a class="cow-url" href="/pages/schools.html"&gt;Pi stuff into schools&lt;/a&gt; so that kids have a
+chance to stay ahead of the technology wave as producers and not just
+consumers!&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="hardware"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="schools"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>School's Out?</title><link href="/posts/2013/05/18/schools-out/" rel="alternate"></link><updated>2013-05-18T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-05-18:posts/2013/05/18/schools-out/</id><summary type="html">
+
+&lt;p&gt;The argument for a new approach to computing in schools goes something like
+this:&lt;/p&gt;
+
+&lt;p&gt;Back in the Good Old Days (a period of time roughly co-extensive with the Lush
+Growth Age of &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Eben_Upton"&gt;Eben Upton&lt;/a&gt;'s
+tonsorial offering) there were hackable devices of an affordable nature (think
+BBC Micro, ZX Spectum and the like). Fast forward to the tennies and the home
+computers of today are either expensive machines that no one wants the rugrats
+to hack at, or games machines which the industry wastes billions on locking
+down so tightly that only an experienced hacker can get inside.&lt;/p&gt;
+
+&lt;p&gt;One of the main aims of &lt;a class="cow-url" href="http://www.raspberrypi.org/about"&gt;the Pi's
+inventors&lt;/a&gt; was to get back to a situation where kids can get their hands on a
+cheap, open platform that they can take control of, write code on, and
+generally be creative with, while learning to intervene in the digital world
+as more than just a consumer. (If all these skills migrate into mega-corp
+multinationals, the UK's computer science and engineering base &amp;mdash; not to
+mention your ordinary citizen &amp;mdash; stands less and less chance of joining the
+magic circles that dictate our technological futures.)&lt;/p&gt;
+
+&lt;p&gt;The fact that I'm writing this now, that new businesses like
+&lt;a class="cow-url" href="http://shop.pimoroni.com/"&gt;PiMoroni&lt;/a&gt; exist, and that there are more than 1
+million Raspberry Pis in the world demonstrates the wide currency of the idea.
+Even the UK government has woken up and taken notice! The UK's school
+curriculum for computing and IT is now in ferment, and with luck there will be
+a whole new ethos coming to &lt;a class="cow-url" href="/pages/schools.html"&gt;schools computing&lt;/a&gt; not too
+long from now.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/schools.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="schools"></category><category term="education"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Feed me Seymour</title><link href="/posts/2013/05/16/feed-me-seymour/" rel="alternate"></link><updated>2013-05-16T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-05-16:posts/2013/05/16/feed-me-seymour/</id><summary type="html">
+
+&lt;p&gt;What would happen if your vacuum cleaner developed a mind of its own? Have you
+always treated it kindly, and with respect? Or did you make it suck up stuff
+that it really probably would have been happier stearing clear of?&lt;/p&gt;
+
+&lt;p&gt;If Pete's &lt;a class="cow-url" href="/pages/piroomba.html"&gt;talking hoover&lt;/a&gt; project goes all AI on us, we might
+find out a little more about the thoughts of our cleaning appliances than
+anyone is ready for.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/piroomba.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="hardware"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="roomba"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Sensing and Responding</title><link href="/posts/2013/04/11/sensing-and-responding/" rel="alternate"></link><updated>2013-04-11T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-04-11:posts/2013/04/11/sensing-and-responding/</id><summary type="html">
+
+&lt;p&gt;First things first: to begin learning about hacking electronics with the Pi, a
+good first step is to get the little beast to start interacting with the
+outside world &amp;mdash; lighting LEDs, responding to switches of various types,
+making alerts via Twitter or SMS.&lt;/p&gt;
+
+&lt;p&gt;We've made this &lt;a class="cow-url" href="/pages/basics.html"&gt;tutorial on the basics&lt;/a&gt; of sensing and
+responsing with the Pi, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="cow-url" href="/pages/basics.html#parent-alarm"&gt;a parent alarm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="cow-url" href="/pages/basics.html#flood-alarm"&gt;a flood alert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="cow-url" href="/pages/basics.html#resources"&gt;where to find out more&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Getting busy with a breadboard and a few simple components is a great way to
+get kids interested in the potential of the device (in ways that just
+introducing them to Scratch or Python may not). For example, when I gave a Pi
+to my niece (who's in her early teens) she was politely interested, but no
+more than that. She has already done some Scratch programming at school, and
+regularly uses a PC, a Kindle and a Blackberry. The Pi is just another
+computer for her &amp;mdash; and rather a slow one, at that. &lt;/p&gt;
+
+&lt;p&gt;I've had similar experiences with several other people. For those who are
+lucky enough to have lots of access to computers already, the fact that the Pi
+delivers a magical amount of oomph for such a cheap package is not enough to
+really spark their interest.&lt;/p&gt;
+
+&lt;p&gt;To try and make things more interesting, we've started some tutorial materials
+that hook up simple electronics to do things like warning you if your parent
+is coming up the stairs, or sending you an SMS if the bathroom is flooded, and
+the like. The first few projects are all about &lt;a class="cow-url" href="/pages/basics.html"&gt;sensing
+and responding&lt;/a&gt;: getting the Pi to interact with the outside world. All you'll
+need is a basic electronics kit (breadboard, resistors, LEDs, switches, a
+transistor or two, a buzzer, ...), some spare time and, preferably, no
+&lt;a class="cow-url" href="/pages/basics.html#warning"&gt;allergy to nerds&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="hardware"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry></feed>
