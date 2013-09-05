@@ -63,6 +63,7 @@ help:
 	@echo '   fix-image-sizes       add missing dimensions to img tags   '
 	@echo '   archive               make an archive copy of .htmls       '
 	@echo '   archive-diff          diff the archive against the output  '
+	@echo '   fix-rss-feeds         absolutise the URLs in the RSS feeds '
 	@echo '                                                              '
 	@echo '   post                  create files for a new post          '
 	@echo '                                                              '
@@ -88,12 +89,12 @@ publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 # (not using publish conf at present: ...upload: publish)
-ec2upload: minify
+ec2upload: fix-rss-feeds minify
 	rsync -e "ssh -p $(SSH_PORT) -i $${EC2_PEM}" -hP -rvz --delete \
           --delete-excluded \
           $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) \
           --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
-gateupload: minify
+gateupload: fix-rss-feeds minify
 	rsync -e "ssh -p $(SSH_PORT)" -hP -rvz --delete --delete-excluded \
           $(OUTPUTDIR)/ $${GE1_USER}@gate.ac.uk:/data/herd/pi.gate.ac.uk/html \
           --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
@@ -118,7 +119,7 @@ fix-image-sizes:
         rm -f $${HTML}-new.html xindex.html; \
         echo
 record-image-size-diffs:
-	make fix-image-sizes 2>&1 |tee image-size-diffs.txt
+	$(MAKE) fix-image-sizes 2>&1 |tee image-size-diffs.txt
 	sed 's,.*\(src="[^"]*"\).*\(width=.*\)"[^"]*,\1 \2,g' \
           image-size-diffs.txt >image-size-diffs2.txt
 
@@ -189,10 +190,25 @@ minify:
           mv $$f ../output/$${f}; done
 	rm -rf compressed-output
 
+# do a "publish" run to absolutise the URLs in the RSS feeds
+fix-rss-feeds:
+	mv output output.sav
+	mkdir output
+	$(MAKE) publish
+	mv output/feeds feeds.sav
+	rm -rf output
+	mv output.sav output
+	rm -rf output/feeds
+	mv feeds.sav output/feeds
+	for f in `find $(OUTPUTDIR)/feeds -name '*.xml'`; do \
+          sed -e 's,"&gt;XXX\(.*\)XXX,\1"\&gt;,g' $${f} >$${f}-$$$$; \
+          mv $${f}-$$$$ $${f}; \
+	done
+
 # make an archival copy of the .html files from the output directory
 archive:
 	rsync -aH --include='*.html' --include='*.css' --include='*.js' \
-          --include='*.htc' --exclude='*.*' \
+          --include='*.htc' --include='*.xml' --exclude='*.*' \
           output/ archives/archive-`date "+%Y-%m-%d"`
 	cd archives && rm -f latest && ln -s archive-`date "+%Y-%m-%d"` latest
 	@echo archived these files:
@@ -207,7 +223,7 @@ archive-diff:
             cmp -s $$f ../../output/$$f || \
               ( echo $${f}: && \
                 diff -y -W 175 --suppress-common-lines $$f ../../output/$$f \
-                && echo ); \
+                && echo ) || :; \
           done
 	@echo 
 
@@ -235,3 +251,4 @@ post:
           "$${SLUG}.jpg and thumbs/$${SLUG}.jpg in $(INPUTDIR)/images/articles"
 
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post
+.PHONY: fix-rss-feeds
