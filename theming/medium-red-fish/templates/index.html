@@ -49,7 +49,7 @@
       </ol><!-- /#posts-list -->
       </section><!-- /#content -->
       {% if loop.last and (articles_page.has_previous() 
-      or not articles_page.has_previous() and loop.length > 1) %}
+         or not articles_page.has_previous() and loop.length > 1) %}
         {% include 'pagination.html' %}
       {% endif %}
     {% endif %}
