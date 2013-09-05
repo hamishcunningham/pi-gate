@@ -4,7 +4,9 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Hamish Cunningham'
 SITENAME = u'Pi GATE — Sheffield Pi-Tronics'
+#SITEURL = 'http://pi.gate.ac.uk'
 SITEURL = ''
+PUBURL = 'http://pi.gate.ac.uk'
 TIMEZONE = 'Europe/London'
 DEFAULT_LANG = u'en'
 
