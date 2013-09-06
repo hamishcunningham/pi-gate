@@ -321,7 +321,7 @@ ul.dirList li span.deleteCheckbox {
   text-decoration: underline;
 }
 
-.menu a:hover {
+.menu a:hover, .menu a.hover {
   color: #fff;
   background-color: #000;
 }
@@ -393,16 +393,24 @@ ul.dirList li span.deleteCheckbox {
 
 /* The hover magic */
 .menu ul li:hover ul ul,
+.menu ul li.hover ul ul,
 .menu ul ul li:hover ul ul,
+.menu ul ul li.hover ul ul,
 .menu ul ul ul li:hover ul ul,
-.menu ul ul ul ul li:hover ul ul {
+.menu ul ul ul li.hover ul ul,
+.menu ul ul ul ul li:hover ul ul,
+.menu ul ul ul ul li.hover ul ul {
   display: none;
 }
 
 .menu ul li:hover ul,
+.menu ul li.hover ul,
 .menu ul ul li:hover ul,
+.menu ul ul li.hover ul,
 .menu ul ul ul li:hover ul,
-.menu ul ul ul ul li:hover ul {
+.menu ul ul ul li.hover ul,
+.menu ul ul ul ul li:hover ul,
+.menu ul ul ul ul li.hover ul {
   display: block;
 }
 
