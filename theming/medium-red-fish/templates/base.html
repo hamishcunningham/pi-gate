@@ -34,9 +34,6 @@
 
   <!-- menu accessibility fix from ian -->
   <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script>
-  <!-- TODO
-  delete pending fix re. unpopping...?
-  -->
   <script src="{{ SITEURL }}/theme/js/gatepage.js"></script>
 
   <!-- yui grids -->
@@ -54,70 +51,39 @@
       <span id="strapLine"><a href="{{ SITEURL }}/">Pi-Tronics from<br/>the GATE people</a></span>
       <span id="gateLogo"><a href="http://gate.ac.uk/"><img src="{{ SITEURL }}/theme/images/logo-gate.png" alt="GATE" border="0"
         height="55" width="132"></a></span>
-      <!-- <a href="http://www.shef.ac.uk/dcs/"><img src="{{ SITEURL }}/theme/images/logo-usfd-shield.png" alt="The University of Sheffield" height="55"></a> -->
     </span>
     <div class="horizontal menu">
-    <ul>
-    <li><img src="{{ SITEURL }}/theme/images/arrow-right.jpg" height="40" width="40"/></li>
-    <!-- TODO need a page at /pages to link from the top level here -->
-    <!--
-    <li><b><a href="{{ SITEURL }}">Projects</a></b>
       <ul>
-    -->
-
-    <!--
-done a custom menu for now to compress it a little...
-      {% for page in PAGES %}
-        {% if page.title != "About" %}
-          <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-    -->
-<!--
-<li><a href="/pages/basics.html">Basics</a></li>
-<li><a href="/pages/hardware.html">Pi-Alikes</a></li>
-<li><a href="/pages/legocases.html">LEGO</a></li>
-<li><a href="/pages/mopi.html">Mobile</a></li>
-<li><a href="/pages/blinkip.html">BlinkIP</a></li>
-<li><a href="/pages/notipi.html">NotiPi</a></li>
-<li><a href="/pages/piroomba.html">Roomba</a></li>
-<li><a href="/pages/schools.html">Schools</a></li>
--->
-
-<!--
-New menu pending CSS fix:
-  Tutorials
-  Blog
-  Download
-  Shop
-  Contact
-  About
--->
-<li><b><a href="#">Projects</a></b>
-  <ul>
-  <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
-  <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
-  <li><a href="/pages/legocases.html">LEGO Cases</a></li>
-  <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
-  <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
-  <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
-  <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
-  <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
-  </ul></li>
-<!-- <li><a href="/">Blog</a></li> -->
-<li><a href="/pages/basics.html#resources">Download</a></li>
-<!--
-<li><a href="/pages/download.html">Download</a></li>
-<li><a href="/pages/shop.html">Shop</a></li>
--->
-<li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
-
-    <!--
-      </ul></li>
-    -->
-    <!-- <li><a href="{{ SITEURL }}/category/news.html">News</a></li> -->
-    <li><a href="{{ SITEURL }}/pages/about.html">About</a></li>
-    </ul>
+      <li><img src="{{ SITEURL }}/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+      <!--
+      using a custom menu at present...
+        {% for page in PAGES %}
+          {% if page.title != "About" %} <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li> {% endif %}
+        {% endfor %}
+      -->
+      <li><b><a href="#">Projects</a></b>
+        <ul>
+        <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+        <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+        <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+        <!--
+        <li><a href="/pages/snowcam.html">SnowCam: Off the Radar Cameras</a></li>
+        -->
+        <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+        <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+        <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+        <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+        <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+        </ul></li>
+      <!-- <li><a href="/">Blog</a></li> -->
+      <li><a href="/pages/basics.html#resources">Download</a></li>
+      <!--
+      <li><a href="/pages/download.html">Download</a></li>
+      <li><a href="/pages/shop.html">Shop</a></li>
+      -->
+      <li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
+      <li><a href="{{ SITEURL }}/pages/about.html">About</a></li>
+      </ul>
     </div>
     
     <!-- first row header links -->
@@ -130,7 +96,7 @@ New menu pending CSS fix:
     </div>
   </div>
 
-  <!-- header menus -->
+  <!-- header menus (?!) -->
   <div id="header">
   </div>
 
@@ -138,9 +104,8 @@ New menu pending CSS fix:
   <div id="topSeparator"> </div>
 
   <!-- main content div -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
   <div id="mainContent">
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
   <!--
   <header id="banner" class="body">
     <nav>
@@ -163,6 +128,8 @@ New menu pending CSS fix:
   </header>
   -->
   <!-- /#banner -->
+
+<!-- YUI responsive columns -->
 <div class='yui3-g-r'>
   <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
   {% block content %}
@@ -206,8 +173,8 @@ New menu pending CSS fix:
   {% endif %}
 </div>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
   </div> <!-- #mainContent -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
   <div id="footer">
     <table border="0" align="right"><tbody><tr>

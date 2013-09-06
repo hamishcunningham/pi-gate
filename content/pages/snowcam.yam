@@ -1,0 +1,91 @@
+SnowCam -- a Camera in a Lunchbox
+
+_Off-radar Pi cameras_
+%meta(summary=Off-radar Pi cameras)
+
+_%(about.html#hamish, Hamish Cunningham)), September 2013_
+
+%contents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Introduction
+
+Here it is: a 5 mega-pixel still picture and HD video camera for less than
+what I spend on coffee in a bad week.
+
+%image(images/cam-01.jpg, The Pi camera module, 400, 300)
+
+The camera comes attached to a thin ribbon cable about 15 centimetres long and
+hooks up directly onto the Pi circuit board. And you can program it! You can
+tweak it! You can rip the front off, slice off the filter and get it to work
+on infra-red%footnote(Getting the camera to work for infra-red:
+http://hackaday.com/2013/05/27/adding-night-vision-to-the-raspberry-pi-camera/\,
+http://www.raspberrypi.org/archives/4088\,
+http://www.imaging-resource.com/news/2013/06/06/under-the-microscope-raspberry-pi-camera-dissected-given-infrared-vision)!
+
+You can also, of course, stick it inside a small cuddly animal and send it
+into the stratosphere %(http://www.bbc.co.uk/news/technology-23840596, hanging
+from a balloon):
+
+%image(images/babbage.jpg, Babbage bear preparing to fly, 375, 500)
+
+But you knew that, I'm sure.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 A Modern Hero: Edward Snowden
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Building It
+
+How do you build a statue of an elephant? First take one large grey block of
+stone:
+
+%image(images/stone.jpg, A large grey block of stone, 400)
+
+Then carefully chip away all the bits that don't look like an elephant. (I
+didn't study art, by the way -- I'm entirely self-taught!)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Connect the Camera
+
+The first step is to install the camera. There's a handy video here --
+%(http://www.raspberrypi.org/camera, raspberrypi.org/camera) -- but the main
+things to remember are:
+
+- the camera is vulnerable to static -- if your hair is in the habit of
+  standing on end when you walk across the carpet then you might want to hug a
+  radiator or a lightening conductor or the like before starting (or go all
+  professional on us and use an earth strap)
+- the camera slots into S5, the long connector sitting between the HDMI socket
+  and the ethernet socket (or the space for it, on the Model A)
+- before inserting the cable you need to a) unpeel the small piece of
+  protective on the top, and b) gently ease up the restraining clip on the top
+- the blue face of the ribbon cable faces the ethernet connector
+- when the cable is well seated and straight in the slot of the connector,
+  ease the restraining clip down again
+
+Hey presto.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Prepare the Pi
+
+Fire up your Pi and, if you haven't done it recently, update your list of
+software packages.
+
+%code(lang=bash)< sudo apt-get update
+sudo apt-get upggrade %>
+
+
+- enable the camera
+- install the pi-cam software
+- install motion
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 In the Wild
+
