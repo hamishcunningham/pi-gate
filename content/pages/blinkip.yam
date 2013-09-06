@@ -121,13 +121,25 @@ and passphrase.
 
 The solution is to take the SD card to another machine, mount the filesystem
 and add the network details to the file
-^/etc/wpa\_supplicant/wpa\_supplicant.conf^. The simple cases look like this:
+^/etc/wpa\_supplicant/wpa\_supplicant.conf^. The simple cases look like this
+(for WPA):
 
 %code(lang=Bash)<
 network={
   ssid="MyWifi"
   psk="1133557799"
   key_mgmt=WPA-PSK
+}
+%>
+
+...or this (for WEP):
+
+%code(lang=Bash)<
+network={
+  ssid="MyOtherWifi"
+  key_mgmt=NONE
+  auth_alg=OPEN
+  wep_key0=2244668800
 }
 %>
 

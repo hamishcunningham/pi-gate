@@ -40,9 +40,10 @@ But you knew that, I'm sure.
 %1 Building It
 
 How do you build a statue of an elephant? First take one large grey block of
-stone:
+stone%footnote(Though perhaps not _this_ one, which some people are quite fond
+of. It used to belong to someone called Rosetta, apparently.):
 
-%image(images/stone.jpg, A large grey block of stone, 400)
+%image(images/rosetta.jpg, A large grey block of stone, 343, 250)
 
 Then carefully chip away all the bits that don't look like an elephant. (I
 didn't study art, by the way -- I'm entirely self-taught!)
@@ -74,16 +75,23 @@ Hey presto.
 %2 Prepare the Pi
 
 Fire up your Pi and, if you haven't done it recently, update your list of
-software packages.
+software packages, upgrade any that have new versions available, and reboot:
 
-%code(lang=bash)< sudo apt-get update
-sudo apt-get upggrade %>
+%code(lang=bash)<
+  sudo apt-get update
+  sudo apt-get upggrade
+%>
 
+TODO install pi-cam and motion
 
-- enable the camera
-- install the pi-cam software
-- install motion
+Now enable the camera module using the ^raspi-config^ programme and reboot.
 
+%code(lang=bash)<
+  raspi-config
+  sudo shutdown -r now
+%>
+
+Our Pi is prepared.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
