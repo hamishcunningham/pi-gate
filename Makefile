@@ -102,7 +102,7 @@ gateupload: fix-rss-feeds minify
           --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
 s3upload: fix-rss-feeds minify
 	s3cmd sync -r output/ --exclude '.htaccess' --exclude='.htpasswd' \
-          --delete-removed s3://pi-gate/
+          --delete-removed s3://pi.gate.ac.uk/
 
 # for each .yam in content/ fix missing image sizes in the .html and do diff
 fix-image-sizes:
