@@ -40,6 +40,7 @@ help:
 	@echo '  to the list STANDARD_PAGES in the Makefile                  '
 	@echo '- to upload, do "GE1_USER=my-account-name make gateupload"    '
 	@echo '- to upload draft, do "EC2_PEM=my-id.pem make ec2upload"      '
+	@echo '- to upload to S3, do "make s3upload"                         '
 	@echo '- to create post, do "SLUG=my-slug make post"                 '
 	@echo '                                                              '
 	@echo 'More details of targets (or see README.html):                 '
@@ -52,6 +53,7 @@ help:
 	@echo '   stopserver            stop local server                    '
 	@echo '   ec2upload             upload the web site via rsync+ssh    '
 	@echo '   gateupload            upload the web site via rsync+ssh    '
+	@echo '   s3upload              upload the web site to S3 via s3cmd  '
 	@echo '                                                              '
 	@echo '   prepare               regenerate the sources               '
 	@echo '   finalise              fixup the generated output           '
@@ -98,6 +100,9 @@ gateupload: fix-rss-feeds minify
 	rsync -e "ssh -p $(SSH_PORT)" -hP -rvz --delete --delete-excluded \
           $(OUTPUTDIR)/ $${GE1_USER}@gate.ac.uk:/data/herd/pi.gate.ac.uk/html \
           --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
+s3upload: fix-rss-feeds minify
+	s3cmd sync -r output/ --exclude '.htaccess' --exclude='.htpasswd' \
+          --delete-removed s3://pi-gate/
 
 # for each .yam in content/ fix missing image sizes in the .html and do diff
 fix-image-sizes:
@@ -167,6 +172,7 @@ finalise:
             $${f} >$${f}-contents; \
           sed "/__CONTENTS__/ r $${f}-contents" $${f} >$${f}-$$$$; \
           mv $${f}-$$$$ $${f}; \
+          rm -f $${f}-contents; \
         done
 	# copy bare drafts as they are
 	@for f in $(DRAFT_PAGES); do \
