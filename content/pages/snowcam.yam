@@ -95,5 +95,21 @@ Our Pi is prepared.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Connecting (and Modifying) the Screen
+
+http://www.raspberrypi.org/phpBB3/viewtopic.php?t=17651
+
+%code(lang=bash)<
+framebuffer_width=320   # the device resolution is 640x480;
+framebuffer_height=240  #   half of that provides good readability
+disable_overscan=0
+overscan_left=-20
+overscan_right=-20
+overscan_top=-20
+overscan_bottom=-20
+%>
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 In the Wild
 
