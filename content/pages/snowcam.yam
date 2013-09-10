@@ -113,12 +113,12 @@ overscan_bottom=-20
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 Wire up the Switches
+%2 Wire up the Header Pins
 
 %[
 | *Jumper cable*| *Function*    | *Pin Number*  | *Role*                |
 ---
-| red           | 5v            |  2            | screen power          |
+| red           | 5v out        |  2            | screen power          |
 ---
 | green         | GPIO 0        | 11            | still / video switch  |
 ---
@@ -128,9 +128,13 @@ overscan_bottom=-20
 ---
 | black         | 0v            | 20            | ground                |
 ---
-| grey          | (unused)      |               |                       |
+| grey          | (unused)      | %\ -          | %\ -                  |
 ---
-| white         | (unused)      |               |                       |
+| white         | (unused)      | %\ -          | %\ -                  |
+---
+| orange        | 5v in         |  4            | power from battery    |
+---
+| yellow        | 0v            |  6            | power from battery    |
 %]
 
 
