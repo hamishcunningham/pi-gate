@@ -91,23 +91,24 @@ git clone git@github.com:hamishcunningham/pi-tronics.git
 </pre></p><!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>New posts, new pages</h1>
 
-<p>The easy way to <b>make a new post</b> is to choose a title (e.g.
+<p>The easy way to <b>make a new post</b> is to choose a slug (e.g.
 &quot;martians-landing&quot;) and do</p>
 
-<p><pre class="prettyprint lang-bash"> TITLE=martians-landing make post </pre>Then follow the instructions. The longer story is that new posts should be in
-the form content/YYYY-MM-DD-the-title.html (you can use GATEwiki syntax &mdash;
+<p><pre class="prettyprint lang-bash"> SLUG=martians-landing make post </pre>You can make a new <b>draft post</b> like this:</p>
+
+<p><pre class="prettyprint lang-bash"> SLUG=martians-landing make draft </pre>Then follow the instructions. The longer story is that new posts should be in
+the form content/YYYY-MM-DD-the-slug.html (you can use GATEwiki syntax &mdash;
 .yam &mdash; or markdown or other Pelican-friendly formats if you like). For each
 new post also add </p>
 
 <ul>
-<li>content/images/articles/the-title.jpg &mdash; a characteristic image for the post</li>
-<li>content/images/articles/thumbs/the-title.jpg &mdash; a 75x75 thumbnail of the
+<li>content/images/articles/the-slug.jpg &mdash; a characteristic image for the post</li>
+<li>content/images/articles/thumbs/the-slug.jpg &mdash; a 75x75 thumbnail of the
   image</li>
 </ul>
 
 <p>Tip: you can generate the latter from the former with:
-<pre class="prettyprint lang-bash"> convert -thumbnail 75 the-title.jpg thumbs/the-title.jpg </pre>TODO is this unnesc now, at least for &quot;normal&quot; pages?
-<b>To add a new page</b> (as opposed to a new post) add to the STANDARD<span class="cow-escape">_</span>PAGES list
+<pre class="prettyprint lang-bash"> convert -thumbnail 75 the-slug.jpg thumbs/the-slug.jpg </pre><b>To add a new page</b> (as opposed to a new post) add to the STANDARD<span class="cow-escape">_</span>PAGES list
 in the Makefile (or the NO<span class="cow-escape">_</span>META<span class="cow-escape">_</span>PAGES if you want to avoid insertion of
 metadata in the new page, probably because it is a bare HTML with meta tags
 already present).</p>

@@ -42,22 +42,26 @@ git clone git@github.com:hamishcunningham/pi-tronics.git
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 New posts, new pages
 
-The easy way to *make a new post* is to choose a title (e.g.
+The easy way to *make a new post* is to choose a slug (e.g.
 "martians-landing") and do
 
-%code(lang=Bash)< TITLE=martians-landing make post %>
+%code(lang=Bash)< SLUG=martians-landing make post %>
+
+You can make a new *draft post* like this:
+
+%code(lang=Bash)< SLUG=martians-landing make draft %>
 
 Then follow the instructions. The longer story is that new posts should be in
-the form content/YYYY-MM-DD-the-title.html (you can use GATEwiki syntax --
+the form content/YYYY-MM-DD-the-slug.html (you can use GATEwiki syntax --
 .yam -- or markdown or other Pelican-friendly formats if you like). For each
 new post also add 
 
-- content/images/articles/the-title.jpg -- a characteristic image for the post
-- content/images/articles/thumbs/the-title.jpg -- a 75x75 thumbnail of the
+- content/images/articles/the-slug.jpg -- a characteristic image for the post
+- content/images/articles/thumbs/the-slug.jpg -- a 75x75 thumbnail of the
   image
 
 Tip: you can generate the latter from the former with:
-%code(lang=Bash)< convert -thumbnail 75 the-title.jpg thumbs/the-title.jpg %>
+%code(lang=Bash)< convert -thumbnail 75 the-slug.jpg thumbs/the-slug.jpg %>
 
 *To add a new page* (as opposed to a new post) add to the STANDARD\_PAGES list
 in the Makefile (or the NO\_META\_PAGES if you want to avoid insertion of
