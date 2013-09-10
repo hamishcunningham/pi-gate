@@ -246,26 +246,27 @@ yam-clean:
 post:
 	@[ -z "$${SLUG}" ] && { echo 'set SLUG to something!'; exit 1; } || :; \
 	[ -z "$${POSTFILE}" ] && POSTFILE=`date "+%Y-%m-%d"`-$${SLUG}.yam; \
-          [ -f $(INPUTDIR)/$${POSTFILE} ] || \
-            echo "A post about $${SLUG}..." > $(INPUTDIR)/$${POSTFILE}; \
-          echo "created $(INPUTDIR)/$${POSTFILE}"; \
-          git add -v $(INPUTDIR)/$${POSTFILE}; \
-          cd $(INPUTDIR)/images/articles >/dev/null && \
-          cp -n default.jpg $${SLUG}.jpg && cd thumbs >/dev/null && \
-          cp -n default.jpg $${SLUG}.jpg && cd .. && \
-          git add -v $${SLUG}.jpg thumbs/$${SLUG}.jpg && \
-          echo "now supply better versions of "\
-          "$${SLUG}.jpg and thumbs/$${SLUG}.jpg in $(INPUTDIR)/images/articles"
+        OUT=$(INPUTDIR)/$${POSTFILE}; \
+        [ -f $${OUT} ] || echo "A post about $${SLUG}..." > $${OUT}; \
+        echo >>$${OUT}; \
+        echo "created $${OUT}"; \
+        git add -v $${OUT}; \
+        cd $(INPUTDIR)/images/articles >/dev/null && \
+        cp -n default.jpg $${SLUG}.jpg && cd thumbs >/dev/null && \
+        cp -n default.jpg $${SLUG}.jpg && cd .. && \
+        git add -v $${SLUG}.jpg thumbs/$${SLUG}.jpg; \
+	echo '%meta(summary=TODO,tags=TODO)' >>$${OUT}; \
+        echo "TODO: supply better versions of $${SLUG}.jpg and " \
+          "thumbs/$${SLUG}.jpg in $(INPUTDIR)/images/articles" >>$${OUT}; \
+        echo; cat $${OUT}; echo
 draft:
-	POSTFILE=$${SLUG}.yam; export POSTFILE; \
+	@POSTFILE=$${SLUG}.yam; export POSTFILE; \
         $(MAKE) --no-print-directory post || exit 1; \
         OUT=$(INPUTDIR)/$${POSTFILE}; \
         echo >>$${OUT}; \
 	echo '%meta(status=draft,summary=TODO,tags=TODO)' >>$${OUT}; \
 	PUBNAME=`date "+%Y-%m-%d"`-$${SLUG}.yam; \
 	echo 'TODO: remove draft status & rename to '$$PUBNAME >>$${OUT}; \
-        echo "TODO: supply better versions of $${SLUG}.jpg and " \
-          "thumbs/$${SLUG}.jpg in $(INPUTDIR)/images/articles" >>$${OUT}; \
 	echo created draft in $${OUT}
 
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post
