@@ -82,7 +82,9 @@ software packages, upgrade any that have new versions available, and reboot:
   sudo apt-get upggrade
 %>
 
-TODO install pi-cam and motion
+TODO
+- install and configure pagekite
+- install pi-cam and apache
 
 Now enable the camera module using the ^raspi-config^ programme and reboot.
 
