@@ -68,6 +68,7 @@ help:
 	@echo '   fix-rss-feeds         absolutise the URLs in the RSS feeds '
 	@echo '                                                              '
 	@echo '   post                  create files for a new post          '
+	@echo '   draft                 create files for a new draft post    '
 	@echo '                                                              '
 
 html: clean prepare $(OUTPUTDIR)/index.html \
@@ -243,8 +244,8 @@ yam-clean:
 
 # post; assume SLUG has the title/slug...
 post:
-	@[ -z "$${SLUG}" ] && { echo 'set SLUG to something!'; exit 1; } || :
-	@POSTFILE=`date "+%Y-%m-%d"`-$${SLUG}.yam; \
+	@[ -z "$${SLUG}" ] && { echo 'set SLUG to something!'; exit 1; } || :; \
+	[ -z "$${POSTFILE}" ] && POSTFILE=`date "+%Y-%m-%d"`-$${SLUG}.yam; \
           [ -f $(INPUTDIR)/$${POSTFILE} ] || \
             echo "A post about $${SLUG}..." > $(INPUTDIR)/$${POSTFILE}; \
           echo "created $(INPUTDIR)/$${POSTFILE}"; \
@@ -255,6 +256,17 @@ post:
           git add -v $${SLUG}.jpg thumbs/$${SLUG}.jpg && \
           echo "now supply better versions of "\
           "$${SLUG}.jpg and thumbs/$${SLUG}.jpg in $(INPUTDIR)/images/articles"
+draft:
+	POSTFILE=$${SLUG}.yam; export POSTFILE; \
+        $(MAKE) --no-print-directory post || exit 1; \
+        OUT=$(INPUTDIR)/$${POSTFILE}; \
+        echo >>$${OUT}; \
+	echo '%meta(status=draft,summary=TODO,tags=TODO)' >>$${OUT}; \
+	PUBNAME=`date "+%Y-%m-%d"`-$${SLUG}.yam; \
+	echo 'TODO: remove draft status & rename to '$$PUBNAME >>$${OUT}; \
+        echo "TODO: supply better versions of $${SLUG}.jpg and " \
+          "thumbs/$${SLUG}.jpg in $(INPUTDIR)/images/articles" >>$${OUT}; \
+	echo created draft in $${OUT}
 
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post
-.PHONY: fix-rss-feeds
+.PHONY: draft fix-rss-feeds

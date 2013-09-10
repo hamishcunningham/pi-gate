@@ -37,7 +37,7 @@ $DBG doing summut on $TODAY
 extract-metadata() {
   INFILE=$1
 
-  unset AUTHOR CATEGORY PUBDATE SLUG SUMMARY TAGS
+  unset AUTHOR CATEGORY PUBDATE SLUG STATUS SUMMARY TAGS
   OIFS="${IFS}"
   IFS='
 '
@@ -56,12 +56,13 @@ extract-metadata() {
       category) CATEGORY="$*" ;;
       pubdate)  PUBDATE="$*" ;;
       slug)     SLUG="$*" ;;
+      status)   STATUS="$*" ;;
       summary)  SUMMARY="$*" ;;
       tags)     TAGS="$*" ;;
     esac
   done
   IFS="${OIFS}"
-  $DBG metadata for $INFILE is: AUTHOR=$AUTHOR, CATEGORY=$CATEGORY, PUBDATE=$PUBDATE, SLUG=$SLUG, SUMMARY=$SUMMARY, TAGS=$TAGS
+  $DBG metadata for $INFILE is: AUTHOR=$AUTHOR, CATEGORY=$CATEGORY, PUBDATE=$PUBDATE, SLUG=$SLUG, STATUS=$STATUS, SUMMARY=$SUMMARY, TAGS=$TAGS
 }
 
 # function to update the metatags in a set of .htmls, fix relative links, etc.
@@ -71,7 +72,7 @@ replace-meta-tags-etc() {
     echo enpelicanisating ${f} ...
 
     # allow over-riding of METAs from the file itself
-    unset AUTHOR CATEGORY PUBDATE SLUG SUMMARY TAGS
+    unset AUTHOR CATEGORY PUBDATE SLUG STATUS SUMMARY TAGS
     extract-metadata ${f}
 
     # default the metadata if not supplied
@@ -80,12 +81,14 @@ replace-meta-tags-etc() {
     [ -z "$SLUG" ]     && SLUG=`basename ${f} |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
     [ -z "$SUMMARY" ]  && SUMMARY=`grep -i '<title' ${f} |sed -e 's,<title>,,I' -e 's,</title>,,I'`
     [ -z "$TAGS" ]     && TAGS="pi,raspberrypi,raspi,gate"
+    [ ! -z "$STATUS" ] && STATUS_MARKUP="<meta name=\"status\" contents=\"${STATUS}\" />"
 #TODO build assoc array of tags and allow default set as previous line
 
     # the base text to add into the header
     METAS="<meta name=\"author\" contents=\"${AUTHOR}\" />\n\
 <meta name=\"category\" contents=\"${CATEGORY}\" />\n\
 <meta name=\"slug\" contents=\"${SLUG}\" />\n\
+${STATUS_MARKUP}\n\
 <meta name=\"summary\" contents=\"${SUMMARY}\" />\n\
 <meta name=\"tags\" contents=\"${TAGS}\" />"
 
