@@ -83,7 +83,7 @@ software packages, upgrade any that have new versions available, and reboot:
 
 TODO
 - install and configure pagekite
-- install pi-cam and apache
+- install pi-cam (will pull in imagemagick etc.) and apache
 
 Now enable the camera module using the ^raspi-config^ programme and reboot.
 
