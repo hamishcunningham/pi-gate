@@ -262,8 +262,10 @@ this:
 
 %%% %image(images/flood-alarm-twisted-wires.jpg, installation: wires, 500)
 %image(images/flood-alarm-twisted-wires-2.jpg, installation: wires 2, 500, 375)
+
 %image(images/flood-alarm-twisted-wires-3.jpg, installation: wires 3, 500, 330)
 %%% %image(images/flood-alarm-twisted-wires-4.jpg, installation: wires 4, 500)
+
 %image(images/flood-alarm-twisted-wires-5.jpg, installation: wires 5, 500, 384)
 
 This arrangement created a level of
