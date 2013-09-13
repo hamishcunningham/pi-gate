@@ -138,6 +138,32 @@ overscan_bottom=-20
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Devil Worship for Photographers
+
+- from fred re. thumbnails:
+  - Usually an image is resized using just the -geometry option:
+    - convert in.jpg -geometry 25% out.jpg
+  - This results in a very nice resize but it's fairly CPU intensive. It takes
+    about 145 ms on my desktop. The command uses some sort of clever maths
+    which I'm not going to bother finding the details of, but sufficed to say
+    it's not a simple interpolation scheme, but some sort of matrix
+    transformation. It is possible to tell convert to use a simple
+    interpolation scheme to resize though:
+    - convert in.jpg -interpolate integer -interpolative-resize 25% out.jpg
+  - This tells it to use the pixel nearest the interpolated coordinate
+    according to floor() rounding. It takes about 47 ms on my desktop, but
+    visually the image quality is a bit worse - there are signs of aliasing
+    etc. The only simple interpolation scheme that doesn't have this is this
+    one:
+    - convert in.jpg -interpolate average16 -interpolative-resize 25% out.jpg
+  - This is as it sounds an are average of surrounding pixels. Still a
+    relatively straight forward operation though as it only takes around 80 ms
+    on my desktop. I think it's the best compromise. The timings of course
+    depend on the original image size, but they illustrate the differences. As
+    the scale size goes down, e.g. to 5%, the time to resize decreases.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 In the Wild
 
 While I was photographing the 001 incarnation, a small visitor passed by:
