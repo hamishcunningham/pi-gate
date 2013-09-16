@@ -1,10 +1,114 @@
 Open Culture Tech
 
-TODO 
+On wednesday of this week Sheffield's
+%(http://www.sheffield.ac.uk/ideasbazaar, Ideas Bazaar) will spring into
+action, mixing together a witch's brew of artists, scientists and engineers of
+all shapes, sizes, and personal hygene statuses. A select group of the Pi.GATE
+team (Bo, Fred and Hamish) have been bending their enormous collective
+intellect towards finding their way to that end of the campus without a
+satnav. If we make it, we'll let you know. (Want to join in? Hit the "contact"
+button above.)
 
-from the ideas bazaar posters doc
+In the meantime, here are some of our notes for the event:
+
+%image(images/pi-brush-snap.jpg, Pi Brush snapshot)
+
+There is a new conjunction emerging around open hardware, maker culture, and
+art. Parallels exist with the explosive change in pop culture pressaged by
+punk in the late 1970s: from the Homebrew Computer Club trading circuits and
+information; from Iain M. Banks' legacy of utopian technofutures, blending
+electro-augmented humanity with benevolent AI; from the wearable electronics
+kits (e.g. from %(http://adafruit.com/, Adafruit.com) -- echoing Lady Ada
+Lovelace, inventor of the computer algorithm); to the latest rounds of
+sampling and remix.
+
+%(http://en.wikipedia.org/wiki/List_of_open-source_hardware_projects,
+Open-source hardware) allows people to make their own robots, cameras,
+electrocardiagraph machines and even full computers by downloading schematics
+and building -- incorporating any changes they need -- and, typically, free
+open-source software is available to run these projects. 3D printers have
+helped this adoption of the open-everything ethos.
+
+As this site and many others testify, there are stacks of DIY projects based
+on the Raspberry Pi, and the flood showns no sign of slowing. The Pi is a
+small cheap computer which is very easy to cobble together with other devices.
+It has a large community behind it and is one of the drivers behind proposed
+changes in the %(pages/schools.html, schools ICT curriculum).
+
+As part of a trend to open hardware and maker culture the Pi is also a vehicle
+for localist responses to climate change and peak oil: the more we manufacture
+locally the more secure we are (the Pi is made in Wales); the less energy we
+use the less carbon we pump into the atmosphere (the Pi is low power).
+
+*_Future Making_* will be a rolling event over two days with around a dozen
+exhibits plus an hourly short stage show. The target audience is anyone
+curious, with secondary schools invited to attend if the timing of the event
+permits.  The performers are expected to be engineers, musicians, social
+scientists, dancers, hackers and visual artists.
+
+Some more of the gorey details (from
+%(https://github.com/hamishcunningham/pi-tronics/, our GitHub repository)):
+
+- %(https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/open-culture-tech-small.pdf?raw=true,
+  Open Culture Tech): entering the age of open electronics
+- %(https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/schools.pdf?raw=true,
+  Open Schools Tech): programming is back on the curriculum!
+- %(https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/pi-brush-code.pdf?raw=true,
+  Pi Brush), perfect project for the digital Jackson Pollock
+- %(https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/snowcam.pdf?raw=true,
+  SnowCam), a programmable spook-free camera
+
+And to whet your appetite, a random selection of the artbites:
+
+Google gave $1m to fund Pi hardware for schools. Eben Upton (of the Pi
+foundation) is the Chesire Cat impersonator here:
+
+%image(images/google-donation-350x237.jpg, Google schools donation.jpg, 350,
+237)
+
+That's all very well, but "At Boots science is for boys and pink pricess toys
+are for girls";
+%(http://minigirlgeek.wordpress.com/, Amy Mather) (14-year-old Pi hacker) at
+%(http://wutheringbytes.com/, Wuthering Bytes), September 14th 2013.
+
+%image(images/amymather-300x300.jpg, Amy Mather, 300, 300)
+
+What to do? Commission J.K. Rowling to write The Adventures of Princess Pi?
+Seek venture capital for Pink Electronics Ltd.? Or order a large consignment
+of Barbie the programmer dolls?
+
+%image(images/barbie-374x500.jpg, Barbie the programmer, 374, 500)
+
+(from the %(http://www.wisecampaign.org.uk/, WISE)
+%(http://www.wisecampaign.org.uk/blogs/getset-women/2010/05/barbie, blog)).
+
+Perhaps games with a porpoise would interest girls? (Sorry.)
+
+%image(images/games-with-a-porpoise-350x228.png, Games with a porpoise, 350, 228)
+
+Enough frivolity. Amy also said we need:
+
+- better role models
+- better opportunities
+- no discrimination (%(http://www.equalpayportal.co.uk/, equal pay for equal
+  work)!)
+
+Some organisations working in this direction (click through for more):
+
+%(http://www.stemnet.org.uk/,
+%image(images/stemnet-339x115.gif, StemNet, 339, 115))
+
+%(https://www.codeclub.org.uk/,
+%image(images/code-club-150x150.svg, Code Club, 150, 150))
+
+There are more; please %(https://gate.ac.uk/g8/contact, ping us) to add to
+this list!
 
 %meta(
+  status=draft, %%% TODO
   summary=Future making: entering the age of open electronics,
-  tags=schools\,maker culture\,open hardware\,open culture\,pi-tronics\,pi\,raspberrypi\,gate\,ideas bazaar
+  tags=schools\,maker culture\,open hardware\,open
+    culture\,pi-tronics\,pi\,raspberrypi\,gate\,ideas bazaar,
+  author=Hamish Cunningham\, Fred Sonnenwald\, Bo Meson
 )
+
