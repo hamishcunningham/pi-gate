@@ -126,6 +126,10 @@ overscan_bottom=-20
 | purple        | GPIO 3        | 15            | power switch          |
 ---
 | black         | 0v            | 20            | ground                |
+%]
+
+%/* UNUSED
+%[
 ---
 | grey          | (unused)      | %\ -          | %\ -                  |
 ---
@@ -135,6 +139,7 @@ overscan_bottom=-20
 ---
 | yellow        | 0v            |  6            | power from battery    |
 %]
+%*/
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
