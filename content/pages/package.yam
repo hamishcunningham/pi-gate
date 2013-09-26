@@ -1,0 +1,53 @@
+Packaging Software for the Pi
+
+_Packaging and distributing software for the Pi_
+%meta(status=draft, summary=Packaging and distributing software for the Pi)
+
+_%(about.html#hamish, Hamish Cunningham), September 2013_
+
+%contents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Introduction: the Good Old Days
+
+Twenty-odd years ago I worked for a company building accounting and stock
+control systems for manufacturing businesses. I started as a general gopher,
+tea-maker and minor bug fixer on big old behemoths written in a language
+called COBOL -- which some people claimed was a "common business-oriented
+language" but I was sure stood for "computer operators are boring and
+obviously lobotomised". Customers would phone up and say "we've got a new
+invoice format, can you change the report printer to fit?", and I would spend
+a day or two hunched over a stack of continuous paper (the type with
+%br %(http://en.wikipedia.org/wiki/File:Bound_computer_printout.agr.jpg,
+%image(images/continuous-paper.jpg, Old-style printer paper, 408, 599)) %br
+perforated edges) with a special measuring ruler figuring out how many spaces
+to leave between the date and the address, and the like.
+
+The low point of this phase was four days of my life spent chasing a rounding
+error in an invoicing program that resulted in a 2 pence error on a £10,000
+invoice. I told the boss that I was happy to pay them the 2 pence every time
+it happenned if only I could stop leafing through that 100-page COBOL
+monstrosity%(The program is engraved on my soul -- it was called SOP-1, for
+Sales Order Processing, and it had grown and grown far beyond the ability of a
+neophyte like myself to ever understand. Trial and error was my only weapon.),
+but he didn't think that was a great customer relations strategy.
+
+The company was starting to move into Unix-based delivery platforms (System V
+was the new thing back then; and a whole business would run on a tiny
+mini-computer!). I was lucky enough to get my hands dirty with the new tech
+and learnt an awful lot in short space of time. It is a testament to the power
+and success of the Unix paradigm that I'm still using many of these skills
+today -- C programming, shell scripting, systems administration and the like.
+
+One of my tasks at the time was to package and distribute versions of our
+systems to customer machines. I used a program called UUCP (Unix-to Unix copy)
+over dial-up modem links to push new updates onto machines out on site (and,
+cheekily, used to get the customer machine to phone us back so that the
+lengthy upload process would happen on their phone bill, not ours!). Things
+are a little simpler now: someone invented a thing called the
+Internet...%footnote(The Internet, of course, mostly runs on Unix-based
+operating systems, as does your Pi, Android phones, and Mac computers.)
+
+The job of packaging and distribution continues to be important, though, and
+below I'll describe the mechanisms used for the Raspberry Pi's _Raspbian_
+operating system.
