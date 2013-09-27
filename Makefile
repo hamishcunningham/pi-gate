@@ -258,6 +258,7 @@ post:
 	echo '%meta(summary=TODO,tags=TODO)' >>$${OUT}; \
         echo "TODO: supply better versions of $${SLUG}.jpg and " \
           "thumbs/$${SLUG}.jpg in $(INPUTDIR)/images/articles" >>$${OUT}; \
+	echo '*%(pages/TODO.html, Read the main article).*' >>$${OUT}; \
         echo; cat $${OUT}; echo
 draft:
 	@POSTFILE=$${SLUG}.yam; export POSTFILE; \

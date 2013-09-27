@@ -1,0 +1,19 @@
+Devil Worship for Beginners
+
+_Writing and packaging daemon software for the Pi_
+
+%meta(status=draft,summary=Writing and packaging daemon software for the Pi,tags=TODO)
+
+Regular readers (hello Mum!) will know that the summer of 2013 involved lots
+of encounters with _daemons_ -- not in the _Buffy the Vampire Slayer_ type of
+way, but 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*Read the main articles:*
+*%(pages/package.html, on packaging)*;
+*%(pages/mopi.html, on the battery monitor) daemon*;
+*%(pages/blinkip.html, on the "blink my IP") daemon*.
+
+%%% daemon image from http://www.digitaldaemon.com/Daemon_Images.html) but is
+%%% originally from free bsd?
