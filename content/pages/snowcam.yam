@@ -1,7 +1,7 @@
-SnowCam -- a Camera in a Lunchbox
+PiCam -- a Camera in a Lunchbox
 
-_Off-radar Pi cameras_
-%meta(summary=Off-radar Pi cameras)
+_A programmable camera and web server_
+%meta(summary=A programmable camera and web server)
 
 _%(about.html#hamish, Hamish Cunningham)), September 2013_
 
@@ -144,6 +144,8 @@ overscan_bottom=-20
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Devil Worship for Photographers
+
+prob just reference %(package.html, packaging)
 
 - from fred re. thumbnails:
   - Usually an image is resized using just the -geometry option:
