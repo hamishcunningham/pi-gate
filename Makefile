@@ -14,13 +14,6 @@ SSH_PORT=22
 SSH_USER=ubuntu
 SSH_TARGET_DIR=/var/www
 
-# list of pages etc. ########################################################
-STANDARD_PAGES=\
-about.html basics.html schools.html notipi.html legocases.html hardware.html \
-mopi.html blinkip.html snowcam.html package.html pibrush.html
-NO_META_PAGES=piroomba.html
-DRAFT_PAGES=
-
 # other vars ################################################################
 GROOVY=groovy
 JAVA=java
@@ -70,6 +63,9 @@ help:
 	@echo '   post                  create files for a new post          '
 	@echo '   draft                 create files for a new draft post    '
 	@echo '                                                              '
+
+# local stuff
+include Makefile.local
 
 html: clean prepare $(OUTPUTDIR)/index.html \
         finalise google-site-verify robots favicon
@@ -157,7 +153,7 @@ prepare:
         done
 
 # finalise the output directory
-finalise:
+finalise: local-finalise
 	# to workaround pelican bug with anchors in relative pathnames we do
 	# a final fixup over the generated htmls in the output directory
 	@for f in `find $(OUTPUTDIR) -name '*.html'`; do \

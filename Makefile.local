@@ -1,0 +1,16 @@
+# Makefile.local
+
+# list of pages etc. ########################################################
+STANDARD_PAGES=\
+about.html basics.html schools.html notipi.html legocases.html hardware.html \
+mopi.html blinkip.html snowcam.html package.html pibrush.html
+NO_META_PAGES=piroomba.html
+DRAFT_PAGES=
+
+# mangle the outreach day post ##############################################
+local-finalise:
+	TMPF=/tmp/pi-gate-$$$$; \
+       	echo '<p align="center"> <iframe width="480" height="360" src="//www.youtube.com/embed/N_Cj2TtFd_E" frameborder="0" allowfullscreen></iframe> </p>'  >$${TMPF}; \
+        sed -i "/YOUTUBE BLUE PETER CLIP HERE/ r $${TMPF}" \
+          `find output -name '*.html'`; \
+        rm $${TMPF}
