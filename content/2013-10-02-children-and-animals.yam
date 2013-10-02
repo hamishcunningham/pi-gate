@@ -5,23 +5,28 @@ summary=University of Sheffield Computer Science Ambassadors,
 tags=schools\,education\,pi\,raspberrypi\,gate)
 
 We've got 50 of them coming in -- children, that is, not animals, and
-hopefully we'll be able to tell the difference relatively easily. As part of
-the scheme everyone gets a Raspberry Pi to take home, and we're throwing in a
-few bits and pieces of electronics to get the experimenters' ball rolling.
-
-OCR recipes
-
-jelly babies
-
-
-The scheme is an opportunity for girls and boys who have an interest in
-computing to get a feel for subjects ranging from computer games and graphics
-to programming hardware, from large scale everyday uses in mobile apps and
-social media to highly specialised applications from small research teams.
-
-
-TODO
+hopefully we'll be able to tell the difference relatively easily. The scheme
+is an opportunity for girls and boys who have an interest in computing to get
+a feel for subjects ranging from computer games and graphics to programming
+hardware, from large scale everyday uses in mobile apps and social media to
+highly specialised applications from small research teams.
 
 %%% YOUTUBE BLUE PETER CLIP HERE
+
+As part of the scheme everyone gets a Raspberry Pi to take home, and we're
+throwing in a few bits and pieces of electronics to get the experimenters'
+ball rolling. One of %(pages/basics.html#interaction-electronics, the beauties
+of the Pi) is how easy it is to connect up a few cheap components and jump
+into the realm of physical computing. Using a couple of Raspberry Pi
+%(http://www.ocr.org.uk/qualifications/by-subject/computing/raspberry-pi/,
+recipe cards from OCR) we'll do two taster projects:
+
+- traffic lights: cycling red, amber and green LEDs
+- jelly baby siren: turning a squidgy sweet into a siren switch
+
+Any student caught eating their jelly baby before wiring it up to the Pi will
+be made to stay behind and clean out the stables.
+
+And no elephants on site. At all. Or I'm going home.
 
 *%(pages/schools.html, Read the main article).*
