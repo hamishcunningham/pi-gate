@@ -36,8 +36,8 @@ And no elephants on site. At all. Or I'm going home.
 
 The day went well :-)
 
-%image(outreach-day-1.jpg)
-%image(outreach-day-2.jpg)
+%image(images/outreach-day-1.jpg, Pi-oneers in the quad, 500)
+%%% TODO better pic
 
 %(http://www.cl.cam.ac.uk/~am21/, Alan Mycroft) from the
 %(http://raspberrypi.org, Raspberry Pi foundation) gave a lively talk
@@ -52,11 +52,11 @@ Here's %(http://staffwww.dcs.shef.ac.uk/people/S.Wrigley/, Stuart Wrigley)
 demonstrating his Pi-in-a-quadcopter system for sensing river water levels
 during flood events:
 
-%image(outreach-day-3.jpg)
+%image(images/outreach-day-2.jpg, quadcopter demo, 500)
 
 (Spot the authors looking gormless!)
 
-
+%image(images/outreach-day-3.jpg, quadcopter detail, 500)
 
 
 -----------------------------------------------------------------------------
