@@ -30,6 +30,35 @@ be made to stay behind and clean out the stables.
 
 And no elephants on site. At all. Or I'm going home.
 
+
+-----------------------------------------------------------------------------
+%1* Postscript
+
+The day went well :-)
+
+%image(outreach-day-1.jpg)
+%image(outreach-day-2.jpg)
+
+%(http://www.cl.cam.ac.uk/~am21/, Alan Mycroft) from the
+%(http://raspberrypi.org, Raspberry Pi foundation) gave a lively talk
+introducing fundamentals of computing and helped out with our lab sessions.
+(And ate several jelly babies, though none of the ones with paper clips
+stuffed in them, luckily.) All the materials are available in
+%(https://github.com/hamishcunningham/pi-tronics/tree/master/outreach,
+our Pi-Tronics repository) but they definitely need some revision -- the
+authors learned more than the students from the day.
+
+Here's %(http://staffwww.dcs.shef.ac.uk/people/S.Wrigley/, Stuart Wrigley)
+demonstrating his Pi-in-a-quadcopter system for sensing river water levels
+during flood events:
+
+%image(outreach-day-3.jpg)
+
+(Spot the authors looking gormless!)
+
+
+
+
 -----------------------------------------------------------------------------
 Hamish's spiel:
 %"
