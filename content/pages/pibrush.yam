@@ -1,7 +1,7 @@
 PiBrush -- Painting with the Pi and XLoBorg
 
-_An accelerometer, a couple of RasPis, and a paint brush_
-%meta(summary=An accelerometer\, a couple of RasPis\, and a paint brush)
+_Turning an accelerometer into a paint brush with Raspberry Pi_
+%meta(summary=Turning an accelerometer into a paint brush with Raspberry Pi)
 
 _%(about.html#fred, Fred Sonnenwald), September 2013_
 
@@ -13,6 +13,152 @@ _%(about.html#fred, Fred Sonnenwald), September 2013_
 %contents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#introduction
 %1 Introduction
 
-...
+Two weeks ago we participated in the %(http://www.sheffield.ac.uk/ideasbazaar,
+Ideas Bazaar) promoting "%(http://pi.gate.ac.uk/posts/2013/09/16/open-culture-tech/,
+Open Culter Tech)", which I've translated to myself as a promoting how we can
+take finer control of technology for ourselves using low-cost and open
+technologies. "The proof is in the pudding" though, and actually demonstrating
+the point is a much more powerful argument. To this end we prepared our exhibit
+to show off various gizmos and widgets, including those based around Raspberry
+Pis. My contribution has been the PiBrush.
+
+%image(images/pi-brush-snap.jpg, Pi Brush snapshot)
+
+The PiBrush is an interactive art and technology exhibit (a very grand name
+for something so small) that simulates flicking paint off the end of a
+paintbrush onto canvas, e.g. %(http://en.wikipedia.org/wiki/Jackson_Pollock,
+Jackson Pollock). It utilizes two Raspberry Pis (one Model B and oneModel A),
+a PiBorg %(http://piborg.org/xloborg/, XLoBorg) accelerometer, a battery pack,
+a display, and two Wi-Fi dongles. The Model A is held by the user and waved
+around. It collects acceleration data with the XLoBorg, which it then
+transmits via ad hoc Wi-Fi to the Model B, which proceeses the data collected
+into paint droplets and displays them on the screen, connected via HDMI.
+
+%image(images/pibrush/pibrush_architecture.png, Pi Brush snapshot)
+
+%[
+| %(images/pibrush/modelb.jpg, %image(images/pibrush/thumbs/modelb.jpg, Model B, 200, 150)) | %(images/pibrush/modela.jpg, %image(images/pibrush/thumbs/modela.jpg, Model A, 200, 150)) |
+%]
+
+Since the Bazaar, we've also added a physical reset button to save the current
+canvas and reset it to white.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#programming
+%1 Programming
+
+The hardware for this project is fairly straight forward. The XLoBorg plugs
+directly into the GPIO pins as a block, and a GPIO button is just a button
+connected between the ground and a GPIO pin - we've used BCM pin 17 or board
+pin 11. The software is where the challenge lies.
+
+I developed the code from scratch, and doing so required a variety of
+knowledge. While I'd rate it as intermediate to advanced code to write, I'm
+hoping to shed enough light on it here that it is only beginner to intermediate
+to understand. The only real requirements are some basic familiarity with the
+Python programming language, networking (IP addresses), and basic Physics. 
+
+First, what code. The code is available on
+%(https://github.com/hamishcunningham/pi-tronics/tree/master/pibrush/bin,
+GitHub). This will always be the latest version. There's the python file
+*accel\_client.py* which runs on the Model A and there's *accel\_server.py*
+which runs on the Model B. The former reads in off the sensor and sends it
+across the network, the latter recieves the data, does processing, and displays
+the output on the screen.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#accel_client
+%2 accel\_client.py
+
+The client script is fairly straight forward. There are two unique points to
+consider though. Reading in the accelerometer data and the networking code.
+First though, we import the necessary libraries.
+
+%code(lang=python,numbering=on,firstnumber=1)<
+import socket
+import XLoBorg
+import time
+import os
+%>
+
+*socket* is for networking and *XLoBorg*, the accelerometer. *time* is used to
+for its sleep function and *os* to read in the server's IP address. So let us
+first setup for the networking.
+
+%code(lang=python,numbering=on,firstnumber=6)<
+# network stufff
+server = os.getenv('SERVER', 'modelb')
+port = 5005
+%>
+
+Lines 7 and 8 define the IP address (or hostname) and destination port of the
+server. You'll notice %(http://docs.python.org/2/library/os.html#os.getenv,
+*os.getenv*) is used. This checks for what are called
+%(http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html, environment
+variables). They're set before the program is run. If there's nothing found
+it defaults back to 'modelb' in this case though. I've arbitrarily picked out
+the port number. Generally any number over 1024 is fine though.
+
+The XLoBorg has its own specific initialization function to be run at the start
+of a program using it. This uses the library to start communicating with the
+accelerometer over the %(http://en.wikipedia.org/wiki/I%C2%B2C, I2C bus).
+
+%code(lang=python,numbering=on,firstnumber=10)<
+# setup for the accelerometer
+XLoBorg.printFunction = XLoBorg.NoPrint
+XLoBorg.Init()
+%>
+
+Next, the outgoing _socket_ is created. Sockets are the mystical term used to
+describe the connector that programs use for talking to each other over the
+internet. They come in different forms, we're using a UDP socket, also known
+as a %(http://en.wikipedia.org/wiki/User_Datagram_Protocol, Datagram) socket.
+The special ability of these that we're taking advantage of here is that
+UDP is simple and stateless. It's easy to setup and the Model A can continually
+send and it doesn't matter what the Model B does. That makes for conveniently
+robust communication in this scenario.
+
+%code(lang=python,numbering=on,firstnumber=14)<
+# make the socket connection
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+%>
+
+Afterwards, the main program begins as we enter an infinite loop -- we want
+to continually read the accelerometer and send that information off. Line 17/18
+are used to construct the outgoing message. It conists of three comma
+seperated, signed, floating point values which are fed from the special XLoBorg
+*ReadAccelerometer* function. (See
+%(http://docs.python.org/2/library/stdtypes.html#string-formatting, String
+Formatting Operations) for details on this.) *sock.sendto* then sends the
+message and then %(http://docs.python.org/2/library/time.html#time.sleep,
+*time.sleep*) causing Python to wait for a small interval. Then it all starts
+again -- about 200 times a second.
+
+%code(lang=python,numbering=on,firstnumber=16)<
+while True:
+    message = '%+01.4f,%+01.4f,%+01.4f' \
+            % XLoBorg.ReadAccelerometer()
+    sock.sendto(message, (server, port))
+    time.sleep(0.005)
+%>
+
+That's it. Not so bad. A nice warm up...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#accel_server
+%2 accel\_server.py
+
+To be written.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#systemsetup
+%1 System Setup & Running
+
+The other nigly details to get things going. To be written.
