@@ -1,0 +1,48 @@
+A Raspbian Wrapper for Wiring Pi
+
+_Packaging the WiringPi library for Raspbian_
+
+%meta(summary=Packaging the WiringPi library for Raspbian,
+  tags=pi-tronics\,pi\,raspberrypi\,gate\,software\,packaging\,raspbian)
+
+A lot of our recent projects have used the excellent
+%(http://wiringpi.com, WiringPi library) to %(pages/basics.html#gpio-software,
+talk to the Pi's electronics) from software. A small frustration in this process
+has been the library's lack of integration into Raspbian... So I've written
+the code needed to do this, and made it available 
+%(https://github.com/hamishcunningham/wiringpi/, from GitHub).
+
+The Pi's default operating system,
+%(http://www.raspbian.org/, Raspbian), is a version of 
+%(http://www.debian.org/, Debian)%footnote(To be picky, the Pi's
+default operating system's full title would be _the
+%(http://www.raspbian.org/, Raspbian) distribution of
+%(http://www.debian.org/, Debian) %(http://www.gnu.org/, GNU)
+%(http://www.linuxfoundation.org/, Linux)_.), and has a very powerful system
+for distributing software and software updates. This system uses ^.deb^ files
+containing _packaged_ versions of software, and it was the means to create one
+of these that was missing for WiringPi.
+
+Now you can install WiringPi without having to download or compile it, like
+this:
+
+%code(lang=bash)<
+  wget https://raw.github.com/hamishcunningham/wiringpi/master/package/2.13/unstable/wiringpi_2.13_armhf.deb
+  sudo dpkg -i ./wiringpi_2.13_armhf.deb
+%>
+
+Hopefully Gordon will find time to pull my changes into his own repository and
+pass the package on to the Raspbian people one of these days, which will make
+the process even easier.
+
+Gordon also has lots of good examples and reference materials on his site,
+like this %(http://wiringpi.com/examples/blink/, Blink project):
+
+%(images/wiring-pi-bbd.jpg, %image(images/wiring-pi-bbd-500x295.jpg, A
+WiringPi breadboard layout, 500, 295))
+
+Well worth a visit!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*%(pages/package.html, Read the main article).*

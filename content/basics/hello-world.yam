@@ -112,6 +112,7 @@ time we used to go and suck on a piece of coal to take the hunger pangs off.).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#gpio-software
 %2 Talking to the GPIO from Software
 
 Now we're ready to write some software to control the interaction electronics
