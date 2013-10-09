@@ -1,8 +1,10 @@
-Books and Resources
+Downloads and Resources
+
+%contents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#code
-%2 Software and Source Code
+%1 Software and Source Code
 
 Packaged versions of some of the projects (e.g. the %(mopi.html, SimBaMon
 battery monitor)) is available from
@@ -31,7 +33,7 @@ flood alarm script), for example.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#installing
-%3 Installing Pi-GATE Software
+%2 Installing Pi-GATE Software
 
 To install from our Ubuntu personal archive:
 
@@ -82,7 +84,7 @@ echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate-snapshots/ubuntu precise ma
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#wiringpi
-%3 Installing WiringPi for Raspbian
+%2 Installing WiringPi for Raspbian
 
 On Raspbian, you can install %(http://wiringpi.com/, WiringPi) from a .deb
 file like this:
@@ -97,7 +99,7 @@ See our page %(package.html, on Pi software packaging) for more details.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#pi-books
-%2 Books and Sites about the Pi
+%1 Books and Sites about the Pi
 
 Books about the Pi are proliferating almost as rapidly as the community of Pi
 aficionados.%footnote(In July 2013 Google lists more than 12 million hits for
@@ -142,7 +144,7 @@ list these days!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#electronics-resources
-%2 Electronics Books and Sites
+%1 Electronics Books and Sites
 
 For introductions to basic circuit building, breadboarding or soldering, and
 to hacker electronics in general, see for example:
@@ -191,7 +193,7 @@ starter course in electrical engineering.)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 Circuits: Calculators, Simulators, Diagrams
+%1 Circuits: Calculators, Simulators, Diagrams
 
 The circuit diagrams are available on
 %(https://www.circuitlab.com/user/hamish/, Circuit Lab) under the Creative
@@ -205,7 +207,3 @@ For circuit debugging these Voltage/Resistance/Current calculators are useful:
 %(http://www.rapidtables.com/calc/electric/ohms-law-calculator.htm, this one),
 and %(http://www.sengpielaudio.com/calculator-ohm.htm, this one) all worked
 well for me at one time or another.
-
-%%% There are oodles and oodles of Pi hobby sites -- when I started
-%%% %(http://raspberrypi.goddess-gate.com/, this one) stood out, but really there
-%%% are too many to make a list these days!

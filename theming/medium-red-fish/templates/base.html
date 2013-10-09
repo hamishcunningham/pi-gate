@@ -61,7 +61,7 @@
       <!--
       using a custom menu at present...
         {% for page in PAGES %}
-          {% if page.title != "About" %} <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li> {% endif %}
+          {% if page.title != "About" and page.title != "Download" %} <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li> {% endif %}
         {% endfor %}
       -->
       <li><b><a href="#">Projects</a></b>
@@ -79,9 +79,11 @@
         <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
         </ul></li>
       <!-- <li><a href="/">Blog</a></li> -->
-      <li><a href="/pages/basics.html#resources">Download</a></li>
       <!--
+      <li><a href="/pages/basics.html#resources">Download</a></li>
+      -->
       <li><a href="/pages/download.html">Download</a></li>
+      <!--
       <li><a href="/pages/shop.html">Shop</a></li>
       -->
       <li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
