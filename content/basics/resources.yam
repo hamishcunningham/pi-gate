@@ -82,7 +82,7 @@ echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate-snapshots/ubuntu precise ma
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#pi-books
-%2 Books about the Pi
+%2 Books and Sites about the Pi
 
 Books about the Pi are proliferating almost as rapidly as the community of Pi
 aficionados.%footnote(In July 2013 Google lists more than 12 million hits for
@@ -106,6 +106,23 @@ the phrase "raspberry pi"!) These are three of my favourites:
 
 If it's your birthday, ask for a book token -- there's more to drool over in
 the next section.
+
+There are also lots of *great websites* about the Pi -- some that stand out:
+
+- The %(http://www.raspberrypi.org/, Pi foundation's site) is the place to
+  start: lots of good reference material, and there's always something new to
+  read on the blog. For discussion and advice,
+  %(http://www.raspberrypi.org/phpBB3/, the community forums) are excellent.
+- %(http://www.cl.cam.ac.uk/, Cambridge Univerity Computer Lab) is where the
+  original idea for the Pi came from, and they host
+  %(http://www.cl.cam.ac.uk/projects/raspberrypi/, a great set of Pi
+  materials) including
+  %(http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/, these tutorials).
+- %(http://www.themagpi.com/, The MagPi) monthly eZine is well worth a look,
+  as is the %(http://piweekly.net/, Pi Weekly) email news digest.
+
+There are oodles and oodles of Pi hobby sites -- really too many to make a
+list these days!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -174,6 +191,6 @@ For circuit debugging these Voltage/Resistance/Current calculators are useful:
 and %(http://www.sengpielaudio.com/calculator-ohm.htm, this one) all worked
 well for me at one time or another.
 
-There are oodles and oodles of Pi hobby sites -- when I started
-%(http://raspberrypi.goddess-gate.com/, this one) stood out, but really there
-are too many to make a list these days!
+%%% There are oodles and oodles of Pi hobby sites -- when I started
+%%% %(http://raspberrypi.goddess-gate.com/, this one) stood out, but really there
+%%% are too many to make a list these days!
