@@ -154,7 +154,144 @@ That's it. Not so bad. A nice warm up...
 %#accel_server
 %2 accel\_server.py
 
-To be written.
+The server script is where the real meat of the programming is as it handles
+the simulation and display. Similar to accel\_client.py, necessary libraries
+are first imported.
+
+%code(lang=python,numbering=on,firstnumber=1)<
+import socket
+import select
+import pygame
+import time
+import numpy
+import math
+import datetime
+import random
+import os
+import RPi.GPIO as GPIO
+%>
+
+*socket* we've already met, but *select* is new, and related. It's used to
+avoid what's called blocking, which is when the program is forced to wait for
+new data. Using select, the network code becomes non-blocking, which allows the
+program to function even if the client isn't transmitting any data.
+%(http://www.pygame.org/, *pygame*) is a the library used for drawing on the
+screen. *numpy* is used for fast array operations to help speed up program
+execution -- the RaspberryPi isn't the world's fastest computer and every
+little helps.
+
+*math* contains the functions like _sin_ and _cos_ which we use to handle some
+of the translation from where the accelerometer is to where the paint is on the
+screen. *datetime* is a bit of code that got accidentally left in from an old
+version -- oops! (It was used to print the current date on the screen during
+debugging to tell if the program was frozen or not.) *random* is used to
+generate, as it sounds, random numbers. Finally *RPi.GPIO* is used to talk with
+the GPIO pins.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#initialization
+%3 Initialization
+
+%code(lang=python,numbering=on,firstnumber=13)<
+# ==============
+# initialization
+# ==============
+%>
+
+Next comes a lot of boring and tedious bits of code which I've classed under
+initialization. These are various pieces of code that need to be run just once
+to get things started.
+
+%code(lang=python,numbering=on,firstnumber=17)<
+# port to listen on
+port = 5005
+
+# setup networking
+sock = socket.socket(socket.AF_INET,
+        socket.SOCK_DGRAM) # UDP
+sock.bind(("0.0.0.0", port))
+sock.setblocking(0)
+%>
+
+First there's the network code. This will look familiar. It's the flip side of
+what was done on the client. We define the network port to listen on and then
+create a socket. Then we tell the socket to listen using the *.bind()*
+function. 0.0.0.0 in this case tells it to listen on all network interfaces
+(so you could use Ethernet or Wi-Fi). Then *.setblocking()* is needed for that
+non-blocking thing I mentioned before.
+
+%code(lang=python,numbering=on,firstnumber=26)<
+# directory for saves
+SAVEDIR = os.getenv('SAVEDIR', '.')
+%>
+
+*os.getenv* is used again, the first of several times. This time it's used to
+set a directory to store save files in, and otherwise defaults to '.', which is
+the current working directory (the folder you were in when you started the
+program).
+
+%code(lang=python,numbering=on,firstnumber=29)<
+# setup GPIO input for reset
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+# variable to store button state
+button = 0
+%>
+
+The above code initializes the GPIO for input. *.setmode()* says we'll be
+using the
+%(http://elinux.org/RPi_Low-level_peripherals#General_Purpose_Input.2FOutput_.28GPIO.29,
+Broadcom pin names). *.setup* then says we're looking for input on pin 17. It
+also specifically tells the chip to use the internal resistor on the pin so
+that there's no floating.
+(%(http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/robot/buttons_and_switches/,
+Here) is a pretty good article to which explains floating, some interesting
+extra reading.) The last thing is the *button* variable which is used to
+indicate whether or not the button hooked up to the GPIO has been pushed or
+not. By default it's not been so it starts at 0.
+
+%code(lang=python,numbering=on,firstnumber=36)<
+# screen solution
+XRES = int(os.getenv('XRES', 1920))
+YRES = int(os.getenv('YRES', 1080))
+
+# setup display
+pygame.init()
+screen = pygame.display.set_mode((XRES, YRES))
+# reset to white
+screen.fill((255, 255, 255))
+# push white
+pygame.display.flip()
+%>
+
+Then comes screen initialization. First we read in the X resolution and Y
+resolution. Then we initialize pygame (line 41) and set the display mode with
+our resolution (line 42). By default the screen is black, but I think a nice
+white canvas is preferable so we *.fill()* the screen with white. _(255, 255,
+255)_ is 0-255 (red, green, blue). All colors combined = white (think prisms).
+By default pygame writes to a buffer section of memory, so *.flip()* is
+required to tell it to display the current buffer. (A second buffer is then
+availble to draw on until the next flip -- this is called double buffering.)
+
+%code(lang=python,numbering=on,firstnumber=48)<
+# length of moving average array
+AL = 20
+
+# accelerometer storage for moving average
+AXa = numpy.zeros((AL, 1))
+AYa = numpy.zeros((AL, 1))
+AZa = numpy.ones((AL, 1))
+
+# array index for accelerometer data
+Ai = 0
+%>
+
+Next we create the variables used for storing the raw accelerometer data --
+that's the *AXa*, *AYa*, and *AZa* variables.
+
+More to be written.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
