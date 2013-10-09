@@ -3,7 +3,7 @@ Packaging Software for the Pi
 _Packaging and distributing software for the Pi_
 %meta(summary=Packaging and distributing software for the Pi)
 
-_%(about.html#hamish, Hamish Cunningham), September 2013_
+_%(about.html#hamish, Hamish Cunningham), October 2013_
 
 -----------------------------------------------------------------------------
 %%% TODO
@@ -40,13 +40,14 @@ think that was a great customer relations strategy.
 
 The company was starting to move into Unix-based delivery platforms (System V
 was the new thing back then; and a whole business would run on a tiny
-mini-computer!). I was lucky enough to get my hands dirty with the new tech
-and learnt an awful lot in short space of time. It is a testament to the power
-and success of the Unix paradigm that I'm still using many of these skills
-today -- C programming, shell scripting, systems administration and the like.
+mini-computer!). I was lucky enough to get my hands dirty with the new
+technology, and learnt an awful lot in short space of time. It is a testament
+to the power and success of the Unix paradigm that I'm still using many of
+these skills today -- C programming, shell scripting, systems administration
+and the like.
 
 One of my tasks at the time was to package and distribute versions of our
-systems to customer machines. I used a program called UUCP (Unix-to Unix copy)
+systems to customer machines. I used a program called UUCP (Unix-to-Unix copy)
 over dial-up modem links to push new updates onto machines out on site (and,
 cheekily, used to get the customer machine to phone us back so that the
 lengthy upload process would happen on their phone bill, not ours!). Things
@@ -62,20 +63,80 @@ operating system.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 The Problem
 
+Software packaging and distribution has to deal with versions, dependencies
+and access:
+
+- Different _versions_ of programs can incorporate lots of changes, including
+  critical security fixes that need applying in a hurry. Especially on older
+  systems and in low-bandwidth locations, minimising the amount of new
+  download for a changed version is important.
+- _Dependencies_ between programs are often tied to particular versions -- if
+  a function that one program relies on changes, its package data must reflect
+  its need for the old version.
+- _Access_ to packages is relatively easy now -- most software is distributed
+  as a network download. But what happens if the connection drops half-way
+  through? Or if a million people all want updates on the same day?
+
+These issues have been addressed in various ways; one of the most succesful
+and wide-reaching is the Debian package management system, and this is the one
+that we'll describe here.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 The Platform: GNU, Linux, Debian, Raspbian and Ubuntu
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 GNU and Linux
+%(http://www.debian.org/, Debian) is a _distribution_ of %(http://www.gnu.org/,
+GNU) %(http://www.linuxfoundation.org/, Linux), which is a Unix-like
+operating system (like Android, MacOS, Ubuntu, Red Hat and many others). For
+the Pi there's a special version of Debian called %(http://www.raspbian.org/,
+Raspbian).
+
+Probably the most popular version of Linux at present is
+%(http://www.ubuntu.com/, Ubuntu), but because of an incompatibility between
+the Pi's version of its %(http://en.wikipedia.org/wiki/ARM_architecture, ARM
+microprocessor) and the Ubuntu build system, we can't use Ubuntu's
+infrastructure on the Pi, except for programs which are _architecture
+independent_ -- a term which we'll explain below when we show how to use
+Ubuntu Personal Package Archives for Pi software distribution.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 Old and New: Debian and Raspbian
+%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% %2 GNU and Linux
+%%% 
+%%% TODO
+%%% 
+%%% 
+%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% %2 Old and New: Debian and Raspbian
+%%% 
+%%% TODO
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Ubuntu's Personal Package Archives
+
+Broadly speaking, computer programming languages come in two sorts: _compiled_
+or _interpreted_. Compiled languages are translated into machine code (binary
+instruction sequences) before they can be run. Interpreted languages can be
+run directly without any translation. This means that programs written in
+interpreted languages are often _architecture independent_ -- they can run
+without change on many different types of computer chips. Several languages
+popular on the Pi fall into this category, including Shell Script and (with
+some restrictions) Python.
+
+As we noted earlier, Ubuntu Linux is very popular (and is also derived from
+Debian). Ubuntu has a great set of infrastructure tools associated with it,
+including _Personal Package Archives_ (PPAs) which simplify the task of
+building, packaging and distributing software for all the platforms supported
+by Ubuntu. If we're packaging an architecture-independent program, then, a PPA
+can be a good way to distribute it. (Several Pi GATE programs are
+%(download.html, distributed like this).)
+
+Linux is %(http://www.fsf.org/about/what-is-free-software, open source free
+software), and to make sure everyone gets access to the source of programs in
+PPAs, Ubuntu only accepts Debian _source packages_ as uploads to the archives.
+This means we have to build both a _source_ (^.dsc^) and a _binary_ (^.deb^)
+package for each program; the next section describes how we do this.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
