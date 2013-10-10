@@ -87,9 +87,14 @@ that we'll describe here.
 
 %(http://www.debian.org/, Debian) is a _distribution_ of %(http://www.gnu.org/,
 GNU) %(http://www.linuxfoundation.org/, Linux), which is a Unix-like
-operating system (like Android, MacOS, Ubuntu, Red Hat and many others). For
-the Pi there's a special version of Debian called %(http://www.raspbian.org/,
-Raspbian).
+operating system (like Android, MacOS, Ubuntu, Red Hat and many others).
+
+%image(images/debian-logo-500x242.jpg, Debian, 500, 242)
+
+For the Pi there's a special version of Debian called
+%(http://www.raspbian.org/, Raspbian).
+
+%image(images/raspbian-logo-400x234.jpg, Raspbian, 400, 234)
 
 Probably the most popular version of Linux at present is
 %(http://www.ubuntu.com/, Ubuntu), but because of an incompatibility between
@@ -124,6 +129,8 @@ without change on many different types of computer chips. Several languages
 popular on the Pi fall into this category, including Shell Script and (with
 some restrictions) Python.
 
+%image(images/ubuntu-logo-400x283.png, Ubuntu, 400, 283)
+
 As we noted earlier, Ubuntu Linux is very popular (and is also derived from
 Debian). Ubuntu has a great set of infrastructure tools associated with it,
 including _Personal Package Archives_ (PPAs) which simplify the task of
@@ -142,14 +149,104 @@ package for each program; the next section describes how we do this.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Debian Packaging
 
-      - seeding the package: dh\_make -p=simbamond\_1.0 --native
+A lot has been written about packaging, and its fair to say that it isn't the
+easiest thing to get started with.%footnote(There are several reasons why
+packaging is hard. Debian is a distribution of code largely produced by other
+projects, so the packaging documentation often assumes that we're starting
+from someone else's systems, whereas in our case that's not true. Its design
+also dates back to a time where disk space and network bandwidth were very
+limited and it was important to split systems down into very small chunks
+stored on different disk partitions, problems that are less acute today.
+Nevertheless the original designers did such a good job that it's still the
+best there is. Kudos.) We'll take a quick-and-dirty approach here, and give
+enough detail for a couple of simple cases:
+
+- scripts and other architecture-independent packages (including _daemons_,
+  which are scripts run at system startup)
+- binaries from compiled languages like C (including shared libraries)
+
+In each case the key to the process is to
+
+- set up a ^Makefile^ in the top-level directory of your software tree which
+  follows certain conventions for installation targets
+- create a ^debian^ directory in the same place, containing data to control
+  the package construction process
+
+The rest of this section describes these steps; in %(#case-studies, the next
+section) we'll give example code.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Creating the ^debian^ directory
+
+The latter tree can be seeded using the ^dh\_make^ program like this:
+
+%code(lang=bash)<
+   sudo apt-get install devscripts debhelper
+   dh_make -p=package-name\_1.0 --native
+%>
+
+This creates a set of files in the ^debian^ directory, many of which are
+examples or boilerplate which can be ignored. The ones of the set that need
+editing in our cases are:
+
+- ^control^: contains the basic details of the package, its version and
+  dependencies
+- ^changelog^: describes the changes present in each version
+- ^copyright^: describes the licence -- this should be
+  %(http://www.gnu.org/licenses/, an open source licence)
+- ^docs^: lists documentation files, e.g. a ^man^ page or a ^README^ for the
+  software itself
+- ^README^: describes details of the _packaging_ of the software, _not_ the
+  software itself
+
+There is also a file called ^rules^ which follows Makefile syntax and which
+can be used to modify the details of the packaging process. In recent
+configurations this file uses a lot of implicit rules and doesn't need any
+changes.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Conventions for the ^Makefile^
+
+Having created our ^debian^ file tree we then need to create or adapt a
+top-level ^Makefile^ so that it:
+
+- has a default target (e.g. ^all^) which does any necessary compilation and
+  linking of the software (for scripts this target probably does nothing)
+- has an ^install^ target which adapts to the setting of a ^DESTDIR^
+  (_destination directory_) environment variable
+
+It is also convenient to wrap up the commands relating to packaging in
+Makefile targets; the next section describes these commands.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Creating ^.deb^ and ^.dsc^ files
+
+As noted earlier, the outputs from the packaging process are files of two
+types:
+
+- ^.deb^ files contain binary builds of a program, which is all ready to
+  install on a running instance of Raspbian
+- ^.dsc^ files contain the source code of a program, ready to be built
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#case-studies
 %1 Case Studies
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 SimBaMon and BlinkIP
 
+%(images/mopi/prototype-regulator-05.jpg,
+%image(images/mopi/thumbs/prototype-regulator-05.jpg, mopi prototype 5,
+200, 194))
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 WiringPi
+
+%(images/wiring-pi-bbd.jpg, %image(images/wiring-pi-bbd-500x295.jpg, A
+WiringPi breadboard layout, 500, 295))
+
