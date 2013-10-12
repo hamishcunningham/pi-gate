@@ -289,7 +289,142 @@ Ai = 0
 %>
 
 Next we create the variables used for storing the raw accelerometer data --
-that's the *AXa*, *AYa*, and *AZa* variables.
+that's the *AXa*, *AYa*, and *AZa* variables. There's a *numpy* array for each
+direction, X, Y, and Z. X is into the screen, Z down it and Y across. But why
+arrays? Surely a single reading should be in a single variable? Normally that
+would be the case, but we're going to use something called a _moving average_
+(MA) to filter the input data.
+
+An MA is the average of, in this case, the last 20 readings. Some sort of
+filtering is almost always necessary when dealing with the sort of analog input
+data that comes from an acceleromter to prevent sudden jumps in the readings
+(e.g. you knocked it) from having an undue impact on the processing. An MA is a
+convenient and easy way to do it. We simply input The current reading at index
+*Ai* and then increment Ai until it exceeds *AL*, then wrap it back around.
+You'll see this in the code later. I use *numpy* here because they execute very
+quickly (read: effeciently) and there are handy functions to make things
+simpler. Like *.ones()* to initialze all of *AZa* to a value of one -- there's
+always by default 1G of gravity downwards.
+
+After dealing with the accelerometer directly are declarations for those
+variables dealing with gravity. *GX*, etc., store the best (most recent) guess
+of what direction gravity is in, as once we start moving we have a combined
+acceleration of gravity plus the user's movement. We need this to subtract
+gravity back out so we know how the user is moving. Ideally this would be done
+with a gyroscope, but we don't have one of those so we make do.
+
+%code(lang=python,numbering=on,firstnumber=48)<
+# store gravity when fast is detected..
+GX = 0
+GY = 0
+GZ = 1
+
+# polar gravity
+PGR = 0
+PGA = -math.pi/2
+PGB = 0
+
+# screen gravity
+PSGR = 1
+PSGA = -math.pi/2
+PSGB = 0
+
+# accelerometer values
+AX = 0
+AY = 0
+AZ = 0
+
+# rotated for screen accelerometer values
+GAX = 0
+GAY = 0
+GAZ = 0
+%>
+
+*PGR*, etc., store the equivalent
+%(http://en.wikipedia.org/wiki/Polar_coordinate_system, _polar coordinates_)
+of the gravity estimate, where R is the radius to the point from the origin,
+and A and B are the angular rotation about the Z and Y axis. The polar
+coordinates are used for the actual subtraction as subtracting the gravity
+vector from the current acceleration vector is very easy like this -- it's an
+extension of the regular
+%(http://hotmath.com/hotmath_help/topics/adding-and-subtracting-vectors.html,
+subtraction of vectors).
+
+*PSGR* are the polar coordinates of gravity in the screen, which is an
+accleration field that's always downwards. If you consider that the Model A
+might not be parallel to the screen while being waved about (e.g. it's held
+rotated) then we need to rotate the acceleration field it experiences back to
+screen normal. I'm actually not entirely sure about this -- this was all new
+to me when I was writing it, so this is just a guess really. It seems to work
+though so I've left it in. In my experience most projects like this have fiddly
+bits like this.
+
+*AX* etc. store the result of the moving average of the acceleromter data.
+*GAX* etc. store the current acceleration as from *AX* but rotated correctly
+for the screen.
+
+%code(lang=python,numbering=on,firstnumber=83)<
+last_G = 0
+
+# timing information
+last_time = time.time();
+%>
+
+*last\_G* stores the time at which the last estimate of the direction of
+gravity was taken. *last\_time* stores the time at which the last loop was
+executed. This is used for estimating distance the brush has travelled as
+part of a process called _twice integration_. You think someone would have
+written up a nice simple explanation of this, but nothing turns up after a
+quick Google.
+%(http://www.ugrad.math.ubc.ca/coursedoc/math103/site2012/keshet.notes/Chapter4.pdf,
+This) is a somewhat high level explanation of what's going on, and
+%(http://www.astarmathsandphysics.com/a_level_maths_notes/M1/a_level_maths_notes_m1_acceleration_velocity_and_displacement.html,
+this) is a bit simpler, but I'm not terribly happy with either explanation.
+I'll try and simplify it a bit, or at least put it a bit more concisely.
+
+Imagine you're in a car traveling down the motorway at 100 kph. In one hour
+you will have travelled 100 km. Easy? That's simple integration, going from
+velocity to displacement. Acceleration though, is the rate of change in
+velocity, e.g. the speed at which the needle of the speedometer in the car
+climbs. So now imagine accelerating at 1 kph per second, after 10 seconds
+you'll be going 10 kph faster, so instead of 100 kph you're now going 110 kph.
+Apply that to the distance you've travelled and you have twice integration.
+(Fun fact: if you kept up that acceleration, after an hour you'd be going 3,700
+kph and would have traveled 36,370 km. Or almost around the Earth.)
+
+%code(lang=python,numbering=on,firstnumber=88)<
+# brush info
+BX = 0 # position
+BY = 0
+VX = 0 # velocity
+VY = 0
+P = 0 # amount of paint on brush
+S = 0 # distance brush has traveled
+last_stroke = 0
+%>
+
+This next bit of code initializes the variables regarding our virtual
+paintbrush. *BX* and *BY* for the position on the screen - no Z because it's
+only going up and down. *VX* etc. for it's velocity, or speed. *P* to keep
+track of how much virtual paint is left on the brush, and *S* to keep track of
+how far the brush has travelled - this is used in determining how far apart the
+paint splatters ought to be. *last\_stroke* is the time at which we last
+painted.
+
+%code(lang=python,numbering=on,firstnumber=97)<
+# seed random number generator
+random.seed(time.time())
+%>
+
+This last bit of code initializes the random number generator with the current
+time. Without this, it would be possible to get the same random numbers over
+and over each time the program was run. We use the random numbers for picking
+out the paint color each stroke.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#functions
+%3 Functions
 
 More to be written.
 
