@@ -17,13 +17,14 @@ _%(about.html#fred, Fred Sonnenwald), September 2013_
 %1 Introduction
 
 Two weeks ago we participated in the %(http://www.sheffield.ac.uk/ideasbazaar,
-Ideas Bazaar) promoting "%(http://pi.gate.ac.uk/posts/2013/09/16/open-culture-tech/,
-Open Culter Tech)", which I've translated to myself as a promoting how we can
-take finer control of technology for ourselves using low-cost and open
-technologies. "The proof is in the pudding" though, and actually demonstrating
-the point is a much more powerful argument. To this end we prepared our exhibit
-to show off various gizmos and widgets, including those based around Raspberry
-Pis. My contribution has been the PiBrush.
+Ideas Bazaar) promoting
+_%(http://pi.gate.ac.uk/posts/2013/09/16/open-culture-tech/, Open Culture
+Tech)_, which I've translated to myself as a promoting how we can take finer
+control of technology for ourselves using low-cost and open technologies. "The
+proof is in the pudding" though, and actually demonstrating the point is a
+much more powerful argument. To this end we prepared our exhibit to show off
+various gizmos and widgets, including those based around Raspberry Pis. My
+contribution has been the PiBrush.
 
 %image(images/pi-brush-snap.jpg, Pi Brush snapshot)
 
