@@ -30,13 +30,14 @@ contribution has been the PiBrush.
 
 The PiBrush is an interactive art and technology exhibit (a very grand name
 for something so small) that simulates flicking paint off the end of a
-paintbrush onto canvas, e.g. %(http://en.wikipedia.org/wiki/Jackson_Pollock,
-Jackson Pollock). It utilizes two Raspberry Pis (one Model B and oneModel A),
-a PiBorg %(http://piborg.org/xloborg/, XLoBorg) accelerometer, a battery pack,
-a display, and two Wi-Fi dongles. The Model A is held by the user and waved
-around. It collects acceleration data with the XLoBorg, which it then
-transmits via ad hoc Wi-Fi to the Model B, which proceeses the data collected
-into paint droplets and displays them on the screen, connected via HDMI.
+paintbrush onto canvas -- as %(http://en.wikipedia.org/wiki/Jackson_Pollock,
+Jackson Pollock) famously did in the 1940s and 50s. It utilizes two Raspberry
+Pis (one Model B and one Model A), a PiBorg %(http://piborg.org/xloborg/,
+XLoBorg) accelerometer, a battery pack, a display, and two Wi-Fi dongles. The
+Model A is held by the user and waved around. It collects acceleration data
+with the XLoBorg, which it then transmits via ad hoc Wi-Fi to the Model B,
+which processes the data collected into paint droplets and displays them on
+the screen, connected via HDMI.
 
 %image(images/pibrush/pibrush_architecture.png, Pi Brush snapshot)
 
@@ -45,7 +46,7 @@ into paint droplets and displays them on the screen, connected via HDMI.
 %]
 
 Since the Bazaar, we've also added a physical reset button to save the current
-canvas and reset it to white.
+canvas and reset it to blank.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -54,7 +55,7 @@ canvas and reset it to white.
 
 The hardware for this project is fairly straight forward. The XLoBorg plugs
 directly into the GPIO pins as a block, and a GPIO button is just a button
-connected between the ground and a GPIO pin - we've used BCM pin 17 or board
+connected between the ground and a GPIO pin -- we've used BCM pin 17 or board
 pin 11. The software is where the challenge lies.
 
 I developed the code from scratch, and doing so required a variety of
@@ -405,11 +406,11 @@ last_stroke = 0
 %>
 
 This next bit of code initializes the variables regarding our virtual
-paintbrush. *BX* and *BY* for the position on the screen - no Z because it's
+paintbrush. *BX* and *BY* for the position on the screen -- no Z because it's
 only going up and down. *VX* etc. for it's velocity, or speed. *P* to keep
 track of how much virtual paint is left on the brush, and *S* to keep track of
-how far the brush has travelled - this is used in determining how far apart the
-paint splatters ought to be. *last\_stroke* is the time at which we last
+how far the brush has travelled - this is used in determining how far apart
+the paint splatters ought to be. *last\_stroke* is the time at which we last
 painted.
 
 %code(lang=python,numbering=on,firstnumber=97)<
