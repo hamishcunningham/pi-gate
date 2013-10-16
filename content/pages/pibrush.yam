@@ -362,8 +362,8 @@ though so I've left it in. In my experience most projects like this have fiddly
 bits like this.
 
 *AX* etc. store the result of the moving average of the acceleromter data.
-*GAX* etc. store the current acceleration as from *AX* but rotated correctly
-for the screen.
+*GAX* etc. store the current acceleration as from AX but rotated correctly for
+the screen.
 
 %code(lang=python,numbering=on,firstnumber=83)<
 last_G = 0
@@ -427,6 +427,115 @@ out the paint color each stroke.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#functions
 %3 Functions
+
+%code(lang=python,numbering=on,firstnumber=100)<
+# =========
+# functions
+# =========
+%>
+
+If you don't know, a function is a bit of code written in such a way that it
+can be executed from different places in the main program. Each _call_ you can
+pass different _arguments_ (input parameters) that will be operated on and a
+new result _returned_. If you already know this that's handy. There are three
+functions which I've written for use in accel\_server.py.
+
+%code(lang=python,numbering=on,firstnumber=104)<
+def polar(X, Y, Z):
+    x = numpy.linalg.norm([X, Y, Z])
+    if (x > 0):
+        y = -math.atan2(Z, X)
+        z = math.asin(Y / x)
+    else:
+        y = 0
+        z = 0
+    return (x, y, z)
+%>
+
+*polar* takes a Cartesian X, Y, and Z coordinate and returns the equivalent
+polar coordinates. It's used several times later to make the conversion, as
+previously mentioned, as part of rotating gravity. I've based it off the code
+in %(http://www.processing.org/discourse/beta/num_1236393966.html, this) forum
+thread.
+
+%code(lang=python,numbering=on,firstnumber=114)<
+def cartesian(X, A, B):
+    x = 0 # don't bother - isn't used
+    y = X * math.sin(B) * math.sin(A)
+    z = X * math.cos(B)
+    return (x, y, z)
+%>
+
+*cartesian* as you might suspect does the opposite of polar, taking the
+distance X and rotations A and B and turns them back into Cartesian
+coordinates. As this code is only used as part of getting coordinates ready for
+the screen, x, as the coordinate into the screen, is permanently set to 0. This
+is an optimization to help the code run better on the Pi. The code here is
+based on %(http://electron9.phys.utk.edu/vectors/3dcoordinates.htm, this)
+explanation of Cartesian and polar coordinates.
+
+%code(lang=python,numbering=on,firstnumber=120)<
+def savereset():
+    filename = SAVEDIR + os.sep + ("%i.png" % time.time())
+    pygame.image.save(screen, filename)
+    screen.fill((255, 255, 255))
+%>
+
+The last function, *saverest* is called when either the `R' key is pressed on
+the keyboard or the GPIO button is pressed. It (you may notice a pattern in the
+function names) saves the screen and then resets it back to white. *filename*
+is created as the previously defined *SAVEDIR* plus *os.sep* which is a fixed
+variable as the file system serpator - `/' under Linux. (`\\' under Windows.)
+After the save path comes the actual file name, which we want to be unique so
+that we don't overwrite an old file. We also don't want to have to stop for
+user input in case there's no keyboard.
+
+In this scenario I've found a %(http://en.wikipedia.org/wiki/Unix_time, Unix
+timestamp) to be the easiest way of doing this. It's simply the number of
+seconds since Jan. 1, 1970, but it's always going up and unless someone invents
+time travel won't repeat. You may have realized though that as the Pi doesn't
+have a real time clock, it may indeed count the same time over and over. A
+weakness that will have to be accepted. Besides, what are the odds someone
+would reset the screen at exactly the same number of seconds since the Pi was
+turned on _twice_? (A proper way to fix this though would be to check for an
+existing file first.)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#mainprogram
+%3 Main program
+
+%code(lang=python,numbering=on,firstnumber=126)<
+# ============
+# main program
+# ============
+%>
+
+That's the functions over, now onto the main program! Interesting things start
+to happen. Almost. 3 more variable declarations that in this funny spot first
+though. They ended up here though because they specifically have to do with
+code loops.
+
+%code(lang=python,numbering=on,firstnumber=130)<
+fast = 0
+notfast = 0
+running = 1
+while running:
+%>
+
+*fast* is used to indicate whether or not the Model A is currently being waved
+around and is trigged when acceleration starts. It's the start of a brush
+stroke. *notfast* is an indicator of the opposite, the amount of time Model A
+has not been accelerating. This isn't a binary true or false situation as you
+might suspect as there's a quick point in time when there's no acceleration.
+This time is the difference between lifting up on the gas pedal in the car and
+pressing brake pedal to slow down. Paint droplets shouldn't stop being
+deposited on the screen between the end of starting to wave and the beginning
+of stopping to wave the Model A as that's unrealistic.
+
+*running* is what it sounds like and is used to keep the program continually
+looping in a *while* loop. When we want to quit we set running to 0, the loop
+finishes and then the program exits.
 
 More to be written.
 
