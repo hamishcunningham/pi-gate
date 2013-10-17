@@ -5,18 +5,19 @@ summary=University of Sheffield Computer Science Ambassadors,
 tags=schools\,education\,pi\,raspberrypi\,gate)
 
 We've got 50 of them coming in -- children, that is, not animals, and
-hopefully we'll be able to tell the difference relatively easily.
+hopefully we'll be able to tell the difference relatively easily :-)
+
 %(http://ambassadors.rcweb.dcs.shef.ac.uk/, The scheme) is an opportunity for
 girls and boys who have an interest in computing to get a feel for subjects
 ranging from computer games and graphics to programming hardware, from large
 scale everyday uses in mobile apps and social media to highly specialised
-applications from small research teams.
+applications from small research teams. As part of the scheme *everyone gets a
+Raspberry Pi* to take home, and we're throwing in a few bits and pieces of
+electronics to get the experimenter ball rolling.
 
 %%% YOUTUBE BLUE PETER CLIP HERE
 
-As part of the scheme everyone gets a Raspberry Pi to take home, and we're
-throwing in a few bits and pieces of electronics to get the experimenter ball
-rolling. One of %(pages/basics.html#interaction-electronics, the beauties of
+One of %(pages/basics.html#interaction-electronics, the beauties of
 the Pi) is how easy it is to connect up a few cheap components and jump
 straight into the realm of physical computing. Using a couple of Raspberry Pi
 %(http://www.ocr.org.uk/qualifications/by-subject/computing/raspberry-pi/,
@@ -36,9 +37,6 @@ And no elephants on site. At all. Or I'm going home.
 
 The day went well :-)
 
-%image(images/outreach-day-1.jpg, Pi-oneers in the quad, 500)
-%%% TODO better pic
-
 %(http://www.cl.cam.ac.uk/~am21/, Alan Mycroft) from the
 %(http://raspberrypi.org, Raspberry Pi foundation) gave a lively talk
 introducing fundamentals of computing and helped out with our lab sessions.
@@ -46,7 +44,25 @@ introducing fundamentals of computing and helped out with our lab sessions.
 stuffed in them, luckily.) All the materials are available in
 %(https://github.com/hamishcunningham/pi-tronics/tree/master/outreach,
 our Pi-Tronics repository) but they definitely need some revision -- the
-authors learned more than the students from the day.
+authors learned more than the students from the day!
+
+Plugging jumpers onto GPIO pins can be tricky:
+
+%image(images/ambassadors/pi-oneers-003-300x450.jpg, Pi-Oneers at the Cutlers
+Ambassadors day, 300)
+%%% images/ambassadors/pi-oneers-003-550x825.jpg
+
+Here's one of the authors demonstrating the art of
+%(http://www.ocr.org.uk/Images/125881-recipe-card-singing-jelly-baby.pdf,
+squeezing a jelly baby):
+
+%image(images/ambassadors/pi-oneers-001-500x333.jpg, Pi-Oneers at the Cutlers
+Ambassadors day, 500)
+
+And a student setting up her police siren sound file:
+
+%image(images/ambassadors/pi-oneers-002-550x367.jpg, Pi-Oneers at the Cutlers
+Ambassadors day, 500)
 
 Here's %(http://staffwww.dcs.shef.ac.uk/people/S.Wrigley/, Stuart Wrigley)
 demonstrating his Pi-in-a-quadcopter system for sensing river water levels
@@ -57,6 +73,10 @@ during flood events:
 (Spot the authors looking gormless!)
 
 %image(images/outreach-day-3.jpg, quadcopter detail, 500)
+
+Now everyone wants a quadcopter :-)
+
+%image(images/outreach-day-1.jpg, Pi-oneers in the quad, 500)
 
 
 -----------------------------------------------------------------------------
