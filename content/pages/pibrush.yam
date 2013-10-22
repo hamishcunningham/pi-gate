@@ -537,6 +537,164 @@ of stopping to wave the Model A as that's unrealistic.
 looping in a *while* loop. When we want to quit we set running to 0, the loop
 finishes and then the program exits.
 
+The main program loop consists of three phases. Phase 1 consists of basic tasks
+that need to be done over and over. Phase 2 consists of reading the
+accelerometer data and pre-processing it. Phase 3 consists of manipulating the
+paintbrush and canvas.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#phase1
+%4 Phase 1
+
+%code(lang=python,numbering=on,firstnumber=135)<
+    # move time forward
+    dt = time.time() - last_time
+    last_time = time.time()
+%>
+
+The first thing to be done each loop is to move time forwards. Ideally
+execution time for each loop is identical and *dt* (change in time) is the
+same. However, something may interrupt, cause a bit of lag, or some if
+statement may be skipped either increasing or decreasing execution time of the
+loop. For something that moves on the screen this is bad, so by knowing how
+long it's been since the last update we can know how far to move things, i.e.,
+distance = velocity \* time.
+
+%code(lang=python,numbering=on,firstnumber=139)<
+    # no changes made to the screen so far
+    draw = 0
+%>
+
+*draw* is a marker to tell us whether or not to .flip() the screen later. If we
+don't need to, we won't. This saves some CPU time, and is one of the reasons
+dt is important.
+
+The next two bits of code deal with input. The first is keyboard input handled
+though PyGame. The second is GPIO input from the push button we installed,
+which we handle manually.
+
+%code(lang=python,numbering=on,firstnumber=142)<
+    # check for keyboard input
+    event = pygame.event.poll()
+    if event.type == pygame.QUIT:
+        running = 0
+    elif event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_q:
+            running = 0
+        elif event.key == pygame.K_r:
+            savereset()
+            draw = 1
+%>
+
+*.poll()* performs an instantaneous check of the keyboard (and for example
+joystick if we had one of those) and stores it in *event*. event then
+contains all the information about what was found in the poll. First is what
+type of event is happening? There's a special *pygame.QUIT* type, which is
+triggered a number of different ways, clicking the X button in a window, by
+the kill command, etc. It checks all of those so that we can quit nicely. In
+general though we don't expect this to happen.
+
+*pygame.KEYDOWN* is a regular keypress. Once we know it's a keypress, we can
+check which key has been pressed. If it's the Q key we indicate we want to quit
+but setting running to 0. If it's the R key we save the screen, reset it, and
+then set draw to 1 so that we know to .flip() later.
+
+%code(lang=python,numbering=on,firstnumber=153)<
+    # check for GPIO input, but because it's a
+    # pull down (goes from 1 to 0 when pressed)
+    # flip logic
+    button_now = not(GPIO.input(17))
+    if button_now == 1 and button == 0:
+        # the button was pressed
+        savereset()
+        draw = 1
+    button = button_now    
+%>
+
+The logic for the GPIO check is a bit more complex. Because the button
+connects the pin and ground and the pin is in a pull up state, by default
+*.input()* reads a 1. Which we would normally associate with it being pressed.
+Therefore we use *not()* to flip a 1 to a 0 and a 0 to a 1. This way
+*button\_now* instead gives the sort of value we expect - 0 when not pressed
+and 1 when pressed.
+
+The other thing we have to consider is what happens when the button is pressed
+and _held down_. In this case we only want to trigger a save and reset once,
+not multiple times. That's why we check not only if the button_now is 1, but
+also that button is 0, i.e. in the previous loop it wasn't pressed. We then set
+button to button_now so that when we hit the next loop we know it was pressed
+and don't reset the screen.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#phase2
+%4 Phase 2
+
+%code(lang=python,numbering=on,firstnumber=164)<
+    # ===================
+    # networking & sensor
+    # ===================
+
+    result = select.select([sock], [], [], 0)
+    if len(result[0]) > 0:
+%>
+
+Now we check for sensor input over the network and pre-process it if there is.
+This is the non-blocking magic I mentioned earlier. *.select* checks sock for
+any new packets and puts them in *result[0]* (0 because you can select from
+multiple sockets). When there's something the length of results[0] will be
+non-zero and so we know to go to work. Doing it this way is potentially a
+little buggy, but seems to be OK. It might be better replaced with a for loop.
+
+%code(lang=python,numbering=on,firstnumber=170)<
+        # read in data
+        data = result[0][0].recvfrom(1024)
+        a = data[0].split(",")
+        AXa[Ai] = float(a[0])
+        AYa[Ai] = float(a[1])
+        AZa[Ai] = float(a[2])
+        Ai = Ai + 1
+        if Ai == AL:
+            Ai = 0
+%>
+
+*data* takes on the value of the first packet waiting. If you remember, it's a
+comma seperated string with the X, Y, and Z values of acceleration from the
+accelerometer on the Model A. We can use
+%(http://docs.python.org/2/library/string.html#string.split, *.split()*) to
+break it apart into an array of strings for each axis.
+%(http://docs.python.org/2/library/functions.html#float, *float()*) is used to
+convert the string back into a floating point number, which we then store in
+the moving average array we initialized earlier at index Ai. Then it's
+incremented and if it's at the array length AL we set it back to 0. Remember
+that arrays start at index 0 so the last index is the is the length minus one.
+
+%code(lang=python,numbering=on,firstnumber=180)<
+        # moving averages for acceleration
+        AX = numpy.sum(AXa) / AL
+        AY = numpy.sum(AYa) / AL
+        AZ = numpy.sum(AZa) / AL
+
+        # combined acceleration for
+        # working out resting gravity
+        A = math.fabs(numpy.linalg.norm([AX,
+                AY, AZ]) - 1)
+%>
+
+*.sum()* does what it says on the tin and returns the sum of all the values in
+an array (it adds them all up). To do an average is the sum divided by the
+number of elements and so AX, etc., has the average of the array AXa once the
+sum is divided by AL. The total combined acceleration is worked out by
+calculating the %(http://en.wikipedia.org/wiki/Euclidean_distance, Euclidean
+distance) from 0 to the acceleration vector position using *linalg.norm()*.
+At rest this should work out to just about 1 (remember we're working in
+acceleration in G(ravities), which is why we subtract 1. We then use
+%(http://docs.python.org/2/library/math.html#math.fabs, *.fabs()*) so that we
+always have a positive result which indicates the difference between
+acceleration due to gravity and the experienced acceleration. At rest this
+number should be very small.
+
 More to be written.
 
 
