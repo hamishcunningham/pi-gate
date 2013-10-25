@@ -695,6 +695,123 @@ always have a positive result which indicates the difference between
 acceleration due to gravity and the experienced acceleration. At rest this
 number should be very small.
 
+%code(lang=python,numbering=on,firstnumber=190)<
+        # in a slow moment store most recent 
+        # direction of the gravitational field
+        if A < 0.02 and (last_time - last_G) > 0.12:
+            GX = AX
+            GY = AY
+            GZ = AZ
+            (PGR, PGA, PGB) = polar(GX, GY, GZ)
+            last_G = last_time
+
+        # rotate to screen coordinates
+        # and subtract gravity
+        (PAR, PAA, PAB) = polar(AX, AY, AZ)
+        (GAX, GAY, GAZ) = cartesian(PAR,
+                PAA - PGA + PSGA, PAB - PGB + PSGB)
+        GAZ = GAZ - PGR
+%>
+
+Now that we know something about gravity and the current acceleration, we can
+act on it. I've pointed out how in order to know which way the Model A is
+moving, we need to know where gravity is first. That's what this code is about.
+In the previous code block we established that *A* is the acceleration the
+Model A is experiencing _discounting gravity_ which means that if it's very low
+the Model A isn't moving at all (or is moving at a constant velocity). This
+means that the only acceleration being experienced is due to gravity and so we
+can take this moment to take an estimate of gravity. However, in order to
+further ensure that it's a resonable estimate and we don't over tax the CPU
+doing calculations, we wait at least 0.12 seconds between estimates.
+
+So then once it's been established that it's OK to take an estimate, we do that
+by storing AX, etc., in GX, etc.. We then turn the estimate into polar
+coordinates and make a note when we made this estimate. After we take that
+estimate we proceed on normally and then rotate acceleration for the screen
+according to where gravity is. I'm sorry the maths here is complex and to be
+honest I don't really understand it. As near as I can tell it does work though,
+or at least does what we want it to. Basically the *cartesian* line takes the
+polar gravity and rotates it by how we know gravity to be rotated and then adds
+back on gravity as experienced by the monitor. The *GAZ* line after than
+subtracts gravity from its absolute direction. And that's it for Phase 2.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#phase3
+%4 Phase 3
+
+%code(lang=python,numbering=on,firstnumber=207)<
+    # ==================
+    # paintbrush physics
+    # ==================
+%>
+
+Now for the meat of the program: paint brush physics. This is the code that
+actually controls what happens on the screen. Almost everything else has been
+code to get the accelerometer data and process it sot that this section can
+interpret it and get something to _happen_.
+
+%code(lang=python,numbering=on,firstnumber=207)<
+    # acceleration detection for paint strokes
+    A = numpy.linalg.norm([GAY, GAZ])
+%>
+
+At this point we do everything in screen coordinates. *GAY* is acceleration
+going across the screen, and *GAZ* is going down the screen. (Screen
+coordinates typically start in the upper left corner. Pygame holds to this
+standard.) *A* is now therfore the total acceleration of the Model A, with
+respect to the screen, ignoring gravity.
+
+%code(lang=python,numbering=on,firstnumber=214)<
+    # detect moving quickly
+    if A > 0.4 and fast != 1 and \
+                last_time - last_stroke > 0.5:
+        fast = 1
+        notfast = 0
+        scale = random.random() * 0.5 + 0.5
+        BX = YRES * GAY * scale + XRES / 2 + \
+                random.randint(-XRES/4, XRES/4)
+        BY = YRES * GAZ * scale + YRES / 2 + \
+                random.randint(-YRES/7, YRES/7)
+        VX = 0
+        VY = 0
+        P = 100
+        COLR = random.randint(0, 255)
+        COLG = random.randint(0, 255)
+        COLB = random.randint(0, 255)
+%>
+
+Now the thing to do is to detect if we've suddenly speed up. This indicated by
+a high acceleration and by knowing that we weren't already moving, i.e. *fast*
+being set to 0. I also mentioned before how you get a period of 0 acceleration
+that occurs between speeding up and slowing down. We don't want to accidentally
+treat slowing down as beginning to speed up, so we enforce a slight delay from
+the end of the *last\_stroke*. We can then set fast to 1 and *notfast* to 0, which 
+resets the timer of how long we've been going slow. This is used in, of course,
+detecting the end of a brush stroke.
+
+There is only a low level of precision we can have over our control of where
+the virtual paintbrush is on screen given the level of and quality of input
+data that we have. To keep things interesting we use some random elements. We
+make an assumption that the user has probably aimed somewhere at the canvas and
+milk that for all it's worth. Where did the start the stroke though? The top of
+the canvas or the bottom? Left or right? We make a guess based on the direction
+of the accleration vector. How far to that direction though? We don't know so
+we randomly scale it. *BX* and *BY* is where we store the brush position. Both
+use YRES as a multiplier when going from acceleration vector to starting
+coordinate though as reality is square while our screen is rectangular. If we
+used XRES we'd end up disproportionately scaling the X position to the side,
+which would feel funny to the user.
+
+We then reset the brush's velocity, *VX* and *VY* and the ammount of paint on
+the brush, *P*. We also then set the paint color randomly. I wish there was a
+nicer way to control this, but nothing simple springs to mind. We could have a
+tri-color LED randomly changing color and the paint color matches the LED color
+when the stroke starts. A project for someone perhaps. Either that or some
+variable resistors with some analog to digital interface so you could dial in a
+paint color. Awesome sounding, but actually a lot of work to do. One thing at a
+time eh?
+
 More to be written.
 
 
