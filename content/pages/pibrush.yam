@@ -177,7 +177,7 @@ import RPi.GPIO as GPIO
 avoid what's called blocking, which is when the program is forced to wait for
 new data. Using select, the network code becomes non-blocking, which allows the
 program to function even if the client isn't transmitting any data.
-%(http://www.pygame.org/, *pygame*) is a the library used for drawing on the
+%(http://www.pygame.org/, *Pygame*) is a the library used for drawing on the
 screen. *numpy* is used for fast array operations to help speed up program
 execution -- the RaspberryPi isn't the world's fastest computer and every
 little helps.
@@ -268,9 +268,12 @@ screen.fill((255, 255, 255))
 pygame.display.flip()
 %>
 
-Then comes screen initialization. First we read in the X resolution and Y
-resolution. Then we initialize pygame (line 41) and set the display mode with
-our resolution (line 42). By default the screen is black, but I think a nice
+Then comes screen initialization. First we read in the X resolution (*XRES*)
+and Y resolution. (*YRES*).
+%(http://docs.python.org/2/library/functions.html#int, *int()*) is used to
+convert the string that getenv returns into a number we can do calculations
+with later. After getting the resolution, we initialize pygame and set the
+display mode with it. By default the screen is black, but I think a nice
 white canvas is preferable so we *.fill()* the screen with white. _(255, 255,
 255)_ is 0-255 (red, green, blue). All colors combined = white (think prisms).
 By default pygame writes to a buffer section of memory, so *.flip()* is
@@ -665,10 +668,11 @@ accelerometer on the Model A. We can use
 %(http://docs.python.org/2/library/string.html#string.split, *.split()*) to
 break it apart into an array of strings for each axis.
 %(http://docs.python.org/2/library/functions.html#float, *float()*) is used to
-convert the string back into a floating point number, which we then store in
-the moving average array we initialized earlier at index Ai. Then it's
-incremented and if it's at the array length AL we set it back to 0. Remember
-that arrays start at index 0 so the last index is the is the length minus one.
+convert the string back into a floating point number (just like with int()
+before), which we then store in the moving average array we initialized earlier
+at index Ai. Then it's incremented and if it's at the array length AL we set it
+back to 0. Remember that arrays start at index 0 so the last index is the is
+the length minus one.
 
 %code(lang=python,numbering=on,firstnumber=180)<
         # moving averages for acceleration
@@ -785,10 +789,10 @@ Now the thing to do is to detect if we've suddenly speed up. This indicated by
 a high acceleration and by knowing that we weren't already moving, i.e. *fast*
 being set to 0. I also mentioned before how you get a period of 0 acceleration
 that occurs between speeding up and slowing down. We don't want to accidentally
-treat slowing down as beginning to speed up, so we enforce a slight delay from
-the end of the *last\_stroke*. We can then set fast to 1 and *notfast* to 0, which 
-resets the timer of how long we've been going slow. This is used in, of course,
-detecting the end of a brush stroke.
+treat slowing down as beginning to speed up, so we enforce a slight delay (0.5
+seconds) from the end of the *last\_stroke*. We can then set fast to 1 and
+*notfast* to 0, which  resets the timer of how long we've been going slow. This
+is used in, of course, detecting the end of a brush stroke.
 
 There is only a low level of precision we can have over our control of where
 the virtual paintbrush is on screen given the level of and quality of input
@@ -812,11 +816,163 @@ variable resistors with some analog to digital interface so you could dial in a
 paint color. Awesome sounding, but actually a lot of work to do. One thing at a
 time eh?
 
-More to be written.
+%code(lang=python,numbering=on,firstnumber=231)<
+    # detect stopping
+    if fast == 1 and (A < 0.1 or ((BX > (XRES + 200) \
+                or BX < -200) and (BY > (YRES + 200) \
+                or BY < -200)) or P <= 0):
+        notfast = notfast + dt
+        if notfast >= 0.12:
+            fast = 0
+            BX = 0
+            BY = 0
+            last_stroke = last_time
+%>
+
+The last code block had to do with speeding up, or when we first started waving
+the Model A. This code block has to do with detecting when we've stop waving.
+First, you can only stop once you've started. After that it's fairly straight
+forward. Any of three conditions indicates stopping. The relative acceleration
+of the Model A should is low, the paintbrush is off the screen, or there's no
+paint on the brush. If any of those conditions are met increment a timer
+(*notfast*) and then if that exceeds 0.12 seconds we're stopping. fast gets set
+to 0, the brush position is reset, and we make a note of when we stopped (used
+in making sure we don't start again immediately in the last code block). The
+reason why we use a timer is to allow for people who may slow down and speed
+up again, the 0 acceleration cross over point, and for people who bend the
+brush around the canvas to create loops.
+
+%code(lang=python,numbering=on,firstnumber=242)<
+    if fast == 1:
+        # accelerate the paint brush
+        VX = VX - GAY * dt * 170
+        VY = VY - GAZ * dt * 170
+        BX = BX + VX * dt * 120
+        BY = BY + VY * dt * 120
+%>
+
+This bit of code is actually responsible for moving the brush, and only when we
+think it's moving. This is where the twice integration comes in. We increment
+the brush velocity by the acceleration, factored by the timestep to keep the
+animation smooth even when the ammount of time it takes for the code to run
+varries. I've also added a factor of *170* to scale up the acceleration some,
+other wise it only moves a few pixels on the screen and that's not very
+exciting. 170 is just a made up number that seemed to work--an empircal value.
+
+The next integration is incrementing the brush position by adding on the
+current velocity. Which also must be factored by the timestep. And then another
+scaling factor, this time of *120*. Realistically these factors should probably
+be adjusted for screen resolution but I haven't worked out a formula for that.
+These numbers work reasonably well with the resolutions I've tried though, so
+I've left them alone.
+
+%code(lang=python,numbering=on,firstnumber=249)<
+        # add splotches.... high velocity big 
+        # splotches far apart, low small close
+        if P > 0:
+            V = numpy.linalg.norm([VX, VY])
+            S = S + V
+            d = A * random.randint(3, 5) * 25 + V
+%>
+
+Now that the paintbrush is moving, comes the last most important bit of code:
+making paint droplets. This... is a complete cludge--a hack, a vague attempt at
+reality. There's almost no real physics here. This is what in technical speak
+could be called a model. It's a rough approximation of what I expect might
+happen. Bearing that in mind I'll try and explain what's going on.
+
+The first thing is to remember that this bit of code follows on from the last
+if statement, so is only run while the paintbrush is moving. And then it's only
+run if there's actually paint left on the brush. Vaguely I expect that the
+further the brush has been swung the more paint I expect to come off and the
+faster it's going the more paint to come off. *V* is calculated as the total
+velocity, and *S* is a running displacement. *d* is calculated as a rough
+estimtate of paint droplet spacing.
+
+Let's look at d in a bit more detail. Paint droplets (probably) fly off due to
+two factors:
+- %(http://www.mne.psu.edu/cimbala/Learning/Fluid/Introductory/what_is_fluid_mechanics.htm,
+Fluid mechanics). Roughly, I'm speaking of the affect of what happens when \
+you move a glass of water too quickly.
+- %(http://en.wikipedia.org/wiki/Drag_%28physics%29, Air resistance). The \
+force you feel acting on your hand when you stick it out the car window on a \
+drive on a nice summer's day.
+
+Both of these are rather complex subjects and therefore I've sort of lumped the
+two of them together as the produce similar results--paint flying off the brush.
+d is made up of A (our acceleration) times a random factor which is the fluid
+dynamics bit, and V is added for the air resistance bit. The random factor
+makes things a bit more interesting, perhaps taking into account things like
+globs of paint or hairs in the brush getting tangled. We also can't forget the
+random scaling factor of *25* which was added so that things are proportioned
+nicely on the screen. (This applies to the acceleration term only as velocity
+was already scaled in the previous code block.)
+
+%code(lang=python,numbering=on,firstnumber=255)<
+            if S > d:
+                S = S - d
+                P = P - pow(A*4, 2) * math.pi
+                pygame.draw.circle(screen, (COLR, COLG, 
+                        COLB), (int(BX), int(BY)), int(A*45))
+                draw = 1
+%>
+
+So if we've travelled further than our expected paint droplet seperation as
+expected according to our, er, precise simulation, we obviously need to draw a
+paint droplet! First we take the droplet distance into account by subtracting
+it from S, which keeps us from immediately drawing another paint droplet. Then
+we calculate the amount of paint that was in the droplet. This is pretty much
+completely made up, I've arbitrarily decided that the acceleration times four,
+squared, times π (pi) will be it. (Yes, that's πr\^2, the area of a circle.)
+Experimentally this matches nicely with the total ammount of paint on the
+brush being 100. Either could be tweaked to get longer or shorter chains of
+droplets.
+
+%(http://www.pygame.org/docs/ref/draw.html#pygame.draw.circle, *draw.circle()*)
+is the Pygame function for drawing a circle, which we're going to assume our
+paint droplets are. (More realistically they should probably be tear shaped.)
+We're drawing on the screen, in our random color at the paintbrush position
+(BX, BY). In this case int() isn't converting from a string, but from a
+floating point number to a whole integer--pixels on the screen at at specific
+coordinates. (It's the difference between 8.128 and 8.0. We need the latter
+as there's only pixel 8 and pixel 9, and no pixel in between.) *A\*45* is the
+paint droplet radius, and yes, 45 is another made up factor. We set draw to 1
+so that we know to refresh the screen.
+
+We're almost done.
+
+%code(lang=python,numbering=on,firstnumber=262)<
+    # push updates to the screen
+    if draw == 1:
+        pygame.display.flip()
+%>
+
+This last bit of code is run at the end of every loop last of every, which does
+the screen refresh if we've specified it.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#quiting
+%3 Quitting
+
+This actually surprisingly easy. If you remember from before about the  while
+loop and running. And then about checking for the KEYDOWN of k\_Q, that's half
+the quitting code right there. The other half is just tidying up. The first
+bit will get us out of the otherwise infinite loop.
+
+%code(lang=python,numbering=on,firstnumber=262)<
+# quit properly
+GPIO.cleanup()
+pygame.quit()
+%>
+
+This last bit is just cleaning up nicely. Let go of the GPIO pins and let go of
+the screen. Viola, done.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#systemsetup
 %1 System Setup & Running
 
-The other nigly details to get things going. To be written.
+At least, done with the code. There are other nigly details to get things
+going. To be written.
