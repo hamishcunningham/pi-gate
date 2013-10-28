@@ -19,7 +19,7 @@ University of Sheffield.
 | %]
 
 %[ |
-%image(http://gate.ac.uk/hamish/pics/hamish-headshot.jpg, Hamish, 150)
+%image(images/hamish-headshot.jpg, Hamish, 150)
 |
 %(http://gate.ac.uk/hamish/, Hamish) is a Research
 Professor in Computer Science 
