@@ -34,25 +34,29 @@ http://Pi.GATE.ac.uk/
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1* Maker Culture meets Art
 
-That there is a new conjunction emerging around open hardware, maker culture,
-and art. Remember how pop culture changed with the advent of punk in the late
-1970s? We seem to be witnessing a similar explosion of 'garageband' creativity
-in the tennies, and the Pi is proudly leading the charge for general purpose
-open source devices in this context. (The Pi foundation even has an _artist in
-residence_ -- %(http://www.raspberrypi.org/archives/4329, Rachel Rayns).)
+There is a new conjunction emerging around open hardware, maker culture, and
+art. Remember how pop culture changed with the advent of punk in the late
+seventies? We seem to be witnessing a similar explosion of 'garageband'
+creativity in the tennies, and the Pi is proudly leading the charge for
+general purpose open source devices%footnote(The Pi isn't actually _open
+hardware_ at present, but it does run on _open source_ software.) in this
+context. (The Pi foundation even has an _artist in residence_ --
+%(http://www.raspberrypi.org/archives/4329, Rachel Rayns).)
 
 %(http://en.wikipedia.org/wiki/List_of_open-source_hardware_projects,
-Open-source hardware) allows people to make their own robots, cameras,
-electrocardiagraph machines and even full computers by downloading schematics
-and building -- incorporating any changes they need -- and, typically, free
-open-source software is available to run these projects. 3D printers, laser
-cutters and CNC routers have helped this adoption of the open-everything
-ethos.
+Open-source hardware) allows people to make their own robots, cameras, or even
+electrocardiagraph machines by downloading schematics and incorporating any
+changes they need -- and, typically, free open-source software is available to
+run these projects. 3D printers, laser cutters and CNC routers have helped
+this adoption of the open-everything ethos%footnote(Two great books with the
+same name document this movement: the fictional _Makers_ by
+%(http://craphound.com/, Cory Doctorow), and
+the non-fiction _Makers_ by %(http://about.me/andersonchris, Chris Anderson)).
 
 There are stacks of DIY projects based on the Raspberry Pi, and the flood
 showns no sign of slowing. The Pi is the first general purpose device (in
 contrast to the magnificent but more specialised Arduino) which is very easy
-to cobble together with other devices. The magnificent community that has
+to cobble together with add-on electronics. The thriving community that has
 grown up around the Pi (including this magazine) is making a huge impact, from
 changes in the %(http://pi.gate.ac.uk/pages/schools.html, UK schools
 curriculum) to %(http://learn.adafruit.com/onion-pi/, the Onion Pi
@@ -64,12 +68,14 @@ PiBrush), a simple on-screen painting system that uses the
 %(http://www.piborg.com/xloborg, XLoBorg) motion and direction sensor add-on
 board from %(http://www.piborg.com/, PiBorg). The XLoBorg adds an
 accelerometer and a magnetometer (compass) to your Pi and makes all sorts of
-motion-based interaction possible. 
+motion-based interaction possible -- like a
+%(http://en.wikipedia.org/wiki/Kinect, Kinect) but free and open. Here's a
+PiBrush picture:
 
 %image(images/pi-brush-snap.jpg, Pi Brush snapshot, 500)
 
-The PiBrush is an interactive art and technology exhibit (a very grand name
-for something so small) that simulates flicking paint off the end of a
+The PiBrush is an interactive art and technology exhibit (a rather grand name
+for something so small!) that simulates flicking paint off the end of a
 paintbrush onto canvas -- as %(http://en.wikipedia.org/wiki/Jackson_Pollock,
 Jackson Pollock) famously did in the 1940s and 50s. It utilizes two Raspberry
 Pis (one Model B and one Model A), one %(http://piborg.org/xloborg/, XLoBorg),
@@ -77,21 +83,30 @@ a battery pack, a display, and two Wi-Fi dongles. The Model A is held by the
 user and waved around. It collects acceleration data with the XLoBorg, which
 it then transmits via ad hoc Wi-Fi to the Model B, which processes the data
 collected into paint droplets and displays them on the screen, connected via
-HDMI.
+HDMI. Functionally it looks like this:
 
-%image(images/pibrush/pibrush_architecture.png, Pi Brush snapshot)
+%image(images/pibrush/pibrush_architecture.png, Pi Brush snapshot, 500)
 
-%[
-| %(images/pibrush/modelb.jpg, %image(images/pibrush/thumbs/modelb.jpg, Model B, 200, 150)) | %(images/pibrush/modela.jpg, %image(images/pibrush/thumbs/modela.jpg, Model A, 200, 150)) |
-%]
+And here's the hardware (we may improve on the elastic band in future models
+:-)). The model A (client):
 
-(The red button saves the current canvas to an image file and resets it to
-blank.)
+%%% %[
+%%% | %(images/pibrush/modelb.jpg, %image(images/pibrush/thumbs/modelb.jpg, Model B, 200, 150)) | %(images/pibrush/modela.jpg, %image(images/pibrush/thumbs/modela.jpg, Model A, 200, 150)) |
+%%% %]
+
+%image(images/pibrush/modela.jpg, Model A, 500)
+
+And the model B (server):
+
+%image(images/pibrush/modelb.jpg, Model B, 500)
+
+(The red button on the server saves the current canvas to an image file and
+resets it to blank.)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#programming
-%1 Programming
+%1* Programming
 
 The hardware for this project is fairly straight forward. The XLoBorg plugs
 directly into the GPIO pins as a block, and a GPIO button is just a button
@@ -115,7 +130,7 @@ the output on the screen.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#accel_client
-%2 accel\_client.py
+%2* accel\_client.py
 
 The client script is fairly straight forward. There are two unique points to
 consider though. Reading in the accelerometer data and the networking code.
@@ -194,7 +209,7 @@ That's it. Not so bad. A nice warm up...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#accel_server
-%2 accel\_server.py
+%2* accel\_server.py
 
 The server script is where the real meat of the programming is as it handles
 the simulation and display. Similar to accel\_client.py, necessary libraries
@@ -233,7 +248,7 @@ the GPIO pins.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#initialization
-%3 Initialization
+%3* Initialization
 
 %code(lang=python,numbering=on,firstnumber=13)<
 # ==============
@@ -469,7 +484,7 @@ out the paint color each stroke.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#functions
-%3 Functions
+%3* Functions
 
 %code(lang=python,numbering=on,firstnumber=100)<
 # =========
@@ -546,7 +561,7 @@ existing file first.)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#mainprogram
-%3 Main program
+%3* Main program
 
 %code(lang=python,numbering=on,firstnumber=126)<
 # ============
@@ -588,7 +603,7 @@ paintbrush and canvas.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#phase1
-%4 Phase 1
+%4* Phase 1
 
 %code(lang=python,numbering=on,firstnumber=135)<
     # move time forward
@@ -672,7 +687,7 @@ and don't reset the screen.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#phase2
-%4 Phase 2
+%4* Phase 2
 
 %code(lang=python,numbering=on,firstnumber=164)<
     # ===================
@@ -782,7 +797,7 @@ subtracts gravity from its absolute direction. And that's it for Phase 2.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#phase3
-%4 Phase 3
+%4* Phase 3
 
 %code(lang=python,numbering=on,firstnumber=207)<
     # ==================
@@ -993,7 +1008,7 @@ the screen refresh if we've specified it.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#quiting
-%3 Quitting
+%3* Quitting
 
 This actually surprisingly easy. If you remember from before about the  while
 loop and running. And then about checking for the KEYDOWN of k\_Q, that's half
