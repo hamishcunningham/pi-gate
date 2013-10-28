@@ -1,7 +1,7 @@
 PiBrush -- Painting with the Pi and XLoBorg
 
 _Turning an accelerometer into a paint brush with the Raspberry Pi_
-%meta(summary=Turning an accelerometer into a paint brush with Raspberry Pi)
+%%% %meta(summary=Turning an accelerometer into a paint brush with Raspberry Pi)
 
 _%(http://pi.gate.ac.uk/pages/about.html#fred, Fred Sonnenwald) and
 %(http://pi.gate.ac.uk/pages/about.html#hamish, Hamish Cunningham), November
