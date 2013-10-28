@@ -1,6 +1,7 @@
 PiBrush -- Painting with the Pi and XLoBorg
 
-_Turning an accelerometer into a paint brush with Raspberry Pi_
+_Turning an accelerometer into a paint brush with the Raspberry Pi_
+%meta(summary=Turning an accelerometer into a paint brush with Raspberry Pi)
 
 _%(http://pi.gate.ac.uk/pages/about.html#fred, Fred Sonnenwald) and
 %(http://pi.gate.ac.uk/pages/about.html#hamish, Hamish Cunningham), November
@@ -24,11 +25,14 @@ University of Sheffield.
 %(http://gate.ac.uk/hamish/, Hamish) is a Research
 Professor in Computer Science 
 in Sheffield currently working on various Pi-related projects at
-http://pi.gate.ac.uk/
+http://Pi.GATE.ac.uk/
 | %]
 
-And *thanks* to %(http://92.27.63.80/, Bo Meson) for inspiration!
+*Thanks* to %(http://92.27.63.80/, Bo Meson) for inspiration!
 -----------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1* Maker Culture meets Art
 
 That there is a new conjunction emerging around open hardware, maker culture,
 and art. Remember how pop culture changed with the advent of punk in the late
