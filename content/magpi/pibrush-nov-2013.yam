@@ -11,8 +11,7 @@ _%(http://pi.gate.ac.uk/pages/about.html#fred, Fred Sonnenwald) and
 %1* About the authors
 
 %[ |
-%image(http://www.shef.ac.uk/polopoly_fs/1.75576!/image/ss1.png, Fred's
-Research, 175)
+%image(images/fred.jpg, Fred, 150)
 |
 %(http://sonnenwald.co.uk, Fred)
 is currently completing a PhD in Civil Engineering at the
@@ -29,6 +28,17 @@ http://Pi.GATE.ac.uk/
 | %]
 
 *Thanks* to %(http://92.27.63.80/, Bo Meson) for inspiration!
+-----------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1* Prizes!
+
+%(http://www.piborg.com/, PiBorg), makers of the
+%(http://www.piborg.com/xloborg, XLoBorg) motion and direction sensor Pi
+add-on that this project uses, are offering a prize for the best suggestion
+(in 200 words or less) for interesting things to do with the XLo. Anatomically
+feasible suggestions only, please :-)
+
 -----------------------------------------------------------------------------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,35 +116,31 @@ And the model B (server):
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#programming
-%1* Programming
+%1* The Code
 
-The hardware for this project is fairly straight forward. The XLoBorg plugs
+The hardware for this project is fairly straightforward. The XLoBorg plugs
 directly into the GPIO pins as a block on the client, and a push button simply
 connects a ground and GPIO pin on the server. The software is where the
-challenge lies. While I'd rate it as intermediate to advanced code to write, I'm
-hoping to shed some light on what I've done. The requirements are some basic
-familiarity with the Python programming language and basic physics. 
+challenge lies: intermediate to advanced code to write, using Python and some
+basic physics. 
 
-First, what code? The code is available on
+The code is available on
 %(https://github.com/hamishcunningham/pi-tronics/tree/master/pibrush/bin,
-GitHub). This will always be the latest version. There's the python file
-*accel\_client.py* which runs on the Model A and there's *accel\_server.py*
-which runs on the Model B. The former reads in off the sensor and sends it
-across the network, the latter recieves the data, does processing, and displays
-the output on the screen. It's the latter that's really interesting.
+GitHub) and as a %(http://pi.gate.ac.uk/pages/package.html, Rasbian package in
+an Ubuntu PPA). The core is in *accel\_client.py* which runs on the Model A
+and *accel\_server.py* which runs on the Model B. The former reads from the
+sensor and sends data across the network; the latter processes the data and
+displays the output on the screen.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#accel_server
 %2* accel\_server.py
 
-The server script is the meat of the programming is as it handles the out
-physics simulation and display. A lot of the variable initialization is routine
-and straight forward.
-
-
-Some wowever, isn't. As we're dealing with sensor input we want to use
-something called a _moving average_ to store accelerometer readings.
+The server script is the meat of the programming is as it handles the physics
+simulation and display. First, as we're dealing with sensor input we want to
+use something called a _moving average_ to store accelerometer readings, which
+is initialised like this:
 
 %code(lang=python,numbering=on,firstnumber=48)<
 # length of moving average array
@@ -152,10 +158,10 @@ Ai = 0
 A moving average is the average of, in this case, the last 20 readings. Some
 sort of filtering is almost always necessary when dealing with the sort of
 analog input data that comes from an acceleromter to prevent sudden jumps in
-the readings (e.g. you knocked it) from having an undue impact on the
-processing. A moving average is a convenient and easy way to do it. We simply
-input The current reading at index *Ai* and then increment Ai until it exceeds
-*AL*, then wrap it back around:
+the readings from having an undue impact on the processing. A moving average
+is a convenient and easy way to do it. We simply input the current reading at
+index *Ai* and then increment Ai until it exceeds *AL*, then wrap it back
+around:
 
 %code(lang=python,numbering=on,firstnumber=174)<
         AXa[Ai] = float(a[0])
@@ -166,10 +172,11 @@ input The current reading at index *Ai* and then increment Ai until it exceeds
             Ai = 0
 %>
 
-(*a* is an array of the acclerometer data as read over the network.) I've used
-*numpy* because it executes more quickly than standard Python lsits, and there
-are convenient functions to make things simpler like *.ones()* to initialze all
-of *AZa* to a value of one -- we assume a starting 1G of gravity downwards.
+(Here *a* is an array of the acclerometer data as read over the network.) I've
+used *numpy* because it executes more quickly than standard Python lists, and
+there are convenient functions to make things simpler like *.ones()* to
+initialze all of *AZa* to a value of one -- we assume a starting 1G of gravity
+downwards.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -198,16 +205,16 @@ def polar(X, Y, Z):
     return (x, y, z)
 %>
 
-*polar* takes a Cartesian X, Y, and Z coordinate and returns the equivalent
-polar coordinates, where x is R, is the radius to the point from the origin,
-and y is A and z is B. The latter are the angular rotation about the Z and Y
-axis. Because the Model A may be rotated relative to the screen, we need a
-convenient mechanism for rotating the acceleration vectors recorded to ones we
-can use on the screen. In order to do that though we need to subtract the
-Earth's gravitational field. This is what the polar coordinates are used for.
-It's an extension of the regular
+Here *polar* takes a Cartesian X, Y, and Z coordinate and returns the
+equivalent polar coordinates, where x is R, is the radius to the point from
+the origin, and y is A and z is B. The latter are the angular rotation about
+the Z and Y axis. Because the Model A may be rotated relative to the screen,
+we need a convenient mechanism for rotating the acceleration vectors recorded
+to ones we can use on the screen. In order to do that though we need to
+subtract the Earth's gravitational field. This is what the polar coordinates
+are used for. It's an extension of the regular
 %(http://hotmath.com/hotmath_help/topics/adding-and-subtracting-vectors.html,
-subtraction of vectors). This function was based off
+subtraction of vectors). This function was based on
 %(http://www.processing.org/discourse/beta/num_1236393966.html, this) forum
 thread.
 
@@ -219,12 +226,12 @@ def cartesian(X, A, B):
     return (x, y, z)
 %>
 
-*cartesian* as you might suspect does the opposite of polar, taking the
+Here *cartesian* as you might suspect does the opposite of polar, taking the
 distance X and rotations A and B and turns them back into Cartesian
-coordinates. As this code is only used as part of getting coordinates ready for
-the screen, x, as the coordinate into the screen, is permanently set to 0. This
-is an optimization to help the code run better on the Pi. The code here is
-based on %(http://electron9.phys.utk.edu/vectors/3dcoordinates.htm, this)
+coordinates. As this code is only used as part of getting coordinates ready
+for the screen, x, as the coordinate into the screen, is permanently set to 0.
+This is an optimization to help the code run better on the Pi. The code here
+is based on %(http://electron9.phys.utk.edu/vectors/3dcoordinates.htm, this)
 explanation of Cartesian and polar coordinates.
 
 
@@ -232,7 +239,7 @@ explanation of Cartesian and polar coordinates.
 %#mainprogram
 %3* Main program
 
-The main program consists of an infinetly repeating loop that reads the
+The main program consists of an infinitely repeating loop that reads the
 accelerometer data over the network, applies the earlier moving average, and
 then processes it.
 
