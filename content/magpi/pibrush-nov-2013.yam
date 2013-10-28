@@ -14,7 +14,7 @@ _%(http://pi.gate.ac.uk/pages/about.html#fred, Fred Sonnenwald) and
 %image(http://www.shef.ac.uk/polopoly_fs/1.75576!/image/ss1.png, Fred's
 Research, 175)
 |
-%(http://www.shef.ac.uk/civil/staff/research/sonnenwaldf, Fred)
+%(http://sonnenwald.co.uk, Fred)
 is currently completing a PhD in Civil Engineering at the
 University of Sheffield.
 | %]
@@ -101,8 +101,7 @@ And the model B (server):
 
 %image(images/pibrush/modelb.jpg, Model B, 500)
 
-(The red button on the server saves the current canvas to an image file and
-resets it to blank.)
+(The red button on the server saves the picture and starts another.)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -110,231 +109,32 @@ resets it to blank.)
 %1* Programming
 
 The hardware for this project is fairly straight forward. The XLoBorg plugs
-directly into the GPIO pins as a block, and a GPIO button is just a button
-connected between the ground and a GPIO pin -- we've used BCM pin 17 or board
-pin 11. The software is where the challenge lies.
+directly into the GPIO pins as a block on the client, and a push button simply
+connects a ground and GPIO pin on the server. The software is where the
+challenge lies. While I'd rate it as intermediate to advanced code to write, I'm
+hoping to shed some light on what I've done. The requirements are some basic
+familiarity with the Python programming language and basic physics. 
 
-I developed the code from scratch, and doing so required a variety of
-knowledge. While I'd rate it as intermediate to advanced code to write, I'm
-hoping to shed enough light on it here that it is only beginner to intermediate
-to understand. The only real requirements are some basic familiarity with the
-Python programming language, networking (IP addresses), and basic Physics. 
-
-First, what code. The code is available on
+First, what code? The code is available on
 %(https://github.com/hamishcunningham/pi-tronics/tree/master/pibrush/bin,
 GitHub). This will always be the latest version. There's the python file
 *accel\_client.py* which runs on the Model A and there's *accel\_server.py*
 which runs on the Model B. The former reads in off the sensor and sends it
 across the network, the latter recieves the data, does processing, and displays
-the output on the screen.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%#accel_client
-%2* accel\_client.py
-
-The client script is fairly straight forward. There are two unique points to
-consider though. Reading in the accelerometer data and the networking code.
-First though, we import the necessary libraries.
-
-%code(lang=python,numbering=on,firstnumber=1)<
-import socket
-import XLoBorg
-import time
-import os
-%>
-
-*socket* is for networking and *XLoBorg*, the accelerometer. *time* is used to
-for its sleep function and *os* to read in the server's IP address. So let us
-first setup for the networking.
-
-%code(lang=python,numbering=on,firstnumber=6)<
-# network stufff
-server = os.getenv('SERVER', 'modelb')
-port = 5005
-%>
-
-Lines 7 and 8 define the IP address (or hostname) and destination port of the
-server. You'll notice %(http://docs.python.org/2/library/os.html#os.getenv,
-*os.getenv*) is used. This checks for what are called
-%(http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html, environment
-variables). They're set before the program is run. If there's nothing found
-it defaults back to 'modelb' in this case though. I've arbitrarily picked out
-the port number. Generally any number over 1024 is fine though.
-
-The XLoBorg has its own specific initialization function to be run at the start
-of a program using it. This uses the library to start communicating with the
-accelerometer over the %(http://en.wikipedia.org/wiki/I%C2%B2C, I2C bus).
-
-%code(lang=python,numbering=on,firstnumber=10)<
-# setup for the accelerometer
-XLoBorg.printFunction = XLoBorg.NoPrint
-XLoBorg.Init()
-%>
-
-Next, the outgoing _socket_ is created. Sockets are the mystical term used to
-describe the connector that programs use for talking to each other over the
-internet. They come in different forms, we're using a UDP socket, also known
-as a %(http://en.wikipedia.org/wiki/User_Datagram_Protocol, Datagram) socket.
-The special ability of these that we're taking advantage of here is that
-UDP is simple and stateless. It's easy to setup and the Model A can continually
-send and it doesn't matter what the Model B does. That makes for conveniently
-robust communication in this scenario.
-
-%code(lang=python,numbering=on,firstnumber=14)<
-# make the socket connection
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-%>
-
-Afterwards, the main program begins as we enter an infinite loop -- we want
-to continually read the accelerometer and send that information off. Line 17/18
-are used to construct the outgoing message. It conists of three comma
-seperated, signed, floating point values which are fed from the special XLoBorg
-*ReadAccelerometer* function. (See
-%(http://docs.python.org/2/library/stdtypes.html#string-formatting, String
-Formatting Operations) for details on this.) *sock.sendto* then sends the
-message and then %(http://docs.python.org/2/library/time.html#time.sleep,
-*time.sleep*) causing Python to wait for a small interval. Then it all starts
-again -- about 200 times a second.
-
-%code(lang=python,numbering=on,firstnumber=16)<
-while True:
-    message = '%+01.4f,%+01.4f,%+01.4f' \
-            % XLoBorg.ReadAccelerometer()
-    sock.sendto(message, (server, port))
-    time.sleep(0.005)
-%>
-
-That's it. Not so bad. A nice warm up...
+the output on the screen. It's the latter that's really interesting.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#accel_server
 %2* accel\_server.py
 
-The server script is where the real meat of the programming is as it handles
-the simulation and display. Similar to accel\_client.py, necessary libraries
-are first imported.
-
-%code(lang=python,numbering=on,firstnumber=1)<
-import socket
-import select
-import pygame
-import time
-import numpy
-import math
-import datetime
-import random
-import os
-import RPi.GPIO as GPIO
-%>
-
-*socket* we've already met, but *select* is new, and related. It's used to
-avoid what's called blocking, which is when the program is forced to wait for
-new data. Using select, the network code becomes non-blocking, which allows the
-program to function even if the client isn't transmitting any data.
-%(http://www.pygame.org/, *Pygame*) is a the library used for drawing on the
-screen. *numpy* is used for fast array operations to help speed up program
-execution -- the RaspberryPi isn't the world's fastest computer and every
-little helps.
-
-*math* contains the functions like _sin_ and _cos_ which we use to handle some
-of the translation from where the accelerometer is to where the paint is on the
-screen. *datetime* is a bit of code that got accidentally left in from an old
-version -- oops! (It was used to print the current date on the screen during
-debugging to tell if the program was frozen or not.) *random* is used to
-generate, as it sounds, random numbers. Finally *RPi.GPIO* is used to talk with
-the GPIO pins.
+The server script is the meat of the programming is as it handles the out
+physics simulation and display. A lot of the variable initialization is routine
+and straight forward.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%#initialization
-%3* Initialization
-
-%code(lang=python,numbering=on,firstnumber=13)<
-# ==============
-# initialization
-# ==============
-%>
-
-Next comes a lot of boring and tedious bits of code which I've classed under
-initialization. These are various pieces of code that need to be run just once
-to get things started.
-
-%code(lang=python,numbering=on,firstnumber=17)<
-# port to listen on
-port = 5005
-
-# setup networking
-sock = socket.socket(socket.AF_INET,
-        socket.SOCK_DGRAM) # UDP
-sock.bind(("0.0.0.0", port))
-sock.setblocking(0)
-%>
-
-First there's the network code. This will look familiar. It's the flip side of
-what was done on the client. We define the network port to listen on and then
-create a socket. Then we tell the socket to listen using the *.bind()*
-function. 0.0.0.0 in this case tells it to listen on all network interfaces
-(so you could use Ethernet or Wi-Fi). Then *.setblocking()* is needed for that
-non-blocking thing I mentioned before.
-
-%code(lang=python,numbering=on,firstnumber=26)<
-# directory for saves
-SAVEDIR = os.getenv('SAVEDIR', '.')
-%>
-
-*os.getenv* is used again, the first of several times. This time it's used to
-set a directory to store save files in, and otherwise defaults to '.', which is
-the current working directory (the folder you were in when you started the
-program).
-
-%code(lang=python,numbering=on,firstnumber=29)<
-# setup GPIO input for reset
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-
-# variable to store button state
-button = 0
-%>
-
-The above code initializes the GPIO for input. *.setmode()* says we'll be
-using the
-%(http://elinux.org/RPi_Low-level_peripherals#General_Purpose_Input.2FOutput_.28GPIO.29,
-Broadcom pin names). *.setup* then says we're looking for input on pin 17. It
-also specifically tells the chip to use the internal resistor on the pin so
-that there's no floating.
-(%(http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/robot/buttons_and_switches/,
-Here) is a pretty good article to which explains floating, some interesting
-extra reading.) The last thing is the *button* variable which is used to
-indicate whether or not the button hooked up to the GPIO has been pushed or
-not. By default it's not been so it starts at 0.
-
-%code(lang=python,numbering=on,firstnumber=36)<
-# screen solution
-XRES = int(os.getenv('XRES', 1920))
-YRES = int(os.getenv('YRES', 1080))
-
-# setup display
-pygame.init()
-screen = pygame.display.set_mode((XRES, YRES))
-# reset to white
-screen.fill((255, 255, 255))
-# push white
-pygame.display.flip()
-%>
-
-Then comes screen initialization. First we read in the X resolution (*XRES*)
-and Y resolution. (*YRES*).
-%(http://docs.python.org/2/library/functions.html#int, *int()*) is used to
-convert the string that getenv returns into a number we can do calculations
-with later. After getting the resolution, we initialize pygame and set the
-display mode with it. By default the screen is black, but I think a nice
-white canvas is preferable so we *.fill()* the screen with white. _(255, 255,
-255)_ is 0-255 (red, green, blue). All colors combined = white (think prisms).
-By default pygame writes to a buffer section of memory, so *.flip()* is
-required to tell it to display the current buffer. (A second buffer is then
-availble to draw on until the next flip -- this is called double buffering.)
+Some wowever, isn't. As we're dealing with sensor input we want to use
+something called a _moving average_ to store accelerometer readings.
 
 %code(lang=python,numbering=on,firstnumber=48)<
 # length of moving average array
@@ -349,155 +149,42 @@ AZa = numpy.ones((AL, 1))
 Ai = 0
 %>
 
-Next we create the variables used for storing the raw accelerometer data --
-that's the *AXa*, *AYa*, and *AZa* variables. There's a *numpy* array for each
-direction, X, Y, and Z. X is into the screen, Z down it and Y across. But why
-arrays? Surely a single reading should be in a single variable? Normally that
-would be the case, but we're going to use something called a _moving average_
-(MA) to filter the input data.
+A moving average is the average of, in this case, the last 20 readings. Some
+sort of filtering is almost always necessary when dealing with the sort of
+analog input data that comes from an acceleromter to prevent sudden jumps in
+the readings (e.g. you knocked it) from having an undue impact on the
+processing. A moving average is a convenient and easy way to do it. We simply
+input The current reading at index *Ai* and then increment Ai until it exceeds
+*AL*, then wrap it back around:
 
-An MA is the average of, in this case, the last 20 readings. Some sort of
-filtering is almost always necessary when dealing with the sort of analog input
-data that comes from an acceleromter to prevent sudden jumps in the readings
-(e.g. you knocked it) from having an undue impact on the processing. An MA is a
-convenient and easy way to do it. We simply input The current reading at index
-*Ai* and then increment Ai until it exceeds *AL*, then wrap it back around.
-You'll see this in the code later. I use *numpy* here because they execute very
-quickly (read: effeciently) and there are handy functions to make things
-simpler. Like *.ones()* to initialze all of *AZa* to a value of one -- there's
-always by default 1G of gravity downwards.
-
-After dealing with the accelerometer directly are declarations for those
-variables dealing with gravity. *GX*, etc., store the best (most recent) guess
-of what direction gravity is in, as once we start moving we have a combined
-acceleration of gravity plus the user's movement. We need this to subtract
-gravity back out so we know how the user is moving. Ideally this would be done
-with a gyroscope, but we don't have one of those so we make do.
-
-%code(lang=python,numbering=on,firstnumber=48)<
-# store gravity when fast is detected..
-GX = 0
-GY = 0
-GZ = 1
-
-# polar gravity
-PGR = 0
-PGA = -math.pi/2
-PGB = 0
-
-# screen gravity
-PSGR = 1
-PSGA = -math.pi/2
-PSGB = 0
-
-# accelerometer values
-AX = 0
-AY = 0
-AZ = 0
-
-# rotated for screen accelerometer values
-GAX = 0
-GAY = 0
-GAZ = 0
+%code(lang=python,numbering=on,firstnumber=174)<
+        AXa[Ai] = float(a[0])
+        AYa[Ai] = float(a[1])
+        AZa[Ai] = float(a[2])
+        Ai = Ai + 1
+        if Ai == AL:
+            Ai = 0
 %>
 
-*PGR*, etc., store the equivalent
-%(http://en.wikipedia.org/wiki/Polar_coordinate_system, _polar coordinates_)
-of the gravity estimate, where R is the radius to the point from the origin,
-and A and B are the angular rotation about the Z and Y axis. The polar
-coordinates are used for the actual subtraction as subtracting the gravity
-vector from the current acceleration vector is very easy like this -- it's an
-extension of the regular
-%(http://hotmath.com/hotmath_help/topics/adding-and-subtracting-vectors.html,
-subtraction of vectors).
-
-*PSGR* are the polar coordinates of gravity in the screen, which is an
-accleration field that's always downwards. If you consider that the Model A
-might not be parallel to the screen while being waved about (e.g. it's held
-rotated) then we need to rotate the acceleration field it experiences back to
-screen normal. I'm actually not entirely sure about this -- this was all new
-to me when I was writing it, so this is just a guess really. It seems to work
-though so I've left it in. In my experience most projects like this have fiddly
-bits like this.
-
-*AX* etc. store the result of the moving average of the acceleromter data.
-*GAX* etc. store the current acceleration as from AX but rotated correctly for
-the screen.
-
-%code(lang=python,numbering=on,firstnumber=83)<
-last_G = 0
-
-# timing information
-last_time = time.time();
-%>
-
-*last\_G* stores the time at which the last estimate of the direction of
-gravity was taken. *last\_time* stores the time at which the last loop was
-executed. This is used for estimating distance the brush has travelled as
-part of a process called _twice integration_. You think someone would have
-written up a nice simple explanation of this, but nothing turns up after a
-quick Google.
-%(http://www.ugrad.math.ubc.ca/coursedoc/math103/site2012/keshet.notes/Chapter4.pdf,
-This) is a somewhat high level explanation of what's going on, and
-%(http://www.astarmathsandphysics.com/a_level_maths_notes/M1/a_level_maths_notes_m1_acceleration_velocity_and_displacement.html,
-this) is a bit simpler, but I'm not terribly happy with either explanation.
-I'll try and simplify it a bit, or at least put it a bit more concisely.
-
-Imagine you're in a car traveling down the motorway at 100 kph. In one hour
-you will have travelled 100 km. Easy? That's simple integration, going from
-velocity to displacement. Acceleration though, is the rate of change in
-velocity, e.g. the speed at which the needle of the speedometer in the car
-climbs. So now imagine accelerating at 1 kph per second, after 10 seconds
-you'll be going 10 kph faster, so instead of 100 kph you're now going 110 kph.
-Apply that to the distance you've travelled and you have twice integration.
-(Fun fact: if you kept up that acceleration, after an hour you'd be going 3,700
-kph and would have traveled 36,370 km. Or almost around the Earth.)
-
-%code(lang=python,numbering=on,firstnumber=88)<
-# brush info
-BX = 0 # position
-BY = 0
-VX = 0 # velocity
-VY = 0
-P = 0 # amount of paint on brush
-S = 0 # distance brush has traveled
-last_stroke = 0
-%>
-
-This next bit of code initializes the variables regarding our virtual
-paintbrush. *BX* and *BY* for the position on the screen -- no Z because it's
-only going up and down. *VX* etc. for it's velocity, or speed. *P* to keep
-track of how much virtual paint is left on the brush, and *S* to keep track of
-how far the brush has travelled - this is used in determining how far apart
-the paint splatters ought to be. *last\_stroke* is the time at which we last
-painted.
-
-%code(lang=python,numbering=on,firstnumber=97)<
-# seed random number generator
-random.seed(time.time())
-%>
-
-This last bit of code initializes the random number generator with the current
-time. Without this, it would be possible to get the same random numbers over
-and over each time the program was run. We use the random numbers for picking
-out the paint color each stroke.
+(*a* is an array of the acclerometer data as read over the network.) I've used
+*numpy* because it executes more quickly than standard Python lsits, and there
+are convenient functions to make things simpler like *.ones()* to initialze all
+of *AZa* to a value of one -- we assume a starting 1G of gravity downwards.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#functions
 %3* Functions
 
-%code(lang=python,numbering=on,firstnumber=100)<
-# =========
-# functions
-# =========
-%>
-
 If you don't know, a function is a bit of code written in such a way that it
 can be executed from different places in the main program. Each _call_ you can
 pass different _arguments_ (input parameters) that will be operated on and a
-new result _returned_. If you already know this that's handy. There are three
-functions which I've written for use in accel\_server.py.
+new result _returned_. There are two quite important functions used in the
+code that have to do with
+%(http://en.wikipedia.org/wiki/Polar_coordinate_system, _polar coordinates_).
+If you know X, Y, Z, those are 
+%(https://en.wikipedia.org/wiki/Cartesian_coordinate_system, _Cartesian
+coordinates_).
 
 %code(lang=python,numbering=on,firstnumber=104)<
 def polar(X, Y, Z):
@@ -512,9 +199,16 @@ def polar(X, Y, Z):
 %>
 
 *polar* takes a Cartesian X, Y, and Z coordinate and returns the equivalent
-polar coordinates. It's used several times later to make the conversion, as
-previously mentioned, as part of rotating gravity. I've based it off the code
-in %(http://www.processing.org/discourse/beta/num_1236393966.html, this) forum
+polar coordinates, where x is R, is the radius to the point from the origin,
+and y is A and z is B. The latter are the angular rotation about the Z and Y
+axis. Because the Model A may be rotated relative to the screen, we need a
+convenient mechanism for rotating the acceleration vectors recorded to ones we
+can use on the screen. In order to do that though we need to subtract the
+Earth's gravitational field. This is what the polar coordinates are used for.
+It's an extension of the regular
+%(http://hotmath.com/hotmath_help/topics/adding-and-subtracting-vectors.html,
+subtraction of vectors). This function was based off
+%(http://www.processing.org/discourse/beta/num_1236393966.html, this) forum
 thread.
 
 %code(lang=python,numbering=on,firstnumber=114)<
@@ -533,78 +227,14 @@ is an optimization to help the code run better on the Pi. The code here is
 based on %(http://electron9.phys.utk.edu/vectors/3dcoordinates.htm, this)
 explanation of Cartesian and polar coordinates.
 
-%code(lang=python,numbering=on,firstnumber=120)<
-def savereset():
-    filename = SAVEDIR + os.sep + ("%i.png" % time.time())
-    pygame.image.save(screen, filename)
-    screen.fill((255, 255, 255))
-%>
-
-The last function, *saverest* is called when either the `R' key is pressed on
-the keyboard or the GPIO button is pressed. It (you may notice a pattern in the
-function names) saves the screen and then resets it back to white. *filename*
-is created as the previously defined *SAVEDIR* plus *os.sep* which is a fixed
-variable as the file system serpator - `/' under Linux. (`\\' under Windows.)
-After the save path comes the actual file name, which we want to be unique so
-that we don't overwrite an old file. We also don't want to have to stop for
-user input in case there's no keyboard.
-
-In this scenario I've found a %(http://en.wikipedia.org/wiki/Unix_time, Unix
-timestamp) to be the easiest way of doing this. It's simply the number of
-seconds since Jan. 1, 1970, but it's always going up and unless someone invents
-time travel won't repeat. You may have realized though that as the Pi doesn't
-have a real time clock, it may indeed count the same time over and over. A
-weakness that will have to be accepted. Besides, what are the odds someone
-would reset the screen at exactly the same number of seconds since the Pi was
-turned on _twice_? (A proper way to fix this though would be to check for an
-existing file first.)
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#mainprogram
 %3* Main program
 
-%code(lang=python,numbering=on,firstnumber=126)<
-# ============
-# main program
-# ============
-%>
-
-That's the functions over, now onto the main program! Interesting things start
-to happen. Almost. 3 more variable declarations that in this funny spot first
-though. They ended up here though because they specifically have to do with
-code loops.
-
-%code(lang=python,numbering=on,firstnumber=130)<
-fast = 0
-notfast = 0
-running = 1
-while running:
-%>
-
-*fast* is used to indicate whether or not the Model A is currently being waved
-around and is trigged when acceleration starts. It's the start of a brush
-stroke. *notfast* is an indicator of the opposite, the amount of time Model A
-has not been accelerating. This isn't a binary true or false situation as you
-might suspect as there's a quick point in time when there's no acceleration.
-This time is the difference between lifting up on the gas pedal in the car and
-pressing brake pedal to slow down. Paint droplets shouldn't stop being
-deposited on the screen between the end of starting to wave and the beginning
-of stopping to wave the Model A as that's unrealistic.
-
-*running* is what it sounds like and is used to keep the program continually
-looping in a *while* loop. When we want to quit we set running to 0, the loop
-finishes and then the program exits.
-
-The main program loop consists of three phases. Phase 1 consists of basic tasks
-that need to be done over and over. Phase 2 consists of reading the
-accelerometer data and pre-processing it. Phase 3 consists of manipulating the
-paintbrush and canvas.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%#phase1
-%4* Phase 1
+The main program consists of an infinetly repeating loop that reads the
+accelerometer data over the network, applies the earlier moving average, and
+then processes it.
 
 %code(lang=python,numbering=on,firstnumber=135)<
     # move time forward
@@ -613,122 +243,9 @@ paintbrush and canvas.
 %>
 
 The first thing to be done each loop is to move time forwards. Ideally
-execution time for each loop is identical and *dt* (change in time) is the
-same. However, something may interrupt, cause a bit of lag, or some if
-statement may be skipped either increasing or decreasing execution time of the
-loop. For something that moves on the screen this is bad, so by knowing how
-long it's been since the last update we can know how far to move things, i.e.,
-distance = velocity \* time.
-
-%code(lang=python,numbering=on,firstnumber=139)<
-    # no changes made to the screen so far
-    draw = 0
-%>
-
-*draw* is a marker to tell us whether or not to .flip() the screen later. If we
-don't need to, we won't. This saves some CPU time, and is one of the reasons
-dt is important.
-
-The next two bits of code deal with input. The first is keyboard input handled
-though PyGame. The second is GPIO input from the push button we installed,
-which we handle manually.
-
-%code(lang=python,numbering=on,firstnumber=142)<
-    # check for keyboard input
-    event = pygame.event.poll()
-    if event.type == pygame.QUIT:
-        running = 0
-    elif event.type == pygame.KEYDOWN:
-        if event.key == pygame.K_q:
-            running = 0
-        elif event.key == pygame.K_r:
-            savereset()
-            draw = 1
-%>
-
-*.poll()* performs an instantaneous check of the keyboard (and for example
-joystick if we had one of those) and stores it in *event*. event then
-contains all the information about what was found in the poll. First is what
-type of event is happening? There's a special *pygame.QUIT* type, which is
-triggered a number of different ways, clicking the X button in a window, by
-the kill command, etc. It checks all of those so that we can quit nicely. In
-general though we don't expect this to happen.
-
-*pygame.KEYDOWN* is a regular keypress. Once we know it's a keypress, we can
-check which key has been pressed. If it's the Q key we indicate we want to quit
-but setting running to 0. If it's the R key we save the screen, reset it, and
-then set draw to 1 so that we know to .flip() later.
-
-%code(lang=python,numbering=on,firstnumber=153)<
-    # check for GPIO input, but because it's a
-    # pull down (goes from 1 to 0 when pressed)
-    # flip logic
-    button_now = not(GPIO.input(17))
-    if button_now == 1 and button == 0:
-        # the button was pressed
-        savereset()
-        draw = 1
-    button = button_now    
-%>
-
-The logic for the GPIO check is a bit more complex. Because the button
-connects the pin and ground and the pin is in a pull up state, by default
-*.input()* reads a 1. Which we would normally associate with it being pressed.
-Therefore we use *not()* to flip a 1 to a 0 and a 0 to a 1. This way
-*button\_now* instead gives the sort of value we expect - 0 when not pressed
-and 1 when pressed.
-
-The other thing we have to consider is what happens when the button is pressed
-and _held down_. In this case we only want to trigger a save and reset once,
-not multiple times. That's why we check not only if the button_now is 1, but
-also that button is 0, i.e. in the previous loop it wasn't pressed. We then set
-button to button_now so that when we hit the next loop we know it was pressed
-and don't reset the screen.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%#phase2
-%4* Phase 2
-
-%code(lang=python,numbering=on,firstnumber=164)<
-    # ===================
-    # networking & sensor
-    # ===================
-
-    result = select.select([sock], [], [], 0)
-    if len(result[0]) > 0:
-%>
-
-Now we check for sensor input over the network and pre-process it if there is.
-This is the non-blocking magic I mentioned earlier. *.select* checks sock for
-any new packets and puts them in *result[0]* (0 because you can select from
-multiple sockets). When there's something the length of results[0] will be
-non-zero and so we know to go to work. Doing it this way is potentially a
-little buggy, but seems to be OK. It might be better replaced with a for loop.
-
-%code(lang=python,numbering=on,firstnumber=170)<
-        # read in data
-        data = result[0][0].recvfrom(1024)
-        a = data[0].split(",")
-        AXa[Ai] = float(a[0])
-        AYa[Ai] = float(a[1])
-        AZa[Ai] = float(a[2])
-        Ai = Ai + 1
-        if Ai == AL:
-            Ai = 0
-%>
-
-*data* takes on the value of the first packet waiting. If you remember, it's a
-comma seperated string with the X, Y, and Z values of acceleration from the
-accelerometer on the Model A. We can use
-%(http://docs.python.org/2/library/string.html#string.split, *.split()*) to
-break it apart into an array of strings for each axis.
-%(http://docs.python.org/2/library/functions.html#float, *float()*) is used to
-convert the string back into a floating point number (just like with int()
-before), which we then store in the moving average array we initialized earlier
-at index Ai. Then it's incremented and if it's at the array length AL we set it
-back to 0. Remember that arrays start at index 0 so the last index is the is
-the length minus one.
+execution time for each loop is identical and *dt* (the timestep) is constant.
+However, this isn't the case, so by knowing how long it's been since the last
+loop we can know how far to move things, i.e., distance = velocity \* time.
 
 %code(lang=python,numbering=on,firstnumber=180)<
         # moving averages for acceleration
@@ -742,12 +259,14 @@ the length minus one.
                 AY, AZ]) - 1)
 %>
 
-*.sum()* does what it says on the tin and returns the sum of all the values in
-an array (it adds them all up). To do an average is the sum divided by the
-number of elements and so AX, etc., has the average of the array AXa once the
-sum is divided by AL. The total combined acceleration is worked out by
-calculating the %(http://en.wikipedia.org/wiki/Euclidean_distance, Euclidean
-distance) from 0 to the acceleration vector position using *linalg.norm()*.
+After reading in the accelerometer data and putting it in the *AXa*, etc.,
+arrays, we then need to take the average of that array. *.sum()* adds up the
+values in an array and then to do an average we divide by the number of
+elements *AL* and so *AX*, etc., has the moving average.
+
+The total combined acceleration *A* is worked out by calculating the
+%(http://en.wikipedia.org/wiki/Euclidean_distance, Euclidean distance)
+from 0 to the acceleration vector position using *linalg.norm()*.
 At rest this should work out to just about 1 (remember we're working in
 acceleration in G(ravities), which is why we subtract 1. We then use
 %(http://docs.python.org/2/library/math.html#math.fabs, *.fabs()*) so that we
@@ -775,128 +294,39 @@ number should be very small.
 
 Now that we know something about gravity and the current acceleration, we can
 act on it. I've pointed out how in order to know which way the Model A is
-moving, we need to know where gravity is first. That's what this code is about.
-In the previous code block we established that *A* is the acceleration the
-Model A is experiencing _discounting gravity_ which means that if it's very low
-the Model A isn't moving at all (or is moving at a constant velocity). This
+moving, we need to know where gravity is first. We can't know it exactly, but
+we can estimate it. As *A* is the acceleration the Model A is experiencing
+_excluding gravity_, it's very low when the Model A isn't moving at all. This
 means that the only acceleration being experienced is due to gravity and so we
-can take this moment to take an estimate of gravity. However, in order to
-further ensure that it's a resonable estimate and we don't over tax the CPU
-doing calculations, we wait at least 0.12 seconds between estimates.
+can take the estimate and then turn it into polar coordinates. (Provided we
+haven't just done all of this.)
 
-So then once it's been established that it's OK to take an estimate, we do that
-by storing AX, etc., in GX, etc.. We then turn the estimate into polar
-coordinates and make a note when we made this estimate. After we take that
-estimate we proceed on normally and then rotate acceleration for the screen
-according to where gravity is. I'm sorry the maths here is complex and to be
-honest I don't really understand it. As near as I can tell it does work though,
-or at least does what we want it to. Basically the *cartesian* line takes the
-polar gravity and rotates it by how we know gravity to be rotated and then adds
-back on gravity as experienced by the monitor. The *GAZ* line after than
-subtracts gravity from its absolute direction. And that's it for Phase 2.
+For every loop we need to actually do the gravity subtraction and rotation for
+the screen. We turn the current acceleration into polar coordinates and then on
+the next line turn them back into cartesian coordinates while subtracting the
+estimated rotation of the gravitational field. The *GAZ* line after than
+subtracts gravity from its absolute direction. (This is a bad explanation and
+to be honest I'm not entirely sure why this works, but it does!)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%#phase3
-%4* Phase 3
+%#paintbrushphysics
+%3* Paintbrush physics
 
-%code(lang=python,numbering=on,firstnumber=207)<
-    # ==================
-    # paintbrush physics
-    # ==================
-%>
-
-Now for the meat of the program: paint brush physics. This is the code that
-actually controls what happens on the screen. Almost everything else has been
-code to get the accelerometer data and process it sot that this section can
-interpret it and get something to _happen_.
+Perhaps the most interesting bit of what's going on every loop: the paint brush
+physics. This is the code that controls what happens on the screen. Everything
+up to this point has been to get us *GAY* and *GAZ*, two variables indicating
+horizontal and vertical acceleration relative to the screen. Now we get to
+interpret it and make something _happen_.
 
 %code(lang=python,numbering=on,firstnumber=207)<
     # acceleration detection for paint strokes
     A = numpy.linalg.norm([GAY, GAZ])
 %>
 
-At this point we do everything in screen coordinates. *GAY* is acceleration
-going across the screen, and *GAZ* is going down the screen. (Screen
-coordinates typically start in the upper left corner. Pygame holds to this
-standard.) *A* is now therfore the total acceleration of the Model A, with
-respect to the screen, ignoring gravity.
-
-%code(lang=python,numbering=on,firstnumber=214)<
-    # detect moving quickly
-    if A > 0.4 and fast != 1 and \
-                last_time - last_stroke > 0.5:
-        fast = 1
-        notfast = 0
-        scale = random.random() * 0.5 + 0.5
-        BX = YRES * GAY * scale + XRES / 2 + \
-                random.randint(-XRES/4, XRES/4)
-        BY = YRES * GAZ * scale + YRES / 2 + \
-                random.randint(-YRES/7, YRES/7)
-        VX = 0
-        VY = 0
-        P = 100
-        COLR = random.randint(0, 255)
-        COLG = random.randint(0, 255)
-        COLB = random.randint(0, 255)
-%>
-
-Now the thing to do is to detect if we've suddenly speed up. This indicated by
-a high acceleration and by knowing that we weren't already moving, i.e. *fast*
-being set to 0. I also mentioned before how you get a period of 0 acceleration
-that occurs between speeding up and slowing down. We don't want to accidentally
-treat slowing down as beginning to speed up, so we enforce a slight delay (0.5
-seconds) from the end of the *last\_stroke*. We can then set fast to 1 and
-*notfast* to 0, which  resets the timer of how long we've been going slow. This
-is used in, of course, detecting the end of a brush stroke.
-
-There is only a low level of precision we can have over our control of where
-the virtual paintbrush is on screen given the level of and quality of input
-data that we have. To keep things interesting we use some random elements. We
-make an assumption that the user has probably aimed somewhere at the canvas and
-milk that for all it's worth. Where did the start the stroke though? The top of
-the canvas or the bottom? Left or right? We make a guess based on the direction
-of the accleration vector. How far to that direction though? We don't know so
-we randomly scale it. *BX* and *BY* is where we store the brush position. Both
-use YRES as a multiplier when going from acceleration vector to starting
-coordinate though as reality is square while our screen is rectangular. If we
-used XRES we'd end up disproportionately scaling the X position to the side,
-which would feel funny to the user.
-
-We then reset the brush's velocity, *VX* and *VY* and the ammount of paint on
-the brush, *P*. We also then set the paint color randomly. I wish there was a
-nicer way to control this, but nothing simple springs to mind. We could have a
-tri-color LED randomly changing color and the paint color matches the LED color
-when the stroke starts. A project for someone perhaps. Either that or some
-variable resistors with some analog to digital interface so you could dial in a
-paint color. Awesome sounding, but actually a lot of work to do. One thing at a
-time eh?
-
-%code(lang=python,numbering=on,firstnumber=231)<
-    # detect stopping
-    if fast == 1 and (A < 0.1 or ((BX > (XRES + 200) \
-                or BX < -200) and (BY > (YRES + 200) \
-                or BY < -200)) or P <= 0):
-        notfast = notfast + dt
-        if notfast >= 0.12:
-            fast = 0
-            BX = 0
-            BY = 0
-            last_stroke = last_time
-%>
-
-The last code block had to do with speeding up, or when we first started waving
-the Model A. This code block has to do with detecting when we've stop waving.
-First, you can only stop once you've started. After that it's fairly straight
-forward. Any of three conditions indicates stopping. The relative acceleration
-of the Model A should is low, the paintbrush is off the screen, or there's no
-paint on the brush. If any of those conditions are met increment a timer
-(*notfast*) and then if that exceeds 0.12 seconds we're stopping. fast gets set
-to 0, the brush position is reset, and we make a note of when we stopped (used
-in making sure we don't start again immediately in the last code block). The
-reason why we use a timer is to allow for people who may slow down and speed
-up again, the 0 acceleration cross over point, and for people who bend the
-brush around the canvas to create loops.
+After this, *A* is the total acceleration of the Model A, with respect to the
+screen, ignoring gravity. This is useful. We can use this number to detect
+roughly if we're speeding up or slowing down. What happens after that?
 
 %code(lang=python,numbering=on,firstnumber=242)<
     if fast == 1:
@@ -908,19 +338,24 @@ brush around the canvas to create loops.
 %>
 
 This bit of code is actually responsible for moving the brush, and only when we
-think it's moving. This is where the twice integration comes in. We increment
-the brush velocity by the acceleration, factored by the timestep to keep the
-animation smooth even when the ammount of time it takes for the code to run
-varries. I've also added a factor of *170* to scale up the acceleration some,
-other wise it only moves a few pixels on the screen and that's not very
-exciting. 170 is just a made up number that seemed to work--an empircal value.
+think it's moving. This is where something called _twice integration_ comes in.
+Imagine you're in a car traveling down the motorway at 100 kph. In one hour
+you will have travelled 100 km. Easy? That's simple integration, going from
+velocity to displacement. Acceleration though, is the rate of change in
+velocity, e.g. the speed at which the needle of the speedometer in the car
+climbs. So now imagine accelerating at 1 kph per second, after 10 seconds
+you'll be going 10 kph faster, so instead of 100 kph you're now going 110 kph.
+Apply that to the distance you've travelled and you have twice integration.
+(Fun fact: if you kept up that acceleration, after an hour you'd be going 3,700
+kph and would have traveled 36,370 km. Or almost around the Earth.)
 
-The next integration is incrementing the brush position by adding on the
-current velocity. Which also must be factored by the timestep. And then another
-scaling factor, this time of *120*. Realistically these factors should probably
-be adjusted for screen resolution but I haven't worked out a formula for that.
-These numbers work reasonably well with the resolutions I've tried though, so
-I've left them alone.
+Similarly, we increment the brush velocity by the acceleration, factored by the
+timestep to keep the animation smooth. I've also added a factor of *170* to
+scale up the acceleration so it displays nicely on the screen. (This is sort of
+like saying that 1 pixel represents 170 meters.) The next integration is
+incrementing the brush position by adding on the current velocity, also
+factored by the timestep and scaled, this time by *120*. (These values just
+work, but are physically nonsense.)
 
 %code(lang=python,numbering=on,firstnumber=249)<
         # add splotches.... high velocity big 
@@ -932,21 +367,14 @@ I've left them alone.
 %>
 
 Now that the paintbrush is moving, comes the last most important bit of code:
-making paint droplets. This... is a complete cludge--a hack, a vague attempt at
-reality. There's almost no real physics here. This is what in technical speak
-could be called a model. It's a rough approximation of what I expect might
-happen. Bearing that in mind I'll try and explain what's going on.
-
-The first thing is to remember that this bit of code follows on from the last
-if statement, so is only run while the paintbrush is moving. And then it's only
-run if there's actually paint left on the brush. Vaguely I expect that the
+making paint droplets. This bit of code is only run while the paintbrush is
+moving and only if there's paint on the brush. Vaguely you expect that the
 further the brush has been swung the more paint I expect to come off and the
 faster it's going the more paint to come off. *V* is calculated as the total
 velocity, and *S* is a running displacement. *d* is calculated as a rough
 estimtate of paint droplet spacing.
 
-Let's look at d in a bit more detail. Paint droplets (probably) fly off due to
-two factors:
+Paint droplets (probably) fly off due to two factors:
 - %(http://www.mne.psu.edu/cimbala/Learning/Fluid/Introductory/what_is_fluid_mechanics.htm,
   Fluid mechanics). Roughly, I'm speaking of the affect of what happens when
   you move a glass of water too quickly.
@@ -954,15 +382,14 @@ two factors:
   force you feel acting on your hand when you stick it out the car window on a
   drive on a nice summer's day.
 
-Both of these are rather complex subjects and therefore I've sort of lumped the
-two of them together as the produce similar results--paint flying off the brush.
+Both of these are rather complex subjects so I've sort of lumped them together
+as the produce similar results -- paint flying off the brush.
 d is made up of A (our acceleration) times a random factor which is the fluid
 dynamics bit, and V is added for the air resistance bit. The random factor
 makes things a bit more interesting, perhaps taking into account things like
-globs of paint or hairs in the brush getting tangled. We also can't forget the
-random scaling factor of *25* which was added so that things are proportioned
-nicely on the screen. (This applies to the acceleration term only as velocity
-was already scaled in the previous code block.)
+globs of paint or hairs in the brush getting tangled. *25* is the scaling factor
+this time. (This applies to the acceleration term only as velocity was already
+scaled before.)
 
 %code(lang=python,numbering=on,firstnumber=255)<
             if S > d:
@@ -973,54 +400,15 @@ was already scaled in the previous code block.)
                 draw = 1
 %>
 
-So if we've travelled further than our expected paint droplet seperation as
-expected according to our, er, precise simulation, we obviously need to draw a
-paint droplet! First we take the droplet distance into account by subtracting
-it from S, which keeps us from immediately drawing another paint droplet. Then
-we calculate the amount of paint that was in the droplet. This is pretty much
-completely made up, I've arbitrarily decided that the acceleration times four,
-squared, times π (pi) will be it. (Yes, that's πr\^2, the area of a circle.)
-Experimentally this matches nicely with the total ammount of paint on the
-brush being 100. Either could be tweaked to get longer or shorter chains of
-droplets.
-
-%(http://www.pygame.org/docs/ref/draw.html#pygame.draw.circle, *draw.circle()*)
-is the Pygame function for drawing a circle, which we're going to assume our
-paint droplets are. (More realistically they should probably be tear shaped.)
+If we've travelled further than the expected paint droplet seperation according
+to our, er, precise simulation, we need to draw a paint droplet! We calculate
+the amount of paint that was in the droplet arbitrarily as the acceleration
+times four, squared, times π (pi). (Area of a circle formula.) This is
+subtracted from *P*, the paint on the paintbrush variable. The paint droplet
+actually drawn on the screen is done, assuming they're cricles, with the
+Pygame function
+%(http://www.pygame.org/docs/ref/draw.html#pygame.draw.circle,
+*draw.circle()*).
 We're drawing on the screen, in our random color at the paintbrush position
-(BX, BY). In this case int() isn't converting from a string, but from a
-floating point number to a whole integer--pixels on the screen at at specific
-coordinates. (It's the difference between 8.128 and 8.0. We need the latter
-as there's only pixel 8 and pixel 9, and no pixel in between.) *A\*45* is the
-paint droplet radius, and yes, 45 is another made up factor. We set draw to 1
-so that we know to refresh the screen.
-
-We're almost done.
-
-%code(lang=python,numbering=on,firstnumber=262)<
-    # push updates to the screen
-    if draw == 1:
-        pygame.display.flip()
-%>
-
-This last bit of code is run at the end of every loop last of every, which does
-the screen refresh if we've specified it.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%#quiting
-%3* Quitting
-
-This actually surprisingly easy. If you remember from before about the  while
-loop and running. And then about checking for the KEYDOWN of k\_Q, that's half
-the quitting code right there. The other half is just tidying up. The first
-bit will get us out of the otherwise infinite loop.
-
-%code(lang=python,numbering=on,firstnumber=262)<
-# quit properly
-GPIO.cleanup()
-pygame.quit()
-%>
-
-This last bit is just cleaning up nicely. Let go of the GPIO pins and let go of
-the screen. Viola, done.
+(BX, BY). *A\*45* is the paint droplet radius, with 45 as another scaling
+factor.
