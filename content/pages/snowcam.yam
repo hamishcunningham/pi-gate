@@ -23,10 +23,15 @@ what I spend on coffee in a bad week.
 The camera comes attached to a thin ribbon cable about 15 centimetres long and
 hooks up directly onto the Pi circuit board. And you can program it! You can
 tweak it! You can rip the front off, slice off the filter and get it to work
-on infra-red%footnote(Getting the camera to work for infra-red:
-http://hackaday.com/2013/05/27/adding-night-vision-to-the-raspberry-pi-camera/\,
-http://www.raspberrypi.org/archives/4088\,
-http://www.imaging-resource.com/news/2013/06/06/under-the-microscope-raspberry-pi-camera-dissected-given-infrared-vision)!
+on infra-red%footnote(There's now a special
+%(http://www.raspberrypi.org/archives/5128, Pi NoIR version) of the camera
+available without the filter. Getting the original camera to work for
+infra-red
+%(http://hackaday.com/2013/05/27/adding-night-vision-to-the-raspberry-pi-camera/,
+is)
+%(http://www.raspberrypi.org/archives/4088, described)
+%(http://www.imaging-resource.com/news/2013/06/06/under-the-microscope-raspberry-pi-camera-dissected-given-infrared-vision,
+here).)!
 
 You can also, of course, stick it inside a small cuddly animal and send it
 into the stratosphere %(http://www.bbc.co.uk/news/technology-23840596, hanging
@@ -173,6 +178,16 @@ prob just reference %(package.html, packaging)
     on my desktop. I think it's the best compromise. The timings of course
     depend on the original image size, but they illustrate the differences. As
     the scale size goes down, e.g. to 5%, the time to resize decreases.
+
+
+if the daemon throws a wobbler and raspivid refuses to run without timeout,
+try
+
+%code(lang=bash)<
+@reboot /bin/bash -c "cd /home/pi/pi-tronics/pi-cam && /usr/bin/sudo ./pi-cam -c"
+%>
+
+in .crontab
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
