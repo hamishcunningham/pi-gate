@@ -35,9 +35,9 @@ Jackson Pollock) famously did in the 1940s and 50s. It utilizes two Raspberry
 Pis (one Model B and one Model A), a PiBorg %(http://piborg.org/xloborg/,
 XLoBorg) accelerometer, a battery pack, a display, and two Wi-Fi dongles. The
 Model A is held by the user and waved around. It collects acceleration data
-with the XLoBorg, which it then transmits via ad hoc Wi-Fi to the Model B,
-which processes the data collected into paint droplets and displays them on
-the screen, connected via HDMI.
+with the XLoBorg, which it then transmits via Wi-Fi to the Model B, which
+processes the data collected into paint droplets and displays them on the
+screen, connected via HDMI.
 
 %image(images/pibrush/pibrush_architecture.png, Pi Brush snapshot)
 
@@ -975,4 +975,97 @@ the screen. Viola, done.
 %1 System Setup & Running
 
 At least, done with the code. There are other nigly details to get things
-going. To be written.
+going. Most of that are regular issues with installing software or setting up
+the resolution to the monitor. Then there's the big one, networking.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#installing
+%2 Installing
+
+What we've seen so far are two Python scripts. You can download them off of 
+%(https://github.com/hamishcunningham/pi-tronics/tree/master/pibrush/bin,
+GitHub), copy to your SD card, and run almost immediately. The Model A though
+will need to have the %(http://piborg.org/xloborg/install, XLoBorg library for
+Python installed).
+
+_This is a work in progress!_
+Alternatively, we've also prepared a .deb package which can be used to install
+PiBrush on your Pi. These are availale on our PPA, for which we have
+%(download.html, directions). After setting up the PPA the package,
+installation is easy:
+
+%<apt-get install pibrush%>
+
+You then will need to edit /etc/default/pibrushd to match the specifics of your
+setup. That's it! There's a manpage if you need more help. It includes
+directions for setup on the Model A (client).
+
+%<man pibrush%>
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#networking
+%2 Networking
+
+There are two ways to handle networking. The standard way would be to use a
+regular Wi-Fi access point (or router), with the Model B connected over either
+with a Wi-Fi dongle or an ethernet wire, and the Model A connected with a USB
+Wi-Fi dongle. The Wi-Fi access point then relays the information between the
+Model A and Model B. This is the setup in most homes and doesns't require
+anything special.
+
+Then there's what we did for our display at the Ideas Bazaar, which is cut out
+the middle man. We used ad hoc Wi-Fi which doesns't rely on an existing
+network, but does require to Wi-Fi dongles. With ad hoc networking, the Pis
+communicate with each other directly. This means that the Pis aren't affected
+by a lack of Wi-Fi network, which is often the case when you're on the move.
+Let's look at how to do this.
+
+First you'll need to tell the Pi that you want it to use ad hoc networking. You
+can do this by editing ^/etc/wpa\_supplicant/wpa\_supplicant.conf^ and adding
+the following lines:
+
+%<network={
+        ssid="pibrush"
+        key_mgmt=NONE
+        frequency=2432
+        mode=1
+}%>
+
+This tells the Pi to search for the ad hoc network. Now, because there's no
+access point there's also no
+%(http://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol, DHCP),
+which is the bit of software running on the access point responsible for
+telling computers how to talk to each other. Without that we have to tell the
+two Pis how to find each other manually. This means *static IP addresses*. We
+set these up in Debian by editing the ^/etc/network/interfaces^ file and
+removing the dhcp line and replacing it with this:
+
+%<iface default inet static
+address 192.168.31.1
+netmask 255.255.255.0%>
+
+On the Model A change the 31.1 to 31.2. The other file to edit is the
+^/etc/hosts^ file, adding the following two lines:
+
+%<192.168.31.1 modelb
+192.168.31.2 modela%>
+
+On the next book the two Pis will talk to each other directly! You're all
+set to go! Good luck!
+
+---
+
+You can see complete configuration files online on GitHub
+%(https://github.com/hamishcunningham/pi-tronics/tree/master/pibrush/config,
+here).
+
+*Warning!*
+If you're relying on Wi-Fi to access your RaspberryPis, these changes _WILL
+BREAK THAT!_ If you do this accidentally and get locked out you can always
+pop the SD card into another Linux PC and edit these configuration files back.
+Also, _AN ETHERNET CABLE WILL STILL WORK!_ You should also be able to see the
+Wi-Fi network with your laptop, if you connect you can assign your laptop
+another IP like 192.168.31.3 and then your laptop and Pis should be able to
+talk.
