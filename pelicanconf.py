@@ -50,4 +50,4 @@ TWITTER_USERNAME = 'PiTronics'
 GOOGLE_ANALYTICS = 'UA-41812045-1'
 DISQUS_SITENAME = 'pi-gate'
 
-IGNORE_FILES = (['magpi'])
+# didn't seem to work:   IGNORE_FILES = (['magpi'])
