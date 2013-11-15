@@ -1,6 +1,5 @@
 Mobile Hot-Swap Power for the Pi
 
-
 Mobile power for the Pi -- easy on the one hand, hard on the other:
 it is easy to plug in a 5v battery pack like this one -- but when it runs out
 your Pi gets a power cut and might well corrupt the SD card.
@@ -18,7 +17,6 @@ pretty much everything you could want for your Pi on the go:
   and it has a neat little power switch on the top to save you logging in to
   shutdown at other times,
 - and it even fits in the Pibow (and other well-known Pi cases)
-
 
 %meta(summary=Second prototype MoPi board,
   tags=batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate\,)
