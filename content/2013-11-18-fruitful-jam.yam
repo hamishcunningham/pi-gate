@@ -1,0 +1,49 @@
+Fruitful Jam
+
+A big thanks to %(http://bennuttall.com/, Ben Nuttall) and everyone who made
+the Manchester Raspberry Jam this weekend, and happy birthday to Ben and to
+%(http://shop.pimoroni.com/, Paul Beech) (who turned 23 again on Saturday).
+
+I learned a lot, and it was great to meet most of the Pi foundation people for
+the first time.
+
+Two things in particular stood out for me, one about how to work with schools
+and one about the %(pages/mopi.html, mobile hot-swap UPS battery gizmo) that
+we've been building (and which I demo'd in %(various applications at the Jam).
+
+*Schools.* Several people suggested a Pi roadshow that goes into schools with
+introductory sessions, one for kids and one for teachers. This seems like a
+really good idea. %(http://www.shef.ac.uk/dcs/, Sheffield Computer Science)
+has been running %(2013-10-02-children-and-animals.html, an outreach
+programme) which gave away 50 Pi kits to students from four local schools, and
+that has generated interest in other local schools who want to dip their toes
+in the new computing curriculum that's coming along. Unfortunately we've given
+away all our hardware! So I'll be looking for a way to club together with
+others in the region who are interested (probably under the auspices of the
+%(http://www.shu.ac.uk/research/cse/about-us/stem-unit, STEM ambassador
+programme) being run by Linda and Richard and others down the hill at Hallam's
+%(http://www.shu.ac.uk/research/cse/, Center for Science Education)).
+If this sounds like you, %(https://gate.ac.uk/g8/contact, give me a shout!)
+
+*Mobile power.* Both %(http://www.daveakerman.com/, Dave Akerman)
+%(http://www.raspberrypi.org/archives/author/eben, Eben Upton) suggested that
+we could save battery life for our %(pages/mopi.html, mobile Pi) add-on board
+by supplying 3.3V to the Pi instead of 5V. There's nothing on the Pi board
+itself that runs on 5V -- the voltage was chosen in order to take advantage of
+the USB standard and the prevalence of micro-USB chargers. The 5V input is
+dropped to 3.3V using an %(http://en.wikipedia.org/wiki/Low-dropout_regulator,
+LDO linear regulator) which effectively throws away some of the power supplied
+to the Pi (half a watt perhaps), and is "the hottest component on the board"
+as a result. Dave has had good results supplying 3.3 volts and unsoldering the
+LDO from the Pi board (he and his collaborator Anthony reported battery life
+improvements of around 50% using this method). Eben suggested that supplying
+e.g. 3.35 volts might be enough to overwhelm the LDO, removing the need to
+unsolder the component. Definitely worth some experimentation!
+
+So thanks again to Ben, and best of luck with your move to the Pi foundation
+in Cambridge. Better start working on a moustache, though?
+
+%meta(summary=Manchester Raspberry Jam,
+tags=schools\,jam\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate\,)
+
+*%(pages/mopi.html, Read the main article).*
