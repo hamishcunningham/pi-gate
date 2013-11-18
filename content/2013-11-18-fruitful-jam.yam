@@ -43,10 +43,7 @@ unsolder the component. Definitely worth some experimentation!
 So thanks again to Ben, and best of luck with your move to the Pi foundation
 in Cambridge. Better start working on a moustache, though?
 
-%meta(summary=Manchester Raspberry Jam,
-tags=schools\,jam\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate\,)
-
-*%(pages/mopi.html, Read the main article).*
+Some pics by %(https://twitter.com/TonyH1212, Tony Hughes)...
 
 Dave Jones demoing his great new Python API for the camera:
 %(http://www.flickr.com/photos/38750704@N07/10902836713/in/set-72157637766800375,
@@ -82,5 +79,10 @@ forgetting about the mirror:
 %image(images/madjam/baldy-640x480.jpg, Baldy, 640, 480))
 
 "It's power, Jim, but not as we know it!" (MoPi second prototype.)
-%(http://www.flickr.com/photos/38750704@N07/10902307686/in/set-72157637766800375/
+%(http://www.flickr.com/photos/38750704@N07/10902307686/in/set-72157637766800375/,
 %image(images/madjam/mopi-again-640x480.jpg, MoPi again, 640, 480))
+
+%meta(summary=Manchester Raspberry Jam,
+tags=schools\,jam\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate\,)
+
+*%(pages/mopi.html, Read the main article).*
