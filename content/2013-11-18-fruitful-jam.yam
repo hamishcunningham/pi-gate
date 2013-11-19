@@ -39,7 +39,10 @@ as a result. Dave has had good results supplying 3.3 volts and unsoldering the
 LDO from the Pi board (he and his collaborator Anthony reported battery life
 improvements of around 50% using this method). Eben suggested that supplying
 e.g. 3.35 volts might be enough to overwhelm the LDO, removing the need to
-unsolder the component. Definitely worth some experimentation!
+unsolder the component. Definitely worth some experimentation!%footnote(The
+external USB connections would not be powered in this configuration, of
+course, but for long-life standalone applications -- like Dave's balloon
+flights -- the technique can work.)
 
 So thanks again to Ben, and best of luck with your move to the Pi foundation
 in Cambridge. Better start working on a moustache, though?
