@@ -1,13 +1,16 @@
-Mobile Hot-Swap Power for the Pi
+MoPi: a KickStarter for Mobile Pi Power
+
+_%(http://pi.gate.ac.uk/, Hamish Cunningham), November 2013_
 
 Mobile power for the Pi -- easy on the one hand, hard on the other: it is easy
 to plug in a 5v battery pack -- but when it runs out your Pi gets a power cut
 that might well corrupt the SD card.
 
 Over the last year we've been designing what we hope is the perfect mobile
-power solution for the Pi, which we're calling %(pages/mopi.html, MoPi), and
-we've just taken delivery of the second generation prototype. I think it does
-pretty much everything you could want for your Pi on the go:
+power solution for the Pi, which we're calling
+%(http://pi.gate.ac.uk/pages/mopi.html, MoPi), and we've just taken delivery
+of the second generation prototype. I think it does pretty much everything you
+could want for your Pi on the go:
 
 - it will accept multiple sources, including standard AA batteries, or your
   car cigarette lighter, or an old laptop power supply or etc.
@@ -19,9 +22,10 @@ pretty much everything you could want for your Pi on the go:
   Pi is plugged into a mains supply
 - and it even fits in the Pibow (and other well-known Pi cases)
 
-%image(images/mopi/proto2-01-500x379.jpg, mopi prototype 2/1, 500, 379)
+Here's the circuit board, with an eight-pack of AAs (that will get you around 9
+hours of mobile time for a Model B Pi):
 
-%meta(summary=Second prototype MoPi board,
-  tags=batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate\,)
+%image(proto2-01-500x379.jpg, Prototype 2, 500, 379)
 
-*%(pages/mopi.html, Read the main article).*
+Next up: a KickStarter to fund the final development (with deliveries planned
+for early in the new year). Watch this space!
