@@ -8,6 +8,16 @@ _%(about.html#hamish, Hamish Cunningham)), September 2013_
 -----------------------------------------------------------------------------
 %%% TODO
 %1* DRAFT, unfinished
+
+%/*
+Tech TODOs
+- call setsid to begin with and record the group, then use pkill -P ppid to
+  kill all the children on exit
+- try the tips at
+  http://www.raspberrypi-spy.co.uk/2012/11/cheap-miniature-lcd-screen/
+- try script:
+  http://stackoverflow.com/questions/1401002/trick-an-application-into-thinking-its-stdin-is-interactive-not-a-pipe
+%*/
 -----------------------------------------------------------------------------
 
 %contents

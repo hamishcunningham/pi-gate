@@ -361,12 +361,13 @@ This is a standard gizmo, so you can install it with:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Configuring PageKite
 
-To configure the system, first go to https://pagekite.net/ create
-MY\_KITE\_NAME and copy the "secret" (we'll call this YOURSECRET below). Then
-run this command in a terminal (on the Pi):
+To configure the system for SSH and HTTP access, first go to
+https://pagekite.net/ create MY\_KITE\_NAME and copy the "secret" (we'll call
+this YOURSECRET below). Then run these commands in a terminal (on the Pi):
 
 %code(lang=Bash)<
   pagekite --add 22 ssh:MY_KITE_NAME.pagekite.me
+  pagekite --add 80 MY_KITE_NAME.pagekite.me
 %>
 
 Edit ^/etc/pagekite.d/10\_account.rc^ and:
@@ -376,7 +377,13 @@ Edit ^/etc/pagekite.d/10\_account.rc^ and:
   https://pagekite.net/home/)
 - remove the line "abort\_not\_configured" and the comment above it.
 
-Now rename the file ^/etc/pagekite.d/80\_sshd.rc.sample^ to ^80\_sshd.rc^.
+Now rename the file ^/etc/pagekite.d/80\_sshd.rc.sample^ to ^80\_sshd.rc^, and
+rename ^/etc/pagekite.d/80\_httpd.rc.sample^ to
+^/etc/pagekite.d/80\_httpd.rc^. Then restart the service like this:
+
+%code(lang=Bash)<
+  sudo service pagekite restart
+%>
 
 Finally, add this to the file ^~/.ssh/config^ *on your client, not the Pi*
 (i.e. on the machine that you want to connect _from_):
