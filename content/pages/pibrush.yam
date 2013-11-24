@@ -1008,14 +1008,15 @@ regular Wi-Fi access point (or router), with the Model B connected over either
 with a Wi-Fi dongle or an ethernet wire, and the Model A connected with a USB
 Wi-Fi dongle. The Wi-Fi access point then relays the information between the
 Model A and Model B. This is the setup in most homes and doesns't require
-anything special.
+anything special -- see our %(blinkip.html#wifi, wifi instructions here).
 
-Then there's what we did for our display at the Ideas Bazaar, which is cut out
-the middle man. We used ad hoc Wi-Fi which doesns't rely on an existing
-network, but does require to Wi-Fi dongles. With ad hoc networking, the Pis
-communicate with each other directly. This means that the Pis aren't affected
-by a lack of Wi-Fi network, which is often the case when you're on the move.
-Let's look at how to do this.
+Then there's what we did for our display at the
+%(http://pi.gate.ac.uk/posts/2013/09/16/open-culture-tech/, Ideas Bazaar),
+which is cut out the middle man. We used ad hoc Wi-Fi which doesns't rely on
+an existing network (but _does_ require two Wi-Fi dongles). With ad hoc
+networking, the Pis communicate with each other directly. This means that the
+Pis aren't affected by a lack of Wi-Fi network, which is often the case when
+you're on the move. Let's look at how to do this.
 
 First you'll need to tell the Pi that you want it to use ad hoc networking. You
 can do this by editing ^/etc/wpa\_supplicant/wpa\_supplicant.conf^ and adding
@@ -1047,7 +1048,7 @@ On the Model A change the 31.1 to 31.2. The other file to edit is the
 %<192.168.31.1 modelb
 192.168.31.2 modela%>
 
-On the next book the two Pis will talk to each other directly! You're all
+On the next boot the two Pis will talk to each other directly! You're all
 set to go! Good luck!
 
 ---
