@@ -5,6 +5,16 @@ _Getting started with Pi-Tronics: adding electronics to your Pi_
 
 _%(about.html#hamish, Hamish Cunningham), April 11th 2013_
 
+%/*
+TODOs
+- notes from from Gordon:
+  - Interesting that you're using an emitter follower in the buzzer example -
+    is that intentional? The buzzer will only see about 2.7v across it which
+    might be marginal. I'd be tempted to put it on the collector and drive it
+    off the 5v line, but maybe that's just me...
+  - Describe option without resistors on switches; describe gpio up/down
+%*/
+
 %contents
 
 %#interaction-electronics
