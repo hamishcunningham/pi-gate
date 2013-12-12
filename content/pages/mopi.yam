@@ -1,10 +1,10 @@
 Mobile Pi
 
-_Battery packs for Pi-Mobility_
-%meta(summary=Battery packs for Pi-Mobility)
+_Hot-swap Mobile Power for the Pi_
+%meta(summary=Hot-swap Mobile Power for the Pi)
 
 _%(about.html#hamish, Hamish Cunningham), and
-%(about.html#lubo, Lubo Bontchev), August 2013_
+%(about.html#lubo, Lubo Bontchev), August-December 2013_
 
 %contents
 
@@ -29,8 +29,9 @@ Pi.
 
 There are three dimensions to the problem of mobile power for the Pi:
 
-- _regulation_, to supply the constant 5 volts at up to around 1 amp that the
-  (Model B) Pi requires
+- _regulation_, to supply the constant 5 volts%footnote(The keen amongst you
+  may know that the Pi can, in fact, run on 3.3V -- more on that later.) at up
+  to around 1 amp that the (Model B) Pi requires
 - _control_:  keeping a check on battery charge, switching the regulator off
   when charge is getting low, and reporting the current level to a monitor
 - _monitoring_: reading level indications from %(basics.html#gpio-pins, a GPIO
