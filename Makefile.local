@@ -3,7 +3,8 @@
 # list of pages etc. ########################################################
 STANDARD_PAGES=\
 about.html download.html basics.html schools.html notipi.html legocases.html \
-hardware.html mopi.html blinkip.html snowcam.html package.html pibrush.html
+hardware.html mopi.html blinkip.html snowcam.html package.html pibrush.html \
+index.html
 NO_META_PAGES=piroomba.html
 DRAFT_PAGES=
 

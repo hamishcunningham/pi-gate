@@ -2,16 +2,30 @@ About
 
 %meta(summary=Pi-Tronics from the GATE people)
 
-On %(http://pi.gate.ac.uk/, Pi.GATE.ac.uk) we're building a Pi-tronics hacking
-space for kids, teachers, nerds and other misfits with guest Pi-isms from:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1* Site Map
 
----
+%(http://pi.gate.ac.uk/, Pi.GATE.ac.uk) is two things wrapped up together:
+
+- a blog about the %(http://www.raspberrypi.org/, Raspberry Pi) and related
+  subjects
+- a set of %(index.html, in-depth articles) covering various Pi projects
+
+The blog is in the usual format... just hit %(/, the front page), check out
+the articles, their tags, etc., and see what you find...
+
+The projects list %(index.html, is here).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1* Dramatis Personae
+
 %#hamish
 %[
 | %\ %\ %\ %\ %\ %\ %\ %\ %\ %\ %\ %\ %\ %\ %\ %\ %\ %\ %\ %\ %\ %br
 *Hamish Cunningham*
 
-%image(http://gate.ac.uk/hamish/pics/hamish-headshot.jpg, Hamish, 150)
+%image(images/hamish-headshot.jpg, Hamish, 150)
 |
 %br %br
 Every night %(http://gate.ac.uk/hamish, Hamish) creeps out from
