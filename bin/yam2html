@@ -36,7 +36,7 @@ RECURSE=""
 VERSION5="(YAM version 6)"
 NEW="1"
 TALK=""
-LANGUAGE="html"
+OLANGUAGE="html"
 BACKTICKS=""
 if [ x"$GATEWIKI" = x ]
 then
@@ -56,7 +56,7 @@ do
     i)  DOINDEX=1; INDEXTITLE="$OPTARG" ;;
     n)  NEW=1; VERSION5='(YAM version 6)' ;;
     t)  TALK=1 ;;
-    l)  LANGUAGE="$OPTARG" ;;
+    l)  OLANGUAGE="$OPTARG" ;;
     F)  BACKTICKS=1 ;;
     *)	usage 1 ;;
   esac   
@@ -170,7 +170,7 @@ elif [ "$DOALL" != 1 ]
 then
   for f in $*
   do
-    yamconvert -l $LANGUAGE $f
+    yamconvert -l $OLANGUAGE $f
   done
 else
   for f in *.yam
@@ -179,7 +179,7 @@ else
     BASE=`echo $f |sed 's,\.yam$,,'`
     if [ ! -e $BASE.html -o $BASE.yam -nt $BASE.html ]
     then
-      yamconvert -l $LANGUAGE $f
+      yamconvert -l $OLANGUAGE $f
     fi
   done
 fi
