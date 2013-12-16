@@ -88,7 +88,7 @@ done. These are as follows:
 - Your BulkSMS password (*password*).
 - The message text you're sending (*message*).
 - The phone number (*msisdn*). This is including the country code, but without
-  the leading `+'.
+  the leading '+'.
 
 All of this information is pretty easy to get a hold of. The next half of
 the battle is actually sending the message.

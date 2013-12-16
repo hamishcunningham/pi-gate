@@ -482,11 +482,11 @@ def savereset():
     screen.fill((255, 255, 255))
 %>
 
-The last function, *saverest* is called when either the `R' key is pressed on
+The last function, *saverest* is called when either the 'R' key is pressed on
 the keyboard or the GPIO button is pressed. It (you may notice a pattern in the
 function names) saves the screen and then resets it back to white. *filename*
 is created as the previously defined *SAVEDIR* plus *os.sep* which is a fixed
-variable as the file system serpator - `/' under Linux. (`\\' under Windows.)
+variable as the file system serpator - '/' under Linux. ('\\' under Windows.)
 After the save path comes the actual file name, which we want to be unique so
 that we don't overwrite an old file. We also don't want to have to stop for
 user input in case there's no keyboard.
