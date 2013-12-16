@@ -18,7 +18,7 @@ SSH_TARGET_DIR=/var/www
 GROOVY=groovy
 JAVA=java
 SCRIPTS=$(BASEDIR)/bin
-Y2H=$(SCRIPTS)/yam2html
+Y2H=JAVA_OPTS=-Dfile.encoding=UTF-8 $(SCRIPTS)/yam2html
 EPI=$(SCRIPTS)/enpelicanise.sh
 FIXIMGS=$(SCRIPTS)/fix-image-sizes.groovy
 
@@ -142,7 +142,7 @@ prepare:
 	  done; \
           cp basics.html ../pages
 	@cp $(INPUTDIR)/piroomba/piroomba.html $(INPUTDIR)/pages
-	@cd $(INPUTDIR)/pages && $(Y2H) -na && \
+	cd $(INPUTDIR)/pages && $(Y2H) -Fna && \
           $(EPI) $(STANDARD_PAGES) && $(EPI) -n $(NO_META_PAGES)
 	# stuff for all sites
 	@YAMS=`find $(INPUTDIR) -name '*.yam'`; \
