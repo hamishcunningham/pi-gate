@@ -4,7 +4,8 @@
 STANDARD_PAGES=\
 about.html download.html basics.html schools.html notipi.html legocases.html \
 hardware.html mopi.html blinkip.html snowcam.html package.html pibrush.html \
-index.html
+index.html ks1.html
+# TODO delete ks1
 NO_META_PAGES=piroomba.html
 DRAFT_PAGES=
 

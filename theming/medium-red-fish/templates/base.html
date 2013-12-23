@@ -60,7 +60,7 @@
       <li><img src="{{ SITEURL }}/theme/images/arrow-right.jpg" height="40" width="40"/></li>
       <!--
       using a custom menu at present...
-        {% for page in PAGES %}
+        {% for page in TODOPAGES %}
           {% if page.title != "About" and page.title != "Download" %} <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li> {% endif %}
         {% endfor %}
       -->
@@ -122,7 +122,7 @@
         <li><a href="{{ link }}">{{ title }}</a></li>
     {% endfor %}
     {% if DISPLAY_PAGES_ON_MENU -%}
-    {% for page in PAGES %}
+    {% for page in TODOPAGES %}
         <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
     {% endfor %}
     {% endif %}
