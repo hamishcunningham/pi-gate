@@ -97,12 +97,12 @@ lighter or the like). So I'd like my battery pack to support *hot-swap* of a
 new electricity supply, either a new set of batteries or some other new input.
 
 *Eco-friendly*. One of the great things about the Pi is its low carbon
-footprint. The recent ones in my lab are made in Wales, so they haven't
-travelled half way around the world to reach me. The base system is
-bare-bones, which encourages reuse of power supplies, monitors, cables and the
-like. The power consumption is low -- particularly for the Model A, which gets
-by on 300 mA or below (at 5 volts this adds up to around 1.5 watts -- contrast
-that with
+footprint. The recent ones in %(http://pi.gate.ac.uk/, my lab) are made in
+Wales, so they haven't travelled half way around the world to reach me. The
+base system is bare-bones, which encourages reuse of power supplies, monitors,
+cables and the like. The power consumption is low -- particularly for the
+Model A, which gets by on 300 mA or below (at 5 volts this adds up to around
+1.5 watts -- contrast that with
 %(https://secure.www.upenn.edu/computing/resources/category/hardware/article/computer-power-usage,
 50 watts and above) for a desktop PC!). There's no spare planet; there's no
 Plan B if we destroy this one. So we definitely want to support rechargeable
@@ -116,9 +116,9 @@ cheapest and most flexible option.
 
 *Polite*. When you're running your laptop on battery and it runs out of juice
 it gives you a nice polite warning message or two, and, when the level gets
-really low, automagically shuts down the machine. This is important to allow
-the operating system (e.g. %(basics.html#footnote1, Raspbian Linux) on the Pi)
-to close up any open files and generally tidy the house before power
+really low, it automagically shuts down the machine. This is important to
+allow the operating system (e.g. %(basics.html#footnote1, Raspbian Linux) on
+the Pi) to close up any open files and generally tidy the house before power
 disappears. Just killing the power without warning is risky -- sometimes
 nothing bad happens, but in the worst case you can end up with a machine that
 won't boot and needs a complete reinstall. So I want my battery pack to signal
