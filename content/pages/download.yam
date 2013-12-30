@@ -6,8 +6,16 @@ Downloads and Resources
 %#code
 %1 Software and Source Code
 
-Packaged versions of some of the projects (e.g. the %(mopi.html, SimBaMon
-battery monitor)) is available from
+The %(http://www.raspberrypi.org/archives/tag/alex-bradbury, Raspbian
+maintainers) have been kind enough to include the %(mopi.html, SimBaMon
+battery monitor) in their repository, so you can just do this:
+
+%code(lang=Bash)<
+  sudo apt-get install simbamond
+%>
+
+Packaged versions of some of the other projects (and snapshot development
+versions of SimBaMon) are available from
 https://launchpad.net/~hamish-dcs/+archive/pi-gate (an Ubuntu
 PPA%footnote(PPA: Personal Package Archive. Usually used for Ubuntu software
 packages but also useful for certain types of packages for the Raspberry Pi.)

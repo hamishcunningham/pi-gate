@@ -291,9 +291,23 @@ simulated).
 %#installing
 %3 Installing SimBaMon
 
-The battery monitor software is available from an Ubuntu Personal Package
-Archive (PPA).%footnote(The Ubuntu infrastructure doesn't currently work for
-binary Pi packages, but SimBaMon is implemented in script, so we're ok in this
+The %(http://www.raspberrypi.org/archives/tag/alex-bradbury, Raspbian
+maintainers) have been kind enough to include SimBaMon in their repository, so
+you can just do this:
+
+%code(lang=Bash)<
+  sudo apt-get install simbamond
+%>
+
+SimBaMon depends on Gordon Henderson's %(http://wiringpi.com/, Wiring Pi), and
+we've %(http://pi.gate.ac.uk/posts/2013/10/09/wiring-pi-package/, made a
+Raspbian package) for that library which should be in the Foundation
+repository by the time you read this.
+
+Our software is also available from an
+%(https://launchpad.net/~hamish-dcs/+archive/pi-gate, Ubuntu Personal Package
+Archive) (PPA). (The Ubuntu infrastructure doesn't currently work for binary
+Pi packages, but SimBaMon is implemented in script, so we're ok in this
 case.)%footnote(The main archive (for stable releases) is at
 https://launchpad.net/~hamish-dcs/+archive/pi-gate with a development snapshot
 archive at %(https://launchpad.net/~hamish-dcs/+archive/pi-gate-snapshots).)
