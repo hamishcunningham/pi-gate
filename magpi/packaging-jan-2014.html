@@ -435,15 +435,22 @@ their role as daemons &mdash; see <tt>postinst</tt>, <tt>postrm</tt> and the <tt
 <tt>.init</tt> links in
 <a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon/debian">the <tt>debian</tt> directory</a>.</p>
 
+<p>And that's it! With the appropriate Makefile magic, you can now say &quot;<tt>make
+package</tt>&quot; and out will pop the files you need to upload to an Ubuntu PPA,
+and/or contribute to Raspbian, and/or put on a download page for people to
+install themselves.</p>
+
 
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-5.2."></a><h2 class="cow-heading"><span class="cow-sec-number">5.2. </span>WiringPi</h2>
 
 <p>A lot of our recent projects have used the excellent
-<a class="cow-url" href="http://wiringpi.com">WiringPi library</a> to <a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html#gpio-software">talk to the Pi's electronics</a> from software. A small frustration in this
+<a class="cow-url" href="http://wiringpi.com">WiringPi library</a> to
+<a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html#gpio-software">talk to the Pi's electronics</a> from software. A small frustration in this
 process has been the library's lack of integration into Raspbian... So I've
 written the code needed to do this, and made it available 
-<a class="cow-url" href="https://github.com/hamishcunningham/wiringpi/">from GitHub</a>.</p>
+<a class="cow-url" href="https://github.com/hamishcunningham/wiringpi/">from GitHub</a>. It uses a
+packaging process exactly like the one described above.</p>
 
 <p><a class="cow-url" href="images/wiring-pi-bbd.jpg"><img class="cow-img" src="images/wiring-pi-bbd-500x295.jpg" alt="A
 WiringPi breadboard layout" width="500" height="295"></a></p>

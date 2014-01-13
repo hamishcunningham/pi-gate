@@ -391,16 +391,23 @@ their role as daemons -- see ^postinst^, ^postrm^ and the ^.default^ and
 %(https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon/debian,
 the ^debian^ directory).
 
+And that's it! With the appropriate Makefile magic, you can now say "^make
+package^" and out will pop the files you need to upload to an Ubuntu PPA,
+and/or contribute to Raspbian, and/or put on a download page for people to
+install themselves.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 WiringPi
 
 A lot of our recent projects have used the excellent
-%(http://wiringpi.com, WiringPi library) to %(http://pi.gate.ac.uk/pages/basics.html#gpio-software,
+%(http://wiringpi.com, WiringPi library) to
+%(http://pi.gate.ac.uk/pages/basics.html#gpio-software,
 talk to the Pi's electronics) from software. A small frustration in this
 process has been the library's lack of integration into Raspbian... So I've
 written the code needed to do this, and made it available 
-%(https://github.com/hamishcunningham/wiringpi/, from GitHub).
+%(https://github.com/hamishcunningham/wiringpi/, from GitHub). It uses a
+packaging process exactly like the one described above.
 
 %(images/wiring-pi-bbd.jpg, %image(images/wiring-pi-bbd-500x295.jpg, A
 WiringPi breadboard layout, 500, 295))
