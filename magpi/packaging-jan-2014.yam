@@ -1,9 +1,9 @@
 Packaging Software for the Pi
 
-_Packaging and distributing software for the Pi_
+_Packaging and distributing software for the Pi (with a package for WiringPi)_
 %meta(summary=Packaging and distributing software for the Pi)
 
-_%(http://pi.gate.ac.uk/about.html#hamish, Hamish Cunningham), January 2013_
+_%(http://pi.gate.ac.uk/pages/about.html#hamish, Hamish Cunningham), January 2014_
 
 %contents
 
@@ -18,10 +18,11 @@ language" but I was sure stood for "computer operators are boring and
 obviously lobotomised". Customers would phone up and say "we've got a new
 invoice format, can you change the report printer to fit?", and I would spend
 a day or two hunched over a stack of continuous paper (the type with
-%br %(http://en.wikipedia.org/wiki/File:Bound_computer_printout.agr.jpg,
-%image(images/continuous-paper.jpg, Old-style printer paper, 408, 599)) %br
 perforated edges) with a special measuring ruler figuring out how many spaces
 to leave between the date and the address, and the like.
+
+%(http://en.wikipedia.org/wiki/File:Bound_computer_printout.agr.jpg,
+%image(images/continuous-paper.jpg, Old-style printer paper, 408, 599))
 
 The low point of this phase was four days of my life spent chasing a rounding
 error in an invoicing program that resulted in a 2 pence error on a £10,000
@@ -52,7 +53,9 @@ operating systems, as does your Pi, Android phones, and Apple computers.)
 
 The job of packaging and distribution continues to be important, though, and
 below I'll describe the mechanisms used for the Raspberry Pi's _Raspbian_
-operating system.
+operating system. I'll give a couple of downloadable examples, including a
+package for %(https://projects.drogon.net/, Gordon Henderson)'s excellent
+%(http:wiringpi.com, Wiring Pi).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,8 +69,8 @@ and access:
   systems and in low-bandwidth locations, minimising the amount of new
   download for a changed version is important.
 - _Dependencies_ between programs are often tied to particular versions -- if
-  a function that one program relies on changes, its package data must reflect
-  its need for the old version.
+  a facility that one program relies on changes, the program's package data
+  must reflect its need for the old version.
 - _Access_ to packages is relatively easy now -- most software is distributed
   as a network download. But what happens if the connection drops half-way
   through? Or if a million people all want updates on the same day?
@@ -131,8 +134,9 @@ Debian). Ubuntu has a great set of infrastructure tools associated with it,
 including _Personal Package Archives_ (PPAs) which simplify the task of
 building, packaging and distributing software for all the platforms supported
 by Ubuntu. If we're packaging an architecture-independent program, then, a PPA
-can be a good way to distribute it. (Several Pi GATE programs are
-%(http://pi.gate.ac.uk/download.html, distributed like this).)
+can be a good way to distribute it. (Several %(http://pi.gate.ac.uk/, Pi GATE)
+programs are %(http://pi.gate.ac.uk/pages/download.html, distributed like
+this).)
 
 Linux is %(http://www.fsf.org/about/what-is-free-software, open source free
 software), and to make sure everyone gets access to the source of programs in
@@ -154,7 +158,7 @@ limited and it was important to split systems down into very small chunks
 stored on different disk partitions, problems that are less acute today.
 Nevertheless the original designers did such a good job that it's still the
 best there is. Kudos.) We'll take a quick-and-dirty approach here, and give
-enough detail for a couple of simple cases:
+only enough detail for a couple of simple cases:
 
 - scripts and other architecture-independent packages (including _daemons_,
   which are scripts run at system startup)
@@ -162,10 +166,10 @@ enough detail for a couple of simple cases:
 
 In each case the key to the process is to
 
-- set up a ^Makefile^ in the top-level directory of your software tree which
-  follows certain conventions for installation targets
-- create a ^debian^ directory in the same place, containing data to control
-  the package construction process
+# create a ^debian^ directory in the top-level directory of your software
+  tree, containing data to control the package construction process
+# set up a ^Makefile^ in the same place which follows certain conventions for
+  installation targets
 
 The rest of this section describes these steps; in %(#case-studies, the next
 section) we'll give example code.
@@ -174,11 +178,11 @@ section) we'll give example code.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Creating the ^debian^ Directory
 
-The latter tree can be seeded using the ^dh\_make^ program like this:
+The packaging file tree can be seeded using the ^dh\_make^ program like this:
 
 %code(lang=bash)<
    sudo apt-get install devscripts debhelper
-   dh_make -p=package-name\_1.0 --native
+   dh_make -p=package-name_1.0 --native
 %>
 
 This creates a set of files in the ^debian^ directory, many of which are
@@ -204,7 +208,7 @@ changes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Conventions for the ^Makefile^
 
-Having created our ^debian^ file tree we then need to create or adapt a
+Having created our ^debian^ file tree we then need to create (or adapt) a
 top-level ^Makefile^ so that it:
 
 - has a default target (e.g. ^all^) which does any necessary compilation and
@@ -212,7 +216,7 @@ top-level ^Makefile^ so that it:
 - has an ^install^ target which adapts to the setting of a ^DESTDIR^
   (_destination directory_) environment variable
 
-The first of these is best accomplished using the ^install^ program. For
+The second of these is best accomplished using the ^install^ program. For
 example, given a binary called ^amazing^, we can install it to ^DESTDIR^ from
 our ^Makefile^ like this:
 
@@ -221,7 +225,7 @@ our ^Makefile^ like this:
   install -m 755 amazing $(DESTDIR)/usr/bin
 %>
 
-The first command makes sure that the target installation directory
+Here the first command makes sure that the target installation directory
 (^/usr/bin^) exists; the second copies the binary file and gives it
 appropriate permissions for an executable program.
 
@@ -274,8 +278,8 @@ source.
 
 This section gives package file and ^Makefile^ code examples for the script
 programs described in our pages on the 
-%(http://pi.gate.ac.uk/mopi.html#simbamon, SimBaMon simple battery monitor)
-and the %(http://pi.gate.ac.uk/blinkip.html, Blink my IP) daemons.
+%(http://pi.gate.ac.uk/pages/mopi.html#simbamon, SimBaMon simple battery monitor)
+and the %(http://pi.gate.ac.uk/pages/blinkip.html, Blink my IP) daemons.
 
 %(images/mopi/prototype-regulator-05.jpg,
 %image(images/mopi/thumbs/prototype-regulator-05.jpg, mopi prototype 5,

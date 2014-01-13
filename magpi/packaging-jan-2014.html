@@ -46,10 +46,10 @@ div.banner a:hover {
 <body bgcolor="#FFFFFF" text="#000000">
 <h1 class="cow-title-heading">Packaging Software for the Pi</h1>
 
-<p><em>Packaging and distributing software for the Pi</em></p>
+<p><em>Packaging and distributing software for the Pi (with a package for WiringPi)</em></p>
 
 
-<p><em><a class="cow-url" href="http://pi.gate.ac.uk/about.html#hamish">Hamish Cunningham</a>, January 2013</em></p>
+<p><em><a class="cow-url" href="http://pi.gate.ac.uk/pages/about.html#hamish">Hamish Cunningham</a>, January 2014</em></p>
 
 <div class="cow-contents"><h2 class="cow-heading">Contents</h2>
 <p><ul>
@@ -78,9 +78,10 @@ language&quot; but I was sure stood for &quot;computer operators are boring and
 obviously lobotomised&quot;. Customers would phone up and say &quot;we've got a new
 invoice format, can you change the report printer to fit?&quot;, and I would spend
 a day or two hunched over a stack of continuous paper (the type with
-<br> <a class="cow-url" href="http://en.wikipedia.org/wiki/File:Bound_computer_printout.agr.jpg"><img class="cow-img" src="images/continuous-paper.jpg" alt="Old-style printer paper" width="408" height="599"></a> <br>
 perforated edges) with a special measuring ruler figuring out how many spaces
 to leave between the date and the address, and the like.</p>
+
+<p><a class="cow-url" href="http://en.wikipedia.org/wiki/File:Bound_computer_printout.agr.jpg"><img class="cow-img" src="images/continuous-paper.jpg" alt="Old-style printer paper" width="408" height="599"></a></p>
 
 <p>The low point of this phase was four days of my life spent chasing a rounding
 error in an invoicing program that resulted in a 2 pence error on a &pound;10,000
@@ -107,7 +108,9 @@ Internet...<span class="cow-footnote" name="footnote2"><sup><a href="#footnote2"
 
 <p>The job of packaging and distribution continues to be important, though, and
 below I'll describe the mechanisms used for the Raspberry Pi's <em>Raspbian</em>
-operating system.</p>
+operating system. I'll give a couple of downloadable examples, including a
+package for <a class="cow-url" href="https://projects.drogon.net/">Gordon Henderson</a>'s excellent
+<a class="cow-url" href="http:wiringpi.com">Wiring Pi</a>.</p>
 
 
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
@@ -122,8 +125,8 @@ and access:</p>
   systems and in low-bandwidth locations, minimising the amount of new
   download for a changed version is important.</li>
 <li><em>Dependencies</em> between programs are often tied to particular versions &mdash; if
-  a function that one program relies on changes, its package data must reflect
-  its need for the old version.</li>
+  a facility that one program relies on changes, the program's package data
+  must reflect its need for the old version.</li>
 <li><em>Access</em> to packages is relatively easy now &mdash; most software is distributed
   as a network download. But what happens if the connection drops half-way
   through? Or if a million people all want updates on the same day?</li>
@@ -197,8 +200,9 @@ Debian). Ubuntu has a great set of infrastructure tools associated with it,
 including <em>Personal Package Archives</em> (PPAs) which simplify the task of
 building, packaging and distributing software for all the platforms supported
 by Ubuntu. If we're packaging an architecture-independent program, then, a PPA
-can be a good way to distribute it. (Several Pi GATE programs are
-<a class="cow-url" href="http://pi.gate.ac.uk/download.html">distributed like this</a>.)</p>
+can be a good way to distribute it. (Several <a class="cow-url" href="http://pi.gate.ac.uk/">Pi GATE</a>
+programs are <a class="cow-url" href="http://pi.gate.ac.uk/pages/download.html">distributed like
+this</a>.)</p>
 
 <p>Linux is <a class="cow-url" href="http://www.fsf.org/about/what-is-free-software">open source free
 software</a>, and to make sure everyone gets access to the source of programs in
@@ -212,7 +216,7 @@ package for each program; the next section describes how we do this.</p>
 
 <p>A lot has been written about packaging, and its fair to say that it isn't the
 easiest thing to get started with.<span class="cow-footnote" name="footnote3"><sup><a href="#footnote3">3</a></sup></span> We'll take a quick-and-dirty approach here, and give
-enough detail for a couple of simple cases:</p>
+only enough detail for a couple of simple cases:</p>
 
 <ul>
 <li>scripts and other architecture-independent packages (including <em>daemons</em>,
@@ -222,12 +226,12 @@ enough detail for a couple of simple cases:</p>
 
 <p>In each case the key to the process is to</p>
 
-<ul>
-<li>set up a <tt>Makefile</tt> in the top-level directory of your software tree which
-  follows certain conventions for installation targets</li>
-<li>create a <tt>debian</tt> directory in the same place, containing data to control
-  the package construction process</li>
-</ul>
+<ol>
+<li>create a <tt>debian</tt> directory in the top-level directory of your software
+  tree, containing data to control the package construction process</li>
+<li>set up a <tt>Makefile</tt> in the same place which follows certain conventions for
+  installation targets</li>
+</ol>
 
 <p>The rest of this section describes these steps; in <a class="cow-url" href="#case-studies">the next
 section</a> we'll give example code.</p>
@@ -236,11 +240,11 @@ section</a> we'll give example code.</p>
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-4.1."></a><h2 class="cow-heading"><span class="cow-sec-number">4.1. </span>Creating the <tt>debian</tt> Directory</h2>
 
-<p>The latter tree can be seeded using the <tt>dh<span class="cow-escape">_</span>make</tt> program like this:</p>
+<p>The packaging file tree can be seeded using the <tt>dh<span class="cow-escape">_</span>make</tt> program like this:</p>
 
 <p><pre class="prettyprint lang-bash">
    sudo apt-get install devscripts debhelper
-   dh_make -p=package-name\_1.0 --native
+   dh_make -p=package-name_1.0 --native
 </pre>This creates a set of files in the <tt>debian</tt> directory, many of which are
 examples or boilerplate which can be ignored. The ones of the set that need
 editing in our cases are:</p>
@@ -266,7 +270,7 @@ changes.</p>
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-4.2."></a><h2 class="cow-heading"><span class="cow-sec-number">4.2. </span>Conventions for the <tt>Makefile</tt></h2>
 
-<p>Having created our <tt>debian</tt> file tree we then need to create or adapt a
+<p>Having created our <tt>debian</tt> file tree we then need to create (or adapt) a
 top-level <tt>Makefile</tt> so that it:</p>
 
 <ul>
@@ -276,14 +280,14 @@ top-level <tt>Makefile</tt> so that it:</p>
   (<em>destination directory</em>) environment variable</li>
 </ul>
 
-<p>The first of these is best accomplished using the <tt>install</tt> program. For
+<p>The second of these is best accomplished using the <tt>install</tt> program. For
 example, given a binary called <tt>amazing</tt>, we can install it to <tt>DESTDIR</tt> from
 our <tt>Makefile</tt> like this:</p>
 
 <p><pre class="prettyprint lang-makefile">
   install -d -m 755      $(DESTDIR)/usr/bin
   install -m 755 amazing $(DESTDIR)/usr/bin
-</pre>The first command makes sure that the target installation directory
+</pre>Here the first command makes sure that the target installation directory
 (<tt>/usr/bin</tt>) exists; the second copies the binary file and gives it
 appropriate permissions for an executable program.</p>
 
@@ -336,8 +340,8 @@ source.</p>
 
 <p>This section gives package file and <tt>Makefile</tt> code examples for the script
 programs described in our pages on the 
-<a class="cow-url" href="http://pi.gate.ac.uk/mopi.html#simbamon">SimBaMon simple battery monitor</a>
-and the <a class="cow-url" href="http://pi.gate.ac.uk/blinkip.html">Blink my IP</a> daemons.</p>
+<a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html#simbamon">SimBaMon simple battery monitor</a>
+and the <a class="cow-url" href="http://pi.gate.ac.uk/pages/blinkip.html">Blink my IP</a> daemons.</p>
 
 <p><a class="cow-url" href="images/mopi/prototype-regulator-05.jpg"><img class="cow-img" src="images/mopi/thumbs/prototype-regulator-05.jpg" alt="mopi prototype 5" width="200" height="194"></a></p>
 
