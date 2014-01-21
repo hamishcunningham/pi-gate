@@ -383,7 +383,7 @@ lasting for 9 hours and 21 minutes.
 Since then we've conducted 101 different tests. There are two key factors in
 battery life: *1.* Model A vs. Model B; *2.* the peripherals. To summarise:
 
-- You can expect a Model A to get around double the life of a Model A.
+- You can expect a Model A to get around double the life of a Model B.
 - What you connect to the Pi makes a huge difference. For example: WiFi is a
   power hog: halve your expected battery life if you're using it. An
   accelerometer, in contrast, is cheap: e.g. %(http://www.piborg.com/xloborg,
