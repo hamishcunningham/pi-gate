@@ -1,6 +1,8 @@
 Mobile and 24/7 Power for the Pi: Kickstarter Launched!
 
-%meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the Raspberry Pi — and unlimited outdoor adventures!,tags=TODO)
+%meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the
+Raspberry Pi — and unlimited outdoor adventures!,
+tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
 
 We've just launched a
 %(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi,
@@ -41,7 +43,7 @@ The video for the new board --
 %(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi,
 now launched on Kickstarter) -- includes a hackable _GoPro_-type camera
 videoing downhill skiing, air pollution sensing and solar panel management.
-Details of other projects using the board prototypes are on
+Details of other projects using the board prototypes are here on
 %(http://pi.gate.ac.uk/pages/mopi.html, Pi.GATE.ac.uk), for example this
 %(http://pi.gate.ac.uk/pages/pibrush.html, virtual paint brush rig).
 
