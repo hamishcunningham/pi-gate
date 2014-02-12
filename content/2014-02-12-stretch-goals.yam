@@ -1,0 +1,19 @@
+Stretch! Bigger Plans for Mobile Pi Kickstarter
+
+Our Kickstarter has got off to a flying start (thanks to all our backers!) :-)
+
+Now that we know we can deliver the basic device we've defined _Stretch Goals_
+to add to the crowdfunding project. They include a bunch of improvements,
+extra functions and extra rewards that we can deliver if we attract more
+backers. They're now up on the main page -- http://tinyurl.com/mobile-pi and
+scroll down to Section 5 near the end -- and here:
+
+%include(0, useTitle, pages/stretch.yam)
+
+%(http://tinyurl.com/mobile-pi, Join us and *set your Pi free*)!
+
+%meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the
+Raspberry Pi — and unlimited outdoor adventures!,
+tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
+
+*%(http://tinyurl.com/mobile-pi, Read the main article).*
