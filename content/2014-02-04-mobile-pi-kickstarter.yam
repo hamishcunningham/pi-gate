@@ -1,0 +1,67 @@
+Mobile and 24/7 Power for the Pi: Kickstarter Launched!
+
+%meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the
+Raspberry Pi — and unlimited outdoor adventures!,
+tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
+
+We've just launched a
+%(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi,
+crowd-funding campaign on Kickstarter) for mobile and
+uninterruptible power for the Raspberry Pi!
+
+%(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi,
+%image(http://pi.gate.ac.uk/static/images/mopi/logo-heli-text-500x359.png,
+MoPi: Set your Pi Free!, 500, 359))
+
+The ranks of Raspberry Pi add-ons gain a new member today with the launch of a
+crowdfunding campaign for _MoPi_,
+%(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi,
+Mobile Power for the Pi).
+
+The board allows you to power the Pi from standard batteries, car power
+sockets, solar panels, old laptop supplies etc. You can then do hot-swap power
+replacement without stopping work, and an open source daemon will shut down
+the Pi cleanly when batteries discharge.
+
+There's an integrated power switch, and the device doubles as a UPS
+(uninterruptible power supply) when both batteries and mains are connected.
+
+%(http://pi.gate.ac.uk/static/images/mopi/mopi-with-key.png,
+%image(http://pi.gate.ac.uk/static/images/mopi/mopi-with-key-small.png, MoPi prototype, 500, 358))
+
+Battery power isn't new to the Pi, of course, but up to now there hasn't been
+a way to protect your Pi from getting an abrupt power cut when the batteries
+run out, which can lead to corruption of the SD card that the operating system
+is loaded from. 
+
+%%%             TODO tailor this to the recipient
+Mobile Pi projects range from a simple bit of timelapse photography in the
+garden to driving Lego mindstorm robotics to near-orbit space adventures like
+%(http://www.bbc.co.uk/news/technology-23840596, Dave Akerman's balloons).
+
+The video for the new board --
+%(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi,
+now launched on Kickstarter) -- includes a hackable _GoPro_-type camera
+videoing downhill skiing, air pollution sensing and solar panel management.
+Details of other projects using the board prototypes are here on
+%(http://pi.gate.ac.uk/pages/mopi.html, Pi.GATE.ac.uk), for example this
+%(http://pi.gate.ac.uk/pages/pibrush.html, virtual paint brush rig).
+
+The team behind the project include Linux and Pi specialists from the
+%(http://shef.ac.uk/dcs/, University of Sheffield) -- and hardware
+people from Pimoroni Ltd., the company behind the iconic
+%(http://shop.pimoroni.com/collections/pibow, Pibow case):
+
+%(http://pi.gate.ac.uk/static/images/mopi/mopi-in-pibow-500x375.jpg,
+%image(http://pi.gate.ac.uk/static/images/mopi/mopi-in-pibow-small.jpg, MoPi in a Pibow, 500, 375))
+
+You can sign up from £18 (early bird discount), or spend more and pick up a
+UPS rig, or various outdoor experimenter kits (the latter with an orientation
+on schools and the new computing curriculum and the like).
+
+Set your Pi free?!
+
+---
+Follow us on %(https://twitter.com/pitronics, @PiTronics).
+
+*%(pages/mopi.html, Read the main article).*
