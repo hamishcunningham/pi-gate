@@ -7,7 +7,7 @@ hardware.html mopi.html blinkip.html snowcam.html package.html pibrush.html \
 index.html ks1.html
 # TODO delete ks1
 NO_META_PAGES=piroomba.html
-DRAFT_PAGES=
+DRAFT_PAGES=press-14.html
 
 # mangle the outreach day post ##############################################
 local-finalise:
