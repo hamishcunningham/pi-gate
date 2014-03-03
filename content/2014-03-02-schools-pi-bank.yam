@@ -1,0 +1,36 @@
+A Pi Bank for Sheffield Schools
+
+We're putting together a bunch of Pi kits to lend out to Sheffield Schools.
+
+This has been in the planning stages for a while now but a) we're finally
+ready to go and b) %(https://twitter.com/stretchyboy, Martyn Eggleton) from
+%(http://access-space.org/, Access Space) had the great idea of calling it a
+_Pi Bank_.
+
+The %(http://www.sheffield.ac.uk/dcs/, Department of Computer Science) at the
+%(http://www.sheffield.ac.uk/, University of Sheffield) has previously given
+away 50 kits as part of our %(http://ambassadors.rcweb.dcs.shef.ac.uk/,
+Ambassadors programme), but there's also been a lot of interest from schools
+who would like a visit with some Pi kits to get an idea of how they should get
+started with the Pi in the new curricula and so on.
+
+Hence: a Pi Bank, with kits to take out around and about. The Uni has promised
+to bung us some dosh to kick it off, and %(http://www.pimoroni.com/, Pimoroni)
+are going to chip in too :-)
+
+We'll include the basic Pi setup, and some very simple GPIO
+%(pages/basics.html, electronics
+projects). Later we'll add materials for the camera and for
+%(http://airpi.es/, AirPi) (from our
+%(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi,
+Mobile Pi project)). If you have ideas about other good stuff to include
+please leave a comment or tweet us on %(https://twitter.com/pitronics,
+@PiTronics).
+
+%image(images/ambassadors/pi-oneers-003-300x450.jpg, Pi-Oneers at the Cutlers
+2013-10-02-children-and-animals.yam-Ambassadors day, 300)
+
+%meta(summary=A set of Pi kits for Sheffield schools,
+  tags=schools\,education\,pi\,raspberrypi\,gate\,pi bank)
+
+*%(pages/schools.html, Read the main article).*

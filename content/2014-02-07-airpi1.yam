@@ -38,7 +38,7 @@ necessary, particularly to use the UV sensor you also need 0.1uF capacitor
 and a CA314 op-amp. The list also doesn't give all the resistors, hence the
 multi-pack from Maplin. There's no specific direction about what LDR (Light
 Dependant Resistor) either. Based off of comments in the forums I ordered
-a pack of GL5528 one, which has a light resistance of 10K-20KΩ and a darkness
+a pack of GL5528, which have a light resistance of 10K-20KΩ and a darkness
 resistance of 1MΩ.
 
 %(images/environment/airpi/components.jpg, %image(images/environment/airpi/components_thumb.jpg))
