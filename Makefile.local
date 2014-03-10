@@ -14,12 +14,15 @@ local-finalise:
 	TMPF=/tmp/pi-gate-$$$$; \
 	TMPF2=/tmp/pi-gate-$$$$-2; \
 	TMPF3=/tmp/pi-gate-$$$$-3; \
+	TMPF4=/tmp/pi-gate-$$$$-4; \
        	echo '<p align="center"> <iframe width="480" height="360" src="//www.youtube.com/embed/N_Cj2TtFd_E" frameborder="0" allowfullscreen></iframe> </p>'  >$${TMPF}; \
        	echo '<p align="center"> <iframe width="480" height="360" src="//www.youtube.com/embed/73hIeQLm3aY" frameborder="0" allowfullscreen></iframe> </p>'  >$${TMPF2}; \
        	echo '<p align="center"> <iframe width="480" height="360" src="//www.youtube.com/embed/33ZzeEIOMLg" frameborder="0" allowfullscreen></iframe> </p>'  >$${TMPF3}; \
+       	echo '<p align="center"> <iframe width="500" height="500" src="https://gate.ac.uk/g8/contact?r=hc&subject=Please+add+me+to+the+MoPi+waiting+list&emailBody=Please+add+me+to+the+MoPi+waiting+list&t=MoPi+pre-order+waiting+list&b=1" frameborder="0" ></iframe> </p>'  >$${TMPF4}; \
         sed -i \
           -e "/YOUTUBE BLUE PETER CLIP HERE/ r $${TMPF}" \
           -e "/YOUTUBE SKIING CLIP HERE/ r $${TMPF2}" \
           -e "/YOUTUBE MOPI BOARD CLIP HERE/ r $${TMPF3}" \
+          -e "/PREORDER FORM HERE/ r $${TMPF4}" \
             `find output -name '*.html'`; \
-        rm $${TMPF} $${TMPF2} $${TMPF3}
+        rm $${TMPF} $${TMPF2} $${TMPF3} $${TMPF4}
