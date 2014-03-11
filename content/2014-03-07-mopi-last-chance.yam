@@ -1,0 +1,37 @@
+Last Chance to Back Mobile Pi Kickstarter!
+
+Our MoPi power management board for the Pi has had a fantastic response
+%(http://kck.st/1gK5U3t, on Kickstarter) (a big *thanks* to all our backers!).
+
+This weekend is your last chance to back the project, which ends next Tuesday
+(11th March 2014).
+
+MoPi is mobile and 24/7 power for the Pi. On your bike, up a tree, or for your
+home server:
+
+- multiple inputs: standard batteries, car power sockets, old laptop supplies,
+  solar panels, ...
+- hot-swap power replacement without stopping work
+- shutdown the Pi cleanly when batteries discharge
+- integrated on/off switch
+- UPS (uninterruptible power) when using both batteries and mains
+- on-board LED indicators and on-Pi notifications
+
+And it even fits in the Pibow (and other popular cases)...  More at
+http://kck.st/1gK5U3t
+
+During the crowdfunding campaign we've unlocked these stretch goals: screw
+terminals, stackable headers, remoting pads, self-resetting fuse, two-way
+communication, remote power-off, 3.3V supply, timer-based wake-up.
+
+Next up: taking delivery of the 3rd set of prototype boards (the PCBs are on
+order), implementing the new functions and testing, testing, testing... Then
+volume production and delivery.
+
+*%(http://kck.st/1gK5U3t, Join us?!)*
+
+%meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the
+Raspberry Pi — and unlimited outdoor adventures!,
+tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
+
+*%(pages/mopi.html, Read the main article).*
