@@ -5,9 +5,14 @@ TODO
   of delivery schedule
 - then post an update linking here
 
-%image(images/mopi/pre-production-boards-01.jpg, Pre-production MoPi top)
 
-%image(images/mopi/pre-production-boards-02.jpg Pre-production MoPi bottom)
+The boards (without the wiring connector or the GPIO connector)
+
+Top of the board
+%image(images/mopi/pre-production-boards-02.jpg, Pre-production MoPi top)
+
+Underneath the board
+%image(images/mopi/pre-production-boards-01.jpg, Pre-production MoPi bottom)
 
 %(http://www.adafruit.com/products/1112,
 %image(http://www.adafruit.com/images/medium/1112_MED.jpg, Adafruit Stacking
