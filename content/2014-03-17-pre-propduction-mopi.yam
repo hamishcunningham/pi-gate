@@ -1,0 +1,20 @@
+Pre-Production MoPi Boards
+
+TODO
+- details of pre-production stuff, whatever else is on the stack, and revision
+  of delivery schedule
+- then post an update linking here
+
+%image(images/mopi/pre-production-boards-01.jpg, Pre-production MoPi top)
+
+%image(images/mopi/pre-production-boards-02.jpg Pre-production MoPi bottom)
+
+%(http://www.adafruit.com/products/1112,
+%image(http://www.adafruit.com/images/medium/1112_MED.jpg, Adafruit Stacking
+Header))
+
+%meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the
+Raspberry Pi — and unlimited outdoor adventures!,
+tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
+
+*%(pages/mopi.html, Read the main article).*
