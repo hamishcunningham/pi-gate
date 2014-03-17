@@ -6,7 +6,8 @@ TODO
 - then post an update linking here
 
 
-The boards (without the wiring connector or the GPIO connector)
+The boards (without the wiring connector or the GPIO connector or the power
+switch)
 
 Top of the board
 %image(images/mopi/pre-production-boards-02.jpg, Pre-production MoPi top)
