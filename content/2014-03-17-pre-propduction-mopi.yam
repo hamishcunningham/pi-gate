@@ -19,6 +19,11 @@ Underneath the board
 %image(http://www.adafruit.com/images/medium/1112_MED.jpg, Adafruit Stacking
 Header))
 
+A UPS configuration with charging:
+
+%(https://www.circuitlab.com/circuit/dsguk8/ups-configuration/,
+%image(images/mopi/ups-with-charger.png, UPS with charger, 540, 405))
+
 %meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the
 Raspberry Pi — and unlimited outdoor adventures!,
 tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
