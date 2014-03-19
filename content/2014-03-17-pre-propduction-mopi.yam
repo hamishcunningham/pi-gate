@@ -24,6 +24,18 @@ A UPS configuration with charging:
 %(https://www.circuitlab.com/circuit/dsguk8/ups-configuration/,
 %image(images/mopi/ups-with-charger.png, UPS with charger, 540, 405))
 
+Notes: _One detail have to be carefully considered however: when mains drops,
+Pi must be powered "immediately" to keep running. There are no big capacitors
+on Pi's PCB to keep consumption of 300 - 500 mA without power. The mostly
+secured way is MoPi to be always on monitoring Pi's 5V, something that the new
+PCB should be able to do. When monitored 5V goes down "a little" MoPi will
+enable its 5V stabilizer taking over the Pi's power. Based on above why not
+try the circuit attached. When there is mains, the charger is generating e.g.
++12V DC and the relay's coil is energized. The contact is switched to the
+normal open position and is passing +12V to charge the batteries. When mains
+drops, the relay is switching to the normal closed position and charging will
+stop. MoPi is powered all the time._
+
 %meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the
 Raspberry Pi — and unlimited outdoor adventures!,
 tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
