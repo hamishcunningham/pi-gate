@@ -6,35 +6,184 @@ TODO
 - then post an update linking here
 
 
-The boards (without the wiring connector or the GPIO connector or the power
-switch)
+MoPi level 3 is now in testing :-)
 
-Top of the board
+This is, we hope, the final pre-production prototype board. It differs quite a
+lot from the previous prototype (which is the one you may have seen on our
+%(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi,
+Kickstarter page) -- if you missed it you can sign up for
+%(http://pi.gate.ac.uk/mopi/, pre-orders here)). The success of the
+crowdfunding campaign allowed us to add a bunch of new features (aka _stretch
+goals_). The new board has these new hardware and firmware features:
+
+- screw terminals
+- stackable headers
+- remoting pads 
+- self-resetting fuse 
+- two-way communication using I2C
+- remote power-off
+- 3.3V supply mod
+- timer-based wake-up
+
+This post describes some of our work on testing the new board and on updating
+the %(http://pi.gate.ac.uk/pages/mopi.html#simbamon, SimBaMon) software that
+manages it from the Pi. Then we look at a possible arrangement for adding
+battery charging to the picture, and finish up with a revised delivery
+schedule.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 The Final Prototype
+
+Here's what the level 3 revision looks like (_without_ the wiring connector or
+the GPIO connector or the power switch, which were soldered by hand after
+these pictures were taken):
+
+Top of the board:
 %image(images/mopi/pre-production-boards-02.jpg, Pre-production MoPi top)
 
-Underneath the board
+Underneath the board:
 %image(images/mopi/pre-production-boards-01.jpg, Pre-production MoPi bottom)
 
+The stackable headers (for when MoPi is used in tandem with other add-on
+boards) take up quite a lot of vertical space in order to provide a set of
+pass-through pins above the MoPi board. Therefore we're offering two versions,
+one with the stackable header and one with a standard low-profile header.
+
+This is the stackable header that we're using (from Adafruit):
 %(http://www.adafruit.com/products/1112,
 %image(http://www.adafruit.com/images/medium/1112_MED.jpg, Adafruit Stacking
 Header))
 
-A UPS configuration with charging:
+If you're opting for the low-profile header you can see an example here, on
+the level 2 board:
+%image(images/mopi/mopi-underside.jpg, MoPi 2 underside).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 A Possible Charging Circuit
+
+One feature that we didn't manage to get sufficient backing for was battery
+charging. This feature would be a great addition to MoPi, but it turns out to
+be pretty difficult :-( In fact, dealing with lots of different chemistries
+may not be possible at all on a tiny device like MoPi (most manufacturers of
+charging ICs only support one chemistry per chip, for example, and some only
+support charging a single cell per chip!). The other challenge is that we've
+got a really small surface area to work with on the PCB.
+
+Still, a number of our backers want to use MoPi with a charger (e.g. to charge
+batteries from solar panels during the day and then run on batteries
+overnight), so we've been working on a configuration with an external charger.
+For example, here's how we think a UPS configuration with charging could look:
 
 %(https://www.circuitlab.com/circuit/dsguk8/ups-configuration/,
 %image(images/mopi/ups-with-charger.png, UPS with charger, 540, 405))
 
-Notes: _One detail have to be carefully considered however: when mains drops,
-Pi must be powered "immediately" to keep running. There are no big capacitors
-on Pi's PCB to keep consumption of 300 - 500 mA without power. The mostly
-secured way is MoPi to be always on monitoring Pi's 5V, something that the new
-PCB should be able to do. When monitored 5V goes down "a little" MoPi will
-enable its 5V stabilizer taking over the Pi's power. Based on above why not
-try the circuit attached. When there is mains, the charger is generating e.g.
-+12V DC and the relay's coil is energized. The contact is switched to the
-normal open position and is passing +12V to charge the batteries. When mains
-drops, the relay is switching to the normal closed position and charging will
-stop. MoPi is powered all the time._
+We haven't tested this yet, but it _should_ work ;-)
+
+There are a number of potential gotchas in this type of circuit. For example,
+when the mains power drops, the Pi must be powered pretty much instantly in
+order to avoid triggering a reboot. There are no big capacitors on the Pi's
+PCB to buffer its consumption of 300-500 mA without power. To deal with this
+requirement we need MoPi to be always on and monitoring the Pi's 5V feed, even
+when that feed isn't being supplied by MoPi itself. (This doesn't waster much
+power as our microcontroller is very efficient.) When MoPi sees the 5V rail
+start to fall the controller immediately enables its 5V stabilizer, taking
+over supply of power to the Pi.
+
+In the circuit above, when there is mains, the charger is generating e.g. +12V
+DC and the relay's coil is energized. The contact is switched to the normal
+open position and is passing +12V to charge the batteries. When mains drops,
+the relay is switching to the normal closed position and charging will stop.
+MoPi is powered all the time -- and so, we hope, is the Pi.
+
+More on this when we get time to test it out in practise.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Revised Schedule
+
+_I love deadlines. I love the whooshing sound they make as they rush past._
+[Douglas Adams]
+
+Ok, we're a little behind. We launched a week later than the plan (my fault --
+I didn't allow enough time for the Kickstarter approval process), and then we
+ran for 5 days more than plan, and then we met our stretch goals for several
+things that required additional changes to the level 3 prototype board, not to
+mention orders from supplies we haven't used before. This means that we've
+only now started testing the level 3 board
+
+TODO
+
+- Complete prototype board level 3. We have a few hardware changes left to
+  make (changing GPIO pins to fit in with AirPi; adding better connectors;
+  etc.). Then we'll revise the PCB layout and order another batch of
+  prototypes. Solder them up (with a *big* magnifying glass -- the
+  surface-mount components are tiny!) and get testing. We'll make a bigger
+  batch for version 3 than previously, and push them out to heavy Pi users to
+  get use and abuse and a final round of feedback. Continue work on the daemon
+  and the firmware (mainly the 2-way communication code and Pi-based
+  configuration option). Start project updates and regular newsletter to
+  friends and the community.
+  - Completion: February 2014. (Project updates ongoing through September.)
+- Finalise the design of the production board. Fix any residual issues arising
+  from testing. Incorporate any feedback from Kickstarter backers (you!).
+  Start ordering components, kit parts and PCBs in bulk. Finalise the
+  pick-and-place manufacturing process and start pre-production testing.
+  Continue work on the firmware and produce the production binary for flashing
+  to the production boards. Address any stability issues in the daemon code.
+  - Completion: March 2014.
+- Start taking delivery of the production boards. Fulfill the early bird
+  orders. (This is our last opportunity to make firmware changes. Test, test
+  and test again!) Resume work on the educational materials: catch up on
+  developments in the curricula, the Cambridge GCSE MOOC, etc.; more project
+  work with the camera and with the air sensors board. Set up pre-order
+  mechanism for retail version. The daemon should be very stable by now.
+  - Completion: April 2014. (Educational work continues through the summer.)
+- Fulfill remaining (non-early bird) orders for all single item and kit
+  rewards. Select lesson plans for delivery with the schools rigs next month.
+  Solicit additional GitHub committers for the daemon code to help with
+  long-term maintainability.
+  - Completion: May 2014.
+- Finalise the first version of the educational materials. Prepare schools rig
+  orders. Revisit long-term production and retail supply options. Work on the
+  workshop days and deliver some trial runs locally. Agree delivery schedule
+  for workshop days.
+  - Completion: June 2014.
+- Finalise the workshop days and deliver. Set up sustainable production
+  process and retail board supply. Set up sustainability mechanisms for the
+  educational materials.
+  - Completion: September 2014. (Workshop delivery ongoing. Retail board
+    supply ongoing.)
+- Collapse in a small pile.
+
+%/*
+- 1: Friends
+  - Estimated delivery: Feb 2014
+- 2: A MoPi Board (early bird)
+  - Estimated delivery: Apr 2014
+- 3: A MoPi Board
+  - Estimated delivery: Apr 2014
+- 4: A MoPi Board, Batteries, Charger (early bird)
+  - Estimated delivery: Apr 2014
+- 5: A MoPi Board, Batteries, Charger
+  - Estimated delivery: May 2014
+- 6: UPS -- MoPi Board, Two Sets of Batteries, Charger, Mains Supply (early
+  bird)
+  - Estimated delivery: May 2014
+- 7: UPS -- MoPi Board, Two Sets of Batteries, Charger, Mains Supply
+  - Estimated delivery: May 2014
+- 8: Outdoor Adventure Kit (Pi etc., MoPi, batteries, etc.)
+  - Estimated delivery: May 2014
+- 9: Outdoor Experimenter Kit 1 (Light) (previous plus Pi camera)
+  - Estimated delivery: May 2014
+- 10: Outdoor Experimenter Kit 2 (Light and Air) (previous plus AirPi)
+  - Estimated delivery: May 2014
+- 11: Schools Outdoor Lab Rig (ten Light and Air kits)
+  - Estimated delivery: Jun 2014
+- 12: Outdoor Rig Workshop (previous plus on-site mobile Pi day)
+  - Estimated delivery: Sep 2014
+%*/
 
 %meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the
 Raspberry Pi — and unlimited outdoor adventures!,
