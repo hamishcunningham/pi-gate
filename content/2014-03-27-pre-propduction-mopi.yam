@@ -94,7 +94,10 @@ In the circuit above, when there is mains, the charger is generating e.g. +12V
 DC and the relay's coil is energized. The contact is switched to the normal
 open position and is passing +12V to charge the batteries. When mains drops,
 the relay is switching to the normal closed position and charging will stop.
-MoPi is powered all the time -- and so, we hope, is the Pi.
+MoPi is powered all the time -- and so, we hope, is the Pi. (What does the
+diode do? When the +12V goes down, accumulated energy in the relay's coil must
+be dissipated. The diode is shorting the coil to do that. Otherwise the
+relay's contact will stay closed for a longer time.)
 
 More on this when we get time to test it out in practice.
 
