@@ -1,0 +1,74 @@
+Data Duplicator
+
+The motivation for this project came from having a partner who sometimes works
+from home and, typically, has many several small plus a few large files to
+transfer between the campus and home networks to keep in sync.  The office PC
+is always on running several mathematical simulations that typically each take
+days or weeks and we've been using rsync for many years now but, when a few of
+these new files are in the order of a gigabyte, the delay can be a pain... Add
+to this the fact that there has recently been a requirement for her to use an
+electronic diary that uses Android rather our normal GNU/Linux OS and you'll
+see that a modification of our workflow was desirable. Both the home and
+campus networks are fast but the home internet speed is slow (especially
+upstream being *A*DSL) and so this represents the current bottleneck.
+
+Something that detects changes to the filesystem on any one of several Linux
+boxen and the one Android machine and mirrors those changes to all others of
+our shared data network would be good, as would the ability to not hog all
+available bandwidth while transferring the larger files. Digital life must go
+on! I also run a home server, serving a few static pages, and it would be good
+to consolidate these two 'always on' requirements.  It would also be efficient
+at home to be able to check a few websites and email without firing up the PC
+that I use for media editing and, therefore, is quite hefty in terms of power
+consumption.
+
+I've been reading about BitTorrent's Sync tool since the alpha release and it
+seems to have everything I want in terms of file transfers - running it on a
+small platform that also allows simple web serving and surfing should do just
+fine.  Add to this my recent use of a Raspberry Pi as a video recording device
+and the whole thing falls into place.
+
+So.., take one Pi model 'B' (that has an ethernet port), one hard drive for
+the data and a box to stick it in and then add a Linux distribution plus
+BitTorrent Sync.  My mate Hamish happened to have a FairyWren case from
+Geekroo around when we started talking and hadn't got round to putting it
+together - so that saved me a shoebox! - it also came with an LCD display...
+Thinks...  Might be worth noting up/downloads without firing up a larger
+display - not the first priority though.
+
+Having got a Pi 'B' for the project we started to put the box together at
+Pi-Tronics central without much fuss, adding a 2.5" HDD to the mix. Installing
+the Raspbian OS, changing the default password and hostname, updating the
+distro and installing the BitTorrent and LCD2USB software was simple enough.
+
+I'm using the GUI at present quite simply because I use an RPM-based OS at
+present and so wish to get various overviews while getting used to the
+deb-based Raspbian's way of handling network stuff - note to self is to reset
+the memory split later.  I might wish to SSH in from my unix machine at home
+in future and so I've enabled SSH - note to self to create an account with my
+name rather than 'Pi', change the default port and disable root login before
+using the kit in earnest.  I'm downloading various files during development
+work and these should be finished with before I delete the 'Pi' account and
+all these orphaned files.
+
+At this stage I realised that I didn't have a SATA to USB converter and so
+ordered one..  I'll want to move anything that changes (like logs in /var) off
+the SD card but like the OS read speed that the SD provides - I may also look
+at slowing down the HDD rotation via hdparm.
+
+more to follow......
+
+https://en.wikipedia.org/wiki/BitTorrent_Sync
+http://www.bittorrent.com/sync
+https://en.wikipedia.org/wiki/Raspberry_pi
+http://www.raspberrypi.org/
+http://www.geekroo.com/
+http://www.raspbian.org
+
+
+-----------------------------------------------------------------------------
+%meta(summary=A Pi-based Data Duplication Rig,
+author=Bo Meson,
+tags=,pi-tronics\,pi\,raspberrypi\,gate\,backup)
+
+*%(pages/basics.html, Read the main article).*
