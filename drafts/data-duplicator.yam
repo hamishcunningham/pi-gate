@@ -1,5 +1,9 @@
 Data Duplicator
 
+%image(images/fairywren-bo.jpg)
+%image(images/fairywren-finished.jpg)
+%image(images/fairywren-in-progress.jpg)
+
 The motivation for this project came from having a partner who sometimes works
 from home and, typically, has many several small plus a few large files to
 transfer between the campus and home networks to keep in sync.  The office PC
@@ -72,3 +76,4 @@ author=Bo Meson,
 tags=,pi-tronics\,pi\,raspberrypi\,gate\,backup)
 
 *%(pages/basics.html, Read the main article).*
+
