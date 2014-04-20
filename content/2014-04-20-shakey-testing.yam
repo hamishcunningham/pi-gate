@@ -1,5 +1,10 @@
 Shakey Testing
 
+%contents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Waving, Drowning, or ...?
+
 Ok, so it was raining solidly for the second day of our (working) holiday, but
 what the hell -- I was tucked up in bed, and The Little Monster was still
 asleep at gone 9 local time. Life was fine. And then I tried to sit up, and
@@ -18,20 +23,48 @@ firmware from Lubo has been a bit tricky for the last few days...
 
 All part of life's rich tapestry, no doubt. Onwards.
 
-                
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 Enabling I2C
+%1 TODO
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Enabling I2C and Debugging with I2C Tools
 
 Now that MoPi uses I2C as its communication mechanism, we have to enable this
-in the SimBaMon package. Here's how we do it (as described in various places,
-including
+in the SimBaMon package. Here's how we do it%footnote(The key steps are
+described in various places, including
 %(https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c,
-on Adafruit)):
+on Adafruit).):
 
-- add lines ^i2c-bcm2708^ and ^i2c-dev^ in ^/etc/modules^
-- comment out the line ^blacklist i2c-bcm2708^ in
-  ^/etc/modprobe.d/raspi-blacklist^ (if it exists)
+- if i2c-tools isn't already installed, install it:
+  - ^sudo apt-get install i2c-tools^
+- (you might as well do the same with ^python-smbus^ for testing purpose)
+- edit ^/etc/modules^ and add lines ^i2c-bcm2708^ and ^i2c-dev^
+- edit ^/etc/modprobe.d/raspi-blacklist^ (if it exists) and comment out the
+  line ^blacklist i2c-bcm2708^ (by adding a ^#^ at the start of the line)
+
+The process of developing our interface involved hacking the ^i2c-tools^
+package to play with the multi-byte read facility in the ^i2cdump^ command.
+On a closed-source operating system, of course, you would be stymied at this
+point. On Linux it is super easy :-)
+
+Here's how to pull down the source code, rebuild and test:
+
+- edit ^/etc/apt/sources.lst^ and add this line:
+  - ^deb-src http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib
+    non-free rpi^
+- then
+  - ^sudo apt-get update^
+  - ^mkdir i2c-tools^
+  - ^cd i2c-tools^
+  - ^apt-get source i2c-tools^
+- then ^make^ will recompile (the tools are in the directory ^tools^)
+
+Hey presto, I can hack away at the C code and get immediate feedback with
+commands like ^sudo tools/i2cdump -y 1 0x0b i^ (where ^0x0b^ is MoPi's
+designated I2C address -- the smart battery address)%footnote(For a revision 1
+Pi -- the very early boards -- use ^0^ instead of ^1^.).
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
