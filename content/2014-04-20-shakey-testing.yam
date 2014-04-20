@@ -1,0 +1,42 @@
+Shakey Testing
+
+Ok, so it was raining solidly for the second day of our (working) holiday, but
+what the hell -- I was tucked up in bed, and The Little Monster was still
+asleep at gone 9 local time. Life was fine. And then I tried to sit up, and
+the world started spinning. Hmmm. Not so fine.
+
+Labyrinthitis is a murky syndrome involving the tiny hairs in your inner ear
+that allow us to balance. If there's a change in the liquid that activates
+them, then all sorts of wierd and wonderful things can happen -- including
+vertigo. A frequent result, apparently, is projectile oral expulsion of
+whatever you've been scoffing recently -- see for example
+%(http://www.pcarter.com.au/books/ride-like-hell-and-youll-get-there/, Paul
+Carter's account) -- but lucky for me I didn't go through that stage.
+
+I do feel somewhat wobbly, though, and testing new versions of the MoPi
+firmware from Lubo has been a bit tricky for the last few days...
+
+All part of life's rich tapestry, no doubt. Onwards.
+
+                
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Enabling I2C
+
+Now that MoPi uses I2C as its communication mechanism, we have to enable this
+in the SimBaMon package. Here's how we do it (as described in various places,
+including
+%(https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c,
+on Adafruit)):
+
+- add lines ^i2c-bcm2708^ and ^i2c-dev^ in ^/etc/modules^
+- comment out the line ^blacklist i2c-bcm2708^ in
+  ^/etc/modprobe.d/raspi-blacklist^ (if it exists)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the
+Raspberry Pi — and unlimited outdoor adventures!,
+tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
+
+*%(pages/mopi.html, Read the main article).*
