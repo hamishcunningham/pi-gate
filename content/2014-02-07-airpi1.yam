@@ -203,5 +203,5 @@ certain that can be added into the AirPi setup. Stay tuned!
 %meta(
   author=Fred Sonnenwald,
   summary=Building an AirPi sensor rig,
-  tags=hardware\,pi-tronics\,environmental\,pi\,raspberrypi\,gate,
+  tags=airpi\,hardware\,pi-tronics\,environmental\,pi\,raspberrypi\,gate,
 )
