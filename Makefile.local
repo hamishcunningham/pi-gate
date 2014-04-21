@@ -26,3 +26,12 @@ local-finalise:
           -e "/PREORDER FORM HERE/ r $${TMPF4}" \
             `find output -name '*.html'`; \
         rm $${TMPF} $${TMPF2} $${TMPF3} $${TMPF4}
+
+
+#	# stevie smith footnote
+#	grep 'sup..a.href...footnote1' output/posts/2014/04/20/shakey-testing/index.html | sed -e 's,<p>,,' -e 's!</p>!Drowning, or ...?</h1>!' > /tmp/$$$$-stevie; \
+#        sed -i -e '/<p><span class="cow-footnote" name="footnote1"><sup><a href="#footnote1">1<.a><.sup><.span><.p>/d' \
+#               -e "s!Drowning, or ....<.h1>!XXX!" \
+#               -e "/<h1>.*Drowning, or ....<.h1>/ r /tmp/$$$$-stevie" \
+#          output/posts/2014/04/20/shakey-testing/index.html; \
+#        rm /tmp/$$$$-stevie;

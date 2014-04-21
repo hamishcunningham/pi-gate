@@ -5,10 +5,13 @@ Shakey Testing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Waving, Drowning, or ...?
 
-Ok, so it was raining solidly for the second day of our (working) holiday, but
-what the hell -- I was tucked up in bed, and The Little Monster was still
-asleep at gone 9 local time. Life was fine. And then I tried to sit up, and
-the world started spinning. Hmmm. Not so fine.
+(With apologies to %(http://www.bbc.co.uk/arts/poetry/outloud/smith.shtml,
+Stevie Smith).)
+
+Ok, so it was raining solidly for the second straight day of our (working)
+holiday, but what the hell -- I was tucked up in bed, and The Little Monster
+was still asleep at gone 9 local time. Life was fine. And then I tried to sit
+up, and the world started spinning. Hmmm. Not so fine.
 
 Labyrinthitis is a murky syndrome involving the tiny hairs in your inner ear
 that allow us to balance. If there's a change in the liquid that activates
@@ -16,7 +19,9 @@ them, then all sorts of wierd and wonderful things can happen -- including
 vertigo. A frequent result, apparently, is projectile oral expulsion of
 whatever you've been scoffing recently -- see for example
 %(http://www.pcarter.com.au/books/ride-like-hell-and-youll-get-there/, Paul
-Carter's account) -- but lucky for me I didn't go through that stage.
+Carter's account)%footnote(He ended up in an ambulance being rushed to
+hospital, but then it must be tough being a macho Aussie :-\).) -- but lucky
+for me I didn't go through that stage.
 
 I do feel somewhat wobbly, though, and testing new versions of the MoPi
 firmware from Lubo has been a bit tricky for the last few days...
@@ -25,7 +30,44 @@ All part of life's rich tapestry, no doubt. Onwards.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%1 TODO
+%1 MoPi v3 and v4: Results So Far
+
+The good news is that we're pretty convinced that
+%(/posts/2014/03/27/pre-propduction-mopi/, version 3 prototype) is a solid
+basis for the first full production run (version 4, which we'll be delivering
+to our %(http://kck.st/1gK5U3t, Kickstarter backers) in May and June). We've
+ordered the PCBs and most of the components. (Below more details of the
+development and testing process.)
+
+The bad news is that there's a world-wide shortage of the Silicon Labs
+microcontroller that we're using%footnote(Quite why this little component has
+gone out of stock is a mystery. Perhaps a containerful fell off a ship
+somewhere? Or a huge client of the manufacturer ordered 10s of thousands? Or
+perhaps Intel has identified us as an important competitor and is seeking to
+slow down our meteoric rise? Answers on a postcard please...) :-( %br %br
+%image(images/falling-shipping-containers.jpg, Falling Shipping
+Containers)%footnote(Image from
+http://setsail.com/submerged-shipping-containers/.) %br %br -- we've only
+managed to order around half of what we need for immediate delivery. The other
+half is on order for delivery in the first week of June. If the situation
+stays the same then this means we will be delivering to the first half of our
+backers in May and the second half in June. (We'll do this in
+first-come-first-served order.)
+
+If anyone has 300 spare controllers we'd love to hear from you...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Development and Testing
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Linux is Lovely
+
+One of the great things about the Pi is that it runs a %(http://fsf.org/, free
+and open source) software stack. This makes development so much easier --
+and here's an example of why...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Enabling I2C and Debugging with I2C Tools
@@ -64,7 +106,6 @@ Hey presto, I can hack away at the C code and get immediate feedback with
 commands like ^sudo tools/i2cdump -y 1 0x0b i^ (where ^0x0b^ is MoPi's
 designated I2C address -- the smart battery address)%footnote(For a revision 1
 Pi -- the very early boards -- use ^0^ instead of ^1^.).
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
