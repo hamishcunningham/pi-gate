@@ -108,6 +108,7 @@ what an AirPi should do.
 %image(images/environment/software/conky.png)
 
 %meta(
+  status=draft,
   author=Fred Sonnenwald,
   summary=Taking a look at improvements to the AirPi software,
   tags=airpi\,hardware\,pi-tronics\,environmental\,pi\,raspberrypi\,gate,
