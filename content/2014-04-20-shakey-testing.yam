@@ -58,8 +58,103 @@ If anyone has 300 spare controllers we'd love to hear from you...
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%1 Development and Testing
+%1 Packaging
 
+Big thanks to Georgi Marinov from %(http://www.engview.com/, EngView systems)
+for designing a beautiful packet for MoPi:
+
+%image(images/mopi/packaging-01.jpg, The Packaging 1, 500)
+
+%%% %image(images/mopi/packet/img-20140421-112941.jpg, Packaging 2, 500)
+
+And you can also spot the new stackable headers version here (with a
+stabilising device at the top which we'll ship it with -- the long pins are
+very easy to bend!).
+
+%%% %image(images/mopi/packet/img-20140421-112958.jpg, Packaging 3, 500)
+
+%image(images/mopi/packet/img-20140421-113013.jpg, Packaging 4, 500)
+
+Thanks Joro! (And thanks Gen for the logo!)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Working with the New Board
+
+Our present work has several objectives:
+
+- verify that the new MoPi board implements all (old and new) functions
+  correctly
+- develop an API for I2C access to the board
+- convert SimBaMon to use the new API
+- add a configuration utility to allow users on the Pi to configure the board
+
+We're doing this using external power supplies to make the development cycles
+faster. (Well, would _you_ want to add "wait for the batteries to discharge"
+to every edit/compile/test loop?!) I'm writing this post next to a large
+humming monster:
+
+%image(images/mopi/test-rigs/sofia-20140421-154603-500.jpg, Test Rig, 500)
+
+The Pi is drawing 170 mA; MoPi is getting 11.9 volts from the PSU. The PSU
+connects up to one of MoPi's supply inputs using a couple of re-purposed panel
+pins:
+
+%image(images/mopi/test-rigs/sofia-20140421-113148-500.jpg, Test Rig, 500)
+
+Mission control (helicopter not strictly necessary):
+
+%image(images/mopi/test-rigs/sofia-20140421-154651-500.jpg, Test Rig, 500)
+
+%%% %image(images/mopi/test-rigs/sofia-20140421-113213-500.jpg, Test Rig, 500)
+%%% %image(images/mopi/test-rigs/sofia-20140421-154556-500.jpg, Test Rig, 500)
+%%% %image(images/mopi/test-rigs/sofia-20140421-113123-500.jpg, Test Rig, 500)
+%%% %image(images/mopi/test-rigs/sofia-20140421-113138-500.jpg, Test Rig, 500)
+
+We've also got a flash new PSU down at the workshop:
+
+%image(images/mopi/test-rigs/workshop-20140409-153037-500.jpg, Test Rig, 500)
+%image(images/mopi/test-rigs/workshop-20140409-153052-500.jpg, Test Rig, 500)
+
+And here's Fred after I just showed him the bill:
+
+%image(images/mopi/test-rigs/workshop-20140409-153131-500.jpg, Test Rig, 500)
+
+While we're showing my snaps, here's one of my absolute favourite bits of kit
+ever:
+
+%image(images/mopi/test-rigs/workshop-20140409-153029-500.jpg, Test Rig, 500)
+%%% %image(images/mopi/test-rigs/workshop-20140409-153021-500.jpg, Test Rig, 500)
+
+This multimeter has been running reliably for 30 years! Ok, at some point I
+couldn't get the batteries any more, so I had to bodge up a container for a
+different size, but apart from that it has been pretty much perfect. I plugged
+it into our new PSU, dialed up 6.2 volts and hey presto! The meter and the PSU
+agreed 100%. Can I marry my multimeter?
+
+We've got a new shiney one too, but the romance just isn't there:
+
+%%% %image(images/mopi/test-rigs/workshop-20140409-153039-500.jpg, Test Rig, 500)
+%image(images/mopi/test-rigs/workshop-20140409-153043-500.jpg, Test Rig, 500)
+
+Anyhow, after this work is finished, we will:
+
+- run a bunch of battery tests using the 2600 mAh AAs that we're going to ship
+  to backers who chose rewards with batteries in
+- complete the user guide and developer documentation
+- scratch our heads and wonder what we've forgotten?
+
+Here are the battery rigs waiting to go:
+
+%%% %image(images/mopi/test-rigs/workshop-20140409-152525-500.jpg, Battery Rig, 500)
+
+%image(images/mopi/test-rigs/workshop-20140409-152533-500.jpg, Battery Rig, 500)
+
+%image(images/mopi/test-rigs/workshop-20140409-152538-500.jpg, Battery Rig, 500)
+
+Do say: wow, you're really taking this seriously! Don't say: so, Professor
+Cunningham, you popped out to buy a battery about a year ago and you haven't
+actually finished yet?
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
