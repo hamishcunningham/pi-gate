@@ -32,7 +32,7 @@ All part of life's rich tapestry, no doubt. Onwards.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 MoPi v3 and v4: Results So Far
 
-The good news is that we're pretty convinced that
+The good news is that we're pretty convinced that the
 %(/posts/2014/03/27/pre-propduction-mopi/, version 3 prototype) is a solid
 basis for the first full production run (version 4, which we'll be delivering
 to our %(http://kck.st/1gK5U3t, Kickstarter backers) in May and June). We've
@@ -204,8 +204,7 @@ Pi -- the very early boards -- use ^0^ instead of ^1^.).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the
-Raspberry Pi — and unlimited outdoor adventures!,
+%meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the Raspberry Pi — and unlimited outdoor adventures!,
 tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
 
 *%(pages/mopi.html, Read the main article).*
