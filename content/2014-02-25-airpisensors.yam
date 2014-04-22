@@ -4,7 +4,7 @@ Interpreting AirPi Sensor Readings
 
 For a few posts now I've been talking about the %(http://airpi.es/, AirPi), an
 environmental monitoring platform for the RaspberryPi. At the end of
-%(/posts/2014/02/07/airpi1/, these)%(/posts/2014/02/15/airpiupdate/, two)
+%(/posts/2014/02/07/airpi1/, these)%(/posts/2014/02/14/airpiupdate/, two)
 posts, I made the point that while it's great that I've got output from the
 AirPi it doesn't mean much if I don't know what it means. Today I'll be going
 through the output (below) and looking at the sensor specs in more details to
@@ -445,5 +445,5 @@ tuned to see what my room has been like since I built the AirPi!
 %meta(
   author=Fred Sonnenwald,
   summary=Looking at how we interpret individual readings from AirPi sensors,
-  tags=hardware\,pi-tronics\,environmental\,pi\,raspberrypi\,gate,
+  tags=airpi\,hardware\,pi-tronics\,environmental\,pi\,raspberrypi\,gate,
 )
