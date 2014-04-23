@@ -1,4 +1,7 @@
-Shakey Testing
+Wobbling, Coding, Wobbling, Testing
+
+%(images/mopi/first-boxed-batch-april-2014.jpg, 
+%image(images/mopi/first-boxed-batch-april-2014-500.jpg, Boxed batch, 500))
 
 %contents
 
@@ -43,7 +46,7 @@ The bad news is that there's a world-wide shortage of the Silicon Labs
 microcontroller that we're using%footnote(Quite why this little component has
 gone out of stock is a mystery. Perhaps a containerful fell off a ship
 somewhere? Or a huge client of the manufacturer ordered 10s of thousands? Or
-perhaps Intel has identified us as an important competitor and is seeking to
+perhaps Apple has identified us as an important competitor and is seeking to
 slow down our meteoric rise? Answers on a postcard please...) :-( %br %br
 %image(images/falling-shipping-containers.jpg, Falling Shipping
 Containers)%footnote(Image from
@@ -114,6 +117,7 @@ Mission control (helicopter not strictly necessary):
 We've also got a flash new PSU down at the workshop:
 
 %image(images/mopi/test-rigs/workshop-20140409-153037-500.jpg, Test Rig, 500)
+
 %image(images/mopi/test-rigs/workshop-20140409-153052-500.jpg, Test Rig, 500)
 
 And here's Fred after I just showed him the bill:
@@ -201,6 +205,12 @@ Hey presto, I can hack away at the C code and get immediate feedback with
 commands like ^sudo tools/i2cdump -y 1 0x0b i^ (where ^0x0b^ is MoPi's
 designated I2C address -- the smart battery address)%footnote(For a revision 1
 Pi -- the very early boards -- use ^0^ instead of ^1^.).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% %2 Joining In
+
+%%% You can see some of the checkins for the 
+%%% TODO
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
