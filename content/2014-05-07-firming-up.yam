@@ -101,7 +101,8 @@ including MoPi facilities in their programs.
 %1 MoPi from the Command Line
 
 The observant amongst you may have noticed that SimBaMon is not written in
-Python -- how does the daemon talk to the board when the API is in Python?
+Python%footnote(In common with most daemons, SimBaMon is written in shell
+script.) -- how does the daemon talk to the board when the API is in Python?
 That's where
 %(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopicli,
 ^mopcli^) comes in, which is a command-line interface to the Python API. This
