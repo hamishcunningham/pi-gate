@@ -1,0 +1,170 @@
+MoPi: Firming up the Software
+
+%contents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 The View from the Pi
+
+The MoPi software suite is now feature complete. That means that all the
+facilities which MoPi makes available on the Raspberry Pi which it is powering
+are now available for testing. This post describes how this software works and
+how the architecture of MoPi hangs together.
+
+There are four main parts of the puzzle:
+
+- A _daemon_ which runs in the background on the Pi, which is called
+  %(/pages/mopi.html#simbamon, SimBaMon) (a Simple Battery Monitor). SimBaMon
+  is available as a package for Raspbian, and installing it pulls in all the
+  other facilities.
+- An interface that communicates with the MoPi hardware over the I2C protocol.
+  This interface is wrapped up as a Python API.
+- A command-line tool that uses the Python API and provides a language-neutral
+  portable method for talking to the board from the Pi.
+- A configuration user interface that simplifies the process of setting up
+  MoPi to deal with different types and numbers of batteries, and other types
+  of power supply.
+
+All of the code for these components is
+%(https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon,
+available on GitHub), and details of how to install are available on
+%(/pages/download.html, our download page). (*Note*: to run the current
+version of the code you need the snapshot repository; the version in the Pi
+Foundation's repository won't be updated until we make an official release.)
+
+The rest of the post discusses each of the main elements in turn.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 The SimBaMon Daemon
+
+When the Pi (or any other Linux system) boots, several system services are
+started that will run continuously until the machine is shut down again. These
+services are called _daemons_, and this is how SimBaMon is implemented.
+Following the standard naming convention, the daemon is called ^simbamond^,
+and the first point of entry (used by the operating system to start, stop,
+etc.) is a script that lives in
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamond.default,
+^/etc/init.d/simbamond^). This script (which is a management type person)
+calls another to do all the real work; this other (hard working type) lives in
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamon,
+^/usr/sbin/simbamon^).
+
+One of key features of MoPi is that it supports many different types of
+batteries and many other types of power supply (from solar panels to elastic
+bands!). Coping with the requirements of all these monsters needs a huge wodge
+of configuration data, which (following Debian Linux convention) lives in
+^/etc/default^ in a file (again, confusingly) called
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamond.init,
+^simbamond^).%footnote(Again confusingly -- this will become a theme -- the
+names of the files as the live in the source package are different from their
+names when installed. If you don't like being confused, you might want to
+avoid talking to computer people as a general rule.)
+
+Together these three script files make up a new system service that polls the
+MoPi hardware every couple of seconds and shouts loudly when an electronic
+shortage appears on the horizon. If no one is listening and the shortage gets
+acute, the daemon tells the Pi to take a rest and issues the ^shutdown^
+command.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 The Python API
+
+How do we talk to the hardware? From MoPi version 3 onwards we shifted away
+from using the Pi's general-purpose GPIO pins (using a tool called WiringPi).
+This worked well, but it used a pin for each bit of data that we wanted to
+ship between the board and the Pi. As time went on we found more and more data
+that we needed to share (and we also came across other add-on boards that use
+lots of GPIO pins -- e.g. %(http://pi.gate.ac.uk/posts/2014/02/07/airpi1/,
+AirPi)).
+
+Luckily the Pi also hosts several other inter-board communication options,
+including the I2C protocol, which uses only two pins, can talk to multiple
+devices over the same two wires, and allows transfer of much larger amounts of
+data.
+
+There are two ways to talk over I2C from the Pi: a set of command-line tools
+written in C, and a Python module. Both work, but the Python version seems to
+have had more attention from Pi users and developers, and has support for
+multi-byte reads (which requires a bit of hacking to get working in the C). So
+we've implemented an API for MoPI in Python%footnote(And no one complained
+about the whitespace rules! Who'd have thought it?!), which now lines in a
+file called
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopiapi.py,
+^mopiapi.py^).
+
+For Python programmers this code provides a natural and efficient method of
+including MoPi facilities in their programs.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 MoPi from the Command Line
+
+The observant amongst you may have noticed that SimBaMon is not written in
+Python -- how does the daemon talk to the board when the API is in Python?
+That's where
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopicli,
+^mopcli^) comes in, which is a command-line interface to the Python API. This
+script provides convenient methods for the daemon to use, or for Pi users to
+query and configure the board, or for our configuration utility -- which by
+amazing coincidence is described next.
+
+To see what the beast can do, ask it for help by typing ^sudo mopicli -h^;
+you'll get something like this:
+
+%<
+Usage: mopicli [-h] [options]
+Version 0.2, API 0.2
+
+Miscellaneous:
+  -i          I2C bus (default: 1)
+  -fv         Firmware version
+  -sn         Serial number
+  -h          Display this message
+
+Status:
+  -s          MoPi status word
+  -sv         Verbose status
+  -v          Current battery voltage in mV
+  -v1/-v2     Battery #1/#2 voltage in mV
+
+Read configuration options:
+  -rc         Combined battery #1 and #2 configuration
+  -rc1/-rc2   Configuration of battery #1/#2
+  -rpon       Power on delay
+  -rs         Shutdown delay
+
+Write configuration options:
+  -wc mV mV mV         Combined battery #1 and #2 configuration
+  -wc1/-wc2 mV mV mV   Configuration of battery #1/#2
+  -wpon seconds        Power on delay seconds
+  -ws seconds          Shutdown delay seconds
+
+All options may be used simultaneously. When doing so, they execute in the
+  order they are listed in in this help message. However, only one of each may
+  be used.
+%>
+
+As easy as pie.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Configuring Your Power Supplies
+
+Not quite so easy, is choosing the correct voltage settings for different
+battery chemistries and different combinations of cells (not to mention other
+types of power supply). In each case MoPi needs to know:
+
+- what is the approximate voltage that the battery will supply when fully
+  charged
+- what is the minimum safe discharge voltage
+
+The mid-point between these two voltages is also relevant, being a
+conventional definition of what a good level of charge is.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the Raspberry Pi — and unlimited outdoor adventures!,
+tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
+
+*%(pages/mopi.html, Read the main article).*
