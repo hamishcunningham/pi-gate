@@ -162,6 +162,8 @@ types of power supply). In each case MoPi needs to know:
 The mid-point between these two voltages is also relevant, being a
 conventional definition of what a good level of charge is.
 
+TODO describe the config problem, and the UI
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the Raspberry Pi — and unlimited outdoor adventures!,
