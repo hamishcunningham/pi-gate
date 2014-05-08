@@ -31,7 +31,8 @@ available on GitHub), and details of how to install are available on
 version of the code you need the snapshot repository; the version in the Pi
 Foundation's repository won't be updated until we make an official release.)
 
-The rest of the post discusses each of the main elements in turn.
+The rest of the post discusses each of the main elements in turn, and finishes
+up with a note about monitoring the beast as it runs.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -244,6 +245,71 @@ Dive into
 the source code here).
 
 And now you know more about batteries than you ever wanted to -- just like me!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Monitoring
+
+As you can imagine, figuring out how all this stuff is working and identifying
+bugs and incorrect behaviour is quite a challenge. Luckily we have some great
+tools to help us, one of which is %(https://mmonit.com/, Monit). This little
+gem is itself a daemon, and it has facilities for one thousand and one
+different types of monitoring task. You can listen to your webserver and
+restart it if it fails, or check the general load of the machine you're
+running on, or -- in our case -- check that the SimBaMon service is running,
+and if not start it up.
+
+To use it, all we need to do is ^sudo apt-get install monit^ in the usual way,
+then edit ^/etc/monit/monitrc^. This is the config we're using to monitor
+SimBaMon on one of our test rigs:
+
+%code(lang=bash)<
+###############################################################################
+# monit config for simbamond, from /etc/monit/monitrc #########################
+
+# monitoring UI (serve on port 8888 and allow connections from one IP address)
+set httpd port 8888 and
+  allow 192.168.1.79
+
+# general system status
+check system snowcam5
+  if loadavg (1min) > 4 then alert
+  if loadavg (5min) > 2 then alert
+  if memory usage > 75% then alert
+  if swap usage > 25% then alert
+  if cpu usage (user) > 70% then alert
+  if cpu usage (system) > 30% then alert
+  if cpu usage (wait) > 20% then alert
+
+# monitor simbamond
+check process simbamond with pidfile /var/run/simbamond.pid
+  start program = "/usr/sbin/service simbamond start" with timeout 60 seconds
+  stop program  = "/usr/sbin/service simbamond stop"
+  restart program = "/usr/sbin/service simbamond restart" with timeout 60 seconds
+  if cpu > 60% for 2 cycles then alert
+  if cpu > 80% for 5 cycles then restart
+  if totalmem > 200.0 MB for 5 cycles then restart
+  if children > 250 then restart
+  if loadavg(5min) greater than 10 for 8 cycles then stop
+  if 3 restarts within 5 cycles then timeout
+  group mopi
+###############################################################################
+%>
+
+You can then see what's going on by either or both of
+
+- ^cat /var/log/monit.log^ (^grep simbamon ...^ is also useful)
+- pointing your browser at ^\http://my-pi-ip-address:8888^ (if you need to
+  find your IP address various methods are %(/pages/blinkip.html, discussed
+  here))
+
+This is great for keeping check on things during load testing (particularly
+heavy loads which have a tendency to cause odd corner case bugs to trigger),
+but it is also a great tool for maximising service availability -- the
+configuration code above will restart SimBaMon within a couple of minutes
+should it ever crash, for example.
+
+Enjoy...
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
