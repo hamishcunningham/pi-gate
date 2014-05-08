@@ -269,10 +269,10 @@ SimBaMon on one of our test rigs:
 
 # monitoring UI (serve on port 8888 and allow connections from one IP address)
 set httpd port 8888 and
-  allow 192.168.1.79
+  allow 192.168.1.111
 
 # general system status
-check system snowcam5
+check system mopi-15
   if loadavg (1min) > 4 then alert
   if loadavg (5min) > 2 then alert
   if memory usage > 75% then alert
