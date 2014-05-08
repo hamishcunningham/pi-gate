@@ -158,12 +158,92 @@ types of power supply). In each case MoPi needs to know:
 
 - what is the approximate voltage that the battery will supply when fully
   charged
+- what is the point at which we're getting low on charge (and may expect to
+  run out within a few minutes or so)
 - what is the minimum safe discharge voltage
 
-The mid-point between these two voltages is also relevant, being a
-conventional definition of what a good level of charge is.
+The mid-point between these two voltages is is the conventional definition of
+what a good level of charge is, so that's where we swap between lighting up
+our RGB led in blue and lighting it in green. When we reach the low charge
+point we turn the LED red, and when we reach the minimum safe discharge
+voltage (or the minimum safe operating voltage if that is higher) then we
+initiate shutdown.
 
-TODO describe the config problem, and the UI
+Let's look at each of these values in more detail:
+
+- _Fully-charged voltage_. This is equal to the fully-charged voltage of each
+  cell in the battery pack multiplied by the number of cells. Like most things
+  with batteries, it varies according to battery chemistry -- e.g. an Alkaline
+  cell generates 1.5V; a NiMH 1.2V; a LiIon 3.7V.
+- _The low charge level_. When you record the voltage delivered by a battery
+  over time, most of the curves exhibit a knee shape. Before the knee voltage
+  drop is reasonably slow; after the knee if drops much more sharply. We need
+  to try and warn the user around the knee point, so that they have enough
+  time to replace the battery before it drains completely, but not so much
+  time that there is still lots of usable charge left.
+- _Minimum safe discharge voltage_. This applies to all rechargeable
+  batteries. If we discharge below this level, then the capacity to recharge
+  will be impared. This makes it a very important factor in battery life for
+  the long term, and one which we've done a lot of work to model and adapt to.
+  (Ever wondered why the rechargeables that you put in your alarm clock or
+  torch lasted such a short time? Most devices have no way of knowing about
+  the minimum discharge level for the particular chemistry you're using!)
+- _Minimum safe operating level_. MoPi uses a sophisticated microcontroller to
+  analyse battery behaviour, control its LEDs and deliver data to the software
+  suite running on the Pi. If the supply voltage to MoPi falls below a certain
+  level (around 6.2V) then the microcontroller may terminate, or even start to
+  behave unpredictably. It is very important to trap rapid voltage drop before
+  it reaches this point.
+
+To deal with all these considerations, the current version of the software
+stores these values:
+
+%<
+        TYPE         CELL/FULL  MIN
+
+  1     non-battery     9.0     6.2
+  2     NiMH            1.2     0.95
+  3     Alkaline        1.5     0.8
+  4     Lead Acid       2.0     1.58
+  5     Lithium Ion     3.7     3.0
+  6     LiPo            4.2     3.0
+  7     NiCd            1.2     1.1
+%>
+
+When we know what chemistry we're dealing with, and how many cells, we can
+then make good guesses about where the four levels above should fall. But how
+do we know what the chemistry is? Two ways:
+
+- We have two built-in defaults, one for 8 NiMH cells (which is the battery
+  pack that we're supplying to backers who requested one), and one for 8
+  Alkaline non-rechargeables. The former is what MoPi will assume when running
+  out of the box; the latter is activated by removing the on-board jumper
+  provided for the purpose.
+- You tell us! To this end we have developed a configuration UI on the Pi,
+  which is the last piece in our four part software puzzle.
+
+The configuration UI uses the same tools as the Raspberry Pi's utility
+(^raspi-config^), so it should be simple and familiar, and it can be used over
+all types of connections (including remote login with ^ssh^). Here's a
+screenshot or three:
+
+%image(images/mopi/config-01.png, MoPi Config UI 1, 650)
+
+_The main entry screen._ %br %br
+
+%image(images/mopi/config-02.png, MoPi Config UI 2, 650)
+
+_Configuring one of the power supplies, battery chemistry._ %br %br
+
+%image(images/mopi/config-03.png, MoPi Config UI 3, 650)
+
+_Getting status data (there's lots more in the newest version!)._
+
+Dive into
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopi,
+the source code here).
+
+And now you know more about batteries than you ever wanted to -- just like me!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
