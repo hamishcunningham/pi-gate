@@ -173,7 +173,7 @@ finalise: local-finalise
         done
 	# copy bare drafts as they are
 	@for f in $(DRAFT_PAGES); do \
-          cp $(INPUTDIR)/pages/$${f} $(OUTPUTDIR)/pages; \
+          cp -r $(INPUTDIR)/pages/$${f} $(OUTPUTDIR)/pages; \
         done
 
 # various housekeeping files

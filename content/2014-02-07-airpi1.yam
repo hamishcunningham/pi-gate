@@ -65,9 +65,11 @@ something of a logic puzzle. How do I get things where I want them, using a
 minimum of wire? Without short-circuiting? Or having things stick up? Despite
 already having some practice and familiarity with the circuit from building
 prototype 1, prototype 2 definitely took longer to build. Lots of cross
-checking %(files/2600pdf.pdf, several) %(files/21295d.pdf, of)
-%(files/DHT22.pdf, the) %(files/fn957.pdf, different) %(files/UVI-01-E.pdf,
-datasheets). A digital multi-meter was a good friend as well.
+checking %(/pages/airpi-files/2600pdf.pdf, several)
+%(/pages/airpi-files/21295d.pdf, of)
+%(/pages/airpi-files/DHT22.pdf, the) %(/pages/airpi-files/fn957.pdf, different)
+%(/pages/airpi-files/UVI-01-E.pdf, datasheets). A digital multi-meter was a
+good friend as well.
 
 %(images/environment/airpi/prototype2.jpg, %image(images/environment/airpi/prototype2_thumb.jpg))
 _Much nicer!_

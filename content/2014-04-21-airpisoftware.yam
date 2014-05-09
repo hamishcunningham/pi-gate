@@ -39,23 +39,9 @@ of the sensor readings were uncalibrated. Not anymore! There's now a module
 that let's the software output calibrated readings. "What's the use?" you
 might say? Ah well, for starters I also added a CSV output module. The AirPi
 is now compatible with industry standard file formats... also known as a
-(comma separated value) spreadsheet. It get's better than that though.
+(comma separated value) spreadsheet. It get's better than that though:
 
-.
-
-..
-
-...
-
----
-The crown jewel...
----
-
-...
-
-..
-
-.
+... (wait for it) ... The Crown Jewels:
 
 %(images/environment/software/webinterface.png, %image(images/environment/software/webinterface_small.png))
 
@@ -70,13 +56,13 @@ But wait! There's more!
 %(images/environment/software/webinterface2.png, %image(images/environment/software/webinterface2_thumb.png))
 
 Not only can you see the current reading, you can also view graphs.
-Interactively explore what the weather's been doing over the last 24 hours with
-the click of a button. This is of course customizable. You could show the last
-hour or the last 2 weeks, but longer periods require more free memory and will
-load a bit slower. Check out our *%(http://localhost:8000/files/airpi_demo/,
-interactive demo site)*. It's not a real Pi there for reasons of my router being
-unhappy, but it behaves just like the real thing. Open the drop down to bring
-up a graph. Select an area on a graph to zoom.
+Interactively explore what the weather's been doing over the last 24 hours
+with the click of a button. This is of course customizable. You could show the
+last hour or the last 2 weeks, but longer periods require more free memory and
+will load a bit slower. Check out our *%(/pages/airpi-files/airpi_demo/,
+interactive demo site)*. It's not a real Pi there for reasons of my router
+being unhappy, but it behaves just like the real thing. Open the drop down to
+bring up a graph. Select an area on a graph to zoom.
 
 Sharp eyed observes will have also noticed the RSS feed icon in the upper right
 hand corner. This is to allow for easy export of results to other software. I
@@ -108,7 +94,6 @@ what an AirPi should do.
 %image(images/environment/software/conky.png)
 
 %meta(
-  status=draft,
   author=Fred Sonnenwald,
   summary=Taking a look at improvements to the AirPi software,
   tags=airpi\,hardware\,pi-tronics\,environmental\,pi\,raspberrypi\,gate,
