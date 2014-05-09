@@ -59,7 +59,9 @@ of configuration data, which (following Debian Linux convention) lives in
 ^simbamond^).%footnote(Again confusingly -- this will become a theme -- the
 names of the files as the live in the source package are different from their
 names when installed. If you don't like being confused, you might want to
-avoid talking to computer people as a general rule.)
+avoid talking to computer people as a general rule. For example, the MoPi
+board works on milivolts; the I2C communication uses centivolts; the user
+interface uses volts; the API uses milivolts. And all for good reasons!)
 
 Together these three script files make up a new system service that polls the
 MoPi hardware every couple of seconds and shouts loudly when an electronic
