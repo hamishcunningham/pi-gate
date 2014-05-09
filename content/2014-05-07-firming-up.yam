@@ -57,7 +57,7 @@ of configuration data, which (following Debian Linux convention) lives in
 ^/etc/default^ in a file (again, confusingly) called
 %(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamond.init,
 ^simbamond^).%footnote(Again confusingly -- this will become a theme -- the
-names of the files as the live in the source package are different from their
+names of the files as they live in the source package are different from their
 names when installed. If you don't like being confused, you might want to
 avoid talking to computer people as a general rule. For example, the MoPi
 board works on milivolts; the I2C communication uses centivolts; the user
