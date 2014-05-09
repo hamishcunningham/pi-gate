@@ -221,7 +221,11 @@ do we know what the chemistry is? Two ways:
   pack that we're supplying to backers who requested one), and one for 8
   Alkaline non-rechargeables. The former is what MoPi will assume when running
   out of the box; the latter is activated by removing the on-board jumper
-  provided for the purpose.
+  provided for the purpose%footnote(Configuration provided by the user
+  overrides the jumper for the current power cycle -- and beyond, when
+  SimBaMon is running as the daemon will persist the config values. The
+  firmware reads the jumper at each power up and initializes the cut-off
+  points with Ni-MH or Alkaline values.).
 - You tell us! To this end we have developed a configuration UI on the Pi,
   which is the last piece in our four part software puzzle.
 
