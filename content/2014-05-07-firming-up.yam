@@ -32,7 +32,17 @@ version of the code you need the snapshot repository; the version in the Pi
 Foundation's repository won't be updated until we make an official release.)
 
 The rest of the post discusses each of the main elements in turn, and finishes
-up with a note about monitoring the beast as it runs.
+up with a note about monitoring the beast as it runs. First, though, a note
+about our delivery schedule. Having lost some time
+%(/posts/2014/04/20/shakey-testing/, through illness), and spent quite a long
+time getting the I2C protocol to work reliably, it is now looking unlikely
+that we'll deliver before next month. (On the up-side that means we'll be able
+to deliver all in one go, as the
+%(/posts/2014/04/20/shakey-testing/#section-2., second shipment) of
+microncontrollers is due early in June.) We're getting close to finalising
+version 4 (the first production version), but we'd hate to ship it with a
+firmware bug that would mean returning the boards for re-flashing. We hope you
+agree it is best to wait a little longer.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
