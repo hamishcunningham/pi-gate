@@ -76,7 +76,7 @@ board works on milivolts; the I2C communication uses centivolts; the user
 interface uses volts; the API uses milivolts. And all for good reasons!)
 
 Together these three script files make up a new system service that polls the
-MoPi hardware every couple of seconds and shouts loudly when an electronic
+MoPi hardware every couple of seconds and shouts loudly when an electron
 shortage appears on the horizon. If no one is listening and the shortage gets
 acute, the daemon tells the Pi to take a rest and issues the ^shutdown^
 command.
@@ -105,8 +105,8 @@ There are two ways to talk over I2C from the Pi: a set of command-line tools
 written in C, and a Python module. Both work, but the Python version seems to
 have had more attention from Pi users and developers, and has support for
 multi-byte reads (which requires a bit of hacking to get working in the C). So
-we've implemented an API for MoPI in Python%footnote(And no one complained
-about the whitespace rules! Who'd have thought it?!), which now lines in a
+we've implemented an API for MoPi in Python%footnote(And no one complained
+about the whitespace rules! Who'd have thought it?!), which now lives in a
 file called
 %(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopiapi.py,
 ^mopiapi.py^).
@@ -170,7 +170,7 @@ As easy as pie.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Configuring Your Power Supplies
 
-Not quite so easy, is choosing the correct voltage settings for different
+Not quite so easy is choosing the correct voltage settings for different
 battery chemistries and different combinations of cells (not to mention other
 types of power supply). In each case MoPi needs to know:
 
@@ -180,8 +180,8 @@ types of power supply). In each case MoPi needs to know:
   run out within a few minutes or so)
 - what is the minimum safe discharge voltage
 
-The mid-point between these two voltages is is the conventional definition of
-what a good level of charge is, so that's where we swap between lighting up
+The mid-point between the first two voltages is is the conventional definition
+of what a good level of charge is, so that's where we swap between lighting up
 our RGB led in blue and lighting it in green. When we reach the low charge
 point we turn the LED red, and when we reach the minimum safe discharge
 voltage (or the minimum safe operating voltage if that is higher) then we
