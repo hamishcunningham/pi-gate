@@ -81,6 +81,9 @@ shortage appears on the horizon. If no one is listening and the shortage gets
 acute, the daemon tells the Pi to take a rest and issues the ^shutdown^
 command.
 
+There is %(/pages/mopi.html#simbamon, more detail here) (though it is a little
+out of date at time of writing).
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 The Python API
