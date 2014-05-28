@@ -1,7 +1,7 @@
 Pre-Production MoPi Boards
 
-%2* [MoPi is *mobile*, *hot-swap* and *24/7 power* for the Raspberry Pi.
-%(/pages/get-mopi.html, How to order.)]
+_[MoPi is *mobile*, *hot-swap* and *24/7 power* for the Raspberry Pi.
+%(/pages/get-mopi.html, How to order.)]_
 
 MoPi level 3 is now in testing :-)
 
@@ -9,7 +9,7 @@ This is, we hope, the final pre-production prototype board. It differs quite a
 lot from the previous prototype (which is the one you may have seen on our
 %(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi,
 Kickstarter page) -- if you missed it you can sign up for
-%(http://pi.gate.ac.uk/mopi/, pre-orders here)). The success of the
+%(/pages/get-mopi.html, pre-orders here)). The success of the
 crowdfunding campaign allowed us to add a bunch of new features (aka _stretch
 goals_). The new board has these new hardware and firmware features:
 
