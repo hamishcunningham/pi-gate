@@ -1,18 +1,28 @@
-Mobile Pi: Hot-swap Mobile and 24/7 Power for the Pi
+MoPi: Hot-Swap Mobile Power for the Pi
 
-%2* A big thanks to all our %(http://tinyurl.com/mobile-pi, Kickstarter backers)!
+_
+%(about.html#hamish, Hamish Cunningham),
+%(about.html#lubo, Lubo Bontchev),
+and %(about.html#fred, Fred Sonnenwald),
+%br August 2013 -- June 2014_
 
-If you missed it, you can join our pre-order waiting list here:
+%1* MoPi is *mobile*, *hot-swap* and *24/7 power* for the Raspberry Pi. %br
+%(/pages/get-mopi.html, I want one! \(how to order\))
 
-%%% PREORDER FORM HERE
+In early 2014 we ran a %(http://tinyurl.com/mobile-pi, Kickstarter campaign)
+to fund the first production version, which is due for delivery in June 2014.
+If you missed it, you can %(/pages/get-mopi.html, join our pre-order waiting
+list here).
 
-_Hot-swap Mobile Power for the Pi_
-%meta(summary=Hot-swap Mobile Power for the Pi)
-
-_%(about.html#hamish, Hamish Cunningham), and
-%(about.html#lubo, Lubo Bontchev), August-December 2013_
+%meta(summary=Hot-Swap\, Mobile and 24/7 Power for the Pi)
 
 %contents
+
+_[A huge thank you to Bo Meson, Gen Gorrell, Vladimir Marinov, Georgi Marinov,
+Louise Illien, Julian Briggs, Caroline Ivimey-Parr, Angus Roberts, Joe
+Polifroni, Todor Primov, and all our
+%(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi/backers,
+Kickstarter backers)!]_
 
 %/*
 TODO
@@ -23,9 +33,6 @@ TODO
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Introduction
-
-[*Note:* this page isn't yet updated with all the stuff from 
-the %(http://tinyurl.com/mobile-pi, Kickstarter campaign)...]
 
 The Pi has many advantages as a mobile platform: if the rain gets in, or a dog
 eats it, a replacement doesn't break the bank, and, for a general-purpose

@@ -1,5 +1,8 @@
 Mobile Hot-Swap Power for the Pi
 
+%2* [MoPi is *mobile*, *hot-swap* and *24/7 power* for the Raspberry Pi.
+%(/pages/get-mopi.html, How to order.)]
+
 Mobile power for the Pi -- easy on the one hand, hard on the other: it is easy
 to plug in a 5v battery pack -- but when it runs out your Pi gets a power cut
 that might well corrupt the SD card.
