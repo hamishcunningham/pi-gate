@@ -1,8 +1,5 @@
 Mobile and 24/7 Power for the Pi: Kickstarter Launched!
 
-%2* [MoPi is *mobile*, *hot-swap* and *24/7 power* for the Raspberry Pi.
-%(/pages/get-mopi.html, How to order.)]
-
 %meta(summary=Hot-swap\, uninterruptible\, multi-supply mobile power for the
 Raspberry Pi — and unlimited outdoor adventures!,
 tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
@@ -11,6 +8,9 @@ We've just launched a
 %(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi,
 crowd-funding campaign on Kickstarter) for mobile and
 uninterruptible power for the Raspberry Pi!
+
+%2* [MoPi is *mobile*, *hot-swap* and *24/7 power* for the Raspberry Pi.
+%(/pages/get-mopi.html, How to order.)]
 
 %(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi,
 %image(http://pi.gate.ac.uk/static/images/mopi/logo-heli-text-500x359.png,
