@@ -53,7 +53,7 @@ And it even fits in the Pibow (and other well-known Pi cases):
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Quick Start
 
-%image(images/mopi/quickstart/schematic6.svg, Quick start guide)
+%image(images/mopi/quickstart/schematic6.png, Quick start guide)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,6 +80,12 @@ If you're in a hurry see the graphic above, and:
 # Connect the batteries
 # Connect the Pi and hit "on"
 
+For more details on each step, see below.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Installing the Software
+
 A more cautious recipe is to update your firmware and the operating system,
 and to reboot between each step:
 
@@ -91,7 +97,16 @@ and to reboot between each step:
 - sudo apt-get install simbamond
 - sudo reboot
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Connecting the Power
+
 Then connect one or more power supply to MoPi using the screw terminals
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Connecting the Raspberry Pi
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -107,10 +122,13 @@ Your MoPi comes as a small ci
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Troubleshooting
 
-If you get a message like "libkmod: ERROR ../libkmod/libkmod.c:554
-kmod_search_moddep: could not open moddep file
-'/lib/modules/3.6.11+/modules.dep.bin'" when installing try a reboot followed
-by "sudo apt-get -f install".
+- If you get a message like "libkmod: ERROR ../libkmod/libkmod.c:554
+  kmod_search_moddep: could not open moddep file
+  '/lib/modules/3.6.11+/modules.dep.bin'" when installing try a reboot
+  followed by "sudo apt-get -f install".
+- If the I2C bus appears not to be working after installing SimBaMon, try a
+  reboot (as sometimes the Python SMBus module appears not to load as
+  predicted).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
