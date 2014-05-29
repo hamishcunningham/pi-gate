@@ -26,13 +26,95 @@ Kickstarter backers)!]_
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Pi to Go!
+
+MoPi is mobile and 24/7 power for the Pi. On your bike, up a tree, or for your
+home server: we've got you covered.
+
+%%% %(images/mopi/logo-heli-1.png,
+%%% %image(images/mopi/logo-heli-1-200x150.png, MoPi Heli Logo, 200, 150))
+
+Features:
+
+- multiple inputs -- standard batteries, car power sockets, old laptop
+  supplies, solar panels, ...
+- hot-swap power replacement without stopping work
+- shutdown the Pi cleanly when batteries discharge
+- integrated on/off switch
+- UPS (uninterruptible power) when using both batteries and mains
+- on-board LED indicators and on-Pi notifications
+
+And it even fits in the Pibow (and other well-known Pi cases):
+
+%(images/mopi/mopi-in-pibow.jpg,
+%image(images/mopi/mopi-in-pibow-500x375.jpg, MoPi in a Pibow, 500, 375))
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Quick Start
 
 %image(images/mopi/quickstart/schematic6.svg, Quick start guide)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%1 Introduction
+%#userguide
+%1 User Guide
+
+%#warnings
+%2* Warnings!!!
+
+- DO NOT plug MoPi onto your Pi while the Pi is powered up!
+- DO NOT touch electronic components when they're powered up -- you may
+  damage them, or burn your fingers!
+- AVOID handling circuit boards when charged with static!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Installation
+
+If you're in a hurry see the graphic above, and:
+
+# Install the battery monitoring software:
+  - sudo apt-get update
+  - sudo apt-get install simbamond
+# Connect the batteries
+# Connect the Pi and hit "on"
+
+A more cautious recipe is to update your firmware and the operating system,
+and to reboot between each step:
+
+- sudo apt-get update
+- sudo apt-get dist-upgrade
+- sudo reboot
+- sudo rpi-update
+- sudo reboot
+- sudo apt-get install simbamond
+- sudo reboot
+
+Then connect one or more power supply to MoPi using the screw terminals
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 What's in the Box
+
+Your MoPi comes as a small ci
+
+%image(images/mopi/mopi-with-key-schematic.png, Board connections schematic 1)
+
+%image(images/mopi/mopi-with-key-schematic-02.png, Board connections schematic 2)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Troubleshooting
+
+If you get a message like "libkmod: ERROR ../libkmod/libkmod.c:554
+kmod_search_moddep: could not open moddep file
+'/lib/modules/3.6.11+/modules.dep.bin'" when installing try a reboot followed
+by "sudo apt-get -f install".
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Background: Mobile Pi Power
 
 The Pi has many advantages as a mobile platform: if the rain gets in, or a dog
 eats it, a replacement doesn't break the bank, and, for a general-purpose
