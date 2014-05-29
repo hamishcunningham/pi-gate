@@ -24,12 +24,12 @@ Polifroni, Todor Primov, and all our
 %(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi/backers,
 Kickstarter backers)!]_
 
-%/*
-TODO
-- http://www.powerstream.com/AA-tests.htm
-- add vlady's test script to simbamon/utils and write up in a post
-- http://goddess-gate.com/projects/en/raspi/picheckvoltage
-%*/
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Quick Start
+
+%image(images/mopi/quickstart/schematic6.svg, Quick start guide)
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Introduction
