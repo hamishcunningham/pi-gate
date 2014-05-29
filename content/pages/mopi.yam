@@ -118,8 +118,10 @@ and to reboot between each step:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %3 Connecting the Power and the Raspberry Pi
 
-Then connect one or more power supply to MoPi using the screw terminals, and
+Next connect one or more power supply to MoPi using the screw terminals, and
 gently push fit MoPi onto your Raspberry Pi's GPIO pins.
+
+The components on the MoPi are as follows:
 
 %image(images/mopi/mopi-with-key-schematic-500x.png, Board connections schematic 1,
 500)
@@ -139,6 +141,14 @@ of the board.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %3 Turn On, Turn Off
+
+When the Pi is powered off, press the power button for 3 seconds to turn it
+on.
+
+When the Pi is powered on, press the power button for 3 seconds to turn it
+off. This will shut the Pi down cleanly, which can take up to around 30
+seconds. If you hold the power button down for 10 seconds, the power will shut
+down immediately.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
