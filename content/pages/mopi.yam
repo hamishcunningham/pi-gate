@@ -53,7 +53,7 @@ And it even fits in the Pibow (and other well-known Pi cases):
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Quick Start
 
-%image(images/mopi/quickstart/schematic6.png, Quick start guide)
+%image(images/mopi/quickstart/schematic6-500x.png, Quick start guide)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -114,9 +114,11 @@ Then connect one or more power supply to MoPi using the screw terminals
 
 Your MoPi comes as a small ci
 
-%image(images/mopi/mopi-with-key-schematic.png, Board connections schematic 1)
+%image(images/mopi/mopi-with-key-schematic-500x.png, Board connections schematic 1,
+500)
 
-%image(images/mopi/mopi-with-key-schematic-02.png, Board connections schematic 2)
+%image(images/mopi/mopi-with-key-schematic-02-500x.png, Board connections schematic
+%2, 500)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
