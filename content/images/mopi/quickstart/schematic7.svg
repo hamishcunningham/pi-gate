@@ -124,9 +124,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.72"
-     inkscape:cx="171.25109"
-     inkscape:cy="83.010853"
+     inkscape:zoom="0.93"
+     inkscape:cx="182.46633"
+     inkscape:cy="31.899435"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -168,34 +168,32 @@
          id="tspan12225"
          x="31.265844"
          y="180.13953"
-         style="font-size:14px">Introducing <tspan
-   style="font-size:14px;font-weight:bold;-inkscape-font-specification:Arial Bold"
-   id="tspan3385"><tspan
-   style="font-size:14px;font-weight:normal"
-   id="tspan3390">the</tspan> MoPi</tspan>...</tspan></text>
+         style="font-size:16px">Introducing <tspan
+   style="font-size:16px;font-weight:bold;-inkscape-font-specification:Arial Bold"
+   id="tspan3385">MoPi</tspan>...</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="31.957251"
-       y="306.95898"
+       y="300.34598"
        id="text12254"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan12256"
          x="31.957251"
-         y="306.95898"
-         style="font-size:14px"><tspan
-   style="font-size:14px;font-weight:bold;-inkscape-font-specification:Arial Bold"
-   id="tspan3387">Install</tspan> the software: </tspan><tspan
+         y="300.34598"
+         style="font-size:16px"><tspan
+   style="font-size:16px;font-weight:bold;-inkscape-font-specification:Arial Bold"
+   id="tspan3387">Install</tspan> software: </tspan><tspan
          sodipodi:role="line"
          x="31.957251"
-         y="324.45898"
+         y="320.34598"
          id="tspan12262"
-         style="font-size:14px"
+         style="font-size:16px"
          dy="-1.0700001">$ sudo apt-get install simbamond</tspan></text>
     <g
        id="g6834"
-       transform="translate(0,-0.50323645)">
+       transform="translate(0,-3.3393723)">
       <text
          sodipodi:linespacing="125%"
          id="text12264"
@@ -203,13 +201,13 @@
          x="31.816626"
          style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
          xml:space="preserve"><tspan
-           style="font-size:14px"
+           style="font-size:16px"
            id="tspan13011"
            y="343.90414"
            x="31.816626"
            sodipodi:role="line"><tspan
    id="tspan3389"
-   style="font-size:14px;font-weight:bold;-inkscape-font-specification:Arial Bold">Connect</tspan> batteries:</tspan></text>
+   style="font-size:16px;font-weight:bold;-inkscape-font-specification:Arial Bold">Connect</tspan> power:</tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text13146"
@@ -217,17 +215,17 @@
          x="172.40247"
          style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
          xml:space="preserve"><tspan
-           style="font-size:14px"
+           style="font-size:16px"
            id="tspan13150"
            y="343.90414"
            x="172.40247"
            sodipodi:role="line"><tspan
    id="tspan3391"
-   style="font-size:14px;font-weight:bold;-inkscape-font-specification:Arial Bold">Connect</tspan> the MoPi:</tspan></text>
+   style="font-size:16px;font-weight:bold;-inkscape-font-specification:Arial Bold">Connect</tspan> MoPi:</tspan></text>
     </g>
     <g
        id="g4282"
-       transform="translate(-2.9524439,16.863752)">
+       transform="translate(-2.9524439,14.742075)">
       <path
          sodipodi:nodetypes="ssssss"
          inkscape:connector-curvature="0"
@@ -1082,7 +1080,7 @@
     </g>
     <g
        id="g13740"
-       transform="matrix(0.41709561,0,0,0.41709561,79.899702,108.6434)">
+       transform="matrix(0.41709561,0,0,0.41709561,79.899702,107.03043)">
       <g
          mask="url(#mask13510)"
          transform="matrix(-5.9051868,0,0,-5.9051868,1986.1015,3316.6209)"
@@ -1959,20 +1957,20 @@
     <text
        xml:space="preserve"
        style="font-size:11.81460857px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="99.757896"
+       x="91.648521"
        y="436.62943"
        id="text13831"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan13833"
-         x="99.757896"
+         x="91.648521"
          y="436.62943"
-         style="font-size:14px"><tspan
-   style="font-size:14px;font-weight:bold;-inkscape-font-specification:Arial Bold"
-   id="tspan3393">Press</tspan> the power button!</tspan></text>
+         style="font-size:16px"><tspan
+   style="font-size:16px;font-weight:bold;-inkscape-font-specification:Arial Bold"
+   id="tspan3393">Press</tspan> power button!</tspan></text>
     <g
        id="g6201"
-       transform="translate(0,-2.9577653)">
+       transform="translate(0,-1.1690269)">
       <g
          transform="matrix(0.76750554,0,0,0.76750554,-292.60837,-26.13475)"
          id="g5395"
@@ -2356,25 +2354,27 @@
       <text
          sodipodi:linespacing="125%"
          id="text12227"
-         y="291.24176"
-         x="93.360725"
-         style="font-size:13.20302391px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           style="font-size:9px;font-style:italic;text-align:center;text-anchor:middle"
-           y="291.24176"
-           x="93.360725"
+         y="145.43758"
+         x="-262.73047"
+         style="font-size:13.20302391px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#a0a0a0;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         xml:space="preserve"
+         transform="matrix(0,-1,1,0,0,0)"><tspan
+           style="font-size:9px;font-style:italic;text-align:center;text-anchor:middle;fill:#a0a0a0;fill-opacity:1"
+           y="145.43758"
+           x="-262.73047"
            id="tspan12229"
            sodipodi:role="line">Top</tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text12231"
-         y="291.24176"
-         x="234.3201"
-         style="font-size:13.20302391px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           style="font-size:9px;font-style:italic;text-align:center;text-anchor:middle"
-           y="291.24176"
-           x="234.3201"
+         y="185.63574"
+         x="-262.35693"
+         style="font-size:13.20302391px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#a0a0a0;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         xml:space="preserve"
+         transform="matrix(0,-1,1,0,0,0)"><tspan
+           style="font-size:9px;font-style:italic;text-align:center;text-anchor:middle;fill:#a0a0a0;fill-opacity:1"
+           y="185.63574"
+           x="-262.35693"
            id="tspan12233"
            sodipodi:role="line">Bottom</tspan></text>
       <path
