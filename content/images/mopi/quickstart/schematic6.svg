@@ -10,15 +10,15 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="302.42383"
-   height="439.13202"
+   width="282.46777"
+   height="420.63202"
    id="svg8991"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="schematic6.svg"
-   inkscape:export-filename="/home/hamish/schematic6.png"
-   inkscape:export-xdpi="600.02686"
-   inkscape:export-ydpi="600.02686">
+   inkscape:export-filename="/home/fcs/Desktop/schematic6.png"
+   inkscape:export-xdpi="599.95435"
+   inkscape:export-ydpi="599.95435">
   <defs
      id="defs8993">
     <linearGradient
@@ -95,7 +95,7 @@
        id="linearGradient4463"
        x1="255.89336"
        y1="83.253677"
-       x2="275.68192"
+       x2="271.52774"
        y2="83.253677"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
@@ -104,7 +104,7 @@
        id="linearGradient4471"
        x1="255.79742"
        y1="103.25368"
-       x2="275.5744"
+       x2="271.81894"
        y2="103.25368"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
@@ -113,7 +113,7 @@
        id="linearGradient4479"
        x1="255.75584"
        y1="93.253677"
-       x2="275.62756"
+       x2="271.56354"
        y2="93.253677"
        gradientUnits="userSpaceOnUse" />
   </defs>
@@ -124,21 +124,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="189.7315"
-     inkscape:cy="171.21933"
+     inkscape:zoom="2"
+     inkscape:cx="235.9457"
+     inkscape:cy="275.86319"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="770"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
      inkscape:window-x="0"
-     inkscape:window-y="1"
+     inkscape:window-y="26"
      inkscape:window-maximized="1"
-     fit-margin-top="20"
-     fit-margin-left="20"
-     fit-margin-right="20"
-     fit-margin-bottom="17" />
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="8.5" />
   <metadata
      id="metadata8996">
     <rdf:RDF>
@@ -155,7 +155,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-12.42893,-14.381775)">
+     transform="translate(-22.384985,-24.381775)">
     <g
        style="display:inline;filter:url(#filter5348)"
        id="g5395"
@@ -548,7 +548,9 @@
          x="31.787329"
          y="47.266541">Introducing <tspan
    style="font-weight:bold;-inkscape-font-specification:Arial Bold"
-   id="tspan3385">the MoPi</tspan>...</tspan></text>
+   id="tspan3385"><tspan
+   style="font-weight:normal"
+   id="tspan3390">the</tspan> MoPi</tspan>...</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
@@ -1866,13 +1868,13 @@
                height="1.4647871"
                width="0.81157124"
                id="rect3416"
-               style="color:#000000;fill:#5dff6b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.54299997999999983;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5348);enable-background:accumulate" />
+               style="color:#000000;fill:#5dff6b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.54299998;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5348);enable-background:accumulate" />
           </g>
           <g
              transform="matrix(0.801019,0,0,0.90030376,56.990702,43.737794)"
              id="g3418">
             <rect
-               style="color:#000000;fill:#5dff6b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.54299997999999983;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5348);enable-background:accumulate"
+               style="color:#000000;fill:#5dff6b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.54299998;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5348);enable-background:accumulate"
                id="rect3420"
                width="0.81157124"
                height="1.4647871"
@@ -1884,7 +1886,7 @@
              transform="matrix(0.801019,0,0,0.90030376,55.678716,43.737794)"
              id="g3422">
             <rect
-               style="color:#000000;fill:#d43a00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.54299997999999983;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5348);enable-background:accumulate"
+               style="color:#000000;fill:#d43a00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.54299998;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5348);enable-background:accumulate"
                id="rect3424"
                width="0.81157124"
                height="1.4647871"
@@ -1902,7 +1904,7 @@
                height="1.4647871"
                width="0.81157124"
                id="rect3428"
-               style="color:#000000;fill:#5dff6b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.54299997999999983;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5348);enable-background:accumulate" />
+               style="color:#000000;fill:#5dff6b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.54299998;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5348);enable-background:accumulate" />
           </g>
         </g>
         <rect
@@ -1933,7 +1935,7 @@
              sodipodi:cy="330.03827"
              sodipodi:cx="249.09375"
              id="path3446"
-             style="color:#000000;fill:#2419d2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.60000001999999997;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+             style="color:#000000;fill:#2419d2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.60000002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
              sodipodi:type="arc" />
           <path
              sodipodi:open="true"
