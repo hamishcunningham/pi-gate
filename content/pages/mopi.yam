@@ -1,26 +1,26 @@
 MoPi: Hot-Swap Mobile Power for the Pi
 
-_
+%/* _
 %(about.html#hamish, Hamish Cunningham),
 %(about.html#lubo, Lubo Bontchev),
 and %(about.html#fred, Fred Sonnenwald),
-%br August 2013 -- June 2014_
+%br August 2013 -- June 2014_ %*/
 
-%1* MoPi is *mobile*, *hot-swap* and *24/7 power* for the Raspberry Pi. %br
+%1* MoPi is mobile, hot-swap and 24/7 power for the Raspberry Pi. %br
 %(/pages/get-mopi.html, I want one! \(how to order\))
 
-In early 2014 we ran a %(http://tinyurl.com/mobile-pi, Kickstarter campaign)
+_(In early 2014 we ran a %(http://tinyurl.com/mobile-pi, Kickstarter campaign)
 to fund the first production version, which is due for delivery in June 2014.
 If you missed it, you can %(/pages/get-mopi.html, join our pre-order waiting
-list here).
+list here).)_
 
 %meta(summary=Hot-Swap\, Mobile and 24/7 Power for the Pi)
 
 %contents
 
-_[A huge thank you to Bo Meson, Gen Gorrell, Vladimir Marinov, Georgi Marinov,
-Louise Illien, Julian Briggs, Caroline Ivimey-Parr, Angus Roberts, Joe
-Polifroni, Todor Primov, and all our
+_[A huge thank you to Bo Meson, Fred Sonnenwald, Gen Gorrell, Vladimir
+Marinov, Georgi Marinov, Louise Illien, Julian Briggs, Caroline Ivimey-Parr,
+Angus Roberts, Joe Polifroni, Todor Primov, and all our
 %(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi/backers,
 Kickstarter backers)!]_
 
@@ -61,12 +61,29 @@ And it even fits in the Pibow (and other well-known Pi cases):
 %1 User Guide
 
 %#warnings
-%2* Warnings!!!
+%2 Warnings!!!
 
 - DO NOT plug MoPi onto your Pi while the Pi is powered up!
 - DO NOT touch electronic components when they're powered up -- you may
   damage them, or burn your fingers!
 - AVOID handling circuit boards when charged with static!
+- DO NOT feed MoPi to your dog, eat nuts if you're allergic to them, or lose
+  your sense of humour.%footnote(A lawyer questioning a doctor during a trial:
+  %br
+Q: "Doctor, before you performed the autopsy, did you check for a pulse?" %br
+A: "No." %br
+Q: "Did you check for blood pressure?" %br
+A: "No." %br
+Q: "Did you check for breathing?" %br
+A: "No." %br
+Q: "So, then, it is possible that the patient was alive when you began the
+autopsy?" %br
+A: "No." %br
+Q: "How can you be so sure, doctor?" %br
+A: "Because his brain was sitting on my desk in a jar." %br
+Q: "But could the patient have still been alive nevertheless?" %br
+A: "It is possible that he could have been alive and practicing law
+somewhere.")
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -99,26 +116,29 @@ and to reboot between each step:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%3 Connecting the Power
+%3 Connecting the Power and the Raspberry Pi
 
-Then connect one or more power supply to MoPi using the screw terminals
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%3 Connecting the Raspberry Pi
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 What's in the Box
-
-Your MoPi comes as a small ci
+Then connect one or more power supply to MoPi using the screw terminals, and
+gently push fit MoPi onto your Raspberry Pi's GPIO pins.
 
 %image(images/mopi/mopi-with-key-schematic-500x.png, Board connections schematic 1,
 500)
 
+When connecting two power sources (e.g. two battery packs, or one solar panel
+and one battery pack) the ground wires (typically black) both share the middle
+connector on the screw terminals on the underside of the board. The live wires
+(typically red) then get one each of the other connectors. The lower of these
+in the schematics corresponds to _source 1_; the other to _source 2_.
+
 %image(images/mopi/mopi-with-key-schematic-02-500x.png, Board connections schematic
-%2, 500)
+2, 500)
+
+The charge level of each source is signalled by the two amber LEDs on the top
+of the board.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Turn On, Turn Off
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
