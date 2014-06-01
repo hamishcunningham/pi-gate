@@ -297,17 +297,17 @@ Kickstarter allowed us to add lots of new features, including:
 - timer-based wake-up added
 
 The next two sections discusses the %(#perfect, overall design) of MoPi and
-then the %(#monitoring, monitoring and configuration software). Then we look
-at %(#measures, system performance) and measure how long a Pi can run with
-various configurations and battery types, and give some detail of
-%(#howitworks, how it works). We also descibe a few of the %(#wild, millions
-of applications) for mobile Pi power. Finally we link to %(#batteries, sites
-selling batteries) and some other %(#other, useful resources).
+then the %(#monitoring, monitoring and configuration software). Then we give
+some detail of %(#howitworks, how it works), and look at %(#measures, system
+performance) and measure how long a Pi can run with various configurations and
+battery types. We also descibe a few of the %(#wild, millions of applications)
+for mobile Pi power. Finally we link to %(#batteries, sites selling batteries)
+and some other %(#other, useful resources).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#perfect
-%1 The Perfect Pack
+%2 The Perfect Battery Pack
 
 %(http://pi.gate.ac.uk/static/pages/images/mopi/perfect-pack.png,
 %image(images/mopi/perfect-pack.png, The perfect pack, 563, 295))
@@ -400,25 +400,11 @@ There are four main parts of the puzzle:
 
 All of the code for these components is
 %(https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon,
-available on GitHub), and details of how to install are available on
-%(/pages/download.html, our download page). (*Note*: to run the current
-version of the code you need the snapshot repository; the version in the Pi
-Foundation's repository won't be updated until we make an official release.)
+available on GitHub).
 
-The rest of the post discusses each of the main elements in turn, and finishes
-up with a note about monitoring the beast as it runs. First, though, a note
-about our delivery schedule. Having lost some time
-%(/posts/2014/04/20/shakey-testing/, through illness), and spent quite a long
-time getting the I2C protocol to work reliably, it is now looking unlikely
-that we'll deliver before next month. (On the up-side that means we'll be able
-to deliver all in one go, as the
-%(/posts/2014/04/20/shakey-testing/#section-2., second shipment) of
-microncontrollers is due early in June.) We're getting close to finalising
-version 4 (the first production version), but we'd hate to ship it with a
-firmware bug that would mean returning the boards for re-flashing. We hope you
-agree it is best to wait a little longer. With a bit of luck this will be the
-last of the delays, and we'll hit the original target of June 2014 to finish
-all deliveries as promised.
+The rest of this section discusses each of the main elements in turn,
+describes how to check up on the beast as it runs, and finishes up with more
+detail of the implementation of the daemon.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -787,43 +773,44 @@ The MoPi microcontroller supplies these states via the Raspberry Pi's
 indicator LEDs accordingly). The core of SimBaMon, a shell script that lives
 in ^/usr/sbin/simbamon^, implements an infinite loop that checks the levels
 being reported over GPIO every few seconds and takes any necessary action. The
-three GPIO pins connected to MoPi are used as a 3-bit binary value, which we
-convert to decimal using the ^bc^ command. The ^wall^ (write all) command is
-used to send messages to any logged in user.
+^wall^ command is used to send messages to any user currently logged in.
 
-Here's the main loop:
+Here's a condensed version of the main loop (error checking, debug logging and
+other details omitted):
 
 %code(lang=Bash)<
 while :
 do
-  # check the level
-  BAT_LEVEL_BASE2=`gpio read ${IO_A}``gpio read ${IO_B}``gpio read ${IO_C}`
-  BAT_LEVEL=`echo "ibase=2;${BAT_LEVEL_BASE2}" |bc`
+  # loop indices
+  i=$(( ${i} + 1 )); j=$(( ${j} + 1 ))
 
-  # make a log message if the level is low
-  [ $BAT_LEVEL -le $BAT_WARNING ] && \
-    logger "simbamon: battery is at or below warning level (${BAT_LEVEL})"
+  # get MoPi status
+  MOPI_STATUS="`mopicli -nl -s`"
 
-  # check for action states
-  if   [ $BAT_LEVEL -eq $POWER_OFF ]
+  # action states (shutdown or warn)
+  if s_forced_shutdown "$MOPI_STATUS"
   then
-    wall <<< "simbamon: power off requested: shutting down now!"
-    halt
-  elif [ $BAT_LEVEL -eq $BAT_SHUTDOWN ]
+    wall <<< "${NAME}: power off requested: shutting down now!!!"
+    logger "${NAME}: shutting down (POWER_OFF; ${MOPI_STATUS})"
+    eval "$SHUTDOWN"
+  elif s_bat_critical "$MOPI_STATUS"
   then
-    wall <<< "simbamon: battery empty: shutting down now!!!"
-    halt
-  elif [ $BAT_LEVEL -eq $BAT_CRITICAL ]
+    wall <<< "${NAME}: battery empty: shutting down now!!!"
+    logger "${NAME}: shutting down (BAT_SHUTDOWN; ${MOPI_STATUS})"
+    eval "$SHUTDOWN"
+  elif s_bat_low "$MOPI_STATUS"
   then
-    wall <<< \
-      "simbamon: battery critical! shutting down in ${SHUT_DELAY} seconds!"
-    sleep $SHUT_DELAY
-    halt
-  elif [ $BAT_LEVEL -eq $BAT_WARNING ]
-  then
-    wall <<< "simbamon: battery is low! connect new battery or shut down"
-    sleep $WARNING_INTERVAL
+    if [ $PREV_WARNING -eq 0 -o $(( $i - $PREV_WARNING )) -ge $WAIT_LOOPS ]
+    then
+      PREV_WARNING=$i
+      wall <<< "${NAME}: ${LMESS} is low! connect new battery or shut down"
+      logger "${NAME}: BAT_WARNING (${MOPI_STATUS})"
+    fi
   fi
+
+  # routine log messages
+  [ "$DEBUG" = on -o ${j} -eq ${LOG_INTERVAL} ] && \
+    logger "${NAME}: ${LMESS} is ${MOPI_STATUS} at `pdate` (i=${i})" && j=0
 
   # take a break
   sleep ${MONITOR_FREQUENCY}
@@ -940,56 +927,6 @@ time.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 Methods in the Madness
-
-In early testing we often reached states that caused error conditions of one
-sort or another on the Pi. For example:
-
-- the green indicator LED repeatedly blinks three times when the ^loader.bin^
-  bootloader file is not present -- in our case this was because a hard
-  power shutdown caused corruption of the SD card
-- the red power indicator LED may blink if the battery charge is very low and
-  it is failing to drive the Pi (and if the microcontroller is not properly
-  shutting down the regulator)
-
-In cases like these the Embedded Linux wiki page on
-%(http://elinux.org/R-Pi_Troubleshooting, RPI troubleshooting) is your friend!
-Another useful part of the Pi-oneer's toolkit is the excellent
-%(http://www.raspberrypi.org/archives/4100, NOOBS) setup from the Pi
-foundation, which makes it easier to restore your SD card after failures.
-
-But inevitably the life of electronics prototyping brings its fair share of
-mystery -- why have my GPIO monitoring pins all gone low, all of a sudden,
-when the indicator LED and the microcontroller still work? Cue much head
-scratching and serious faces. Followed by a session with the debug header and
-the diagnostics rig on the microcontroller -- and it turns out that a single
-page of memory (which happenned to contain the code running the IO pins) has
-been wiped, presumably by power fluctuations at the low battery state. Time to
-add some more diodes!
-
-And here's a typical gotcha:
-
-- Step 1: have the bright idea of reusing the _battery totally empty_ state
-  for the _shutdown button pressed_ state.
-- Step 2: implement the code changes in the daemon and install. Reboot.
-- Step 3: oops, my Pi just shut down as soon as it started. Hmmm.
-- Step 4: oh yeah, that's also the default state of the GPIO pins when the
-  MoPi rig isn't connected. Ah. That means that my Pi is going to shutdown
-  every time I start it up. And Lubo just took the prototype boards back to
-  the lab. Um. Looks like the _Donkey of the Day_ award is coming my way
-  again.
-- Step 5: waste half an hour remembering how to mount the SD card read-write
-  on another machine and manually editing the daemon.
-
-We learn from our mistakes -- that's why I make as many as possible.
-
-Finally, the current author has found it useful to run around in circles,
-screaming and shouting. (It doesn't fix the electronics, of course, but if
-you're lucky it generates sympathy in those around you, or at least a desire
-on their part to give you a beer to shut you up.)
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#howitworks
 %1 How It Works
 
@@ -1060,6 +997,56 @@ uninterruped. Note though that if the battery supply drops to critical level
 SimBaMon will shut the Pi down. We're working on various circuits that work
 around this issue.
 %%% TODO
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Methods in the Madness
+
+In early testing we often reached states that caused error conditions of one
+sort or another on the Pi. For example:
+
+- the green indicator LED repeatedly blinks three times when the ^loader.bin^
+  bootloader file is not present -- in our case this was because a hard
+  power shutdown caused corruption of the SD card
+- the red power indicator LED may blink if the battery charge is very low and
+  it is failing to drive the Pi (and if the microcontroller is not properly
+  shutting down the regulator)
+
+In cases like these the Embedded Linux wiki page on
+%(http://elinux.org/R-Pi_Troubleshooting, RPI troubleshooting) is your friend!
+Another useful part of the Pi-oneer's toolkit is the excellent
+%(http://www.raspberrypi.org/archives/4100, NOOBS) setup from the Pi
+foundation, which makes it easier to restore your SD card after failures.
+
+But inevitably the life of electronics prototyping brings its fair share of
+mystery -- why have my GPIO monitoring pins all gone low, all of a sudden,
+when the indicator LED and the microcontroller still work? Cue much head
+scratching and serious faces. Followed by a session with the debug header and
+the diagnostics rig on the microcontroller -- and it turns out that a single
+page of memory (which happenned to contain the code running the IO pins) has
+been wiped, presumably by power fluctuations at the low battery state. Time to
+add some more diodes!
+
+And here's a typical gotcha:
+
+- Step 1: have the bright idea of reusing the _battery totally empty_ state
+  for the _shutdown button pressed_ state.
+- Step 2: implement the code changes in the daemon and install. Reboot.
+- Step 3: oops, my Pi just shut down as soon as it started. Hmmm.
+- Step 4: oh yeah, that's also the default state of the GPIO pins when the
+  MoPi rig isn't connected. Ah. That means that my Pi is going to shutdown
+  every time I start it up. And Lubo just took the prototype boards back to
+  the lab. Um. Looks like the _Donkey of the Day_ award is coming my way
+  again.
+- Step 5: waste half an hour remembering how to mount the SD card read-write
+  on another machine and manually editing the daemon.
+
+We learn from our mistakes -- that's why I make as many as possible.
+
+Finally, the current author has found it useful to run around in circles,
+screaming and shouting. (It doesn't fix the electronics, of course, but if
+you're lucky it generates sympathy in those around you, or at least a desire
+on their part to give you a beer to shut you up.)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
