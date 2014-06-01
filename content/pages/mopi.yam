@@ -889,44 +889,6 @@ echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate-snapshots/ubuntu precise ma
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%#measures
-%1 Testing
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 The Longer Lasting Snack
-
-So, how long will the batteries last?
-
-My first test was a Model B Pi with almost no load (USB keyboard and mouse;
-monitor attached over HDMI but switched off after starting the test; no
-network or other peripherals). Using eight rechargeable Duracell AA NiMH 2400
-mAh batteries (like
-%(http://www.amazon.co.uk/Duracell-Rechargeable-Accu-2400-Batteries/dp/B0031OE6LG/ref=sr_1_2?ie=UTF8&qid=1375768484&sr=8-2&keywords=duracell+nimh,
-these ones)) the Pi ran for 9 hours 31 minutes. Not bad! Especially when you
-consider that the MoPi regulator supports hot-swap of new charged packs --
-this looks very viable for mobile Pi applications of all shapes and sizes.
-
-For comparison I set up the same rig with a USB battery pack from RS
-(%(http://uk.rs-online.com/web/p/power-banks/7757508/, this one), a 5200 mAh
-Lithium polymer model). The results were remarkably similar, with the RS pack
-lasting for 9 hours and 21 minutes.
-
-Since then we've conducted 101 different tests. There are two key factors in
-battery life: *1.* Model A vs. Model B; *2.* the peripherals. To summarise:
-
-- You can expect a Model A to get around double the life of a Model B.
-- What you connect to the Pi makes a huge difference. For example: WiFi is a
-  power hog: halve your expected battery life if you're using it. An
-  accelerometer, in contrast, is cheap: e.g. %(http://www.piborg.com/xloborg,
-  XLoBorg) won't reduce your running time by much at all.
-
-You can also connect two battery packs to MoPi and get double the running
-time.
-
-%%% TODO more test results
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#howitworks
 %1 How It Works
 
@@ -997,6 +959,44 @@ uninterruped. Note though that if the battery supply drops to critical level
 SimBaMon will shut the Pi down. We're working on various circuits that work
 around this issue.
 %%% TODO
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#measures
+%1 Testing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 The Longer Lasting Snack
+
+So, how long will the batteries last?
+
+My first test was a Model B Pi with almost no load (USB keyboard and mouse;
+monitor attached over HDMI but switched off after starting the test; no
+network or other peripherals). Using eight rechargeable Duracell AA NiMH 2400
+mAh batteries (like
+%(http://www.amazon.co.uk/Duracell-Rechargeable-Accu-2400-Batteries/dp/B0031OE6LG/ref=sr_1_2?ie=UTF8&qid=1375768484&sr=8-2&keywords=duracell+nimh,
+these ones)) the Pi ran for 9 hours 31 minutes. Not bad! Especially when you
+consider that the MoPi regulator supports hot-swap of new charged packs --
+this looks very viable for mobile Pi applications of all shapes and sizes.
+
+For comparison I set up the same rig with a USB battery pack from RS
+(%(http://uk.rs-online.com/web/p/power-banks/7757508/, this one), a 5200 mAh
+Lithium polymer model). The results were remarkably similar, with the RS pack
+lasting for 9 hours and 21 minutes.
+
+Since then we've conducted 101 different tests. There are two key factors in
+battery life: *1.* Model A vs. Model B; *2.* the peripherals. To summarise:
+
+- You can expect a Model A to get around double the life of a Model B.
+- What you connect to the Pi makes a huge difference. For example: WiFi is a
+  power hog: halve your expected battery life if you're using it. An
+  accelerometer, in contrast, is cheap: e.g. %(http://www.piborg.com/xloborg,
+  XLoBorg) won't reduce your running time by much at all.
+
+You can also connect two battery packs to MoPi and get double the running
+time.
+
+%%% TODO more test results
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
