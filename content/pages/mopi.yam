@@ -277,8 +277,9 @@ The next two sections discusses the %(#perfect, overall design) of MoPi and
 then the %(#monitoring, monitoring software). Then we look at %(#measures,
 system performance) and measure how long a Pi can run with various
 configurations and battery types, and give some detail of %(#howitworks, how
-it works). Finally we link to %(#batteries, sites selling batteries) and some
-other %(#other, useful resources).
+it works). We also descibe a few of the %(#wild, millions of applications) for
+mobile Pi power. Finally we link to %(#batteries, sites selling batteries) and
+some other %(#other, useful resources).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -711,10 +712,14 @@ the Pi, separately for each one of the power inputs.
 MoPi can be used as a UPS (Uninterruptible Power Supply). If the Pi is powered
 over its 5V micro-USB socket and that power drops Pi while MoPi is active, it
 will activate its supply in a few microseconds, allowing the Pi to continue
-work uninterruped.
+work uninterruped. Note though that if the battery supply drops to critical
+level SimBaMon will shut the Pi down. We're working on various circuits that
+work around this issue.
+%%% TODO
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#wild
 %1 In the Wild: Applications
 
 The Pi was designed to give a boost to science and technology education, and
