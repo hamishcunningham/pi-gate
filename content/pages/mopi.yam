@@ -256,12 +256,49 @@ other %(#other, useful resources).
 %#perfect
 %1 The Perfect Pack
 
+%(http://pi.gate.ac.uk/static/pages/images/mopi/perfect-pack.png,
+%image(images/mopi/perfect-pack.png, The perfect pack, 563, 295))
+
 What would the perfect Pi battery pack look like? It should be:
+
+*Low cost*. Dedicated battery supplies like those sold as phone charging
+devices are great, but when they no longer hold charge the whole unit has to
+be recycled. Standard commodity batteries and the reusable chargers that serve
+them are well-established and already present in many households. They're the
+cheapest and most flexible option.
+
+*Flexible*. Got a solar panel handy? I want to plug it into the circuitry and
+have it drive the Pi as long as the sun shines, then let a battery take over
+when the clouds come. Stuck for power but got an old laptop supply or 12 volt
+car charger handy? Strip the cables, connect, and power my Pi please! Plugging
+a bunch of peripherals? I want to be able to drive them all via my battery
+pack. And etc.
+
+*Polite*. When you're running your laptop on battery and it runs out of juice
+it gives you a nice polite warning message or two, and, when the level gets
+really low, it automagically shuts down the machine. This is important to
+allow the operating system (e.g. %(basics.html#footnote1, Raspbian Linux) on
+the Pi) to close up any open files and generally tidy the house before power
+disappears. Just killing the power without warning is risky -- sometimes
+nothing bad happens, but in the worst case you can end up with a machine that
+won't boot and needs a complete reinstall. So I want my battery pack to signal
+the Pi when levels are low, so that the Pi can shut itself down cleanly. Good
+manners are important, after all :-)
+
+And if the battery pack is going to tell the Pi when it is getting low and
+needs to shut down, why not have an *on/off switch* into the bargain? The
+"off" signal triggers clean shutdown, and is very convenient when you're using
+the Pi in any kind of kiosk or appliance context. Several projects have
+implemented this type of on/off facility in its own right -- e.g.
+%(http://lowpowerlab.com/atxraspi/, the ATX Pi supply) or the
+%(http://www.susa.net/wordpress/2012/11/raspberry-pi-power-controller/, PIC
+controller) -- it's definitely a useful function to have on board.
 
 *Uninterruptible*. I don't want to stop work when my battery is low if I've
 got a charged pack handy (or a different source of power, like a car cigarette
-lighter or the like). So I'd like my battery pack to support *hot-swap* of a
-new electricity supply, either a new set of batteries or some other new input.
+lighter socket or the like). So I'd like my battery pack to support *hot-swap*
+of a new electricity supply, either a new set of batteries or some other new
+input.
 
 *Eco-friendly*. One of the great things about the Pi is its low carbon
 footprint. The recent ones in %(http://pi.gate.ac.uk/, my lab) are made in
@@ -275,51 +312,18 @@ Model A, which gets by on 300 mA or below (at 5 volts this adds up to around
 Plan B if we destroy this one. So we definitely want to support rechargeable
 batteries, and preferably not the built-in variety that are hard to recycle.
 
-*Low cost*. Dedicated battery supplies like those sold as phone charging
-devices are great, but when they no longer hold charge the whole unit has to
-be recycled. Standard commodity batteries and the reusable chargers that serve
-them are well-established and already present in many households. They're the
-cheapest and most flexible option.
-
-*Polite*. When you're running your laptop on battery and it runs out of juice
-it gives you a nice polite warning message or two, and, when the level gets
-really low, it automagically shuts down the machine. This is important to
-allow the operating system (e.g. %(basics.html#footnote1, Raspbian Linux) on
-the Pi) to close up any open files and generally tidy the house before power
-disappears. Just killing the power without warning is risky -- sometimes
-nothing bad happens, but in the worst case you can end up with a machine that
-won't boot and needs a complete reinstall. So I want my battery pack to signal
-the Pi when levels are low, so that the Pi can shut itself down cleanly. Good
-manners are important, after all :-)
-
-(A related point: if the battery pack is going to tell the Pi when it is
-getting low and needs to shut down, why not have an *on/off switch* into the
-bargain? The "off" signal is also going to trigger clean shutdown, and is very
-convenient when you're using the Pi in any kind of kiosk or appliance context.
-Several projects have implemented this type of on/off function in its own
-right -- e.g. 
-%(http://lowpowerlab.com/atxraspi/, the ATX Pi supply) or the
-%(http://www.susa.net/wordpress/2012/11/raspberry-pi-power-controller/, PIC
-controller) -- so it is definitely a useful function to have on board.)
-
 *Communicative*. I want to know when the battery is full, when it is starting
 to get low and when it is critical. I want to be able to get those signals
 both when logged in to the Pi and visually from the battery pack itself.
 (Look! Flashing lights!)
 
-*Flexible*. Got a solar panel handy? I want to plug it into the circuitry and
-have it drive the Pi as long as the sun shines, then let a battery take over
-when the clouds come. Stuck for power but got an old laptop supply or 12 volt
-car charger handy? Strip the cables, connect, and power my Pi please! Plugging
-a bunch of peripherals? I want to be able to drive them all via my battery
-pack. And etc.
-
 *Robust*. I'm pretty unreliable at the best of times. When crawling through
 the underbrush with a camera-equiped Pi rig
-%(../2013-08-05-chasing-pine-martens.html, in search of Pine Marten lairs) I'm
+%(/posts/2013/08/05/chasing-pine-martens/, in search of Pine Marten lairs) I'm
 very likely to plug the wrong end of the stick and end up with my foot in my
 mouth, to coin a mixed metaphor or three. Over-volt and spike protection are
 definitely requirements.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
