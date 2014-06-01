@@ -184,7 +184,110 @@ shut down immediately.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 Troubleshooting
+%2 Troubleshooting and FAQ
+
+-----------------------------------------------------------------------------
+*>>> What type of regulator chip is it? What is the voltage range?*
+
+MoPi uses a switched-mode regulator (a TPS5430), so almost no power is wasted.
+
+The input voltage range is 6.2V to 20V. (There's no step-up circuitry so the
+battery or solar panel rig or etc. has to supply 6.2V at minimum.)
+
+
+-----------------------------------------------------------------------------
+*>>> Is it safe to bypass the Pi's built-in fuse?*
+
+Yes -- in this case...
+
+The issue: MoPi supplies power to the Pi over the GPIO pins, instead of via
+the micro USB connector (which it leaves free so that mains power can be
+plugged in at the same time as batteries if required). The 5V feed from GPIO
+involves bypassing the Pi's built-in fuse (which is in line with the USB
+connector).
+
+Is this safe?
+
+Given a correctly functioning Pi and peripherals, then the answer is a clear
+"yes". But what about if the Pi is faulty, or if a pin is shorted out, or if
+someone connects a 3 bar electric heater to it? :-)
+
+Three considerations:
+
+First, MoPi is currently capable of supplying up to 2A, after which there is
+an internal current limiting circuit. It uses standard voltage and power
+regulation circuitry which is robust and mature, and will not allow over-volt
+or over-current on the output.
+
+Second, we're supplying from batteries, not mains -- so as long as we don't
+over-consume from the battery (which in principle we can't short of a major
+internal fault) there's a limit to the amount of power we can supply to a
+faulty Pi.
+
+Third, not having an internal fuse is pretty standard behaviour -- poke around
+in the electronics of all those power supplies sitting around in your desk
+drawer and you won't generally find fuses.
+
+Having said that, we added an autorecovery fuse to version 3 just to be
+ticking all the boxes :-)
+
+
+-----------------------------------------------------------------------------
+*>>> Can I access the voltage data on MoPi from the Pi?*
+
+Yes!
+
+The software on the Pi that talks to MoPi is open source and available here:
+https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon (See also
+http://pi.gate.ac.uk/pages/download.html .)
+
+It listens to MoPi and logs the data in a standard manner, which other
+applications can then consume as required. There's also a Python API and a
+command-line interface (CLI).
+
+The Raspbian maintainers have added this software to their repository, so you
+can install it in the same way as any other Pi sofware.
+
+
+-----------------------------------------------------------------------------
+*>>> How do we avoid deep discharge of rechargeables?*
+
+Rechargeable batteries don't like being completely discharged. We always need
+to stop drawing from the battery at some distance above the minimum voltage
+level. This distance varies for different battery chemistries (NiMH, LiPo,
+lead/acid, etc.) and for different multiples (eight AAs vs. two PP3s vs. one
+car battery, etc.).
+
+MoPi listens continuously to the voltage level on the battery inputs. How does
+it know when that level is getting low? Let's identify two separate low-level
+points: first, the absolute low voltage level is the point where our
+micro-controller can no longer reliably run the switching regulator to produce
+a constant 5V (around 6.2 volts). The second low voltage point depends on the
+particular battery configuration (for eight NiMH 1.2 volt cells it is around 8
+volts). For non-rechargeables, or solar panels or a water turbine, it is the
+same as the absolute low level (6.2V).
+
+MoPi is responsible for deciding the input voltage is low (for either or both
+of its two supplies), and then warning the user and/or shutting the Pi down
+cleanly (from software first, using "sudo halt", and then by cutting power).
+How do we decide when to do this?
+
+First we have a default configuration, which is the one which we will be
+supplying in the "battery heaven", UPS and outdoor kit rewards: eight
+high-capacity NiMH AA cells. In the absence of any other data, we assume that
+this is what is connected, and when the output voltage descends to around 8.5
+volts we turn the main indicator LED red and send warnings to any user logged
+into the Pi. (There are various other levels defined that choose blue -- the
+highest level indicator -- vs. green, and so on, and separate LED indicators
+for low level on the two supply inputs.)
+
+Of course this default configuration won't work for all cases, so then we
+allow choice of another set of options from the Pi itself. (Currently we're
+looking at a set of 16 different options, but that may change in the next few
+weeks as we finalise the third prototype.)
+
+
+*>>> This, that, an' t'other*
 
 - Sometimes the reported voltage for a particular source seems to be high
   enough to drive the Pi, but MoPi considers it too low -- why? When a new
