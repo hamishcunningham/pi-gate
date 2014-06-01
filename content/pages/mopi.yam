@@ -263,7 +263,8 @@ be a solar panel rig that outputs e.g. 15v coupled with a 12v mains supply, or
 some similar config.
 
 (We're running a rig now in the workshop that has two 18V panels in parallel;
-watch http://pi.gate.ac.uk/ and we'll post the results!
+watch http://pi.gate.ac.uk/ and we'll post the results!) 
+TODO
 
 
 -----------------------------------------------------------------------------
@@ -1442,6 +1443,10 @@ relay's contact will stay closed for a longer time.)
 
 More on this when we get time to test it out in practice.
 
+In the meantime we've been working on various solar options... Watch
+http://pi.gate.ac.uk/ for updates.
+%%% TODO
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Other Options
@@ -1477,7 +1482,7 @@ and open source) software stack. This makes development so much easier --
 and here's an example of why...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 Enabling I2C and Debugging with I2C Tools
+%2 Debugging with I2C Tools
 
 Now that MoPi uses I2C as its communication mechanism, we have to enable this
 in the SimBaMon package. Here's how we do it%footnote(The key steps are
@@ -1513,4 +1518,3 @@ Hey presto, I can hack away at the C code and get immediate feedback with
 commands like ^sudo tools/i2cdump -y 1 0x0b i^ (where ^0x0b^ is MoPi's
 designated I2C address -- the smart battery address)%footnote(For a revision 1
 Pi -- the very early boards -- use ^0^ instead of ^1^.).
-
