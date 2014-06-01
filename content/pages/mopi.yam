@@ -129,7 +129,7 @@ and to reboot between each step:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%3 Connecting the Power and the Raspberry Pi
+%3 Connecting the Power and the Pi
 
 Next connect one or more power supply to MoPi using the screw terminals, and
 gently push fit MoPi onto your Raspberry Pi's GPIO pins.
