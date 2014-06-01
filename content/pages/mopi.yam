@@ -87,6 +87,12 @@ somewhere.")
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Features
+
+TODO
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Installation
 
 If you're in a hurry see the graphic above, and:
@@ -170,6 +176,22 @@ The Pi has many advantages as a mobile platform: if the rain gets in, or a dog
 eats it, a replacement doesn't break the bank, and, for a general-purpose
 device, power requirements are very low.
 
+Early in 2013 we realised that we needed better power management for our
+mobile projects on %(http://pi.gate.ac.uk/, Pi.GATE.ac.uk). Five volt USB
+battery packs are common, but none of them can communicate their level of
+charge to the Pi. That means lots of unanticipated power cuts -- a good way to
+corrupt your SD card :-(
+
+And then we realised that standard rechargeables are more planet friendly. And
+then that it would be cool to be able to hot-swap supplies, and that if we
+could do that then why not make it a UPS too, and how about adding a power
+switch, and...
+
+Fast forward: we ran a successful
+%(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi/,
+Kickstarter crowdfunding campaign) and now we're delivering the 4th generation
+of our mobile power board. Read on!
+
 Below we'll run through the characteristics of mobile power for the Pi, and
 follow through with the design of *_MoPi_*, an add-on battery pack circuit
 with Raspbian-friendly software that does lots of useful stuff for the Mobile
@@ -208,22 +230,19 @@ The software is %(http://www.fsf.org/about/what-is-free-software, open source)
 %(https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon, our
 Pi-Tronics repository).
 
-The basic functionality is all in place; future developments include:
+The basic functionality was all in place by early 2014; the success of the
+Kickstarter allowed us to add lots of new features, including:
 
-- dealing with more rechargeable battery chemistries (we currently support
-  Alkaline and NiMH; Lithium-ion is in progress)
+- dealing with more rechargeable battery chemistries
 - the internal Pi circuitry can run on 3.3 volts (saving some power loss in
   the on-board linear regulator -- %(http://www.daveakerman.com/, Dave
-  Akerman's balloons) use this strategy to increase battery life); we'd love
-  to add a mode that supports 3.3V
-- the communication is currently one-way: MoPi tells the Pi about the state of
-  the batteries, signals for shutdown requests and so on -- if we add 2-way
-  communication (on the I2C bus) then we'll be able to support configuration
-  from the Pi
-- to support the widest range of battery options we can't do charging; it
-  would be nice to add an option for charging common configurations
-
-Watch this space!
+  Akerman's balloons) use this strategy to increase battery life); MoPi can
+  now be hacked to support 3.3 volt output :-)
+- 2-way communication (on the I2C bus) between MoPi and Pi supports
+  configuration from the Pi
+- screw terminals, stackable headers, remoting pads and self-resetting fuse
+- two-way communication and remote power-off
+- timer-based wake-up added
 
 The next two sections discusses the %(#perfect, overall design) of MoPi and
 then the %(#monitoring, monitoring software). Then we look at %(#measures,
@@ -380,14 +399,14 @@ BAT_WARNING=4   # the battery is low, warn the user
 BAT_FULL=7      # the battery is full
 %>
 
-The MoPi microcontroller supplies these states via three Raspberry Pi
-%(basics.html#gpio-intro, GPIO pins) (and also sets on-board indicator LEDs
-accordingly). The core of SimBaMon, a shell script that lives in
-^/usr/sbin/simbamon^, implements an infinite loop that checks the levels being
-reported over GPIO every few seconds and takes any necessary action. The three
-GPIO pins connected to MoPi are used as a 3-bit binary value, which we convert
-to decimal using the ^bc^ command. The ^wall^ (write all) command is used to
-send messages to any logged in user.
+The MoPi microcontroller supplies these states via the Raspberry Pi's
+%(http://en.wikipedia.org/wiki/I%C2%B2C, I2C bus) (and also sets on-board
+indicator LEDs accordingly). The core of SimBaMon, a shell script that lives
+in ^/usr/sbin/simbamon^, implements an infinite loop that checks the levels
+being reported over GPIO every few seconds and takes any necessary action. The
+three GPIO pins connected to MoPi are used as a 3-bit binary value, which we
+convert to decimal using the ^bc^ command. The ^wall^ (write all) command is
+used to send messages to any logged in user.
 
 Here's the main loop:
 
