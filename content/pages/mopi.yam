@@ -56,6 +56,9 @@ Features:
 - 3.3V supply mod: swap three resistors and supply 3.3V, overpowering the Pi's
   on-board regulator and saving the power that is dissipated there, for weight
   and battery life critical applications like ballooning
+- wide input voltage range: 6.2V to 20V%footnote(We quote a 20V max voltage to
+  leave some headroom. We've run the board up to 25V but don't recommend it as
+  a general rule.)
 
 And it even fits in the Pibow (and other well-known Pi cases):
 
@@ -167,6 +170,12 @@ down immediately.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Troubleshooting
 
+- Sometimes the reported voltage for a particular source seems to be high
+  enough to drive the Pi, but MoPi considers it too low -- why? When a new
+  source is connected it is shunted through a simulated load for a few tenths
+  of a second. Batteries drop their voltage under load, and the lower their
+  level of charge, the larger the drop. MoPi measures the voltage under load,
+  and if it is too low it will refuse to use that supply.
 - If you get a message like "libkmod: ERROR ../libkmod/libkmod.c:554
   kmod_search_moddep: could not open moddep file
   '/lib/modules/3.6.11+/modules.dep.bin'" when installing try a reboot
