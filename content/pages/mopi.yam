@@ -890,7 +890,7 @@ echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate-snapshots/ubuntu precise ma
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#howitworks
-%1 How It Works
+%1 How it Works: the Hardware
 
 The MoPi circuitry consists of two parts: a single-chip microcontroller and a
 five volt switching mode regulator. The microcontroller (with embedded
@@ -966,7 +966,7 @@ around this issue.
 %1 Testing
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 The Longer Lasting Snack
+%2 The Longer-Lasting Snack
 
 So, how long will the batteries last?
 
