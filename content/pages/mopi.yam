@@ -12,17 +12,20 @@ and %(about.html#fred, Fred Sonnenwald),
 _(In early 2014 we ran a %(http://tinyurl.com/mobile-pi, Kickstarter campaign)
 to fund the first production version, which is due for delivery in June 2014.
 If you missed it, you can %(/pages/get-mopi.html, join our pre-order waiting
-list here).)_
+list here).)_%footnote(_[A huge thank you to Bo Meson, Fred Sonnenwald, Gen
+Gorrell, Vladimir Marinov, Georgi Marinov, Louise Illien, Julian Briggs,
+Caroline Ivimey-Parr, Angus Roberts, Joe Polifroni, Todor Primov, and all our
+%(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi/backers,
+Kickstarter backers)!]_)
 
 %meta(summary=Hot-Swap\, Mobile and 24/7 Power for the Pi)
 
+%[ |
 %contents
-
-_[A huge thank you to Bo Meson, Fred Sonnenwald, Gen Gorrell, Vladimir
-Marinov, Georgi Marinov, Louise Illien, Julian Briggs, Caroline Ivimey-Parr,
-Angus Roberts, Joe Polifroni, Todor Primov, and all our
-%(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi/backers,
-Kickstarter backers)!]_
+| 
+%(images/mopi/logo-heli-1.png,
+%image(images/mopi/logo-heli-1-200x150.png, MoPi Heli Logo, 200, 150))
+| %]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -31,29 +34,38 @@ Kickstarter backers)!]_
 MoPi is mobile and 24/7 power for the Pi. On your bike, up a tree, or for your
 home server: we've got you covered.
 
-%%% %(images/mopi/logo-heli-1.png,
-%%% %image(images/mopi/logo-heli-1-200x150.png, MoPi Heli Logo, 200, 150))
+%(images/mopi/logo-heli-1.png,
+%image(images/mopi/logo-heli-1-200x150.png, MoPi Heli Logo, 200, 150))
 
 Features:
 
 - multiple inputs -- standard batteries, car power sockets, old laptop
-  supplies, solar panels, ...
+  supplies, solar panels, ... (attached via screw terminals)
 - hot-swap power replacement without stopping work
 - shutdown the Pi cleanly when batteries discharge
 - integrated on/off switch
-- UPS (uninterruptible power) when using both batteries and mains
+- UPS (uninterruptible power) mode when using both batteries and mains
 - on-board LED indicators and on-Pi notifications
+- configuration of multiple battery chemistries and numbers of cell from a UI
+  on the Pi
+- full API in Python, plus a shell-friendly command-line interface
+- stackable headers allowing connections of multiple boards at once (e.g. MoPi
+  + XLoBorg, or MoPi + AirPi, or etc.).
+- PCB remoting pads for the power switch
+- self-resetting fuse for over-current protection
+- two-way communication via the I2C bus
+- remote power-off: tell MoPi to power down the Pi when logged-in remotely
+  (after a clean shutdown, of course)
+- timer-based wake-up: tell MoPi what time you want your Pi to wakeup, then
+  power it down and MoPi will boot the Pi as requested
+- 3.3V supply mod: swap three resistors and supply 3.3V, overpowering the Pi's
+  on-board regulator and saving the power that is dissipated there, for weight
+  and battery life critical applications like ballooning
 
 And it even fits in the Pibow (and other well-known Pi cases):
 
 %(images/mopi/mopi-in-pibow.jpg,
 %image(images/mopi/mopi-in-pibow-500x375.jpg, MoPi in a Pibow, 500, 375))
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%1 Quick Start
-
-%image(images/mopi/quickstart/schematic6-500x.png, Quick start guide)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -87,9 +99,9 @@ somewhere.")
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 Features
+%2 Quick Start
 
-TODO
+%image(images/mopi/quickstart/schematic6-500x.png, Quick start guide)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -209,10 +221,30 @@ There are three dimensions to the problem of mobile power for the Pi:
   down cleanly when levels get critically low
 
 The first two of these need some special hardware; the third is written as a
-software _daemon_. This is the second-generation prototype board:
+software _daemon_.
 
-%%% TODO better pic
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 The Prototypes
+
+We've now developed four versions (the last of which are being supplied to our
+Kickstarter backers in June 2014). This was the second-generation prototype
+board:
+
 %image(images/mopi/proto2-01-500x379.jpg, mopi prototype 2/1, 500, 379)
+
+The shape of the PCB allows it to fit into the
+%(http://shop.pimoroni.com/collections/pibow, Pibow) without blocking the Pi's
+display output (soon to be used for the
+%(http://www.raspberrypi.org/, Pi Foundation)'s
+%(http://raspi.tv/2014/raspberry-pi-official-7-inch-dsi-prototype-preview,
+DSI touch screen)). There's space for a pass-through GPIO header so that other
+add-on boards can share space on the Pi, separate LEDs for overall function
+and for the two power inputs, and a neat little power switch on the top.
+
+(The good people at %(http://www.pimoroni.com/, Pimoroni) are doing a custom
+lid for their %(http://shop.pimoroni.com/collections/pibow, Pibow) case to
+give direct access to MoPi's power switch.)
 
 And here are the first-generation prototype boards (with separate regulator
 and controller; click to zoom):
@@ -323,7 +355,6 @@ the underbrush with a camera-equiped Pi rig
 very likely to plug the wrong end of the stick and end up with my foot in my
 mouth, to coin a mixed metaphor or three. Over-volt and spike protection are
 definitely requirements.
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -560,6 +591,9 @@ battery life: *1.* Model A vs. Model B; *2.* the peripherals. To summarise:
   accelerometer, in contrast, is cheap: e.g. %(http://www.piborg.com/xloborg,
   XLoBorg) won't reduce your running time by much at all.
 
+You can also connect two battery packs to MoPi and get double the running
+time.
+
 %%% TODO more test results
 
 
@@ -653,6 +687,8 @@ beneath a safe level it switches the RGB LED to red. Simultaneously the yellow
 LED for the low battery starts flashing, indicating that the pack needs
 replacement.
 
+%%% YOUTUBE MOPI BOARD CLIP HERE
+
 Then the daemon SimBaMon on the Pi gets a low battery signal and informs the
 user that they should either plug in another supply or shut down (again by
 pressing the power button for 3 seconds). If nothing changes and the battery
@@ -679,6 +715,107 @@ MoPi can be used as a UPS (Uninterruptible Power Supply). If the Pi is powered
 over its 5V micro-USB socket and that power drops Pi while MoPi is active, it
 will activate its supply in a few microseconds, allowing the Pi to continue
 work uninterruped.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 In the Wild: Applications
+
+The Pi was designed to give a boost to science and technology education, and
+it has already made a huge impact -- here in the UK, for example, we have a
+shiney new computing curriculum in the works. There a whole load of reasons
+why we need to *educate our kids about technology*, and how technology can
+help them cope with the challenges that the future holds. And not just any
+technology -- the Pi has a low carbon footprint and is made in the EU.
+
+The MoPi Kickstarter offered three Pi outdoor experimenter kits to help teach
+the links between technology, climate, wildlife and the like:
+
+- Outdoor Adventurer Kit
+- Outdoor Experimenter Kit (Light)
+- Outdoor Experimenter Kit (Light and Air)
+
+We'll detail them here to give a flavour of the applications of the thing, but
+really the sky's the limit: every mobile Pi project has a place for MoPi.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Outdoor Adventure Kit
+
+The base level kit has everything you need to get out and about: a Raspberry
+Pi Model B, case, SD card, and a MoPi board with NiMH batteries, holder and
+charger (and a wall supply for when you get home!).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Outdoor Experimenter Kit (Light)
+
+This kit has all of the previous one, plus the Raspberry Pi camera module (day
+or night versions). Ideal for all types of outdoor motion-sensing and
+photography projects. If you haven't tried the excellent
+%(http://www.raspberrypi.org/camera, Pi camera yet) here are a couple of
+examples:
+
+Forest Gump came by the office when we were testing an early battery-powered
+camera rig (a hackable "GoPro"?!):
+
+%(images/mopi/gump2.jpg,
+%image(images/mopi/gump2-500x375.jpg, Forest Gump, 500, 375))
+
+The next olympic downhill ski champion straps a Pi cam to his head:
+
+%(images/mopi/vladi-skiing-rig-1.jpg,
+%image(images/mopi/vladi-skiing-rig-1-300x400.jpg, Vladi skiing, 300, 400))
+
+%%% YOUTUBE SKIING CLIP HERE
+
+Here's the camera rig:
+
+%(images/mopi/ski-cam.jpg,
+%image(images/mopi/ski-cam-500x343.jpg, Vladi skiing, 500, 343))
+
+People have done all sorts of stuff with these cameras -- from videoing Teddy
+Bears in the stratosphere to night filming wildlife -- the educational
+opportunities are obvious.
+
+Where do you want to use yours?!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Outdoor Experimenter Kit (Light and Air)
+
+If you watch the film %(http://chasingice.co.uk/, Chasing Ice) you can't fail
+to be amazed when a vast chunk of glacier the size of Manhattan suddenly
+disintegrates before your eyes. What are the climate changes that have
+triggered these massive events? How do they play out in the air we're
+breathing? How do you measure atmospheric conditions, and what science can we
+use to explain changes in those conditions?
+
+Meet %(http://airpi.es/, AirPi), a brilliant Pi-based atmospheric monitoring
+kit that ran a crowdfunding campaign in 2013 and started shipping in the
+autumn. The *Outdoor Experimenter Light and Air Kit* includes an AirPi with
+the mobile rig, all set to get out and about measuring temperature, relative
+humidity, air pressure, light levels, smoke, and the concentrations of the
+harmful gas pollutants carbon monoxide and nitrogen dioxide, and plotting the
+results direct to a webserver running on the Pi.
+
+Here's %(http://airpi.es/, the AirPi board), sensor and indicator set:
+
+%(images/mopi/air-pi-2022x1317.jpg,
+%image(images/mopi/air-pi-500x326.jpg, The AirPi Kit, 500, 326))
+
+And here's one we built up on a breadboard:
+
+%(images/mopi/air-pi-breadboard.jpg,
+%image(images/mopi/air-pi-breadboard-500x375.jpg, AirPi on a Breadboard, 500,
+375))
+
+From version 3 MoPi uses a different set of GPIO pins in order to avoid
+conflicts with AirPi (thanks Tom Hartley, creator of AirPi, for his help with
+this).
+
+We've done %(/tag/airpi.html, a lot of work with AirPi) and beefed up its
+software offering a bit -- which Tom is going to include in the next official
+distribution.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
