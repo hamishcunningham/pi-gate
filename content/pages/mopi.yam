@@ -70,8 +70,6 @@ And it even fits in the Pibow (and other well-known Pi cases):
 %#userguide
 %1 User Guide
 
-%image(images/mopi/packet/img-20140421-113013.jpg, Packaging 4, 500)
-
 %#warnings
 %2 Warnings!!!
 
@@ -187,6 +185,8 @@ shut down immediately.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Troubleshooting and FAQ
+
+%image(images/mopi/packet/img-20140421-113013.jpg, Packaging 4, 500)
 
 -----------------------------------------------------------------------------
 *>>> What type of regulator chip is it? What is the voltage range?*
@@ -369,18 +369,25 @@ software _daemon_.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 The Prototypes
 
-We've now developed four versions (the last of which are being supplied to our
-Kickstarter backers in June 2014).
+We've now developed four versions (the last of which is being supplied to our
+Kickstarter backers in June 2014). Here's what version 4 looks like:
 
-Here's the level 3 revision looks like (_without_ the wiring connector or
-the GPIO connector or the power switch, which were soldered by hand after
+%(images/mopi/version-4-top.jpg,
+%image(images/mopi/version-4-top-500x.jpg, Version 4 top, 500))
+
+%(images/mopi/version-4-bottom.jpg,
+%image(images/mopi/version-4-bottom-500x.jpg, Version 4 bottom, 500))
+
+Here's what the level 3 revision looked like (_without_ the wiring connector
+or the GPIO connector or the power switch, which were soldered by hand after
 these pictures were taken):
 
 Top of the board:
-%image(images/mopi/pre-production-boards-02.jpg, Pre-production MoPi top)
+%image(images/mopi/pre-production-boards-02.jpg, Pre-production MoPi top, 500)
 
 Underneath the board:
-%image(images/mopi/pre-production-boards-01.jpg, Pre-production MoPi bottom)
+%image(images/mopi/pre-production-boards-01.jpg, Pre-production MoPi bottom,
+500)
 
 The stackable headers (for when MoPi is used in tandem with other add-on
 boards) take up quite a lot of vertical space in order to provide a set of
@@ -394,7 +401,7 @@ Header))
 
 If you're opting for the low-profile header you can see an example here, on
 the level 2 board:
-%image(images/mopi/mopi-underside.jpg, MoPi 2 underside).
+%image(images/mopi/mopi-underside.jpg, MoPi 2 underside, 500).
 
 This was the second-generation prototype board:
 
