@@ -70,6 +70,8 @@ And it even fits in the Pibow (and other well-known Pi cases):
 %#userguide
 %1 User Guide
 
+%image(images/mopi/packet/img-20140421-113013.jpg, Packaging 4, 500)
+
 %#warnings
 %2 Warnings!!!
 
@@ -250,6 +252,21 @@ can install it in the same way as any other Pi sofware.
 
 
 -----------------------------------------------------------------------------
+*>>> Can I combine mains and solar power?*
+
+Yes!
+
+This should work so long as you connect the mains-derived power to one of
+MoPi's inputs (it will have to be a supply >= 6.2 volts). MoPi will then use
+mains whenever the solar output dips below the mains supply. The ideal would
+be a solar panel rig that outputs e.g. 15v coupled with a 12v mains supply, or
+some similar config.
+
+(We're running a rig now in the workshop that has two 18V panels in parallel;
+watch http://pi.gate.ac.uk/ and we'll post the results!
+
+
+-----------------------------------------------------------------------------
 *>>> How do we avoid deep discharge of rechargeables?*
 
 Rechargeable batteries don't like being completely discharged. We always need
@@ -287,6 +304,7 @@ looking at a set of 16 different options, but that may change in the next few
 weeks as we finalise the third prototype.)
 
 
+-----------------------------------------------------------------------------
 *>>> This, that, an' t'other*
 
 - Sometimes the reported voltage for a particular source seems to be high
@@ -351,8 +369,33 @@ software _daemon_.
 %2 The Prototypes
 
 We've now developed four versions (the last of which are being supplied to our
-Kickstarter backers in June 2014). This was the second-generation prototype
-board:
+Kickstarter backers in June 2014).
+
+Here's the level 3 revision looks like (_without_ the wiring connector or
+the GPIO connector or the power switch, which were soldered by hand after
+these pictures were taken):
+
+Top of the board:
+%image(images/mopi/pre-production-boards-02.jpg, Pre-production MoPi top)
+
+Underneath the board:
+%image(images/mopi/pre-production-boards-01.jpg, Pre-production MoPi bottom)
+
+The stackable headers (for when MoPi is used in tandem with other add-on
+boards) take up quite a lot of vertical space in order to provide a set of
+pass-through pins above the MoPi board. Therefore we're offering two versions,
+one with the stackable header and one with a standard low-profile header.
+
+This is the stackable header that we're using (from Adafruit):
+%(http://www.adafruit.com/products/1112,
+%image(http://www.adafruit.com/images/medium/1112_MED.jpg, Adafruit Stacking
+Header))
+
+If you're opting for the low-profile header you can see an example here, on
+the level 2 board:
+%image(images/mopi/mopi-underside.jpg, MoPi 2 underside).
+
+This was the second-generation prototype board:
 
 %image(images/mopi/proto2-01-500x379.jpg, mopi prototype 2/1, 500, 379)
 
@@ -1105,6 +1148,55 @@ time.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Methods in the Madness
 
+Most of our testing used external power supplies to make the development
+cycles faster. (Well, would _you_ want to add "wait for the batteries to
+discharge" to every edit/compile/test loop?!) I'm writing this post next to a
+large humming monster:
+
+%image(images/mopi/test-rigs/sofia-20140421-154603-500.jpg, Test Rig, 500)
+
+The Pi is drawing 170 mA; MoPi is getting 11.9 volts from the PSU. The PSU
+connects up to one of MoPi's supply inputs using a couple of re-purposed panel
+pins:
+
+%image(images/mopi/test-rigs/sofia-20140421-113148-500.jpg, Test Rig, 500)
+
+Mission control (helicopter not strictly necessary):
+
+%image(images/mopi/test-rigs/sofia-20140421-154651-500.jpg, Test Rig, 500)
+
+%%% %image(images/mopi/test-rigs/sofia-20140421-113213-500.jpg, Test Rig, 500)
+%%% %image(images/mopi/test-rigs/sofia-20140421-154556-500.jpg, Test Rig, 500)
+%%% %image(images/mopi/test-rigs/sofia-20140421-113123-500.jpg, Test Rig, 500)
+%%% %image(images/mopi/test-rigs/sofia-20140421-113138-500.jpg, Test Rig, 500)
+
+We've also got a flash new PSU down at the workshop:
+
+%image(images/mopi/test-rigs/workshop-20140409-153037-500.jpg, Test Rig, 500)
+
+%image(images/mopi/test-rigs/workshop-20140409-153052-500.jpg, Test Rig, 500)
+
+And here's Fred after I just showed him the bill:
+
+%image(images/mopi/test-rigs/workshop-20140409-153131-500.jpg, Test Rig, 500)
+
+While we're showing my snaps, here's one of my absolute favourite bits of kit
+ever:
+
+%image(images/mopi/test-rigs/workshop-20140409-153029-500.jpg, Test Rig, 500)
+%%% %image(images/mopi/test-rigs/workshop-20140409-153021-500.jpg, Test Rig, 500)
+
+This multimeter has been running reliably for 30 years! Ok, at some point I
+couldn't get the batteries any more, so I had to bodge up a container for a
+different size, but apart from that it has been pretty much perfect. I plugged
+it into our new PSU, dialed up 6.2 volts and hey presto! The meter and the PSU
+agreed 100%. Can I marry my multimeter?
+
+We've got a new shiney one too, but the romance just isn't there:
+
+%%% %image(images/mopi/test-rigs/workshop-20140409-153039-500.jpg, Test Rig, 500)
+%image(images/mopi/test-rigs/workshop-20140409-153043-500.jpg, Test Rig, 500)
+
 In early testing we often reached states that caused error conditions of one
 sort or another on the Pi. For example:
 
@@ -1305,6 +1397,55 @@ From %(http://maplin.co.uk/, Maplin):
 %#other
 %1 Other Directions
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 A Possible Charging Circuit
+
+One feature that we didn't manage to get sufficient backing for was battery
+charging. This feature would be a great addition to MoPi, but it turns out to
+be pretty difficult :-( In fact, dealing with lots of different chemistries
+may not be possible at all on a tiny device like MoPi. (Most manufacturers of
+charging ICs only support one chemistry per chip, for example, and some only
+support charging a single cell per chip! Many chargers also rely on having a
+temperature sensor in physical proximity to the batteries
+themselves.)%footnote(We like our backers. We'd rather not incinerate them if
+not completely necessary.) The other challenge is that we've got a really
+small surface area to work with on the PCB.
+
+Still, a number of our backers want to use MoPi with a charger (e.g. to charge
+batteries from solar panels during the day and then run on batteries
+overnight), so we've been working on a configuration with an external charger.
+For example, here's how we think a UPS configuration with charging could look:
+
+%(https://www.circuitlab.com/circuit/dsguk8/ups-configuration/,
+%image(images/mopi/ups-with-charger.png, UPS with charger, 540, 405))
+
+We haven't tested this yet, but it _should_ work ;-)
+
+There are a number of potential gotchas in this type of circuit. For example,
+when the mains power drops, the Pi must be powered pretty much instantly in
+order to avoid triggering a reboot. There are no big capacitors on the Pi's
+PCB to buffer its consumption of 300-500 mA without power. To deal with this
+requirement we need MoPi to be always on and monitoring the Pi's 5V feed, even
+when that feed isn't being supplied by MoPi itself. (This doesn't waste much
+power as our microcontroller is very efficient.) When MoPi sees the 5V rail
+start to fall the controller immediately enables its 5V stabilizer, taking
+over supply of power to the Pi.
+
+In the circuit above, when there is mains, the charger is generating e.g. +12V
+DC and the relay's coil is energized. The contact is switched to the normal
+open position and is passing +12V to charge the batteries. When mains drops,
+the relay is switching to the normal closed position and charging will stop.
+MoPi is powered all the time -- and so, we hope, is the Pi. (What does the
+diode do? When the +12V goes down, accumulated energy in the relay's coil must
+be dissipated. The diode is shorting the coil to do that. Otherwise the
+relay's contact will stay closed for a longer time.)
+
+More on this when we get time to test it out in practice.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Other Options
+
 For voltage regulation another option is a UBEC%footnote(UBEC stands for
 Universal Battery Elimination Circuit, which is rather a misnomer as they're
 often used to regulate battery supplies. Hey ho.) -- a device popular with
@@ -1326,3 +1467,50 @@ Raspberry Pi Forums).
 Gray Girling's Pi owners' manual) also has a good discussion about battery
 supplies and their subtleties (and is generally an excellent investment for
 the Pi enthusiast).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Linux is Lovely
+
+One of the great things about the Pi is that it runs a %(http://fsf.org/, free
+and open source) software stack. This makes development so much easier --
+and here's an example of why...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Enabling I2C and Debugging with I2C Tools
+
+Now that MoPi uses I2C as its communication mechanism, we have to enable this
+in the SimBaMon package. Here's how we do it%footnote(The key steps are
+described in various places, including
+%(https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c,
+on Adafruit).):
+
+- if i2c-tools isn't already installed, install it:
+  - ^sudo apt-get install i2c-tools^
+- (you might as well do the same with ^python-smbus^ for testing purpose)
+- edit ^/etc/modules^ and add lines ^i2c-bcm2708^ and ^i2c-dev^
+- edit ^/etc/modprobe.d/raspi-blacklist^ (if it exists) and comment out the
+  line ^blacklist i2c-bcm2708^ (by adding a ^#^ at the start of the line)
+
+The process of developing our interface involved hacking the ^i2c-tools^
+package to play with the multi-byte read facility in the ^i2cdump^ command.
+On a closed-source operating system, of course, you would be stymied at this
+point. On Linux it is super easy :-)
+
+Here's how to pull down the source code, rebuild and test:
+
+- edit ^/etc/apt/sources.lst^ and add this line:
+  - ^deb-src http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib
+    non-free rpi^
+- then
+  - ^sudo apt-get update^
+  - ^mkdir i2c-tools^
+  - ^cd i2c-tools^
+  - ^apt-get source i2c-tools^
+- then ^make^ will recompile (the tools are in the directory ^tools^)
+
+Hey presto, I can hack away at the C code and get immediate feedback with
+commands like ^sudo tools/i2cdump -y 1 0x0b i^ (where ^0x0b^ is MoPi's
+designated I2C address -- the smart battery address)%footnote(For a revision 1
+Pi -- the very early boards -- use ^0^ instead of ^1^.).
+
