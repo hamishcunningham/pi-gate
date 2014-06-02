@@ -189,6 +189,20 @@ shut down immediately.
 %image(images/mopi/packet/img-20140421-113013.jpg, Packaging 4, 500)
 
 -----------------------------------------------------------------------------
+*>>> Should I get a stackable header or a low-profile one?* %br
+*>>> What if the power switch isn't accessible?*
+
+If you want to fit your MoPi into tight spaces, you probably want a small
+(low-profile) header. If you want to stack MoPi with other Pi add-on boards,
+then you want a big, "stackable", header.
+
+Note that if you do get the stackable version, when you put another board on
+top of MoPi it may hide the power switch and/or the LEDs. In the case of the
+power switch there are solder pads on the PCB to allow fitting of a remote
+switch.
+
+
+-----------------------------------------------------------------------------
 *>>> What type of regulator chip is it? What is the voltage range?*
 
 MoPi uses a switched-mode regulator (a TPS5430), so almost no power is wasted.
