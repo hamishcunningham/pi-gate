@@ -1513,7 +1513,8 @@ that of course is quite rare). With a 100kHz (10 microseconds) I2C clock, the
 
 (See also %(https://dl.dropbox.com/u/3669512/2835_I2C%20interface.pdf, Gert
 van Loo's description here).) This took us a quite a few debug cycles to cope
-with! Below some details of one of the methods used.
+with! Below some details of one of the methods used (the others involving lot
+of sweating over a hot oscilloscope, trawling system logs and the like!).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
