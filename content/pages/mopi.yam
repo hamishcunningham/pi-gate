@@ -1489,7 +1489,35 @@ and open source) software stack. This makes development so much easier --
 and here's an example of why...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 Debugging with I2C Tools
+%2 Glitches in the Pi's I2C Bus
+
+The I2C bus is a great way to ship data between the Pi and add-on boards like
+MoPi. It is also a bit of a pig to get working: the CPU in the Pi has a
+hardware bug that causes intermittent bad reads from the bus. Quoting
+%(https://github.com/raspberrypi/linux/issues/254, Renata Wolff):
+
+%"
+The broadcom BCM2835 has a (hardware) bug in the I2C module.
+
+The BCM implements "clock stretching" in a bad way:
+
+Instead of ensuring a minimum "hightime" for the clock, the BCM lets the I2C
+clock internally run on, and when it's time to flip the clock again, it checks
+wether or not the clock has become high, and if it is low, it does a "clock
+stretch". However if just in the few nanoseconds before this check the slave
+releases the clock signal indicating it is ready for a new clock, the clock
+pulse may become as short as 40ns. (that's the lowest I'm able to measure, and
+that of course is quite rare). With a 100kHz (10 microseconds) I2C clock, the
+"bad" moments to release the clock are 5 microseconds apart.
+%"
+
+(See also %(https://dl.dropbox.com/u/3669512/2835_I2C%20interface.pdf, Gert
+van Loo's description here).) This took us a quite a few debug cycles to cope
+with! Below some details of one of the methods used.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Installing I2C
 
 Now that MoPi uses I2C as its communication mechanism, we have to enable this
 in the SimBaMon package. Here's how we do it%footnote(The key steps are
@@ -1503,6 +1531,13 @@ on Adafruit).):
 - edit ^/etc/modules^ and add lines ^i2c-bcm2708^ and ^i2c-dev^
 - edit ^/etc/modprobe.d/raspi-blacklist^ (if it exists) and comment out the
   line ^blacklist i2c-bcm2708^ (by adding a ^#^ at the start of the line)
+
+(The ^postinst^ script in our Debian package for SimBaMon does all this for
+you, by the way.)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Debugging with I2C Tools
 
 The process of developing our interface involved hacking the ^i2c-tools^
 package to play with the multi-byte read facility in the ^i2cdump^ command.
