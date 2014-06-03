@@ -1,0 +1,25 @@
+Custom PiBow Lid for MoPi
+
+Thanks to Paul and Connor at %(http://pimoroni.com/, Pimoroni) we now have a
+prototype of the custom
+%(http://shop.pimoroni.com/products/pibow-raspberry-pi-case, PiBow) lid that
+they're supplying for %(pages/mopi.html, MoPi) :-)
+
+Here are some pics of MoPi (3.3V version) running a Model A Pi in a Crystal
+PiBow with the new lid:
+
+%(images/mopi/custom-lid-120313.jpg, %image(images/mopi/custom-lid-120313-500x.jpg, Custom PiBow Lid, 500))
+
+The power button is just proud of the lid -- hard to press by accident, but
+easy to access when you want it.
+
+%(images/mopi/custom-lid-120322.jpg, %image(images/mopi/custom-lid-120322-500x.jpg, Custom PiBow Lid, 500))
+
+%%% %(images/mopi/custom-lid-120327.jpg, %image(images/mopi/custom-lid-120327-500x.jpg, Custom PiBow Lid, 500))
+
+Thanks guys!
+
+%meta(summary=Custom PiBow lid for MoPi,
+tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
+
+*%(pages/mopi.html, Read the main article).*
