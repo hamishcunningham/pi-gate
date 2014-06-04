@@ -99,7 +99,9 @@ somewhere.")
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Quick Start
 
-%image(images/mopi/quickstart/schematic6-500x.png, Quick start guide)
+%(images/mopi/quickstart/schematic6.png,
+%image(images/mopi/quickstart/schematic6-500x745.png, Quick start guide, 500,
+745))
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -151,8 +153,9 @@ GPIO pins.
 
 The components on the MoPi are as follows:
 
-%image(images/mopi/mopi-with-key-schematic-500x.png, Board connections schematic 1,
-500)
+%(images/mopi/mopi-with-key-schematic.png,
+%image(images/mopi/mopi-with-key-schematic-500x262.png, Board connections schematic 1,
+500, 262))
 
 When connecting two power sources (e.g. two battery packs, or one solar panel
 and one battery pack) the ground wires (-ve, typically black) both share the
@@ -163,8 +166,9 @@ shown in the schematics corresponds to _source 1_; the other to _source 2_.
 When you've connected your supplies, MoPi then fits onto the Pi as shown on
 the right:
 
-%image(images/mopi/mopi-with-key-schematic-02-500x.png, Board connections schematic
-2, 500)
+%(images/mopi/mopi-with-key-schematic-02.png,
+%image(images/mopi/mopi-with-key-schematic-02-500x138.png, Board connections schematic
+2, 500, 138))
 
 The charge level of each source is signalled by the two amber LEDs on the top
 of the board, and the overall health of the supplies by a single
@@ -186,7 +190,9 @@ shut down immediately.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Troubleshooting and FAQ
 
-%image(images/mopi/packet/img-20140421-113013.jpg, Packaging 4, 500)
+%(images/mopi/packet/img-20140421-113013.jpg,
+%image(images/mopi/packet/img-20140421-113013-500x391.jpg, Packaging 4, 500,
+391))
 
 -----------------------------------------------------------------------------
 *>>> Should I get a stackable header or a low-profile one?* %br
