@@ -393,21 +393,24 @@ We've now developed four versions (the last of which is being supplied to our
 Kickstarter backers in June 2014). Here's what version 4 looks like:
 
 %(images/mopi/version-4-top.jpg,
-%image(images/mopi/version-4-top-500x.jpg, Version 4 top, 500))
+%image(images/mopi/version-4-top-500x375.jpg, Version 4 top, 500, 375))
 
 %(images/mopi/version-4-bottom.jpg,
-%image(images/mopi/version-4-bottom-500x.jpg, Version 4 bottom, 500))
+%image(images/mopi/version-4-bottom-500x375.jpg, Version 4 bottom, 500, 375))
 
 Here's what the level 3 revision looked like (_without_ the wiring connector
 or the GPIO connector or the power switch, which were soldered by hand after
 these pictures were taken):
 
 Top of the board:
-%image(images/mopi/pre-production-boards-02.jpg, Pre-production MoPi top, 500)
+%(images/mopi/pre-production-boards-02.jpg,
+%image(images/mopi/pre-production-boards-02-500x375.jpg, Pre-production MoPi
+top, 500, 375))
 
 Underneath the board:
-%image(images/mopi/pre-production-boards-01.jpg, Pre-production MoPi bottom,
-500)
+%(images/mopi/pre-production-boards-01.jpg,
+%image(images/mopi/pre-production-boards-01-500x375.jpg, Pre-production MoPi bottom,
+500, 375))
 
 The stackable headers (for when MoPi is used in tandem with other add-on
 boards) take up quite a lot of vertical space in order to provide a set of
@@ -421,11 +424,13 @@ Header))
 
 If you're opting for the low-profile header you can see an example here, on
 the level 2 board:
-%image(images/mopi/mopi-underside.jpg, MoPi 2 underside, 500).
+%(images/mopi/mopi-underside.jpg,
+%image(images/mopi/mopi-underside-500x326.jpg, MoPi 2 underside, 500, 326)).
 
 This was the second-generation prototype board:
 
-%image(images/mopi/proto2-01-500x379.jpg, mopi prototype 2/1, 500, 379)
+%(images/mopi/proto2-01.jpg,
+%image(images/mopi/proto2-01-500x379.jpg, mopi prototype 2/1, 500, 379))
 
 The shape of the PCB allows it to fit into the
 %(http://shop.pimoroni.com/collections/pibow, Pibow) without blocking the Pi's
@@ -782,15 +787,18 @@ The configuration UI uses the same tools as the Raspberry Pi's utility
 all types of connections (including remote login with ^ssh^). Here's a
 screenshot or three:
 
-%image(images/mopi/config-01.png, MoPi Config UI 1, 650)
+%(images/mopi/config-01.png,
+%image(images/mopi/config-01.png, MoPi Config UI 1, 500, 336))
 
 _The main entry screen._ %br %br
 
-%image(images/mopi/config-02.png, MoPi Config UI 2, 650)
+%(images/mopi/config-02.png,
+%image(images/mopi/config-02.png, MoPi Config UI 2, 500, 333))
 
 _Configuring one of the power supplies, battery chemistry._ %br %br
 
-%image(images/mopi/config-03.png, MoPi Config UI 3, 650)
+%(images/mopi/config-03.png,
+%image(images/mopi/config-03.png, MoPi Config UI 3, 500, 334))
 
 _Getting status data (there's lots more in the newest version!)._
 
@@ -1181,38 +1189,52 @@ cycles faster. (Well, would _you_ want to add "wait for the batteries to
 discharge" to every edit/compile/test loop?!) I'm writing this post next to a
 large humming monster:
 
-%image(images/mopi/test-rigs/sofia-20140421-154603-500.jpg, Test Rig, 500)
+%(images/mopi/test-rigs/sofia-20140421-154603.jpg,
+%image(images/mopi/test-rigs/sofia-20140421-154603-500x375.jpg, Test Rig,
+500, 375))
 
 The Pi is drawing 170 mA; MoPi is getting 11.9 volts from the PSU. The PSU
 connects up to one of MoPi's supply inputs using a couple of re-purposed panel
 pins:
 
-%image(images/mopi/test-rigs/sofia-20140421-113148-500.jpg, Test Rig, 500)
+%(images/mopi/test-rigs/sofia-20140421-113148.jpg,
+%image(images/mopi/test-rigs/sofia-20140421-113148-500x375.jpg, Test Rig,
+500, 375))
 
 Mission control (helicopter not strictly necessary):
 
-%image(images/mopi/test-rigs/sofia-20140421-154651-500.jpg, Test Rig, 500)
+%(images/mopi/test-rigs/sofia-20140421-154651.jpg,
+%image(images/mopi/test-rigs/sofia-20140421-154651-500x375.jpg, Test Rig,
+500, 375))
 
-%%% %image(images/mopi/test-rigs/sofia-20140421-113213-500.jpg, Test Rig, 500)
-%%% %image(images/mopi/test-rigs/sofia-20140421-154556-500.jpg, Test Rig, 500)
-%%% %image(images/mopi/test-rigs/sofia-20140421-113123-500.jpg, Test Rig, 500)
-%%% %image(images/mopi/test-rigs/sofia-20140421-113138-500.jpg, Test Rig, 500)
+%%% %image(images/mopi/test-rigs/sofia-20140421-113213-500x375.jpg, Test Rig, 500)
+%%% %image(images/mopi/test-rigs/sofia-20140421-154556-500x375.jpg, Test Rig, 500)
+%%% %image(images/mopi/test-rigs/sofia-20140421-113123-500x375.jpg, Test Rig, 500)
+%%% %image(images/mopi/test-rigs/sofia-20140421-113138-500x375.jpg, Test Rig, 500)
 
 We've also got a flash new PSU down at the workshop:
 
-%image(images/mopi/test-rigs/workshop-20140409-153037-500.jpg, Test Rig, 500)
+%(images/mopi/test-rigs/workshop-20140409-153037.jpg,
+%image(images/mopi/test-rigs/workshop-20140409-153037-500x375.jpg, Test Rig,
+500, 375))
 
-%image(images/mopi/test-rigs/workshop-20140409-153052-500.jpg, Test Rig, 500)
+%(images/mopi/test-rigs/workshop-20140409-153052.jpg,
+%image(images/mopi/test-rigs/workshop-20140409-153052-500x375.jpg, Test Rig,
+500, 375))
 
 And here's Fred after I just showed him the bill:
 
-%image(images/mopi/test-rigs/workshop-20140409-153131-500.jpg, Test Rig, 500)
+%(images/mopi/test-rigs/workshop-20140409-153131.jpg,
+%image(images/mopi/test-rigs/workshop-20140409-153131-500x375.jpg, Test Rig,
+500, 375))
 
 While we're showing my snaps, here's one of my absolute favourite bits of kit
 ever:
 
-%image(images/mopi/test-rigs/workshop-20140409-153029-500.jpg, Test Rig, 500)
-%%% %image(images/mopi/test-rigs/workshop-20140409-153021-500.jpg, Test Rig, 500)
+%(images/mopi/test-rigs/workshop-20140409-153029.jpg,
+%image(images/mopi/test-rigs/workshop-20140409-153029-500x375.jpg, Test Rig,
+500, 375))
+%%% %image(images/mopi/test-rigs/workshop-20140409-153021-500x375.jpg, Test Rig, 500)
 
 This multimeter has been running reliably for 30 years! Ok, at some point I
 couldn't get the batteries any more, so I had to bodge up a container for a
@@ -1222,8 +1244,10 @@ agreed 100%. Can I marry my multimeter?
 
 We've got a new shiney one too, but the romance just isn't there:
 
-%%% %image(images/mopi/test-rigs/workshop-20140409-153039-500.jpg, Test Rig, 500)
-%image(images/mopi/test-rigs/workshop-20140409-153043-500.jpg, Test Rig, 500)
+%%% %image(images/mopi/test-rigs/workshop-20140409-153039-500x375.jpg, Test Rig, 500)
+%(images/mopi/test-rigs/workshop-20140409-153043.jpg,
+%image(images/mopi/test-rigs/workshop-20140409-153043-500x375.jpg, Test Rig,
+500, 375))
 
 In early testing we often reached states that caused error conditions of one
 sort or another on the Pi. For example:
@@ -1282,7 +1306,8 @@ atmospheric pollution in the garden with the AirPi sensor kit? The Raspberry
 Pi is a great platform for these types of applications, but you'll need a
 mobile power supply when you get out and about away from the wall socket.
 
-%image(http://pi.gate.ac.uk/static/images/pibrush/thumbs/art/1379031321.jpg, Number 1)
+%(images/pibrush/art/1379031321.png,
+%image(images/pibrush/art/1379031321-500x281.png, Number 1, 500, 281))
 
 If you've been following The Story of Pi these last couple of years you'll
 have come across 1001 power supplies -- from batteries to solar panels, from
