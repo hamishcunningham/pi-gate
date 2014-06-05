@@ -196,6 +196,7 @@ shut down immediately.
 391))
 
 -----------------------------------------------------------------------------
+%#faq-stackable
 *>>> Should I get a stackable header or a low-profile one?* %br
 *>>> What if the power switch isn't accessible?*
 
@@ -210,6 +211,32 @@ switch.
 
 
 -----------------------------------------------------------------------------
+%#faq-voltage-low
+*>>> I connected a power source but MoPi won't start...?*
+
+MoPi needs a minimum of 6.2 volts to run. Then it also has a (configurable)
+"safe depth of discharge" setting to prevent damage to rechargeable batteries.
+If the sources connected aren't higher than the highest of these, MoPi will
+refuse to power the Pi. (If there is enough voltage to run the
+microcontroller, it will blink the main LED a few times to signal the
+problem.)
+
+Solutions:
+
+- %(#config-ui, configure MoPi) to accept the supply (if it will reliably
+  exceed 6.2 volts under load)
+- connect a higher voltage supply
+
+Sometimes the reported voltage for a particular source seems to be high enough
+to drive the Pi, but MoPi considers it too low -- why? When a new source is
+connected it is shunted through a simulated load for a few tenths of a second.
+Batteries drop their voltage under load, and the lower their level of charge,
+the larger the drop. MoPi measures the voltage under load, and if it is too
+low it will refuse to use that supply.
+
+
+-----------------------------------------------------------------------------
+%#faq-regulator
 *>>> What type of regulator chip is it? What is the voltage range?*
 
 MoPi uses a switched-mode regulator (a TPS5430), so almost no power is wasted.
@@ -219,6 +246,7 @@ battery or solar panel rig or etc. has to supply 6.2V at minimum.)
 
 
 -----------------------------------------------------------------------------
+%#faq-fuse
 *>>> Is it safe to bypass the Pi's built-in fuse?*
 
 Yes -- in this case...
@@ -256,6 +284,7 @@ ticking all the boxes :-)
 
 
 -----------------------------------------------------------------------------
+%#faq-voltage-pi
 *>>> Can I access the voltage data on MoPi from the Pi?*
 
 Yes!
@@ -273,6 +302,7 @@ can install it in the same way as any other Pi sofware.
 
 
 -----------------------------------------------------------------------------
+%#faq-mains-solar
 *>>> Can I combine mains and solar power?*
 
 Yes!
@@ -289,6 +319,7 @@ TODO
 
 
 -----------------------------------------------------------------------------
+%#faq-deep-discharge
 *>>> How do we avoid deep discharge of rechargeables?*
 
 Rechargeable batteries don't like being completely discharged. We always need
@@ -327,14 +358,9 @@ weeks as we finalise the third prototype.)
 
 
 -----------------------------------------------------------------------------
+%#faq-misc
 *>>> This, that, an' t'other*
 
-- Sometimes the reported voltage for a particular source seems to be high
-  enough to drive the Pi, but MoPi considers it too low -- why? When a new
-  source is connected it is shunted through a simulated load for a few tenths
-  of a second. Batteries drop their voltage under load, and the lower their
-  level of charge, the larger the drop. MoPi measures the voltage under load,
-  and if it is too low it will refuse to use that supply.
 - If you get a message like "libkmod: ERROR ../libkmod/libkmod.c:554
   kmod_search_moddep: could not open moddep file
   '/lib/modules/3.6.11+/modules.dep.bin'" when installing try a reboot
@@ -707,6 +733,7 @@ As easy as pie.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#config-ui
 %2 Configuring Your Power Supplies
 
 Not quite so easy is choosing the correct voltage settings for different
