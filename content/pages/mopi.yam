@@ -211,6 +211,24 @@ switch.
 
 
 -----------------------------------------------------------------------------
+%#faq-stackable2
+*>>> How do I connect another board?*
+
+If you want to use MoPi in combination with another Pi add-on board (e.g.
+AirPi) you need a) to have ordered the version with stackable header pins, and
+b) to remove the plastic collar that the board is shipped with the prevent
+bending. Then the other board will just slip down onto the MoPi headers just
+like those on the Pi.
+
+If you've got a low profile MoPi (without the stacking pins) don't despair --
+if you other board has stacking pins then MoPi can go on the top (which is
+better, in fact, as you'll be able to access the power switch too!).
+
+MoPi _should_ be compatible with all other Pi add-on boards, as we only use
+the I2C bus, which supports multiple concurrent users.
+
+
+-----------------------------------------------------------------------------
 %#faq-voltage-low
 *>>> I connected a power source but MoPi won't start...?*
 
@@ -218,8 +236,8 @@ MoPi needs a minimum of 6.2 volts to run. Then it also has a (configurable)
 "safe depth of discharge" setting to prevent damage to rechargeable batteries.
 If the sources connected aren't higher than the highest of these, MoPi will
 refuse to power the Pi. (If there is enough voltage to run the
-microcontroller, it will blink the main LED a few times to signal the
-problem.)
+microcontroller, it will blink the relevant amber LED a few times to signal
+the problem.)
 
 Solutions:
 
@@ -239,7 +257,8 @@ low it will refuse to use that supply.
 %#faq-regulator
 *>>> What type of regulator chip is it? What is the voltage range?*
 
-MoPi uses a switched-mode regulator (a TPS5430), so almost no power is wasted.
+MoPi uses a switched-mode regulator (a TPS5430 or TPS5430), so almost no power
+is wasted.
 
 The input voltage range is 6.2V to 20V. (There's no step-up circuitry so the
 battery or solar panel rig or etc. has to supply 6.2V at minimum.)
@@ -312,6 +331,11 @@ MoPi's inputs (it will have to be a supply >= 6.2 volts). MoPi will then use
 mains whenever the solar output dips below the mains supply. The ideal would
 be a solar panel rig that outputs e.g. 15v coupled with a 12v mains supply, or
 some similar config.
+
+Note also that the Pi will draw significant current, depending on the model
+and the peripherals, and you will needs sufficient panels (and sunshine!) to
+generate the requisite power. As a very rough guide, we've had some success
+with two 10W panels running a model B (without peripherals).
 
 (We're running a rig now in the workshop that has two 18V panels in parallel;
 watch http://pi.gate.ac.uk/ and we'll post the results!) 
@@ -506,9 +530,9 @@ The next two sections discusses the %(#perfect, overall design) of MoPi and
 then the %(#monitoring, monitoring and configuration software). Then we give
 some detail of %(#howitworks, how it works), and look at %(#measures, system
 performance) and measure how long a Pi can run with various configurations and
-battery types. We also descibe a few of the %(#wild, millions of applications)
-for mobile Pi power. Finally we link to %(#batteries, sites selling batteries)
-and some other %(#other, useful resources).
+battery types. We also describe a few of the %(#wild, millions of
+applications) for mobile Pi power. Finally we link to %(#batteries, sites
+selling batteries) and some other %(#other, useful resources).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
