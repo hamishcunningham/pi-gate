@@ -494,7 +494,7 @@ and for the two power inputs, and a neat little power switch on the top.
 
 (The good people at %(http://www.pimoroni.com/, Pimoroni) are doing a custom
 lid for their %(http://shop.pimoroni.com/collections/pibow, Pibow) case to
-give direct access to MoPi's power switch.)
+give direct access to MoPi's power switch and stacking header.)
 
 And here are the first-generation prototype boards (with separate regulator
 and controller; click to zoom):
