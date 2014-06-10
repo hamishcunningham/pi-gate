@@ -78,6 +78,9 @@ And it even fits in the Pibow (and other well-known Pi cases):
 - DO NOT touch electronic components when they're powered up -- you may
   damage them, or burn your fingers!
 - AVOID handling circuit boards when charged with static!
+- ALWAYS read the small print on _all_ components supplied with your MoPi
+- ALWAYS treat batteries and other power supplies with respect -- if abused
+  the energy they contain may surprise you in dangerous ways!
 - DO NOT feed MoPi to your dog, eat nuts if you're allergic to them, or lose
   your sense of humour.%footnote(A lawyer questioning a doctor during a trial:
   %br
@@ -186,6 +189,57 @@ When the Pi is powered on, press the power button for 3 seconds to turn it
 off. This will shut the Pi down cleanly (which can take up to around 30
 seconds). If you hold the power button down for 10 seconds, the power will
 shut down immediately.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Choosing and Configuring Batteries (Etc.)
+
+The short story is this:
+
+- all supplies have to be capable of at least 6.2V under load (and less than
+  20V)
+- MoPi must be configured correctly (to avoid damage to rechargeable
+  batteries
+
+How do I configure MoPi? There are 3 ways:
+
+# choose one of the on-board defaults (easy peasy)
+# use the configuration user interface on your Pi (straightforward)
+# use the command-line interface, and/or edit the daemon config data
+  on your Pi (advanced)
+
+Let's take each of these in turn...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Choosing Default Supply Profiles
+
+MoPi has two default supply profiles built-in:
+
+# non-rechargeables or non-battery supplies
+# eight NiMH AA rechargeable batteries
+
+By default 1. is active; to choose 2., you need to remove the jumper (or
+remove it and replace it on only one of the pins).
+
+*Note*: when we supply MoPi with batteries we will fit the jumper
+appropriately to choose profile 2. (for the NiMH battery packs that we use).
+
+TODO picture of the jumper
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Using the Configuration Tool on the Pi
+
+TODO
+
+(there is detail of %(#config-ui, how this tool works below))
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Command Line and Daemon Config Hacking
+
+TODO
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -609,6 +663,7 @@ definitely requirements.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#software
 %1 The MoPi Software Suite
 
 This section describes how the MoPi software suite works and how the
