@@ -227,6 +227,16 @@ appropriately to choose profile 2. (for the NiMH battery packs that we use).
 
 TODO picture of the jumper
 
+%(images/mopi/closeups/1.jpg, %image(images/mopi/closeups/1-500x344.jpg, MoPi closeup, 500, 344))
+%(images/mopi/closeups/2.jpg, %image(images/mopi/closeups/2-500x408.jpg, MoPi closeup, 500, 408))
+%(images/mopi/closeups/3.jpg, %image(images/mopi/closeups/3-500x343.jpg, MoPi closeup, 500, 343))
+%(images/mopi/closeups/4.jpg, %image(images/mopi/closeups/4-500x308.jpg, MoPi closeup, 500, 308))
+%(images/mopi/closeups/5.jpg, %image(images/mopi/closeups/5-500x326.jpg, MoPi closeup, 500, 326))
+%(images/mopi/closeups/6.jpg, %image(images/mopi/closeups/6-500x382.jpg, MoPi closeup, 500, 382))
+%(images/mopi/closeups/7.jpg, %image(images/mopi/closeups/7-500x372.jpg, MoPi closeup, 500, 372))
+%(images/mopi/closeups/8.jpg, %image(images/mopi/closeups/8-500x371.jpg, MoPi closeup, 500, 371))
+%(images/mopi/closeups/9.jpg, %image(images/mopi/closeups/9-500x381.jpg, MoPi closeup, 500, 381))
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %3 Using the Configuration Tool on the Pi
