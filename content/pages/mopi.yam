@@ -110,7 +110,7 @@ somewhere.")
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#quick-install
-%2 Installation
+%2 Installation and Use
 
 If you're in a hurry see the graphic above, and:
 
@@ -183,7 +183,9 @@ RGB%footnote(RGB: red, green and blue.) LED.
 %3 Turn On, Turn Off
 
 When the Pi is powered off, press the power button for 2 seconds to turn it
-on.
+on.%footnote(Note that when MoPi powers up the Pi, it then waits 60 seconds
+for the boot process to finish. During this period power off requests will
+be ignored.)
 
 When the Pi is powered on, press the power button for 3 seconds to turn it
 off. This will shut the Pi down cleanly (which can take up to around 30
@@ -446,16 +448,32 @@ weeks as we finalise the third prototype.)
 
 
 -----------------------------------------------------------------------------
-%#faq-misc
-*>>> This, that, an' t'other*
+%#faq-3volt
+*>>> How do I modify it to produce 3.3V?*
 
-- If you get a message like "libkmod: ERROR ../libkmod/libkmod.c:554
-  kmod_search_moddep: could not open moddep file
-  '/lib/modules/3.6.11+/modules.dep.bin'" when installing try a reboot
-  followed by "sudo apt-get -f install".
-- If the I2C bus appears not to be working after installing SimBaMon, try a
-  reboot (as sometimes the Python SMBus module appears not to load as
-  predicted).
+# Take out R22.
+# Solder this resistor on position R23.
+# Replace R15 with 5.6 KOhm 1% 0603 size.
+
+
+-----------------------------------------------------------------------------
+%#faq-mkmod-error
+*>>> Mkmod error when upgrading.*
+
+If you get a message like "libkmod: ERROR ../libkmod/libkmod.c:554
+kmod_search_moddep: could not open moddep file
+'/lib/modules/3.6.11+/modules.dep.bin'" when installing try a reboot followed
+by "sudo apt-get -f install".
+
+
+-----------------------------------------------------------------------------
+%#faq-i2c-error
+
+*>>> The I2C bus doesn't work after install.*
+
+If the I2C bus appears not to be working after installing SimBaMon, try a
+reboot (as sometimes the Python SMBus module appears not to load as
+predicted).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -889,8 +907,8 @@ do we know what the chemistry is? Two ways:
 
 - We have two built-in defaults, one for 8 NiMH cells (which is the battery
   pack that we're supplying to backers who requested one), and one for 8
-  Alkaline non-rechargeables. The former is what MoPi will assume when running
-  out of the box; the latter is activated by removing the on-board jumper
+  Alkaline non-rechargeables. The latter is what MoPi will assume when running
+  out of the box; the former is activated by removing the on-board jumper
   provided for the purpose%footnote(Configuration provided by the user
   overrides the jumper for the current power cycle -- and beyond, when
   SimBaMon is running as the daemon will persist the config values. The
@@ -1233,11 +1251,7 @@ Then the daemon SimBaMon on the Pi gets a low battery signal and informs the
 user that they should either plug in another supply or shut down (again by
 pressing the power button for 3 seconds). If nothing changes and the battery
 continues to discharge down to a critical level, then the RGB LED starts
-flashing red and MoPi forces a shutdown. If the user wishes to continue to
-work and connects a new, charged battery pack (or other supply) to the second
-connector within 30 seconds then the new battery will prevent the shutdown,
-and the RGB LED will switch back to blue or green. The new input's
-corresponding yellow LED will light up. The user can then remove the old
+flashing red and MoPi forces a shutdown. The user can then remove the old
 battery pack for charging.%footnote(Note: a flashing yellow LED for a low
 supply will not reset until that supply has been disconnected for a minute or
 so and then replaced with a good supply.)
@@ -1246,13 +1260,18 @@ Behaviour has to be adjusted for multiple battery chemistries; this is done
 within the microcontroller firmware and can be configured from the Pi. MoPi
 has two default discharging profiles pre-programmed -- one for NiMH
 rechargeable batteries and one for ordinary Alkaline batteries. Out of the box
-the NiMH profile is active; to choose the Akkaline profile, remove the small
+the Alkaline profile is active; to choose the NiMH profile, remove the small
 jumper located on the under side of the board. The jumper applies to both
 power inputs. The state of the jumper can be overridden via configuration from
-the Pi, separately for each one of the power inputs. 
+the Pi, separately for each one of the power inputs. *Note*:
+
+- The jumper is tiny, and easy to lose. If you need to remove it, do so, but
+  it is then best to replace it, but on only one of the pins.
+- When supplying MoPi _with NiMH rechargeables_ we remove the jumper to
+  activate the relevant default profile. (And replace it on only one pin.)
 
 MoPi can be used as a UPS (Uninterruptible Power Supply). If the Pi is powered
-over its 5V micro-USB socket and that power drops Pi while MoPi is active, the
+over its 5V micro-USB socket and that power drops while MoPi is active, the
 supply fails over transparently, allowing the Pi to continue work
 uninterruped. Note though that if the battery supply drops to critical level
 SimBaMon will shut the Pi down. We're working on various circuits that work
