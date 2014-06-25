@@ -147,6 +147,13 @@ MoPi software, and to reboot between each step:
 - sudo apt-get install simbamond
 - sudo reboot
 
+%#no-mopi-warning
+Note that if you're installing the software without MoPi attached, or without
+power attached to MoPi, you will get a warning message%footnote(This warning
+means MoPi is not attached or powered up: "/usr/sbin/simbamon:
+/usr/sbin/mopicli not working; installation problem? \(mopicli. I2C bus
+input/output error on read word. Check bus? Check connection?\)".).
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %3 Connecting the Power and the Pi
@@ -261,6 +268,20 @@ TODO
 %(images/mopi/packet/img-20140421-113013.jpg,
 %image(images/mopi/packet/img-20140421-113013-500x391.jpg, Packaging 4, 500,
 391))
+
+-----------------------------------------------------------------------------
+%#faq-no-mopi-warning
+*>>> I get a warning during software installation*
+
+If you're installing the software without MoPi attached to the Pi, or without
+power attached to MoPi, you will get this warning message:
+
+^/usr/sbin/simbamon: /usr/sbin/mopicli not working; installation problem?
+(mopicli. I2C bus input/output error on read word. Check bus? Check
+connection?)^
+
+In this case you can safely ignore it.
+
 
 -----------------------------------------------------------------------------
 %#faq-stackable
