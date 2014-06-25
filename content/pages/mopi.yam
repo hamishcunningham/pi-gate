@@ -151,8 +151,8 @@ MoPi software, and to reboot between each step:
 Note that if you're installing the software without MoPi attached, or without
 power attached to MoPi, you will get a warning message%footnote(This warning
 means MoPi is not attached or powered up: "/usr/sbin/simbamon:
-/usr/sbin/mopicli not working; installation problem? \(mopicli. I2C bus
-input/output error on read word. Check bus? Check connection?\)".).
+/usr/sbin/mopicli not working; MoPi not attached or powered? \(mopicli. I2C
+bus input/output error on read word. Check bus? Check connection?\)".).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -276,8 +276,8 @@ TODO
 If you're installing the software without MoPi attached to the Pi, or without
 power attached to MoPi, you will get this warning message:
 
-^/usr/sbin/simbamon: /usr/sbin/mopicli not working; installation problem?
-(mopicli. I2C bus input/output error on read word. Check bus? Check
+^/usr/sbin/simbamon: /usr/sbin/mopicli not working; MoPi not attached or
+powered? (mopicli. I2C bus input/output error on read word. Check bus? Check
 connection?)^
 
 In this case you can safely ignore it.
