@@ -1,1 +1,677 @@
-/home/hamish/perestroika/ks1/pi-gate-ks1.yam
+MoPi: Mobile Power for the Pi
+
+_Hot-swap Mobile Power for the Pi_
+%meta(summary=Hot-swap Mobile Power for the Pi)
+
+%1* \*\*\*\* Please don't link or distribute this page \*\*\*\*
+
+_%(http://pi.gate.ac.uk/pages/about.html#hamish, Hamish Cunningham)
+December 2013-January 2014_
+
+%contents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Pi to Go!
+
+MoPi is mobile and 24/7 power for the Pi. On your bike, up a tree, or for your
+home server: we've got you covered.
+
+%%% %(images/mopi/logo-heli-1.png,
+%%% %image(images/mopi/logo-heli-1-200x150.png, MoPi Heli Logo, 200, 150))
+
+Features:
+
+- multiple inputs -- standard batteries, car power sockets, old laptop
+  supplies, solar panels, ...
+- hot-swap power replacement without stopping work
+- shutdown the Pi cleanly when batteries discharge
+- integrated on/off switch
+- UPS (uninterruptible power) when using both batteries and mains
+- on-board LED indicators and on-Pi notifications
+
+And it even fits in the Pibow (and other well-known Pi cases):
+
+%(images/mopi/mopi-in-pibow.jpg,
+%image(images/mopi/mopi-in-pibow-500x375.jpg, MoPi in a Pibow, 500, 375))
+
+Back this Kickstarter from *less than £20/€25/$30* (early bird) and we'll have
+you powered up in no time. Or pick up one of our *outdoor experimenter kits*
+and help us deliver field-trip science rigs for schools. (Add £2.25 to any
+reward and get a custom Pibow lid!)
+
+*Where do you want to use yours?!*
+
+%(http://pi.gate.ac.uk/static/images/mopi/mopi-with-key.png,
+%image(images/mopi/mopi-with-key.png, MoPi prototype, 500, 358))
+
+%(http://pi.gate.ac.uk/static/images/mopi/proto2-01.jpg,
+%image(images/mopi/proto2-01-500x379.jpg, MoPi prototype, 500, 379))
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 I Want One!
+
+Great! Click on one of the pledges listed to the right of the page.
+
+The options:
+
+- Just MoPi: pledge *£18* (early bird) or *£24*.
+- MoPi, rechargeable batteries and charger: pledge *£48* (early bird) or
+  *£59*.
+- Don't interrupt! The cheapest UPS on the market: pledge *£75* (early bird)
+  or *£89*.
+- Kit and caboodle:
+  - for Pi-on-the-Road Adventurers kit pledge *£130*
+  - for Outdoor Experimenters (Light) pledge *£157*
+  - for Outdoor Experimenters (Light and Air) pledge *£239*
+- Make me a lab:
+  - an outdoor rig for 10-pupil classes is *£2,140*
+  - for an on-site workshop pledge *£3,340*.
+- Or, just pledge *£2* and we'll keep you in touch.
+- And add *£2.25* to any pledge and we'll upgrade your Pibow case with a
+  custom MoPi-friendly lid.
+
+Payment by barter, bitcoin, or bourbon biscuits in bulk: probably fine, but
+phone first!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 The Story So Far
+
+%2* NOTE: video 2 goes here...
+
+About a year ago we realised that we needed better power management for our
+mobile projects on
+%(http://pi.gate.ac.uk/, Pi.GATE.ac.uk). Five volt USB
+battery packs are common, but none of them can communicate their level of
+charge to the Pi. That means lots of unanticipated power cuts -- a good way to
+corrupt your SD card :-(
+
+And then we realised that standard rechargeables are more planet friendly. And
+then that it would be cool to be able to hot-swap supplies, and that if we
+could do that then why not make it a UPS too, and how about adding a power
+switch, and...
+
+Fast forward: we're onto our third prototype and we think we know what perfect
+Pi power looks like. Read on!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#perfect
+%2 The Perfect Pack
+
+%(http://pi.gate.ac.uk/static/pages/images/mopi/perfect-pack.png,
+%image(images/mopi/perfect-pack.png, The perfect pack, 563, 295))
+
+What would the perfect Pi battery pack look like? It should be:
+
+*Low cost*. Dedicated battery supplies like those sold as phone charging
+devices are great, but when they no longer hold charge the whole unit has to
+be recycled. Standard commodity batteries and the reusable chargers that serve
+them are well-established and already present in many households. They're the
+cheapest and most flexible option.
+
+*Flexible*. Got a solar panel handy? I want to plug it into the circuitry and
+have it drive the Pi as long as the sun shines, then let a battery take over
+when the clouds come. Stuck for power but got an old laptop supply or 12 volt
+car charger handy? Strip the cables, connect, and power my Pi please! Plugging
+a bunch of peripherals? I want to be able to drive them all via my battery
+pack. And etc.
+
+*Polite*. When you're running your laptop on battery and it runs out of juice
+it gives you a nice polite warning message or two, and, when the level gets
+really low, it automagically shuts down the machine. This is important to
+allow the operating system (e.g.
+%(http://pi.gate.ac.uk/pages/basics.html#footnote1, Raspbian Linux) on the Pi)
+to close up any open files and generally tidy the house before power
+disappears. Just killing the power without warning is risky -- sometimes
+nothing bad happens, but in the worst case you can end up with a machine that
+won't boot and needs a complete reinstall. So I want my battery pack to signal
+the Pi when levels are low, so that the Pi can shut itself down cleanly. Good
+manners are important, after all :-)
+
+And if the battery pack is going to tell the Pi when it is getting low and
+needs to shut down, why not have an *on/off switch* into the bargain? The
+"off" signal triggers clean shutdown, and is very convenient when you're using
+the Pi in any kind of kiosk or appliance context. Several projects have
+implemented this type of on/off facility in its own right -- e.g.
+%(http://lowpowerlab.com/atxraspi/, the ATX Pi supply) or the
+%(http://www.susa.net/wordpress/2012/11/raspberry-pi-power-controller/, PIC
+controller) -- it's definitely a useful function to have on board.
+
+*Uninterruptible*. I don't want to stop work when my battery is low if I've
+got a charged pack handy (or a different source of power, like a car cigarette
+lighter socket or the like). So I'd like my battery pack to support *hot-swap*
+of a new electricity supply, either a new set of batteries or some other new
+input.
+
+*Eco-friendly*. One of the great things about the Pi is its low carbon
+footprint. The recent ones in %(http://pi.gate.ac.uk/, my lab) are made in
+Wales, so they haven't travelled half way around the world to reach me. The
+base system is bare-bones, which encourages reuse of power supplies, monitors,
+cables and the like. The power consumption is low -- particularly for the
+Model A, which gets by on 300 mA or below (at 5 volts this adds up to around
+1.5 watts -- contrast that with
+%(https://secure.www.upenn.edu/computing/resources/category/hardware/article/computer-power-usage,
+50 watts and above) for a desktop PC!). There's no spare planet; there's no
+Plan B if we destroy this one. So we definitely want to support rechargeable
+batteries, and preferably not the built-in variety that are hard to recycle.
+
+*Communicative*. I want to know when the battery is full, when it is starting
+to get low and when it is critical. I want to be able to get those signals
+both when logged in to the Pi and visually from the battery pack itself.
+(Look! Flashing lights!)
+
+*Robust*. I'm pretty unreliable at the best of times. When crawling through
+the underbrush with a camera-equiped Pi rig
+%(http://pi.gate.ac.uk/posts/2013/08/05/chasing-pine-martens/, in search of
+Pine Marten lairs) I'm very likely to plug the wrong end of the stick and end
+up with my foot in my mouth, to coin a mixed metaphor or three. Over-volt and
+spike protection are definitely requirements.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 The Prototypes
+
+We're now working on our third-generation prototype, which will be the final
+test board before we start volume production -- see the development schedule
+below. This was the second-generation prototype:
+
+%image(images/mopi/proto2-01-500x379.jpg, mopi prototype 2/1, 500, 379)
+
+The shape of the PCB allows it to fit into the
+%(http://shop.pimoroni.com/collections/pibow, Pibow) without blocking the Pi's
+display output (currently unused but on the list for future development at
+%(http://www.raspberrypi.org/, The Foundation)). There's space for a
+pass-through GPIO header so that other add-on boards can share space on the
+Pi, separate LEDs for overall function and for the two power inputs, and a
+neat little power switch on the top.
+
+(The good people at %(http://www.pimoroni.com/, Pimoroni) are going to do a
+custom lid for their
+%(http://shop.pimoroni.com/collections/pibow, Pibow) case
+to give access to MoPi's power switch. We'll also supply templates if you need
+to drill out an existing Pibow or other popular case.)
+
+And here are the first-generation prototype boards (with separate regulator
+and controller):
+
+%[ | %\ %\ |
+%(images/mopi/prototype-regulator-05.jpg,
+%image(images/mopi/thumbs/prototype-regulator-05.jpg, mopi prototype 5, 200, 194))
+| %\ %\ %\  |
+%(images/mopi/prototype-controller-01.jpg,
+%image(images/mopi/thumbs/prototype-controller-01.jpg, mopi prototype 6, 270, 195))
+| %]
+
+The software is %(http://www.fsf.org/about/what-is-free-software, open source)
+(of course) and available at
+%(https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon, our
+Pi-Tronics repository).
+
+There is lots of detail of how it all works below, but first let's take a look
+at performance.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 A Longer-Lasting Snack
+
+So, how long will the batteries last?
+
+My first test was a Model B Pi with almost no load (USB keyboard and mouse;
+monitor attached over HDMI but switched off after starting the test; no
+network or other peripherals). Using eight rechargeable Duracell AA NiMH 2400
+mAh batteries (like
+%(http://www.amazon.co.uk/Duracell-Rechargeable-Accu-2400-Batteries/dp/B0031OE6LG/ref=sr_1_2?ie=UTF8&qid=1375768484&sr=8-2&keywords=duracell+nimh,
+these ones)) the Pi ran for 9 hours 31 minutes. Not bad! Especially when you
+consider that the MoPi regulator supports hot-swap of new charged packs --
+this looks very viable for mobile Pi applications of all shapes and sizes.
+
+For comparison I set up the same rig with a USB battery pack from RS
+(%(http://uk.rs-online.com/web/p/power-banks/7757508/, this one), a 5200 mAh
+Lithium polymer model). The results were remarkably similar, with the RS pack
+lasting for 9 hours and 21 minutes.
+
+Since then we've conducted 101 different tests. There are two key factors in
+Pi battery life: *1.* Model A vs. Model B; *2.* the peripherals. To summarise:
+
+- You can expect a Model A to get near to double the life of a Model B.
+- What you connect to the Pi makes a huge difference. For example: WiFi is a
+  power hog: halve your expected battery life if you're using it. An
+  accelerometer, in contrast, is cheap: e.g.
+  %(http://www.piborg.com/xloborg,
+  XLoBorg) won't reduce your running time by much at all.
+
+You can also connect two battery packs to MoPi and get double the running
+time.
+
+%%% TODO more test results here; PP3s, lead acid monster, etc.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 The Future: Development Schedule
+
+%(images/mopi/logo-balloon-1.png,
+%image(images/mopi/logo-balloon-1-150x244.png, MoPi Balloon Logo, 150, 244))
+We've got two sets of developments we want to make: 1. finishing off the
+perfect Pi power board (next section); 2. putting together some
+imagination-capturing outdoor learning kits for schools (below).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Power to the People
+
+The basic functionality is all in place -- just pledge us your £20 and we'll
+get you on the road ASAP. (With your own batteries -- we'll also supply
+high-capacity rechargeable batteries for the more expensive pledges, or a UPS
+rig, or even a full kit including Pi and the works for £130. A bargain!)
+
+*Future developments*:
+
+- dealing with more rechargeable battery chemistries (we currently support
+  Alkaline and NiMH; Lithium-ion is in progress)
+- the internal Pi circuitry can run on 3.3 volts (saving some power loss in
+  the on-board linear regulator -- %(http://www.daveakerman.com/, Dave
+  Akerman's balloons) use this strategy to increase battery life); we'd love
+  to add a mode that supports 3.3V
+- the communication is currently one-way: MoPi tells the Pi about the state of
+  the batteries, signals for shutdown requests and so on -- if we add 2-way
+  communication (on the I2C bus or using one extra GPIO pin) then we'll be
+  able to support configuration from the Pi itself
+- to support the widest range of battery options we can't do charging; it
+  would be nice to add an option for charging common configurations
+
+With your help we'll add all of that to the mix!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Experimenter Kits for Schools and Outdoor Adventurers
+
+The Pi was designed to give a boost to science and technology education, and
+it has already made a huge impact -- here in the UK, for example, we have a
+shiney %(http://pi.gate.ac.uk/pages/schools.html, new computing curriculum) in
+the works. There a whole load of reasons why we need to *educate our kids
+about technology*, and how technology can help them cope with the challenges
+that the future holds. And not just any technology -- the Pi has a low carbon
+footprint, and it's the first mainstream device to be made in Europe for many
+a year. 
+
+We're involved with putting together Pi kits for schools -- only for indoor
+use up to now, but this Kickstarter will allow us to create outdoor
+experimenter kits to help teach the links between technology, climate,
+wildlife and the like.
+
+We're offering three kits (for young or old!):
+
+- Outdoor Adventurer Kit
+- Outdoor Experimenter Kit (Light)
+- Outdoor Experimenter Kit (Light and Air)
+
+Then we're offering a set of kits that make up a *Schools Outdoor Lab* rig,
+complete with a selection of fully worked lesson plans to get you started.
+Ideal for teaching basic physics, climate, environment, biology (and of course
+computing). If you cover our travel expenses we'll even run a introductory lab
+day for you on site.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Outdoor Adventure Kit
+
+The base level kit has everything you need to get out and about: a Raspberry
+Pi Model B, case, SD card, and a MoPi board with NiMH batteries, holder and
+charger (and a wall supply for when you get home!).
+
+Buy one for yourself and be on the road in minutes. This kit also makes a
+great gift for someone yet to experience The Joy of Pi :-)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Outdoor Experimenter Kit (Light)
+
+This kit has all of the previous one, plus the Raspberry Pi camera module (day
+or night versions). Ideal for all types of outdoor motion-sensing and
+photography projects. If you haven't tried the excellent
+%(http://www.raspberrypi.org/camera, Pi camera yet) here are a couple of
+examples:
+
+Forest Gump came by the office when we were testing an early battery-powered
+camera rig (a hackable "GoPro"?!):
+
+%(images/mopi/gump2.jpg,
+%image(images/mopi/gump2-500x375.jpg, Forest Gump, 500, 375))
+
+The next olympic downhill ski champion straps a Pi cam to his head:
+
+%(images/mopi/vladi-skiing-rig-1.jpg,
+%image(images/mopi/vladi-skiing-rig-1-300x400.jpg, Vladi skiing, 300, 400))
+
+%%% YOUTUBE SKIING CLIP HERE
+
+Here's the camera rig:
+
+%(images/mopi/ski-cam.jpg,
+%image(images/mopi/ski-cam-500x343.jpg, Vladi skiing, 500, 343))
+
+People have done all sorts of stuff with these cameras -- from videoing Teddy
+Bears in the stratosphere to night filming wildlife -- the educational
+opportunities are obvious.
+
+Where do you want to use yours?!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Outdoor Experimenter Kit (Light and Air)
+
+If you watch the film %(http://chasingice.co.uk/, Chasing Ice) you can't fail
+to be amazed when a vast chunk of glacier the size of Manhattan suddenly
+disintegrates before your eyes. What are the climate changes that have
+triggered these massive events? How do they play out in the air we're
+breathing? How do you measure atmospheric conditions, and what science can we
+use to explain changes in those conditions?
+
+Meet %(http://airpi.es/, AirPi), a brilliant Pi-based atmospheric monitoring
+kit that ran a crowdfunding campaign in 2013 and started shipping in the
+autumn. If you pick the *Outdoor Experimenter Light and Air Kit* pledge we'll
+include an AirPi with your mobile rig, all set to get out and about measuring
+temperature, relative humidity, air pressure, light levels, smoke, and the
+concentrations of the harmful gas pollutants carbon monoxide and nitrogen
+dioxide, and plotting the results direct to a webserver running on the Pi.
+
+Here's %(http://airpi.es/, the AirPi board), sensor and indicator set:
+
+%(images/mopi/air-pi-2022x1317.jpg,
+%image(images/mopi/air-pi-500x326.jpg, The AirPi Kit, 500, 326))
+
+And here's one we built up on a breadboard:
+
+%(images/mopi/air-pi-breadboard.jpg,
+%image(images/mopi/air-pi-breadboard-500x375.jpg, AirPi on a Breadboard, 500,
+375))
+
+The third MoPi prototype uses a different set of GPIO pins in order to avoid
+conflicts with AirPi (thanks Tom Hartley, creator of AirPi, for his help with
+this).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 How Kickstarter Will Help
+
+There are *two chunks of work* here: first is putting together a hardware set
+that can do stuff that kids (and their teachers!) get interested in; second,
+and at least as important, is developing the lesson plans, learning and
+evaluation materials that make it quick enough and easy enough to incorporate
+the Pi into existing educational schedules.
+
+We've got our own %(http://pi.gate.ac.uk/pages/about.html#elearn, educational
+specialist) all lined up, and your support on Kickstarter will unlock the
+resources to make it work. And we'll make it all open source in return.
+
+If you have the funds to pay for a whole outdoor lab (for multiples of 10
+students) then we'll supply you with the whole kit and caboodle -- and even
+come visit to deliver an on-site training day for teachers, parents and
+pupils. (With
+%(https://www.gov.uk/government/organisations/disclosure-and-barring-service,
+DBS/CRB registered) and %(http://www.stemnet.org.uk/ambassadors/, STEM
+ambassador) instructors. Travel costs and volume limitations apply!) If you
+want to dip your toe and support our development of the educational materials
+then just pick up one of the kits listed above.
+
+Thanks!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Production and Fulfillment Plan
+
+We'll carry out the development plans detailed above in the following stages:
+
+- Complete prototype board level 3. We have a few hardware changes left to
+  make (changing GPIO pins to fit in with AirPi; adding better connectors;
+  etc.). Then we'll revise the PCB layout and order another batch of
+  prototypes. Solder them up (with a *big* magnifying glass -- the
+  surface-mount components are tiny!) and get testing. We'll make a bigger
+  batch for version 3 than previously, and push them out to heavy Pi users to
+  get use and abuse and a final round of feedback. Continue work on the daemon
+  and the firmware (mainly the 2-way communication code and Pi-based
+  configuration option). Start project updates and regular newsletter to
+  friends and the community.
+  - Completion: February 2014. (Project updates ongoing through September.)
+- Finalise the design of the production board. Fix any residual issues arising
+  from testing. Incorporate any feedback from Kickstarter backers (you!).
+  Start ordering components, kit parts and PCBs in bulk. Finalise the
+  pick-and-place manufacturing process and start pre-production testing.
+  Continue work on the firmware and produce the production binary for flashing
+  to the production boards. Address any stability issues in the daemon code.
+  - Completion: March 2014.
+- Start taking delivery of the production boards. Fulfill the early bird
+  orders. (This is our last opportunity to make firmware changes. Test, test
+  and test again!) Resume work on the educational materials: catch up on
+  developments in the curricula, the Cambridge GCSE MOOC, etc.; more project
+  work with the camera and with the air sensors board. Set up pre-order
+  mechanism for retail version. The daemon should be very stable by now.
+  - Completion: April 2014. (Educational work continues through the summer.)
+- Fulfill remaining (non-early bird) orders for all single item and kit
+  rewards. Select lesson plans for delivery with the schools rigs next month.
+  Solicit additional GitHub committers for the daemon code to help with
+  long-term maintainability.
+  - Completion: May 2014.
+- Finalise the first version of the educational materials. Prepare schools rig
+  orders. Revisit long-term production and retail supply options. Work on the
+  workshop days and deliver some trial runs locally. Agree delivery schedule
+  for workshop days.
+  - Completion: June 2014.
+- Finalise the workshop days and deliver. Set up sustainable production
+  process and retail board supply. Set up sustainability mechanisms for the
+  educational materials.
+  - Completion: September 2014. (Workshop delivery ongoing. Retail board
+    supply ongoing.)
+- Collapse in a small pile.
+
+%/*
+- 1: Friends
+  - Estimated delivery: Feb 2014
+- 2: A MoPi Board (early bird)
+  - Estimated delivery: Apr 2014
+- 3: A MoPi Board
+  - Estimated delivery: Apr 2014
+- 4: A MoPi Board, Batteries, Charger (early bird)
+  - Estimated delivery: Apr 2014
+- 5: A MoPi Board, Batteries, Charger
+  - Estimated delivery: May 2014
+- 6: UPS -- MoPi Board, Two Sets of Batteries, Charger, Mains Supply (early
+  bird)
+  - Estimated delivery: May 2014
+- 7: UPS -- MoPi Board, Two Sets of Batteries, Charger, Mains Supply
+  - Estimated delivery: May 2014
+- 8: Outdoor Adventure Kit (Pi etc., MoPi, batteries, etc.)
+  - Estimated delivery: May 2014
+- 9: Outdoor Experimenter Kit 1 (Light) (previous plus Pi camera)
+  - Estimated delivery: May 2014
+- 10: Outdoor Experimenter Kit 2 (Light and Air) (previous plus AirPi)
+  - Estimated delivery: May 2014
+- 11: Schools Outdoor Lab Rig (ten Light and Air kits)
+  - Estimated delivery: Jun 2014
+- 12: Outdoor Rig Workshop (previous plus on-site mobile Pi day)
+  - Estimated delivery: Sep 2014
+%*/
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 How MoPi Works
+
+There are three dimensions to the problem of mobile power for the Pi:
+
+- _regulation_, to supply the constant 5 volts at up to around 1 amp that the
+  Pi requires
+- _control_:  keeping a check on battery charge, switching the regulator off
+  when charge is getting low, and reporting the current level to a monitor
+- _monitoring_: reading level indications from
+  %(http://pi.gate.ac.uk/pages/basics.html#gpio-pins, a GPIO connection),
+  reporting it to the Pi user and shutting the operating system down cleanly
+  when levels get critically low
+
+The first two of these need some special hardware (see "The Hardware" below);
+the third is written as a software
+_daemon_. (We'll sketch these here --
+Pi.GATE.ac.uk has more of %(http://pi.gate.ac.uk/pages/mopi.html, the gorey
+details).)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#monitoring
+%2 Monitoring
+
+All Linux systems share the concept of a _daemon_, which is a system-level
+service which gets run during operating system startup. It is quite easy to
+implement a battery monitor daemon that listens on the Pi's GPIO pins for
+level changes signalled by the MoPi microcontroller board. The daemon then
+makes entries in the standard system logs as a simple way to share data with
+other subsystems, and can be configured to send a warning message to all users
+if levels are low. Best of all, the daemon can easily shut down the Pi cleanly
+before the regulator voltage gets too low for reliable operation.
+
+The rest of this section describes the implementation of the daemon. It is
+designed for the MoPi boards, but should be quite easily reusable for other
+battery power projects.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#simbamon
+%3 SimBaMon: a Simple Battery Monitor daemon
+
+SimBaMon is an open source Linux daemon for
+
+- monitoring battery levels (via
+  %(http://wiringpi.com/the-gpio-utility/, the gpio command))
+- sending warning messages to the user if the battery is low
+- shutting down cleanly at critical battery levels
+- managing a power supply on/off switch
+- writing relevant data to the system logs
+
+You can find
+%(https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon,
+the source code) on GitHub. The core of the daemon is defined in three files:
+
+- ^/etc/simbamon.conf^    -- configuration data
+- ^/usr/sbin/simbamon^    -- the daemon itself
+- ^/etc/init.d/simbamond^ -- an interface to the ^init^ subsystem that Linux
+  uses to manage daemons (amongst other things)
+
+The last of these, ^simbamond^, is used by the operating system to start and
+stop SimBaMon at boot or shutdown time, and can be used to control the daemon
+manually when required. For example this command will stop the daemon:
+
+sudo service simbamond stop
+
+The configuration file, ^simbamon.conf^, defines a set of states in which the
+monitor will take some action (power off, battery empty, battery level
+critical, battery level low, battery level good).
+
+The MoPi microcontroller supplies these states via three Raspberry Pi
+%(http://pi.gate.ac.uk/pages/basics.html#gpio-intro, GPIO pins) (and also sets
+on-board indicator LEDs accordingly). The core of SimBaMon, a shell script
+that lives in ^/usr/sbin/simbamon^, implements an infinite loop that checks
+the levels being reported over GPIO every few seconds and takes any necessary
+action. The three GPIO pins connected to MoPi are used as a 3-bit binary
+value, which we convert to decimal using the ^bc^ command. The ^wall^ (write
+all) command is used to send messages to any logged in user.
+
+Here's the main loop:
+
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamon,
+%image(images/mopi/simbamon-code.png, SimBaMon Main Loop, 500, 553))
+
+Here is the
+%(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/,
+current version of the code). There is a full test rig, including debug mode
+(no shutdowns, shorter intervals) and simulation mode (GPIO input is
+simulated).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#installing
+%4 Installing SimBaMon
+
+The %(http://www.raspberrypi.org/archives/tag/alex-bradbury, Raspbian
+maintainers) have been kind enough to include SimBaMon in their repository, so
+you can just do this:
+
+%code(lang=Bash)<
+  sudo apt-get install simbamond
+%>
+
+The software is also available from an
+%(https://launchpad.net/~hamish-dcs/+archive/pi-gate, Ubuntu Personal Package
+Archive) (PPA). (The Ubuntu infrastructure doesn't currently work for binary
+Pi packages, but SimBaMon is implemented in script, so we're ok in this case.)
+
+SimBaMon depends on Gordon Henderson's %(http://wiringpi.com/, Wiring Pi), and
+we've
+%(http://pi.gate.ac.uk/posts/2013/10/09/wiring-pi-package/, made a
+Raspbian package) for that library which should be in the Foundation
+repository soon.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#howitworks
+%2 The Hardware
+
+The MoPi circuitry consists of two parts: a single-chip microcontroller and a
+five volt switching mode regulator. The microcontroller (with embedded
+firmware) implements all the functions related to voltage level monitoring,
+level signalling (via the LEDs and the GPIO interface), and on/off switching
+of the +5V supply to the Pi. Battery voltage levels are measured using the
+built-in microcontroller ADC (Analogue to Digital Converter).
+
+The schematic looks like this:
+
+%image(images/mopi/schematic.png, An early MoPi schematic, 500, 292)
+
+Two yellow LEDs are positioned next to the twin power pack inputs, and
+indicate their status (blinking when either voltage is critically low). The
+overall voltage level of both power inputs is indicated by one RGB (three
+colour) LED and is also sent to the Raspberry Pi over three GPIO lines. The 5
+volts to the Pi is generated by a highly efficient switch mode voltage
+stabiliser, driven by the microcontroller. An open source daemon running on
+the Pi listens to the GPIO signal, informs the user of low battery levels and
+shuts the Pi down cleanly when levels are critically low (or when the power
+switch is pressed).
+
+To start the 5V generator the power button should be pressed and held for 3
+seconds. The microcontroller checks the voltage level of the attached battery
+packs and if it is above the defined operating threshold, it switches the
+stabiliser on to generate 5V for the Pi. The LED for the battery (or other)
+power input lights up, and the RGB LED lights up blue when the battery pack is
+fully charged (or green if the voltage level is within the acceptable
+operating range). A three-bit coded voltage level is also sent to the Pi over
+GPIO (using
+%(http://wiringpi.com/, WiringPi) pins 4, 5 and 6 -- physical pins
+16/18/22 -- though this changes in version 3 to accomodate AirPi). During
+operation, the microcontroller continuously monitors the voltage level, and
+when it falls beneath a safe level it switches the RGB LED to red.
+Simultaneously the yellow LED for the low battery starts flashing, indicating
+that the pack needs replacement.
+
+%%% YOUTUBE MOPI BOARD CLIP HERE
+
+Then the daemon SimBaMon on the Pi gets a low battery signal and informs the
+user that they should either plug in another supply or shut down (again by
+pressing the power button for 3 seconds). If nothing changes and the battery
+continues to discharge down to a critical level, then the RGB LED starts
+flashing red and MoPi forces a shutdown. If the user wishes to continue to
+work and connects a new, charged battery pack (or other supply) to the second
+connector within 30 seconds then the new battery will prevent the shutdown,
+and the RGB LED will switch back to blue or green. The new input's
+corresponding yellow LED will light up. The user can then remove the old
+battery pack for charging.
+
+Behaviour has to be adjusted for multiple battery chemistries; this is done
+within the microcontroller firmware. (In version 3 we also support chemistry
+configuration on the Pi itself, giving a wider range of options.)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%include(0, useTitle, stretch.yam)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1* _Set your Pi free!_
