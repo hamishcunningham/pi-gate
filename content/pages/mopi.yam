@@ -6,8 +6,12 @@ MoPi: Hot-Swap Mobile Power for the Pi
 and %(about.html#fred, Fred Sonnenwald),
 %br August 2013 -- June 2014_ %*/
 
-%1* MoPi is mobile, hot-swap and 24/7 power for the Raspberry Pi. %br
+%2* MoPi is mobile, hot-swap and 24/7 power for the Raspberry Pi. %br
 %(/pages/get-mopi.html, I want one! \(how to order\))
+
+%2* Something not working? %br
+%(https://github.com/hamishcunningham/pi-tronics/issues,
+Raise an issue).
 
 _(In early 2014 we ran a %(http://tinyurl.com/mobile-pi, Kickstarter campaign)
 to fund the first production version, which is due for delivery in June 2014.
@@ -209,7 +213,7 @@ The short story is this:
 - all supplies have to be capable of at least 6.2V under load (and less than
   20V)
 - MoPi must be configured correctly (to avoid damage to rechargeable
-  batteries
+  batteries)
 
 How do I configure MoPi? There are 3 ways:
 
@@ -222,6 +226,7 @@ Let's take each of these in turn...
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#default-profiles
 %3 Choosing Default Supply Profiles
 
 MoPi has two default supply profiles built-in:
@@ -232,34 +237,75 @@ MoPi has two default supply profiles built-in:
 By default 1. is active; to choose 2., you need to remove the jumper (or
 remove it and replace it on only one of the pins).
 
-*Note*: when we supply MoPi with batteries we will fit the jumper
-appropriately to choose profile 2. (for the NiMH battery packs that we use).
+*Note*: when we supply MoPi with batteries we fit the jumper appropriately to
+choose profile 2. (for the NiMH battery packs that we use).
 
-TODO picture of the jumper
+You can see the jumper in this picture: the little black component sticking up
+and overlapping with the right hand end of the white sticker on the GPIO
+connector (labelled 0014):
 
 %(images/mopi/closeups/1.jpg, %image(images/mopi/closeups/1-500x344.jpg, MoPi closeup, 500, 344))
-%(images/mopi/closeups/2.jpg, %image(images/mopi/closeups/2-500x408.jpg, MoPi closeup, 500, 408))
-%(images/mopi/closeups/3.jpg, %image(images/mopi/closeups/3-500x343.jpg, MoPi closeup, 500, 343))
-%(images/mopi/closeups/4.jpg, %image(images/mopi/closeups/4-500x308.jpg, MoPi closeup, 500, 308))
+
+Here's a closer view:
+
 %(images/mopi/closeups/5.jpg, %image(images/mopi/closeups/5-500x326.jpg, MoPi closeup, 500, 326))
+
+Now here's what it looks like when you remove the top (to select profile 2.):
+
+%(images/mopi/closeups/4.jpg, %image(images/mopi/closeups/4-500x308.jpg, MoPi closeup, 500, 308))
+
+And here's the top of the jumper replaced on only one pin (again selecting
+profile 2, and useful to avoid losing the tiny little thing!):
+
 %(images/mopi/closeups/6.jpg, %image(images/mopi/closeups/6-500x382.jpg, MoPi closeup, 500, 382))
-%(images/mopi/closeups/7.jpg, %image(images/mopi/closeups/7-500x372.jpg, MoPi closeup, 500, 372))
-%(images/mopi/closeups/8.jpg, %image(images/mopi/closeups/8-500x371.jpg, MoPi closeup, 500, 371))
-%(images/mopi/closeups/9.jpg, %image(images/mopi/closeups/9-500x381.jpg, MoPi closeup, 500, 381))
+
+%%% %(images/mopi/closeups/2.jpg, %image(images/mopi/closeups/2-500x408.jpg, MoPi closeup, 500, 408))
+%%% %(images/mopi/closeups/3.jpg, %image(images/mopi/closeups/3-500x343.jpg, MoPi closeup, 500, 343))
+%%% %(images/mopi/closeups/7.jpg, %image(images/mopi/closeups/7-500x372.jpg, MoPi closeup, 500, 372))
+%%% %(images/mopi/closeups/8.jpg, %image(images/mopi/closeups/8-500x371.jpg, MoPi closeup, 500, 371))
+%%% %(images/mopi/closeups/9.jpg, %image(images/mopi/closeups/9-500x381.jpg, MoPi closeup, 500, 381))
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %3 Using the Configuration Tool on the Pi
 
-TODO
+If you're using a supply that doesn't match MoPi's two %(#default-profiles,
+built-in profiles) you need to run a configuration utility on the Pi itself.
+This will prompt you to enter details of the supply, then calculate
+appropriate values to send to the board over I2C. It will also store the
+config data and resend it to the board after reboots as necessary.
 
-(there is detail of %(#config-ui, how this tool works below))
+To start the configuration tool open a terminal and do:
+
+%<
+sudo mopi
+%>
+
+The tool operates in the same way as the Raspberry Pi's configuration tool
+(^raspi-config^). Select the option to configure one or both of MoPi's
+supplies, and then:
+
+- Type of supply. This is one of rechargeable battery, non-rechargeables, or
+  non-battery.
+- Number of cells. This is the number of individual battery cells (or sources)
+  in your supply. Note that some batteries incorporate several cells -- e.g. a
+  9V PP3 has 6 cells internally. If you're not using batteries select "1".
+- Specify battery chemistry. For example "Alkaline" or "NiMH" (or "N/A" for
+  non-battery supplies).
+
+After entering this data the tool will give details of the values it has
+calculated and offer to write these to the MoPi board. There is detail of
+%(#config-ui, these values and how the tool works) below.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%3 Command Line and Daemon Config Hacking
+%3 Command Line, Python API and Daemon Config Hacking
 
-TODO
+Finally, if the other methods are insufficiently scarey, you can use %(#cli,
+the command-line tool) directly, or edit %(#simbamon, the SimBaMon daemon)
+configuration data, or write code using the %(#api, Python API).
+
+For details, see %(#software, the software) below.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -427,7 +473,8 @@ with two 10W panels running a model B (without peripherals).
 
 (We're running a rig now in the workshop that has two 18V panels in parallel;
 watch http://pi.gate.ac.uk/ and we'll post the results!) 
-TODO
+
+%%% TODO
 
 
 -----------------------------------------------------------------------------
@@ -780,6 +827,7 @@ There is %(/pages/mopi.html#simbamon, more detail below).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#api
 %2 The Python API
 
 How do we talk to the hardware? From MoPi version 3 onwards we shifted away
@@ -810,6 +858,7 @@ including MoPi facilities in their programs.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#cli
 %2 MoPi from the Command Line
 
 The observant amongst you may have noticed that SimBaMon is not written in
@@ -827,31 +876,48 @@ you'll get something like this:
 
 %<
 Usage: mopicli [-h] [options]
-Version 0.2, API 0.2
+This tool is for interfacing with the MoPi battery power add-on
+  board for the Raspberry Pi. (http://pi.gate.ac.uk)
+Package Version 4.0
+Version 0.5, API 0.3
 
 Miscellaneous:
-  -i          I2C bus (default: 1)
-  -fv         Firmware version
-  -sn         Serial number
-  -h          Display this message
+  -i x	I2C bus
+    Where x is the I2C bus that connects the MoPi to the Raspberry Pi. If ths
+    flag is not set, the default bus of [1m1[0m is used, based on board revision.
+  -fv	Firmware version
+  -sn	Serial number
+  -h	Display this message
+  -e	Read everything possible from the MoPi
+  -nl	No labels on output
 
 Status:
-  -s          MoPi status word
-  -sv         Verbose status
-  -v          Current battery voltage in mV
-  -v1/-v2     Battery #1/#2 voltage in mV
+  -s	MoPi status word
+  -sv	Verbose status
+  -v	Current source voltage in mV
+  -v1	Source #1 voltage in mV
+  -v2	Source #2 voltage in mV
 
 Read configuration options:
-  -rc         Combined battery #1 and #2 configuration
-  -rc1/-rc2   Configuration of battery #1/#2
-  -rpon       Power on delay
-  -rs         Shutdown delay
+  -rc	Combined source #1/#2 conf
+  -rc1	Source #1 conf
+  -rc2	Source #2 conf
+  -ron	Power on delay
+  -rsd	Shutdown delay
 
 Write configuration options:
-  -wc mV mV mV         Combined battery #1 and #2 configuration
-  -wc1/-wc2 mV mV mV   Configuration of battery #1/#2
-  -wpon seconds        Power on delay seconds
-  -ws seconds          Shutdown delay seconds
+  -wc t mV mV mV mV	Combined source #1/#2 conf
+  -wc1 t mV mV mV mV	Source #1 conf
+  -wc2 t mV mV mV mV	Source #2 conf
+    Where t (type) is [1m1[0m for rechargeable batteries, [1m2[0m for non-rechargeable
+    batteries, [1m3[0m for PSU / DC adapter, and the four mV settings are the
+    [1mmaximum[0m, [1mgood[0m, [1mlow[0m, and [1mcritical[0m voltage levels.
+  -won seconds		Power on timer in seconds
+    This timer counts down from the moment the MoPi is powered off and turns it
+    back on when reaching zero.
+  -wsd seconds		Shutdown timer in seconds
+    This timer counts down from the moment it is set and powers off the MoPi
+    when reaching zero.
 
 All options may be used simultaneously. When doing so, they execute in the
   order they are listed in in this help message. However, only one of each may

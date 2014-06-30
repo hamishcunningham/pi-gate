@@ -1,1 +1,89 @@
-/home/hamish/perestroika/ks1/stretch.yam
+Stretch Goals
+
+Thanks to our backers so far we're going beyond our baseline. We've figured
+out a bunch of extras we can offer in MoPi if we get further (and the level of
+funding we'll need to make them viable):
+
+- 150% (unlocked!): *screw terminals*, *stackable headers*, *remoting pads*
+  and *self-resetting fuse* added
+- 175% (nearly there!): *two-way communication* and *remote power-off* added
+- 200%: *3.3V supply* mod added
+- 250%: *timer-based wake-up* added
+- 300%: *The PiBrush* reward released
+- 375%: *battery charging* added
+- 430%: *The HackCam* reward released
+- 590%: *input voltage boost* added
+- 999%: *The Pablet* reward released
+
+When we reach __150% funded__ (nearly there!) we can make these improvements:
+
+- *Screw terminals*. This will make it easier to connect all different types
+  of power supply (from batteries to water turbines) direct to MoPi.
+- *Stackable headers*. We'll put a stacking header directly onto the board
+  (and adopt the same case lid style as for the
+  %(http://shop.pimoroni.com/products/model-a-pibow, Pibow Model A)). This
+  will make it easier to connect multiple boards at once (e.g. MoPi + XLoBorg,
+  or MoPi + AirPi, or etc.).
+- *Remoting pads*. We'll add remoting pads for the power switch to help with
+  applications where MoPi sits away from the edge of the case. This will allow
+  the connection of an additional power switch.
+- *Self-resetting fuse*. MoPi supplies power directly through the GPIO pins,
+  which bypasses the Pi's built-in fuse. We think this is safe -- but to be
+  doubly sure we'll add a fuse in MoPi.
+
+When we get to __175% funded__ we will add:
+
+- *Two-way communication*. We're moving to I2C for communication between the
+  Pi and MoPi, which will mean complete configurability from the Pi. (It will
+  also minimise our use of GPIO pins and maximise the number of other Pi
+  add-on boards that we can run with.)
+- *Remote power off*. You'll be able to tell MoPi to power down the Pi when
+  logged-in remotely (after a clean shutdown, of course).
+
+If we get to __200% funded__ we will add the ability to mod MoPi for *3.3V
+operation* (overpowering the Pi's on-board regulator and saving the power that
+is dissipated there, for weight and battery life critical applications like
+ballooning).
+
+If we make it to __250% funded__ we'll add timer-based wakeup -- tell MoPi
+what time you want your Pi to wakeup, then power it down and MoPi will boot
+the Pi as requested.
+
+If we get to __300% funded__ we will offer our virtual paintbrush rig -- *The
+%(http://pi.gate.ac.uk/pages/pibrush.html, PiBrush)* -- as a reward. PiBrush
+combines a MoPi with an accelerometer and is a great way to engage kids with
+Python programming and the physics of motion. When you've got one you've also
+got a programmable Pi-based Wii-remote-alike, and there are a ton of cool
+applications waiting.
+
+Now, the one you've all been waiting for: *charging*! That's by a long head
+our most requested feature -- but it is also pretty difficult :-(  In fact,
+dealing with lots of different chemistries may not be possible on a tiny
+device like MoPi (most manufacturers of charging ICs only support one
+chemistry per chip, for example, and some only support charging a _single
+cell_ per chip!). The other challenge is that we've got a really small surface
+area to work with on the PCB. So we need to get quite a bit further to have
+the necessary resources... but if we reach __375% funding__, then we'll do it!
+We're not promising to charge every battery under the sun, but we'll provide
+charging for at least one popular configuration.
+
+If we make it to __430% funded__ we'll offer *The HackCam*, a Model A Pi, a
+camera module, wifi and a MoPi, wrapped up in a water-resistant box with a 3
+inch screen and the switching to make it work in the way you'd expect. The
+pictures are served directly to the web by an Apache running on the Pi, and
+with everything open source (of course) you can tweak the photographic
+parameters to your heart's content. A camera you can log in to!
+
+Some applications would benefit from the addition of a
+*voltage boost*, e.g. when you've got a small surface area of photo-voltaic
+(solar) panel and want to trickle charge a backup battery. If we reach __590%
+funding__ we'll add a buck booster to cater for these applications.
+
+Finally (for now!) if we get to __999% funding__ we'll offer *The Pablet*,
+combining MoPi with this
+%(http://shop.pimoroni.com/products/pitft-pibow, touchscreen and case rig).
+We'll mod the case to add a couple of PP3 clips, and an external power switch.
+Hey presto! a Pi-based "tablet"!
+
+(And if we reach 4000% Lubo says we can attach a rocket to it, though I'm a
+little suspicious that he's not totally sincere on that one.)
