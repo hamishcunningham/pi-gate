@@ -104,19 +104,15 @@ A: "It is possible that he could have been alive and practicing law
 somewhere.")
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 Quick Start
-
-%(images/mopi/quickstart/schematic6.png,
-%image(images/mopi/quickstart/schematic6-500x745.png, Quick start guide, 500,
-745))
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#quick-install
 %2 Installation and Use
 
-If you're in a hurry see the graphic above, and:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Quick Start
+
+If you're in a hurry:
 
 # Install the battery monitoring software:
   - sudo apt-get update
@@ -124,8 +120,11 @@ If you're in a hurry see the graphic above, and:
 # Connect the batteries
 # Connect the Pi and hit "on"
 
-For more details on each step, see below.
+%(images/mopi/quickstart/schematic6.png,
+%image(images/mopi/quickstart/schematic6-500x745.png, Quick start guide, 500,
+745))
 
+For more details on each step, see below.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %3 Installing the Software
@@ -156,7 +155,8 @@ Note that if you're installing the software without MoPi attached, or without
 power attached to MoPi, you will get a warning message%footnote(This warning
 means MoPi is not attached or powered up: "/usr/sbin/simbamon:
 /usr/sbin/mopicli not working; MoPi not attached or powered? \(mopicli. I2C
-bus input/output error on read word. Check bus? Check connection?\)".).
+bus input/output error on read word. Check bus? Check connection?\)".); just
+ignore it at this point!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
