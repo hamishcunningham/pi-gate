@@ -312,7 +312,7 @@ calculated and offer to write these to the MoPi board. There is detail of
 
 Finally, if you want more control, or the other methods are insufficiently
 scarey, you can use %(#cli, the command-line tool) directly, or edit
-%(#simbamon, the SimBaMon daemon) configuration data, or write code using the
+%(#simbamon, the simbamon daemon) configuration data, or write code using the
 %(#api, Python API).
 
 A quick demo of using the cli setting the default 8 NiMH profile:
@@ -581,7 +581,7 @@ by "sudo apt-get -f install".
 
 *>>> The I2C bus doesn't work after install.*
 
-If the I2C bus appears not to be working after installing SimBaMon, try a
+If the I2C bus appears not to be working after installing simbamon, try a
 reboot. Sometimes the Python SMBus module appears not to load correctly.
 
 
@@ -758,14 +758,14 @@ disappears. Just killing the power without warning is risky -- sometimes
 nothing bad happens, but in the worst case you can end up with a machine that
 won't boot and needs a complete reinstall. So I want my battery pack to signal
 the Pi when levels are low, so that the Pi can shut itself down cleanly. Good
-manners are important, after all :-)
+manners are important, after all. :-)
 
-And if the battery pack is going to tell the Pi when it is getting low and
-needs to shut down, why not have an *on/off switch* into the bargain? The
-"off" signal triggers clean shutdown, and is very convenient when you're using
-the Pi in any kind of kiosk or appliance context. Several projects have
-implemented this type of on/off facility in its own right -- e.g.
-%(http://lowpowerlab.com/atxraspi/, the ATX Pi supply) or the
+While we're at it, if the battery pack is going to tell the Pi when it is
+getting low and needs to shut down, why not have an *on/off switch* into the
+bargain? The "off" signal triggers clean shutdown, and is very convenient when
+you're using the Pi in any kind of kiosk or appliance context. Several
+projects have implemented this type of on/off facility in its own right --
+e.g. %(http://lowpowerlab.com/atxraspi/, the ATX Pi supply) or the
 %(http://www.susa.net/wordpress/2012/11/raspberry-pi-power-controller/, PIC
 controller) -- it's definitely a useful function to have on board.
 
@@ -783,9 +783,10 @@ cables and the like. The power consumption is low -- particularly for the
 Model A, which gets by on 300 mA or below (at 5 volts this adds up to around
 1.5 watts -- contrast that with
 %(https://secure.www.upenn.edu/computing/resources/category/hardware/article/computer-power-usage,
-50 watts and above) for a desktop PC!). There's no spare planet; there's no
-Plan B if we destroy this one. So we definitely want to support rechargeable
-batteries, and preferably not the built-in variety that are hard to recycle.
+50 watts and above) for a desktop PC!). There's no spare planet and our
+resources are definetely finite, so we definitely want to support rechargeable
+batteries. Preferably not the built-in variety (like a mobile phone) that are
+hard to recycle.
 
 *Communicative*. I want to know when the battery is full, when it is starting
 to get low and when it is critical. I want to be able to get those signals
@@ -810,16 +811,16 @@ architecture of MoPi hangs together.
 There are four main parts of the puzzle:
 
 - A _daemon_ which runs in the background on the Pi, which is called
-  %(/pages/mopi.html#simbamon, SimBaMon) (a Simple Battery Monitor). SimBaMon
-  is available as a package for Raspbian, and installing it pulls in all the
-  other facilities.
+  %(#simbamond, simbamond) (simbamon daemon, or SImple BAttery MONnitor
+  daemon). It is available as a package for Raspbian, and installing it pulls
+  in all MoPi software.
 - An interface that communicates with the MoPi hardware over the I2C protocol.
-  This interface is wrapped up as a Python API.
-- A command-line tool that uses the Python API and provides a language-neutral
-  portable method for talking to the board from the Pi.
-- A configuration user interface that simplifies the process of setting up
-  MoPi to deal with different types and numbers of batteries, and other types
-  of power supply.
+  This interface is wrapped up as a %(#api, Python API).
+- A %(#cli, command-line tool) that uses the Python API and provides a
+  language-neutral portable method for talking to the board from the Pi.
+- A %(#configuration-tool, configuration user interface) that simplifies the
+  process of setting up MoPi to deal with different types and numbers of
+  batteries, and other types of power supply.
 
 All of the code for these components is
 %(https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon,
@@ -831,17 +832,17 @@ detail of the implementation of the daemon.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 The SimBaMon Daemon
+%#simbamond
+%2 simbamond, the simbamon daemon
 
 When the Pi (or any other Linux system) boots, several system services are
 started that will run continuously until the machine is shut down again. These
-services are called _daemons_, and this is how SimBaMon is implemented.
-Following the standard naming convention, the daemon is called ^simbamond^,
-and the first point of entry (used by the operating system to start, stop,
-etc.) is a script that lives in
+services are called _daemons_, of which simbamon is one. The first point of
+entry, used by the operating system to start, stop, etc., is an init (think
+initialisation) script:
 %(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamond.default,
-^/etc/init.d/simbamond^). This script (which is a management type person)
-calls another to do all the real work; this other (hard working type) lives in
+^/etc/init.d/simbamond^). This script (which you can think of as a wrapper for
+management) calls another script to do the real work:
 %(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamon,
 ^/usr/sbin/simbamon^).
 
@@ -849,7 +850,7 @@ One of key features of MoPi is that it supports many different types of
 batteries and many other types of power supply (from solar panels to elastic
 bands!). Coping with the requirements of all these monsters needs a huge wodge
 of configuration data, which (following Debian Linux convention) lives in
-^/etc/default^ in a file (again, confusingly) called
+^/etc/default/^ in a file (again, confusingly) called
 %(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamond.init,
 ^simbamond^).%footnote(Again confusingly -- this will become a theme -- the
 names of the files as they live in the source package are different from their
@@ -886,24 +887,22 @@ data.
 
 There are two ways to talk over I2C from the Pi: a set of command-line tools
 written in C, and a Python module. Both work, but the Python version seems to
-have had more attention from Pi users and developers, and has support for
-multi-byte reads (which requires a bit of hacking to get working in the C). So
-we've implemented an API for MoPi in Python%footnote(And no one complained
-about the whitespace rules! Who'd have thought it?!), which now lives in a
-file called
+have had more attention from Pi users and developers, and even has support for
+multi-byte reads. So we've implemented an API for MoPi in Python%footnote(And
+no one complained about the whitespace rules! Who'd have thought it?!), which
+now lives in a file called
 %(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopiapi.py,
-^mopiapi.py^).
-
-For Python programmers this code provides a natural and efficient method of
-including MoPi facilities in their programs.
+^mopiapi.py^). For Python programmers this code provides a natural and
+efficient method of including MoPi facilities in their programs. For example,
+writing a system tray applet...
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#cli
 %2 MoPi from the Command Line
 
-The observant amongst you may have noticed that SimBaMon is not written in
-Python%footnote(In common with most daemons, SimBaMon is written in shell
+The observant amongst you may have noticed that simbamon is not written in
+Python%footnote(In common with most daemons, simbamon is written in shell
 script.) -- how does the daemon talk to the board when the API is in Python?
 That's where
 %(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopicli,
@@ -925,7 +924,7 @@ Version 0.5, API 0.3
 Miscellaneous:
   -i x	I2C bus
     Where x is the I2C bus that connects the MoPi to the Raspberry Pi. If ths
-    flag is not set, the default bus of [1m1[0m is used, based on board revision.
+    flag is not set, the default bus of 1 is used, based on board revision.
   -fv	Firmware version
   -sn	Serial number
   -h	Display this message
@@ -950,9 +949,9 @@ Write configuration options:
   -wc t mV mV mV mV	Combined source #1/#2 conf
   -wc1 t mV mV mV mV	Source #1 conf
   -wc2 t mV mV mV mV	Source #2 conf
-    Where t (type) is [1m1[0m for rechargeable batteries, [1m2[0m for non-rechargeable
-    batteries, [1m3[0m for PSU / DC adapter, and the four mV settings are the
-    [1mmaximum[0m, [1mgood[0m, [1mlow[0m, and [1mcritical[0m voltage levels.
+    Where t (type) is 1 for rechargeable batteries, 2 for non-rechargeable
+    batteries, 3 for PSU / DC adapter, and the four mV settings are the
+    mmaximum, good, low, and critical voltage levels.
   -won seconds		Power on timer in seconds
     This timer counts down from the moment the MoPi is powered off and turns it
     back on when reaching zero.
@@ -976,18 +975,19 @@ Not quite so easy is choosing the correct voltage settings for different
 battery chemistries and different combinations of cells (not to mention other
 types of power supply). In each case MoPi needs to know:
 
-- what is the approximate voltage that the battery will supply when fully
-  charged
-- what is the point at which we're getting low on charge (and may expect to
-  run out within a few minutes or so)
-- what is the minimum safe discharge voltage
+- What is the approximate voltage that the battery will supply when fully
+  charged?
+- What is the point at which we're getting low on charge? (And therefore may
+  expect to run out of juice within a few minutes or so.)
+- what is the minimum safe discharge voltage? (Just above the critical deep
+  discharge level of the batteries.)
 
 The mid-point between the first two voltages is is the conventional definition
 of what a good level of charge is, so that's where we swap between lighting up
 our RGB led in blue and lighting it in green. When we reach the low charge
 point we turn the LED red, and when we reach the minimum safe discharge
-voltage (or the minimum safe operating voltage if that is higher) then we
-initiate shutdown.
+voltage (or the minimum safe operating voltage of our micro-controller at 6.2V
+if that is higher) then we initiate shutdown.
 
 Let's look at each of these values in more detail:
 
@@ -1034,15 +1034,15 @@ When we know what chemistry we're dealing with, and how many cells, we can
 then make good guesses about where the four levels above should fall. But how
 do we know what the chemistry is? Two ways:
 
-- We have two built-in defaults, one for 8 NiMH cells (which is the battery
-  pack that we're supplying to backers who requested one), and one for 8
-  Alkaline non-rechargeables. The latter is what MoPi will assume when running
-  out of the box; the former is activated by removing the on-board jumper
-  provided for the purpose%footnote(Configuration provided by the user
-  overrides the jumper for the current power cycle -- and beyond, when
-  SimBaMon is running as the daemon will persist the config values. The
-  firmware reads the jumper at each power up and initializes the cut-off
-  points with Ni-MH or Alkaline values.).
+- We have %(#default-profiles, two built-in defaults), one for 8 NiMH cells
+  (which is the battery pack that we're supplying to backers who requested
+  one), and one for 8   Alkaline non-rechargeables. The latter is what MoPi
+  will assume when running out of the box; the former is activated by
+  removing the on-board jumper provided for the purpose%footnote(Configuration
+  provided by the user overrides the jumper for the current power cycle --
+  and beyond, when simbamon is running as the daemon will persist the config
+  values. The firmware reads the jumper at each power up and initializes the
+  cut-off points with Ni-MH or Alkaline values.).
 - You tell us! To this end we have developed a configuration UI on the Pi,
   which is the last piece in our four part software puzzle.
 
@@ -1082,12 +1082,12 @@ tools to help us, one of which is %(https://mmonit.com/, Monit). This little
 gem is itself a daemon, and it has facilities for one thousand and one
 different types of monitoring task. You can listen to your webserver and
 restart it if it fails, or check the general load of the machine you're
-running on, or -- in our case -- check that the SimBaMon service is running,
+running on, or -- in our case -- check that the simbamon service is running,
 and if not start it up.
 
 To use it, all we need to do is ^sudo apt-get install monit^ in the usual way,
 then edit ^/etc/monit/monitrc^. This is the config we're using to monitor
-SimBaMon on one of our test rigs:
+simbamon on one of our test rigs:
 
 %code(lang=bash)<
 ###############################################################################
@@ -1124,7 +1124,7 @@ check process simbamond with pidfile /var/run/simbamond.pid
 
 You can then see what's going on by either or both of
 
-- ^cat /var/log/monit.log^ (^grep simbamon ...^ is also useful)
+- ^cat /var/log/monit.log^ (^| grep simbamon^ is also useful)
 - pointing your browser at ^\http://my-pi-ip-address:8888^ (if you need to
   find your IP address various methods are %(/pages/blinkip.html, discussed
   here))
@@ -1132,13 +1132,13 @@ You can then see what's going on by either or both of
 This is great for keeping check on things during load testing (particularly
 heavy loads which have a tendency to cause odd corner case bugs to trigger),
 but it is also a great tool for maximising service availability -- the
-configuration code above will restart SimBaMon within a couple of minutes
+configuration code above will restart simbamon within a couple of minutes
 should it ever crash, for example.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#simbamon
-%2 SimBaMon: a Simple Battery Monitor daemon
+%2 simbamon: a simple battery monitor
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %3 Design Notes
@@ -1160,10 +1160,10 @@ which is something we really wanted to support.
 
 What to do?
 
-If in doubt, take the simple option. All Linux systems share the concept of a
-_daemon_, which is a system-level service which gets run during operating
-system startup. It is quite easy to implement a battery monitor daemon that
-listens on the Pi's GPIO pins for level changes signalled by the MoPi
+If in doubt, take the simple option. All Linux systems share the system
+service or _daemon_ concept. A system-level process which gets run during 
+startup. It is quite easy to implement a battery monitor daemon that
+listens on the Pi's I2C bus for level changes signalled by the MoPi
 microcontroller board. The daemon then makes entries in the standard system
 logs as a simple way to share data with other subsystems, and can be
 configured to send a warning message to all users if levels are low. Best of
@@ -1174,52 +1174,54 @@ voltage gets too low for reliable operation.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %3 Implementation
 
-This section gives more detail of the implementation of the SimBaMon battery
+This section gives more detail of the implementation of the simbamon battery
 monitoring daemon. It is designed for the MoPi boards, but should be quite
-easily reusable for other battery power projects. SimBaMon is an open source
-Linux daemon for
+easily reusable for other battery power projects. simbamon is an open source
+Linux daemon for:
 
-- monitoring battery levels (on the Pi this is done via
-  %(http://wiringpi.com/the-gpio-utility/, the ^gpio^ command))
-- sending warning messages to the user if the battery is low
-- shutting down cleanly at critical battery levels
-- managing a power supply on/off switch
-- writing relevant data to the system logs
+- Monitoring battery levels (for us this is done via the   %(#cku, ^mopicli^)
+  command).
+- Sending warning messages to the user if the battery is low.
+- Shutting down cleanly at critical battery levels.
+- Managing a power supply on/off switch.
+- Writing relevant data to the system logs.
 
 You can find
 %(https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon,
 the source code) on GitHub. The core of the daemon is defined in three files:
 
-- ^/etc/simbamon.conf^    -- configuration data
-- ^/usr/sbin/simbamon^    -- the daemon itself
 - ^/etc/init.d/simbamond^ -- an interface to the ^init^ subsystem that Linux
   uses to manage daemons (amongst other things)
+- ^/usr/sbin/simbamon^ -- the daemon itself
+- ^/etc/default/simbamond^ -- configuration data
 
-The last of these, ^simbamond^, is used by the operating system to start and
-stop SimBaMon at boot or shutdown time, and can be used to control the daemon
+The first of these, ^simbamond^, is used by the operating system to start and
+stop simbamon at boot or shutdown time, and can be used to control simbamon
 manually when required. For example this command will stop the daemon:
 
 %code(lang=Bash)<
 sudo service simbamond stop
 %>
 
-The configuration file, ^simbamon.conf^, defines a set of states in which the
-monitor will take some action:
+The configuration file, (also) ^simbamond^, defines how simbamon will take
+action. Of primary interest is the last few lines, which specifies the battery
+configuration in %(#cli, CLI) format. There's some generic stuff at the top
+too about monitoring frequency and stuff, it's pretty well explained in the
+file.
 
 %code(lang=Bash)<
-POWER_OFF=1     # the user has pressed the power button, shutdown now
-BAT_SHUTDOWN=2  # the battery is just about empty, shutdown now
-BAT_CRITICAL=3  # the battery level is critically low, shutdown shortly
-BAT_WARNING=4   # the battery is low, warn the user
-BAT_FULL=7      # the battery is full
+####################################################################
+# local config - DON'T EDIT THIS LINE!
+# -wc 1 11200 10000 8800 8000
+# end of local config - DON'T EDIT THIS LINE EITHER!
 %>
 
 The MoPi microcontroller supplies these states via the Raspberry Pi's
 %(http://en.wikipedia.org/wiki/I%C2%B2C, I2C bus) (and also sets on-board
-indicator LEDs accordingly). The core of SimBaMon, a shell script that lives
+indicator LEDs accordingly). The core of simbamon, a shell script that lives
 in ^/usr/sbin/simbamon^, implements an infinite loop that checks the levels
-being reported over GPIO every few seconds and takes any necessary action. The
-^wall^ command is used to send messages to any user currently logged in.
+being reported every few seconds and takes any necessary action. The ^wall^
+command is used to send messages to any user currently logged in.
 
 Here's a condensed version of the main loop (error checking, debug logging and
 other details omitted):
@@ -1270,10 +1272,10 @@ current version of the code).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#installing
-%3 Installing SimBaMon
+%3 Installing simbamon
 
 The %(http://www.raspberrypi.org/archives/tag/alex-bradbury, Raspbian
-maintainers) have been kind enough to include SimBaMon in their repository, so
+maintainers) have been kind enough to include simbamon in their repository, so
 you can just do this (as %(#quick-install, noted above)):
 
 %code(lang=Bash)<
@@ -1283,7 +1285,7 @@ you can just do this (as %(#quick-install, noted above)):
 Our software is also available from an
 %(https://launchpad.net/~hamish-dcs/+archive/pi-gate, Ubuntu Personal Package
 Archive) (PPA). (The Ubuntu infrastructure doesn't currently work for binary
-Pi packages, but SimBaMon and the rest of the MoPi suite is implemented in
+Pi packages, but simbamon and the rest of the MoPi suite is implemented in
 script (shell and Python), so we're ok in this case.)%footnote(The main
 archive (for stable releases) is at
 https://launchpad.net/~hamish-dcs/+archive/pi-gate with a development snapshot
@@ -1365,7 +1367,7 @@ packs and if it is above the defined operating threshold, it switches the
 stabiliser on to generate 5V for the Pi. The yellow LED for the battery (or
 other) power input lights up, and the RGB LED lights up blue when the battery
 pack is fully charged (or green if the voltage level is within the acceptable
-operating range). The current voltage level is also accessible to the SimBaMon
+operating range). The current voltage level is also accessible to the simbamon
 daemon on the Pi via I2C.%footnote(Prior to version 4 a three-bit coded
 voltage level is sent to the Pi over GPIO using %(http://wiringpi.com/,
 WiringPi) pins 4, 5 and 6 (physical pins 16/18/22).). During operation, the
@@ -1376,7 +1378,7 @@ replacement.
 
 %%% YOUTUBE MOPI BOARD CLIP HERE
 
-Then the daemon SimBaMon on the Pi gets a low battery signal and informs the
+Then the daemon simbamon on the Pi gets a low battery signal and informs the
 user that they should either plug in another supply or shut down (again by
 pressing the power button for 3 seconds). If nothing changes and the battery
 continues to discharge down to a critical level, then the RGB LED starts
@@ -1403,7 +1405,7 @@ MoPi can be used as a UPS (Uninterruptible Power Supply). If the Pi is powered
 over its 5V micro-USB socket and that power drops while MoPi is active, the
 supply fails over transparently, allowing the Pi to continue work
 uninterruped. Note though that if the battery supply drops to critical level
-SimBaMon will shut the Pi down. We're working on various circuits that work
+simbamon will shut the Pi down. We're working on various circuits that work
 around this issue.
 %%% TODO
 
@@ -1831,7 +1833,7 @@ of sweating over a hot oscilloscope, trawling system logs and the like!).
 %2 Installing I2C
 
 Now that MoPi uses I2C as its communication mechanism, we have to enable this
-in the SimBaMon package. Here's how we do it%footnote(The key steps are
+in the simbamon package. Here's how we do it%footnote(The key steps are
 described in various places, including
 %(https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c,
 on Adafruit).):
@@ -1843,7 +1845,7 @@ on Adafruit).):
 - edit ^/etc/modprobe.d/raspi-blacklist^ (if it exists) and comment out the
   line ^blacklist i2c-bcm2708^ (by adding a ^#^ at the start of the line)
 
-(The ^postinst^ script in our Debian package for SimBaMon does all this for
+(The ^postinst^ script in our Debian package for simbamon does all this for
 you, by the way.)
 
 
