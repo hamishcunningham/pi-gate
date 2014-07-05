@@ -40,12 +40,14 @@ home server: we've got you covered.
 Features:
 
 - multiple inputs -- standard batteries, car power sockets, old laptop
-  supplies, solar panels, ... (attached via screw terminals)
+  supplies, solar panels, and more... all attachable via standard screw
+  terminals
 - hot-swap power replacement without stopping work
 - shutdown the Pi cleanly when batteries discharge
 - integrated on/off switch
-- UPS (uninterruptible power) mode when using both batteries and mains
-- on-board LED indicators and on-Pi notifications
+- usable as a UPS (uninterruptible power supply) by attaching both batteries
+  and mains
+- on-board LED indicators and on screen linux system notifications
 - configuration of multiple battery chemistries and numbers of cell from a UI
   on the Pi
 - full API in Python, plus a shell-friendly command-line interface
@@ -67,8 +69,7 @@ Features:
 
 And it even fits in the Pibow (and other well-known Pi cases):
 
-%(images/mopi/mopi-in-pibow.jpg,
-%image(images/mopi/mopi-in-pibow-500x375.jpg, MoPi in a Pibow, 500, 375))
+%(images/mopi/custom-lid-120313.jpg, %image(images/mopi/custom-lid-120313-500x.jpg, MoPi in a Pibow, 500))
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -114,11 +115,12 @@ somewhere.")
 
 If you're in a hurry:
 
-# Install the battery monitoring software:
+# Install the battery monitoring software and shutdown:
   - sudo apt-get update
   - sudo apt-get install simbamond
-# Connect the batteries
-# Connect the Pi and hit "on"
+  - sudo poweroff
+# Connect your batteries to the MoPi
+# Attach the MoPi to your Pi and press the Power Button for 3 seconds
 
 %(images/mopi/quickstart/schematic6.png,
 %image(images/mopi/quickstart/schematic6-500x745.png, Quick start guide, 500,
@@ -143,12 +145,12 @@ recipe is to update your firmware and the operating system, then install the
 MoPi software, and to reboot between each step:
 
 - sudo apt-get update
-- sudo apt-get dist-upgrade
+- sudo apt-get upgrade
 - sudo reboot
 - sudo rpi-update
 - sudo reboot
 - sudo apt-get install simbamond
-- sudo reboot
+- sudo poweroff
 
 %#no-mopi-warning
 Note that if you're installing the software without MoPi attached, or without
@@ -164,7 +166,8 @@ ignore it at this point!
 
 Next connect one or more power supply to MoPi using the screw terminals on the
 underside of the board. Then gently push fit MoPi onto your Raspberry Pi's
-GPIO pins.
+GPIO pins. Make sure you do this with the Raspberry Pi turned off, or you risk
+a reset.
 
 The components on the MoPi are as follows:
 
@@ -187,13 +190,15 @@ the right:
 
 The charge level of each source is signalled by the two amber LEDs on the top
 of the board, and the overall health of the supplies by a single
-RGB%footnote(RGB: red, green and blue.) LED.
+RGB%footnote(RGB: red, green and blue. For us, Blue means you're fully charged.
+Green means things are OK. Red and you should be either preparing to shutdown
+or replacing batteries.) LED.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %3 Turn On, Turn Off
 
-When the Pi is powered off, press the power button for 2 seconds to turn it
+When the Pi is powered off, press the power button for 3 seconds to turn it
 on.%footnote(Note that when MoPi powers up the Pi, it then waits 60 seconds
 for the boot process to finish. During this period power off requests will
 be ignored.)
@@ -210,17 +215,18 @@ shut down immediately.
 
 The short story is this:
 
-- all supplies have to be capable of at least 6.2V under load (and less than
-  20V)
-- MoPi must be configured correctly (to avoid damage to rechargeable
-  batteries)
+- Any power supply connected to the MoPi must be capable of at least 6.2V
+  under load, and no more than 20V.
+- The MoPi must be configured correctly both to avoid damage to rechargeable
+  batteries and to avoid unexpected shutdowns!
 
 How do I configure MoPi? There are 3 ways:
 
-# choose one of the on-board defaults (easy peasy)
-# use the configuration user interface on your Pi (straightforward)
-# use the command-line interface, and/or edit the daemon config data
-  on your Pi (advanced)
+# Choose one of the on-board defaults—easy peasy!
+# Use the Configuration Tool%footnote(Our Configuration Tool is a command line
+user interface, similar to ^raspi-config^.) on your Pi—straightforward.
+# Use the command-line interface, and/or edit the daemon config data
+  on your Pi—advanced.
 
 Let's take each of these in turn...
 
@@ -231,14 +237,15 @@ Let's take each of these in turn...
 
 MoPi has two default supply profiles built-in:
 
-# non-rechargeables or non-battery supplies
-# eight NiMH AA rechargeable batteries
+# Non-rechargeable or non-battery supplies.
+# Eight NiMH AA rechargeable batteries.
 
-By default 1. is active; to choose 2., you need to remove the jumper (or
-remove it and replace it on only one of the pins).
+The default is #1, so that any supply can power the MoPi. To choose #2, you
+need to remove the small jumper on the screw terminal side of the MoPi, either
+completely or replaced on only one of the pins.
 
-*Note*: when we supply MoPi with batteries we fit the jumper appropriately to
-choose profile 2. (for the NiMH battery packs that we use).
+*Note*: when we supply MoPi with batteries we fit the jumper to choose profile
+#2, that is so it matches NiMh the batteries we shipped!
 
 You can see the jumper in this picture: the little black component sticking up
 and overlapping with the right hand end of the white sticker on the GPIO
@@ -250,12 +257,12 @@ Here's a closer view:
 
 %(images/mopi/closeups/5.jpg, %image(images/mopi/closeups/5-500x326.jpg, MoPi closeup, 500, 326))
 
-Now here's what it looks like when you remove the top (to select profile 2.):
+Now here's what it looks like when you remove the top to select profile #2:
 
 %(images/mopi/closeups/4.jpg, %image(images/mopi/closeups/4-500x308.jpg, MoPi closeup, 500, 308))
 
-And here's the top of the jumper replaced on only one pin (again selecting
-profile 2, and useful to avoid losing the tiny little thing!):
+And here's the top of the jumper replaced on only one pin, again selecting
+profile #2: This is useful to avoid losing the tiny little thing!
 
 %(images/mopi/closeups/6.jpg, %image(images/mopi/closeups/6-500x382.jpg, MoPi closeup, 500, 382))
 
@@ -267,6 +274,7 @@ profile 2, and useful to avoid losing the tiny little thing!):
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#configuration-tool
 %3 Using the Configuration Tool on the Pi
 
 If you're using a supply that doesn't match MoPi's two %(#default-profiles,
@@ -285,13 +293,14 @@ The tool operates in the same way as the Raspberry Pi's configuration tool
 (^raspi-config^). Select the option to configure one or both of MoPi's
 supplies, and then:
 
-- Type of supply. This is one of rechargeable battery, non-rechargeables, or
-  non-battery.
-- Number of cells. This is the number of individual battery cells (or sources)
-  in your supply. Note that some batteries incorporate several cells -- e.g. a
-  9V PP3 has 6 cells internally. If you're not using batteries select "1".
-- Specify battery chemistry. For example "Alkaline" or "NiMH" (or "N/A" for
-  non-battery supplies).
+- _Type of supply_. This is one of *rechargeable battery*, *non-rechargeables*
+  (like standard Alkaline batteries), or *non-battery* (like an AC adapter).
+- _Number of cells_. This is the *number of individual battery cells* in your
+  supply. Note that some batteries incorporate several cells -- e.g. a9V PP3
+  has 6 cells internally. If you're not using batteries select "1". We shipped
+  out sets of 8 NiMH batteries, you would select 8 here.
+- _Battery chemistry_. The *type of battery* you're connecting. For example 
+  "Alkaline" or "NiMH" (or "N/A" for non-battery supplies).
 
 After entering this data the tool will give details of the values it has
 calculated and offer to write these to the MoPi board. There is detail of
@@ -301,11 +310,18 @@ calculated and offer to write these to the MoPi board. There is detail of
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %3 Command Line, Python API and Daemon Config Hacking
 
-Finally, if the other methods are insufficiently scarey, you can use %(#cli,
-the command-line tool) directly, or edit %(#simbamon, the SimBaMon daemon)
-configuration data, or write code using the %(#api, Python API).
+Finally, if you want more control, or the other methods are insufficiently
+scarey, you can use %(#cli, the command-line tool) directly, or edit
+%(#simbamon, the SimBaMon daemon) configuration data, or write code using the
+%(#api, Python API).
 
-For details, see %(#software, the software) below.
+A quick demo of using the cli setting the default 8 NiMH profile:
+
+%<
+sudo mopicli -wc 1 11200 10000 8800 8000
+%>
+
+For more details, see %(#software, the software) below.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -340,8 +356,8 @@ then you want a big, "stackable", header.
 
 Note that if you do get the stackable version, when you put another board on
 top of MoPi it may hide the power switch and/or the LEDs. In the case of the
-power switch there are solder pads on the PCB to allow fitting of a remote
-switch.
+power switch there are solder pads on the PCB, right next to the button, to
+allow fitting of a remote power switch.
 
 
 -----------------------------------------------------------------------------
@@ -359,7 +375,7 @@ if you other board has stacking pins then MoPi can go on the top (which is
 better, in fact, as you'll be able to access the power switch too!).
 
 MoPi _should_ be compatible with all other Pi add-on boards, as we only use
-the I2C bus, which supports multiple concurrent users.
+the I2C bus, which supports the connection of multiple devices.
 
 
 -----------------------------------------------------------------------------
@@ -375,16 +391,24 @@ the problem.)
 
 Solutions:
 
-- %(#config-ui, configure MoPi) to accept the supply (if it will reliably
-  exceed 6.2 volts under load)
-- connect a higher voltage supply
+- Ensure that the %(#default-profiles, Jumper) that selects the default
+  battery profile is set for profile #1 (non-rechargeable) as this lets the
+  MoPi power on under the most conditions. Be aware though that you may
+  damage your rechargeable batteries if you don't configure the MoPi for them
+  in software on boot, so make sure you've appropriatly...
+- %(#config-ui, Configure the MoPi) to accept the supply (if it will reliably
+  exceed 6.2 volts under load).
+- If it still doesn't start, the batteries may be discharged! Connect some
+  freshly charged ones or a higher voltage supply.
 
 Sometimes the reported voltage for a particular source seems to be high enough
 to drive the Pi, but MoPi considers it too low -- why? When a new source is
 connected it is shunted through a simulated load for a few tenths of a second.
 Batteries drop their voltage under load, and the lower their level of charge,
 the larger the drop. MoPi measures the voltage under load, and if it is too
-low it will refuse to use that supply.
+low it will refuse to use that supply. After disconnecting a power supply,
+wait a few seconds before connecting a new one so that the MoPi registers the
+disconnection and will re-test the newly connected battery pack.
 
 
 -----------------------------------------------------------------------------
@@ -394,8 +418,9 @@ low it will refuse to use that supply.
 MoPi uses a switched-mode regulator (a TPS5430 or TPS5430), so almost no power
 is wasted.
 
-The input voltage range is 6.2V to 20V. (There's no step-up circuitry so the
-battery or solar panel rig or etc. has to supply 6.2V at minimum.)
+The input voltage range is 6.2V to 20V. There's no step-up circuitry so the
+battery or solar panel rig or etc. has to supply 6.2V at minimum. Consider
+connecting multiple batteries or panels in series to increase voltage.
 
 
 -----------------------------------------------------------------------------
@@ -433,7 +458,7 @@ in the electronics of all those power supplies sitting around in your desk
 drawer and you won't generally find fuses.
 
 Having said that, we added an autorecovery fuse to version 3 just to be
-ticking all the boxes :-)
+ticking all the boxes. ;-)
 
 
 -----------------------------------------------------------------------------
@@ -442,16 +467,22 @@ ticking all the boxes :-)
 
 Yes!
 
-The software on the Pi that talks to MoPi is open source and available here:
+The software on the Pi that talks to MoPi, simbamond, is open source and
+available here:
 https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon (See also
-http://pi.gate.ac.uk/pages/download.html .)
+%(http://pi.gate.ac.uk/pages/download.html).) The Raspbian maintainers have
+added simbamond to their repository, so you can install it in the same way as
+any other Pi sofware.
 
-It listens to MoPi and logs the data in a standard manner, which other
+Simbamond listens to MoPi and logs the data in a standard manner, which other
 applications can then consume as required. There's also a Python API and a
-command-line interface (CLI).
+command-line interface (CLI):
 
-The Raspbian maintainers have added this software to their repository, so you
-can install it in the same way as any other Pi sofware.
+%<
+sudo mopicli -v -v1 -v2
+%>
+
+For more details, see %(#software, the software) below.
 
 
 -----------------------------------------------------------------------------
@@ -481,39 +512,49 @@ watch http://pi.gate.ac.uk/ and we'll post the results!)
 %#faq-deep-discharge
 *>>> How do we avoid deep discharge of rechargeables?*
 
-Rechargeable batteries don't like being completely discharged. We always need
-to stop drawing from the battery at some distance above the minimum voltage
-level. This distance varies for different battery chemistries (NiMH, LiPo,
-lead/acid, etc.) and for different multiples (eight AAs vs. two PP3s vs. one
-car battery, etc.).
+The short answer it to shutdown before it happens. Rechargeable batteries
+don't like being completely discharged. We always need to stop drawing from
+the battery at some distance above some minimum voltage level. This level
+varies for different battery chemistries (NiMH, LiPo, lead/acid, etc.) and
+for different numbers of cells (eight AAs vs. two PP3s vs. one car battery,
+etc.).
 
 MoPi listens continuously to the voltage level on the battery inputs. How does
 it know when that level is getting low? Let's identify two separate low-level
 points: first, the absolute low voltage level is the point where our
 micro-controller can no longer reliably run the switching regulator to produce
-a constant 5V (around 6.2 volts). The second low voltage point depends on the
-particular battery configuration (for eight NiMH 1.2 volt cells it is around 8
-volts). For non-rechargeables, or solar panels or a water turbine, it is the
-same as the absolute low level (6.2V).
+a constant 5V (around 6.2 volts). The second low voltage (critical) point is
+just above the deep discharge level, which depends on the batteries attached.
+When you use the %(#configuration-tool, configuration tool) this critical
+voltage point sent to the MoPi. As long as you've correctly configured your
+batteries, we should be avoiding deep discharge.
 
-MoPi is responsible for deciding the input voltage is low (for either or both
-of its two supplies), and then warning the user and/or shutting the Pi down
-cleanly (from software first, using "sudo halt", and then by cutting power).
-How do we decide when to do this?
+When the MoPi decides the input voltage is critical (for either or both of its
+two supplies), simbamond warns the user and shuts down the Pi cleanly (from
+software first, using "sudo halt", and then by cutting power).
+How do we decide when to do this, that is to say, how do we pick the critical
+voltage level? We've done some research on batteries. For eight NiMH 1.2 volt
+cells the critical voltage is around 8 volts. For non-rechargeables, or solar
+panels or a water turbine, it is the same as the absolute low level (6.2V) as
+these can't suffer deep discharge.
 
-First we have a default configuration, which is the one which we will be
-supplying in the "battery heaven", UPS and outdoor kit rewards: eight
-high-capacity NiMH AA cells. In the absence of any other data, we assume that
-this is what is connected, and when the output voltage descends to around 8.5
-volts we turn the main indicator LED red and send warnings to any user logged
-into the Pi. (There are various other levels defined that choose blue -- the
-highest level indicator -- vs. green, and so on, and separate LED indicators
-for low level on the two supply inputs.)
+Be aware though that be default the MoPi assumes that standard non-rechargable
+battires (e.g. Alkalines) or an AC adapter have been connected, which sets the
+critical voltage level to 6.2V. This is to get you off the ground, as the MoPi
+will power on with almost anything attached like this. However, on boot the
+MoPi *must be configured correctly for your batteries* or you risk damaging
+your batteries through deep discharge, which is what we're trying to avoid.
+This default is selectable though through our two %(#default-profiles,
+default profiles). If you recieved batteries from us (the "battery heaven",
+UPS and outdoor kit rewards) your MoPi will instead by default be configured
+for 8 NiMH AA cells.
 
-Of course this default configuration won't work for all cases, so then we
-allow choice of another set of options from the Pi itself. (Currently we're
-looking at a set of 16 different options, but that may change in the next few
-weeks as we finalise the third prototype.)
+The critical voltage level is kind of short notice though for replacing
+batteries. The configuration tool also specifies a low voltage level, which is
+when the LED on the MoPi turns red and you start recieving low battery
+notifications. This is set to be 1.1\*critical, so for 8 AA NiMH batteries
+it's 8.8 volts. (There are other voltage levels defined too. Read more
+%(#config-ui, later).)
 
 
 -----------------------------------------------------------------------------
@@ -541,8 +582,7 @@ by "sudo apt-get -f install".
 *>>> The I2C bus doesn't work after install.*
 
 If the I2C bus appears not to be working after installing SimBaMon, try a
-reboot (as sometimes the Python SMBus module appears not to load as
-predicted).
+reboot. Sometimes the Python SMBus module appears not to load correctly.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -556,11 +596,11 @@ Early in 2013 we realised that we needed better power management for our
 mobile projects on %(http://pi.gate.ac.uk/, Pi.GATE.ac.uk). Five volt USB
 battery packs are common, but none of them can communicate their level of
 charge to the Pi. That means lots of unanticipated power cuts -- a good way to
-corrupt your SD card :-(
+corrupt your SD card... :-(
 
 And then we realised that standard rechargeables are more planet friendly. And
 then that it would be cool to be able to hot-swap supplies, and that if we
-could do that then why not make it a UPS too, and how about adding a power
+could do that could we make it work as a UPS too, and how about adding a power
 switch, and...
 
 Fast forward: we ran a successful
@@ -575,14 +615,14 @@ Pi.
 
 There are three dimensions to the problem of mobile power for the Pi:
 
-- _regulation_, to supply the constant 5 volts%footnote(The keen amongst you
+- _Regulation_, to supply the constant 5 volts%footnote(The keen amongst you
   may know that the Pi can, in fact, run on 3.3V -- more on that later.) at up
-  to around 1 amp that the (Model B) Pi requires
-- _control_:  keeping a check on battery charge, switching the regulator off
-  when charge is getting low, and reporting the current level to a monitor
-- _monitoring_: reading level indications from %(basics.html#gpio-pins, a GPIO
+  to around 1 amp that the (Model B) Pi requires.
+- _Control_:  keeping a check on battery charge, switching the regulator off
+  when charge is getting low, and reporting the current level to a monitor.
+- _Monitoring_: reading level indications from %(basics.html#gpio-pins, a GPIO
   connection), reporting it to the Pi user and shutting the operating system
-  down cleanly when levels get critically low
+  down cleanly when levels get critically low.
 
 The first two of these need some special hardware; the third is written as a
 software _daemon_.
@@ -605,37 +645,42 @@ or the GPIO connector or the power switch, which were soldered by hand after
 these pictures were taken):
 
 Top of the board:
+
 %(images/mopi/pre-production-boards-02.jpg,
 %image(images/mopi/pre-production-boards-02-500x375.jpg, Pre-production MoPi
 top, 500, 375))
 
 Underneath the board:
+
 %(images/mopi/pre-production-boards-01.jpg,
 %image(images/mopi/pre-production-boards-01-500x375.jpg, Pre-production MoPi bottom,
 500, 375))
 
 The stackable headers (for when MoPi is used in tandem with other add-on
 boards) take up quite a lot of vertical space in order to provide a set of
-pass-through pins above the MoPi board. Therefore we're offering two versions,
+pass-through pins above the MoPi board. Therefore we offered two versions,
 one with the stackable header and one with a standard low-profile header.
 
 This is the stackable header that we're using (from Adafruit):
+
 %(http://www.adafruit.com/products/1112,
 %image(http://www.adafruit.com/images/medium/1112_MED.jpg, Adafruit Stacking
 Header))
 
-If you're opting for the low-profile header you can see an example here, on
-the level 2 board:
-%(images/mopi/mopi-underside.jpg,
-%image(images/mopi/mopi-underside-500x326.jpg, MoPi 2 underside, 500, 326)).
+You can see an example here of the low-profile header, on the revision 2
+board:
 
-This was the second-generation prototype board:
+%(images/mopi/mopi-underside.jpg,
+%image(images/mopi/mopi-underside-500x326.jpg, MoPi 2 underside, 500, 326))
+
+Here's the other side of the second-generation prototype board with some
+batteries:
 
 %(images/mopi/proto2-01.jpg,
 %image(images/mopi/proto2-01-500x379.jpg, mopi prototype 2/1, 500, 379))
 
 The shape of the PCB allows it to fit into the
-%(http://shop.pimoroni.com/collections/pibow, Pibow) without blocking the Pi's
+%(http://shop.pimoroni.com/products/pibow-raspberry-pi-case, Pibow) without blocking the Pi's
 display output (soon to be used for the
 %(http://www.raspberrypi.org/, Pi Foundation)'s
 %(http://raspi.tv/2014/raspberry-pi-official-7-inch-dsi-prototype-preview,
@@ -644,12 +689,10 @@ add-on boards can share space on the Pi, separate LEDs for overall function
 and for the two power inputs, and a neat little power switch on the top.
 
 (The good people at %(http://www.pimoroni.com/, Pimoroni) are doing a custom
-lid for their %(http://shop.pimoroni.com/collections/pibow, Pibow) case to
-give direct access to MoPi's power switch and stacking header.)
+lid for their Pibow case to give direct access to MoPi's power switch and
+stacking header. %(/posts/2014/06/03/custom-pibow-lid/, See it here!))
 
-And here are the first-generation prototype boards (with separate regulator
-and controller; click to zoom):
-
+And here are the first-generation prototype boards:
 %[ | %\ %\ |
 %(images/mopi/prototype-regulator-05.jpg,
 %image(images/mopi/thumbs/prototype-regulator-05.jpg, mopi prototype 5, 200, 194))
@@ -657,7 +700,6 @@ and controller; click to zoom):
 %(images/mopi/prototype-controller-01.jpg,
 %image(images/mopi/thumbs/prototype-controller-01.jpg, mopi prototype 6, 270, 195))
 | %]
-
 The software is %(http://www.fsf.org/about/what-is-free-software, open source)
 (of course) and available at
 %(https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon, our
@@ -666,16 +708,15 @@ Pi-Tronics repository).
 The basic functionality was all in place by early 2014; the success of the
 Kickstarter allowed us to add lots of new features, including:
 
-- dealing with more rechargeable battery chemistries
-- the internal Pi circuitry can run on 3.3 volts (saving some power loss in
+- Dealing with more rechargeable battery chemistries.
+- The internal Pi circuitry can run on 3.3 volts (saving some power loss in
   the on-board linear regulator -- %(http://www.daveakerman.com/, Dave
   Akerman's balloons) use this strategy to increase battery life); MoPi can
-  now be hacked to support 3.3 volt output :-)
+  now be hacked to support 3.3 volt output. :-)
 - 2-way communication (on the I2C bus) between MoPi and Pi supports
-  configuration from the Pi
-- screw terminals, stackable headers, remoting pads and self-resetting fuse
-- two-way communication and remote power-off
-- timer-based wake-up added
+  configuration from the Pi.
+- Screw terminals, stackable headers, remoting pads and self-resetting fuse.
+- Remote power-off and timer-based wake-up added.
 
 The next two sections discusses the %(#perfect, overall design) of MoPi and
 then the %(#monitoring, monitoring and configuration software). Then we give
