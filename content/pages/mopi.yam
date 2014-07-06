@@ -1438,23 +1438,130 @@ For comparison I set up the same rig with a USB battery pack from RS
 Lithium polymer model). The results were remarkably similar, with the RS pack
 lasting for 9 hours and 21 minutes.
 
-Since then we've conducted 101 different tests. There are two key factors in
-battery life: *1.* Model A vs. Model B; *2.* the peripherals. To summarise:
+Since then we've conducted %(#detailed-testing, 101 different tests). There
+are three key factors in battery life: *1.* Model A vs. Model B; *2.* the
+peripherals; *3.* Activity. To summarise:
 
-- You can expect a Model A to get around double the life of a Model B.
-- What you connect to the Pi makes a huge difference. For example: WiFi is a
-  power hog: halve your expected battery life if you're using it. An
-  accelerometer, in contrast, is cheap: e.g. %(http://www.piborg.com/xloborg,
-  XLoBorg) won't reduce your running time by much at all.
+- You can expect a Model A in some cases to get more than double the battery
+  life of a Model B.
+- What you connect to the Pi makes a huge difference. For example, WiFi is a
+  power hog. It will more than halve the battery life of a Model A. It will be
+  even worse on a Model B. A keyboard or accelerometer in contrast, is cheap.
+  %(http://www.piborg.com/xloborg, XLoBorg) won't reduce your running time by
+  much in comparison.
+- How much you're doing impacts things. If the Pi is effectively idle, just
+  running wit the odd SD card read/write you get the best battery life. As you
+  use the CPU more battery life goes down.
 
 You can also connect two battery packs to MoPi and get double the running
 time.
 
-%%% TODO more test results
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#detailed-testing
+%2 Some detailed testing results
+
+We've tried using the MoPi in a few different ways, with different
+combinations of Pis, Peripherals, Batteries, and Tasks. So far we've tried the
+Model A with some different USB devices and with different batteries. We've
+also tried the Model B with different batteries. Let's have a look at some of
+the results...
+
+A Model A with two sets of 8 fresh RS NiMH 2600 mAH batteries (16 total):
+%image(images/mopi/graphs/mopia2.16fresh.png)
+
+First a quick explanation of the plot. The top half of the figure shows the
+voltage levels. The aqua line is the voltage level of the active power source.
+The batteries pretty much drain perfectly in parallel so it's effectively
+really the voltage level of each battery pack in this case. (If there's only
+one pack attached it's the voltage level of that pack.) The dashed blue,
+green, red, and crimson lines are the voltage levels that affect LED color.
+Above the green line the LED is blue. Below the green line it's green, until
+the red line where it's red. Below the crimson line the LED is flashing red
+and the MoPi is about to shutdown.
+
+The bottom half of the figure shows what we're most interested... _time_.
+Specifically the colored bar shows how long the MoPi was showing each color on
+the RGB status LED. The yellow bit of the bar corresponds to how long the
+input status LED was flashing. So in this case we had 5 hours 30 minutes of
+blue LED. 43 hours 8 minutes of green LED. 2 hours 44 minutes of red LED. A
+whopping total of 50 hours 38 minutes. Of a Pi. Turned on. Running on AA
+batteries.
+
+This of course is pretty much the ideal scenario. The Raspberry Pi was just
+sitting there, nothing attached, not doing anything but logging voltage once
+every 5 seconds. The batteries were brand new. The little dips in the aqua
+line probably correspond to the SD card being written to or some service (like
+cron) on the Pi activating briefly before going back to being an idle process.
+
+Let's look at a less ideal scenario. Two sets of the same batteries connected
+to a Model A, but this time they're old. They've been through at least a dozen
+or two recharge cycles. There's USB Ethernet%footnote(This is an old USB 1.1
+device, which means it's current draw is limited by the spec. It's not too too
+high.) with an active SSH connection. What happens now?
+%image(images/mopi/graphs/mopia2.16old.usbethernet.png)
+
+Oh my! Battery life is now down to half of what it was! Only 24 hours 19
+minutes in this case. The Ethernet and SSH connection has definetely used some
+power. How much it's hard to tell, but this is definetely a more realistic 
+usage scenario.
+
+The shape of the discharge curve is also interesting to see. Voltage drops
+much more sharply, giving less warning that the batteries are low. This is
+almost certainly a result of the age of the batteries.
+
+Now how about just 8 old batteries:
+%image(images/mopi/graphs/mopia2.8old.usbethernet.png)
+
+12 hours! It's pretty much bang on half the uptime for half the batteries.
+
+What about WiFi now? Same deal, Model A, 8 old batteries and an active SSH
+connection:
+%image(images/mopi/graphs/mopia1.8old.wifi.png)
+
+10 hours 30 minutes. We've paid a 1:30 penalty for wireless flexibility.
+That's roughly 12% drop in battery life. With two battery packs we'd loose
+around 3 hours of battery life.
+
+What about the Model B? Let's go back to full idle and 8 fresh batteries:
+%image(images/mopi/graphs/mopib2.8fresh.noethernet.png)
+
+10 hours 46 minutes. Wait, what? With a Model A we'd expect around 24 hours
+for 8 fresh batteries. What's different then between the Model A and the
+Model B? There are at least two things: 512 MB of RAM vs 256 MB of RAM; and
+the Model B has the on board Ethernet (which includes a USB hub for the two
+USB ports that the Model B sports). I'm inclined to blame the USB chip here.
+According to the %(http://ww1.microchip.com/downloads/en/DeviceDoc/9512.pdf,
+datasheet) it has a pretty high current draw at 3.3V, which needs to go
+through the very ineffecient linear regulator on the Model B, further sucking
+power.
+
+On a side note we can confirm these batteries are fresh by the shape of the
+dishcarge curve. That sharp drop off is missing.
+
+Let's connect the Ethernet on the Model B, but still leave off an active
+connection:
+%image(images/mopi/graphs/mopib2.8fresh.ethernet.png)
+
+Ouch. We've lost another hour and a half. Simply by connecting the Ethernet,
+which further activates the USB chip and lights up those LEDs and has the
+system ready to respond to incoming packets.
+
+Let's see what happens with activity and old batteries now:
+%image(images/mopi/graphs/mopib1.8old.ethernet.png)
+
+Down to 7 hours 39 minutes. That's another hour and a half or so. Based on
+the information about power consumption available, that still looks like it's
+mostly due to the Ethernet rather than the age of the batteries. Clearly the
+way to go is to use a Model A. Anything to get away from the USB chip.
+
+%%%http://www.raspberrypi.org/forums/viewtopic.php?p=164893
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2 Methods in the Madness
+%2 Methods in the Madness: Debugging and Software Development
 
 Most of our testing used external power supplies to make the development
 cycles faster. (Well, would _you_ want to add "wait for the batteries to
