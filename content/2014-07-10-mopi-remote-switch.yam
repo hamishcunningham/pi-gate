@@ -14,15 +14,18 @@ are the pics...
 It is an easy job -- just wire up an SPST push-to-make switch to the two pads
 next to the power switch:
 
-%(images/mopi/remote-switch/remote-switch-1.jpg,
-%image(images/mopi/remote-switch/remote-switch-1-500x375.jpg, MoPi remote switch, 500, 375))
-
-%(images/mopi/remote-switch/remote-switch-2.jpg,
-%image(images/mopi/remote-switch/remote-switch-2-500x375.jpg, MoPi remote switch, 500, 375))
+%%% %(images/mopi/remote-switch/remote-switch-1.jpg,
+%%% %image(images/mopi/remote-switch/remote-switch-1-500x375.jpg, MoPi remote switch, 500, 375))
 
 %(images/mopi/remote-switch/remote-switch-3.jpg,
 %image(images/mopi/remote-switch/remote-switch-3-500x375.jpg, MoPi remote switch, 500, 375))
 
+And voila:
+
+%(images/mopi/remote-switch/remote-switch-2.jpg,
+%image(images/mopi/remote-switch/remote-switch-2-500x375.jpg, MoPi remote switch, 500, 375))
+
+For my next trick, I will turn a pumpkin into a penguin. Watch this space.
 
 %meta(summary=Fitting a remote power switch to MoPi, tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
 *%(pages/mopi.html, Read the main article).*
