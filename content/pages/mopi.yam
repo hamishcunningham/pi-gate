@@ -332,6 +332,20 @@ For more details, see %(#software, the software) below.
 391))
 
 -----------------------------------------------------------------------------
+%#faq-gpio-pins
+*>>> Which GPIO pins does MoPi use?*
+
+As of version 4 (the Kickstarter version) MoPi uses these pins:
+
+- pin 2 (and/or pin 4): 5V out
+- pins 3 and 5: i2c bus
+- pin 6 (or any other grounded pin): 0v
+
+(For a good Pi pinout diagram see %(http://wiringpi.com/pins/, the WiringPi
+site).)
+
+
+-----------------------------------------------------------------------------
 %#faq-no-mopi-warning
 *>>> I get a warning during software installation*
 
@@ -583,6 +597,17 @@ by "sudo apt-get -f install".
 
 If the I2C bus appears not to be working after installing simbamon, try a
 reboot. Sometimes the Python SMBus module appears not to load correctly.
+
+
+-----------------------------------------------------------------------------
+%#faq-remote-switch
+
+*>>> How do I add a remote power switch?*
+
+%%% TODO copy that post into this page somewhere
+
+There's a %(http://pi.gate.ac.uk/posts/2014/07/10/mopi-remote-switch/,
+description on the blog).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
