@@ -1,0 +1,28 @@
+MoPi and the Model B+ Pi
+
+Let's cut a long story short: MoPi should work fine with the
+%(http://www.raspberrypi.org/introducing-raspberry-pi-model-b-plus/, Model B
+Plus Pi) announced yesterday.
+
+The Model B+ is an evolution on the original Model B; it looks like this:
+
+%image(images/model-b-plus-500x337.jpg, Model B+ Pi, 500, 337)
+
+From a mobile power point of view the B+ will perform a bit better than the B
+-- they're replaced the rather wasteful LDO regulator of the original with a
+switched-mode supply, and with the revamp and extension of the USB subsystem
+they've also improved power handling there.
+
+There's one caveat to using the B+ with MoPi, which is that left to its own
+devices the battery terminal connector will rest on the CPU, which has been
+repositionned. That will bring a risk of heat damage to the connector (and
+possibly overheating of the CPU), so a small collar or shim will need to be
+used to raise MoPi by a couple of millimeters.
+
+I've a couple of Model B+ boards and will post some pics in a few days...
+
+So don't be afraid to pick up a Model B+ if you fancy one! It looks like a
+great addition to the Pi stable.
+
+%meta(summary=Fitting a remote power switch to MoPi, tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
+*%(pages/mopi.html, Read the main article).*
