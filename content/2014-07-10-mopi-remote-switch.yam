@@ -1,0 +1,31 @@
+Fitting a Remote Power Switch to MoPi
+
+Daniel T, one of our Kickstarter backers for %(/pages/mopi.html, MoPi), wanted
+to fit a remote power switch to his board. (It has one fitted, but if you're
+building something with a case and need the switch to be somewhere away from
+the Pi and/or MoPi then there are a couple of remoting pads on MoPi for the
+purpose.) Here's the result:
+
+%%% YOUTUBE REMOTE SWITCH CLIP HERE
+
+Daniel hasn't got the soldering bug yet :-) so I fitted one for him, and here
+are the pics...
+
+It is an easy job -- just wire up an SPST push-to-make switch to the two pads
+next to the power switch:
+
+%%% %(images/mopi/remote-switch/remote-switch-1.jpg,
+%%% %image(images/mopi/remote-switch/remote-switch-1-500x375.jpg, MoPi remote switch, 500, 375))
+
+%(images/mopi/remote-switch/remote-switch-3.jpg,
+%image(images/mopi/remote-switch/remote-switch-3-500x375.jpg, MoPi remote switch, 500, 375))
+
+And voila:
+
+%(images/mopi/remote-switch/remote-switch-2.jpg,
+%image(images/mopi/remote-switch/remote-switch-2-500x375.jpg, MoPi remote switch, 500, 375))
+
+For my next trick, I will turn a pumpkin into a penguin. Watch this space.
+
+%meta(summary=Fitting a remote power switch to MoPi, tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
+*%(pages/mopi.html, Read the main article).*
