@@ -1730,6 +1730,9 @@ the links between technology, climate, wildlife and the like:
 - Outdoor Experimenter Kit (Light)
 - Outdoor Experimenter Kit (Light and Air)
 
+Then there's various projects that our backers have started (yours not here?
+send us a pic!).
+
 We'll detail them here to give a flavour of the applications of the thing, but
 really the sky's the limit: every mobile Pi project has a place for MoPi.
 
@@ -1812,6 +1815,18 @@ this).
 We've done %(/tag/airpi.html, a lot of work with AirPi) and beefed up its
 software offering a bit -- which Tom is going to include in the next official
 distribution.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Kickstarter Backer Projects
+
+Thomas Farber's night camera:
+
+%image(thomas-farber-night-camera.jpg, Thomas Farber night camera, 500, 281)
+
+Twisted Monk's K9:
+
+%image(twisted-monk-k9-600x450.jpg, Twisted Monk K9, 600, 450)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2010,6 +2025,3 @@ Hey presto, I can hack away at the C code and get immediate feedback with
 commands like ^sudo tools/i2cdump -y 1 0x0b i^ (where ^0x0b^ is MoPi's
 designated I2C address -- the smart battery address)%footnote(For a revision 1
 Pi -- the very early boards -- use ^0^ instead of ^1^.).
-
-%%% %image(twisted-monk-k9-600x450.jpg, Тwisted-Мonk К9, 600, 450)
-%%% %image(thomas-farber-night-camera.jpg, thomas-farber-night-camera, 500, 281)
