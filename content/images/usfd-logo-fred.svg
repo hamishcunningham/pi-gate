@@ -13,8 +13,8 @@
    height="425"
    id="svg3217"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="tuos_logo_full_vector2.svg">
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="usfd-logo-fred.svg">
   <defs
      id="defs3219">
     <mask
@@ -40,16 +40,16 @@
      inkscape:cx="500.42898"
      inkscape:cy="345.81394"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g5627"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1920"
-     inkscape:window-height="1053"
-     inkscape:window-x="1280"
-     inkscape:window-y="0"
+     inkscape:window-height="1056"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata3222">
@@ -59,7 +59,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -80,7 +80,7 @@
            height="160.61426"
            x="758.11951"
            y="197.2106" /></flowRegion><flowPara
-         id="flowPara4423"></flowPara></flowRoot>    <g
+         id="flowPara4423" /></flowRoot>    <g
        id="g5921">
       <rect
          y="319.86218"
@@ -1471,11 +1471,11 @@
                  sodipodi:role="line" /><tspan
                  style="font-size:78.5110321px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:99.00000095%;font-family:TUOS Stephenson;-inkscape-font-specification:TUOS Stephenson"
                  id="tspan5378"
-                 y="669.76599"
+                 y="593.82959"
                  x="557.92804"
                  sodipodi:role="line"><tspan
                    id="tspan5380"
-                   style="font-size:75.61841583px;line-height:99.00000095%">.</tspan></tspan></text>
+                   style="font-size:75.61841583px;line-height:99.00000095%" /></tspan></text>
             <text
                transform="scale(0.99481789,1.0052091)"
                sodipodi:linespacing="99.000001%"
