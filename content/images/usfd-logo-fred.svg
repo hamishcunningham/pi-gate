@@ -14,7 +14,10 @@
    id="svg3217"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="usfd-logo-fred.svg">
+   sodipodi:docname="usfd-logo-fred.svg"
+   inkscape:export-filename="/home/hamish/pi-gate/content/images/usfd-logo-fred-200x79.png"
+   inkscape:export-xdpi="16.744186"
+   inkscape:export-ydpi="16.744186">
   <defs
      id="defs3219">
     <mask
@@ -59,7 +62,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
