@@ -1484,13 +1484,13 @@ time.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#detailed-testing
-%2 Some detailed testing results
+%2 Battery life
 
 We've tried using the MoPi in a few different ways, with different
-combinations of Pis, Peripherals, Batteries, and Tasks. So far we've tried the
-Model A with some different USB devices and with different batteries. We've
-also tried the Model B with different batteries. Let's have a look at some of
-the results...
+combinations of Pis, Peripherals, Batteries, and Tasks to find out how long
+the batteries can last. So far we've tried the Model A with some different USB
+devices and with different batteries. We've also tried the Model B with
+different batteries. Let's have a look at some of the results...
 
 A Model A with two sets of 8 fresh RS NiMH 2600 mAH batteries (16 total):
 %image(images/mopi/graphs/mopia2.16fresh.png)
@@ -1582,7 +1582,67 @@ way to go is to use a Model A. Anything to get away from the USB chip.
 
 %%%http://www.raspberrypi.org/forums/viewtopic.php?p=164893
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Battery life under load
 
+So far the testing presented has been essentially an idle system (just
+logging) or a system under light load (active ssh). The next set of testing
+cranked up CPU usage to look in more detail at how that impacted battery life.
+The first question is how to achieve CPU load?
+
+Overclockers, people who crank up their CPU speed, often ask the same
+question. In their case though, they're not looking to look into battery life,
+but instead they want to check that their system remains stable and won't
+crash even at higher speeds. They call this "stress testing", which is really
+just essentially creating CPU load. A popular method of stress testing a CPU
+is to use
+%(http://en.wikipedia.org/wiki/Prime95#Use_for_stress_testing, Prime95).
+
+Prime95 is a program that verifies known prime numbers are indeed prime as
+calculated. Often when a CPU is under extreme conditions, the calculations
+start to come out incorrect, and this tells an overclocker to reduce CPU speed
+to increase stability. This bit isn't so interesting as we're not really
+overclocking the Pi (although it is %(http://elinux.org/RPiconfig#Overclocking,
+possible)). The idea though of calculating prime numbers to generate CPU load
+is what we're after.
+
+A few years ago I played around with testing prime numbers in C++. I rewrote
+that program to be something suitable for applying CPU load to the Pi and put
+it on %(https://github.com/hamishcunningham/pi-tronics/tree/master/loadtest,
+GitHub).
+
+So! Our first test setup now looks like this. A Model A with 16 AAs and CPU
+load applied in the form of our prime number testing program:
+%image(images/mopi/graphs/mopia2.16fresh.cpuload.png)
+
+An uptime of around 41 hours. That's a drop of around 9 hours. However, there
+are actually two things happening in this test. There's CPU load yes, but also
+the batteries were charged a few days before actually being used. As a result
+the start voltage is a little bit lower: 10.4 V as opposed to 10.8 V. Shelf
+discharge will account for some loss of uptime. Here it's probably around 45
+minutes, but this only gets worse with older batteries.
+
+I'll perform this test again later with more freshly charged batteries, but
+there's an important lesson here. We've said it before and we'll say it again.
+Battery life is *variable*. It's not just how you're using your Pi, or what's
+connected, but also the batteries themselves can affect how long it runs for.
+The more absolutely consistent you can get your setup the more predictable
+battery life will be, but it's a good idea to have a plan for when the
+batteries run low. That's why the MoPi can tell the Pi to shutdown.
+
+But what about the Model B? Yes, we tested that too. 8 AAs, Ethernet, and
+active SSH displaying our prime number results:
+%image(images/mopi/graphs/mopib2.8fresh.ethernet.cpuload.png)
+
+Just under 8 hours with CPU load and Ethernet... compared to 9 hours without
+CPU load? More time (1.5 hours) is lost simply by connecting the Ethernet than
+by using the CPU. This says two things. The first, which I've already said, is
+that the Ethernet is extremely power hungry on the Model B. The second is that
+really, the CPU of the Pi is pretty energy efficient.
+
+Food for thought. In 8 hours, the Model B managed to check if numbers were
+prime from 1 up to 690k. My Core i5 desktop did the same check in _6 and a
+half minutes_...
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
