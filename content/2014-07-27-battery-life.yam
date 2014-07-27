@@ -2,8 +2,10 @@ AA battery life with the Model A and Model B
 
 We've conducted some tests to help people get a feel for how long AA batteries
 should power a Rasberry Pi in a variety of configurations when using the MoPi.
+Unfortunately nothing about the B+ yet, but that's coming soon...
 
-Best case scenario so far? *50 hours* using the Model A with 16 AAs:
+For now though, the best case scenario? *50 hours* using the Model A with 16
+AAs:
 %image(images/mopi/graphs/mopia2.16fresh.png)
 
 *%(pages/mopi.html#detailed-testing, Read more in the main article!)*
