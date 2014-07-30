@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width = device-width">
+<title>Pi GATE — Sheffield Pi-Tronics</title>
+<link rel="stylesheet" href="/theme/css/main.css">
+<link href="http://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed"/>
+<link rel="stylesheet" href="/theme/css/gatepage.css">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<!--[if IE]><script src="/theme/js/html5shiv-googlecode-com-html5.js"></script><![endif]-->
+<!--[if lt IE 7]><style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style> <link rel="stylesheet" href="/theme/css/ie-menus.css"/><![endif]-->
+<style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+<script src="/theme/js/prototype-171-min.js"></script>
+<script src="/theme/js/gatepage.js"></script>
+<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+</head>
+<body id="index" class="home">
+<div id="topBar">
+<span id="topLogo">
+<span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+height="55" width="46"></a></span>
+<span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+<span id="gateLogo"><a href="http://www.shef.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+alt="The University of Sheffield" height="55" width="113"</a><a
+href="http://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+height="55" width="132"></a></span>
+</span>
+<div class="horizontal menu">
+<ul>
+<li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+<li><b><a href="#">Projects</a></b>
+<ul>
+<li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+<li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+<li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+<li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+<li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+<li><a href="/pages/legocases.html">LEGO Cases</a></li>
+<li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+<li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+<li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+<li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+</ul></li>
+<li><b><a href="#">MoPi</a></b>
+<ul>
+<li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+<li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+<li><a href="/static/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+<li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+</ul></li>
+<li><a href="/pages/download.html">Download</a></li>
+<li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
+<li><a href="/pages/about.html">About</a></li>
+</ul>
+</div>
+<div id="topLoginEtc">
+<form name="searchForm" method="GET" action="http://www.google.com/search" class="inlineForm">
+<label class="pageLink" for="as_q">Search:</label>
+<input type="text" name="as_q" size="6" maxlength="255">
+<input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+</form>
+</div>
+</div>
+<div id="header">
+</div>
+<div id="topSeparator"> </div>
+<div id="mainContent">
+<div class='yui3-g-r'>
+<div id="leftColumn" class="yui3-u-1-2">
+<ol id="posts-list" class="hfeed">
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/07/15/model-b-plus/" rel="bookmark"
+title="Permalink to MoPi and the Model B+ Pi">MoPi and the Model B+ Pi</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/model-b-plus.jpg"><img
+src="/static/images/articles/thumbs/model-b-plus.jpg"
+height="75" width="75" alt="model-b-plus"></a>
+<span class="article-summary"><em>MoPi and the Model B+ Pi</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/kickstarter.html">kickstarter</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-07-15T00:00:00">Tue 15 July 2014,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2014/07/15/model-b-plus/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/07/10/mopi-remote-switch/" rel="bookmark"
+title="Permalink to Fitting a Remote Power Switch to MoPi">Fitting a Remote Power Switch to MoPi</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/mopi-remote-switch.jpg"><img
+src="/static/images/articles/thumbs/mopi-remote-switch.jpg"
+height="75" width="75" alt="mopi-remote-switch"></a>
+<span class="article-summary"><em>Fitting a remote power switch to MoPi</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/kickstarter.html">kickstarter</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-07-10T00:00:00">Thu 10 July 2014,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2014/07/10/mopi-remote-switch/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/06/03/custom-pibow-lid/" rel="bookmark"
+title="Permalink to Custom PiBow Lid for MoPi">Custom PiBow Lid for MoPi</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/custom-pibow-lid.jpg"><img
+src="/static/images/articles/thumbs/custom-pibow-lid.jpg"
+height="75" width="75" alt="custom-pibow-lid"></a>
+<span class="article-summary"><em>Custom PiBow lid for MoPi</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/kickstarter.html">kickstarter</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-06-03T00:00:00">Tue 03 June 2014,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2014/06/03/custom-pibow-lid/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/05/07/firming-up/" rel="bookmark"
+title="Permalink to MoPi: Firming up the Software">MoPi: Firming up the Software</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/firming-up.jpg"><img
+src="/static/images/articles/thumbs/firming-up.jpg"
+height="75" width="75" alt="firming-up"></a>
+<span class="article-summary"><em>Hot-swap, uninterruptible, multi-supply mobile power for the Raspberry Pi — and unlimited outdoor adventures!</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/kickstarter.html">kickstarter</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-05-07T00:00:00">Wed 07 May 2014,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2014/05/07/firming-up/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/04/21/airpisoftware/" rel="bookmark"
+title="Permalink to The AirPi Software">The AirPi Software</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/airpisoftware.jpg"><img
+src="/static/images/articles/thumbs/airpisoftware.jpg"
+height="75" width="75" alt="airpisoftware"></a>
+<span class="article-summary"><em>Taking a look at improvements to the AirPi software</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/airpi.html">airpi</a> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/environmental.html">environmental</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-04-21T00:00:00">Mon 21 April 2014,</span>
+<a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
+</footer>
+<a class="readmore" href="/posts/2014/04/21/airpisoftware/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/04/20/shakey-testing/" rel="bookmark"
+title="Permalink to Wobbling, Coding, Wobbling, Testing">Wobbling, Coding, Wobbling, Testing</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/shakey-testing.jpg"><img
+src="/static/images/articles/thumbs/shakey-testing.jpg"
+height="75" width="75" alt="shakey-testing"></a>
+<span class="article-summary"><em>Hot-swap, uninterruptible, multi-supply mobile power for the Raspberry Pi — and unlimited outdoor adventures!</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/kickstarter.html">kickstarter</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-04-20T00:00:00">Sun 20 April 2014,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2014/04/20/shakey-testing/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/03/27/pre-propduction-mopi/" rel="bookmark"
+title="Permalink to Pre-Production MoPi Boards">Pre-Production MoPi Boards</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/pre-propduction-mopi.jpg"><img
+src="/static/images/articles/thumbs/pre-propduction-mopi.jpg"
+height="75" width="75" alt="pre-propduction-mopi"></a>
+<span class="article-summary"><em>Hot-swap, uninterruptible, multi-supply mobile power for the</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/kickstarter.html">kickstarter</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-03-27T00:00:00">Thu 27 March 2014,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2014/03/27/pre-propduction-mopi/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/03/11/mopi-funded/" rel="bookmark"
+title="Permalink to MoPi Power Board Funded to>300% on Kickstarter :-)">MoPi Power Board Funded to &gt;300% on Kickstarter :-)</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/mopi-funded.jpg"><img
+src="/static/images/articles/thumbs/mopi-funded.jpg"
+height="75" width="75" alt="mopi-funded"></a>
+<span class="article-summary"><em>Hot-swap, uninterruptible, multi-supply mobile power for the Raspberry Pi — and unlimited outdoor adventures!</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/kickstarter.html">kickstarter</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-03-11T00:00:00">Tue 11 March 2014,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2014/03/11/mopi-funded/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/03/07/mopi-last-chance/" rel="bookmark"
+title="Permalink to Last Chance to Back Mobile Pi Kickstarter!">Last Chance to Back Mobile Pi Kickstarter!</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/mopi-last-chance.jpg"><img
+src="/static/images/articles/thumbs/mopi-last-chance.jpg"
+height="75" width="75" alt="mopi-last-chance"></a>
+<span class="article-summary"><em>Hot-swap, uninterruptible, multi-supply mobile power for the Raspberry Pi — and unlimited outdoor adventures!</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/kickstarter.html">kickstarter</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-03-07T00:00:00">Fri 07 March 2014,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2014/03/07/mopi-last-chance/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/03/02/schools-pi-bank/" rel="bookmark"
+title="Permalink to A Pi Bank for Sheffield Schools">A Pi Bank for Sheffield Schools</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/schools-pi-bank.jpg"><img
+src="/static/images/articles/thumbs/schools-pi-bank.jpg"
+height="75" width="75" alt="schools-pi-bank"></a>
+<span class="article-summary"><em>A set of Pi kits for Sheffield schools</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/schools.html">schools</a> <a href="/tag/education.html">education</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a> <a href="/tag/pi-bank.html">pi bank</a>.</span> <br/> <span class="published" title="2014-03-02T00:00:00">Sun 02 March 2014,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2014/03/02/schools-pi-bank/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/02/25/airpisensors/" rel="bookmark"
+title="Permalink to Interpreting AirPi Sensor Readings">Interpreting AirPi Sensor Readings</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/airpisensors.jpg"><img
+src="/static/images/articles/thumbs/airpisensors.jpg"
+height="75" width="75" alt="airpisensors"></a>
+<span class="article-summary"><em>Looking at how we interpret individual readings from AirPi sensors</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/airpi.html">airpi</a> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/environmental.html">environmental</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-02-25T00:00:00">Tue 25 February 2014,</span>
+<a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
+</footer>
+<a class="readmore" href="/posts/2014/02/25/airpisensors/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/02/14/airpiupdate/" rel="bookmark"
+title="Permalink to AirPi Update - A kit!">AirPi Update - A kit!</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/airpiupdate.jpg"><img
+src="/static/images/articles/thumbs/airpiupdate.jpg"
+height="75" width="75" alt="airpiupdate"></a>
+<span class="article-summary"><em>Soldering up an official AirPi kit</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/airpi.html">airpi</a> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/environmental.html">environmental</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-02-14T00:00:00">Fri 14 February 2014,</span>
+<a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
+</footer>
+<a class="readmore" href="/posts/2014/02/14/airpiupdate/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/02/12/stretch-goals/" rel="bookmark"
+title="Permalink to Stretch! Bigger Plans for Mobile Pi Kickstarter">Stretch! Bigger Plans for Mobile Pi Kickstarter</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/stretch-goals.jpg"><img
+src="/static/images/articles/thumbs/stretch-goals.jpg"
+height="75" width="75" alt="stretch-goals"></a>
+<span class="article-summary"><em>Hot-swap, uninterruptible, multi-supply mobile power for the</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/kickstarter.html">kickstarter</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-02-12T00:00:00">Wed 12 February 2014,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2014/02/12/stretch-goals/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/02/07/airpi1/" rel="bookmark"
+title="Permalink to Building an AirPi">Building an AirPi</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/airpi1.jpg"><img
+src="/static/images/articles/thumbs/airpi1.jpg"
+height="75" width="75" alt="airpi1"></a>
+<span class="article-summary"><em>Building an AirPi sensor rig</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/airpi.html">airpi</a> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/environmental.html">environmental</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-02-07T00:00:00">Fri 07 February 2014,</span>
+<a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
+</footer>
+<a class="readmore" href="/posts/2014/02/07/airpi1/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/02/04/mobile-pi-kickstarter/" rel="bookmark"
+title="Permalink to Mobile and 24/7 Power for the Pi: Kickstarter Launched!">Mobile and 24/7 Power for the Pi: Kickstarter Launched!</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/mobile-pi-kickstarter.jpg"><img
+src="/static/images/articles/thumbs/mobile-pi-kickstarter.jpg"
+height="75" width="75" alt="mobile-pi-kickstarter"></a>
+<span class="article-summary"><em>Hot-swap, uninterruptible, multi-supply mobile power for the</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/kickstarter.html">kickstarter</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-02-04T00:00:00">Tue 04 February 2014,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2014/02/04/mobile-pi-kickstarter/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/01/25/raingauge/" rel="bookmark"
+title="Permalink to Connecting a Rain Gauge">Connecting a Rain Gauge</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/raingauge.jpg"><img
+src="/static/images/articles/thumbs/raingauge.jpg"
+height="75" width="75" alt="raingauge"></a>
+<span class="article-summary"><em>Connecting a Rain Gauge to a Raspberry Pi</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/environmental.html">environmental</a> <a href="/tag/rain.html">rain</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-01-25T00:00:00">Sat 25 January 2014,</span>
+<a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
+</footer>
+<a class="readmore" href="/posts/2014/01/25/raingauge/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2014/01/18/3dasintv/" rel="bookmark"
+title="Permalink to 3D? As in TV?">3D? As in TV?</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/3dasintv.jpg"><img
+src="/static/images/articles/thumbs/3dasintv.jpg"
+height="75" width="75" alt="3dasintv"></a>
+<span class="article-summary"><em>Trying to make a 3D display with the Pi</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/3d-display.html">3d-display</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-01-18T00:00:00">Sat 18 January 2014,</span>
+<a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
+</footer>
+<a class="readmore" href="/posts/2014/01/18/3dasintv/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/12/23/madlab-jam-video/" rel="bookmark"
+title="Permalink to Video from the MadLab Pi Jam On-line">Video from the MadLab Pi Jam On-line</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/madlab-jam-video.jpg"><img
+src="/static/images/articles/thumbs/madlab-jam-video.jpg"
+height="75" width="75" alt="madlab-jam-video"></a>
+<span class="article-summary"><em>Second prototype MoPi board</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a> <a href="/tag/pibrush.html">pibrush</a> <a href="/tag/raspberry.html">raspberry</a>.</span> <br/> <span class="published" title="2013-12-23T00:00:00">Mon 23 December 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/12/23/madlab-jam-video/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/12/06/magpi-pibrush/" rel="bookmark"
+title="Permalink to PiBrush Feature in MagPi">PiBrush Feature in MagPi</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/magpi-pibrush.jpg"><img
+src="/static/images/articles/thumbs/magpi-pibrush.jpg"
+height="75" width="75" alt="magpi-pibrush"></a>
+<span class="article-summary"><em>MagPi article about the PiBrush</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/schools.html">schools</a> <a href="/tag/maker-culture.html">maker culture</a> <a href="/tag/open-hardware.html">open hardware</a> <a href="/tag/open-culture.html">open culture</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a> <a href="/tag/ideas-bazaar.html">ideas bazaar</a>.</span> <br/> <span class="published" title="2013-12-06T00:00:00">Fri 06 December 2013,</span>
+<a class="url fn" href="/author/fred-sonnenwald-hamish-cunningham.html">Fred Sonnenwald, Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/12/06/magpi-pibrush/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/12/01/cubieboard2/" rel="bookmark"
+title="Permalink to The Cubieboard2">The Cubieboard2</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/cubieboard2.jpg"><img
+src="/static/images/articles/thumbs/cubieboard2.jpg"
+height="75" width="75" alt="cubieboard2"></a>
+<span class="article-summary"><em>A review of the Cubieboard 2</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-alikes.html">pi-alikes</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-12-01T00:00:00">Sun 01 December 2013,</span>
+<a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
+</footer>
+<a class="readmore" href="/posts/2013/12/01/cubieboard2/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/11/18/fruitful-jam/" rel="bookmark"
+title="Permalink to Fruitful Jam">Fruitful Jam</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/fruitful-jam.jpg"><img
+src="/static/images/articles/thumbs/fruitful-jam.jpg"
+height="75" width="75" alt="fruitful-jam"></a>
+<span class="article-summary"><em>Manchester Raspberry Jam</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/schools.html">schools</a> <a href="/tag/jam.html">jam</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a> <a href="/tag/.html"></a>.</span> <br/> <span class="published" title="2013-11-18T00:00:00">Mon 18 November 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/11/18/fruitful-jam/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/11/14/mopi-proto2/" rel="bookmark"
+title="Permalink to Mobile Hot-Swap Power for the Pi">Mobile Hot-Swap Power for the Pi</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/mopi-proto2.jpg"><img
+src="/static/images/articles/thumbs/mopi-proto2.jpg"
+height="75" width="75" alt="mopi-proto2"></a>
+<span class="article-summary"><em>Second prototype MoPi board</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a> <a href="/tag/.html"></a>.</span> <br/> <span class="published" title="2013-11-14T00:00:00">Thu 14 November 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/11/14/mopi-proto2/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/10/09/wiring-pi-package/" rel="bookmark"
+title="Permalink to A Raspbian Wrapper for Wiring Pi">A Raspbian Wrapper for Wiring Pi</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/wiring-pi-package.jpg"><img
+src="/static/images/articles/thumbs/wiring-pi-package.jpg"
+height="75" width="75" alt="wiring-pi-package"></a>
+<span class="article-summary"><em>Packaging the WiringPi library for Raspbian</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a> <a href="/tag/software.html">software</a> <a href="/tag/packaging.html">packaging</a> <a href="/tag/raspbian.html">raspbian</a>.</span> <br/> <span class="published" title="2013-10-09T00:00:00">Wed 09 October 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/10/09/wiring-pi-package/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/10/02/children-and-animals/" rel="bookmark"
+title="Permalink to Never Work With Children or Animals">Never Work With Children or Animals</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/children-and-animals.jpg"><img
+src="/static/images/articles/thumbs/children-and-animals.jpg"
+height="75" width="75" alt="children-and-animals"></a>
+<span class="article-summary"><em>University of Sheffield Computer Science Ambassadors</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/schools.html">schools</a> <a href="/tag/education.html">education</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-10-02T00:00:00">Wed 02 October 2013,</span>
+<a class="url fn" href="/author/james-wallbank-hamish-cunningham.html">James Wallbank & Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/10/02/children-and-animals/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/09/16/open-culture-tech/" rel="bookmark"
+title="Permalink to Open Culture Tech">Open Culture Tech</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/open-culture-tech.jpg"><img
+src="/static/images/articles/thumbs/open-culture-tech.jpg"
+height="75" width="75" alt="open-culture-tech"></a>
+<span class="article-summary"><em>Future making: entering the age of open electronics</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/schools.html">schools</a> <a href="/tag/maker-culture.html">maker culture</a> <a href="/tag/open-hardware.html">open hardware</a> <a href="/tag/open-culture.html">open culture</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a> <a href="/tag/ideas-bazaar.html">ideas bazaar</a>.</span> <br/> <span class="published" title="2013-09-16T00:00:00">Mon 16 September 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham-fred-sonnenwald-bo-meson.html">Hamish Cunningham, Fred Sonnenwald, Bo Meson</a>.
+</footer>
+<a class="readmore" href="/posts/2013/09/16/open-culture-tech/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/08/25/winking-pi/" rel="bookmark"
+title="Permalink to Winking Pi: Solving the IP Address Catch-22">Winking Pi: Solving the IP Address Catch-22</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/winking-pi.jpg"><img
+src="/static/images/articles/thumbs/winking-pi.jpg"
+height="75" width="75" alt="winking-pi"></a>
+<span class="article-summary"><em>Logging into the Pi without a monitor</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/network.html">network</a> <a href="/tag/ip-address.html">ip address</a> <a href="/tag/wifi.html">wifi</a> <a href="/tag/gpio.html">gpio</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-08-25T00:00:00">Sun 25 August 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/08/25/winking-pi/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/08/05/chasing-pine-martens/" rel="bookmark"
+title="Permalink to Chasing Pine Martens">Chasing Pine Martens</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/chasing-pine-martens.jpg"><img
+src="/static/images/articles/thumbs/chasing-pine-martens.jpg"
+height="75" width="75" alt="chasing-pine-martens"></a>
+<span class="article-summary"><em>Battery packs for Pi-Mobility</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-08-05T00:00:00">Mon 05 August 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/08/05/chasing-pine-martens/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/07/11/lego-engineering/" rel="bookmark"
+title="Permalink to Lego Engineering">Lego Engineering</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/lego-engineering.jpg"><img
+src="/static/images/articles/thumbs/lego-engineering.jpg"
+height="75" width="75" alt="lego-engineering"></a>
+<span class="article-summary"><em>There's Lego, and then there's LEGO...</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/lego.html">lego</a> <a href="/tag/cases.html">cases</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-07-11T00:00:00">Thu 11 July 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/07/11/lego-engineering/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/06/28/neural-plasticity/" rel="bookmark"
+title="Permalink to Learn When You're Young">Learn When You're Young</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/neural-plasticity.jpg"><img
+src="/static/images/articles/thumbs/neural-plasticity.jpg"
+height="75" width="75" alt="neural-plasticity"></a>
+<span class="article-summary"><em>Learn when you're young, remember when you're old</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-06-28T00:00:00">Fri 28 June 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/06/28/neural-plasticity/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/06/26/alternatives/" rel="bookmark"
+title="Permalink to It's a Jungle Out There">It's a Jungle Out There</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/alternatives.jpg"><img
+src="/static/images/articles/thumbs/alternatives.jpg"
+height="75" width="75" alt="alternatives"></a>
+<span class="article-summary"><em>A survey of Pi-alike hardware</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-alikes.html">pi-alikes</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-06-26T00:00:00">Wed 26 June 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/06/26/alternatives/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/06/10/notipifications/" rel="bookmark"
+title="Permalink to Help! My Toast is Burning!">Help! My Toast is Burning!</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/notipifications.jpg"><img
+src="/static/images/articles/thumbs/notipifications.jpg"
+height="75" width="75" alt="notipifications"></a>
+<span class="article-summary"><em>Notifications via SMS Text or Twitter from the Pi</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/software.html">software</a> <a href="/tag/linux.html">linux</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-06-10T00:00:00">Mon 10 June 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/06/10/notipifications/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/06/05/stay-dry-cheaply/" rel="bookmark"
+title="Permalink to Stay Dry Cheaply">Stay Dry Cheaply</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/stay-dry-cheaply.jpg"><img
+src="/static/images/articles/thumbs/stay-dry-cheaply.jpg"
+height="75" width="75" alt="stay-dry-cheaply"></a>
+<span class="article-summary"><em>A simple DIY flood alarm</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/gpio.html">gpio</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-06-05T00:00:00">Wed 05 June 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/06/05/stay-dry-cheaply/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/05/19/pigs-and-pi/" rel="bookmark"
+title="Permalink to Pigs and Pi">Pigs and Pi</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/pigs-and-pi.jpg"><img
+src="/static/images/articles/thumbs/pigs-and-pi.jpg"
+height="75" width="75" alt="pigs-and-pi"></a>
+<span class="article-summary"><em>Pi-Tronics starter projects</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/gpio.html">gpio</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/schools.html">schools</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-05-19T00:00:00">Sun 19 May 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/05/19/pigs-and-pi/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/05/18/schools-out/" rel="bookmark"
+title="Permalink to School's Out?">School's Out?</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/schools-out.jpg"><img
+src="/static/images/articles/thumbs/schools-out.jpg"
+height="75" width="75" alt="schools-out"></a>
+<span class="article-summary"><em>The Pi and schools computing curriculum</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/schools.html">schools</a> <a href="/tag/education.html">education</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-05-18T00:00:00">Sat 18 May 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/05/18/schools-out/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/05/16/feed-me-seymour/" rel="bookmark"
+title="Permalink to Feed me Seymour">Feed me Seymour</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/feed-me-seymour.jpg"><img
+src="/static/images/articles/thumbs/feed-me-seymour.jpg"
+height="75" width="75" alt="feed-me-seymour"></a>
+<span class="article-summary"><em>A Pi on a Roomba!</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/gpio.html">gpio</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/roomba.html">roomba</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-05-16T00:00:00">Thu 16 May 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/05/16/feed-me-seymour/">read more</a>
+</div>
+</article></li>
+<li><article class="hentry">
+<hr/>
+<header>
+<h1><a href="/posts/2013/04/11/sensing-and-responding/" rel="bookmark"
+title="Permalink to Sensing and Responding">Sensing and Responding</a></h1>
+</header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/sensing-and-responding.jpg"><img
+src="/static/images/articles/thumbs/sensing-and-responding.jpg"
+height="75" width="75" alt="sensing-and-responding"></a>
+<span class="article-summary"><em>Parent avoidance with the Raspberry Pi, and other simple electronics projects</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/gpio.html">gpio</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-04-11T00:00:00">Thu 11 April 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<a class="readmore" href="/posts/2013/04/11/sensing-and-responding/">read more</a>
+</div>
+</article></li>
+</ol>
+</section>
+<section id="extras" class="body">
+</section>
+</div>
+</div>
+</div>
+<div id="footer">
+<table border="0" align="right"><tbody><tr>
+<td style="vertical-align:bottom; text-align:left;">
+<span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+</td>
+<td style="vertical-align:bottom; text-align:right;">
+<font size="-2">
+© Hamish Cunningham and The <a href="http://www.shef.ac.uk/">University of Sheffield</a>,
+1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+This website is licenced under the
+<a rel="license"
+href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+<a href="http://gate.ac.uk/">GATE</a> is <a href="http://www.fsf.org/">free software</a> under
+<a href="http://www.gnu.org/licenses/">the GNU licences</a> and
+others. All our products and services supplied <b>with no warranty</b>.<br/>
+<em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/posts/2014/04/index.html">Print</a>.
+</font>
+</td>
+<td style="vertical-align:bottom;"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+</td>
+<td>
+<a href="http://www.shef.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+alt="The University of Sheffield" height="70" width="165"</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

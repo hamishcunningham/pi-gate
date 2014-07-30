@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width = device-width">
+<title>LEGOCases</title>
+<link rel="stylesheet" href="/theme/css/main.css">
+<link href="http://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed"/>
+<link rel="stylesheet" href="/theme/css/gatepage.css">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<!--[if IE]><script src="/theme/js/html5shiv-googlecode-com-html5.js"></script><![endif]-->
+<!--[if lt IE 7]><style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style> <link rel="stylesheet" href="/theme/css/ie-menus.css"/><![endif]-->
+<style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+<script src="/theme/js/prototype-171-min.js"></script>
+<script src="/theme/js/gatepage.js"></script>
+<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+</head>
+<body id="index" class="home">
+<div id="topBar">
+<span id="topLogo">
+<span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+height="55" width="46"></a></span>
+<span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+<span id="gateLogo"><a href="http://www.shef.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+alt="The University of Sheffield" height="55" width="113"</a><a
+href="http://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+height="55" width="132"></a></span>
+</span>
+<div class="horizontal menu">
+<ul>
+<li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+<li><b><a href="#">Projects</a></b>
+<ul>
+<li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+<li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+<li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+<li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+<li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+<li><a href="/pages/legocases.html">LEGO Cases</a></li>
+<li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+<li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+<li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+<li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+</ul></li>
+<li><b><a href="#">MoPi</a></b>
+<ul>
+<li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+<li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+<li><a href="/static/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+<li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+</ul></li>
+<li><a href="/pages/download.html">Download</a></li>
+<li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
+<li><a href="/pages/about.html">About</a></li>
+</ul>
+</div>
+<div id="topLoginEtc">
+<form name="searchForm" method="GET" action="http://www.google.com/search" class="inlineForm">
+<label class="pageLink" for="as_q">Search:</label>
+<input type="text" name="as_q" size="6" maxlength="255">
+<input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+</form>
+</div>
+</div>
+<div id="header">
+</div>
+<div id="topSeparator"> </div>
+<div id="mainContent">
+<div class='yui3-g-r'>
+<div id="leftColumn" class="yui3-u-1-2">
+<section id="content" class="body">
+<h1 class="entry-title">LEGOCases</h1>
+<div id="socialButtons">
+<span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=http://pi.gate.ac.uk/pages/legocases.html"
+target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+height="30" width="30"></a></span>
+<span><a href="http://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+title="Syndication feed"><img
+height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+<span>&nbsp;<a href="/pages/legocases.html#disqus_thread"
+title="Leave a comment"><img
+src="/theme/images/comment.png" height="30" width="30"></a></span>
+<span>&nbsp;<a href="/print/pages/legocases.html"
+title="Print"><img
+src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>
+<p><em>House the Pi with kit you've already got</em></p>
+<p><em><a class="cow-url" href="/pages/about.html#fred">Fred Sonnenwald</a>, June 2013</em></p>
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Introduction</a></li>
+<li><a href="#section-2.">2. The case I built and why</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.1.">2.1. Design details</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.2.">2.2. Building it</a></li>
+<li><a href="#section-3.">3. Other cases</a></li>
+<li>&nbsp;&nbsp;<a href="#section-3.1.">3.1. More links</a></li>
+<li><a href="#section-4.">4. Conclusion</a></li>
+</ul></p></div>
+<p><a name="intro"></a></p><a class="cow-section-anchor" name="section-1."></a><h1 class="cow-heading"><span class="cow-sec-number">1. </span>Introduction</h1>
+<p><a class="cow-url" href="http://www.lego.com/en-gb/">LEGO</a> is an amazing thing. I spent large chunks
+of time in my childhood playing with these magic bricks. It's one of the few
+toys out there I think that really lets your imagination have free reign. The
+things you can do range from building detailed models to the abstract. Who's
+to say that two bricks aren't a ship? But I digress.</p>
+<p>In June of last year <a class="cow-url" href="http://www.raspberrypi.org/archives/author/liz">Liz
+Upton</a> posted on <a class="cow-url" href="http://raspberrypi.org">RaspberryPi.org</a> a set of
+directions <a class="cow-url" href="http://www.raspberrypi.org/archives/1354">for building a LEGO Pi
+case</a>, by a kid called Biz. I was enchanted. Why hadn't I thought of this
+earlier? Building a case of LEGO was a fantastic idea. Even better I still
+have all my LEGO bricks. Only they're all at my parents house, so I had to put
+the project on hold. But now I've got the opportunity to share a bit about
+building my case after having finally gotten around to picking up my kit.</p>
+<p>While we're at it I'll also do a little overview of some of the other cases
+out there. Maybe put my <a class="cow-url" href="http://www.shef.ac.uk/civil">Civil Engineering
+degree</a> to some use, eh? Because really, a set of directions for a specific
+case takes away a lot of the fun of LEGO I think. Yes, every set you can get
+comes with directions, but it's often what you do afterwards that really
+starts the magic. So instead of a specific set of directions, I'm going to
+talk design features and limitations.</p>
+<p>My goal here is not to say &quot;here's how you build a case&quot; but, like the Pi
+itself, to tickle your imagination into thinking how you might take the LEGO
+you've got and build your own case. The number one reason for doing this? I
+saw Biz's directions and immediately thought, &quot;Awesome. Only I don't have
+those bricks and I can't afford to get them.&quot; (Being a poor University student
+does have it's downsides.) No matter &mdash; just grab what you've got and dive in!</p>
+<p><a name="mycase"></a></p><a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>The case I built and why</h1>
+<p><a class="cow-url" href="/static/pages/images/case/01case.jpg"><img class="cow-img" src="/static/pages/images/case/thumbs/01case.jpg" alt="My case" width="200" height="150"></a>
+<a class="cow-url" href="/static/pages/images/case/01caseb.jpg"><img class="cow-img" src="/static/pages/images/case/thumbs/01caseb.jpg" alt="My case 2" width="200" height="150"></a></p>
+<p>Because of my degree I approached building my case with a specific set of
+design goals. Criteria I wanted to meet and the like. After reviewing Biz's
+case and deciding I didn't have the pieces, I considered building a clone.
+That is the same final design, but using different pieces. Unfortunately, I
+felt that I wanted the case to perform in ways I thought Biz's design didn't
+accomplish.</p>
+<p>I was a little worried about how sturdy the design was. At that point in time
+I was doing quite a bit of travelling and I wanted my case to be able to
+travel with me. Travelling means surviving either banging around in checked
+luggage or in my backpack. Neither of them the best environment for precision
+electronics. That also meant I needed to design a case that protects the
+Pi's ports.</p>
+<p>I also felt that getting the cover off would be a pain. That sucker is held
+down proper and if I ever wanted to look inside to admire the pretty
+electronics, or mess with the GPIO, I was gonna have a bad time. The case
+should also be no larger than necessary and look cool. (That meant keeping
+Biz's logo in some way &mdash; that bit is awesome.)</p>
+<p>So just like a real Civil Engineering project I found myself with a balancing
+act. I needed to balance my design goals against the bricks I actually had. And
+similar to a proper project I had my own set of design codes to follow. You
+don't just willy-nilly pour concrete floors and hope they don't crack. In the
+same way I don't just put bricks on top of each other.</p>
+<p>Specifically, I don't allow for multiple vertical cracks to align. This makes
+for what's called in Civil Engineering a plane of weakness or a slip surface.
+A place where a material will slide with little to no effort. In LEGO this
+translates to what you build falling apart at awkward times. Usually bad news,
+and definitely so when sturdiness is a goal.</p>
+<p><a name="details"></a></p><a class="cow-section-anchor" name="section-2.1."></a><h2 class="cow-heading"><span class="cow-sec-number">2.1. </span>Design details</h2>
+<p>Essentially my case can be considered a derivative of Biz's design, so again,
+a tip of the hat to her. The easiest possible modification was a way to get
+the top off easier. Simply replacing a portion of the outer rim with the tile
+pieces achieves this effect. All of it can be tile, or only a portion as I've
+done. The former will have the lid just sitting on, which is great for easy
+access. The few studs I've left is a perfect compromise for travel.</p>
+<p><a class="cow-url" href="/static/pages/images/case/02empty.jpg"><img class="cow-img" src="/static/pages/images/case/thumbs/02empty.jpg" alt="Partially
+tiled" width="200" height="150"></a>
+<a class="cow-url" href="/static/pages/images/case/03empty.jpg"><img class="cow-img" src="/static/pages/images/case/thumbs/03empty.jpg" alt="Partially
+tiled 2" width="200" height="150"></a></p>
+<p>For port access you can see I've used shuttered windows. The RCA, VGA, and
+HDMI ports all extend from the circuit board of the Pi, and the shuttered
+windows provide solid cover for them without having to extend the case wall
+away from the board at all. A small window has been used to let the diagnostic
+lights be seen. </p>
+<p>You can also see that the positioning of the risers on the bottom is different
+than Biz's. These were chosen to be in locations where there is nothing
+soldered onto the bottom of the Pi's circuit board. This lets it sit smoothly
+and evenly.</p>
+<p><a class="cow-url" href="/static/pages/images/case/04pieces.jpg"><img class="cow-img" src="/static/pages/images/case/thumbs/04pieces.jpg" alt="Exploded
+view" width="200" height="150"></a>
+<a class="cow-url" href="/static/pages/images/case/05pieces.jpg"><img class="cow-img" src="/static/pages/images/case/thumbs/05pieces.jpg" alt="Exploded
+view 2" width="200" height="112"></a></p>
+<p>There is also a bit of tile in red at the southern area of the bottom. This
+supports the SD card and the card slot. The 2x1 in red at the north and south
+minimise the area from the two fully exposed ports &mdash; the ethernet and micro
+USB. When designing I could find no good way to protect every single port.
+These two are the two that are most likely to be used full time in my use
+cases so they got left exposed.</p>
+<p><a class="cow-url" href="/static/pages/images/case/06pi.jpg"><img class="cow-img" src="/static/pages/images/case/thumbs/06pi.jpg" alt="Pi sitting" width="200" height="112"></a></p>
+<p>The Pi is also lifted up an extra 1/3rd tile on its risers. This is for
+multiple reasons. It allows for: better support of the SD card; airflow
+underneath the board; the GPIO pins won't hit stud heads; the ports line up in
+the window frames better; and finally, it allows for a side panel piece to be
+placed. This is critical, as this is the piece primarily responsible for
+keeping the board from wiggling when you plug things in and during travel.
+Also note that the base is 2/3rds thick &mdash; this is extra sturdy &mdash; but due to
+the interlocking thin tiles it isn't too bulky.</p>
+<p><a class="cow-url" href="/static/pages/images/case/07lid.jpg"><img class="cow-img" src="/static/pages/images/case/thumbs/07lid.jpg" alt="Pi sitting" width="200 150"></a>
+<a class="cow-url" href="/static/pages/images/case/08pi.jpg"><img class="cow-img" src="/static/pages/images/case/thumbs/08pi.jpg" alt="Pi sitting" width="200 150"></a></p>
+<p>You'll also have noticed that this lid is rather bulky. This is what keeps the
+Pi from shifting vertically in the case. It also comes down inside the main
+case walls on the other sides of the windows to make plugging cables in
+easier. Finally it provides protection at the top. Those clear tiles in the
+sides are pure decoration &mdash; I also didn't have enough 1x1x1/3rd pieces to
+make up the gaps. </p>
+<p><a name="building"></a></p><a class="cow-section-anchor" name="section-2.2."></a><h2 class="cow-heading"><span class="cow-sec-number">2.2. </span>Building it</h2>
+<p>Hopefully you've got an idea now of what I've built, but I'm not going to
+give explicit directions on how to build this case. I want to share the fun I
+have with LEGO, which is the creation process. Finding just the right
+combination of pieces. Picking out the colors. I think from the photos that
+most of it can be built anyway with a bit of sense.</p>
+<p>The other thing is that as far as I know some of the pieces I've used you
+can't get new anymore. That may make it extra hard to build. You'll either
+have to find them in your collection or find them second hand. I've found
+<a class="cow-url" href="http://www.peeron.com/inv/sets/631-1">Peeron</a> to be pretty good. eBay may
+work as well. Maybe you can find substitute parts on the LEGO
+<a class="cow-url" href="http://shop.lego.com/en-US/Pick-A-Brick-ByTheme#suppressXlink">Pick a Brick</a>
+page.</p>
+<p>I will say in general that what I did was find enough 1/3rd height pieces in
+gray to make up a solid 2/3rd thick base. (This means no slip surfaces!) At
+this point if the risers are stuck on and the Pi put into position, and this
+reveals where the windows should go. The walls were built up around to match
+the window heights. Smooth tiles were used over the window tops to keep them
+in position and the few studed white bricks over the rest to anchor the roof.</p>
+<p>The roof itself was built more or less seperately, after the rest of the case
+was constructed. A 1/3rd thick loose conglomeration of red bricks to make a
+solid cover was collected, and a second 1/3rd layer placed below (level with
+the white rim) to tie it together without making the case any higher. That's
+probably sufficient, but as I mentioned before I built it down more in order
+to make the case sturdier.</p>
+<p><a name="othercases"></a></p><a class="cow-section-anchor" name="section-3."></a><h1 class="cow-heading"><span class="cow-sec-number">3. </span>Other cases</h1>
+<p>Now, as I've said it may be tricky to build my case because of parts issues.
+Hopefully though, you now have an idea of why I've made the descisions I
+have. What sorts of things to consider. It might also by the by give you a
+little appreciation of what Civil Engineers consider when designing a new
+building. I think this gives you the power to build your own case to your own
+specification.</p>
+<p>You now know what sort of thing to look for and what you might want to put in
+or do with your case and can consciously aim for that. But don't just be
+limited by what I've done. Let's take a look at some other designs out there
+that I found while googling &quot;raspberry pi LEGO case&quot; &mdash; there are plenty of
+results. Here are a few things I found really cool while looking at them all.
+(I've included a list of even more cases at the end of the article.)</p>
+<p><a class="cow-url" href="http://www.flickr.com/photos/rooreynolds/7155708427/sizes/l/"><img class="cow-img" src="/static/pages/images/case/thumbs_ext/labels.jpg" alt="Labels!" width="200" height="150"></a></p>
+<p>I love the use of tiles for labelling. This case is also one of the ones that
+I'm now thinking of as &quot;half height&quot; &mdash; Primarily only 2 bricks tall as
+opposed to the three that Biz and I have both used.</p>
+<p><a class="cow-url" href="http://www.flickr.com/photos/attilaacs/8060076112/sizes/l/"><img class="cow-img" src="/static/pages/images/case/thumbs_ext/shutters.jpg" alt="Shutters!" width="200" height="132"></a></p>
+<p>Someone else had the same idea and used shutters! I'm thrilled! Also another
+nice red, green, white colour scheme going on.</p>
+<p><a class="cow-url" href="http://www.flickr.com/photos/pikesley/7157136321/sizes/l/"><img class="cow-img" src="/static/pages/images/case/thumbs_ext/sculpture.jpg" alt="Sculpture!" width="200" height="150"></a></p>
+<p>LEGO really is only limited by your imagination. Turn your case into a work
+of art!</p>
+<p><a class="cow-url" href="http://www.raspberrypi-spy.co.uk/2012/06/my-raspberry-pi-lego-case/"><img class="cow-img" src="/static/pages/images/case/thumbs_ext/slick.jpg" alt="Slick!" width="200" height="150"></a></p>
+<p>I like how slick this back panel feels. It also lets you get away with a
+slightly shorter case.</p>
+<p><a class="cow-url" href="http://sparky0815.de/2012/05/raspberry-pi-lego-case-uberarbeitet-3/"><img class="cow-img" src="/static/pages/images/case/thumbs_ext/notch.jpg" alt="Notch!" width="200" height="133"></a></p>
+<p>This notch on the etherport is nice. Gets away from a rectangle case. The
+windows on the top make really stylish vents and the little Pi logo is there
+too!</p>
+<p><a class="cow-url" href="http://www.weekendcontent.com/how-to-make-your-own-lego-raspberry-pi-computer-case/"><img class="cow-img" src="/static/pages/images/case/thumbs_ext/hinge.jpg" alt="Hinge!" width="200" height="109"></a></p>
+<p>Consider as well that the lid of the case doesn't have to be fixed or
+resting, that it might be hinged as well!</p>
+<p><a class="cow-url" href="http://glynrob.com/hardware/my-lego-pi-case/"><img class="cow-img" src="/static/pages/images/case/thumbs_ext/open.jpg" alt="Open!" width="200" height="141"></a></p>
+<p>The open bottom here I thought was pretty clever. A nice way to lighten up
+the case or save on finding bricks for the bottom.</p>
+<p><a class="cow-url" href="http://www.flickr.com/photos/jole/sets/72157630028613267/"><img class="cow-img" src="/static/pages/images/case/thumbs_ext/roof.jpg" alt="Roof!" width="200" height="133"></a></p>
+<p>The top doesn't have to be flat. Sloped roof bricks have been used to good
+effect. Loads of extras make this one into another example of a work of art.</p>
+<p><a class="cow-url" href="http://anoved.net/2013/06/raspberry-pi-lego-case/"><img class="cow-img" src="/static/pages/images/case/thumbs_ext/slide.jpg" alt="Slide!" width="200" height="150"></a></p>
+<p>Rather than open out the top, the Pi slides in and out. Clever detailing to
+make that work and fix the Pi in place.</p>
+<p><a class="cow-url" href="http://www.instructables.com/id/Lego-Raspberry-Pi-Case/"><img class="cow-img" src="/static/pages/images/case/thumbs_ext/vents.jpg" alt="Vents!" width="200" height="133"></a></p>
+<p>Ah, LEGO Technic. I don't know if it was intended this way, but the Technic
+holes form perfect vents for passive cooling. Very clever use of the doors
+to cover the ports. If I had some of these pieces I think I'd want to do it
+this way.</p>
+<p><a name="links"></a></p><a class="cow-section-anchor" name="section-3.1."></a><h2 class="cow-heading"><span class="cow-sec-number">3.1. </span>More links</h2>
+<p>More to cases links, in no particular order:</p>
+<ul>
+<li><a class="cow-url" href="http://miriamelewis.blogspot.co.uk/2012/02/raspberry-pi-lego-case.html">http://miriamelewis.blogspot.co.uk/2012/02/raspberry-pi-lego-case.html</a></li>
+<li><a class="cow-url" href="http://arstechnica.com/information-technology/2012/09/university-builds-cheap-supercomputer-with-raspberry-pi-and-legos/">http://arstechnica.com/information-technology/2012/09/university-builds-cheap-supercomputer-with-raspberry-pi-and-legos/</a></li>
+<li><a class="cow-url" href="http://elinux.org/RPi_Cases#Lego_Case">http://elinux.org/RPi_Cases#Lego_Case</a></li>
+<li><a class="cow-url" href="http://www.jakebyrne.com/adding-web-connectivity-via-usb-to-remote-controlled-sockets-part-2-software/">http://www.jakebyrne.com/adding-web-connectivity-via-usb-to-remote-controlled-sockets-part-2-software/</a></li>
+<li><a class="cow-url" href="http://imgur.com/XBlwp">http://imgur.com/XBlwp</a></li>
+<li><a class="cow-url" href="http://www.raspberrypi.org/phpBB3/viewtopic.php?f=40&amp;t=10510">http://www.raspberrypi.org/phpBB3/viewtopic.php?f=40&amp;t=10510</a></li>
+<li><a class="cow-url" href="http://www.flickr.com/photos/rooreynolds/7159652835/">http://www.flickr.com/photos/rooreynolds/7159652835/</a></li>
+<li><a class="cow-url" href="http://www.raspberrypi.org/phpBB3/viewtopic.php?t=17654&amp;p=183835">http://www.raspberrypi.org/phpBB3/viewtopic.php?t=17654&amp;p=183835</a></li>
+<li><a class="cow-url" href="http://netzpirat.blogspot.co.uk/2012/07/hier-mein-lego-case-fur-den-raspberry.html">http://netzpirat.blogspot.co.uk/2012/07/hier-mein-lego-case-fur-den-raspberry.html</a></li>
+<li><a class="cow-url" href="http://blog.stuart.shelton.me/archives/918">http://blog.stuart.shelton.me/archives/918</a></li>
+<li><a class="cow-url" href="http://www.overclock.net/t/1381518/raspberry-pi-battletank-lego-case-with-a-fan">http://www.overclock.net/t/1381518/raspberry-pi-battletank-lego-case-with-a-fan</a></li>
+<li><a class="cow-url" href="http://news.sean.co.uk/2012/10/building-lego-case-for-raspberry-pi.html">http://news.sean.co.uk/2012/10/building-lego-case-for-raspberry-pi.html</a></li>
+<li><a class="cow-url" href="http://www.bit-tech.net/modding/2013/05/07/raspberry-pi-case-competition-voting/8">http://www.bit-tech.net/modding/2013/05/07/raspberry-pi-case-competition-voting/8</a></li>
+<li><a class="cow-url" href="https://sites.google.com/site/legoraspberrypicase/">https://sites.google.com/site/legoraspberrypicase/</a></li>
+<li><a class="cow-url" href="http://makelehighvalley.com/blog/2012/08/lego-case-for-the-raspberry-pi/">http://makelehighvalley.com/blog/2012/08/lego-case-for-the-raspberry-pi/</a></li>
+<li><a class="cow-url" href="http://flikto.de/2013/05/09/pibrick/">http://flikto.de/2013/05/09/pibrick/</a></li>
+<li><a class="cow-url" href="http://www.wiredfatherhood.com/2013/03/27/my-new-raspberry-pi-lego-case/">http://www.wiredfatherhood.com/2013/03/27/my-new-raspberry-pi-lego-case/</a></li>
+<li><a class="cow-url" href="http://www.bitrebels.com/technology/a-geeky-collection-of-creative-raspberry-pi-cases-15-pics/">http://www.bitrebels.com/technology/a-geeky-collection-of-creative-raspberry-pi-cases-15-pics/</a></li>
+<li><a class="cow-url" href="http://riscpi.co.uk/raspberry-pi-case-in-lego/">http://riscpi.co.uk/raspberry-pi-case-in-lego/</a></li>
+<li><a class="cow-url" href="http://www.makeuseof.com/tag/8-interesting-diy-raspberry-pi-case-ideas/">http://www.makeuseof.com/tag/8-interesting-diy-raspberry-pi-case-ideas/</a></li>
+</ul>
+<p>And possibly the grandest of them all,
+<a class="cow-url" href="http://raspberrypicloud.wordpress.com/2013/07/09/raspberry-pi-lego-rack-designs/">a cloud in a Lego box</a>!</p>
+<p><a name="conclusion"></a></p><a class="cow-section-anchor" name="section-4."></a><h1 class="cow-heading"><span class="cow-sec-number">4. </span>Conclusion</h1>
+<p>What else? After seeing all this how can you do anything but go out and build!</p>
+</section>
+</div>
+<div id="middleColumn" class="yui3-u-1-5">
+<div class="midColContent">
+<a class="article-thumb" href="/static/images/articles/legocases.jpg"><img
+src="/static/images/articles/thumbs/legocases.jpg"
+height="75" width="75" alt="legocases"></a>
+<span class="article-summary"><em>Building LEGO cases for the Pi</em>.</span>
+<br/> <br/>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'pi-gate'; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Introduction</a></li>
+<li><a href="#section-2.">2. The case I built and why</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.1.">2.1. Design details</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.2.">2.2. Building it</a></li>
+<li><a href="#section-3.">3. Other cases</a></li>
+<li>&nbsp;&nbsp;<a href="#section-3.1.">3.1. More links</a></li>
+<li><a href="#section-4.">4. Conclusion</a></li>
+</ul></p></div>
+<section id="extras" class="body">
+</section>
+</div>
+</div>
+</div>
+<div id="footer">
+<table border="0" align="right"><tbody><tr>
+<td style="vertical-align:bottom; text-align:left;">
+<span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+</td>
+<td style="vertical-align:bottom; text-align:right;">
+<font size="-2">
+© Hamish Cunningham and The <a href="http://www.shef.ac.uk/">University of Sheffield</a>,
+1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+This website is licenced under the
+<a rel="license"
+href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+<a href="http://gate.ac.uk/">GATE</a> is <a href="http://www.fsf.org/">free software</a> under
+<a href="http://www.gnu.org/licenses/">the GNU licences</a> and
+others. All our products and services supplied <b>with no warranty</b>.<br/>
+<em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/pages/legocases.html">Print</a>.
+</font>
+</td>
+<td style="vertical-align:bottom;"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+</td>
+<td>
+<a href="http://www.shef.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+alt="The University of Sheffield" height="70" width="165"</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

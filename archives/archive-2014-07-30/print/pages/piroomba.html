@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width = device-width">
+<title>PiRoomba</title>
+<link rel="stylesheet" href="/theme/css/main.css">
+<link href="http://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed"/>
+<link rel="stylesheet" href="/theme/css/gatepage.css">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<!--[if IE]><script src="/theme/js/html5shiv-googlecode-com-html5.js"></script><![endif]-->
+<!--[if lt IE 7]><style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style> <link rel="stylesheet" href="/theme/css/ie-menus.css"/><![endif]-->
+<style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+<script src="/theme/js/prototype-171-min.js"></script>
+<script src="/theme/js/gatepage.js"></script>
+<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+</head>
+<body id="index" class="home">
+<div class='yui3-g-r'>
+<div id="leftColumn" class="yui3-u-1-2" style="width: 90%">
+<section id="content" class="body">
+<h1 class="entry-title">PiRoomba</h1>
+<div id="socialButtons">
+<span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=http://pi.gate.ac.uk/pages/piroomba.html"
+target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+height="30" width="30"></a></span>
+<span><a href="http://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+title="Syndication feed"><img
+height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+<span>&nbsp;<a href="/pages/piroomba.html#disqus_thread"
+title="Leave a comment"><img
+src="/theme/images/comment.png" height="30" width="30"></a></span>
+<span>&nbsp;<a href="/print/pages/piroomba.html"
+title="Print"><img
+src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>
+<p><em><a class="cow-non-existant-url" href="/pages/about.html#pete">Peter Wallis</a>, June 20th 2013</em></p>
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Introduction</a></li>
+<li><a href="#section-2.">2. Controlling</a></li>
+<li><a href="#section-3.">3. Connecting</a></li>
+</ul></p></div>
+<a name="section-1."></a>
+<h1>Introduction</h1>
+</a>
+<p>
+<img src="/static/pages/images/piroomba/Roomba3g.jpg" attr="Creative Commons 'Roomba3g.jpg'" alt="A Roomba 530 on its charge station." align="right" width="30%">I
+have put a <a href="http://www.raspberrypi.org/">Raspberry Pi</a> on my <a href="http://en.wikipedia.org/wiki/Roomba">Roomba</a> robot vacuum cleaner.
+The next section deals with the why; then we cover the how, link to the code,
+etc.
+</p>
+<a name="section-2."></a>
+<h1>Controlling</h1>
+</a>
+<p>
+The Roomba is a autonomous robot vacuum cleaner that can can be bought on line
+or, on occasion, from department stores. The machine has an interesting
+history in that it is manufactured by
+<a href="http://www.irobot.com/global/en/explore_irobot/government_industrial_robots.aspx">iRobot</a>,
+the company set up by <a href="http://people.csail.mit.edu/brooks/">Rodney
+Brooks</a> and others from MIT in the 1990's. The company has sold around six
+million Roombas[<a href="http://en.wikipedia.org/wiki/Roomba">1</a>] and the
+machine has in effect defined its own market with several imitations now
+available. Today however iRobot is probably more famous for producing the <a href="http://en.wikipedia.org/wiki/PackBot">Packbot</a> series of military
+remote control robots -- time for a quick visit to the campaign to
+<a href="http://www.stopkillerrobots.org/">stop killer robots</a>?
+</p>
+<p>
+The illustrious pedigree of the Roomba is evident in the way it works.
+The Roomba does not map the
+room but rather performs a semi random walk that is likely to cover
+any given spot multiple times (see time lapse photo). With no sense
+of location, the roomba is often seen as little more than a toy by
+computer scientists but there are historical reasons for the Roomba to
+take this approach. Ignoring the history is of course likely to lead
+to one repeating it.
+<img class="cow-img" src="/static/pages/images/piroomba/800px-Roomba_time-lapse.jpg" attr="Chris Bartle Creative Commons 'Roomba time-lapse.jpg'" alt="A time-lapse photo of the roomba's path" width="92%">
+</p>
+<p>
+There are three good reasons for using a Roomba as the basis of
+serious robot research:
+</p><ul>
+<li>iRobot is really good at producing a <b>robust platform with useful
+accessories</b>.
+My Roomba is currently sitting on its charging platform and later
+today will clean the front room floor. It is a system that regularly
+runs for <i>years</i> rather than minutes. The system is well made
+with spares available. Indeed my Roomba is a second hand unit that was
+suffering the
+"<a href="http://www.schneordesign.com/Avi/irobot/roomba_mod2.htm">9 beep dance</a>".
+I fixed it with a soldering iron and a 60p component from Maplin
+Electronics. The thing has been chased by the children, dropped (not
+too far) and tells me when it needs a clean. What you get with a
+Roomba is something with lots of development behind it.
+</li><li>The Roomba has an application that means it is <b>always on</b>.
+You get all the above if you buy a <a href="http://en.wikipedia.org/wiki/IRobot_Create">iRobot Create</a>
+but if I was using a Create, why would I leave it on?
+Like <a href="http://cfpm.org/%7Epeter/OldWebpage/index.html">my previous robots</a>, there is no doubt something I made with
+the Create would end up being disassembled or in the back of a
+cupboard with the batteries out. My Roomba is there and I am
+continually temped to modify it.
+</li><li>Having an application means that Roombas provide a pathway to
+addressing a fundamental question in <b>language &amp; representation</b>.
+Many robot people have the naïve idea that things
+in the robot's environment can be represented with arbitrary symbols.
+It turns out that `symbol grounding' (not really the right term) happens
+through our experience of the world and that experience is determined by
+embodiment. By the 1980's AI research realised the reference model of
+meaning failed surprisingly quickly when moves out of a "blocks world,"
+but what could we do about it? The issue has a long history going
+back at least Heidegger and Witgenstein, extending through to Gibson's
+notion of affordances, to Lakoff &amp; Johnson's notion of metaphor,
+and to Ruthrof's "semantics of the body".
+How this thinking links into serious robot research is an on going issue.
+</li></ul>
+The link however does bring us back to an interesting feature of the
+Roomba. There is a problem with representation and Brooks grand
+agenda (in the early days at least) was to see what could be done
+<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.12.1680">without representation</a>. The Roomba's random walk is not a quick
+fix that ought to be replaced with an algorithm based on some sort of
+map, but rather it is a considered solution to a classic problem.
+Indeed when one looks at the Roomba Open Interface, the
+architecture is very much <a href="http://mitpress.mit.edu/books/behavior-based-robotics/">Behaviour Based Robotics</a>
+with "primitive" commands for "clean", "seek dock" and so on. In the
+same way one might like to start with two motors and a chassis and not
+use the excellent work done by iRobot to make a Roomba, one could also
+throw out their excellent work on the application/architecture and use
+a iRobot Create. I however think the Roomba is a better place to
+start thinking about robotics.
+<p></p>
+<p>
+</p>
+<a name="section-3."></a>
+<h1>Connecting</h1>
+<p>
+<img class="cow-img" src="/static/pages/images/piroomba/roopiTop.jpg" alt="A raspberry pi on a Roomba - top view" width="90%">
+<br/>
+I have a Roomba 530 with a serial interface and open API as specified
+<a href="http://cfpm.org/%7Epeter/bfz/iRobot_Roomba_500_Open_Interface_Spec.pdf">here</a>.
+Connecting the pi requires a serial connection between the pi an the
+roomba's serial port, and some way of powering the pi from the 18volt
+supply on the roomba.
+I have put the pi in a plastic case that is connected to the bumper.
+That way when it goes under a chair and catches the case, the force is
+transmitted to the bump sensors and the standard software figures out
+what to do.
+<br/>
+<img class="cow-img" src="/static/pages/images/piroomba/roopiSide.jpg" alt="A raspberry pi on a Roomba - side view" width="90%">
+</p><p>
+<img src="/static/pages/images/piroomba/plug.jpg" alt="The home made 7 pin DIN plug" align="right" width="33%">
+Unfortunately the clear plastic bowl I could get to cut
+down was slightly too small and so I ended up making a 7 pin DIN plug
+out of a piece of brass tube, some bass wire and some epoxy putty from
+the local hobby shop. The process was to solder the wires onto the
+pins, take the battery out of the Roomba and put vaseline on the
+serial plug on the Roomba. Put the pins (and earth ring) in the Roomba
+socket, and then push putty over the top of the pins. When it
+dries, take the plug out (carefully) and "back fill" the plug from the
+pin side and push it back into its vaseline covered socket. Let it
+dry and clean up.
+</p><p>
+<img src="/static/pages/images/piroomba/powerBrd.jpg" alt="The pi - Roomba interface board" align="right" width="33%">
+There are two electrical challenges. First the serial interface to
+the rpi is 3.3v and the serial interface to the Roomba is 5v. To
+address this I simply used a voltage divider on the Roomba TxD to rpi
+RxD connection (see circuit below). The rpi TxD to Roomba RxD
+connection is fine as 3.3v seems to be enough to drive the Roomba RxD
+signal.
+</p><p>
+<img class="cow-img" src="/static/pages/images/piroomba/RooPieCircuit.png" alt="The pi - Roomba interface board circuit" width="90%">
+</p><p>
+The second challenge is that, although there 18-14v available directly
+from the Roomba battery via the serial plug, there is a 200mA poly
+fuse on that supply and the Roomba draws up to 700mA. It actually only
+draws 330 mA when running but round 420 on boot. The difference
+between what it normally draws and the specified required current is
+to drive things hanging off the USB ports. The solution was to use a
+DC to DC converter (available through Farnell in the UK) that would
+provide 400mA. This turns out to be enough to boot and so my 4
+rechargeable batteries are redundant until I put something weighty on
+the USB connections. Here is the circuit I used - there are some
+strange choices (the inductor is surface mount; the schottiky diode is
+too big ...) but these decisions were based on what I had and could
+get. The original idea was to tune the potentiometer to deliver a
+trickle charge (via a current regulator) to the batteries and have the
+the power to the pi go via a voltage regulator. This doesn't work as I
+don't seem to be able to find a voltage regulator that will take 5.45v
+down to between 4.8 and 5.2 volts. Please mail me if you have any
+suggestions.
+</p><p>
+Finally the code. I have written (most) of the Roomba Open Interface
+as a Java package that uses RXTX behind the scenes to communicate with
+the robot. In addition I have written a user interface that provides
+a "joystick" to steer the roomba, and a set of level meters that indicate
+the output from the 6 "light bump sensors":
+<img class="cow-img" src="/static/pages/images/piroomba/remoteControl.jpg" alt="my laptop running the Roo Pie remote control interface with the roomba finding the sofa.">
+<br>
+The code is in Java and uses Sockets to communicate between a computer
+running the user interface and the rpi, and RXTX to communicate
+between the rpi and the roomba.
+The code is available for download <a href="http://cfpm.org/%7Epeter/PetersSourceCode.tar">here</a> as a tar ball.
+</p>
+</section>
+</div>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width = device-width">
+<title>Chasing Pine Martens</title>
+<link rel="stylesheet" href="/theme/css/main.css">
+<link href="http://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed"/>
+<link rel="stylesheet" href="/theme/css/gatepage.css">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<!--[if IE]><script src="/theme/js/html5shiv-googlecode-com-html5.js"></script><![endif]-->
+<!--[if lt IE 7]><style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style> <link rel="stylesheet" href="/theme/css/ie-menus.css"/><![endif]-->
+<style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+<script src="/theme/js/prototype-171-min.js"></script>
+<script src="/theme/js/gatepage.js"></script>
+<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+</head>
+<body id="index" class="home">
+<div class='yui3-g-r'>
+<div id="leftColumn" class="yui3-u-1-2" style="width: 90%">
+<section id="content" class="body">
+<article>
+<header>
+<h1 class="entry-title">
+<a href="/posts/2013/08/05/chasing-pine-martens/" rel="bookmark"
+title="Permalink to Chasing Pine Martens">Chasing Pine Martens</a></h1>
+<div id="socialButtons">
+<span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=http://pi.gate.ac.uk/posts/2013/08/05/chasing-pine-martens/"
+target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+height="30" width="30"></a></span>
+<span><a href="http://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+title="Syndication feed"><img
+height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+<span>&nbsp;<a href="/posts/2013/08/05/chasing-pine-martens/#disqus_thread"
+title="Leave a comment"><img
+src="/theme/images/comment.png" height="30" width="30"></a></span>
+<span>&nbsp;<a href="/print/posts/2013/08/05/chasing-pine-martens/"
+title="Print"><img
+src="/theme/images/print.png" height="30" width="30"></a></span>
+</div> </header>
+<div class="entry-content">
+<footer class="post-info">
+<a class="article-thumb" href="/static/images/articles/chasing-pine-martens.jpg"><img
+src="/static/images/articles/thumbs/chasing-pine-martens.jpg"
+height="75" width="75" alt="chasing-pine-martens"></a>
+<span class="article-summary"><em>Battery packs for Pi-Mobility</em>.</span>
+<br/>
+Tags:<span class="tag-list"> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-08-05T00:00:00">Mon 05 August 2013,</span>
+<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer>
+<p>I'm in Bulgaria in a house at the foot of mount Vitosha, on the outskirts of
+the capital, Sofia. Sofia is home to something approaching 2 million people
+(which is more than 10% of the population of the whole country), and many
+travel in and out each week to find work in the big city. Vitosha is the lungs
+of the city, and its slopes are the perfect place to stay if you're keen to
+walk in its forests, or ski, or just get some cool air in the heat of the
+summer. <br> <a class="cow-url" href="http://en.wikipedia.org/wiki/Vitosha"><img class="cow-img" src="/static/images/vitosha-1.jpg" alt="Mount Vitosha" width="400" height="243"></a> <br> Sitting in the
+garden at dusk the other day, we spotted a couple of dark shapes scurrying
+along &mdash; pine martens! Or possibly their smaller cousin the beech marten: <br>
+<a class="cow-url" href="http://en.wikipedia.org/wiki/Beech_marten"><img class="cow-img" src="/static/images/beech-marten-1.jpg" alt="A beech marten" width="200" height="317"></a> <br> They are beautiful creatures, but quite shy,
+and they only come out after dark... You can see where this is going &mdash; I
+wonder if I can capture some images with a Pi, a motion sensor and a camera
+module?</p>
+<p>Well, first things first, I'm going to need to put it on top of next door's
+shed in the path of the night-time run that the martens make on their way to
+hunt mice or steal chicken's eggs from our neighbours. So I need a good
+battery pack...</p>
+<p>As Gray Girling points out in his excellent
+<a class="cow-url" href="http://www.amazon.co.uk/Raspberry-Pi-Manual-practical-revolutionary/dp/0857332953/">Haynes manual</a>, battery power for the Pi is harder than it looks at first
+sight. The Pi requires both fairly high current (at least for the Model B) and
+a quite stable voltage. And, as I found out when I when testing my first
+efforts, an unscheduled low voltage shutdown can corrupt the SD card image and
+leave you with an unbootable setup :-(</p>
+<p>Time for an analysis of <a class="cow-url" href="/pages/mopi.html">the perfect Pi battery pack</a>, and
+Bulgaria is the perfect place to experiment with this stuff as it's crawling
+with electronics and computing engineers (having at one time been supplier of
+around half of the USSR's computer hardware). <a class="cow-url" href="/pages/about.html#lubo">Lubo
+Bontchev</a> of <a class="cow-url" href="http://www.selcomltd.com/">Selcom custom electronics</a> has
+worked on everything from solar panels to satelites and has now built Pi.GATE
+some prototypes for hot-swap mobile Pi power. Here's the regulator circuit on
+the left and the controller on the right:</p>
+<table> <tr><td> &nbsp;&nbsp;</td><td>
+<p><a class="cow-url" href="/static/images/mopi/prototype-regulator-05.jpg"><img class="cow-img" src="/static/images/mopi/thumbs/prototype-regulator-05.jpg" alt="mopi prototype 5" width="200" height="194"></a></p>
+</td><td> &nbsp;&nbsp;&nbsp; </td><td>
+<p><a class="cow-url" href="/static/images/mopi/prototype-controller-01.jpg"><img class="cow-img" src="/static/images/mopi/thumbs/prototype-controller-01.jpg" alt="mopi prototype 1" width="270" height="195"></a></p>
+</td></tr>
+</table>
+<p>The <em>regulator</em> supplies the 5 volts at 1 amp that the Pi wants, and it has
+two input connectors and some clever circuitry to support hot-swap of battery
+packs. (In the picture we've got two packs attached, one full one and one
+discharged one, while we swap from one to the other.) The <em>controller</em>
+monitors battery levels and reports them to the Pi (over 3 binary-coded GPIO
+pins, for example) and also drives an indicator LED.</p>
+<p>Now, figuring out how to test all this stuff is a lot of hard work, so,
+natural shirker that I am, I borrowed my nephew Vlady to help. He came up with
+a great idea &mdash; why not take a picture of the indicator LED whenever the GPIO
+level monitoring code detects a change? Here he is (in a photo taken from the
+Pi cam) at the <em>Eureka!</em> moment:</p>
+<p><img class="cow-img" src="/static/images/vladi.jpg" alt="Vladimir" width="300" height="266"></p>
+<p>Nice one V, I think you've got yourself a job :-;</p>
+<p>Our first test managed to run the model B for nine hours using eight AA NiMH
+batteries (2400mAh cells) &mdash; definitely promising!</p>
+<p>Some more views of the regulator:</p>
+<table> <tr><td> &nbsp;&nbsp;</td><td>
+<p><a class="cow-url" href="/static/images/mopi/prototype-regulator-01.jpg"><img class="cow-img" src="/static/images/mopi/thumbs/prototype-regulator-01.jpg" alt="mopi prototype 1" width="200" height="170"></a></p>
+</td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<p><a class="cow-url" href="/static/images/mopi/prototype-regulator-02.jpg"><img class="cow-img" src="/static/images/mopi/thumbs/prototype-regulator-02.jpg" alt="mopi prototype 2" width="200" height="155"></a></p>
+</td></tr> <tr><td> &nbsp;&nbsp;</td><td>
+<p><a class="cow-url" href="/static/images/mopi/prototype-regulator-03.jpg"><img class="cow-img" src="/static/images/mopi/thumbs/prototype-regulator-03.jpg" alt="mopi prototype 3" width="200" height="203"></a></p>
+</td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<p><a class="cow-url" href="/static/images/mopi/prototype-regulator-04.jpg"><img class="cow-img" src="/static/images/mopi/thumbs/prototype-regulator-04.jpg" alt="mopi prototype 4" width="200" height="233"></a></p>
+</td></tr>
+</table>
+<p>Now, where have those pine martens got to?</p>
+<p><b><a class="cow-url" href="/pages/mopi.html">Read the main article</a>.</b></p>
+<br/> <br/>
+</html>
