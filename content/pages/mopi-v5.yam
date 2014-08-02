@@ -8,27 +8,11 @@ _Hot-swap Mobile Power for the Pi_
 _%(http://pi.gate.ac.uk/pages/about.html#hamish, Hamish Cunningham)
 August 2014--..._
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %contents
 
 %(images/mopi/logo-heli-1.png,
 %image(images/mopi/logo-heli-1-200x150.png, MoPi Heli Logo, 200, 150))
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%1 Versions
-
-MoPi has been through four versions so far:
-
-# the initial %(images/mopi/thumbs/prototype-regulator-05.jpg, prototype)
-  (with separate regulator and controller boards)
-# the almost-fits-in-a-pibow
-  %(images/mopi/proto2-01.jpg, prototype)
-# the pre-production Kickstater 
-  %(images/mopi/closeups/1.jpg, prototype)
-# the Kickstarter
-  %(images/mopi/closeups/2.jpg, delivery board)
-
-Version 4. is a production quality board, and is available via the
-%(http://pi.gate.ac.uk/pages/get-mopi.html, pre-order page).
 
 This page discusses candidate requirements for MoPi Version 5, which is
 intended to be a retail version (or versions -- we will probably move to
@@ -93,3 +77,24 @@ input then a wireless powered MoPi should be straightforward?
 
 - In-situ firmware re-flash. (Probably too expensive.)
 - Persistent config data. (Probably too expensive.)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Versions
+
+MoPi has been through four versions so far:
+
+# the initial %(images/mopi/thumbs/prototype-regulator-05.jpg, prototype)
+  (with separate regulator and controller boards)
+# the almost-fits-in-a-pibow
+  %(images/mopi/proto2-01.jpg, prototype)
+# the pre-production Kickstater 
+  %(images/mopi/closeups/1.jpg, prototype)
+# the Kickstarter
+  %(images/mopi/closeups/2.jpg, delivery board)
+
+Version 4. is a production quality board, and is available via the
+%(http://pi.gate.ac.uk/pages/get-mopi.html, pre-order page).
+
+MoPi Version 5 will be a retail version (or versions -- we will probably move
+to several different models at this point).
