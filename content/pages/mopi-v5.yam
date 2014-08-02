@@ -70,3 +70,8 @@ TODO
   consistent power to MoPi when in UPS-type configurations
 - integration in host board for Pi Compute Module (Mobile Pi Embedded --
   MoPiE)
+
+The 60 second power-on delay is too conservative. Let's remove it.
+
+It is quite frequent to get a blinking source amber LED when there is no power
+on a particular source (even with no power connected at all).
