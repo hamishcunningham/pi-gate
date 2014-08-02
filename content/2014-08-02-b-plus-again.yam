@@ -13,5 +13,10 @@ CPU), and not on the CPU itself. You can see this here:
 So we're good to go -- initial indications are that the B+ is an even better
 platform for mobile power (and %(pages/mopi.html, MoPi)) than the Model B...
 
+*PS* if you fire up a B+ and discover that your USB keyboard doesn't work,
+note that you need the most recent operating systems. One easy way to get one
+is to download a %(http://www.raspberrypi.org/downloads/, new copy of NOOBS)
+and unzip it onto a micro-SD card.
+
 %meta(summary=MoPi and the Model B+ Pi, tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
 *%(pages/mopi.html, Read the main article).*

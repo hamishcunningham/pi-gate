@@ -13,11 +13,13 @@ From a mobile power point of view the B+ will perform a bit better than the B
 switched-mode supply, and with the revamp and extension of the USB subsystem
 they've also improved power handling there.
 
+%/*
 There's one caveat to using the B+ with MoPi, which is that left to its own
 devices the battery terminal connector will rest on the CPU, which has been
 repositionned. That will bring a risk of heat damage to the connector (and
 possibly overheating of the CPU), so a small collar or shim will need to be
 used to raise MoPi by a couple of millimeters.
+%*/
 
 I've a couple of Model B+ boards and will post some pics in a few days...
 
