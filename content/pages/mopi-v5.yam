@@ -51,6 +51,12 @@ also up to e.g. 18V) which comes and goes. When present it should trickle
 charge the batteries; when absent batteries should be used to power the Pi in
 the normal way.
 
+*Which batteries?!* We've worked hard to support many different types of
+battery and non-battery as viable input supplies. We can't do this for
+charging though -- we should pick whatever configuration makes best sense and
+support only that. (E.g. multiples of 4 NiMH, or lead acid, or some
+pre-packaged LiPo.)
+
 *Wireless power.* This technology will likely be huge -- IKEA are reported to
 be building slots into furniture to take the devices, and McDonalds
 incorporate coils in their restaurants in several countries. If we support 5V
