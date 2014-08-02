@@ -38,40 +38,58 @@ several different models at this point).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Candidate Requirements
 
-*Pi models.* Support the Compute Module. Improve support for the B+ by
-avoiding resting on C1. Continue to support the Models A and B.
+*All Pi models.* Support the Compute Module. Improve support for the B+ by
+avoiding resting on C1. Continue to support the Models A and B. This means:
 
-TODO
+- 3A max output. (The B+ will supply up to 2A over its USB connections, and
+  requires up to 1A for other components.)
+- More flexible / lower cost GPIO connection. We need only 6 pins now, and
+  might use a small low-profile connector coupled with an optional "bus board"
+  to allow stacking of additional boards as required (with versions for both
+  A/B and B+).
+- For the compute module we should copy the open developer host board and add
+  MoPi functionality to it.
+- Switch and LED's to be side-facing (to support both A/B and B+).
 
-- 5V input
-- wireless charging
-- charging
-  - UPS
-  - laptop style
-  - solar
-- 2A
-- stacking bus board
-- remoting pads (with holes) for switch and LEDs
-- switch and LED's to be side-facing
+*5V input.* If we support 5V input then we can support wireless charging, and
+more battery pack configurations. If we support input voltages down to 3.7V we
+can support single LiPo sources.
 
-- solar, ups, etc.
-  - solar-assisted
-  - solar plus battery
-  - ups: external charger
+*Charging.* A common user requirement is charging, usually for applications
+involving one or more of:
 
-- when current-limited input means <5V out of the regulator (e.g. solar
-  panels) microcontroller should refuse to power the Pi (else powers at e.g.
-  2.5V)... so LEDs should respond to current, as well as voltage
+- uninterruptible power
+- solar power
+- laptop-style operation
 
-- halt script after fs unmount in rc0.d to ping MoPi (halt after 45 secs
-  anyhow)
+In each case there is a mains-derived or solar-derived input (often 5V but
+also up to e.g. 18V) which comes and goes. When present it should trickle
+charge the batteries; when absent batteries should be used to power the Pi in
+the normal way.
 
-- optional 3.3V feed from the Pi to the microcontroller to maintain
-  consistent power to MoPi when in UPS-type configurations
-- integration in host board for Pi Compute Module (Mobile Pi Embedded --
-  MoPiE)
+*Wireless power.* This technology will likely be huge -- IKEA are reported to
+be building slots into furniture to take the devices, and McDonalds
+incorporate coils in their restaurants in several countries. If we support 5V
+input then a wireless powered MoPi should be straightforward?
 
-The 60 second power-on delay is too conservative. Let's remove it.
+*Incremental improvements.*
 
-It is quite frequent to get a blinking source amber LED when there is no power
-on a particular source (even with no power connected at all).
+- Remoting pads (with holes) for switch and LEDs.
+- When a current-limited input is attached and results in <5V out of the
+  regulator (e.g. solar panels during cloudy spells), the microcontroller
+  should refuse to power the Pi. (Otherwise we can see situations where MoPi
+  tries to supply 5V, fails, and ends up sending an inadequate supply to the
+  Pi.) So the input LEDs (and status sensing) should respond to current, as
+  well as voltage.
+- Add a halt script after fs unmount in rc0.d to ping MoPi and say "halt now".
+  (Halt after 45 secs anyhow if the ping doesn't come.)
+- The 3.3V feed on the Pi should be used to power the microcontroller to
+  maintain consistent power to MoPi when in UPS-type configurations.
+- The 60 second power-on delay is too conservative. Let's remove it.
+- It is quite frequent to get a blinking source amber LED when there is no
+  power on a particular source (even with no power connected at all).
+
+*Nice to have...*
+
+- In-situ firmware re-flash. (Probably too expensive.)
+- Persistent config data. (Probably too expensive.)
