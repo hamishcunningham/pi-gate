@@ -1,0 +1,17 @@
+MoPi Running the Pi Model B+
+
+I'm writing this post on a 
+%(http://www.raspberrypi.org/introducing-raspberry-pi-model-b-plus/, Model B
+Plus Pi) :-)
+
+And the good news is that there's no issue with the new CPU position on the
+B+. MoPi's connection terminals actually sit on C1 (a large capacitor near the
+CPU), and not on the CPU itself. You can see this here:
+
+%%% YOUTUBE BPLUS CLIP HERE
+
+So we're good to go -- initial indications are that the B+ is an even better
+platform for mobile power (and %(pages/mopi.html, MoPi)) than the Model B...
+
+%meta(summary=MoPi and the Model B+ Pi, tags=kickstarter\,batteries\,mo-pi\,pi-tronics\,pi\,raspberrypi\,gate)
+*%(pages/mopi.html, Read the main article).*
