@@ -1,0 +1,72 @@
+MoPi: Version 5
+
+_Hot-swap Mobile Power for the Pi_
+%meta(summary=Hot-swap Mobile Power for the Pi)
+
+%1* \*\*\*\* Please don't link or distribute this page \*\*\*\*
+
+_%(http://pi.gate.ac.uk/pages/about.html#hamish, Hamish Cunningham)
+August 2014--..._
+
+%contents
+
+%(images/mopi/logo-heli-1.png,
+%image(images/mopi/logo-heli-1-200x150.png, MoPi Heli Logo, 200, 150))
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Versions
+
+MoPi has been through four versions so far:
+
+# the initial %(images/mopi/thumbs/prototype-regulator-05.jpg, prototype)
+  (with separate regulator and controller boards)
+# the almost-fits-in-a-pibow
+  %(images/mopi/proto2-01.jpg, prototype)
+# the pre-production Kickstater 
+  %(images/mopi/closeups/1.jpg, prototype)
+# the Kickstarter
+  %(images/mopi/closeups/2.jpg, delivery board)
+
+Version 4. is a production quality board, and is available via the
+%(http://pi.gate.ac.uk/pages/get-mopi.html, pre-order page).
+
+This page discusses candidate requirements for MoPi Version 5, which is
+intended to be a retail version (or versions -- we will probably move to
+several different models at this point).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Candidate Requirements
+
+*Pi models.* Support the Compute Module. Improve support for the B+ by
+avoiding resting on C1. Continue to support the Models A and B.
+
+TODO
+
+- 5V input
+- wireless charging
+- charging
+  - UPS
+  - laptop style
+  - solar
+- 2A
+- stacking bus board
+- remoting pads (with holes) for switch and LEDs
+- switch and LED's to be side-facing
+
+- solar, ups, etc.
+  - solar-assisted
+  - solar plus battery
+  - ups: external charger
+
+- when current-limited input means <5V out of the regulator (e.g. solar
+  panels) microcontroller should refuse to power the Pi (else powers at e.g.
+  2.5V)... so LEDs should respond to current, as well as voltage
+
+- halt script after fs unmount in rc0.d to ping MoPi (halt after 45 secs
+  anyhow)
+
+- optional 3.3V feed from the Pi to the microcontroller to maintain
+  consistent power to MoPi when in UPS-type configurations
+- integration in host board for Pi Compute Module (Mobile Pi Embedded --
+  MoPiE)

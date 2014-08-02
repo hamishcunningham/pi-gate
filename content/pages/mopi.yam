@@ -331,6 +331,9 @@ For more details, see %(#software, the software) below.
 %image(images/mopi/packet/img-20140421-113013-500x391.jpg, Packaging 4, 500,
 391))
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Wh...?
+
 -----------------------------------------------------------------------------
 %#faq-gpio-pins
 *>>> Which GPIO pins does MoPi use?*
@@ -604,10 +607,40 @@ reboot. Sometimes the Python SMBus module appears not to load correctly.
 
 *>>> How do I add a remote power switch?*
 
-%%% TODO copy that post into this page somewhere
+There's a %(#remote-power-switch, description here).
 
-There's a %(http://pi.gate.ac.uk/posts/2014/07/10/mopi-remote-switch/,
-description on the blog).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Pi Models: A, B, B+, Compute Module
+
+MoPi will work fine with the Raspberry Pi models A, B, and the
+%(http://www.raspberrypi.org/introducing-raspberry-pi-model-b-plus/, Model B
+Plus Pi) released summer 2014. (We don't currently support the Compute Module
+directly, but we're working on it!)
+
+The Model B+ is an evolution on the original Model B; it looks like this:
+
+%image(images/model-b-plus-500x337.jpg, Model B+ Pi, 500, 337)
+
+From a mobile power point of view the B+ will perform a bit better than the B
+-- they're replaced the rather wasteful LDO regulator of the original with a
+switched-mode supply, and with the revamp and extension of the USB subsystem
+they've also improved power handling there.
+
+And the good news is that there's no issue with the new CPU position on the
+B+. MoPi's connection terminals actually sit on C1 (a large capacitor near the
+CPU), and not on the CPU itself. You can see this here:
+
+%%% YOUTUBE BPLUS CLIP HERE
+
+So we're good to go -- initial indications are that the B+ is an even better
+platform for mobile power (and MoPi) than the Model B...
+
+*PS* If you fire up a B+ with an operating system you've been using on one of
+the older models, you may discover that e.g. your USB keyboard doesn't work:
+you need the most recent operating systems to run the B+. One easy way to get
+one is to download a %(http://www.raspberrypi.org/downloads/, new copy of
+NOOBS) and unzip it onto a micro-SD card.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -664,6 +697,14 @@ Kickstarter backers in June 2014). Here's what version 4 looks like:
 
 %(images/mopi/version-4-bottom.jpg,
 %image(images/mopi/version-4-bottom-500x375.jpg, Version 4 bottom, 500, 375))
+
+And a couple of close-ups:
+
+%(images/mopi/closeups/2.jpg, 
+%image(images/mopi/closeups/2-500x408.jpg, Version 4 closeup 2, 500, 408))
+
+%(images/mopi/closeups/1.jpg,
+%image(images/mopi/closeups/1-500x344.jpg, Version 4 closeup 1, 500, 344))
 
 Here's what the level 3 revision looked like (_without_ the wiring connector
 or the GPIO connector or the power switch, which were soldered by hand after
@@ -1880,14 +1921,48 @@ distribution.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Kickstarter Backer Projects
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Night Camera
+
 Thomas Farber's night camera:
 
 %image(images/mopi/thomas-farber-night-camera.jpg, Thomas Farber night camera,
 500, 281)
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 K9
+
 Twisted Monk's K9:
 
 %image(images/mopi/twisted-monk-k9-600x450.jpg, Twisted Monk K9, 600, 450)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#remote-power-switch
+%3 Remote Switch
+
+Daniel T, one of our Kickstarter backers, wanted to fit a remote power switch
+to his board. (It has one fitted, but if you're building something with a case
+and need the switch to be somewhere away from the Pi and/or MoPi then there
+are a couple of remoting pads on MoPi for the purpose.) Here's the result:
+
+%%% YOUTUBE REMOTE SWITCH CLIP HERE
+
+Daniel hasn't got the soldering bug yet :-) so I fitted one for him, and here
+are the pics...
+
+It is an easy job -- just wire up an SPST push-to-make switch to the two pads
+next to the power switch:
+
+%%% %(images/mopi/remote-switch/remote-switch-1.jpg,
+%%% %image(images/mopi/remote-switch/remote-switch-1-500x375.jpg, MoPi remote switch, 500, 375))
+
+%(images/mopi/remote-switch/remote-switch-3.jpg,
+%image(images/mopi/remote-switch/remote-switch-3-500x375.jpg, MoPi remote switch, 500, 375))
+
+And voila:
+
+%(images/mopi/remote-switch/remote-switch-2.jpg,
+%image(images/mopi/remote-switch/remote-switch-2-500x375.jpg, MoPi remote switch, 500, 375))
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
