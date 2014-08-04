@@ -1,15 +1,15 @@
-SolarMoPi
+Solar MoPi
 
 In some of the sunny days we've had this summer, we've managed to try out
-hooking up Solar Panels as one of the power input to the MoPi. The results
-are pretty good. A fairly decent panel setup can power even the Model B
+hooking up Solar Panels as one of the power inputs to MoPi. The results are
+pretty good. A fairly decent panel setup can power even the Model B
 completely. In lower light levels or with less powerful panels, they can help
 increase battery life. We managed up to 19 hours with a Model B and 8 AAs by
 shutting down overnight:
 
 %image(images/mopi/graphs/solar/mopisolar.2.png)
 
-That's pretty good. Those spikes are when the panels over power the batteries
+That's pretty good. Those spikes are when the panels overpower the batteries
 completely. The next step is to work out how to charge in those conditions.
 
 *%(pages/mopi.html#solar, Read more in the main article!)*

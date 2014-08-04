@@ -1712,8 +1712,8 @@ It was practical to setup 9, which I put into three sets of three panels for
 A, I figured they might supplement the batteries some and increase how long I
 could run on a single pack. Which to be fair, they did... 
 
-After configuring the input on the MoPi to non-battery source using
-^mopi^, a Model A with 8 older AAs and Wi-fi:
+After configuring the input on the MoPi to non-battery source using the
+^mopi^ command, a Model A with 8 older AAs and Wi-fi does this:
 %image(images/mopi/graphs/solar/mopia1.8old.wifi.2.png)
 
 10 and a half hours, which agrees with the time above. Now with the panels:
@@ -1722,10 +1722,10 @@ After configuring the input on the MoPi to non-battery source using
 10 hours, and *45 minutes*! A whole extra 15 minutes! To be fair as well,
 these batteries probably sat a bit after charging before I used them for this
 test, so it does seem to help out some, just don't count on it. I suspect
-using 10 panels to up the voltage (geting 20 V) would have helped a bit as
+using 10 panels to up the voltage (getting 20 V) would have helped a bit as
 well.
 
-In any event, I know we can do better. See below the outside of our offices:
+In any event, I know we can do better. See below the outside of our workshop:
 
 %(images/mopi/solar/DSCF0078.JPG, %image(images/mopi/solar/small/DSCF0078.JPG,
 Beefy Panels))
@@ -1734,8 +1734,9 @@ The eyes of that smile are made up of
 %(http://www.maplin.co.uk/p/10w-solar-panel-kit-l14br, Maplin 10 W) panels,
 rated at 17.5 V or 580 mA. And we have two of them. (We also live in Britain
 where it's not particularly sunny. That's why we have two of them.) They're
-connected in parallel to one of the inputs of a Model B. (You can also see the
-Pi is connected to Ethernet, this is so that it keeps the time...)
+connected in parallel to one of the inputs of a MoPi powering a Model B. (You
+can also see the Pi is connected to Ethernet -- this is so that it keeps the
+time...)
 
 %(images/mopi/solar/DSCF0088.JPG, %image(images/mopi/solar/small/DSCF0088.JPG,
 Panel Specs))
@@ -1752,7 +1753,7 @@ past the 8 hours the 8 AAs it's also attached to would suggest. Let's see...
 %image(images/mopi/graphs/solar/mopisolar.1.png)
 
 Nearly 19 hours! That's pretty good! We can see huge spikes in the graph where
-we're in direct sunlight and the panels over power the batteries. At this
+we're in direct sunlight and the panels overpower the batteries. At this
 point, with some clever circuitry, we could store that energy. Unfortuantely
 that's something we've not sorted, but now we know it's probably doable.
 
@@ -1767,14 +1768,16 @@ plotting reasons I left it off. Over 19 hours!
 You can also see a slight increase in voltage from 24 to 26 hours, which I
 believe are the panels coming into direct light providing more current to
 offset the draw from the batteries. A Model A would have been entirely solar
-powered that day. It's definetely feasible to power a Pi off solar.
+powered that day. It's definitely feasible to power a Pi off solar.
 
-So to summarize. Bigger panels are better, but even little ones can help. Get
-the panels positioned so that they're in direct sunlight for as long as
-possible. Provided the panels are powerful enough, they will still help even
-out of direct light, but it's exponential. It'd be good to charge the
-batteries when there's extra power, because there clearly is here. We'll let
-you know if we sort it.
+So to summarize:
+
+Bigger panels are better, but even little ones can help. Get the panels
+positioned so that they're in direct sunlight for as long as possible.
+Provided the panels are powerful enough, they will still help even out of
+direct light, but it's exponential. It'd be good to charge the batteries when
+there's extra power, because there clearly is here. We'll let you know if we
+sort it.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
