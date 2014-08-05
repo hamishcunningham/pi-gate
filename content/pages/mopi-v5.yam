@@ -25,12 +25,12 @@ several different models at this point).
 *All Pi models.* Support the Compute Module. Improve support for the B+ by
 avoiding resting on C1. Continue to support the Models A and B. This means:
 
-- 3A max output. (The B+ will supply up to 2A over its USB connections, and
-  requires up to 1A for other components.)
+- 2A max output. (The B+ will supply close to 2A over its USB connections, and
+  also requires power for other components.)
 - More flexible / lower cost GPIO connection. We need only 6 pins now, and
   might use a small low-profile connector coupled with an optional "bus board"
   to allow stacking of additional boards as required (with versions for both
-  A/B and B+).
+  A/B and B+). For better ground connectivity we might also go with 10 pins.
 - For the compute module we should copy the open developer host board and add
   MoPi functionality to it.
 - Switch and LED's to be side-facing (to support both A/B and B+).
@@ -73,16 +73,18 @@ input then a wireless powered MoPi should be straightforward?
   well as voltage.
 - Add a halt script after fs unmount in rc0.d to ping MoPi and say "halt now".
   (Halt after 45 secs anyhow if the ping doesn't come.)
+- Add a boot complete signal from simbamond to MoPi. The 60 second power-on
+  delay is too conservative. Let's remove it.
 - The 3.3V feed on the Pi should be used to power the microcontroller to
   maintain consistent power to MoPi when in UPS-type configurations.
-- The 60 second power-on delay is too conservative. Let's remove it.
 - It is quite frequent to get a blinking source amber LED when there is no
   power on a particular source (even with no power connected at all).
 
 *Nice to have...*
 
 - In-situ firmware re-flash. (Probably too expensive.)
-- Persistent config data. (Probably too expensive.)
+- Persistent config data. (Probably too expensive. Also risky when the
+  microcontroller can get into inconsistent states.)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
