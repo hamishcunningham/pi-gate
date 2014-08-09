@@ -14,9 +14,78 @@ August 2014--..._
 %(images/mopi/logo-heli-1.png,
 %image(images/mopi/logo-heli-1-200x150.png, MoPi Heli Logo, 200, 150))
 
-This page discusses candidate requirements for MoPi Version 5, which is
-intended to be a retail version (or versions -- we will probably move to
-several different models at this point).
+This page discusses use cases and candidate requirements for MoPi Version 5,
+which is intended to be a retail version (or versions -- we will probably move
+to several different models at this point).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Use Cases
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Laptop, UPS
+
+Two very common uses to which our backers wish to put MoPi are:
+
+- laptop-style devices (including tablets, portable music players and the
+  like)
+- UPS devices (catering for intermittent power disruption)
+
+A UPS and the power subsystem of a laptop actually behave in very similar ways
+-- when there is external power it is used to both power the device and charge
+the internal batteries; when the power drops the batteries take over. (If
+there is a difference between the two, it is that for a laptop fast charging
+is an advantage, whereas for a UPS this doesn't matter too much.)
+
+For laptops in particular a reasonably accurate estimate of remaining battery
+life is required. Hot swap of batteries is also an advantage.
+
+Implications:
+
+- we can only support these use cases with a defined battery configurations,
+  and not one that requires external charging (which rules out the 8x NiMH
+  configuration)
+- we should support several configurations of different weight -- a user may
+  want to power a whole laptop rig and have plenty of space for heavy
+  batteries, or just power a Model A+ with a small LCD and a few buttons on it
+  for a music player, for example)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Wireless Power
+
+This is a somewhat artificial use case, which is more technology push than
+user pull, but it seems likely that wireless charging will become widespread
+(you can already use it in some big restaurant chains in some countries, and
+IKEA is rumoured to be building slots for charger coils into new furniture
+designs).
+
+In addition Würth Electronics (under contract from TI) are keen to see
+development of 3rd-party boards incorporating their coils.
+
+The main choice here is between
+
+- an integrated board that combines both circuitry from MoPi and from the
+  Würth
+- a composite device that includes two MoPi and a 3rd-party client-side coil
+  as separate circuits 
+
+In the latter case we need to support 5V input; in the former we have quite a
+difficult integration task due to the sophistication of the components on the
+Würth example board (which is a 4-layer board with microscopic components!).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Implementation Notes
+
+In some cases we will need to define the battery set. We have a choice of
+NiMH, Lead Acid (for UPS or solar devices) and LiPo.
+
+Several use cases will be easier to cater for if we put a micro USB on MoPi
+and mandate the connection of mains supplies there. We might even support
+options like solar and wireless like this (as there are solar rigs available
+now with 5V regulators built in, or we might sell a simple 5V regulator for
+the 18V panels).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
