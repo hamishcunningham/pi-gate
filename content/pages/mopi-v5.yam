@@ -1,12 +1,12 @@
-MoPi: Version 5
+MoPi++: Version 5 and Beyond
 
 _Hot-swap Mobile Power for the Pi_
 %meta(summary=Hot-swap Mobile Power for the Pi)
 
 %1* \*\*\*\* Please don't link or distribute this page \*\*\*\*
 
-_%(http://pi.gate.ac.uk/pages/about.html#hamish, Hamish Cunningham)
-August 2014--..._
+_%(http://pi.gate.ac.uk/pages/about.html#hamish, Hamish Cunningham), Lubo,
+Fred, August 2014--..._
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %contents
@@ -17,6 +17,34 @@ August 2014--..._
 This page discusses use cases and candidate requirements for MoPi Version 5,
 which is intended to be a retail version (or versions -- we will probably move
 to several different models at this point).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1 Versions
+
+Let's call the current version *MoPi Classic*, and upcoming future version(s)
+*MoPi++*?
+
+MoPi has been through four versions so far:
+
+# the initial %(images/mopi/thumbs/prototype-regulator-05.jpg, prototype)
+  (with separate regulator and controller boards)
+# the almost-fits-in-a-pibow
+  %(images/mopi/proto2-01.jpg, prototype)
+# the pre-production Kickstarter 
+  %(images/mopi/closeups/1.jpg, prototype)
+# the Kickstarter
+  %(images/mopi/closeups/2.jpg, delivery board) (in both stackable and
+  low-profile variants)
+
+Version 4. (*MoPi Classic*) is a production quality board, and is available
+via the %(http://pi.gate.ac.uk/pages/get-mopi.html, pre-order page).
+
+MoPi Version 5 (*MoPi++*) will be a retail version (or version_s_ -- we will
+probably move to several different models at this point).
+
+If there is demand we may maintain availability of MoPi Classic even when
+MoPi++ variants become available.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -52,6 +80,19 @@ Implications:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Solar
+
+The user wants to power a Pi from solar panels. Probably they also want a
+battery backup for when the sun goes in or down, and then they naturally want
+to also charge the batteries when there is excess power avaiable.
+
+A variant of this use case is where mains power is also available. Now the
+user wants to use all the solar power that is available, but if there is
+insufficient current then to supplement it with mains power. Again a battery
+backup will need to be kept charged.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Wireless Power
 
 This is a somewhat artificial use case, which is more technology push than
@@ -73,6 +114,30 @@ The main choice here is between
 In the latter case we need to support 5V input; in the former we have quite a
 difficult integration task due to the sophistication of the components on the
 Würth example board (which is a 4-layer board with microscopic components!).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Multiple Boards, Multiple Cases, Multiple Physical Interfaces
+
+Inevitably people want to use MoPi with other add-on boards and in lots of
+different types of cases. They also want to put the physical user interface
+components (the power switch and LEDs) in other places.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 The World and Her Dog
+
+We shouldn't forget what is distinctive and attractive about MoPi Classic.
+Most of our backers didn't buy batteries from us -- they use their own, or
+they plug in solar panels, or an old laptop power supply, or their car
+cigarette lighter, or etc.
+
+We need to continue to support diverse supplies, hot swap, and all the rest.
+Indeed in some cases we should try and improve on current facilities.
+
+Implication: where we start (in MoPi++) to support use cases which will only
+work for specific configurations we need to layer these on top of the
+underlying flexible engine that we have in MoPi Classic.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,24 +219,3 @@ input then a wireless powered MoPi should be straightforward?
 - In-situ firmware re-flash. (Probably too expensive.)
 - Persistent config data. (Probably too expensive. Also risky when the
   microcontroller can get into inconsistent states.)
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%1 Versions
-
-MoPi has been through four versions so far:
-
-# the initial %(images/mopi/thumbs/prototype-regulator-05.jpg, prototype)
-  (with separate regulator and controller boards)
-# the almost-fits-in-a-pibow
-  %(images/mopi/proto2-01.jpg, prototype)
-# the pre-production Kickstater 
-  %(images/mopi/closeups/1.jpg, prototype)
-# the Kickstarter
-  %(images/mopi/closeups/2.jpg, delivery board)
-
-Version 4. is a production quality board, and is available via the
-%(http://pi.gate.ac.uk/pages/get-mopi.html, pre-order page).
-
-MoPi Version 5 will be a retail version (or versions -- we will probably move
-to several different models at this point).
