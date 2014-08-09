@@ -117,6 +117,10 @@ In the latter case we need to support 5V input; in the former we have quite a
 difficult integration task due to the sophistication of the components on the
 Würth example board (which is a 4-layer board with microscopic components!).
 
+*Note*: this is likely to be mainly a _charging_ technology; i.e. it only
+really makes sense when we have a specific device with integrated batteries
+and charging.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 Multiple Boards, Multiple Boxes, Multiple Physical Interfaces
