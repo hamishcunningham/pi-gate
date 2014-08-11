@@ -19,6 +19,30 @@ which is intended to be a retail version (or versions -- we will probably move
 to several different models at this point).
 
 
+-----------------------------------------------------------------------------
+TODO INCOMING:
+
+re. 3.3V power from the Pi to MoPi
+
+The main scenario for the 3.3 feed would be so that you could
+configure/query the MoPi without having to have batteries connected.
+Then you could have I2C commands to start/stop the regulator, i.e. a
+software power button.
+
+A 5V micro USB on the MoPi itself that supplied the 3.3V to the
+micro-controller would probably do this as well. However, because of
+casing issues it still might not always be used. For expert users maybe
+a solder bridge/jumper on the board that could be used to enable a 3.3
+feed from the Pi to the MoPi? I know for example that my Lego cases
+would probably need to be redesigned heavily to accommodate a 5V feed on
+the MoPi board.
+
+Maybe a diode could be used to help reduce the circularity so that the
+3.3 only flows from the Pi to the MoPi.
+-----------------------------------------------------------------------------
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Versions
 
