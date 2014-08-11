@@ -99,7 +99,7 @@ gateupload: fix-rss-feeds minify
           --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
 s3upload: fix-rss-feeds minify
 	echo '************************'
-	echo s3cmd sync -r output/ --exclude '.htaccess' --exclude='.htpasswd' \
+	s3cmd sync -r output/ --exclude '.htaccess' --exclude='.htpasswd' \
           --delete-removed s3://pi.gate.ac.uk/
 	echo '************************'
 

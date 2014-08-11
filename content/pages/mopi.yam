@@ -2033,14 +2033,15 @@ Twisted Monk's K9:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#zach-balancer
 %3 Self-Balancer
 
 %(https://twitter.com/ZacharyIgielman, Zachary Igielman)'s
-self-balancing gizmo with MoPi and %(http://ryanteck.uk/, RyanTech)'s motor
+self-balancing gizmo with MoPi and %(http://ryanteck.uk/, RyanTeck)'s motor
 controller:
 
-%(zach-balancer.jpg, %image(zach-balancer-500x670.jpg, Zach's self-balancer,
-500, 670))
+%(images/mopi/zach-balancer.jpg, %image(images/mopi/zach-balancer-500x670.jpg,
+Zach's self-balancer, 500, 670))
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
