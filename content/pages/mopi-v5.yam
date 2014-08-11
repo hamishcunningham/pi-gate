@@ -19,30 +19,6 @@ which is intended to be a retail version (or versions -- we will probably move
 to several different models at this point).
 
 
------------------------------------------------------------------------------
-TODO INCOMING:
-
-re. 3.3V power from the Pi to MoPi
-
-The main scenario for the 3.3 feed would be so that you could
-configure/query the MoPi without having to have batteries connected.
-Then you could have I2C commands to start/stop the regulator, i.e. a
-software power button.
-
-A 5V micro USB on the MoPi itself that supplied the 3.3V to the
-micro-controller would probably do this as well. However, because of
-casing issues it still might not always be used. For expert users maybe
-a solder bridge/jumper on the board that could be used to enable a 3.3
-feed from the Pi to the MoPi? I know for example that my Lego cases
-would probably need to be redesigned heavily to accommodate a 5V feed on
-the MoPi board.
-
-Maybe a diode could be used to help reduce the circularity so that the
-3.3 only flows from the Pi to the MoPi.
------------------------------------------------------------------------------
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Versions
 
@@ -166,9 +142,7 @@ suffered erosion due to acid rain degrading the vegetation that normally binds
 the soil. My brother volunteers as part of a project that began by analysing
 the conditions causing the erosion, and then reseeded the area with new
 vegetation. The project uses a set of dip test wells which contain sensors
-that read 
-
-XXX
+that read and store data about water conditions periodically.
 
 Project staff visit once a week to collect the data from the sensors. We can
 envisage a Pi-based solution using MoPi, if we can attain e.g. 2-week run-time
@@ -272,6 +246,18 @@ pre-packaged LiPo.)
 - [_Rejected? Not relevant if we add micro USB 5V input?_] The 3.3V feed on
   the Pi should be used to power the microcontroller to maintain consistent
   power to MoPi when in UPS-type configurations.
+  - Notes from Fred:
+    - The main scenario for the 3.3 feed would be so that you could
+      configure/query the MoPi without having to have batteries connected.
+      Then you could have I2C commands to start/stop the regulator, i.e. a
+      software power button.
+    - A 5V micro USB on the MoPi itself that supplied the 3.3V to the
+      micro-controller would probably do this as well. However, because of
+      casing issues it still might not always be used. For expert users maybe
+      a solder bridge/jumper on the board that could be used to enable a 3.3
+      feed from the Pi to the MoPi? I know for example that my Lego cases
+      would probably need to be redesigned heavily to accommodate a 5V feed on
+      the MoPi board.
 - It is quite frequent to get a blinking source amber LED when there is no
   power on a particular source (even with no power connected at all).
 - It is quite frequent in development to wish that the power inputs would
