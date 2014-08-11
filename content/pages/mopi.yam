@@ -2023,12 +2023,25 @@ Thomas Farber's night camera:
 %image(images/mopi/thomas-farber-night-camera.jpg, Thomas Farber night camera,
 500, 281)
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %3 K9
 
 Twisted Monk's K9:
 
 %image(images/mopi/twisted-monk-k9-600x450.jpg, Twisted Monk K9, 600, 450)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3 Self-Balancer
+
+%(https://twitter.com/ZacharyIgielman, Zachary Igielman)'s
+self-balancing gizmo with MoPi and %(http://ryanteck.uk/, RyanTech)'s motor
+controller:
+
+%(zach-balancer.jpg, %image(zach-balancer-500x670.jpg, Zach's self-balancer,
+500, 670))
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#remote-power-switch
