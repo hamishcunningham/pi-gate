@@ -131,6 +131,30 @@ components (the power switch and LEDs) in other places.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2 Remote Monitoring, e.g. Kinder Scout
+
+Several backers have described remote monitoring applications, e.g. one whose
+Pi wakes up every few hours and takes a photo of a building site.
+
+There are also many scientific and environmental applications. Kinder Scout is
+a hill in the English Penines covered with a large area of peat bog that has
+suffered erosion due to acid rain degrading the vegetation that normally binds
+the soil. My brother volunteers as part of a project that began by analysing
+the conditions causing the erosion, and then reseeded the area with new
+vegetation. The project uses a set of dip test wells which contain sensors
+that read 
+
+XXX
+
+Project staff visit once a week to collect the data from the sensors. We can
+envisage a Pi-based solution using MoPi, if we can attain e.g. 2-week run-time
+without a huge battery.
+
+Another requirement here is accurate time keeping -- perhaps available if we
+hook up MoPi's RTC properly?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2 The World and Her Dog
 
 We shouldn't forget what is distinctive and attractive about MoPi Classic.
