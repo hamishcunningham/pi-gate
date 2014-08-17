@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.9285185"
+     inkscape:zoom="1.3636685"
      inkscape:cx="372.04724"
      inkscape:cy="903.04008"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="876"
+     inkscape:window-width="1280"
+     inkscape:window-height="770"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="1"
      inkscape:window-maximized="1"
      inkscape:snap-grids="true">
     <inkscape:grid
@@ -49,7 +49,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -64,16 +64,6 @@
        xlink:href="file:///home/hamish/fog/fotm/posters/b+-high-res.jpg"
        height="89.800072"
        width="134.50658" />
-    <image
-       y="90.655495"
-       x="606.99133"
-       id="image3295"
-       xlink:href="file:///home/hamish/fog/fotm/posters/madlab-jam-video.jpg"
-       height="132.27814"
-       width="131.99489"
-       inkscape:export-filename="/home/hamish/fog/fotm/posters/rescult.png"
-       inkscape:export-xdpi="73.220001"
-       inkscape:export-ydpi="73.220001" />
     <image
        y="1.3871109"
        x="1.3570925"
@@ -222,5 +212,12 @@
        inkscape:export-filename="/home/hamish/fog/fotm/posters/rescult.png"
        inkscape:export-xdpi="73.220001"
        inkscape:export-ydpi="73.220001" />
+    <image
+       y="89.796539"
+       x="601.76312"
+       id="image3104"
+       xlink:href="file:///home/hamish/fog/fotm/posters/g8.jpg"
+       height="131.29747"
+       width="139.83751" />
   </g>
 </svg>
