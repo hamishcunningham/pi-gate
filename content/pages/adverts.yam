@@ -1,0 +1,71 @@
+MoPi: Mobile Pi Power
+
+%[ |
+%(images/mopi/logo-heli-1.png,
+%image(images/mopi/logo-heli-1-200x150.png, MoPi Heli Logo, 200, 150))
+|
+%(images/mopi/closeups/9.jpg, %image(images/mopi/closeups/9-500x381.jpg, MoPi closeup, 500, 381))
+| %]
+
+MoPi is mobile and 24/7 power for the Pi. On your bike, up a tree, or for your
+home server: we've got you covered.
+
+Features:
+
+- multiple inputs -- standard batteries, car power sockets, old laptop
+  supplies, solar panels, and more... all attachable via standard screw
+  terminals
+- hot-swap power replacement without stopping work
+- shutdown the Pi cleanly when batteries discharge
+- integrated on/off switch
+- usable as a UPS (uninterruptible power supply) by attaching both batteries
+  and mains
+- on-board LED indicators and on screen linux system notifications
+- configuration of multiple battery chemistries and number of cells from a UI
+  on the Pi
+- full API in Python, plus a shell-friendly command-line interface
+- stackable headers allowing connections of multiple boards at once (e.g. MoPi
+  + XLoBorg, or MoPi + AirPi, or etc.).
+- PCB remoting pads for the power switch
+- self-resetting fuse for over-current protection
+- two-way communication via the I2C bus
+- remote power-off: tell MoPi to power down the Pi when logged-in remotely
+  (after a clean shutdown, of course)
+- timer-based wake-up: tell MoPi what time you want your Pi to wakeup, then
+  power it down and MoPi will boot the Pi as requested
+- 3.3V supply mod: swap three resistors and supply 3.3V, overpowering the Pi's
+  on-board regulator and saving the power that is dissipated there, for weight
+  and battery life critical applications like ballooning
+- wide input voltage range: 6.2V to 20V
+- designed in Sheffield, made in Europe, used all over the world
+
+And it even fits in the Pibow (and other well-known Pi cases):
+
+%(images/mopi/custom-lid-120313.jpg,
+%image(images/mopi/custom-lid-120313-500x.jpg, MoPi in a Pibow, 500))
+
+*Choose* between stackable and low-profile GPIO headers (if you want to fit
+your MoPi into tight spaces, you want a low-profile header; if you want to
+stack MoPi with other Pi add-on boards, then you want a stackable header).
+
+For more details surf on over to %(http://pi.gate.ac.uk/mopi).
+
+%(images/mopi/closeups/8.jpg, %image(images/mopi/closeups/8-500x371.jpg, MoPi closeup, 500, 371))
+
+%(images/mopi/quickstart/schematic6.png,
+%image(images/mopi/quickstart/schematic6-500x745.png, Quick start guide, 500,
+745))
+
+%(images/mopi/closeups/1.jpg, %image(images/mopi/closeups/1-500x344.jpg, MoPi closeup, 500, 344))
+
+%(images/mopi/closeups/2.jpg, %image(images/mopi/closeups/2-500x408.jpg, MoPi closeup, 500, 408))
+
+%(images/mopi/closeups/5.jpg, %image(images/mopi/closeups/5-500x326.jpg, MoPi closeup, 500, 326))
+
+%(images/mopi/closeups/4.jpg, %image(images/mopi/closeups/4-500x308.jpg, MoPi closeup, 500, 308))
+
+%(images/mopi/closeups/6.jpg, %image(images/mopi/closeups/6-500x382.jpg, MoPi closeup, 500, 382))
+
+%(images/mopi/closeups/3.jpg, %image(images/mopi/closeups/3-500x343.jpg, MoPi closeup, 500, 343))
+
+%(images/mopi/closeups/7.jpg, %image(images/mopi/closeups/7-500x372.jpg, MoPi closeup, 500, 372))

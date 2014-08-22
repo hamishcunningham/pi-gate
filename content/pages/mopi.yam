@@ -48,7 +48,7 @@ Features:
 - usable as a UPS (uninterruptible power supply) by attaching both batteries
   and mains
 - on-board LED indicators and on screen linux system notifications
-- configuration of multiple battery chemistries and numbers of cell from a UI
+- configuration of multiple battery chemistries and number of cells from a UI
   on the Pi
 - full API in Python, plus a shell-friendly command-line interface
 - stackable headers allowing connections of multiple boards at once (e.g. MoPi
