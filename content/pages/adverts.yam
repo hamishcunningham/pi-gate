@@ -5,6 +5,9 @@ MoPi: Mobile Pi Power
 %image(images/mopi/logo-heli-1-200x150.png, MoPi Heli Logo, 200, 150))
 |
 %(images/mopi/closeups/9.jpg, %image(images/mopi/closeups/9-200x153.jpg, MoPi closeup, 200, 153))
+|
+%(images/mopi/pimoroni/b+-lowprofile-1.jpg,
+%image(images/mopi/pimoroni/b+-lowprofile-1-500x500.jpg, MoPi product pic, 150, 150))
 | %]
 
 MoPi is mobile and 24/7 power for the Pi. On your bike, up a tree, or for your
@@ -50,24 +53,56 @@ stack MoPi with other Pi add-on boards, then you want a stackable header).
 
 For more details surf on over to %(http://pi.gate.ac.uk/mopi).
 
+%[ |
 %(images/mopi/closeups/8.jpg, %image(images/mopi/closeups/8-500x371.jpg, MoPi closeup, 500, 371))
-
+| 
+%(images/mopi/pimoroni/b+-lowprofile-2.jpg,
+%image(images/mopi/pimoroni/b+-lowprofile-2-500x500.jpg, MoPi product pic))
+|
+--- |
 %(images/mopi/quickstart/schematic6.png,
 %image(images/mopi/quickstart/schematic6-500x745.png, Quick start guide, 500,
 745))
-
+| %[ |
+%(images/mopi/pimoroni/b+-lowprofile-3.jpg,
+%image(images/mopi/pimoroni/b+-lowprofile-3-500x500.jpg, MoPi product pic))
+|
+--- |
+%(images/mopi/pimoroni/lowprofile-1.jpg,
+%image(images/mopi/pimoroni/lowprofile-1-500x500.jpg, MoPi product pic))
+| %] |
+--- |
 %(images/mopi/closeups/1.jpg, %image(images/mopi/closeups/1-500x344.jpg, MoPi closeup, 500, 344))
-
-%(images/mopi/closeups/2.jpg, %image(images/mopi/closeups/2-500x408.jpg, MoPi closeup, 500, 408))
-
+|
+%(images/mopi/pimoroni/lowprofile-1.jpg,
+%image(images/mopi/pimoroni/lowprofile-1-500x500.jpg, MoPi product pic))
+|
+--- |
 %(images/mopi/perfect-pack.png, %image(images/mopi/perfect-pack.png, The perfect pack, 563, 295))
+|
+%(images/mopi/pimoroni/stackable-2.jpg,
+%image(images/mopi/pimoroni/stackable-2-500x500.jpg, MoPi product pic))
+|
+--- |
+%(images/mopi/closeups/6.jpg, %image(images/mopi/closeups/6-500x382.jpg, MoPi closeup, 500, 382))
+|
+%(images/mopi/pimoroni/lowprofile-2.jpg,
+%image(images/mopi/pimoroni/lowprofile-2-500x500.jpg, MoPi product pic))
+|
+--- |
+%(images/mopi/closeups/3.jpg, %image(images/mopi/closeups/3-500x343.jpg, MoPi closeup, 500, 343))
+|
+%(images/mopi/pimoroni/lowprofile-3.jpg,
+%image(images/mopi/pimoroni/lowprofile-3-500x500.jpg, MoPi product pic))
+|
+--- |
+%(images/mopi/closeups/7.jpg, %image(images/mopi/closeups/7-500x372.jpg, MoPi closeup, 500, 372))
+|
+%(images/mopi/pimoroni/stackable-1.jpg,
+%image(images/mopi/pimoroni/stackable-1-500x500.jpg, MoPi product pic))
+| %]
 
+%%% %(images/mopi/closeups/2.jpg, %image(images/mopi/closeups/2-500x408.jpg, MoPi closeup, 500, 408))
 %%% %(images/mopi/closeups/5.jpg, %image(images/mopi/closeups/5-500x326.jpg, MoPi closeup, 500, 326))
-
 %%% %(images/mopi/closeups/4.jpg, %image(images/mopi/closeups/4-500x308.jpg, MoPi closeup, 500, 308))
 
-%(images/mopi/closeups/6.jpg, %image(images/mopi/closeups/6-500x382.jpg, MoPi closeup, 500, 382))
-
-%(images/mopi/closeups/3.jpg, %image(images/mopi/closeups/3-500x343.jpg, MoPi closeup, 500, 343))
-
-%%% %(images/mopi/closeups/7.jpg, %image(images/mopi/closeups/7-500x372.jpg, MoPi closeup, 500, 372))

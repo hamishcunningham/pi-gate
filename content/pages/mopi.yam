@@ -692,11 +692,45 @@ software _daemon_.
 We've now developed four versions (the last of which is being supplied to our
 Kickstarter backers in June 2014). Here's what version 4 looks like:
 
+%[ |
+%(images/mopi/pimoroni/b+-lowprofile-1.jpg,
+%image(images/mopi/pimoroni/b+-lowprofile-1-500x500.jpg, MoPi product pic, 150, 150))
+|
+%(images/mopi/pimoroni/b+-lowprofile-2.jpg,
+%image(images/mopi/pimoroni/b+-lowprofile-2-500x500.jpg, MoPi product pic))
+|
+--- |
+%(images/mopi/pimoroni/b+-lowprofile-3.jpg,
+%image(images/mopi/pimoroni/b+-lowprofile-3-500x500.jpg, MoPi product pic))
+|
+%(images/mopi/pimoroni/lowprofile-1.jpg,
+%image(images/mopi/pimoroni/lowprofile-1-500x500.jpg, MoPi product pic))
+|
+--- |
+%(images/mopi/pimoroni/lowprofile-1.jpg,
+%image(images/mopi/pimoroni/lowprofile-1-500x500.jpg, MoPi product pic))
+|
+%(images/mopi/pimoroni/stackable-2.jpg,
+%image(images/mopi/pimoroni/stackable-2-500x500.jpg, MoPi product pic))
+|
+--- |
+%(images/mopi/pimoroni/lowprofile-2.jpg,
+%image(images/mopi/pimoroni/lowprofile-2-500x500.jpg, MoPi product pic))
+|
+%(images/mopi/pimoroni/lowprofile-3.jpg,
+%image(images/mopi/pimoroni/lowprofile-3-500x500.jpg, MoPi product pic))
+|
+--- |
+%(images/mopi/pimoroni/stackable-1.jpg,
+%image(images/mopi/pimoroni/stackable-1-500x500.jpg, MoPi product pic))
+|
 %(images/mopi/version-4-top.jpg,
 %image(images/mopi/version-4-top-500x375.jpg, Version 4 top, 500, 375))
-
+|
+--- |
 %(images/mopi/version-4-bottom.jpg,
 %image(images/mopi/version-4-bottom-500x375.jpg, Version 4 bottom, 500, 375))
+| %]
 
 And a couple of close-ups:
 
