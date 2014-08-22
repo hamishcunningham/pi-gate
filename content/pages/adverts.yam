@@ -40,6 +40,7 @@ Features:
   on-board regulator and saving the power that is dissipated there, for weight
   and battery life critical applications like ballooning
 - wide input voltage range: 6.2V to 20V
+- supports Pi models A, B and B+
 - designed in Sheffield, made in Europe, used all over the world
 
 And it even fits in the Pibow (and other well-known Pi cases):
