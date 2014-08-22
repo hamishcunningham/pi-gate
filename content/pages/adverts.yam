@@ -4,7 +4,7 @@ MoPi: Mobile Pi Power
 %(images/mopi/logo-heli-1.png,
 %image(images/mopi/logo-heli-1-200x150.png, MoPi Heli Logo, 200, 150))
 |
-%(images/mopi/closeups/9.jpg, %image(images/mopi/closeups/9-500x381.jpg, MoPi closeup, 500, 381))
+%(images/mopi/closeups/9.jpg, %image(images/mopi/closeups/9-200x153.jpg, MoPi closeup, 200, 153))
 | %]
 
 MoPi is mobile and 24/7 power for the Pi. On your bike, up a tree, or for your
