@@ -60,6 +60,8 @@ For more details surf on over to %(http://pi.gate.ac.uk/mopi).
 
 %(images/mopi/closeups/2.jpg, %image(images/mopi/closeups/2-500x408.jpg, MoPi closeup, 500, 408))
 
+%(images/mopi/perfect-pack.png, %image(images/mopi/perfect-pack.png, The perfect pack, 563, 295))
+
 %(images/mopi/closeups/5.jpg, %image(images/mopi/closeups/5-500x326.jpg, MoPi closeup, 500, 326))
 
 %(images/mopi/closeups/4.jpg, %image(images/mopi/closeups/4-500x308.jpg, MoPi closeup, 500, 308))
