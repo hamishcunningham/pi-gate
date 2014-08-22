@@ -694,7 +694,8 @@ Kickstarter backers in June 2014). Here's what version 4 looks like:
 
 %[ |
 %(images/mopi/pimoroni/b+-lowprofile-1.jpg,
-%image(images/mopi/pimoroni/b+-lowprofile-1-500x500.jpg, MoPi product pic, 150, 150))
+%image(images/mopi/pimoroni/b+-lowprofile-1-500x500.jpg, MoPi product pic,
+500, 500))
 |
 %(images/mopi/pimoroni/b+-lowprofile-2.jpg,
 %image(images/mopi/pimoroni/b+-lowprofile-2-500x500.jpg, MoPi product pic))
@@ -728,17 +729,15 @@ Kickstarter backers in June 2014). Here's what version 4 looks like:
 %image(images/mopi/version-4-top-500x375.jpg, Version 4 top, 500, 375))
 |
 --- |
-%(images/mopi/version-4-bottom.jpg,
-%image(images/mopi/version-4-bottom-500x375.jpg, Version 4 bottom, 500, 375))
-| %]
-
-And a couple of close-ups:
-
 %(images/mopi/closeups/2.jpg, 
 %image(images/mopi/closeups/2-500x408.jpg, Version 4 closeup 2, 500, 408))
-
+|
 %(images/mopi/closeups/1.jpg,
 %image(images/mopi/closeups/1-500x344.jpg, Version 4 closeup 1, 500, 344))
+| %]
+
+%%% %(images/mopi/version-4-bottom.jpg,
+%%% %image(images/mopi/version-4-bottom-500x375.jpg, Version 4 bottom, 500, 375))
 
 Here's what the level 3 revision looked like (_without_ the wiring connector
 or the GPIO connector or the power switch, which were soldered by hand after
