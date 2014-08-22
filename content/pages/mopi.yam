@@ -693,12 +693,11 @@ We've now developed four versions (the last of which is being supplied to our
 Kickstarter backers in June 2014). Here's what version 4 looks like:
 
 %[ |
-%(images/mopi/pimoroni/b+-lowprofile-1.jpg,
-%image(images/mopi/pimoroni/b+-lowprofile-1-500x500.jpg, MoPi product pic,
-500, 500))
+%(images/mopi/pimoroni/lowprofile-1.jpg,
+%image(images/mopi/pimoroni/lowprofile-1-500x500.jpg, MoPi product pic))
 |
-%(images/mopi/pimoroni/b+-lowprofile-2.jpg,
-%image(images/mopi/pimoroni/b+-lowprofile-2-500x500.jpg, MoPi product pic))
+%(images/mopi/pimoroni/stackable-2.jpg,
+%image(images/mopi/pimoroni/stackable-2-500x500.jpg, MoPi product pic))
 |
 --- |
 %(images/mopi/pimoroni/b+-lowprofile-3.jpg,
@@ -708,11 +707,12 @@ Kickstarter backers in June 2014). Here's what version 4 looks like:
 %image(images/mopi/pimoroni/lowprofile-1-500x500.jpg, MoPi product pic))
 |
 --- |
-%(images/mopi/pimoroni/lowprofile-1.jpg,
-%image(images/mopi/pimoroni/lowprofile-1-500x500.jpg, MoPi product pic))
+%(images/mopi/pimoroni/b+-lowprofile-1.jpg,
+%image(images/mopi/pimoroni/b+-lowprofile-1-500x500.jpg, MoPi product pic,
+500, 500))
 |
-%(images/mopi/pimoroni/stackable-2.jpg,
-%image(images/mopi/pimoroni/stackable-2-500x500.jpg, MoPi product pic))
+%(images/mopi/pimoroni/b+-lowprofile-2.jpg,
+%image(images/mopi/pimoroni/b+-lowprofile-2-500x500.jpg, MoPi product pic))
 |
 --- |
 %(images/mopi/pimoroni/lowprofile-2.jpg,
