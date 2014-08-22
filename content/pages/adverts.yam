@@ -62,12 +62,12 @@ For more details surf on over to %(http://pi.gate.ac.uk/mopi).
 
 %(images/mopi/perfect-pack.png, %image(images/mopi/perfect-pack.png, The perfect pack, 563, 295))
 
-%(images/mopi/closeups/5.jpg, %image(images/mopi/closeups/5-500x326.jpg, MoPi closeup, 500, 326))
+%%% %(images/mopi/closeups/5.jpg, %image(images/mopi/closeups/5-500x326.jpg, MoPi closeup, 500, 326))
 
-%(images/mopi/closeups/4.jpg, %image(images/mopi/closeups/4-500x308.jpg, MoPi closeup, 500, 308))
+%%% %(images/mopi/closeups/4.jpg, %image(images/mopi/closeups/4-500x308.jpg, MoPi closeup, 500, 308))
 
 %(images/mopi/closeups/6.jpg, %image(images/mopi/closeups/6-500x382.jpg, MoPi closeup, 500, 382))
 
 %(images/mopi/closeups/3.jpg, %image(images/mopi/closeups/3-500x343.jpg, MoPi closeup, 500, 343))
 
-%(images/mopi/closeups/7.jpg, %image(images/mopi/closeups/7-500x372.jpg, MoPi closeup, 500, 372))
+%%% %(images/mopi/closeups/7.jpg, %image(images/mopi/closeups/7-500x372.jpg, MoPi closeup, 500, 372))

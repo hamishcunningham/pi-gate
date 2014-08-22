@@ -2046,6 +2046,28 @@ Zach's self-balancer, 500, 670))
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#garden-cam
+%3 Garden Camera
+
+Here's Alexandre Besnard's garden camera:
+
+%(images/mopi/alex-b-1.jpg,
+%image(images/mopi/alex-b-1-500x375.jpg, IMAGE CAPTION, 500, 375))
+
+%(images/mopi/alex-b-2.jpg,
+%image(images/mopi/alex-b-2-500x375.jpg, IMAGE CAPTION, 500, 375))
+
+%(images/mopi/alex-b-3.jpg,
+%image(images/mopi/alex-b-3-500x375.jpg, IMAGE CAPTION, 500, 375))
+
+He's using the Pice case, and says "Pice is a great case for using the pi as a
+camera and I will use it to observe the evolution of some plants in my garden.
+Mopi is the perfect power supply."
+
+Thanks Alexandre!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#remote-power-switch
 %3 Remote Switch
 
