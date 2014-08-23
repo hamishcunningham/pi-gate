@@ -63,6 +63,7 @@ Features:
 - 3.3V supply mod: swap three resistors and supply 3.3V, overpowering the Pi's
   on-board regulator and saving the power that is dissipated there, for weight
   and battery life critical applications like ballooning
+- supports Pi models A, B and B+
 - wide input voltage range: 6.2V to 20V%footnote(We quote a 20V max voltage to
   leave some headroom. We've run the board up to 25V but don't recommend it as
   a general rule.)
