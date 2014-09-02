@@ -2,7 +2,8 @@
 
 Festival of the Mind 2014
 
-%(images/rescult.png, %image(images/rescult-500x150.png, Resilient Cultures, 500, 150))
+%(images/rescult.png,
+%image(images/rescult-500x150.png, Resilient Cultures, 500, 150))
 
 That light in the tunnel? It's a train :-(
 
@@ -51,3 +52,5 @@ easy to integrate with other devices and is one of the drivers behind the
 developing changes in the schools ICT curriculum. The low power Pi is also a
 vehicle for localist responses to climate change and peak oil.
 
+%(images/rescult-3.jpg,
+%image(images/rescult-3-500x500.jpg, Resilient Cultures, 500, 500))
