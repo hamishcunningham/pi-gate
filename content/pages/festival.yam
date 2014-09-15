@@ -19,6 +19,133 @@ withstand shocks and changes.
 %(http://festivalofthemind.group.shef.ac.uk/, Festival of the Mind 2014)
 looking to the contribution of open technology to resilience.
 
+
+-----------------------------------------------------------------------------
+%1* Programme
+
+Friday 19th September 9.30 -- 2.30: *schools only*
+
+Friday 20th September 10 -- 4: *open to all*
+
+The Exhibits:
+
+- Build a Raspberry Pi Weather Station (Joanne Bates, Information Studies)
+  explores temperature data from Weston Park Weather Station, meeting up with
+  some of the meteorologists, climate scientists, citizens and businesses who
+  interact with it as they go about their work, research and leisure.
+- Open Wearable Electronics (Charlotte Godley): Learn how to put together a
+  simple, customisable flashing circuit using boards you can put into your
+  clothing! See how this can then be customised to your own colours and style
+  and inspiration of what projects this could be put into.
+- Bio-Microscopy (Ashley Cadby, Physics): gain a whole new perspective on
+  microbes and their habits with this exhibit of high-power microscopes
+  operating at variable focal lengths to expose the secret life of bacteria.
+- Chaos and Structure, Maths and Code (Same Dolan, Maths) will explore
+  _deterministic chaos_ where simple algorithms often lead to unexpected and
+  beautiful structures like fractals.
+- Everyday Growing Cultures (Farida Vis, Information Studies) explores the
+  potential of digital engagement and open data for allotment holders and
+  those interested in cultivating currently unused plots of council-owned
+  land, in order to build stronger, more active communities, benefit local
+  economies and improve environmental sustainability and food security. 
+- The PiBrush (Fred Sonnenwald, Hamish Cunningham) is an interactive art and
+  technology exhibit that simulates flicking paint off the end of a paintbrush
+  onto canvas -- as Jackson Pollock famously did in the 1940s and 50s. It uses
+  two Raspberry Pis and an accelerometer.
+- Sheffield's Raspberry Pi Factory (Gee Bartlett from Pimoroni) will showcase
+  simple robotics and games from Sheffield's own Pi company.
+- %(http://roboplant.wordpress.com/, RoboPlant) (Colin Osborne, Plant Biology
+  / Alastair Buckley, Physics) is a human-sized robot mimicking the replicable
+  stages of photosynthesis in plants. Photovoltaic panels absorb light and
+  convert it into electricity. This powers an electrolyser which splits water
+  into hydrogen and oxygen.
+- Game Technology Against Cancer (Cassie Limb). Come and play with the cells
+  that keep you standing, explore their environment in an inflatable bone
+  sculpture, connect with the smallest cells that support your every step and
+  play the latest in cancer busting open source games!!!
+- Laser-Cut Geodesics (James Wallbank, Access Space) will showcase geodesic
+  structures built from laser-cut panels.
+- 3D Scanning (John Moseley, Access Space): 3D printers herald new
+  possibilities in micro-manufacturing -- but how do we create the designs
+  that they print? This exhibit will showcase 3D scanning, taking 3D objects
+  and turning them into computational models.
+- Open Source Music (Mark Hadman) ...
+- Rhythm and Number (Dominic Moore): programming rhythms using number
+  selection -- open algorithms for music creation.
+- Big Data and Gut Bacteria (Keith Harris, Maths)
+- ??? (Ashley Tuck, ???)
+
+Plus Bo and Anna's performance ...
+
+
+-----------------------------------------------------------------------------
+%1* Open Technology for Resilience
+
+*Resilience* is ability to bounce back from stresses, strains and shocks.
+_Resilient Cultures_ is about how _open source software_, _open data_ and
+_open hardware_ can help build social resilience.
+
+*A society is resilient if it can supply its needs (e.g. for food, shelter or
+health) without relying on systems outside of its control.*
+
+A society is less likely to be resilient if it relies on shipping large parts
+of its needs half way around the world. We are vulnerable to disruption
+brought by war, or the chaotic weather systems brought by climate change, or
+the volatile price of oil.
+
+How can openness help?
+
+The problem of surveillance is a good example. As shown by Wikileaks and by
+Edward Snowden and others, powerful states now routinely invade the privacy of
+their citizens. The lid on the laptop in my bedroom has a camera in it; is
+someone at NSA or GCHQ peering out of it as I write this? The paranoid fantasy
+of a few years ago is now documented reality. And a society under surveillance
+is *not resilient* because:
+
+- at least several hundred thousand people have access to the data: we are now
+  forced to trust each and every one of them _in perpetuity_
+- we have created a perfect weapon for future dictatorships and despots
+- universal surveillance leads to self-censorship and undermines democracy
+  (how long until corrupt politicians use surveillance data to compromise
+  their opponents?)
+
+*Open source software* is the only possible defence against indiscriminate
+state surveillance. Closed systems (e.g. Microsoft Windows, Apple iOS,
+Google's Android services, etc. etc.) allow spy agencies to demand the
+inclusion of hidden backdoors and then to prevent the system owners from
+saying anything about their interference on pain of imprisonment%footnote(Yes,
+you couldn't make this stuff up! Or maybe you could -- I must re-read 1984 one
+of these days...). (Not everything open is safe, of course -- witness the
+recent heartbleed bug -- but everything closed is _unsafe by definition_. Bugs
+in open systems get found and fixed; bugs and backdoors in closed systems are
+hidden forever.)
+
+Another example: governments responded to the 2008 banking crisis by donating
+trillions of tax $s/€s/£s to the banks. A society in which there is no moral
+hazard (not to mention imperilment of bankers' bonuses) involved in
+stimulating unsustainable investment bubbles is *not resilient* -- there's no
+reason not to do it all over again! (In fact looking back at the dotcom boom
+we might think we're already in repetition territory.)
+
+*Open data* can help: the more transparency we have in the use of government
+and corporate funds the more we can understand the implications of policy,
+deregulation and the like. Open data can also challenge false assumptions
+about how the economy impacts on health and wellbeing, for example. In _The
+Spirit Level_ public health epidemiologists use open medical, geographical and
+income statistics to demonstrate that greater inequality means lower quality
+of life for _all members_ of society.
+
+*Open hardware* contributes to resilience by making designs repeatable,
+adaptable and local. For example, instead of buying furniture made a thousand
+miles away from trees harvested in the Amazon, we might download a design to a
+workshop in our locality who would cut it from reclaimed wood. Open hardware
+allows people to make their own robots and cameras (or even electrocardiograph
+machines!) in this way. In computing and electronics open hardware is helping
+build skills and manufacturing locally instead of in Shenzhen or Seoul. The
+UK's Raspberry Pi, for example (a cheap computer made in Wales which is very
+easy to integrate with other devices) is one of the drivers behind the new
+focus on programming with open source in the schools curriculum.
+
 Computing took a problematic turn when it became solely about learning office
 applications. Tools for experimentation and imagination became closed and ICT
 education suffered as programming dropped out of school syllabuses. With the
@@ -52,5 +179,17 @@ easy to integrate with other devices and is one of the drivers behind the
 developing changes in the schools ICT curriculum. The low power Pi is also a
 vehicle for localist responses to climate change and peak oil.
 
+Want to play? Join us on Saturday 20th September (10.30am to 2pm) at
+%(https://www.sheffield.ac.uk/ssid/maps/firth, Firth Hall).
+
+%(images/growing-futures.png, %image(images/growing-futures-500x273.png,
+Everyday Growing Futures, 500, 273.png))
+
+%(images/jo-weather-station.jpg, %image(images/jo-weather-station-500x255.jpg,
+Pi Weather Station, 500, 255))
+
 %(images/rescult-3.jpg,
 %image(images/rescult-3-500x500.jpg, Resilient Cultures, 500, 500))
+
+%(images/pi-brush-snap.jpg,
+%image(images/pi-brush-snap-500x284.jpg, The PiBrush, 500, 284))
