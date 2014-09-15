@@ -1,19 +1,16 @@
 } Open Data | Open Hardware -> Resilient Cultures {
 
-Festival of the Mind 2014
+%1* Festival of the Mind 2014
 
 %(images/rescult.png,
 %image(images/rescult-500x150.png, Resilient Cultures, 500, 150))
 
-That light in the tunnel? It's a train :-(
+*Resilience* is ability to bounce back from stresses, strains and shocks.
+_Resilient Cultures_ is about how _open source software_, _open data_ and
+_open hardware_ can help build social resilience.
 
-Climate chaos is accelerating and our market-driven system has no mechanism to
-respond. (There's no short-term profit in saving the planet!)
-
-What to do?
-
-Many things, but one of them is to build *resilience*: our capacity to
-withstand shocks and changes.
+*A society is resilient if it can supply its needs (e.g. for food, shelter or
+health) without relying on systems outside of its control.*
 
 ^Resilient Cultures^ is a two-day event at the
 %(http://festivalofthemind.group.shef.ac.uk/, Festival of the Mind 2014)
@@ -32,51 +29,51 @@ looking to the contribution of open technology to resilience.
 
 The Exhibits:
 
-- Build a Raspberry Pi Weather Station (Jo Bates, Information Studies): have a
-  go at building your own Raspberry Pi weather station and sharing the data
+- Build a *Raspberry Pi Weather Station* (Jo Bates, Information Studies): have
+  a go at building your own Raspberry Pi weather station and sharing the data
   that you generate directly with the Met Office's  %(wow.metoffice.gov.uk,
   Weather Observations Website).
-- Open Wearable Electronics (Charlotte Godley): Learn how to put together a
+- *Open Wearable Electronics* (Charlotte Godley): Learn how to put together a
   simple, customisable flashing circuit using boards you can put into your
   clothing! See how this can then be customised to your own colours and style
   and inspiration of what projects this could be put into.
-- Bio-Microscopy (Ashley Cadby, Physics): gain a whole new perspective on
+- *Bio-Microscopy* (Ashley Cadby, Physics): gain a whole new perspective on
   microbes and their habits with this exhibit of high-power microscopes
   operating at variable focal lengths to expose the secret life of bacteria.
-- Chaos and Structure, Maths and Code (Same Dolan, Maths) will explore
+- *Chaos and Structure*, Maths and Code (Same Dolan, Maths) will explore
   _deterministic chaos_ where simple algorithms often lead to unexpected and
   beautiful structures like fractals.
-- Everyday Growing Cultures (Farida Vis, Information Studies) explores the
+- *Everyday Growing Cultures* (Farida Vis, Information Studies) explores the
   potential of digital engagement and open data for allotment holders and
   those interested in cultivating currently unused plots of council-owned
   land, in order to build stronger, more active communities, benefit local
   economies and improve environmental sustainability and food security. 
-- The PiBrush (Fred Sonnenwald, Hamish Cunningham) is an interactive art and
+- The *PiBrush* (Fred Sonnenwald, Hamish Cunningham) is an interactive art and
   technology exhibit that simulates flicking paint off the end of a paintbrush
   onto canvas -- as Jackson Pollock famously did in the 1940s and 50s. It uses
   two Raspberry Pis and an accelerometer.
-- Sheffield's Raspberry Pi Factory (Gee Bartlett from Pimoroni) will showcase
-  simple robotics and games from Sheffield's own Pi company.
-- %(http://roboplant.wordpress.com/, RoboPlant) (Colin Osborne, Plant Biology
-  / Alastair Buckley, Physics) is a human-sized robot mimicking the replicable
-  stages of photosynthesis in plants. Photovoltaic panels absorb light and
-  convert it into electricity. This powers an electrolyser which splits water
-  into hydrogen and oxygen.
-- Game Technology Against Cancer (Cassie Limb). Come and play with the cells
+- *Sheffield's Raspberry Pi Factory* (Gee Bartlett from Pimoroni) will
+  showcase simple robotics and games from Sheffield's own Pi company.
+- *%(http://roboplant.wordpress.com/, RoboPlant)* (Colin Osborne, Plant
+  Biology / Alastair Buckley, Physics) is a human-sized robot mimicking the
+  replicable stages of photosynthesis in plants. Photovoltaic panels absorb
+  light and convert it into electricity. This powers an electrolyser which
+  splits water into hydrogen and oxygen.
+- *Game Technology Against Cancer* (Cassie Limb). Come and play with the cells
   that keep you standing, explore their environment in an inflatable bone
   sculpture, connect with the smallest cells that support your every step and
   play the latest in cancer busting open source games!!!
-- Laser-Cut Geodesics (James Wallbank, Access Space) will showcase geodesic
+- *Laser-Cut Geodesics* (James Wallbank, Access Space) will showcase geodesic
   dome and hexayurt models built from laser-cut panels for _resilient modular
   architecture_.
-- 3D Scanning (John Moseley, Access Space): 3D printers herald new
+- *3D Scanning* (John Moseley, Access Space): 3D printers herald new
   possibilities in micro-manufacturing -- but how do we create the designs
   that they print? This exhibit will showcase 3D scanning, taking 3D objects
   and turning them into computational models.
-- Open Source Music (Mark Hadman): hand-coded digital and hand-soldered
+- *Open Source Music* (Mark Hadman): hand-coded digital and hand-soldered
   analogue sound machines used for live ambient/drone performance by Mark
   Hadman (aka Spandril).
-- Big Data and Gut Bacteria (Keith Harris, Maths)
+- *Big Data and Gut Bacteria* (Keith Harris, Maths)
 - *Numbers to Grooves* (Dominic Moore). Turn yourself into an 8 bit analogue
   computer via the miracles of tapping, bashing and bumping. Dominic's
   workshop will build live rhythm machines from its participants. Digital
@@ -98,19 +95,25 @@ The Exhibits:
 -----------------------------------------------------------------------------
 %1* Open Technology for Resilience
 
-*Resilience* is ability to bounce back from stresses, strains and shocks.
-_Resilient Cultures_ is about how _open source software_, _open data_ and
-_open hardware_ can help build social resilience.
+That light in the tunnel? It's a train :-(
 
-*A society is resilient if it can supply its needs (e.g. for food, shelter or
-health) without relying on systems outside of its control.*
+Climate chaos is accelerating and our market-driven system has no mechanism to
+respond. (There's no short-term profit in saving the planet!)
+
+What to do?
+
+Many things, but one of them is to build *resilience*: our capacity to
+withstand shocks and changes.
+
+As noted above, *a society is resilient if it can supply its needs (e.g. for
+food, shelter or health) without relying on systems outside of its control.*
 
 A society is less likely to be resilient if it relies on shipping large parts
 of its needs half way around the world. We are vulnerable to disruption
 brought by war, or the chaotic weather systems brought by climate change, or
 the volatile price of oil.
 
-How can openness help?
+How can openness help resilience?
 
 The problem of surveillance is a good example. As shown by Wikileaks and by
 Edward Snowden and others, powerful states now routinely invade the privacy of
@@ -163,6 +166,10 @@ UK's Raspberry Pi, for example (a cheap computer made in Wales which is very
 easy to integrate with other devices) is one of the drivers behind the new
 focus on programming with open source in the schools curriculum.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2* The New Computing Schools Curriculum
+
 Computing took a problematic turn when it became solely about learning office
 applications. Tools for experimentation and imagination became closed and ICT
 education suffered as programming dropped out of school syllabuses. With the
@@ -196,8 +203,10 @@ easy to integrate with other devices and is one of the drivers behind the
 developing changes in the schools ICT curriculum. The low power Pi is also a
 vehicle for localist responses to climate change and peak oil.
 
-Want to play? Join us on Saturday 20th September (10.30am to 2pm) at
-%(https://www.sheffield.ac.uk/ssid/maps/firth, Firth Hall).
+
+-----------------------------------------------------------------------------
+*Want to play? Join us on Saturday 20th September (10.30am to 2pm) at
+%(https://www.sheffield.ac.uk/ssid/maps/firth, Firth Hall).*
 
 %(images/rescult-3.jpg,
 %image(images/rescult-3-500x500.jpg, Resilient Cultures, 500, 500))
@@ -210,3 +219,9 @@ Pi Weather Station, 500, 255))
 
 %(images/pi-brush-snap.jpg,
 %image(images/pi-brush-snap-500x284.jpg, The PiBrush, 500, 284))
+
+
+-----------------------------------------------------------------------------
+%(http://hamish.gate.ac.uk/, Hamish Cunningham),
+%(https://www.sheffield.ac.uk/is/staff/bates, Jo Bates),
+%(http://92.27.63.80/, Bo Meson).
