@@ -12,7 +12,7 @@ _open hardware_ can help build social resilience.
 *A society is resilient if it can supply its needs (e.g. for food, shelter or
 health) without relying on systems outside of its control.*
 
-^Resilient Cultures^ is a two-day event at the
+_Resilient Cultures_ is a two-day event at the
 %(http://festivalofthemind.group.shef.ac.uk/, Festival of the Mind 2014)
 looking to the contribution of open technology to resilience.
 
@@ -43,6 +43,8 @@ The Exhibits:
 - *Chaos and Structure*, Maths and Code (Same Dolan, Maths) will explore
   _deterministic chaos_ where simple algorithms often lead to unexpected and
   beautiful structures like fractals.
+- *Sheffield's Raspberry Pi Factory* (Gee Bartlett from Pimoroni) will
+  showcase simple robotics and games from Sheffield's own Pi company.
 - *Everyday Growing Cultures* (Farida Vis, Information Studies) explores the
   potential of digital engagement and open data for allotment holders and
   those interested in cultivating currently unused plots of council-owned
@@ -52,8 +54,6 @@ The Exhibits:
   technology exhibit that simulates flicking paint off the end of a paintbrush
   onto canvas -- as Jackson Pollock famously did in the 1940s and 50s. It uses
   two Raspberry Pis and an accelerometer.
-- *Sheffield's Raspberry Pi Factory* (Gee Bartlett from Pimoroni) will
-  showcase simple robotics and games from Sheffield's own Pi company.
 - *%(http://roboplant.wordpress.com/, RoboPlant)* (Colin Osborne, Plant
   Biology / Alastair Buckley, Physics) is a human-sized robot mimicking the
   replicable stages of photosynthesis in plants. Photovoltaic panels absorb
@@ -62,7 +62,7 @@ The Exhibits:
 - *Game Technology Against Cancer* (Cassie Limb). Come and play with the cells
   that keep you standing, explore their environment in an inflatable bone
   sculpture, connect with the smallest cells that support your every step and
-  play the latest in cancer busting open source games!!!
+  play the latest in cancer busting open source games!
 - *Laser-Cut Geodesics* (James Wallbank, Access Space) will showcase geodesic
   dome and hexayurt models built from laser-cut panels for _resilient modular
   architecture_.
@@ -73,7 +73,6 @@ The Exhibits:
 - *Open Source Music* (Mark Hadman): hand-coded digital and hand-soldered
   analogue sound machines used for live ambient/drone performance by Mark
   Hadman (aka Spandril).
-- *Big Data and Gut Bacteria* (Keith Harris, Maths)
 - *Numbers to Grooves* (Dominic Moore). Turn yourself into an 8 bit analogue
   computer via the miracles of tapping, bashing and bumping. Dominic's
   workshop will build live rhythm machines from its participants. Digital
@@ -85,6 +84,14 @@ The Exhibits:
   nomenclature and notation for representing tunes and rhythms, but Dominic
   will remind us that the digital is always only an approximation of sound and
   that we all know how to make music already -- and we're the real thing!
+- *Big Data and Gut Bacteria* (Keith Harris, Maths). Big Data is a buzzterm
+  for the collection of data sets so complex that they become extremely
+  difficult to store and analyse using traditional techniques. The belief is
+  that Big Data will allow correlations to be found that will enable us to
+  spot business trends, prevent disease outbreaks, combat crime, etc., but big
+  data may be unrepresentative leading to biased results and the 'discovery'
+  of relationships from chance correlations.  Can the graphical visualisation
+  of multidimensional data help?
  
 %%% Rhythm and Number (Dominic Moore): programming rhythms using number
 %%% selection -- open algorithms for music creation.
