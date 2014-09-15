@@ -23,9 +23,11 @@ looking to the contribution of open technology to resilience.
 -----------------------------------------------------------------------------
 %1* Programme
 
-- Friday 19th September 9.30 -- 2.30: *schools only* (Firth Hall)
-- Friday 19th 8pm -- midnight: Resilient Cultures gig at Audacious Art Space
-  https://www.facebook.com/events/636695496443567/
+- Friday 19th September 9.30 -- 2.30: *schools only*
+  (%(https://www.sheffield.ac.uk/ssid/maps/firth, Firth Hall))
+- Friday 19th 8pm -- midnight:
+  %(https://www.facebook.com/events/636695496443567/, Resilient Cultures gig)
+  at Audacious Art Space
 - Saturday 20th September 10 -- 4: *open to all* (Firth Hall)
 
 The Exhibits:
@@ -90,7 +92,7 @@ The Exhibits:
 %%% Rhythm and Number (Dominic Moore): programming rhythms using number
 %%% selection -- open algorithms for music creation.
 
-Plus Bo and Anna's performance ...
+%%% Plus Bo and Anna's performance ...
 
 
 -----------------------------------------------------------------------------
@@ -197,14 +199,14 @@ vehicle for localist responses to climate change and peak oil.
 Want to play? Join us on Saturday 20th September (10.30am to 2pm) at
 %(https://www.sheffield.ac.uk/ssid/maps/firth, Firth Hall).
 
+%(images/rescult-3.jpg,
+%image(images/rescult-3-500x500.jpg, Resilient Cultures, 500, 500))
+
 %(images/growing-futures.png, %image(images/growing-futures-500x273.png,
 Everyday Growing Futures, 500, 273.png))
 
 %(images/jo-weather-station.jpg, %image(images/jo-weather-station-500x255.jpg,
 Pi Weather Station, 500, 255))
-
-%(images/rescult-3.jpg,
-%image(images/rescult-3-500x500.jpg, Resilient Cultures, 500, 500))
 
 %(images/pi-brush-snap.jpg,
 %image(images/pi-brush-snap-500x284.jpg, The PiBrush, 500, 284))
