@@ -1,0 +1,45 @@
+Sheffield Schools Raspberry Pi Bank Launch
+
+This Friday sees the launch of our Pi Bank: a set of 20 kits containing Pi
+rigs that are now available for short-term loan to Sheffield schools and
+others:
+
+%(images/pi-bank/img-20140916-124059.jpg,
+%image(images/pi-bank/img-20140916-124059-500x667.jpg, Kit Pile, 500, 667))
+
+Each kit has a Pi, power supplies (inc. %(/pages/mopi.html, for batteries)
+etc.), screen adapters (VGA and DVI) and GPIO cabling:
+
+%(images/pi-bank/img-20140916-122800.jpg,
+%image(images/pi-bank/img-20140916-122800-500x398.jpg, A Pi Kit, 500, 398))
+
+In addition there are 10 Pi cameras, 10 audio cards and 10 simple robot kits.
+
+Funding has been provided by the University's outreach programme and by
+Pimoroni:
+
+%(images/pi-bank/img-20140916-122817.jpg,
+%image(images/pi-bank/img-20140916-122817-500x375.jpg, Kit Label, 500, 375))
+
+James Wallbank of %(http://access-space.org/, Access Space) and Brian dropped
+in to see the new kits and talk about James' and John Moseley's geodesics and
+3D scanning exhibits for the %(/pages/festival.html, Resilient Cultures) event
+at the %(http://festivalofthemind.group.shef.ac.uk/, Festival of the Mind)
+this Friday and Saturday:
+
+%(images/pi-bank/img-20140916-125300.jpg,
+%image(images/pi-bank/img-20140916-125300-500x667.jpg, James and Brian, 500, 667))
+
+And I learned how to do timer selfies with my new %(http://www.fairphone.com/,
+FairPhone) :-)
+
+%(images/pi-bank/img-20140916-124006.jpg,
+%image(images/pi-bank/img-20140916-124006-500x667.jpg, Hamish With Kits, 500, 667))
+
+Come and join us on Saturday 20th September (10.30am to 2pm) at
+%(https://www.sheffield.ac.uk/ssid/maps/firth, Firth Hall).
+
+%meta(summary=A set of Pi kits for Sheffield schools,
+  tags=schools\,education\,pi\,raspberrypi\,gate\,pi bank\,mopi)
+
+*%(pages/festival.html, Read the main article).*
