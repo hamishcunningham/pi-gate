@@ -1,0 +1,123 @@
+Open Tech for Resilience
+
+%1* Festival of the Mind 2014
+
+*Resilience* is ability to bounce back from stresses, strains and shocks.
+_Resilient Cultures_ is a two-day event at the
+%(http://festivalofthemind.group.shef.ac.uk/, Festival of the Mind 2014)
+about how _open source software_, _open data_ and
+_open hardware_ can help build social resilience.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1* Programme
+
+- Friday 19th September 9.30 -- 2.30: *schools only*
+  (%(https://www.sheffield.ac.uk/ssid/maps/firth, Firth Hall))
+- Friday 19th 8pm -- midnight:
+  %(https://www.facebook.com/events/636695496443567/, Resilient Cultures gig)
+  at Audacious Art Space
+- Saturday 20th September 10 -- 4: *open to all* (Firth Hall)
+
+The Exhibits:
+
+- Build a *Raspberry Pi Weather Station* (Jo Bates, Information Studies): have
+  a go at building your own Raspberry Pi weather station and sharing the data
+  that you generate directly with the Met Office's  %(wow.metoffice.gov.uk,
+  Weather Observations Website).
+- *Open Wearable Electronics* (Charlotte Godley): Learn how to put together a
+  simple, customisable flashing circuit using boards you can put into your
+  clothing! See how this can then be customised to your own colours and style
+  and inspiration of what projects this could be put into.
+- *Bio-Microscopy* (Ashley Cadby, Physics): gain a whole new perspective on
+  microbes and their habits with this exhibit of high-power microscopes
+  operating at variable focal lengths to expose the secret life of bacteria.
+- *Chaos and Structure*, Maths and Code (Same Dolan, Maths) will explore
+  _deterministic chaos_ where simple algorithms often lead to unexpected and
+  beautiful structures like fractals.
+- *Sheffield's Raspberry Pi Factory* (Gee Bartlett from Pimoroni) will
+  showcase simple robotics and games from Sheffield's own Pi company.
+- *Everyday Growing Cultures* (Farida Vis, Information Studies) explores the
+  potential of digital engagement and open data for allotment holders and
+  those interested in cultivating currently unused plots of council-owned
+  land, in order to build stronger, more active communities, benefit local
+  economies and improve environmental sustainability and food security. 
+- The *PiBrush* (Fred Sonnenwald, Hamish Cunningham) is an interactive art and
+  technology exhibit that simulates flicking paint off the end of a paintbrush
+  onto canvas -- as Jackson Pollock famously did in the 1940s and 50s. It uses
+  two Raspberry Pis and an accelerometer.
+- *%(http://roboplant.wordpress.com/, RoboPlant)* (Colin Osborne, Plant
+  Biology / Alastair Buckley, Physics) is a human-sized robot mimicking the
+  replicable stages of photosynthesis in plants. Photovoltaic panels absorb
+  light and convert it into electricity. This powers an electrolyser which
+  splits water into hydrogen and oxygen.
+- *Game Technology Against Cancer* (Cassie Limb). Come and play with the cells
+  that keep you standing, explore their environment in an inflatable bone
+  sculpture, connect with the smallest cells that support your every step and
+  play the latest in cancer busting open source games!
+- *Laser-Cut Geodesics* (James Wallbank, Access Space) will showcase geodesic
+  dome and hexayurt models built from laser-cut panels for _resilient modular
+  architecture_.
+- *3D Scanning* (John Moseley, Access Space): 3D printers herald new
+  possibilities in micro-manufacturing -- but how do we create the designs
+  that they print? This exhibit will showcase 3D scanning, taking 3D objects
+  and turning them into computational models.
+- *Open Source Music* (Mark Hadman): hand-coded digital and hand-soldered
+  analogue sound machines used for live ambient/drone performance by Mark
+  Hadman (aka Spandril).
+- *Numbers to Grooves* (Dominic Moore). Turn yourself into an 8 bit analogue
+  computer via the miracles of tapping, bashing and bumping. Dominic's
+  workshop will build live rhythm machines from its participants. Digital
+  music technology works on _encodings_ -- as does musical notation -- but
+  here the encoding is you and the computer is the group. This is how music
+  originated -- and it was all 100% _open source_ up until a few hundred years
+  ago! Music is almost certainly older than language itself -- so we're all
+  music experts! Specialist musicians and musicologists have a specialised
+  nomenclature and notation for representing tunes and rhythms, but Dominic
+  will remind us that the digital is always only an approximation of sound and
+  that we all know how to make music already -- and we're the real thing!
+- *Big Data and Gut Bacteria* (Keith Harris, Maths). Big Data is a buzzterm
+  for the collection of data sets so complex that they become extremely
+  difficult to store and analyse using traditional techniques. The belief is
+  that Big Data will allow correlations to be found that will enable us to
+  spot business trends, prevent disease outbreaks, combat crime, etc., but big
+  data may be unrepresentative leading to biased results and the 'discovery'
+  of relationships from chance correlations.  Can the graphical visualisation
+  of multidimensional data help?
+ 
+%%% Rhythm and Number (Dominic Moore): programming rhythms using number
+%%% selection -- open algorithms for music creation.
+
+%%% Plus Bo and Anna's performance ...
+
+%(images/fotm-charlotte-wearables.png, %image(images/fotm-charlotte-wearables-500x707.png, 
+Open Source Wearables, 500, 707.png))
+
+%(images/fotm-gtac.png, %image(images/fotm-gtac-500x707.png, GTAC, 500, 707.png))
+
+%(images/fotm-sam-chaos.png, %image(images/fotm-sam-chaos-500x707.png,
+Predictable Chaos, 500, 707.png))
+
+%(images/rescult-3.jpg,
+%image(images/rescult-3-500x500.jpg, Resilient Cultures, 500, 500))
+
+%(images/growing-futures.png, %image(images/growing-futures-500x273.png,
+Everyday Growing Futures, 500, 273.png))
+
+%(images/jo-weather-station.jpg, %image(images/jo-weather-station-500x255.jpg,
+Pi Weather Station, 500, 255))
+
+%(images/pi-brush-snap.jpg,
+%image(images/pi-brush-snap-500x284.jpg, The PiBrush, 500, 284))
+
+Want to play? Join us on Saturday 20th September (10.30am to 2pm) at
+%(https://www.sheffield.ac.uk/ssid/maps/firth, Firth Hall).
+
+-----------------------------------------------------------------------------
+%(http://hamish.gate.ac.uk/, Hamish Cunningham),
+%(https://www.sheffield.ac.uk/is/staff/bates, Jo Bates),
+%(http://92.27.63.80/, Bo Meson).
+
+%meta(summary=Open technology for resilient society,
+tags=resilience\, sustainability\, open source\, open data\, open hardware\,
+open technology)
