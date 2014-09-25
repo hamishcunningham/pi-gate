@@ -6,14 +6,14 @@ AUTHOR = u'Hamish Cunningham'
 SITENAME = u'Pi GATE — Sheffield Pi-Tronics'
 #SITEURL = 'http://pi.gate.ac.uk'
 SITEURL = ''
-PUBURL = 'http://pi.gate.ac.uk'
+PUBURL = 'https://pi.gate.ac.uk'
 TIMEZONE = 'Europe/London'
 DEFAULT_LANG = u'en'
 
 # Feeds
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
-FEED_DOMAIN = 'http://pi.gate.ac.uk'
+FEED_DOMAIN = 'https://pi.gate.ac.uk'
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
