@@ -764,8 +764,8 @@ one with the stackable header and one with a standard low-profile header.
 
 This is the stackable header that we're using (from Adafruit):
 
-%(http://www.adafruit.com/products/1112,
-%image(http://www.adafruit.com/images/medium/1112_MED.jpg, Adafruit Stacking
+%(https://www.adafruit.com/products/1112,
+%image(https://www.adafruit.com/images/medium/1112_MED.jpg, Adafruit Stacking
 Header))
 
 You can see an example here of the low-profile header, on the revision 2
