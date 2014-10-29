@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+	<title>AirPi - Sheffield</title>
+	<description>This AirPi weather station is located in Sheffield, UK.</description>
+	<pubDate>Mon, 21 Apr 2014 20:11:42 UTC</pubDate>
+
+	<item><title>Temperature</title><description>26.2 C</description></item>
+<item><title>Pressure</title><description>992.62 hPa</description></item>
+<item><title>Relative_Humidity</title><description>42.0 %</description></item>
+<item><title>Temperature</title><description>25.6 C</description></item>
+<item><title>Light_Level</title><description>5.89 Lux</description></item>
+<item><title>Air_Quality</title><description>18245.95 Corrected Ohms</description></item>
+<item><title>UVI</title><description>0.13 UVI</description></item>
+<item><title>Bucket_tips</title><description>0.0 mm</description></item>
+
+
+</channel>
+
+</rss>

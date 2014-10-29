@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Interpreting AirPi Sensor Readings</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+    <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+    
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> <!-- column 1 -->
+  <section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/posts/2014/02/25/airpisensors/" rel="bookmark"
+           title="Permalink to Interpreting AirPi Sensor Readings">Interpreting AirPi Sensor Readings</a></h1>
+      <div id="socialButtons">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2014/02/25/airpisensors/"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/posts/2014/02/25/airpisensors/#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/posts/2014/02/25/airpisensors/"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    </header>
+
+    <div class="entry-content">
+      <footer class="post-info">
+  <a class="article-thumb" href="/static/images/articles/airpisensors.jpg"><img
+    src="/static/images/articles/thumbs/airpisensors.jpg"
+    height="75" width="75" alt="airpisensors"></a>
+      <span class="article-summary"><em>Looking at how we interpret individual readings from AirPi sensors</em>.</span>
+     <br/>     <!-- In <a href="/category/news.html">News</a> -->
+    
+  Tags:<span class="tag-list"> <a href="/tag/airpi.html">airpi</a> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/environmental.html">environmental</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>    <br/>   <span class="published" title="2014-02-25T00:00:00">Tue 25 February 2014,</span>
+    <a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
+  </footer><!-- /.post-info -->      
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+
+<p>For a few posts now I've been talking about the <a class="cow-url" href="http://airpi.es/">AirPi</a>, an
+environmental monitoring platform for the RaspberryPi. At the end of
+<a class="cow-non-existant-url" href="/posts/2014/02/07/airpi1/">these</a><a class="cow-non-existant-url" href="/posts/2014/02/14/airpiupdate/">two</a>
+posts, I made the point that while it's great that I've got output from the
+AirPi it doesn't mean much if I don't know what it means. Today I'll be going
+through the output (below) and looking at the sensor specs in more details to
+get an idea of what the numbers mean. Apologies for a potentially boring very
+texty post.</p>
+
+<pre>Temp-DHT:       26.1 C
+Humidity:       35.7 %
+Air Quality:    16920.56
+Light Level:    4.91 Lux
+UV Level:       0.48 UVI
+Temp-BMP:       25.6 C
+Pressure:       97912.6 Pa
+</pre>
+
+<pre>Time: 2014-02-11 20:37:56.611572
+Temperature: 32.4 C
+Pressure: 977.71 hPa
+Relative_Humidity: 25.7000007629 %
+Light_Level: 7698.96193772 Ohms
+Nitrogen_Dioxide: 7607.57314974 Ohms
+Carbon_Monoxide: 301176.470588 Ohms
+Volume: 90.3225806452 mV
+Uploaded successfully</pre>
+
+
+<p><b>The DHT22 (humidity)</b></p>
+
+<p>This is the combined temperature moisture probe. It's an
+<a class="cow-url" href="https://www.adafruit.com/products/385">Adafruit</a> special, which means I can
+start there for learning more. <a class="cow-url" href="/files/DHT22.pdf">The datasheet</a> is of course
+another good source. The two important bits from the Adafruit page are these
+two pieces of information:</p>
+
+<p><blockquote></p>
+<ul>
+<li>Good for 0-100% humidity readings with 2-5% accuracy</li>
+<li>Good for -40 to 80&deg;C temperature readings &plusmn;0.5&deg;C accuracy</li>
+</ul>
+
+<p></blockquote></p>
+
+<p>A responses range of 0% to 100% humidity means that it's OK to put a DHT22
+pretty much anyplace other than a rainforest. A rainforest, and anyplace else
+extraordinarily wet is a no go because checking the datasheet that's 100%
+<em>Relative Humidity</em> (RH). (See <a class="cow-url" href="http://en.wikipedia.org/wiki/Humidity">this</a> for a
+bit more about humidity. Effectively once the air is super-saturated for the
+temperature we're over 100% RH and so the sensor won't be very happy.</p>
+
+<p>Some good news is that the data sheet says this:</p>
+
+<p><blockquote></p>
+<ul>
+<li>Calibrated digital signal</li>
+<li>Fully interchangeable</li>
+</ul>
+
+<p></blockquote></p>
+
+<p>Nominally then every sensor is identical and should give the same reading given
+identical conditions. In practice this is very rarely the case. We know this
+for sure given the &quot;2-5<span class="cow-escape">%</span>&quot; accuracy claim. Reading the datasheet again, this
+comes across as typically &plusmn;2% accuracy, with a maximum of &plusmn;5%. In most cases
+then the reading should be fairly accurate. Because the sensor is digital,
+there's also no need to take into account anything in the circuit, so we don't
+need to do anything to the values produced by the software.</p>
+
+<p>The sensor resolution is tenths of a percent (see the 35.7% of above). Based
+on &plusmn;2% accuracy, this number could be anywhere from 33.7% to 37.7% RH.
+Hopefully sensor error falls along a normal distribution, meaning that if we
+collect data on trends over time, something like a moving average will give a
+more accurate reading by averaging out the effect of errors. The moral here is
+don't be lulled by that extra 0.1% humidity, that on its own won't make a
+difference.</p>
+
+<p>Repeatability is another factor to consider, independent of accuracy. The
+datasheet says &plusmn;1%, which means sequential readings given identical conditions
+will still vary some. Then there's long term repeatability. &quot;Long-term
+stability&quot; is in the datasheet as &plusmn;0.5% a year, so given identical conditions
+today and a year later, there could be a slight difference in RH, no matter
+what. There's also something called
+<a class="cow-url" href="http://zone.ni.com/devzone/cda/ph/p/id/227#toc7">hysteresis</a>, which is &plusmn;0.3%.
+This one's a bit tricky to explain. If the humidity was rising, the reading of
+35.7% could have a different meaning than if the humidity was falling. In
+either case the value could have been anywhere from 35.4% to 36.0%.</p>
+
+<p>You may wonder what's the point of having a sensor resolution of 0.1% RH if the
+accuracy means it could practically be any old value. Imagine if you had 10 of
+these, all measuring. That extra resolution could be used to narrow down what
+the humidity was if you looked for a value that fell into the range of all the
+accuracy windows of all the sensors. Plus it's not impossible that an increase
+in humidity of 0.1% wouldn't be detected, you just need to take it with a grain
+of salt.</p>
+
+<p>Considering the temperature side of the DHT22 some more, the accuracy,
+resolution, and repeatability are all much better at &plusmn;0.2&deg;C, 0.1&deg;C, and &plusmn;0.2&deg;C
+according to the datasheet. I'm not quite sure where Adafruit got &plusmn;0.5&deg;C, but
+I'm inclined to go with the datasheet. There's no stability or hysteresis
+listed, so it looks like the temperature readings should be fairly accurate and
+consistent over time.</p>
+
+
+<p><b>The TGS2600</b></p>
+
+<p>This is the combined Air Quality sensor. It's analogue so it goes through the
+AirPi's Analogue-to-Digital Converter (ADC). We need to understand a bit more
+about the electronics and AirPi software this time to understand what the value
+of &quot;16920.56&quot; means. Looking through the data sheet gives us this formula:</p>
+
+<p><img class="cow-img" src="/static/images/environment/sensors/tgs2600/formula.png" alt="Rs = (Vc x Rl)/Vout - Rl" width="192" height="58"></p>
+
+<p>Where <em>Rs</em> is sensor resistance, Vc is sensor input voltage, <em>Rl</em> is load
+resistance, and <em>Vout</em> is measured sensor voltage. Looking through the
+<a class="cow-url" href="https://github.com/tomhartley/AirPi/blob/non-modular/interfaces/MCP3008/AQSensor.py#L19">AirPi code</a>, we see this:</p>
+
+<p><pre class="prettyprint lang-python">
+resistance = (vin/result - 1)*self.pullup
+</pre>You may notice that if you multiply <tt>self.pullup</tt> inside the brackets you end
+up with the formula for the datasheet. You find if you follow the variables in
+the code and do comparisons of the AirPi circuit diagram and the &quot;Basic
+Measuring Circuit&quot; diagram in the datasheet, that we're looking at the same
+things. So that value of 16920.56 is the <em>Rs</em> value, or the resistance across
+the TGS2600 sensor.</p>
+
+<p>The next question then now that we know exactly what 16920 is, is what does it
+mean? For that we have to know what the TGS2600 is sensitive to. It says right
+at the top of the datasheet &quot;for the detection of Air Contaminants&quot; but we can
+be a bit more precise than that. They specifically list sensitivity to methane,
+carbon monoxide (CO), iso-butane, ethanol, and hydrogen. Of course how they do
+this is a bit round about. They do it by showing this graph:</p>
+
+<p><img class="cow-img" src="/static/images/environment/sensors/tgs2600/sensitivity_characteristics.png" alt="TGS2600 Sensitivity Characteristics"></p>
+
+<p>This shows a link between the concentration of the different chemicals in
+parts-per-million (ppm)&mdash;ppm can be thought of like percent, except for one in
+one million rather than one in one hundred. It gives us this information in
+relation to &quot;<em>Rs/Ro</em>&quot;, which is the ratio of sensor resistance, which is what
+the AirPi actually measures to &quot;sensor resistance in fresh air&quot;. Which is
+unfortunate. This tells us the sensor really needs calibration with fresh air
+before we have a meaningful reading. How else do we know what the resistance
+in fresh air is? And even then, we still don't know what gas has caused the
+quality to drop. 50 ppm of CO or 4 ppm of iso-butane?</p>
+
+<p>But wait! There's more! Next to the graph on sensitivity characteristics
+there's this beauty:</p>
+
+<p><img class="cow-img" src="/static/images/environment/sensors/tgs2600/temperature_characteristics.png" alt="TGS2600 Temperature/Humidity Dependency"></p>
+
+<p>So not only does the sensor react to air quality, but humidity and temperature
+as well. This actually isn't that uncommon, but means a correction factor needs
+to be applied to each reading. Happily the DHT22 can be used to work this out.
+Say it's 30&deg; out at 50% RH. We read across the x-axis, then interpolate halfway
+between the 65% and 35% lines to tell us that in fresh air <em>Rs/Ro</em> would read
+just over 0.9, so call it 0.91. We need to divide the <em>Rs</em> reading by this
+value to correct it to what it would be at the standard 20&deg;C 65% RH they used
+for the sensitivity graph.</p>
+
+<p>The need for calibration and taking into account temperature and humidity is
+discouraging, but the sensor can still give useful information. Someone using
+the data from it simply needs to be aware of these things so that he doesn't
+draw incorrect conclusions. For example at the very least the temperature and
+humidity corrections should be applied. The fresh air calibration probably
+isn't really necessary given that you don't know what gas is affecting it. I
+suspect though that it can be worked out approximately by looking at a long
+data series that has been corrected for temperature and humidity. The peak <em>Rs</em>
+value measured is probably the &quot;fresh air&quot; quality, or a &quot;close enough&quot; guess.</p>
+
+<p>You may notice that I haven't said anything about accuracy for the TGS2600.
+That's because the datasheet doesn't say much about it other than 10 ppm H2
+(that's hydrogen). The DHT22 also had an on-board analog to digital conversion
+that in this case is being handled by the ADC, which I think has a high enough
+resolution that's it's a non-issue. All things considered I suspect that the
+ultimate lack of reliable calibration means that accuracy is a non-issue. Just
+take the reading with a grain of salt and remember to correct for temperature
+and humidity.</p>
+
+
+<p><b>The Light-Dependent Resistor (LDR), GL5528</b></p>
+
+<p>This one, I have to admit before actually looking into it, I thought was going
+to be meaningless. Mostly because I remember playing with an LDR when I was
+about 8 to turn lights on and off in the dark of my closet. Because of that I
+just could not see how you could use an LDR to get to a Lux reading.
+(<a class="cow-url" href="http://en.wikipedia.org/wiki/Lux">Lux</a> is the standard light measure, the
+same way that meters are for distance.) However, looking at the
+<a class="cow-url" href="/files/PD0001.pdf">GL5528 datasheet</a> I was surprised to find that there
+actually is a proper relationship between resistance and lux, or illuminance.</p>
+
+<p><img class="cow-img" src="/static/images/environment/sensors/ldr/graph.png" alt="GL5528 luminance vs
+photo-resistance"></p>
+
+<p>On a <a class="cow-url" href="http://en.wikipedia.org/wiki/Log-log_plot">log-log graph</a>, there's an
+approximately linear relationship between the two which means that if we
+calculate the resistance of the LDR, we can estimate the lux fairly reliably.
+I use qualitatives like &quot;approximately&quot; and &quot;fairly&quot; because there's that gray
+region on the graph&mdash;the relation can be anywhere in there. That's quite the
+potential error in there, and the darker it is the greater that uncertainty is
+due to the log-log scale. We can still approximate things though and hope for
+the best.</p>
+
+<p>Now how to do that approximation. Looking in the
+<a class="cow-url" href="https://github.com/tomhartley/AirPi/blob/non-modular/interfaces/MCP3008/LightSensor.py#L14">AirPi code</a> I downloaded that matches the directions:</p>
+
+<p><pre class="prettyprint lang-python">
+rs = ((3.3 - vout) / vout) * 5.6
+</pre>To which I say, &quot;what?&quot;, because that's the code that produces the lux number
+of &quot;4.91 Lux&quot; I posted above. I believe that's just plain wrong, because
+there's two things wrong here. There's nothing taking into account the pull-up
+resistor of 2.2K&Omega; for starters. The 5.6 I could imagine to be a calibration
+co-efficient, and I suppose that nominally it could take into account that 
+resistor, but then what takes care of the log-log relation ship? I'd expect to
+see either an <tt>ln()</tt> or an <tt>exp()</tt> because of that. It could simplify all of
+that in as I haven't worked through the math there yet, but for the same reason
+a teacher doesn't like it when you don't show your work, I'm confused. So I set
+out to work out what's going on.</p>
+
+<p>The first thing I do is check the code that goes with the updated hardware
+revision and
+<a class="cow-url" href="https://github.com/tomhartley/AirPi/blob/master/sensors/analogue.py#L41">see this</a>:</p>
+
+<p><pre class="prettyprint lang-python">
+resOut = self.pullUp/((vin/vout)-1)
+</pre>Ah ha. This looks better, more like what we say for the TGS2600 above when we
+were calculating resistance, except in this case it's a one-over (as in one
+divided by) relation. This makes sense because it's a pull-up instead of a
+pull-down situation (vin and vout are reversed). On a side note, this sort
+of calculation is called a <a class="cow-url" href="http://en.wikipedia.org/wiki/Voltage_divider">voltage divider</a>. Anyway, when the new software says &quot;7698.96193772 Ohms&quot; for
+the light sensor that's exactly what it is. It still needs to be converted to
+lux, but at least it's clearer that this is the case.</p>
+
+<p>The conversion should therefore be pretty straightforward (once the wacky math
+on the older software is reversed and the correct resistance value obtained).
+It is too, after wrapping one's head around the log-log. Fortunately the fact
+that it's log-log works for us, making it easier to deal with. Essentially we
+can treat it as a regular linear plot of <em>y = mx + b</em>, but replacing <em>y</em> and
+<em>x</em> with <tt>ln(</tt><em>y</em><tt>)</tt> and <tt>ln(</tt><em>x</em><tt>)</tt> (natural logarithms). At which point it's
+only a minor nuisance to fire up Matlab (or Octave) and use <tt>polyfit()</tt> to work
+out a linear regression after reading some values off the graph:</p>
+
+<p><pre class="prettyprint lang-octave">
+&gt;&gt; polyfit(log([1 2 100]), log([60 40 2.8]), 1)
+
+ans =
+
+   -0.6704    4.1215
+
+</pre>Plug that into <em>y = mx + b</em>:</p>
+
+<p><img class="cow-img" src="/static/images/environment/sensors/ldr/luxformula1.png" alt="ln(Rs/1000) = -0.6704ln(lux)+4.125" width="418" height="65"></p>
+
+<p>Apply some algebra and rearrange to solve for the lux value given resistance:</p>
+
+<p><img class="cow-img" src="/static/images/environment/sensors/ldr/luxformula2.png" alt="lux = e^a, a = (ln(Rs/1000)-4.125)/-0.6704" width="391" height="80"></p>
+
+<p>Viola! This should give me a value that I'm confident reflects reality
+somewhat. (<em>Rs</em> is divided by 1000 because the y-axis of the graph above has K&Omega;
+for the units.) I've undoubtedly introduced some error by reading off values
+from the graph, but this could be compensated for by adding more values. I
+suspect that won't have much of an impact though. Overall I wouldn't use this
+or the LDR for life or death situations, but it's close enough. Keep in mind
+that if your LDR isn't a 5528 then the function above probably won't be 
+correct anymore and should be recalculated off the appropriate datasheet.</p>
+
+
+<p><b>UV sensor UVI-01</b></p>
+
+<p>Really, I think this is one of the coolest bits of the AirPi and I think it's a
+shame it's missing from the newer hardware revision. I suppose I can see why
+you might replace it with a microphone, but really, UV. How awesome? A measure
+of direct sunlight intensity. Potentially something there in calculating
+evapo-transpiration, a key part of catchment models. (So that you know how much
+rain water can be sucked into the ground!) Also used for working out how much
+to water crops.</p>
+
+<p>Right, the sensor. I have no idea electrically how this thing that looks like
+an LED is an LED in reverse, but the rest of it makes some sort of sense. It
+had better given that last time I spent a good while working out that I plugged
+it in backwards. What that means though is that when I see
+<a class="cow-url" href="https://github.com/tomhartley/AirPi/blob/non-modular/interfaces/MCP3008/LightSensor.py#L17">this</a>:</p>
+
+<p><pre class="prettyprint lang-python">
+sensorVoltage = vout / 471
+millivolts = sensorVoltage * 1000
+UVI = millivolts * (5.25/20)
+</pre>It actually makes sense. Why divide by 471? That's because that's the ratio
+of the two resistors around the CA314 op-amp. According to 
+<a class="cow-url" href="http://airpi.es/step2.php">the directions</a> you're supposed to use a 10K&Omega; and
+a 4.7M&Omega; for R1 and R2 respectively, that's a ratio of 470, or the amplification
+ratio. It's specifically that ratio that's important so you could essentially
+use anything in the 1K&Omega; to 30K&Omega; range for R1 as long as R2 was 470 times
+greater. Can't make 470 times? Edit that line of code with the 471 divider. (I
+used 1K&Omega; and 470K&Omega;, because the Maplin resistor kit doesn't go over 1M&Omega;.)</p>
+
+<p><img class="cow-img" src="/static/images/environment/airpi/op-amp circuit.png"></p>
+
+<p>Then why multiply by 1000? That's to get the reading in mV. Because unlike the
+previous sensors, which measure by resistance, the UVI-01 is a direct voltage
+reading. Which is why the third line of code there is a multiplication by a
+factor. That's a factory standard calibration. You can see it in the following
+graph from the <a class="cow-url" href="/files/UVI-01-E.pdf">datasheet</a>:</p>
+
+<p><a class="cow-url" href="/static/images/environment/sensors/uv/uv.png"><img class="cow-img" src="/static/images/environment/sensors/uv/uv_small.png"></a>
+<em>Click for a graph you can actually read...</em></p>
+
+<p>There are four very linear lines, for 0.5M&Omega;, 1M&Omega;, 2M&Omega;, and 3M&Omega;, resistor put in
+parallel with the UVI-01. The AirPi directions follow the factory
+recommendation and use a 1M&Omega; resistor. It's just a matter of reading off the
+purple lines to get the 5.25 and 20 as the slope of the line, it's very
+convenient as there's no y-intercept. Just read over and down from the 20.00,
+and there we have it. A very nice, easy sensor to read with what appears to be
+a fairly reliable direct reading of
+<a class="cow-url" href="http://en.wikipedia.org/wiki/Ultraviolet_index">UV Index</a>, or UVI.</p>
+
+<p>There's just one caveat&mdash;&quot;Inaccuracy: 15<span class="cow-escape">%</span>&quot;. So given higher levels of UV, i.e.,
+when it's more critical, the accuracy goes down. At least, that's how I read
+it. So on normal day with a UVI of 5, it could be somewhere between 4.25 and
+5.75. That window gets bigger at higher readings. Although to be fair, if we
+actually look at the scale on that nice Wikipedia link, at higher values of
+UVI, we'd be roasting to a crisp anyway, no matter the accuracy. </p>
+
+<p>Simply knowing the UVI value is up there is enough. Given we know about the
+inaccuracy though we can stick some error bars on there and be informed. It's
+still probably more reliable than a TGS2600 or an LDR because it doesn't
+require a specific calibration. Full steam ahead for knowing when you need
+sunblock!</p>
+
+
+<p><b>BMP085 pressure sensor</b></p>
+
+<p>Another <a class="cow-url" href="https://www.adafruit.com/products/391">Adafruit favorite</a>. I
+immediately like it for <a class="cow-url" href="/files/BMP085_DataSheet_Rev.1.0_01July2008.pdf">another reason</a>: &quot;Fully calibrated&quot;. What they do is they run a calibration of
+the sensor in the factory and burn the calibration co-efficients into the chip.
+When the AirPi software reads the value off the pressure transducer, it then
+applies this in-built calibration. We can therefore be reasonably confident in
+the value being obtained.</p>
+
+<p>Provided we're aware of the inherent sensor accuracy and resolution. In this
+case the datasheet says typically &plusmn;1.0 hPa with a maximum of &plusmn;2.5 hPa for
+pressure between 700 and 1100 hPa between 0&deg;C and 60&deg;C. This gets a bit worse
+at even lower pressures (300 to 700 hPa a maximum of &plusmn;3.0 hPa) and temperatures
+(300 to 1100 hPa at -20&deg;C to 0&deg;C typically &plusmn;1.5 hPa  and a maximum of &plusmn;4.0
+hPa). For the temperature readings that the BMP085 takes we're looking at
+typically &plusmn;0.5&deg;C with a maximum of &plusmn;1.5&deg;C. (This is a little bit worse than the
+DHT22.)</p>
+
+<p>The BMP085 also has one other interesting setting, which is oversampling.
+(&quot;mode&quot; in the AirPi software.) The sensor in this case can be told to take
+multiple readings internally and return an average value. Because they're very
+close in time the assumption is that they're effectively the same reading (i.e.
+the pressure won't have changed much) and so averaging will cancel out any
+other effects that would introduce noise into the pressure reading. By default
+the AirPi uses the setting that averages 2 readings. The sensor is capable of
+doing a maximum of 8 readings internally, but there's a penalty in time and
+power consumption for doing this. The latter probably has more impact because
+the software isn't running as quickly as 25 ms resolution (the time for 8
+readings).</p>
+
+<p>So taking this all into account, the temperature reading won't be so good, but
+the pressure reading should be excellent. Remember that
+<a class="cow-url" href="http://en.wikipedia.org/wiki/Atmospheric_pressure#Standard_atmospheric_pressure">standard atmospheric pressure</a> is 1013.25 hPa, which means that &plusmn;1.0 hPa is
+actually &plusmn;0.1%. As pressure gets lower that becomes a slightly higher fraction,
+but even under the worst of conditions (cold weather and low pressure) we're
+still only talking about &plusmn;0.5% error or so. I feel here Bosch lives up to the
+brand name recognition and delivers a good product. It's similar to the feeling
+I got using
+<a class="cow-url" href="http://www.ge-mcs.com/en/pressure-and-level/depth-and-level/ptxpdcr-1830.html">GE Sensing PDCR 1830 Druck Pressure Sensors</a> in academic research. (Although
+there it's &plusmn;0.06% error!)</p>
+
+<p>The next thing is to talk bout how the AirPi software uses the data from the
+sensor. The data sheet suggests two uses and both are implemented in the AirPi
+software. The first is to use the pressure to calculate the altitude. The
+higher up you are the lower the pressure will be and this expresses as an
+exponential function:</p>
+
+<p><img class="cow-img" src="/static/images/environment/sensors/bmp085/pressure_alt.png" alt="altitude = 44330 x (1-(p/p0)^(1/5.255))" width="394" height="76"></p>
+
+<p>Here <em>p0</em> is pressure at sea level, so 1013.25 hPa and <em>p</em> is the pressure
+reading from the sensor.</p>
+
+<p>The second use is to calculate the pressure at sea level given a known
+altitude:</p>
+
+<p><img class="cow-img" src="/static/images/environment/sensors/bmp085/pressure_sea.png" alt="p0 = p / ((1 - altitude/44330)^5.255)" width="247" height="63"></p>
+
+<p>It's the second of these which is used by default in the AirPi software,
+assuming an altitude of 35 m above sea level. Sheffield is a hilly place and as
+a result altitude over the area actually varies quite a bit. I think my house
+is a bit higher given that when the AirPi says 98.2 hPa, the barometer on my
+wall reads 97.1 hPa. Which brings me to my point here: I'd rather have the
+pressure reading as is, just like the wall barometer. While the sensor is
+accurate enough to give a precise pressure reading, the readings are really
+only interesting to me for the trends they show. That is to say, to help me
+predict the weather! (Typically low pressure = bad weather, high pressure =
+good weather.)</p>
+
+
+<p><b>The rest of the sensors</b></p>
+
+<p>I've only gone through the sensors I have on my AirPi breadboard. I leave the
+remaining microphone, NO and CO meters, as an exercise for the reader. Or
+another later article. What I have here is enough so that in a post or two I
+can look at my data and see what there is to see.</p>
+
+
+<p><b>Summary</b></p>
+
+<p>There are two major things of interesting in a monitoring setup like this.
+What's happening now, and what's happened previously. Here's what I think
+everything is best for:</p>
+
+<ul>
+<li>DHT22 Humidity: Trends</li>
+<li>DHT22 Temperature: Current readings and trends</li>
+<li>TGS2600: Trends</li>
+<li>LDR (GL5528): Trends</li>
+<li>UVI-01: Current readings and trends</li>
+<li>BMP085 Pressure:  Current readings and trends</li>
+<li>BMP085 Temperature: Trends</li>
+</ul>
+
+<p>I suspect that overall what's going to be really exciting is looking at
+magnitude of change over time, rather than looking at specific values. Stay
+tuned to see what my room has been like since I built the AirPi!</p>
+
+
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+
+<br/> <br/>
+</html>

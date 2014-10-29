@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Pre-Production MoPi Boards</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+    <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+    
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> <!-- column 1 -->
+  <section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/posts/2014/03/27/pre-propduction-mopi/" rel="bookmark"
+           title="Permalink to Pre-Production MoPi Boards">Pre-Production MoPi Boards</a></h1>
+      <div id="socialButtons">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2014/03/27/pre-propduction-mopi/"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/posts/2014/03/27/pre-propduction-mopi/#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/posts/2014/03/27/pre-propduction-mopi/"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    </header>
+
+    <div class="entry-content">
+      <footer class="post-info">
+  <a class="article-thumb" href="/static/images/articles/pre-propduction-mopi.jpg"><img
+    src="/static/images/articles/thumbs/pre-propduction-mopi.jpg"
+    height="75" width="75" alt="pre-propduction-mopi"></a>
+      <span class="article-summary"><em>Hot-swap, uninterruptible, multi-supply mobile power for the</em>.</span>
+     <br/>     <!-- In <a href="/category/news.html">News</a> -->
+    
+  Tags:<span class="tag-list"> <a href="/tag/kickstarter.html">kickstarter</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>    <br/>   <span class="published" title="2014-03-27T00:00:00">Thu 27 March 2014,</span>
+    <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+  </footer><!-- /.post-info -->      
+
+<p>MoPi level 3 is now in testing :-)</p>
+
+<p><em>[MoPi is <b>mobile</b>, <b>hot-swap</b> and <b>24/7 power</b> for the Raspberry Pi.
+<a class="cow-url" href="/pages/get-mopi.html">How to order.</a>]</em></p>
+
+<p>This is, we hope, the final pre-production prototype board. It differs quite a
+lot from the previous prototype (which is the one you may have seen on our
+<a class="cow-url" href="https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi">Kickstarter page</a> &mdash; if you missed it you can sign up for
+<a class="cow-url" href="/pages/get-mopi.html">pre-orders here</a>). The success of the
+crowdfunding campaign allowed us to add a bunch of new features (aka <em>stretch
+goals</em>). The new board has these new hardware and firmware features:</p>
+
+<ul>
+<li>screw terminals</li>
+<li>stackable headers</li>
+<li>remoting pads </li>
+<li>self-resetting fuse </li>
+<li>two-way communication using I2C</li>
+<li>remote power-off</li>
+<li>3.3V supply mod</li>
+<li>timer-based wake-up</li>
+</ul>
+
+<p>This post describes some of our work on testing the new board and on updating
+the <a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html#simbamon">SimBaMon</a> software that
+manages it from the Pi. Then we look at a possible arrangement for adding
+battery charging to the picture, and finish up with a revised delivery
+schedule.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-1."></a><h1 class="cow-heading"><span class="cow-sec-number">1. </span>The Final Prototype</h1>
+
+<p>Here's what the level 3 revision looks like (<em>without</em> the wiring connector or
+the GPIO connector or the power switch, which were soldered by hand after
+these pictures were taken):</p>
+
+<p>Top of the board:
+<img class="cow-img" src="/static/images/mopi/pre-production-boards-02.jpg" alt="Pre-production MoPi top"></p>
+
+<p>Underneath the board:
+<img class="cow-img" src="/static/images/mopi/pre-production-boards-01.jpg" alt="Pre-production MoPi bottom"></p>
+
+<p>The stackable headers (for when MoPi is used in tandem with other add-on
+boards) take up quite a lot of vertical space in order to provide a set of
+pass-through pins above the MoPi board. Therefore we're offering two versions,
+one with the stackable header and one with a standard low-profile header. (If
+you're a backer you'll have had a message about filling in a survey form on
+which one you prefer.)</p>
+
+<p>This is the stackable header that we're using (from Adafruit):
+<a class="cow-url" href="http://www.adafruit.com/products/1112"><img class="cow-img" src="http://www.adafruit.com/images/medium/1112_MED.jpg" alt="Adafruit Stacking
+Header"></a></p>
+
+<p>If you're opting for the low-profile header you can see an example here, on
+the level 2 board:
+<img class="cow-img" src="/static/images/mopi/mopi-underside.jpg" alt="MoPi 2 underside">.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>A Possible Charging Circuit</h1>
+
+<p>One feature that we didn't manage to get sufficient backing for was battery
+charging. This feature would be a great addition to MoPi, but it turns out to
+be pretty difficult :-( In fact, dealing with lots of different chemistries
+may not be possible at all on a tiny device like MoPi. (Most manufacturers of
+charging ICs only support one chemistry per chip, for example, and some only
+support charging a single cell per chip! Many chargers also rely on having a
+temperature sensor in physical proximity to the batteries
+themselves.)<span class="cow-footnote" name="footnote1"><sup><a href="#footnote1">1</a></sup></span> The other challenge is that we've got a really
+small surface area to work with on the PCB.</p>
+
+<p>Still, a number of our backers want to use MoPi with a charger (e.g. to charge
+batteries from solar panels during the day and then run on batteries
+overnight), so we've been working on a configuration with an external charger.
+For example, here's how we think a UPS configuration with charging could look:</p>
+
+<p><a class="cow-url" href="https://www.circuitlab.com/circuit/dsguk8/ups-configuration/"><img class="cow-img" src="/static/images/mopi/ups-with-charger.png" alt="UPS with charger" width="540" height="405"></a></p>
+
+<p>We haven't tested this yet, but it <em>should</em> work ;-)</p>
+
+<p>There are a number of potential gotchas in this type of circuit. For example,
+when the mains power drops, the Pi must be powered pretty much instantly in
+order to avoid triggering a reboot. There are no big capacitors on the Pi's
+PCB to buffer its consumption of 300-500 mA without power. To deal with this
+requirement we need MoPi to be always on and monitoring the Pi's 5V feed, even
+when that feed isn't being supplied by MoPi itself. (This doesn't waste much
+power as our microcontroller is very efficient.) When MoPi sees the 5V rail
+start to fall the controller immediately enables its 5V stabilizer, taking
+over supply of power to the Pi.</p>
+
+<p>In the circuit above, when there is mains, the charger is generating e.g. +12V
+DC and the relay's coil is energized. The contact is switched to the normal
+open position and is passing +12V to charge the batteries. When mains drops,
+the relay is switching to the normal closed position and charging will stop.
+MoPi is powered all the time &mdash; and so, we hope, is the Pi. (What does the
+diode do? When the +12V goes down, accumulated energy in the relay's coil must
+be dissipated. The diode is shorting the coil to do that. Otherwise the
+relay's contact will stay closed for a longer time.)</p>
+
+<p>More on this when we get time to test it out in practice.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-3."></a><h1 class="cow-heading"><span class="cow-sec-number">3. </span>Revised Schedule</h1>
+
+<p><em>I love deadlines. I love the whooshing sound they make as they rush past.</em>
+[Douglas Adams]</p>
+
+<p>Ok, we're a little behind. We launched a week later than the plan (my fault &mdash;
+I didn't allow enough time for the Kickstarter approval process<span class="cow-footnote" name="footnote2"><sup><a href="#footnote2">2</a></sup></span>), and then
+we ran for a week longer than planned, and then we met our stretch goals for
+several things that required additional changes to the level 3 prototype
+board, not to mention orders from suppliers we haven't used before.</p>
+
+<p>This means that we've only now started testing the level 3 board,
+approximately a month behind the original schedule. We've also got some
+significant changes to make to the division of responsibilities between the
+software running on the Pi and the firmware running on the MoPi
+microcontroller. The latter is extremely important to get right for the
+production boards, as flashing a new firmware revision requires special
+hardware.</p>
+
+<p>Our best guess for the delivery of version 4 (for our Kickstarter backers) and
+then version 5 (for <a class="cow-url" href="http://pi.gate.ac.uk/posts/2014/03/11/mopi-funded/">pre-order subscribers</a> and for retail supply) is now as follows.</p>
+
+<p>(To cut a long story short we now plan to start delivering Kickstarter rewards
+in May. If we hit issues with component supply or that require hardware
+revision this might slip to June.)</p>
+
+<ul>
+<li>Complete prototype board level 3. This is now done for the hardware and we
+  have the boards in testing. Firmware and software changes remain to be done.
+  Supply boards to Pimoroni who are designing the custom PiBow lid.
+  <ul>
+  <li>Completion: mid April 2014.</li>
+  </ul></li>
+<li>Finalise the design of the production board. Fix any residual issues arising
+  from testing. Incorporate any feedback from testers. Start ordering
+  components, kit parts and PCBs in bulk. Finalise the pick-and-place
+  manufacturing process and start pre-production testing. Continue work on the
+  firmware and produce the production binary for flashing to the boards.
+  Address any stability issues in the daemon code.
+  <ul>
+  <li>Completion: end April 2014.</li>
+  </ul></li>
+<li>Start taking delivery of the production boards. (This is our last
+  opportunity to make firmware changes. Test, test and test again!) The daemon
+  needs to be very stable by now.
+  <ul>
+  <li>Completion: late May 2014.</li>
+  </ul></li>
+<li>Fulfill early bird Kickstarter orders for all single item and kit rewards.
+  Solicit additional GitHub committers for the daemon code to help with
+  long-term maintainability.
+  <ul>
+  <li>Completion: end May 2014.</li>
+  </ul></li>
+<li>Fulfill any remaining Kickstarter orders.
+  <ul>
+  <li>Completion: June 2014.</li>
+  </ul></li>
+<li>Set up sustainable production process and retail board supply and fulfill
+  retail pre-orders.
+  <ul>
+  <li>Completion: Summer 2014.</li>
+  </ul></li>
+<li>Collapse in a small pile.<span class="cow-footnote" name="footnote3"><sup><a href="#footnote3">3</a></sup></span></li>
+</ul>
+
+
+
+<p><b><a class="cow-url" href="/pages/mopi.html">Read the main article</a>.</b></p>
+<span class="cow-footnote-section">
+<h1 class="cow-heading">Footnotes</h1>
+<p><ol>
+<li>
+<a class="cow-footnote-anchor" name="footnote1"></a>
+<span class="cow-footnote-text" name="footnote1">We like our backers. We'd rather not incinerate them if
+not completely necessary.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote2"></a>
+<span class="cow-footnote-text" name="footnote2">I
+pressed the big green <em>submit</em> button on the Kickstarter 10 days before our
+planned launch date, which was the last Friday in January &mdash; payday! The FAQ
+said it could take up to a week to get approval, but I should have allowed
+more time as in the end it took double that and we didn't launch until the
+following Tuesday. This turned out to be a costly mistake on my part. I'd
+lined up publicity from a really important site for that Friday, but by the
+time we were ready the person concerned had gone on holiday for two weeks &mdash;
+and when they came back they had mysteriously changed their minds. From the
+way the new backer curve played out during the month it was clear that
+publication on that site would have made a huge difference &mdash; perhaps double
+the number of backers. This would have taken us over the magic 1000 units
+milestone, where bulk component prices drop sharply, and allowed us to add
+several really nice features to the board. Hey ho. Life is random!</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote3"></a>
+<span class="cow-footnote-text" name="footnote3">I might bring this one forward a bit
+  depending on whether my partner agrees I'm due for my mid-life crisis yet or
+  not.</span>
+</li>
+</ol></p>
+</span>
+
+
+<br/> <br/>
+</html>
