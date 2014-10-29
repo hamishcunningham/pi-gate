@@ -2,3 +2,4 @@ output
 *.pyc
 content/*.html
 content/*/*.html
+cache
