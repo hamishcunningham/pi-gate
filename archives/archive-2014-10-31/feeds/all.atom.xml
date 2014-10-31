@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pi GATE — Sheffield Pi-Tronics</title><link href="/" rel="alternate"></link><link href="https://pi.gate.ac.uk/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-09-16T00:00:00+01:00</updated><entry><title>Sheffield Schools Raspberry Pi Bank Launch</title><link href="/posts/2014/09/16/pi-bank/" rel="alternate"></link><updated>2014-09-16T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-09-16:posts/2014/09/16/pi-bank/</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pi GATE — Sheffield Pi-Tronics</title><link href="http://pi.gate.ac.uk/" rel="alternate"></link><link href="https://pi.gate.ac.uk/feeds/all.atom.xml" rel="self"></link><id>http://pi.gate.ac.uk/</id><updated>2014-09-16T00:00:00+01:00</updated><entry><title>Sheffield Schools Raspberry Pi Bank Launch</title><link href="http://pi.gate.ac.uk/posts/2014/09/16/pi-bank/" rel="alternate"></link><updated>2014-09-16T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-09-16:posts/2014/09/16/pi-bank/</id><summary type="html">
 
 &lt;p&gt;This Friday sees the launch of our Pi Bank: a set of 20 kits containing Pi
 rigs that are now available for short-term loan to Sheffield schools and
 others:&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/pi-bank/img-20140916-124059.jpg"&gt;&lt;img class="cow-img" src="/images/pi-bank/img-20140916-124059-500x667.jpg" alt="Kit Pile" width="500" height="667"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/pi-bank/img-20140916-124059.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/pi-bank/img-20140916-124059-500x667.jpg" alt="Kit Pile" width="500" height="667"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Each kit has a Pi, power supplies (inc. &lt;a class="cow-url" href="/pages/mopi.html"&gt;for batteries&lt;/a&gt;
 etc.), screen adapters (VGA and DVI) and GPIO cabling:&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/pi-bank/img-20140916-122800.jpg"&gt;&lt;img class="cow-img" src="/images/pi-bank/img-20140916-122800-500x398.jpg" alt="A Pi Kit" width="500" height="398"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/pi-bank/img-20140916-122800.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/pi-bank/img-20140916-122800-500x398.jpg" alt="A Pi Kit" width="500" height="398"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;In addition there are 10 Pi cameras, 10 audio cards and 10 simple robot kits.&lt;/p&gt;
 
 &lt;p&gt;Funding has been provided by the University's outreach programme and by
 Pimoroni:&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/pi-bank/img-20140916-122817.jpg"&gt;&lt;img class="cow-img" src="/images/pi-bank/img-20140916-122817-500x375.jpg" alt="Kit Label" width="500" height="375"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/pi-bank/img-20140916-122817.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/pi-bank/img-20140916-122817-500x375.jpg" alt="Kit Label" width="500" height="375"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;James Wallbank of &lt;a class="cow-url" href="http://access-space.org/"&gt;Access Space&lt;/a&gt; and Brian dropped
 in to see the new kits and talk about James' and John Moseley's geodesics and
@@ -25,19 +25,19 @@ in to see the new kits and talk about James' and John Moseley's geodesics and
 at the &lt;a class="cow-url" href="http://festivalofthemind.group.shef.ac.uk/"&gt;Festival of the Mind&lt;/a&gt;
 this Friday and Saturday:&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/pi-bank/img-20140916-125300.jpg"&gt;&lt;img class="cow-img" src="/images/pi-bank/img-20140916-125300-500x667.jpg" alt="James and Brian" width="500" height="667"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/pi-bank/img-20140916-125300.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/pi-bank/img-20140916-125300-500x667.jpg" alt="James and Brian" width="500" height="667"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;And I learned how to do timer selfies with my new &lt;a class="cow-url" href="http://www.fairphone.com/"&gt;FairPhone&lt;/a&gt; :-)&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/pi-bank/img-20140916-124006.jpg"&gt;&lt;img class="cow-img" src="/images/pi-bank/img-20140916-124006-500x667.jpg" alt="Hamish With Kits" width="500" height="667"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/pi-bank/img-20140916-124006.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/pi-bank/img-20140916-124006-500x667.jpg" alt="Hamish With Kits" width="500" height="667"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Come and join us on Saturday 20th September (10.30am to 2pm) at
 &lt;a class="cow-url" href="https://www.sheffield.ac.uk/ssid/maps/firth"&gt;Firth Hall&lt;/a&gt;.&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/festival.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="schools"></category><category term="education"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="pi bank"></category><category term="mopi"></category></entry><entry><title>Open Tech for Resilience</title><link href="/posts/2014/09/16/resilient-cultures/" rel="alternate"></link><updated>2014-09-16T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-09-16:posts/2014/09/16/resilient-cultures/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/festival.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="schools"></category><category term="education"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="pi bank"></category><category term="mopi"></category></entry><entry><title>Open Tech for Resilience</title><link href="http://pi.gate.ac.uk/posts/2014/09/16/resilient-cultures/" rel="alternate"></link><updated>2014-09-16T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-09-16:posts/2014/09/16/resilient-cultures/</id><summary type="html">
 &lt;h1 class="cow-heading"&gt;Festival of the Mind 2014&lt;/h1&gt;
 
 &lt;p&gt;&lt;b&gt;Resilience&lt;/b&gt; is ability to bounce back from stresses, strains and shocks.
@@ -134,19 +134,19 @@ about how &lt;em&gt;open source software&lt;/em&gt;, &lt;em&gt;open data&lt;/em&
 &lt;!--% Plus Bo and Anna's performance ...--&gt;
 
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/fotm-charlotte-wearables.png"&gt;&lt;img class="cow-img" src="/images/fotm-charlotte-wearables-500x707.png" alt="Open Source Wearables" width="500" height="707.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/fotm-charlotte-wearables.png"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/fotm-charlotte-wearables-500x707.png" alt="Open Source Wearables" width="500" height="707.png"&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/fotm-gtac.png"&gt;&lt;img class="cow-img" src="/images/fotm-gtac-500x707.png" alt="GTAC" width="500" height="707.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/fotm-gtac.png"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/fotm-gtac-500x707.png" alt="GTAC" width="500" height="707.png"&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/fotm-sam-chaos.png"&gt;&lt;img class="cow-img" src="/images/fotm-sam-chaos-500x707.png" alt="Predictable Chaos" width="500" height="707.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/fotm-sam-chaos.png"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/fotm-sam-chaos-500x707.png" alt="Predictable Chaos" width="500" height="707.png"&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/rescult-3.jpg"&gt;&lt;img class="cow-img" src="/images/rescult-3-500x500.jpg" alt="Resilient Cultures" width="500" height="500"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/rescult-3.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/rescult-3-500x500.jpg" alt="Resilient Cultures" width="500" height="500"&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/growing-futures.png"&gt;&lt;img class="cow-img" src="/images/growing-futures-500x273.png" alt="Everyday Growing Futures" width="500" height="273.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/growing-futures.png"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/growing-futures-500x273.png" alt="Everyday Growing Futures" width="500" height="273.png"&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/jo-weather-station.jpg"&gt;&lt;img class="cow-img" src="/images/jo-weather-station-500x255.jpg" alt="Pi Weather Station" width="500" height="255"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/jo-weather-station.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/jo-weather-station-500x255.jpg" alt="Pi Weather Station" width="500" height="255"&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/pi-brush-snap.jpg"&gt;&lt;img class="cow-img" src="/images/pi-brush-snap-500x284.jpg" alt="The PiBrush" width="500" height="284"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/pi-brush-snap.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/pi-brush-snap-500x284.jpg" alt="The PiBrush" width="500" height="284"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Want to play? Join us on Saturday 20th September (10.30am to 2pm) at
 &lt;a class="cow-url" href="https://www.sheffield.ac.uk/ssid/maps/firth"&gt;Firth Hall&lt;/a&gt;.&lt;/p&gt;
@@ -157,7 +157,7 @@ about how &lt;em&gt;open source software&lt;/em&gt;, &lt;em&gt;open data&lt;/em&
 &lt;a class="cow-url" href="http://92.27.63.80/"&gt;Bo Meson&lt;/a&gt;.&lt;/p&gt;
 
 
-</summary><category term="resilience"></category><category term="sustainability"></category><category term="open source"></category><category term="open data"></category><category term="open hardware"></category><category term=""></category></entry><entry><title>Solar MoPi</title><link href="/posts/2014/08/03/solar-mopi/" rel="alternate"></link><updated>2014-08-03T00:00:00+01:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:,2014-08-03:posts/2014/08/03/solar-mopi/</id><summary type="html">
+</summary><category term="resilience"></category><category term="sustainability"></category><category term="open source"></category><category term="open data"></category><category term="open hardware"></category><category term=""></category></entry><entry><title>Solar MoPi</title><link href="http://pi.gate.ac.uk/posts/2014/08/03/solar-mopi/" rel="alternate"></link><updated>2014-08-03T00:00:00+01:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:pi.gate.ac.uk,2014-08-03:posts/2014/08/03/solar-mopi/</id><summary type="html">
 
 &lt;p&gt;In some of the sunny days we've had this summer, we've managed to try out
 hooking up Solar Panels as one of the power inputs to MoPi. The results are
@@ -166,16 +166,16 @@ completely. In lower light levels or with less powerful panels, they can help
 increase battery life. We managed up to 19 hours with a Model B and 8 AAs by
 shutting down overnight:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/graphs/solar/mopisolar.2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/graphs/solar/mopisolar.2.png"&gt;&lt;/p&gt;
 
 &lt;p&gt;That's pretty good. Those spikes are when the panels overpower the batteries
 completely. The next step is to work out how to charge in those conditions.&lt;/p&gt;
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html#solar"&gt;Read more in the main article!&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html#solar"&gt;Read more in the main article!&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
 
 
 
-</summary><category term="kickstarter"></category><category term="batteries"></category><category term="solar"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="batteries"></category></entry><entry><title>MoPi Running the Pi Model B+</title><link href="/posts/2014/08/02/b-plus-again/" rel="alternate"></link><updated>2014-08-02T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-08-02:posts/2014/08/02/b-plus-again/</id><summary type="html">
+</summary><category term="kickstarter"></category><category term="batteries"></category><category term="solar"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="batteries"></category></entry><entry><title>MoPi Running the Pi Model B+</title><link href="http://pi.gate.ac.uk/posts/2014/08/02/b-plus-again/" rel="alternate"></link><updated>2014-08-02T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-08-02:posts/2014/08/02/b-plus-again/</id><summary type="html">
 
 &lt;p&gt;I'm writing this post on a 
 &lt;a class="cow-url" href="http://www.raspberrypi.org/introducing-raspberry-pi-model-b-plus/"&gt;Model B
@@ -189,7 +189,7 @@ CPU), and not on the CPU itself. You can see this here:&lt;/p&gt;
 
 
 &lt;p&gt;So we're good to go &amp;mdash; initial indications are that the B+ is an even better
-platform for mobile power (and &lt;a class="cow-url" href="/pages/mopi.html"&gt;MoPi&lt;/a&gt;) than the Model B...&lt;/p&gt;
+platform for mobile power (and &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;MoPi&lt;/a&gt;) than the Model B...&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;PS&lt;/b&gt; if you fire up a B+ and discover that your USB keyboard doesn't work,
 note that you need the most recent operating systems. One easy way to get one
@@ -197,8 +197,8 @@ is to download a &lt;a class="cow-url" href="http://www.raspberrypi.org/download
 and unzip it onto a micro-SD card.&lt;/p&gt;
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>AA battery life with the Model A and Model B</title><link href="/posts/2014/07/27/battery-life/" rel="alternate"></link><updated>2014-07-27T00:00:00+01:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:,2014-07-27:posts/2014/07/27/battery-life/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>AA battery life with the Model A and Model B</title><link href="http://pi.gate.ac.uk/posts/2014/07/27/battery-life/" rel="alternate"></link><updated>2014-07-27T00:00:00+01:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:pi.gate.ac.uk,2014-07-27:posts/2014/07/27/battery-life/</id><summary type="html">
 
 &lt;p&gt;We've conducted some tests to help people get a feel for how long AA batteries
 should power a Rasberry Pi in a variety of configurations when using MoPi. We
@@ -208,16 +208,16 @@ that's coming soon...&lt;/p&gt;
 &lt;p&gt;For now though, the best case scenario? &lt;b&gt;50 hours&lt;/b&gt; using the Model A with 16
 AAs!&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/graphs/mopia2.16fresh.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/graphs/mopia2.16fresh.png"&gt;&lt;/p&gt;
 
 &lt;p&gt;That's best case, of course, with the Pi not doing anything much, but it does
 illustrate the potential.&lt;/p&gt;
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html#detailed-testing"&gt;Read more in the main article!&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html#detailed-testing"&gt;Read more in the main article!&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
 
 
 
-</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="batteries"></category></entry><entry><title>MoPi and the Model B+ Pi</title><link href="/posts/2014/07/15/model-b-plus/" rel="alternate"></link><updated>2014-07-15T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-07-15:posts/2014/07/15/model-b-plus/</id><summary type="html">
+</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="batteries"></category></entry><entry><title>MoPi and the Model B+ Pi</title><link href="http://pi.gate.ac.uk/posts/2014/07/15/model-b-plus/" rel="alternate"></link><updated>2014-07-15T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-07-15:posts/2014/07/15/model-b-plus/</id><summary type="html">
 
 &lt;p&gt;Let's cut a long story short: MoPi should work fine with the
 &lt;a class="cow-url" href="http://www.raspberrypi.org/introducing-raspberry-pi-model-b-plus/"&gt;Model B
@@ -225,7 +225,7 @@ Plus Pi&lt;/a&gt; announced yesterday.&lt;/p&gt;
 
 &lt;p&gt;The Model B+ is an evolution on the original Model B; it looks like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/model-b-plus-500x337.jpg" alt="Model B+ Pi" width="500" height="337"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/model-b-plus-500x337.jpg" alt="Model B+ Pi" width="500" height="337"&gt;&lt;/p&gt;
 
 &lt;p&gt;From a mobile power point of view the B+ will perform a bit better than the B
 &amp;mdash; they're replaced the rather wasteful LDO regulator of the original with a
@@ -246,8 +246,8 @@ used to raise MoPi by a couple of millimeters.
 great addition to the Pi stable.&lt;/p&gt;
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Fitting a Remote Power Switch to MoPi</title><link href="/posts/2014/07/10/mopi-remote-switch/" rel="alternate"></link><updated>2014-07-10T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-07-10:posts/2014/07/10/mopi-remote-switch/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Fitting a Remote Power Switch to MoPi</title><link href="http://pi.gate.ac.uk/posts/2014/07/10/mopi-remote-switch/" rel="alternate"></link><updated>2014-07-10T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-07-10:posts/2014/07/10/mopi-remote-switch/</id><summary type="html">
 
 &lt;p&gt;Daniel T, one of our Kickstarter backers for &lt;a class="cow-url" href="/pages/mopi.html"&gt;MoPi&lt;/a&gt;, wanted
 to fit a remote power switch to his board. (It has one fitted, but if you're
@@ -269,32 +269,32 @@ next to the power switch:&lt;/p&gt;
 &lt;!--% %image(images/mopi/remote-switch/remote-switch-1-500x375.jpg, MoPi remote switch, 500, 375))--&gt;
 
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/remote-switch/remote-switch-3.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/remote-switch/remote-switch-3-500x375.jpg" alt="MoPi remote switch" width="500" height="375"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/remote-switch/remote-switch-3.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/remote-switch/remote-switch-3-500x375.jpg" alt="MoPi remote switch" width="500" height="375"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;And voila:&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/remote-switch/remote-switch-2.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/remote-switch/remote-switch-2-500x375.jpg" alt="MoPi remote switch" width="500" height="375"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/remote-switch/remote-switch-2.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/remote-switch/remote-switch-2-500x375.jpg" alt="MoPi remote switch" width="500" height="375"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;For my next trick, I will turn a pumpkin into a penguin. Watch this space.&lt;/p&gt;
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Custom PiBow Lid for MoPi</title><link href="/posts/2014/06/03/custom-pibow-lid/" rel="alternate"></link><updated>2014-06-03T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-06-03:posts/2014/06/03/custom-pibow-lid/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Custom PiBow Lid for MoPi</title><link href="http://pi.gate.ac.uk/posts/2014/06/03/custom-pibow-lid/" rel="alternate"></link><updated>2014-06-03T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-06-03:posts/2014/06/03/custom-pibow-lid/</id><summary type="html">
 
 &lt;p&gt;Thanks to Paul and Connor at &lt;a class="cow-url" href="http://pimoroni.com/"&gt;Pimoroni&lt;/a&gt; we now have a
 prototype of the custom
 &lt;a class="cow-url" href="http://shop.pimoroni.com/products/pibow-raspberry-pi-case"&gt;PiBow&lt;/a&gt; lid that
-they're supplying for &lt;a class="cow-url" href="/pages/mopi.html"&gt;MoPi&lt;/a&gt; :-)&lt;/p&gt;
+they're supplying for &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;MoPi&lt;/a&gt; :-)&lt;/p&gt;
 
 &lt;p&gt;Here are some pics of MoPi (3.3V version) running a Model A Pi in a Crystal
 PiBow with the new lid:&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/custom-lid-120313.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/custom-lid-120313-500x.jpg" alt="Custom PiBow Lid" width="500"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/custom-lid-120313.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/custom-lid-120313-500x.jpg" alt="Custom PiBow Lid" width="500"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The power button is just proud of the lid &amp;mdash; hard to press by accident, but
 easy to access when you want it.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/custom-lid-120322.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/custom-lid-120322-500x.jpg" alt="Custom PiBow Lid" width="500"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/custom-lid-120322.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/custom-lid-120322-500x.jpg" alt="Custom PiBow Lid" width="500"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;!--% %(images/mopi/custom-lid-120327.jpg, %image(images/mopi/custom-lid-120327-500x.jpg, Custom PiBow Lid, 500))--&gt;
 
@@ -303,8 +303,8 @@ easy to access when you want it.&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>MoPi: Firming up the Software</title><link href="/posts/2014/05/07/firming-up/" rel="alternate"></link><updated>2014-05-07T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-05-07:posts/2014/05/07/firming-up/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>MoPi: Firming up the Software</title><link href="http://pi.gate.ac.uk/posts/2014/05/07/firming-up/" rel="alternate"></link><updated>2014-05-07T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-05-07:posts/2014/05/07/firming-up/</id><summary type="html">
 &lt;h2 class="cow-heading"&gt;[MoPi is &lt;b&gt;mobile&lt;/b&gt;, &lt;b&gt;hot-swap&lt;/b&gt; and &lt;b&gt;24/7 power&lt;/b&gt; for the Raspberry Pi. &lt;br&gt;
 &lt;a class="cow-url" href="/pages/get-mopi.html"&gt;How to order.&lt;/a&gt;]&lt;/h2&gt;
 
@@ -555,15 +555,15 @@ do we know what the chemistry is? Two ways:&lt;/p&gt;
 all types of connections (including remote login with &lt;tt&gt;ssh&lt;/tt&gt;). Here's a
 screenshot or three:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/config-01.png" alt="MoPi Config UI 1" width="650"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/config-01.png" alt="MoPi Config UI 1" width="650"&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;The main entry screen.&lt;/em&gt; &lt;br&gt; &lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/config-02.png" alt="MoPi Config UI 2" width="650"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/config-02.png" alt="MoPi Config UI 2" width="650"&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Configuring one of the power supplies, battery chemistry.&lt;/em&gt; &lt;br&gt; &lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/config-03.png" alt="MoPi Config UI 3" width="650"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/config-03.png" alt="MoPi Config UI 3" width="650"&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Getting status data (there's lots more in the newest version!).&lt;/em&gt;&lt;/p&gt;
 
@@ -642,7 +642,7 @@ should it ever crash, for example.&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
 &lt;span class="cow-footnote-section"&gt;
 &lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
 &lt;p&gt;&lt;ol&gt;
@@ -676,7 +676,7 @@ script.&lt;/span&gt;
 &lt;/ol&gt;&lt;/p&gt;
 &lt;/span&gt;
 &lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"&gt;&lt;/script&gt;
-</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>The AirPi Software</title><link href="/posts/2014/04/21/airpisoftware/" rel="alternate"></link><updated>2014-04-21T00:00:00+01:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:,2014-04-21:posts/2014/04/21/airpisoftware/</id><summary type="html">
+</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>The AirPi Software</title><link href="http://pi.gate.ac.uk/posts/2014/04/21/airpisoftware/" rel="alternate"></link><updated>2014-04-21T00:00:00+01:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:pi.gate.ac.uk,2014-04-21:posts/2014/04/21/airpisoftware/</id><summary type="html">
 
 &lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
 
@@ -708,7 +708,7 @@ gotten even more weather-station-esqe. Just connect the raingauge to GPIO pin
 Air Quality Sensor&lt;/b&gt; and the &lt;b&gt;UVI-01 Ultra Violet Sensor&lt;/b&gt;. This was all pretty
 trivial still. This was all mostly just extensions of what was already there.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/software/raingauge2.jpg"&gt;&lt;img class="cow-img" src="/images/environment/software/raingauge2_thumb.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/software/raingauge2.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/software/raingauge2_thumb.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;The raingauge connection...&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;On to more exciting things! Last time I more or less pointed out that a chunk
@@ -720,7 +720,7 @@ is now compatible with industry standard file formats... also known as a
 
 &lt;p&gt;... (wait for it) ... The Crown Jewels:&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/software/webinterface.png"&gt;&lt;img class="cow-img" src="/images/environment/software/webinterface_small.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/software/webinterface.png"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/software/webinterface_small.png"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Instead of uploading to Xively, which requires Internet access and relies on a
 third-party service, I've &lt;b&gt;built in an HTTP server&lt;/b&gt;. Starting the AirPi
@@ -730,7 +730,7 @@ on &lt;a class="cow-url" href="http://getbootstrap.com/"&gt;Twitter Bootstrap&lt
 
 &lt;p&gt;But wait! There's more!&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/software/webinterface2.png"&gt;&lt;img class="cow-img" src="/images/environment/software/webinterface2_thumb.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/software/webinterface2.png"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/software/webinterface2_thumb.png"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Not only can you see the current reading, you can also view graphs.
 Interactively explore what the weather's been doing over the last 24 hours
@@ -766,14 +766,14 @@ ${rss http://airpi:8080/rss.xml 10 item_title 7}: ${rss http://airpi:8080/rss.xm
 (below) in the upper right corner of my desktop. The weather on my terms. Just
 what an AirPi should do.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/software/conky.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/software/conky.png"&gt;&lt;/p&gt;
 
 
-</summary><category term="airpi"></category><category term="hardware"></category><category term="pi-tronics"></category><category term="environmental"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Wobbling, Coding, Wobbling, Testing</title><link href="/posts/2014/04/20/shakey-testing/" rel="alternate"></link><updated>2014-04-20T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-04-20:posts/2014/04/20/shakey-testing/</id><summary type="html">
+</summary><category term="airpi"></category><category term="hardware"></category><category term="pi-tronics"></category><category term="environmental"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Wobbling, Coding, Wobbling, Testing</title><link href="http://pi.gate.ac.uk/posts/2014/04/20/shakey-testing/" rel="alternate"></link><updated>2014-04-20T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-04-20:posts/2014/04/20/shakey-testing/</id><summary type="html">
 &lt;h2 class="cow-heading"&gt;[MoPi is &lt;b&gt;mobile&lt;/b&gt;, &lt;b&gt;hot-swap&lt;/b&gt; and &lt;b&gt;24/7 power&lt;/b&gt; for the Raspberry Pi.
 &lt;a class="cow-url" href="/pages/get-mopi.html"&gt;How to order.&lt;/a&gt;]&lt;/h2&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/first-boxed-batch-april-2014.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/first-boxed-batch-april-2014-500.jpg" alt="Boxed batch" width="500"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/first-boxed-batch-april-2014.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/first-boxed-batch-april-2014-500.jpg" alt="Boxed batch" width="500"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class="cow-contents"&gt;&lt;h2 class="cow-heading"&gt;Contents&lt;/h2&gt;
 &lt;p&gt;&lt;ul&gt;
@@ -822,7 +822,7 @@ development and testing process.)&lt;/p&gt;
 
 &lt;p&gt;The bad news is that there's a world-wide shortage of the Silicon Labs
 microcontroller that we're using&lt;span class="cow-footnote" name="footnote2"&gt;&lt;sup&gt;&lt;a href="#footnote2"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt; :-( &lt;br&gt; &lt;br&gt;
-&lt;img class="cow-img" src="/images/falling-shipping-containers.jpg" alt="Falling Shipping
+&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/falling-shipping-containers.jpg" alt="Falling Shipping
 Containers"&gt;&lt;span class="cow-footnote" name="footnote3"&gt;&lt;sup&gt;&lt;a href="#footnote3"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt; &lt;br&gt; &lt;br&gt; &amp;mdash; we've only
 managed to order around half of what we need for immediate delivery. The other
 half is on order for delivery in the first week of June. If the situation
@@ -839,7 +839,7 @@ first-come-first-served order.)&lt;/p&gt;
 &lt;p&gt;Big thanks to Georgi Marinov from &lt;a class="cow-url" href="http://www.engview.com/"&gt;EngView systems&lt;/a&gt;
 for designing a beautiful packet for MoPi:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/packaging-01.jpg" alt="The Packaging 1" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/packaging-01.jpg" alt="The Packaging 1" width="500"&gt;&lt;/p&gt;
 
 &lt;!--% %image(images/mopi/packet/img-20140421-112941.jpg, Packaging 2, 500)--&gt;
 
@@ -851,7 +851,7 @@ very easy to bend!).&lt;/p&gt;
 &lt;!--% %image(images/mopi/packet/img-20140421-112958.jpg, Packaging 3, 500)--&gt;
 
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/packet/img-20140421-113013.jpg" alt="Packaging 4" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/packet/img-20140421-113013.jpg" alt="Packaging 4" width="500"&gt;&lt;/p&gt;
 
 &lt;p&gt;Thanks Joro! (And thanks Gen for the logo!)&lt;/p&gt;
 
@@ -874,17 +874,17 @@ faster. (Well, would &lt;em&gt;you&lt;/em&gt; want to add &amp;quot;wait for the
 to every edit/compile/test loop?!) I'm writing this post next to a large
 humming monster:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/sofia-20140421-154603-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/test-rigs/sofia-20140421-154603-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
 
 &lt;p&gt;The Pi is drawing 170 mA; MoPi is getting 11.9 volts from the PSU. The PSU
 connects up to one of MoPi's supply inputs using a couple of re-purposed panel
 pins:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/sofia-20140421-113148-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/test-rigs/sofia-20140421-113148-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
 
 &lt;p&gt;Mission control (helicopter not strictly necessary):&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/sofia-20140421-154651-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/test-rigs/sofia-20140421-154651-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
 
 &lt;!--% %image(images/mopi/test-rigs/sofia-20140421-113213-500.jpg, Test Rig, 500)--&gt;
 
@@ -897,18 +897,18 @@ pins:&lt;/p&gt;
 
 &lt;p&gt;We've also got a flash new PSU down at the workshop:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-153037-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/test-rigs/workshop-20140409-153037-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-153052-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/test-rigs/workshop-20140409-153052-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
 
 &lt;p&gt;And here's Fred after I just showed him the bill:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-153131-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/test-rigs/workshop-20140409-153131-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
 
 &lt;p&gt;While we're showing my snaps, here's one of my absolute favourite bits of kit
 ever:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-153029-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/test-rigs/workshop-20140409-153029-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
 &lt;!--% %image(images/mopi/test-rigs/workshop-20140409-153021-500.jpg, Test Rig, 500)--&gt;
 
 
@@ -922,7 +922,7 @@ agreed 100%. Can I marry my multimeter?&lt;/p&gt;
 
 &lt;!--% %image(images/mopi/test-rigs/workshop-20140409-153039-500.jpg, Test Rig, 500)--&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-153043-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/test-rigs/workshop-20140409-153043-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
 
 &lt;p&gt;Anyhow, after this work is finished, we will:&lt;/p&gt;
 
@@ -938,9 +938,9 @@ agreed 100%. Can I marry my multimeter?&lt;/p&gt;
 &lt;!--% %image(images/mopi/test-rigs/workshop-20140409-152525-500.jpg, Battery Rig, 500)--&gt;
 
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-152533-500.jpg" alt="Battery Rig" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/test-rigs/workshop-20140409-152533-500.jpg" alt="Battery Rig" width="500"&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-152538-500.jpg" alt="Battery Rig" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/test-rigs/workshop-20140409-152538-500.jpg" alt="Battery Rig" width="500"&gt;&lt;/p&gt;
 
 &lt;p&gt;Do say: wow, you're really taking this seriously! Don't say: so, Professor
 Cunningham, you popped out to buy a battery about a year ago and you haven't
@@ -1013,7 +1013,7 @@ designated I2C address &amp;mdash; the smart battery address)&lt;span class="cow
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
 &lt;span class="cow-footnote-section"&gt;
 &lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
 &lt;p&gt;&lt;ol&gt;
@@ -1048,7 +1048,7 @@ Pi &amp;mdash; the very early boards &amp;mdash; use &lt;tt&gt;0&lt;/tt&gt; inst
 &lt;/li&gt;
 &lt;/ol&gt;&lt;/p&gt;
 &lt;/span&gt;
-</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Pre-Production MoPi Boards</title><link href="/posts/2014/03/27/pre-propduction-mopi/" rel="alternate"></link><updated>2014-03-27T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-03-27:posts/2014/03/27/pre-propduction-mopi/</id><summary type="html">
+</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Pre-Production MoPi Boards</title><link href="http://pi.gate.ac.uk/posts/2014/03/27/pre-propduction-mopi/" rel="alternate"></link><updated>2014-03-27T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-03-27:posts/2014/03/27/pre-propduction-mopi/</id><summary type="html">
 
 &lt;p&gt;MoPi level 3 is now in testing :-)&lt;/p&gt;
 
@@ -1088,10 +1088,10 @@ the GPIO connector or the power switch, which were soldered by hand after
 these pictures were taken):&lt;/p&gt;
 
 &lt;p&gt;Top of the board:
-&lt;img class="cow-img" src="/images/mopi/pre-production-boards-02.jpg" alt="Pre-production MoPi top"&gt;&lt;/p&gt;
+&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/pre-production-boards-02.jpg" alt="Pre-production MoPi top"&gt;&lt;/p&gt;
 
 &lt;p&gt;Underneath the board:
-&lt;img class="cow-img" src="/images/mopi/pre-production-boards-01.jpg" alt="Pre-production MoPi bottom"&gt;&lt;/p&gt;
+&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/pre-production-boards-01.jpg" alt="Pre-production MoPi bottom"&gt;&lt;/p&gt;
 
 &lt;p&gt;The stackable headers (for when MoPi is used in tandem with other add-on
 boards) take up quite a lot of vertical space in order to provide a set of
@@ -1106,7 +1106,7 @@ Header"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you're opting for the low-profile header you can see an example here, on
 the level 2 board:
-&lt;img class="cow-img" src="/images/mopi/mopi-underside.jpg" alt="MoPi 2 underside"&gt;.&lt;/p&gt;
+&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/mopi-underside.jpg" alt="MoPi 2 underside"&gt;.&lt;/p&gt;
 
 
 &lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
@@ -1127,7 +1127,7 @@ batteries from solar panels during the day and then run on batteries
 overnight), so we've been working on a configuration with an external charger.
 For example, here's how we think a UPS configuration with charging could look:&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="https://www.circuitlab.com/circuit/dsguk8/ups-configuration/"&gt;&lt;img class="cow-img" src="/images/mopi/ups-with-charger.png" alt="UPS with charger" width="540" height="405"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="https://www.circuitlab.com/circuit/dsguk8/ups-configuration/"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/ups-with-charger.png" alt="UPS with charger" width="540" height="405"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;We haven't tested this yet, but it &lt;em&gt;should&lt;/em&gt; work ;-)&lt;/p&gt;
 
@@ -1222,7 +1222,7 @@ revision this might slip to June.)&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
 &lt;span class="cow-footnote-section"&gt;
 &lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
 &lt;p&gt;&lt;ol&gt;
@@ -1256,7 +1256,7 @@ several really nice features to the board. Hey ho. Life is random!&lt;/span&gt;
 &lt;/li&gt;
 &lt;/ol&gt;&lt;/p&gt;
 &lt;/span&gt;
-</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>MoPi Power Board Funded to &gt;300% on Kickstarter :-)</title><link href="/posts/2014/03/11/mopi-funded/" rel="alternate"></link><updated>2014-03-11T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-03-11:posts/2014/03/11/mopi-funded/</id><summary type="html">
+</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>MoPi Power Board Funded to &gt;300% on Kickstarter :-)</title><link href="http://pi.gate.ac.uk/posts/2014/03/11/mopi-funded/" rel="alternate"></link><updated>2014-03-11T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-03-11:posts/2014/03/11/mopi-funded/</id><summary type="html">
 
 &lt;p&gt;A huge &lt;b&gt;thank you&lt;/b&gt; to all our Kickstarter backers! Our MoPi power management
 board for the Pi will now go into production :-)&lt;/p&gt;
@@ -1270,8 +1270,8 @@ for the retail version, use the form below, or surf on over to
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Last Chance to Back Mobile Pi Kickstarter!</title><link href="/posts/2014/03/07/mopi-last-chance/" rel="alternate"></link><updated>2014-03-07T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-03-07:posts/2014/03/07/mopi-last-chance/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Last Chance to Back Mobile Pi Kickstarter!</title><link href="http://pi.gate.ac.uk/posts/2014/03/07/mopi-last-chance/" rel="alternate"></link><updated>2014-03-07T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-03-07:posts/2014/03/07/mopi-last-chance/</id><summary type="html">
 &lt;h2 class="cow-heading"&gt;[MoPi is &lt;b&gt;mobile&lt;/b&gt;, &lt;b&gt;hot-swap&lt;/b&gt; and &lt;b&gt;24/7 power&lt;/b&gt; for the Raspberry Pi.
 &lt;a class="cow-url" href="/pages/get-mopi.html"&gt;How to order.&lt;/a&gt;]&lt;/h2&gt;
 
@@ -1309,8 +1309,8 @@ volume production and delivery.&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>A Pi Bank for Sheffield Schools</title><link href="/posts/2014/03/02/schools-pi-bank/" rel="alternate"></link><updated>2014-03-02T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-03-02:posts/2014/03/02/schools-pi-bank/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>A Pi Bank for Sheffield Schools</title><link href="http://pi.gate.ac.uk/posts/2014/03/02/schools-pi-bank/" rel="alternate"></link><updated>2014-03-02T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-03-02:posts/2014/03/02/schools-pi-bank/</id><summary type="html">
 
 &lt;p&gt;We're putting together a bunch of Pi kits to lend out to Sheffield Schools.&lt;/p&gt;
 
@@ -1330,19 +1330,19 @@ to bung us some dosh to kick it off, and &lt;a class="cow-url" href="http://www.
 are going to chip in too :-)&lt;/p&gt;
 
 &lt;p&gt;We'll include the basic Pi setup, and some very simple GPIO
-&lt;a class="cow-url" href="/pages/basics.html"&gt;electronics
+&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html"&gt;electronics
 projects&lt;/a&gt;. Later we'll add materials for the camera and for
 &lt;a class="cow-url" href="http://airpi.es/"&gt;AirPi&lt;/a&gt; (from our
 &lt;a class="cow-url" href="https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi"&gt;Mobile Pi project&lt;/a&gt;). If you have ideas about other good stuff to include
 please leave a comment or tweet us on &lt;a class="cow-url" href="https://twitter.com/pitronics"&gt;@PiTronics&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/ambassadors/pi-oneers-003-300x450.jpg" alt="Pi-Oneers at the Cutlers
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/ambassadors/pi-oneers-003-300x450.jpg" alt="Pi-Oneers at the Cutlers
 2013-10-02-children-and-animals.yam-Ambassadors day" width="300"&gt;&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/schools.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="schools"></category><category term="education"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="pi bank"></category></entry><entry><title>Interpreting AirPi Sensor Readings</title><link href="/posts/2014/02/25/airpisensors/" rel="alternate"></link><updated>2014-02-25T00:00:00+00:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:,2014-02-25:posts/2014/02/25/airpisensors/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/schools.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="schools"></category><category term="education"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="pi bank"></category></entry><entry><title>Interpreting AirPi Sensor Readings</title><link href="http://pi.gate.ac.uk/posts/2014/02/25/airpisensors/" rel="alternate"></link><updated>2014-02-25T00:00:00+00:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:pi.gate.ac.uk,2014-02-25:posts/2014/02/25/airpisensors/</id><summary type="html">
 
 &lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
 
@@ -1380,7 +1380,7 @@ Uploaded successfully&lt;/pre&gt;
 
 &lt;p&gt;This is the combined temperature moisture probe. It's an
 &lt;a class="cow-url" href="https://www.adafruit.com/products/385"&gt;Adafruit&lt;/a&gt; special, which means I can
-start there for learning more. &lt;a class="cow-url" href="/files/DHT22.pdf"&gt;The datasheet&lt;/a&gt; is of course
+start there for learning more. &lt;a class="cow-url" href="/pages/airpi-files/DHT22.pdf"&gt;The datasheet&lt;/a&gt; is of course
 another good source. The two important bits from the Adafruit page are these
 two pieces of information:&lt;/p&gt;
 
@@ -1459,7 +1459,7 @@ AirPi's Analogue-to-Digital Converter (ADC). We need to understand a bit more
 about the electronics and AirPi software this time to understand what the value
 of &amp;quot;16920.56&amp;quot; means. Looking through the data sheet gives us this formula:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/tgs2600/formula.png" alt="Rs = (Vc x Rl)/Vout - Rl" width="192" height="58"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/sensors/tgs2600/formula.png" alt="Rs = (Vc x Rl)/Vout - Rl" width="192" height="58"&gt;&lt;/p&gt;
 
 &lt;p&gt;Where &lt;em&gt;Rs&lt;/em&gt; is sensor resistance, Vc is sensor input voltage, &lt;em&gt;Rl&lt;/em&gt; is load
 resistance, and &lt;em&gt;Vout&lt;/em&gt; is measured sensor voltage. Looking through the
@@ -1481,7 +1481,7 @@ be a bit more precise than that. They specifically list sensitivity to methane,
 carbon monoxide (CO), iso-butane, ethanol, and hydrogen. Of course how they do
 this is a bit round about. They do it by showing this graph:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/tgs2600/sensitivity_characteristics.png" alt="TGS2600 Sensitivity Characteristics"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/sensors/tgs2600/sensitivity_characteristics.png" alt="TGS2600 Sensitivity Characteristics"&gt;&lt;/p&gt;
 
 &lt;p&gt;This shows a link between the concentration of the different chemicals in
 parts-per-million (ppm)&amp;mdash;ppm can be thought of like percent, except for one in
@@ -1496,7 +1496,7 @@ quality to drop. 50 ppm of CO or 4 ppm of iso-butane?&lt;/p&gt;
 &lt;p&gt;But wait! There's more! Next to the graph on sensitivity characteristics
 there's this beauty:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/tgs2600/temperature_characteristics.png" alt="TGS2600 Temperature/Humidity Dependency"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/sensors/tgs2600/temperature_characteristics.png" alt="TGS2600 Temperature/Humidity Dependency"&gt;&lt;/p&gt;
 
 &lt;p&gt;So not only does the sensor react to air quality, but humidity and temperature
 as well. This actually isn't that uncommon, but means a correction factor needs
@@ -1535,10 +1535,10 @@ about 8 to turn lights on and off in the dark of my closet. Because of that I
 just could not see how you could use an LDR to get to a Lux reading.
 (&lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Lux"&gt;Lux&lt;/a&gt; is the standard light measure, the
 same way that meters are for distance.) However, looking at the
-&lt;a class="cow-url" href="/files/PD0001.pdf"&gt;GL5528 datasheet&lt;/a&gt; I was surprised to find that there
+&lt;a class="cow-url" href="/pages/airpi-files/PD0001.pdf"&gt;GL5528 datasheet&lt;/a&gt; I was surprised to find that there
 actually is a proper relationship between resistance and lux, or illuminance.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/ldr/graph.png" alt="GL5528 luminance vs
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/sensors/ldr/graph.png" alt="GL5528 luminance vs
 photo-resistance"&gt;&lt;/p&gt;
 
 &lt;p&gt;On a &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Log-log_plot"&gt;log-log graph&lt;/a&gt;, there's an
@@ -1598,11 +1598,11 @@ ans =
 
 &lt;/pre&gt;Plug that into &lt;em&gt;y = mx + b&lt;/em&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/ldr/luxformula1.png" alt="ln(Rs/1000) = -0.6704ln(lux)+4.125" width="418" height="65"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/sensors/ldr/luxformula1.png" alt="ln(Rs/1000) = -0.6704ln(lux)+4.125" width="418" height="65"&gt;&lt;/p&gt;
 
 &lt;p&gt;Apply some algebra and rearrange to solve for the lux value given resistance:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/ldr/luxformula2.png" alt="lux = e^a, a = (ln(Rs/1000)-4.125)/-0.6704" width="391" height="80"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/sensors/ldr/luxformula2.png" alt="lux = e^a, a = (ln(Rs/1000)-4.125)/-0.6704" width="391" height="80"&gt;&lt;/p&gt;
 
 &lt;p&gt;Viola! This should give me a value that I'm confident reflects reality
 somewhat. (&lt;em&gt;Rs&lt;/em&gt; is divided by 1000 because the y-axis of the graph above has K&amp;Omega;
@@ -1643,15 +1643,15 @@ use anything in the 1K&amp;Omega; to 30K&amp;Omega; range for R1 as long as R2 w
 greater. Can't make 470 times? Edit that line of code with the 471 divider. (I
 used 1K&amp;Omega; and 470K&amp;Omega;, because the Maplin resistor kit doesn't go over 1M&amp;Omega;.)&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/airpi/op-amp circuit.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi/op-amp circuit.png"&gt;&lt;/p&gt;
 
 &lt;p&gt;Then why multiply by 1000? That's to get the reading in mV. Because unlike the
 previous sensors, which measure by resistance, the UVI-01 is a direct voltage
 reading. Which is why the third line of code there is a multiplication by a
 factor. That's a factory standard calibration. You can see it in the following
-graph from the &lt;a class="cow-url" href="/files/UVI-01-E.pdf"&gt;datasheet&lt;/a&gt;:&lt;/p&gt;
+graph from the &lt;a class="cow-url" href="/pages/airpi-files/UVI-01-E.pdf"&gt;datasheet&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/sensors/uv/uv.png"&gt;&lt;img class="cow-img" src="/images/environment/sensors/uv/uv_small.png"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/sensors/uv/uv.png"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/sensors/uv/uv_small.png"&gt;&lt;/a&gt;
 &lt;em&gt;Click for a graph you can actually read...&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;There are four very linear lines, for 0.5M&amp;Omega;, 1M&amp;Omega;, 2M&amp;Omega;, and 3M&amp;Omega;, resistor put in
@@ -1680,7 +1680,7 @@ sunblock!&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;BMP085 pressure sensor&lt;/b&gt;&lt;/p&gt;
 
 &lt;p&gt;Another &lt;a class="cow-url" href="https://www.adafruit.com/products/391"&gt;Adafruit favorite&lt;/a&gt;. I
-immediately like it for &lt;a class="cow-url" href="/files/BMP085_DataSheet_Rev.1.0_01July2008.pdf"&gt;another reason&lt;/a&gt;: &amp;quot;Fully calibrated&amp;quot;. What they do is they run a calibration of
+immediately like it for &lt;a class="cow-url" href="/pages/airpi-files/BMP085_DataSheet_Rev.1.0_01July2008.pdf"&gt;another reason&lt;/a&gt;: &amp;quot;Fully calibrated&amp;quot;. What they do is they run a calibration of
 the sensor in the factory and burn the calibration co-efficients into the chip.
 When the AirPi software reads the value off the pressure transducer, it then
 applies this in-built calibration. We can therefore be reasonably confident in
@@ -1724,7 +1724,7 @@ software. The first is to use the pressure to calculate the altitude. The
 higher up you are the lower the pressure will be and this expresses as an
 exponential function:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/bmp085/pressure_alt.png" alt="altitude = 44330 x (1-(p/p0)^(1/5.255))" width="394" height="76"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/sensors/bmp085/pressure_alt.png" alt="altitude = 44330 x (1-(p/p0)^(1/5.255))" width="394" height="76"&gt;&lt;/p&gt;
 
 &lt;p&gt;Here &lt;em&gt;p0&lt;/em&gt; is pressure at sea level, so 1013.25 hPa and &lt;em&gt;p&lt;/em&gt; is the pressure
 reading from the sensor.&lt;/p&gt;
@@ -1732,7 +1732,7 @@ reading from the sensor.&lt;/p&gt;
 &lt;p&gt;The second use is to calculate the pressure at sea level given a known
 altitude:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/bmp085/pressure_sea.png" alt="p0 = p / ((1 - altitude/44330)^5.255)" width="247" height="63"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/sensors/bmp085/pressure_sea.png" alt="p0 = p / ((1 - altitude/44330)^5.255)" width="247" height="63"&gt;&lt;/p&gt;
 
 &lt;p&gt;It's the second of these which is used by default in the AirPi software,
 assuming an altitude of 35 m above sea level. Sheffield is a hilly place and as
@@ -1776,7 +1776,7 @@ tuned to see what my room has been like since I built the AirPi!&lt;/p&gt;
 
 
 &lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"&gt;&lt;/script&gt;
-</summary><category term="airpi"></category><category term="hardware"></category><category term="pi-tronics"></category><category term="environmental"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>AirPi Update - A kit!</title><link href="/posts/2014/02/14/airpiupdate/" rel="alternate"></link><updated>2014-02-14T00:00:00+00:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:,2014-02-14:posts/2014/02/14/airpiupdate/</id><summary type="html">
+</summary><category term="airpi"></category><category term="hardware"></category><category term="pi-tronics"></category><category term="environmental"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>AirPi Update - A kit!</title><link href="http://pi.gate.ac.uk/posts/2014/02/14/airpiupdate/" rel="alternate"></link><updated>2014-02-14T00:00:00+00:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:pi.gate.ac.uk,2014-02-14:posts/2014/02/14/airpiupdate/</id><summary type="html">
 
 &lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
 
@@ -1796,10 +1796,10 @@ interesting folks, including Tom Hartley, one of the AirPi developers. He also
 picked up one of those kits so that I had something new to play with while
 some data records on my breadboard system.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/box.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/box.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi1.2/box.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi1.2/thumbs/box.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;Kitbox&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/boxcontents.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/boxcontents.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi1.2/boxcontents.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi1.2/thumbs/boxcontents.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;And all the stuff in it&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;The first thing to know is that this is AirPi v1.2. This isn't what the
@@ -1808,10 +1808,10 @@ with a slightly different load-out. The primary difference is that the UV sensor
 has been replaced with a microphone. I'm not too sure about this change, but it
 means that the CA314 op-amp has been replaced with a MCP6283.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/pcbtop.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/pcbtop.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi1.2/pcbtop.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi1.2/thumbs/pcbtop.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;PCB top&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/pcbbottom.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/pcbbottom.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi1.2/pcbbottom.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi1.2/thumbs/pcbbottom.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;PCB bottom&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;You can also see there on the PCB spots for two LEDs (LED1 and LED2). These
@@ -1822,10 +1822,10 @@ all&amp;mdash;gotta take advantage of that! The AirPi does itself. The kit comes
 the separate MICS-2710 (NO2) and MICS-5525 (CO) sensors, which I couldn't get
 for my breadboard.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/mostlydone.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/mostlydone.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi1.2/mostlydone.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi1.2/thumbs/mostlydone.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;Just about everything soldered on&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/mostlydonebottom.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/mostlydonebottom.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi1.2/mostlydonebottom.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi1.2/thumbs/mostlydonebottom.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;You can see where the board has melted some&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;This took me about an hour and a half to do. The only thing that's not soldered
@@ -1845,10 +1845,10 @@ which was the hardest part of doing this kit. The colors on the printed card
 are hard to distinguish, and it's hard to distinguish them on the resistors
 themselves. Impossible on the tiny little ones, like the 100&amp;Omega; and 100K&amp;Omega;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/done.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/done.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi1.2/done.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi1.2/thumbs/done.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;Done!&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/donebottom.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/donebottom.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi1.2/donebottom.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi1.2/thumbs/donebottom.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;And the reverse&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Soldering on the Pi connector was interesting. 26 very tightly spaced little
@@ -1857,10 +1857,10 @@ plastic in the way. Somehow it seemed like a better idea than approaching it
 from the top, but I don't know really. I used a GPIO ribbon cable to work out
 how much the connector on the bottom needed to stick through.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/onapi.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/onapi.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi1.2/onapi.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi1.2/thumbs/onapi.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;Sticking it on a pi&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/onapiside.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/onapiside.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi1.2/onapiside.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi1.2/thumbs/onapiside.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;A pretty compact package&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;After putting the AirPi on top of a Pi, I realised that the placing GPIO header
@@ -1868,7 +1868,7 @@ placing turned out to be near perfect. But due to dumb luck. If I hadn't had
 the GPIO ribbon idea, I would have would up having to re-solder it. You can see
 how darn near it is to there not being enough clearance. Ouch.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/onapiside2.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/onapiside2.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi1.2/onapiside2.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi1.2/thumbs/onapiside2.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;Eeek! That's close!&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;And then to test if it works. It's important to note that the different board
@@ -1879,7 +1879,7 @@ Only two minor configuration changes are necessary. One in sensors.cfg to set
 the correct I2C bus. The other in outputs.cfg to disable Xively as I'm only
 testing.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/takingareading.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/takingareading.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi1.2/takingareading.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi1.2/thumbs/takingareading.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;I put it in my half disassembled LEGO case for powering up to test&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;It runs perfectly out of the box! You can see the green LED lighting up on a
@@ -1908,11 +1908,11 @@ been sent off to Lubo, our electronics specialist, for additional compatibility
 testing with the MoPi. In the meantime I continue to collect data from my
 breadboard prototype to see what I can do with it. Stay tuned for a report!&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/theend.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/theend.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi1.2/theend.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi1.2/thumbs/theend.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;The end&lt;/em&gt;&lt;/p&gt;
 
 
-</summary><category term="airpi"></category><category term="hardware"></category><category term="pi-tronics"></category><category term="environmental"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Stretch! Bigger Plans for Mobile Pi Kickstarter</title><link href="/posts/2014/02/12/stretch-goals/" rel="alternate"></link><updated>2014-02-12T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-02-12:posts/2014/02/12/stretch-goals/</id><summary type="html">
+</summary><category term="airpi"></category><category term="hardware"></category><category term="pi-tronics"></category><category term="environmental"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Stretch! Bigger Plans for Mobile Pi Kickstarter</title><link href="http://pi.gate.ac.uk/posts/2014/02/12/stretch-goals/" rel="alternate"></link><updated>2014-02-12T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-02-12:posts/2014/02/12/stretch-goals/</id><summary type="html">
 
 &lt;p&gt;Our Kickstarter has got off to a flying start (thanks to all our backers!) :-)&lt;/p&gt;
 &lt;h2 class="cow-heading"&gt;[MoPi is &lt;b&gt;mobile&lt;/b&gt;, &lt;b&gt;hot-swap&lt;/b&gt; and &lt;b&gt;24/7 power&lt;/b&gt; for the Raspberry Pi.
@@ -2026,7 +2026,7 @@ little suspicious that he's not totally sincere on that one.)&lt;/p&gt;
 
 
 &lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://tinyurl.com/mobile-pi"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Building an AirPi</title><link href="/posts/2014/02/07/airpi1/" rel="alternate"></link><updated>2014-02-07T00:00:00+00:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:,2014-02-07:posts/2014/02/07/airpi1/</id><summary type="html">
+</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Building an AirPi</title><link href="http://pi.gate.ac.uk/posts/2014/02/07/airpi1/" rel="alternate"></link><updated>2014-02-07T00:00:00+00:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:pi.gate.ac.uk,2014-02-07:posts/2014/02/07/airpi1/</id><summary type="html">
 
 &lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
 
@@ -2049,7 +2049,7 @@ in what your monitoring station can do. The complete list includes:&lt;/p&gt;
 &lt;li&gt;CO level&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/airpi/atairpi.jpg"&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi/atairpi.jpg"&gt;
 &lt;em&gt;An AirPi promo photo...&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Of course, what you build yourself almost never looks as nice as what the stock
@@ -2072,7 +2072,7 @@ Dependant Resistor) either. Based off of comments in the forums I ordered
 a pack of GL5528, which have a light resistance of 10K-20K&amp;Omega; and a darkness
 resistance of 1M&amp;Omega;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi/components.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi/components_thumb.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi/components.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi/components_thumb.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;Here are all the components&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;In addition to all the bits above and the breadboard, I ordered an
@@ -2086,7 +2086,7 @@ was killer.&lt;/p&gt;
 wanted to get started playing so my first prototype only has the air quality
 sensor and the light level sensor.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi/prototype1.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi/prototype1_thumb.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi/prototype1.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi/prototype1_thumb.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;My solid core wires hadn't arrived yet either, so messy!&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;When almost everything had arrived, I started to build prototype 2. All I was
@@ -2102,7 +2102,7 @@ checking &lt;a class="cow-url" href="/pages/airpi-files/2600pdf.pdf"&gt;several&
 &lt;a class="cow-url" href="/pages/airpi-files/UVI-01-E.pdf"&gt;datasheets&lt;/a&gt;. A digital multi-meter was a
 good friend as well.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi/prototype2.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi/prototype2_thumb.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/airpi/prototype2.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi/prototype2_thumb.jpg"&gt;&lt;/a&gt;
 &lt;em&gt;Much nicer!&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;All things considered the AirPi directions are really quite good. It took so
@@ -2126,7 +2126,7 @@ multimeter they seem to do neither. This is a ground and +3.3V fortunately, but
 connecting the ground on the pressure transducer to what may have been +3.3V
 accidentally... not so good.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/airpi/badpins.png"&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi/badpins.png"&gt;
 &lt;em&gt;Backwards! Yikes!&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;My third electrical mystery was much more annoying than either of those two.
@@ -2148,7 +2148,7 @@ is referring to this multiplication factor of the sensor output, and is why I
 could use 1K&amp;Omega; and 470K&amp;Omega; resistors instead of the 10K&amp;Omega; and 4.7M&amp;Omega; resistors they
 did.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/airpi/op-amp circuit.png"&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/airpi/op-amp circuit.png"&gt;
 &lt;em&gt;Roughly what an op-amp does...&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;There are other effects that come into play, I don't really understand all of
@@ -2239,7 +2239,7 @@ certain that can be added into the AirPi setup. Stay tuned!&lt;/p&gt;
 
 
 &lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"&gt;&lt;/script&gt;
-</summary><category term="airpi"></category><category term="hardware"></category><category term="pi-tronics"></category><category term="environmental"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Mobile and 24/7 Power for the Pi: Kickstarter Launched!</title><link href="/posts/2014/02/04/mobile-pi-kickstarter/" rel="alternate"></link><updated>2014-02-04T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2014-02-04:posts/2014/02/04/mobile-pi-kickstarter/</id><summary type="html">
+</summary><category term="airpi"></category><category term="hardware"></category><category term="pi-tronics"></category><category term="environmental"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Mobile and 24/7 Power for the Pi: Kickstarter Launched!</title><link href="http://pi.gate.ac.uk/posts/2014/02/04/mobile-pi-kickstarter/" rel="alternate"></link><updated>2014-02-04T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2014-02-04:posts/2014/02/04/mobile-pi-kickstarter/</id><summary type="html">
 
 
 
@@ -2299,8 +2299,8 @@ on schools and the new computing curriculum and the like).&lt;/p&gt;
 &lt;p&gt;&lt;hr&gt;
 Follow us on &lt;a class="cow-url" href="https://twitter.com/pitronics"&gt;@PiTronics&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Connecting a Rain Gauge</title><link href="/posts/2014/01/25/raingauge/" rel="alternate"></link><updated>2014-01-25T00:00:00+00:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:,2014-01-25:posts/2014/01/25/raingauge/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="kickstarter"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Connecting a Rain Gauge</title><link href="http://pi.gate.ac.uk/posts/2014/01/25/raingauge/" rel="alternate"></link><updated>2014-01-25T00:00:00+00:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:pi.gate.ac.uk,2014-01-25:posts/2014/01/25/raingauge/</id><summary type="html">
 
 &lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
 
@@ -2315,7 +2315,7 @@ in June 2007 were the result of over &lt;em&gt;200&lt;/em&gt; mm of rainfall in 
 60,000,000 m&lt;span class="cow-escape"&gt;^&lt;/span&gt;3 for just Sheffield, combined with the much greater surrounding
 area... Now we can see why having a rain gauge might be interesting.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/rain/tippingbucket.jpg"&gt;&lt;img class="cow-img" src="/images/environment/rain/tippingbucket_small.jpg" alt="Inside a tipping bucket rain gauge"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/rain/tippingbucket.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/rain/tippingbucket_small.jpg" alt="Inside a tipping bucket rain gauge"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;So how does a rain gauge work? There are a few different types, but most common
 and what I've got is called a
@@ -2327,7 +2327,7 @@ momentary electrical connection. The buckets are calibrated to a volume of
 water, which means if you can count how many times the switch closes you know
 how much rainfall there's been.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/rain/reedswitch.jpg"&gt;&lt;img class="cow-img" src="/images/environment/rain/reedswitch_small.jpg" alt="The rain gauge's reed switch"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/rain/reedswitch.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/rain/reedswitch_small.jpg" alt="The rain gauge's reed switch"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The rain gauge I've been showing here is one you can have for a fiver from
 &lt;a class="cow-url" href="http://www.maplin.co.uk/p/maplin-replacement-rain-gauge-for-n25frn85fyn96gy-n77nf"&gt;Maplin&lt;/a&gt;. It has an RJ-11 plug on the end you'll probably need to cut off to
@@ -2345,7 +2345,7 @@ similar to what I did in the &lt;a class="cow-non-existant-url" href="/posts/201
 is where closing the circuit (pressing the button, the bucket tipping) triggers
 a software event.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/rain/connection.jpg"&gt;&lt;img class="cow-img" src="/images/environment/rain/connection_small.jpg" alt="The electrical connection for the gauge"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/rain/connection.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/rain/connection_small.jpg" alt="The electrical connection for the gauge"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Fortunately
 &lt;a class="cow-url" href="http://raspi.tv/2013/how-to-use-interrupts-with-python-on-the-raspberry-pi-and-rpi-gpio"&gt;RasPi.TV&lt;/a&gt; has written a quite nice article on how to use interrupts with
@@ -2400,7 +2400,7 @@ will have occured in the interval since the last reading. This is a
 post-processing consideration if you're interested in producing rainfall over
 time graphs, but isn't an issue for totals.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/environment/rain/outdoors.jpg"&gt;&lt;img class="cow-img" src="/images/environment/rain/outdoors_small.jpg" alt="The gauge placed outside"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/environment/rain/outdoors.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/rain/outdoors_small.jpg" alt="The gauge placed outside"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Some minor comments about rain gauge placement. Higher is better. They should
 be secured, and outside of what's called a building's shadow. Rain can be
@@ -2410,7 +2410,7 @@ meet any of those conditions properly. My rain gauge is at least outside
 though. Let's look at some of the data. (I've plotted it quickly using
 &lt;a class="cow-url" href="https://www.gnu.org/software/octave/"&gt;Octave&lt;/a&gt;.)&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/rain/23rd.png" alt="Rain on the 23rd"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/rain/23rd.png" alt="Rain on the 23rd"&gt;&lt;/p&gt;
 
 &lt;p&gt;There are some teething problems. The above graph goes from 0900 on the 23rd
 to 0900 on the 24th. I know for a fact there was no rainfall that evening.
@@ -2419,7 +2419,7 @@ maybe that the wind or cold weather was having an effect, but I'm really not
 sure. In the meantime I'm keeping an eye out for false readings. Maybe an
 interrupt bug?&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/environment/rain/24th.png" alt="Rain on the 24th"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/environment/rain/24th.png" alt="Rain on the 24th"&gt;&lt;/p&gt;
 
 &lt;p&gt;Ignoring them, the data is actually pretty good. According to this figure, last
 night (from around 1700 to 2200) we had around 7 mm of rainfall. That's a
@@ -2435,7 +2435,7 @@ little bit of Googling should help out there.&lt;/p&gt;
 
 
 &lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"&gt;&lt;/script&gt;
-</summary><category term="hardware"></category><category term="pi-tronics"></category><category term="environmental"></category><category term="rain"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>3D? As in TV?</title><link href="/posts/2014/01/18/3dasintv/" rel="alternate"></link><updated>2014-01-18T00:00:00+00:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:,2014-01-18:posts/2014/01/18/3dasintv/</id><summary type="html">
+</summary><category term="hardware"></category><category term="pi-tronics"></category><category term="environmental"></category><category term="rain"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>3D? As in TV?</title><link href="http://pi.gate.ac.uk/posts/2014/01/18/3dasintv/" rel="alternate"></link><updated>2014-01-18T00:00:00+00:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:pi.gate.ac.uk,2014-01-18:posts/2014/01/18/3dasintv/</id><summary type="html">
 
 &lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
 
@@ -2446,15 +2446,15 @@ status updates or anything else I wanted. Mostly from that aspect it ended up
 being a clock.&lt;/p&gt;
 
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/3d/tv/clock_big.jpg"&gt;&lt;img class="cow-img" src="/images/3d/tv/clock_small.jpg" alt="A rather fancy clock"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/3d/tv/clock_big.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/3d/tv/clock_small.jpg" alt="A rather fancy clock"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Once I got some code written for text, my next thought was &amp;quot;could I do video?&amp;quot;
 There were a few hurdles there to overcome as well. Codec? Framerate? I ended
 making up a solution where I read in 2-bit (black and white) bitmap image and
 displayed it. Repeat 24 times a second and you have video.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/3d/tv/frames.gif" alt="Raw frames"&gt;
-&lt;img class="cow-img" src="/images/3d/tv/video.gif" alt="Video in action"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/3d/tv/frames.gif" alt="Raw frames"&gt;
+&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/3d/tv/video.gif" alt="Video in action"&gt;&lt;/p&gt;
 
 &lt;p&gt;I noticed something interesting though, in that I could push out images a lot
 faster than 24 FPS. I could reach just over the 120 FPS. This is the magic
@@ -2466,7 +2466,7 @@ etc., at the same speed. (3D in movie theatres, for example
 &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/RealD_Cinema"&gt;RealD 3D&lt;/a&gt;, typically uses
 polarized light.)&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/3d/tv/animation.gif" alt="Active 3D"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/3d/tv/animation.gif" alt="Active 3D"&gt;&lt;/p&gt;
 
 &lt;p&gt;There are two ways that active glasses are controlled by TVs. The first,
 impractical way is radio. Typically Bluetooth. The other way, which fits right
@@ -2483,7 +2483,7 @@ made an
 reasonably priced pair of nVidia 3D glases. The protocol for them looks like
 this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/3d/tv/nvidia protocol.png" alt="nVidia 3D glasses Infrared Protocol"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/3d/tv/nvidia protocol.png" alt="nVidia 3D glasses Infrared Protocol"&gt;&lt;/p&gt;
 
 &lt;p&gt;Unfortunately the timing of those infrared pulses is in &lt;em&gt;micro&lt;/em&gt;seconds. This is
 a small problem. The Pi can't consistently execute code at microsecond timing.
@@ -2502,7 +2502,7 @@ one of those, but I do have a
 &lt;a class="cow-url" href="https://estore.ti.com/EZ430-F2013-MSP430-USB-Stick-Development-Tool-P800.aspx"&gt;EZ430-F2013&lt;/a&gt; which is this crazy TI micro-controller in a USB stick format
 thing.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/3d/tv/ez430_big.jpg"&gt;&lt;img class="cow-img" src="/images/3d/tv/ez430_small.jpg" alt="The EZ430"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/3d/tv/ez430_big.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/3d/tv/ez430_small.jpg" alt="The EZ430"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The EZ430 is very nice in that it comes with a proper development environment
 and a &amp;quot;let's blink the LED&amp;quot; code example&amp;mdash;blinking an Infrared LED is what I
@@ -2549,7 +2549,7 @@ EZ430, which ends up sending an infred signal to the glasses. Gives a very good
 feeling. It may have taken 10 minutes to read this far but it took hours to
 learn what I needed on the EZ430 on work it all out.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/3d/tv/schematic.png" alt="Devices Schematic"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/3d/tv/schematic.png" alt="Devices Schematic"&gt;&lt;/p&gt;
 
 &lt;p&gt;Unfortunately, my 3D TV doesn't work. As near as I can tell all the electronics
 are fine. I just missed one thing. Despite the fact that I can push out 120 FPS
@@ -2562,14 +2562,14 @@ Close yes, but no cigar. &lt;/p&gt;
 
 
 &lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"&gt;&lt;/script&gt;
-</summary><category term="hardware"></category><category term="3d-display"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Video from the MadLab Pi Jam On-line</title><link href="/posts/2013/12/23/madlab-jam-video/" rel="alternate"></link><updated>2013-12-23T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-12-23:posts/2013/12/23/madlab-jam-video/</id><summary type="html">
+</summary><category term="hardware"></category><category term="3d-display"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Video from the MadLab Pi Jam On-line</title><link href="http://pi.gate.ac.uk/posts/2013/12/23/madlab-jam-video/" rel="alternate"></link><updated>2013-12-23T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-12-23:posts/2013/12/23/madlab-jam-video/</id><summary type="html">
 
 &lt;p&gt;Forget Christmas TV, here's the hottest entertainment experience of the season
 &amp;mdash; video from the MadLab Pi Jam last November (just around the time when the 2
 millionth Pi was sold).&lt;/p&gt;
 
 &lt;p&gt;Here's &lt;a class="cow-url" href="http://youtu.be/MnZb9Gi4W24"&gt;my talk about MoPi&lt;/a&gt;, battery supplies,
-and the &lt;a class="cow-url" href="/pages/pibrush.html"&gt;PiBrush&lt;/a&gt;.&lt;/p&gt;
+and the &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/pibrush.html"&gt;PiBrush&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;You'll find the other vids via &lt;a class="cow-url" href="https://www.youtube.com/user/TheBiglesp"&gt;Les
 Pounder's channel&lt;/a&gt;.&lt;/p&gt;
@@ -2578,27 +2578,27 @@ Pounder's channel&lt;/a&gt;.&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="pibrush"></category><category term="raspberry"></category></entry><entry><title>PiBrush Feature in MagPi</title><link href="/posts/2013/12/06/magpi-pibrush/" rel="alternate"></link><updated>2013-12-06T00:00:00+00:00</updated><author><name>Fred Sonnenwald, Hamish Cunningham</name></author><id>tag:,2013-12-06:posts/2013/12/06/magpi-pibrush/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="pibrush"></category><category term="raspberry"></category></entry><entry><title>PiBrush Feature in MagPi</title><link href="http://pi.gate.ac.uk/posts/2013/12/06/magpi-pibrush/" rel="alternate"></link><updated>2013-12-06T00:00:00+00:00</updated><author><name>Fred Sonnenwald, Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-12-06:posts/2013/12/06/magpi-pibrush/</id><summary type="html">
 
 &lt;p&gt;Our PiBrush screen painting gizmo is featured in
 &lt;a class="cow-url" href="http://issuu.com/themagpi/docs/issue19final"&gt;this month's MagPi&lt;/a&gt; &amp;mdash; see
 pages 22-26.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/pi-brush-snap.jpg" alt="Pi Brush snapshot"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/pi-brush-snap.jpg" alt="Pi Brush snapshot"&gt;&lt;/p&gt;
 
-&lt;p&gt;And there's a sneak preview of our upcoming &lt;a class="cow-url" href="/pages/mopi.html"&gt;mobile Pi
+&lt;p&gt;And there's a sneak preview of our upcoming &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;mobile Pi
 power&lt;/a&gt; Kickstarter on page 26...&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/pibrush.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="schools"></category><category term="maker culture"></category><category term="open hardware"></category><category term="open culture"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="ideas bazaar"></category></entry><entry><title>The Cubieboard2</title><link href="/posts/2013/12/01/cubieboard2/" rel="alternate"></link><updated>2013-12-01T00:00:00+00:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:,2013-12-01:posts/2013/12/01/cubieboard2/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/pibrush.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="schools"></category><category term="maker culture"></category><category term="open hardware"></category><category term="open culture"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="ideas bazaar"></category></entry><entry><title>The Cubieboard2</title><link href="http://pi.gate.ac.uk/posts/2013/12/01/cubieboard2/" rel="alternate"></link><updated>2013-12-01T00:00:00+00:00</updated><author><name>Fred Sonnenwald</name></author><id>tag:pi.gate.ac.uk,2013-12-01:posts/2013/12/01/cubieboard2/</id><summary type="html">
 
 &lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
 
 
-&lt;p&gt;A while back we presented a &lt;a class="cow-url" href="/pages/hardware.html"&gt;review&lt;/a&gt; of different
+&lt;p&gt;A while back we presented a &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/hardware.html"&gt;review&lt;/a&gt; of different
 &amp;quot;Pi-Alikes&amp;quot;. Computers similar to the RaspberryPi - low cost and low power.
 The question we set out to answer was &amp;quot;what exactly does 'low power' mean?&amp;quot;
 Turns out that for the most part low power was exactly that&amp;mdash;low energy
@@ -2608,7 +2608,7 @@ contemporaries won't break any records but they won't break the bank either.&lt;
 &lt;p&gt;Enter the Cubieboard2. We mentioned that this had been announced and we
 finally got our hands on one:&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/articles/cubieboard2.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/cubieboard2.jpg" alt="Cubieboard2"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/articles/cubieboard2.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/thumbs/cubieboard2.jpg" alt="Cubieboard2"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Hardware wise, the Cubieboard2 is pretty much identical to the original except
 for its &lt;b&gt;A20&lt;/b&gt; dual-core chip and &lt;em&gt;double the RAM&lt;/em&gt; (1 GB). There's the same
@@ -2636,7 +2636,7 @@ the second core. That and a tasty 1 GB of RAM make this surprisingly powerful
 for the price and size.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;The two Tux penguins show the kernel recognizing two CPUs...&lt;/em&gt;
-&lt;img class="cow-img" src="/images/hardware/dualtux.jpg" alt="Look Ma! Dual core!"&gt;&lt;/p&gt;
+&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/dualtux.jpg" alt="Look Ma! Dual core!"&gt;&lt;/p&gt;
 
 &lt;p&gt;The best concrete way to compare performance is, of course, a benchmark.
 First though, some stupid bug in something-Google made apt-get nearly
@@ -2652,7 +2652,7 @@ interesting are the CPU benchmarks. First, integer performance. On a
 core-for-core basis it was about the same as a Cubieboard. This means that
 overall there's twice the performance when factoring both cores.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/hardware/results2/dhry_mips.svg.jpg" alt="Integer Math"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/results2/dhry_mips.svg.jpg" alt="Integer Math"&gt;&lt;/p&gt;
 
 &lt;p&gt;Where the Cubieboard2 really shines though is in the floating point arena.
 Whatever changes they made between the A10 and A20 CPU, Cubieboard and
@@ -2661,28 +2661,28 @@ indicate nearly &lt;em&gt;three&lt;/em&gt; times the performance. Across both co
 &lt;b&gt;six times&lt;/b&gt; faster over all. (That's 4x faster than the Pi too!) It's
 absolutely staggering.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/hardware/results2/whet_mflops.svg.jpg" alt="Floating Point Math"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/results2/whet_mflops.svg.jpg" alt="Floating Point Math"&gt;&lt;/p&gt;
 
 &lt;p&gt;These performance improvements aren't just smoke dust either. There's real
 world benefit. bzip2 compression ended up performing about the same. Still,
 that's two times the performance considering both cores. There may be a
 limiting factor with the SD card here.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/hardware/results2/bzip2_min.svg.jpg" alt="bzip2 Compression"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/results2/bzip2_min.svg.jpg" alt="bzip2 Compression"&gt;&lt;/p&gt;
 
 &lt;p&gt;MP3 encoding performance was just fantastic however. Half the time of the
 Cubieboard and still significantly faster than the Model B. That's effectively
 four times faster when considering both cores. I do believe that what I thought
 was faster performance when using the Cubieboard2 is indeed the case.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/hardware/results2/lame_min.svg.jpg" alt="MP3 Encoding"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/results2/lame_min.svg.jpg" alt="MP3 Encoding"&gt;&lt;/p&gt;
 
 &lt;p&gt;My conclusion? Why would anyone want a Cubieboard anymore? Cubieboard2 all the
 way. I sincerely look forward to the next hardware revision of the RaspberryPi
 if they can get the same sort of performance improvements.&lt;/p&gt;
 
 
-</summary><category term="hardware"></category><category term="pi-alikes"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Fruitful Jam</title><link href="/posts/2013/11/18/fruitful-jam/" rel="alternate"></link><updated>2013-11-18T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-11-18:posts/2013/11/18/fruitful-jam/</id><summary type="html">
+</summary><category term="hardware"></category><category term="pi-alikes"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Fruitful Jam</title><link href="http://pi.gate.ac.uk/posts/2013/11/18/fruitful-jam/" rel="alternate"></link><updated>2013-11-18T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-11-18:posts/2013/11/18/fruitful-jam/</id><summary type="html">
 
 &lt;p&gt;A big thanks to &lt;a class="cow-url" href="http://bennuttall.com/"&gt;Ben Nuttall&lt;/a&gt; and everyone who made
 the Manchester Raspberry Jam this weekend, and happy birthday to Ben and to
@@ -2692,14 +2692,14 @@ the Manchester Raspberry Jam this weekend, and happy birthday to Ben and to
 the first time.&lt;/p&gt;
 
 &lt;p&gt;Two things in particular stood out for me, one about how to work with schools
-and one about the &lt;a class="cow-url" href="/pages/mopi.html"&gt;mobile hot-swap UPS battery gizmo&lt;/a&gt; that
-we've been building (and which I demo'd in &lt;a class="cow-url" href="/pages/pibrush.html"&gt;various
+and one about the &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;mobile hot-swap UPS battery gizmo&lt;/a&gt; that
+we've been building (and which I demo'd in &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/pibrush.html"&gt;various
 applications at the Jam&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;Schools.&lt;/b&gt; Several people suggested a Pi roadshow that goes into schools with
 introductory sessions, one for kids and one for teachers. This seems like a
 really good idea. &lt;a class="cow-url" href="http://www.shef.ac.uk/dcs/"&gt;Sheffield Computer Science&lt;/a&gt;
-has been running &lt;a class="cow-url" href="/posts/2013/10/02/children-and-animals/"&gt;an outreach
+has been running &lt;a class="cow-url" href="http://pi.gate.ac.uk/posts/2013/10/02/children-and-animals/"&gt;an outreach
 programme&lt;/a&gt; which gave away 50 Pi kits to students from four local schools, and
 that has generated interest in other local schools who want to dip their toes
 in the new computing curriculum that's coming along. Unfortunately we've given
@@ -2712,7 +2712,7 @@ If this sounds like you, &lt;a class="cow-url" href="https://gate.ac.uk/g8/conta
 
 &lt;p&gt;&lt;b&gt;Mobile power.&lt;/b&gt; Both &lt;a class="cow-url" href="http://www.daveakerman.com/"&gt;Dave Akerman&lt;/a&gt;
 &lt;a class="cow-url" href="http://www.raspberrypi.org/archives/author/eben"&gt;Eben Upton&lt;/a&gt; suggested that
-we could save battery life for our &lt;a class="cow-url" href="/pages/mopi.html"&gt;mobile Pi&lt;/a&gt; add-on board
+we could save battery life for our &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;mobile Pi&lt;/a&gt; add-on board
 by supplying 3.3V to the Pi instead of 5V. There's nothing on the Pi board
 itself that runs on 5V &amp;mdash; the voltage was chosen in order to take advantage of
 the USB standard and the prevalence of micro-USB chargers. The 5V input is
@@ -2730,33 +2730,33 @@ in Cambridge. Better start working on a moustache, though?&lt;/p&gt;
 &lt;p&gt;Some pics by &lt;a class="cow-url" href="https://twitter.com/TonyH1212"&gt;Tony Hughes&lt;/a&gt;...&lt;/p&gt;
 
 &lt;p&gt;Dave Jones demoing his great new Python API for the camera:
-&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10902836713/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="/images/madjam/dave-jones-picamera-640x480.jpg" alt="Dave Jones" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10902836713/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/madjam/dave-jones-picamera-640x480.jpg" alt="Dave Jones" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A camera in a lunchbox:
-&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10902517783/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="/images/madjam/pi-cam-640x480.jpg" alt="Lunch Cam" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10902517783/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/madjam/pi-cam-640x480.jpg" alt="Lunch Cam" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Amy shows Ben &lt;b&gt;The Cake&lt;/b&gt;:
-&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10902461595/sizes/z/in/set-72157637766800375/"&gt;&lt;img class="cow-img" src="/images/madjam/amy-and-ben-640x480.jpg" alt="Ben and Amy" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10902461595/sizes/z/in/set-72157637766800375/"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/madjam/amy-and-ben-640x480.jpg" alt="Ben and Amy" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Dave and Babbage:
-&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10904637746/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="/images/madjam/dave-and-babbage-640x480.jpg" alt="Dave and Babage" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10904637746/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/madjam/dave-and-babbage-640x480.jpg" alt="Dave and Babage" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Clive does The Matrix:
-&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10904207966/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="/images/madjam/clive-matrix-640x480.jpg" alt="Clive Matrix" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10904207966/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/madjam/clive-matrix-640x480.jpg" alt="Clive Matrix" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Paul explains how big the one that got away was:
-&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10904384693/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="/images/madjam/paul-fishing-640x480.jpg" alt="Paul Fishing" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10904384693/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/madjam/paul-fishing-640x480.jpg" alt="Paul Fishing" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The author thinking he has cunningly hidden his bald patch from the crowd but
 forgetting about the mirror:
-&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10901782915/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="/images/madjam/baldy-640x480.jpg" alt="Baldy" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10901782915/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/madjam/baldy-640x480.jpg" alt="Baldy" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;quot;It's power, Jim, but not as we know it!&amp;quot; (MoPi second prototype.)
-&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10902307686/in/set-72157637766800375/"&gt;&lt;img class="cow-img" src="/images/madjam/mopi-again-640x480.jpg" alt="MoPi again" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10902307686/in/set-72157637766800375/"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/madjam/mopi-again-640x480.jpg" alt="MoPi again" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
 &lt;span class="cow-footnote-section"&gt;
 &lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
 &lt;p&gt;&lt;ol&gt;
@@ -2769,7 +2769,7 @@ flights &amp;mdash; the technique can work.&lt;/span&gt;
 &lt;/li&gt;
 &lt;/ol&gt;&lt;/p&gt;
 &lt;/span&gt;
-</summary><category term="schools"></category><category term="jam"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term=""></category></entry><entry><title>Mobile Hot-Swap Power for the Pi</title><link href="/posts/2013/11/14/mopi-proto2/" rel="alternate"></link><updated>2013-11-14T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-11-14:posts/2013/11/14/mopi-proto2/</id><summary type="html">
+</summary><category term="schools"></category><category term="jam"></category><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term=""></category></entry><entry><title>Mobile Hot-Swap Power for the Pi</title><link href="http://pi.gate.ac.uk/posts/2013/11/14/mopi-proto2/" rel="alternate"></link><updated>2013-11-14T00:00:00+00:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-11-14:posts/2013/11/14/mopi-proto2/</id><summary type="html">
 &lt;h2 class="cow-heading"&gt;[MoPi is &lt;b&gt;mobile&lt;/b&gt;, &lt;b&gt;hot-swap&lt;/b&gt; and &lt;b&gt;24/7 power&lt;/b&gt; for the Raspberry Pi.
 &lt;a class="cow-url" href="/pages/get-mopi.html"&gt;How to order.&lt;/a&gt;]&lt;/h2&gt;
 
@@ -2778,7 +2778,7 @@ to plug in a 5v battery pack &amp;mdash; but when it runs out your Pi gets a pow
 that might well corrupt the SD card.&lt;/p&gt;
 
 &lt;p&gt;Over the last year we've been designing what we hope is the perfect mobile
-power solution for the Pi, which we're calling &lt;a class="cow-url" href="/pages/mopi.html"&gt;MoPi&lt;/a&gt;, and
+power solution for the Pi, which we're calling &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;MoPi&lt;/a&gt;, and
 we've just taken delivery of the second generation prototype. I think it does
 pretty much everything you could want for your Pi on the go:&lt;/p&gt;
 
@@ -2794,11 +2794,11 @@ pretty much everything you could want for your Pi on the go:&lt;/p&gt;
 &lt;li&gt;and it even fits in the Pibow (and other well-known Pi cases)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/proto2-01-500x379.jpg" alt="mopi prototype 2/1" width="500" height="379"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/proto2-01-500x379.jpg" alt="mopi prototype 2/1" width="500" height="379"&gt;&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
 &lt;span class="cow-footnote-section"&gt;
 &lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
 &lt;p&gt;&lt;ol&gt;
@@ -2808,14 +2808,14 @@ pretty much everything you could want for your Pi on the go:&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;&lt;/p&gt;
 &lt;/span&gt;
-</summary><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term=""></category></entry><entry><title>A Raspbian Wrapper for Wiring Pi</title><link href="/posts/2013/10/09/wiring-pi-package/" rel="alternate"></link><updated>2013-10-09T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-10-09:posts/2013/10/09/wiring-pi-package/</id><summary type="html">
+</summary><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term=""></category></entry><entry><title>A Raspbian Wrapper for Wiring Pi</title><link href="http://pi.gate.ac.uk/posts/2013/10/09/wiring-pi-package/" rel="alternate"></link><updated>2013-10-09T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-10-09:posts/2013/10/09/wiring-pi-package/</id><summary type="html">
 
 &lt;p&gt;&lt;em&gt;Packaging the WiringPi library for Raspbian&lt;/em&gt;&lt;/p&gt;
 
 
 
 &lt;p&gt;A lot of our recent projects have used the excellent
-&lt;a class="cow-url" href="http://wiringpi.com"&gt;WiringPi library&lt;/a&gt; to &lt;a class="cow-url" href="/pages/basics.html#gpio-software"&gt;talk to the Pi's electronics&lt;/a&gt; from software. A small frustration in this process
+&lt;a class="cow-url" href="http://wiringpi.com"&gt;WiringPi library&lt;/a&gt; to &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html#gpio-software"&gt;talk to the Pi's electronics&lt;/a&gt; from software. A small frustration in this process
 has been the library's lack of integration into Raspbian... So I've written
 the code needed to do this, and made it available 
 &lt;a class="cow-url" href="https://github.com/hamishcunningham/wiringpi/"&gt;from GitHub&lt;/a&gt;.&lt;/p&gt;
@@ -2840,7 +2840,7 @@ the process even easier.&lt;/p&gt;
 &lt;p&gt;Gordon also has lots of good examples and reference materials on his site,
 like this &lt;a class="cow-url" href="http://wiringpi.com/examples/blink/"&gt;Blink project&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="/images/wiring-pi-bbd.jpg"&gt;&lt;img class="cow-img" src="/images/wiring-pi-bbd-500x295.jpg" alt="A
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/wiring-pi-bbd.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/wiring-pi-bbd-500x295.jpg" alt="A
 WiringPi breadboard layout" width="500" height="295"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Well worth a visit!&lt;/p&gt;
@@ -2848,7 +2848,7 @@ WiringPi breadboard layout" width="500" height="295"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/package.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/package.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
 &lt;span class="cow-footnote-section"&gt;
 &lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
 &lt;p&gt;&lt;ol&gt;
@@ -2863,7 +2863,7 @@ default operating system's full title would be &lt;em&gt;the
 &lt;/ol&gt;&lt;/p&gt;
 &lt;/span&gt;
 &lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"&gt;&lt;/script&gt;
-</summary><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="software"></category><category term="packaging"></category><category term="raspbian"></category></entry><entry><title>Never Work With Children or Animals</title><link href="/posts/2013/10/02/children-and-animals/" rel="alternate"></link><updated>2013-10-02T00:00:00+01:00</updated><author><name>James Wallbank &amp; Hamish Cunningham</name></author><id>tag:,2013-10-02:posts/2013/10/02/children-and-animals/</id><summary type="html">
+</summary><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="software"></category><category term="packaging"></category><category term="raspbian"></category></entry><entry><title>Never Work With Children or Animals</title><link href="http://pi.gate.ac.uk/posts/2013/10/02/children-and-animals/" rel="alternate"></link><updated>2013-10-02T00:00:00+01:00</updated><author><name>James Wallbank &amp; Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-10-02:posts/2013/10/02/children-and-animals/</id><summary type="html">
 
 
 
@@ -2881,7 +2881,7 @@ electronics to get the experimenter ball rolling.&lt;/p&gt;
 &lt;!--% YOUTUBE BLUE PETER CLIP HERE--&gt;
 
 
-&lt;p&gt;One of &lt;a class="cow-url" href="/pages/basics.html#interaction-electronics"&gt;the beauties of
+&lt;p&gt;One of &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html#interaction-electronics"&gt;the beauties of
 the Pi&lt;/a&gt; is how easy it is to connect up a few cheap components and jump
 straight into the realm of physical computing. Using a couple of Raspberry Pi
 &lt;a class="cow-url" href="http://www.ocr.org.uk/qualifications/by-subject/computing/raspberry-pi/"&gt;recipe cards from OCR&lt;/a&gt; we'll do two taster projects:&lt;/p&gt;
@@ -2911,7 +2911,7 @@ authors learned more than the students from the day!&lt;/p&gt;
 
 &lt;p&gt;Plugging jumpers onto GPIO pins can be tricky:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/ambassadors/pi-oneers-003-300x450.jpg" alt="Pi-Oneers at the Cutlers
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/ambassadors/pi-oneers-003-300x450.jpg" alt="Pi-Oneers at the Cutlers
 Ambassadors day" width="300"&gt;&lt;/p&gt;
 &lt;!--% images/ambassadors/pi-oneers-003-550x825.jpg--&gt;
 
@@ -2919,27 +2919,27 @@ Ambassadors day" width="300"&gt;&lt;/p&gt;
 &lt;p&gt;Here's one of the authors demonstrating the art of
 &lt;a class="cow-url" href="http://www.ocr.org.uk/Images/125881-recipe-card-singing-jelly-baby.pdf"&gt;squeezing a jelly baby&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/ambassadors/pi-oneers-001-500x333.jpg" alt="Pi-Oneers at the Cutlers
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/ambassadors/pi-oneers-001-500x333.jpg" alt="Pi-Oneers at the Cutlers
 Ambassadors day" width="500"&gt;&lt;/p&gt;
 
 &lt;p&gt;And a student setting up her police siren sound file:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/ambassadors/pi-oneers-002-550x367.jpg" alt="Pi-Oneers at the Cutlers
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/ambassadors/pi-oneers-002-550x367.jpg" alt="Pi-Oneers at the Cutlers
 Ambassadors day" width="500"&gt;&lt;/p&gt;
 
 &lt;p&gt;Here's &lt;a class="cow-url" href="http://staffwww.dcs.shef.ac.uk/people/S.Wrigley/"&gt;Stuart Wrigley&lt;/a&gt;
 demonstrating his Pi-in-a-quadcopter system for sensing river water levels
 during flood events:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/outreach-day-2.jpg" alt="quadcopter demo" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/outreach-day-2.jpg" alt="quadcopter demo" width="500"&gt;&lt;/p&gt;
 
 &lt;p&gt;(Spot the authors looking gormless!)&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/outreach-day-3.jpg" alt="quadcopter detail" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/outreach-day-3.jpg" alt="quadcopter detail" width="500"&gt;&lt;/p&gt;
 
 &lt;p&gt;Now everyone wants a quadcopter :-)&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/outreach-day-1.jpg" alt="Pi-oneers in the quad" width="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/outreach-day-1.jpg" alt="Pi-oneers in the quad" width="500"&gt;&lt;/p&gt;
 
 
 &lt;p&gt;&lt;hr&gt;
@@ -2973,8 +2973,8 @@ it takes us...&lt;/p&gt;
 &lt;hr&gt;&lt;/p&gt;
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/schools.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="schools"></category><category term="education"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Open Culture Tech</title><link href="/posts/2013/09/16/open-culture-tech/" rel="alternate"></link><updated>2013-09-16T00:00:00+01:00</updated><author><name>Hamish Cunningham, Fred Sonnenwald, Bo Meson</name></author><id>tag:,2013-09-16:posts/2013/09/16/open-culture-tech/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/schools.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="schools"></category><category term="education"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Open Culture Tech</title><link href="http://pi.gate.ac.uk/posts/2013/09/16/open-culture-tech/" rel="alternate"></link><updated>2013-09-16T00:00:00+01:00</updated><author><name>Hamish Cunningham, Fred Sonnenwald, Bo Meson</name></author><id>tag:pi.gate.ac.uk,2013-09-16:posts/2013/09/16/open-culture-tech/</id><summary type="html">
 
 &lt;!--% *Stop press:* here's the webserver for the Pi-Cam exhibit:--&gt;
 
@@ -2992,7 +2992,7 @@ button above.)&lt;/p&gt;
 
 &lt;p&gt;In the meantime, here are some of our notes for the event:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/pi-brush-snap.jpg" alt="Pi Brush snapshot"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/pi-brush-snap.jpg" alt="Pi Brush snapshot"&gt;&lt;/p&gt;
 
 &lt;p&gt;There is a new conjunction emerging around open hardware, maker culture, and
 art. Parallels exist with the explosive change in pop culture pressaged by
@@ -3013,7 +3013,7 @@ helped this adoption of the open-everything ethos.&lt;/p&gt;
 on the Raspberry Pi, and the flood showns no sign of slowing. The Pi is a
 small cheap computer which is very easy to cobble together with other devices.
 It has a large community behind it and is one of the drivers behind proposed
-changes in the &lt;a class="cow-url" href="/pages/schools.html"&gt;schools ICT curriculum&lt;/a&gt;.&lt;/p&gt;
+changes in the &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/schools.html"&gt;schools ICT curriculum&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;As part of a trend to open hardware and maker culture the Pi is also a vehicle
 for localist responses to climate change and peak oil: the more we manufacture
@@ -3042,27 +3042,27 @@ scientists, dancers, hackers and visual artists.&lt;/p&gt;
 &lt;p&gt;Google gave $1m to fund Pi hardware for schools. Eben Upton (of the Pi
 foundation) is the Chesire Cat impersonator here:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/google-donation-350x237.jpg" alt="Google schools donation.jpg" width="350" height="237"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/google-donation-350x237.jpg" alt="Google schools donation.jpg" width="350" height="237"&gt;&lt;/p&gt;
 
 &lt;p&gt;That's all very well, but &amp;quot;At Boots science is for boys and pink princess toys
 are for girls&amp;quot; &amp;mdash;
 &lt;a class="cow-url" href="http://minigirlgeek.wordpress.com/"&gt;Amy Mather&lt;/a&gt; (14-year-old Pi hacker) at
 &lt;a class="cow-url" href="http://wutheringbytes.com/"&gt;Wuthering Bytes&lt;/a&gt;, September 14th 2013.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/amymather-300x300.jpg" alt="Amy Mather" width="300" height="300"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/amymather-300x300.jpg" alt="Amy Mather" width="300" height="300"&gt;&lt;/p&gt;
 
 &lt;p&gt;What to do? Commission J.K. Rowling to write The Adventures of Princess Pi?
 Seek venture capital for Pink Electronics Ltd.? Or order a large consignment
 of Barbie-the-Programmer dolls?&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/barbie-374x500.jpg" alt="Barbie the programmer" width="374" height="500"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/barbie-374x500.jpg" alt="Barbie the programmer" width="374" height="500"&gt;&lt;/p&gt;
 
 &lt;p&gt;(from the &lt;a class="cow-url" href="http://www.wisecampaign.org.uk/"&gt;WISE&lt;/a&gt;
 &lt;a class="cow-url" href="http://www.wisecampaign.org.uk/blogs/getset-women/2010/05/barbie"&gt;blog&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;Perhaps games with a porpoise would interest girls? (Sorry.)&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/games-with-a-porpoise-350x228.png" alt="Games with a porpoise" width="350" height="228"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/games-with-a-porpoise-350x228.png" alt="Games with a porpoise" width="350" height="228"&gt;&lt;/p&gt;
 
 &lt;p&gt;Enough frivolity. Amy also said we need:&lt;/p&gt;
 
@@ -3075,17 +3075,17 @@ of Barbie-the-Programmer dolls?&lt;/p&gt;
 
 &lt;p&gt;Some organisations working in this direction (click through for details):&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="http://www.stemnet.org.uk/"&gt;&lt;img class="cow-img" src="/images/stemnet-339x115.gif" alt="StemNet" width="339" height="115"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://www.stemnet.org.uk/"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/stemnet-339x115.gif" alt="StemNet" width="339" height="115"&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="https://www.codeclub.org.uk/"&gt;&lt;img class="cow-img" src="/images/code-club-150x150.svg" alt="Code Club" width="150" height="150"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="https://www.codeclub.org.uk/"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/code-club-150x150.svg" alt="Code Club" width="150" height="150"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;There are more; please &lt;a class="cow-url" href="https://gate.ac.uk/g8/contact"&gt;ping us&lt;/a&gt; to add to
 this list! And if you're in Sheffield this Wednesday, come say hi. Ciao.&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/pibrush.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="schools"></category><category term="maker culture"></category><category term="open hardware"></category><category term="open culture"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="ideas bazaar"></category></entry><entry><title>Winking Pi: Solving the IP Address Catch-22</title><link href="/posts/2013/08/25/winking-pi/" rel="alternate"></link><updated>2013-08-25T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-08-25:posts/2013/08/25/winking-pi/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/pibrush.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="schools"></category><category term="maker culture"></category><category term="open hardware"></category><category term="open culture"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category><category term="ideas bazaar"></category></entry><entry><title>Winking Pi: Solving the IP Address Catch-22</title><link href="http://pi.gate.ac.uk/posts/2013/08/25/winking-pi/" rel="alternate"></link><updated>2013-08-25T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-08-25:posts/2013/08/25/winking-pi/</id><summary type="html">
 
 &lt;p&gt;I can fit a Pi in my overnight bag, but I can't fit a monitor. How can I
 remote log into my Pi when I'm on the road? This is a Catch-22 &amp;mdash; I need a
@@ -3102,7 +3102,7 @@ problem there are also several solutions, including editing the WiFi config on
 another machine that has an SD card reader, or setting up access to your
 phone's WiFi hotspot.&lt;/p&gt;
 
-&lt;p&gt;I've written a &lt;a class="cow-url" href="/pages/blinkip.html"&gt;Raspbian package called BlinkIP&lt;/a&gt; to do
+&lt;p&gt;I've written a &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/blinkip.html"&gt;Raspbian package called BlinkIP&lt;/a&gt; to do
 some of this stuff, and you can download it from our new
 &lt;a class="cow-url" href="https://launchpad.net/~hamish-dcs/+archive/pi-gate"&gt;Ubuntu-hosted package
 archive&lt;/a&gt;.&lt;/p&gt;
@@ -3111,8 +3111,8 @@ archive&lt;/a&gt;.&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/blinkip.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="network"></category><category term="ip address"></category><category term="wifi"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Chasing Pine Martens</title><link href="/posts/2013/08/05/chasing-pine-martens/" rel="alternate"></link><updated>2013-08-05T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-08-05:posts/2013/08/05/chasing-pine-martens/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/blinkip.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="network"></category><category term="ip address"></category><category term="wifi"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Chasing Pine Martens</title><link href="http://pi.gate.ac.uk/posts/2013/08/05/chasing-pine-martens/" rel="alternate"></link><updated>2013-08-05T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-08-05:posts/2013/08/05/chasing-pine-martens/</id><summary type="html">
 
 &lt;p&gt;I'm in Bulgaria in a house at the foot of mount Vitosha, on the outskirts of
 the capital, Sofia. Sofia is home to something approaching 2 million people
@@ -3120,10 +3120,10 @@ the capital, Sofia. Sofia is home to something approaching 2 million people
 travel in and out each week to find work in the big city. Vitosha is the lungs
 of the city, and its slopes are the perfect place to stay if you're keen to
 walk in its forests, or ski, or just get some cool air in the heat of the
-summer. &lt;br&gt; &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Vitosha"&gt;&lt;img class="cow-img" src="/images/vitosha-1.jpg" alt="Mount Vitosha" width="400" height="243"&gt;&lt;/a&gt; &lt;br&gt; Sitting in the
+summer. &lt;br&gt; &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Vitosha"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/vitosha-1.jpg" alt="Mount Vitosha" width="400" height="243"&gt;&lt;/a&gt; &lt;br&gt; Sitting in the
 garden at dusk the other day, we spotted a couple of dark shapes scurrying
 along &amp;mdash; pine martens! Or possibly their smaller cousin the beech marten: &lt;br&gt;
-&lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Beech_marten"&gt;&lt;img class="cow-img" src="/images/beech-marten-1.jpg" alt="A beech marten" width="200" height="317"&gt;&lt;/a&gt; &lt;br&gt; They are beautiful creatures, but quite shy,
+&lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Beech_marten"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/beech-marten-1.jpg" alt="A beech marten" width="200" height="317"&gt;&lt;/a&gt; &lt;br&gt; They are beautiful creatures, but quite shy,
 and they only come out after dark... You can see where this is going &amp;mdash; I
 wonder if I can capture some images with a Pi, a motion sensor and a camera
 module?&lt;/p&gt;
@@ -3140,19 +3140,19 @@ a quite stable voltage. And, as I found out when I when testing my first
 efforts, an unscheduled low voltage shutdown can corrupt the SD card image and
 leave you with an unbootable setup :-(&lt;/p&gt;
 
-&lt;p&gt;Time for an analysis of &lt;a class="cow-url" href="/pages/mopi.html"&gt;the perfect Pi battery pack&lt;/a&gt;, and
+&lt;p&gt;Time for an analysis of &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;the perfect Pi battery pack&lt;/a&gt;, and
 Bulgaria is the perfect place to experiment with this stuff as it's crawling
 with electronics and computing engineers (having at one time been supplier of
-around half of the USSR's computer hardware). &lt;a class="cow-url" href="/pages/about.html#lubo"&gt;Lubo
+around half of the USSR's computer hardware). &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/about.html#lubo"&gt;Lubo
 Bontchev&lt;/a&gt; of &lt;a class="cow-url" href="http://www.selcomltd.com/"&gt;Selcom custom electronics&lt;/a&gt; has
 worked on everything from solar panels to satelites and has now built Pi.GATE
 some prototypes for hot-swap mobile Pi power. Here's the regulator circuit on
 the left and the controller on the right:&lt;/p&gt;
 
 &lt;table&gt; &lt;tr&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/prototype-regulator-05.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/thumbs/prototype-regulator-05.jpg" alt="mopi prototype 5" width="200" height="194"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/prototype-regulator-05.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/thumbs/prototype-regulator-05.jpg" alt="mopi prototype 5" width="200" height="194"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/td&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/prototype-controller-01.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/thumbs/prototype-controller-01.jpg" alt="mopi prototype 1" width="270" height="195"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/prototype-controller-01.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/thumbs/prototype-controller-01.jpg" alt="mopi prototype 1" width="270" height="195"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 
@@ -3169,7 +3169,7 @@ a great idea &amp;mdash; why not take a picture of the indicator LED whenever th
 level monitoring code detects a change? Here he is (in a photo taken from the
 Pi cam) at the &lt;em&gt;Eureka!&lt;/em&gt; moment:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class="cow-img" src="/images/vladi.jpg" alt="Vladimir" width="300" height="266"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/vladi.jpg" alt="Vladimir" width="300" height="266"&gt;&lt;/p&gt;
 
 &lt;p&gt;Nice one V, I think you've got yourself a job :-;&lt;/p&gt;
 
@@ -3179,13 +3179,13 @@ batteries (2400mAh cells) &amp;mdash; definitely promising!&lt;/p&gt;
 &lt;p&gt;Some more views of the regulator:&lt;/p&gt;
 
 &lt;table&gt; &lt;tr&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/prototype-regulator-01.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/thumbs/prototype-regulator-01.jpg" alt="mopi prototype 1" width="200" height="170"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/prototype-regulator-01.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/thumbs/prototype-regulator-01.jpg" alt="mopi prototype 1" width="200" height="170"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/prototype-regulator-02.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/thumbs/prototype-regulator-02.jpg" alt="mopi prototype 2" width="200" height="155"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/prototype-regulator-02.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/thumbs/prototype-regulator-02.jpg" alt="mopi prototype 2" width="200" height="155"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/prototype-regulator-03.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/thumbs/prototype-regulator-03.jpg" alt="mopi prototype 3" width="200" height="203"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/prototype-regulator-03.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/thumbs/prototype-regulator-03.jpg" alt="mopi prototype 3" width="200" height="203"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/prototype-regulator-04.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/thumbs/prototype-regulator-04.jpg" alt="mopi prototype 4" width="200" height="233"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/prototype-regulator-04.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/thumbs/prototype-regulator-04.jpg" alt="mopi prototype 4" width="200" height="233"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 
@@ -3193,21 +3193,21 @@ batteries (2400mAh cells) &amp;mdash; definitely promising!&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Lego Engineering</title><link href="/posts/2013/07/11/lego-engineering/" rel="alternate"></link><updated>2013-07-11T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-07-11:posts/2013/07/11/lego-engineering/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="batteries"></category><category term="mo-pi"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Lego Engineering</title><link href="http://pi.gate.ac.uk/posts/2013/07/11/lego-engineering/" rel="alternate"></link><updated>2013-07-11T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-07-11:posts/2013/07/11/lego-engineering/</id><summary type="html">
 
 &lt;p&gt;There's Lego, and then there's LEGO:&lt;/p&gt;
 
-&lt;p&gt;&lt;a class="cow-url" href="http://www.wired.com/underwire/2013/05/largest-lego-x-wing/"&gt;&lt;img class="cow-img" src="/images/thumbs/wired-lego-xwing.jpg" alt="BIG LEGO" width="280" height="187"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://www.wired.com/underwire/2013/05/largest-lego-x-wing/"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/thumbs/wired-lego-xwing.jpg" alt="BIG LEGO" width="280" height="187"&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you're planning on a monster like this with millions of bricks then you
 definitely need to call in the engineers (not least to move the beast around
 &amp;mdash; it weighs more than 20 tonnes!).&lt;/p&gt;
 
-&lt;p&gt;Not to be outdone, our resident &lt;a class="cow-url" href="/pages/about.html#fred"&gt;structural engineer&lt;/a&gt;
-has put together a disquisition on the joys of &lt;a class="cow-url" href="/pages/legocases.html"&gt;LEGO
+&lt;p&gt;Not to be outdone, our resident &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/about.html#fred"&gt;structural engineer&lt;/a&gt;
+has put together a disquisition on the joys of &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/legocases.html"&gt;LEGO
 cases for the Pi&lt;/a&gt;, including this one that he built himself &amp;mdash;
-&lt;br&gt; &lt;a class="cow-url" href="/images/case/01case.jpg"&gt;&lt;img class="cow-img" src="/images/case/thumbs/01case.jpg" alt="A lego Pi
+&lt;br&gt; &lt;a class="cow-url" href="http://pi.gate.ac.uk/images/case/01case.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/case/thumbs/01case.jpg" alt="A lego Pi
 case" width="200" height="150"&gt;&lt;/a&gt; &lt;br&gt; &amp;mdash; with nothing but a slide rule and a copy of Newton's
 &lt;em&gt;Principia&lt;/em&gt; to help him.&lt;/p&gt;
 
@@ -3215,8 +3215,8 @@ case" width="200" height="150"&gt;&lt;/a&gt; &lt;br&gt; &amp;mdash; with nothing
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/legocases.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="lego"></category><category term="cases"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Learn When You're Young</title><link href="/posts/2013/06/28/neural-plasticity/" rel="alternate"></link><updated>2013-06-28T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-06-28:posts/2013/06/28/neural-plasticity/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/legocases.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="lego"></category><category term="cases"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Learn When You're Young</title><link href="http://pi.gate.ac.uk/posts/2013/06/28/neural-plasticity/" rel="alternate"></link><updated>2013-06-28T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-06-28:posts/2013/06/28/neural-plasticity/</id><summary type="html">
 
 &lt;p&gt;Learn when you're young, remember when you're old.&lt;/p&gt;
 
@@ -3226,7 +3226,7 @@ food and about one other subject which I'll leave as an exercise for the
 reader.) I particularly remember a project that put an FM radio in a TicTac
 box &amp;mdash; kind of like this beautiful
 &lt;a class="cow-url" href="http://www.mds975.co.uk/Content/trfradios03.html"&gt;match box radio&lt;/a&gt;... &lt;br&gt;
-&lt;a class="cow-url" href="http://www.mds975.co.uk/Images/radios/austin_hellier_MK484-2-001.jpg"&gt;&lt;img class="cow-img" src="/images/match-box-radio.jpg" alt="match box radio" width="500" height="369"&gt;&lt;/a&gt; &lt;br&gt;
+&lt;a class="cow-url" href="http://www.mds975.co.uk/Images/radios/austin_hellier_MK484-2-001.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/match-box-radio.jpg" alt="match box radio" width="500" height="369"&gt;&lt;/a&gt; &lt;br&gt;
 ...only in a &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Tic_Tac"&gt;Tic Tac&lt;/a&gt; box.&lt;/p&gt;
 
 &lt;p&gt;Heady stuff. (Ok, not as heady as the third category of 16-year-old obsession,
@@ -3256,14 +3256,14 @@ also be an age thing). Do let me know if you agree... here they
 are: &lt;/p&gt;
 
 &lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;table&gt;
-&lt;tr&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/images/flood-alarm-detail-5.jpg"&gt;&lt;img class="cow-img" src="/images/thumbs/flood-alarm-detail-5.jpg" alt="p'eye candy" width="400"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/td&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/images/flood-alarm-detail-6.jpg"&gt;&lt;img class="cow-img" src="/images/thumbs/flood-alarm-detail-6.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;tr&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/flood-alarm-detail-5.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/thumbs/flood-alarm-detail-5.jpg" alt="p'eye candy" width="400"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/flood-alarm-detail-6.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/thumbs/flood-alarm-detail-6.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt; &lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt; &lt;table&gt;
-&lt;tr&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/images/flood-alarm-detail-3.jpg"&gt;&lt;img class="cow-img" src="/images/thumbs/flood-alarm-detail-3.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/td&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/images/flood-alarm-detail-1.jpg"&gt;&lt;img class="cow-img" src="/images/thumbs/flood-alarm-detail-1.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/td&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/images/flood-alarm-detail-2.jpg"&gt;&lt;img class="cow-img" src="/images/thumbs/flood-alarm-detail-2.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;tr&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/flood-alarm-detail-3.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/thumbs/flood-alarm-detail-3.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/flood-alarm-detail-1.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/thumbs/flood-alarm-detail-1.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/flood-alarm-detail-2.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/thumbs/flood-alarm-detail-2.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt; &lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
@@ -3288,8 +3288,8 @@ are: &lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>It's a Jungle Out There</title><link href="/posts/2013/06/26/alternatives/" rel="alternate"></link><updated>2013-06-26T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-06-26:posts/2013/06/26/alternatives/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>It's a Jungle Out There</title><link href="http://pi.gate.ac.uk/posts/2013/06/26/alternatives/" rel="alternate"></link><updated>2013-06-26T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-06-26:posts/2013/06/26/alternatives/</id><summary type="html">
 
 &lt;p&gt;For a couple of years now I've been working on some cheap home computing stuff
 that might scratch a couple of itches with one stone&lt;span class="cow-footnote" name="footnote1"&gt;&lt;sup&gt;&lt;a href="#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;:&lt;/p&gt;
@@ -3305,44 +3305,44 @@ that might scratch a couple of itches with one stone&lt;span class="cow-footnote
 &lt;p&gt;I'm still waiting for the worm-hole thing, but the other stuff is getting very
 do-able, and the Raspberry Pi is definitely part of the picture. To test out
 various options I picked up a bunch of different bits of hardware that do jobs
-similar to the Pi in one way or other... And &lt;a class="cow-url" href="/pages/about.html#fred"&gt;Fred&lt;/a&gt; is
-busy putting them through their paces for &lt;a class="cow-url" href="/pages/hardware.html"&gt;this review
+similar to the Pi in one way or other... And &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/about.html#fred"&gt;Fred&lt;/a&gt; is
+busy putting them through their paces for &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/hardware.html"&gt;this review
 article&lt;/a&gt;. He's taken some pics:&lt;/p&gt;
 
 &lt;table&gt;
 &lt;tr&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/apc8750.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/apc8750.jpg" alt="APC 8750" width="150" height="93"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/hardware/apc8750.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/thumbs/apc8750.jpg" alt="APC 8750" width="150" height="93"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt;
 &lt;p&gt;&lt;a class="cow-url" href="http://apc.io/products/8750a/"&gt;APC 8750&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/beagleboneblack.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/beagleboneblack.jpg" alt="Beagle Bone Black" width="150" height="100"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/hardware/beagleboneblack.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/thumbs/beagleboneblack.jpg" alt="Beagle Bone Black" width="150" height="100"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt;
 &lt;p&gt;&lt;a class="cow-url" href="http://beagleboard.org/Products/BeagleBone%20Black"&gt;Beagle Bone Black&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/cubieboard.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/cubieboard.jpg" alt="CubieBoard" width="150" height="109"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/hardware/cubieboard.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/thumbs/cubieboard.jpg" alt="CubieBoard" width="150" height="109"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt;
 &lt;p&gt;&lt;a class="cow-url" href="http://cubieboard.org/"&gt;Cubieboard&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/dreamplug.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/dreamplug.jpg" alt="DreamPlug" width="150" height="96"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/hardware/dreamplug.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/thumbs/dreamplug.jpg" alt="DreamPlug" width="150" height="96"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt;
 &lt;p&gt;&lt;a class="cow-url" href="http://www.globalscaletechnologies.com/t-dreamplugdetails.aspx"&gt;DreamPlug&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/minipc.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/minipc.jpg" alt="MiniPC" width="150" height="104"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/hardware/minipc.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/thumbs/minipc.jpg" alt="MiniPC" width="150" height="104"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt;
 &lt;p&gt;&lt;a class="cow-url" href="https://www.miniand.com/products/MK802%20Android%20Mini%20PC"&gt;MK802 Mini PC&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/pimodela.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/pimodela.jpg" alt="Pi Model A" width="150" height="100"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/hardware/pimodela.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/thumbs/pimodela.jpg" alt="Pi Model A" width="150" height="100"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt;
 &lt;p&gt;&lt;a class="cow-url" href="http://www.raspberrypi.org/archives/3215"&gt;Pi Model A&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/pimodelbrev2.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/pimodelbrev2.jpg" alt="Pi Model B rev2" width="150" height="115"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/hardware/pimodelbrev2.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/thumbs/pimodelbrev2.jpg" alt="Pi Model B rev2" width="150" height="115"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt;
 &lt;p&gt;&lt;a class="cow-url" href="http://www.raspberrypi.org/faqs"&gt;Pi Model B&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
-&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/tonidoplug.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/tonidoplug.jpg" alt="Tonido Plug" width="150" height="96"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/hardware/tonidoplug.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/hardware/thumbs/tonidoplug.jpg" alt="Tonido Plug" width="150" height="96"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;td&gt;
 &lt;p&gt;&lt;a class="cow-url" href="http://www.tonidoplug.com/"&gt;TonidoPlug&lt;/a&gt;&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;
@@ -3354,7 +3354,7 @@ before anything else.&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/hardware.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/hardware.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
 &lt;span class="cow-footnote-section"&gt;
 &lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
 &lt;p&gt;&lt;ol&gt;
@@ -3373,7 +3373,7 @@ Love 'em!&lt;/span&gt;
 &lt;/li&gt;
 &lt;/ol&gt;&lt;/p&gt;
 &lt;/span&gt;
-</summary><category term="hardware"></category><category term="pi-alikes"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Help! My Toast is Burning!</title><link href="/posts/2013/06/10/notipifications/" rel="alternate"></link><updated>2013-06-10T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-06-10:posts/2013/06/10/notipifications/</id><summary type="html">
+</summary><category term="hardware"></category><category term="pi-alikes"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Help! My Toast is Burning!</title><link href="http://pi.gate.ac.uk/posts/2013/06/10/notipifications/" rel="alternate"></link><updated>2013-06-10T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-06-10:posts/2013/06/10/notipifications/</id><summary type="html">
 
 &lt;p&gt;No matter how much you love your Pi, some time or other you will inevitably be
 forced to leave it behind while you do something boring like go to work, or
@@ -3381,28 +3381,28 @@ listen to your parents bang on about the need to get qualified, or another of
 those little annoyances that life seems so full of. Hey ho. If your Pi is
 &lt;a class="cow-non-existant-url" href="/posts/2013/04/11/sensing-and-responding/"&gt;running a sensor&lt;/a&gt; that you need
 to be kept in touch with, then you need a way of getting your Pi to notify you
-when something important happens. &lt;a class="cow-url" href="/pages/about.html#hamish"&gt;I&lt;/a&gt; use our
-&lt;a class="cow-url" href="/pages/basics.html#flood-alarm"&gt;flood alarm&lt;/a&gt; to keep a check on some dodgy
+when something important happens. &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/about.html#hamish"&gt;I&lt;/a&gt; use our
+&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html#flood-alarm"&gt;flood alarm&lt;/a&gt; to keep a check on some dodgy
 plumbing in my basement, for example, and need to know PDQ if the house starts
 to fill up with cold wet stuff.&lt;/p&gt;
 
-&lt;p&gt;Our latest tutorial takes us through three options for &lt;a class="cow-url" href="/pages/notipi.html"&gt;telling the outside world&lt;/a&gt; about Stuff Going On from your Pi:&lt;/p&gt;
+&lt;p&gt;Our latest tutorial takes us through three options for &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/notipi.html"&gt;telling the outside world&lt;/a&gt; about Stuff Going On from your Pi:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;via SMS text message to your phone, using &lt;a class="cow-url" href="/pages/notipi.html#bulk-sms"&gt;a web service&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;via SMS using &lt;a class="cow-url" href="/pages/notipi.html#nokia-sms"&gt;a phone&lt;/a&gt; attached to the Pi&lt;/li&gt;
-&lt;li&gt;via a &lt;a class="cow-url" href="/pages/notipi.html#pi-twitter"&gt;Twitter post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;via SMS text message to your phone, using &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/notipi.html#bulk-sms"&gt;a web service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;via SMS using &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/notipi.html#nokia-sms"&gt;a phone&lt;/a&gt; attached to the Pi&lt;/li&gt;
+&lt;li&gt;via a &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/notipi.html#pi-twitter"&gt;Twitter post&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Happy notipifications ☺&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/notipi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="software"></category><category term="linux"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Stay Dry Cheaply</title><link href="/posts/2013/06/05/stay-dry-cheaply/" rel="alternate"></link><updated>2013-06-05T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-06-05:posts/2013/06/05/stay-dry-cheaply/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/notipi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="software"></category><category term="linux"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Stay Dry Cheaply</title><link href="http://pi.gate.ac.uk/posts/2013/06/05/stay-dry-cheaply/" rel="alternate"></link><updated>2013-06-05T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-06-05:posts/2013/06/05/stay-dry-cheaply/</id><summary type="html">
 
-&lt;p&gt;One of the projects in our &lt;a class="cow-url" href="/pages/basics.html"&gt;basic pi-tronics&lt;/a&gt; tutorial is
-a &lt;a class="cow-url" href="/pages/basics.html#flood-alarm"&gt;simple flooding alarm&lt;/a&gt; which senses
+&lt;p&gt;One of the projects in our &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html"&gt;basic pi-tronics&lt;/a&gt; tutorial is
+a &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html#flood-alarm"&gt;simple flooding alarm&lt;/a&gt; which senses
 unwanted water flows and sends a text message (or makes a tweet, or etc.) to
 give you a heads up before things get extremely damp.&lt;/p&gt;
 
@@ -3435,8 +3435,8 @@ the telly :-)&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="hardware"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Pigs and Pi</title><link href="/posts/2013/05/19/pigs-and-pi/" rel="alternate"></link><updated>2013-05-19T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-05-19:posts/2013/05/19/pigs-and-pi/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="hardware"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Pigs and Pi</title><link href="http://pi.gate.ac.uk/posts/2013/05/19/pigs-and-pi/" rel="alternate"></link><updated>2013-05-19T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-05-19:posts/2013/05/19/pigs-and-pi/</id><summary type="html">
 
 &lt;p&gt;I have a friend and colleague called Angus (fellow member of the
 silly-name-for-an-Englishman club) who is one of surely very few people who
@@ -3451,15 +3451,15 @@ learning environment. His son, in contrast, was served up with a diet of
 Microsoft word processing, and knows enough about computing to fill in the
 back of a postage stamp as a result.&lt;/p&gt;
 
-&lt;p&gt;So: let's &lt;a class="cow-url" href="/pages/basics.html"&gt;get hacking on the Pi&lt;/a&gt;, and help get
-&lt;a class="cow-url" href="/pages/schools.html"&gt;Pi stuff into schools&lt;/a&gt; so that kids have a
+&lt;p&gt;So: let's &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html"&gt;get hacking on the Pi&lt;/a&gt;, and help get
+&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/schools.html"&gt;Pi stuff into schools&lt;/a&gt; so that kids have a
 chance to stay ahead of the technology wave as producers and not just
 consumers!&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="hardware"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="schools"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>School's Out?</title><link href="/posts/2013/05/18/schools-out/" rel="alternate"></link><updated>2013-05-18T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-05-18:posts/2013/05/18/schools-out/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="hardware"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="schools"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>School's Out?</title><link href="http://pi.gate.ac.uk/posts/2013/05/18/schools-out/" rel="alternate"></link><updated>2013-05-18T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-05-18:posts/2013/05/18/schools-out/</id><summary type="html">
 
 &lt;p&gt;The argument for a new approach to computing in schools goes something like
 this:&lt;/p&gt;
@@ -3486,39 +3486,39 @@ magic circles that dictate our technological futures.)&lt;/p&gt;
 million Raspberry Pis in the world demonstrates the wide currency of the idea.
 Even the UK government has woken up and taken notice! The UK's school
 curriculum for computing and IT is now in ferment, and with luck there will be
-a whole new ethos coming to &lt;a class="cow-url" href="/pages/schools.html"&gt;schools computing&lt;/a&gt; not too
+a whole new ethos coming to &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/schools.html"&gt;schools computing&lt;/a&gt; not too
 long from now.&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/schools.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="schools"></category><category term="education"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Feed me Seymour</title><link href="/posts/2013/05/16/feed-me-seymour/" rel="alternate"></link><updated>2013-05-16T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-05-16:posts/2013/05/16/feed-me-seymour/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/schools.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="schools"></category><category term="education"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Feed me Seymour</title><link href="http://pi.gate.ac.uk/posts/2013/05/16/feed-me-seymour/" rel="alternate"></link><updated>2013-05-16T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-05-16:posts/2013/05/16/feed-me-seymour/</id><summary type="html">
 
 &lt;p&gt;What would happen if your vacuum cleaner developed a mind of its own? Have you
 always treated it kindly, and with respect? Or did you make it suck up stuff
 that it really probably would have been happier stearing clear of?&lt;/p&gt;
 
-&lt;p&gt;If Pete's &lt;a class="cow-url" href="/pages/piroomba.html"&gt;talking hoover&lt;/a&gt; project goes all AI on us, we might
+&lt;p&gt;If Pete's &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/piroomba.html"&gt;talking hoover&lt;/a&gt; project goes all AI on us, we might
 find out a little more about the thoughts of our cleaning appliances than
 anyone is ready for.&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/piroomba.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
-</summary><category term="hardware"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="roomba"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Sensing and Responding</title><link href="/posts/2013/04/11/sensing-and-responding/" rel="alternate"></link><updated>2013-04-11T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:,2013-04-11:posts/2013/04/11/sensing-and-responding/</id><summary type="html">
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/piroomba.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</summary><category term="hardware"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="roomba"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry><entry><title>Sensing and Responding</title><link href="http://pi.gate.ac.uk/posts/2013/04/11/sensing-and-responding/" rel="alternate"></link><updated>2013-04-11T00:00:00+01:00</updated><author><name>Hamish Cunningham</name></author><id>tag:pi.gate.ac.uk,2013-04-11:posts/2013/04/11/sensing-and-responding/</id><summary type="html">
 
 &lt;p&gt;First things first: to begin learning about hacking electronics with the Pi, a
 good first step is to get the little beast to start interacting with the
 outside world &amp;mdash; lighting LEDs, responding to switches of various types,
 making alerts via Twitter or SMS.&lt;/p&gt;
 
-&lt;p&gt;We've made this &lt;a class="cow-url" href="/pages/basics.html"&gt;tutorial on the basics&lt;/a&gt; of sensing and
+&lt;p&gt;We've made this &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html"&gt;tutorial on the basics&lt;/a&gt; of sensing and
 responsing with the Pi, including:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a class="cow-url" href="/pages/basics.html#parent-alarm"&gt;a parent alarm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="cow-url" href="/pages/basics.html#flood-alarm"&gt;a flood alert&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="cow-url" href="/pages/basics.html#resources"&gt;where to find out more&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html#parent-alarm"&gt;a parent alarm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html#flood-alarm"&gt;a flood alert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html#resources"&gt;where to find out more&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Getting busy with a breadboard and a few simple components is a great way to
@@ -3537,13 +3537,13 @@ really spark their interest.&lt;/p&gt;
 &lt;p&gt;To try and make things more interesting, we've started some tutorial materials
 that hook up simple electronics to do things like warning you if your parent
 is coming up the stairs, or sending you an SMS if the bathroom is flooded, and
-the like. The first few projects are all about &lt;a class="cow-url" href="/pages/basics.html"&gt;sensing
+the like. The first few projects are all about &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html"&gt;sensing
 and responding&lt;/a&gt;: getting the Pi to interact with the outside world. All you'll
 need is a basic electronics kit (breadboard, resistors, LEDs, switches, a
 transistor or two, a buzzer, ...), some spare time and, preferably, no
-&lt;a class="cow-url" href="/pages/basics.html#warning"&gt;allergy to nerds&lt;/a&gt;.&lt;/p&gt;
+&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html#warning"&gt;allergy to nerds&lt;/a&gt;.&lt;/p&gt;
 
 
 
-&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
 </summary><category term="hardware"></category><category term="gpio"></category><category term="pi-tronics"></category><category term="pi"></category><category term="raspberrypi"></category><category term="gate"></category></entry></feed>

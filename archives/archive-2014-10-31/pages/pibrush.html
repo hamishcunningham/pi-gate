@@ -1,159 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name = "viewport" content = "width = device-width">
-  <title>PiBrush &mdash; Painting with the Pi and XLoBorg</title>
-
-  <link rel="stylesheet" href="/theme/css/main.css">
-  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
-
-  <link rel="stylesheet" href="/theme/css/gatepage.css">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-
-  <!--[if IE]>
-    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
-  <![endif]-->
-  <!--[if lt IE 7]>
-    <style type="text/css" media="screen">
+<meta charset="utf-8">
+<meta name="viewport" content="width = device-width">
+<title>PiBrush &mdash; Painting with the Pi and XLoBorg</title>
+<link rel="stylesheet" href="/theme/css/main.css">
+<link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed"/>
+<link rel="stylesheet" href="/theme/css/gatepage.css">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<!--[if IE]><script src="/theme/js/html5shiv-googlecode-com-html5.js"></script><![endif]-->
+<!--[if lt IE 7]><style type="text/css" media="screen">
     body {
       behavior: url('/theme/images/menu/csshover.htc');
       font-size: 100%;
     }
-    </style>
-    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
-  <![endif]-->
+    </style> <link rel="stylesheet" href="/theme/css/ie-menus.css"/><![endif]-->
 
-  <!-- workaround for sup styling prob in default pelican theme -->
-  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+<style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
 
-  <!-- menu accessibility fix from ian -->
-  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
-  <script src="/theme/js/prototype-171-min.js"></script>
-  <script src="/theme/js/gatepage.js"></script>
 
-  <!-- yui grids -->
-  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
-  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
-  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
-             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+<script src="/theme/js/prototype-171-min.js"></script>
+<script src="/theme/js/gatepage.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+
 </head>
-
 <body id="index" class="home">
-  <div id="topBar">
-    <span id="topLogo">
-      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
-        height="55" width="46"></a></span>
-      <span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
-      <span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
-        alt="The University of Sheffield" height="55" width="113"</a><a
-          href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
-            height="55" width="132"></a></span>
-    </span>
-    <div class="horizontal menu">
-      <ul>
-      <li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
-      <!--
-      using a custom menu at present...
-      -->
-      <li><b><a href="#">Projects</a></b>
-      <!-- TODO generate this from content/pages/index -->
-        <ul>
-        <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
-        <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
-        <li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
-        <li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
-        <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
-        <!--
-        <li><a href="/pages/snowcam.html">SnowCam: Off the Radar Cameras</a></li>
-        -->
-        <li><a href="/pages/legocases.html">LEGO Cases</a></li>
-        <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
-        <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
-        <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
-        <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
-        </ul></li>
-      <li><b><a href="#">MoPi</a></b>
-        <ul>
-        <li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
-        <li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
-        <li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
-        <li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
-        </ul></li>
-      <!-- <li><a href="/">Blog</a></li> -->
-      <!--
-      <li><a href="/pages/basics.html#resources">Download</a></li>
-      -->
-      <li><a href="/pages/download.html">Download</a></li>
-      <!--
-      <li><a href="/pages/shop.html">Shop</a></li>
-      -->
-      <li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
-      <li><a href="/pages/about.html">About</a></li>
-      </ul>
-    </div>
-    
-    <!-- first row header links -->
-    <div id="topLoginEtc">
-      <form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
-        <label class="pageLink" for="as_q">Search:</label>
-        <input type="text" name="as_q" size="6" maxlength="255">
-        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
-      </form>
-    </div>
-  </div>
+<div id="topBar">
+<span id="topLogo">
+<span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+height="55" width="46"></a></span>
+<span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+<span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+alt="The University of Sheffield" height="55" width="113"</a><a
+href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+height="55" width="132"></a></span>
+</span>
+<div class="horizontal menu">
+<ul>
+<li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
 
-  <!-- header menus (?!) -->
-  <div id="header">
-  </div>
+<li><b><a href="#">Projects</a></b>
 
-  <!-- sep, left/right bars, body and footer -->
-  <div id="topSeparator"> </div>
+<ul>
+<li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+<li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+<li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+<li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+<li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
 
-  <!-- main content div -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-  <div id="mainContent">
-  <!--
-  <header id="banner" class="body">
-    <nav>
-    <ul>
-        <li ><a href="/category/news.html">News</a></li>
-    </ul>
-    </nav>
-  </header>
-  -->
-  <!-- /#banner -->
+<li><a href="/pages/legocases.html">LEGO Cases</a></li>
+<li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+<li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+<li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+<li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+</ul></li>
+<li><b><a href="#">MoPi</a></b>
+<ul>
+<li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+<li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+<li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+<li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+</ul></li>
 
-<!-- YUI responsive columns -->
+
+<li><a href="/pages/download.html">Download</a></li>
+
+<li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
+<li><a href="/pages/about.html">About</a></li>
+</ul>
+</div>
+
+<div id="topLoginEtc">
+<form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
+<label class="pageLink" for="as_q">Search:</label>
+<input type="text" name="as_q" size="6" maxlength="255">
+<input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+</form>
+</div>
+</div>
+
+<div id="header">
+</div>
+
+<div id="topSeparator"> </div>
+
+
+<div id="mainContent">
+
+
+
 <div class='yui3-g-r'>
-  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
-        
-<section id="content" class="body">    
-    <h1 class="entry-title">PiBrush &mdash; Painting with the Pi and XLoBorg</h1>
+<div id="leftColumn" class="yui3-u-1-2"> 
+<section id="content" class="body">
+<h1 class="entry-title">PiBrush &mdash; Painting with the Pi and XLoBorg</h1>
 <div id="socialButtons">
-  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/pibrush.html"
-           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
-           height="30" width="30"></a></span>
-  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-           title="Syndication feed"><img
-           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
-  <span>&nbsp;<a href="/pages/pibrush.html#disqus_thread"
-           title="Leave a comment"><img
-           src="/theme/images/comment.png" height="30" width="30"></a></span>
-  <span>&nbsp;<a href="/print/pages/pibrush.html"
-           title="Print"><img
-           src="/theme/images/print.png" height="30" width="30"></a></span>
-</div>    
-    
-
+<span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/pibrush.html"
+target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+height="30" width="30"></a></span>
+<span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+title="Syndication feed"><img
+height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+<span>&nbsp;<a href="/pages/pibrush.html#disqus_thread"
+title="Leave a comment"><img
+src="/theme/images/comment.png" height="30" width="30"></a></span>
+<span>&nbsp;<a href="/print/pages/pibrush.html"
+title="Print"><img
+src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>
 <p><em>Turning an accelerometer into a paint brush with Raspberry Pi</em></p>
-
-
 <p><em><a class="cow-url" href="/pages/about.html#fred">Fred Sonnenwald</a>, September 2013</em></p>
-
 <p>[Featured in
 <a class="cow-url" href="http://issuu.com/themagpi/docs/issue19final">The MagPi</a>, December 2013]</p>
-
 <div class="cow-contents"><h2 class="cow-heading">Contents</h2>
 <p><ul>
 <li><a href="#section-1.">1. Introduction</a></li>
@@ -173,10 +132,7 @@
 <li><a href="#section-4.">4. Art</a></li>
 </ul></p></div>
 
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="introduction"></a></p><a class="cow-section-anchor" name="section-1."></a><h1 class="cow-heading"><span class="cow-sec-number">1. </span>Introduction</h1>
-
 <p>Two weeks ago we participated in the <a class="cow-url" href="http://www.sheffield.ac.uk/ideasbazaar">Ideas Bazaar</a> promoting
 <em><a class="cow-url" href="http://pi.gate.ac.uk/posts/2013/09/16/open-culture-tech/">Open Culture
 Tech</a></em>, which I've translated to myself as a promoting how we can take finer
@@ -185,9 +141,7 @@ proof is in the pudding&quot; though, and actually demonstrating the point is a
 much more powerful argument. To this end we prepared our exhibit to show off
 various gizmos and widgets, including those based around Raspberry Pis. My
 contribution has been the PiBrush.</p>
-
 <p><img class="cow-img" src="/pages/images/pi-brush-snap.jpg" alt="Pi Brush snapshot"></p>
-
 <p>The PiBrush is an interactive art and technology exhibit (a very grand name
 for something so small) that simulates flicking paint off the end of a
 paintbrush onto canvas &mdash; as <a class="cow-url" href="http://en.wikipedia.org/wiki/Jackson_Pollock">Jackson Pollock</a> famously did in the 1940s and 50s. It utilizes two Raspberry
@@ -196,32 +150,23 @@ Model A is held by the user and waved around. It collects acceleration data
 with the XLoBorg, which it then transmits via Wi-Fi to the Model B, which
 processes the data collected into paint droplets and displays them on the
 screen, connected via HDMI.</p>
-
 <p><img class="cow-img" src="/pages/images/pibrush/pibrush_architecture.png" alt="Pi Brush snapshot"></p>
-
 <table>
 <tr><td> <p><a class="cow-url" href="/pages/images/pibrush/modelb.jpg"><img class="cow-img" src="/pages/images/pibrush/thumbs/modelb.jpg" alt="Model B" width="200" height="150"></a></p> </td><td> <p><a class="cow-url" href="/pages/images/pibrush/modela.jpg"><img class="cow-img" src="/pages/images/pibrush/thumbs/modela.jpg" alt="Model A" width="200" height="150"></a></p> </td></tr>
 </table>
-
 <p>Since the Bazaar, we've also added a physical reset button to save the current
 canvas and reset it to blank.</p>
 
-
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="programming"></a></p><a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>Programming</h1>
-
 <p>The hardware for this project is fairly straight forward. The XLoBorg plugs
 directly into the GPIO pins as a block, and a GPIO button is just a button
 connected between the ground and a GPIO pin &mdash; we've used BCM pin 17 or board
 pin 11. The software is where the challenge lies.</p>
-
 <p>I developed the code from scratch, and doing so required a variety of
 knowledge. While I'd rate it as intermediate to advanced code to write, I'm
 hoping to shed enough light on it here that it is only beginner to intermediate
 to understand. The only real requirements are some basic familiarity with the
 Python programming language, networking (IP addresses), and basic Physics. </p>
-
 <p>First, what code. The code is available on
 <a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/pibrush/bin">GitHub</a>. This will always be the latest version. There's the python file
 <b>accel<span class="cow-escape">_</span>client.py</b> which runs on the Model A and there's <b>accel<span class="cow-escape">_</span>server.py</b>
@@ -229,15 +174,10 @@ which runs on the Model B. The former reads in off the sensor and sends it
 across the network, the latter recieves the data, does processing, and displays
 the output on the screen.</p>
 
-
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="accel_client"></a></p><a class="cow-section-anchor" name="section-2.1."></a><h2 class="cow-heading"><span class="cow-sec-number">2.1. </span>accel<span class="cow-escape">_</span>client.py</h2>
-
 <p>The client script is fairly straight forward. There are two unique points to
 consider though. Reading in the accelerometer data and the networking code.
 First though, we import the necessary libraries.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 import socket
 import XLoBorg
@@ -246,7 +186,6 @@ import os
 </pre><b>socket</b> is for networking and <b>XLoBorg</b>, the accelerometer. <b>time</b> is used to
 for its sleep function and <b>os</b> to read in the server's IP address. So let us
 first setup for the networking.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 # network stufff
 server = os.getenv('SERVER', 'modelb')
@@ -257,11 +196,9 @@ server. You'll notice <a class="cow-url" href="http://docs.python.org/2/library/
 variables</a>. They're set before the program is run. If there's nothing found
 it defaults back to 'modelb' in this case though. I've arbitrarily picked out
 the port number. Generally any number over 1024 is fine though.</p>
-
 <p>The XLoBorg has its own specific initialization function to be run at the start
 of a program using it. This uses the library to start communicating with the
 accelerometer over the <a class="cow-url" href="http://en.wikipedia.org/wiki/I%C2%B2C">I2C bus</a>.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 # setup for the accelerometer
 XLoBorg.printFunction = XLoBorg.NoPrint
@@ -274,7 +211,6 @@ The special ability of these that we're taking advantage of here is that
 UDP is simple and stateless. It's easy to setup and the Model A can continually
 send and it doesn't matter what the Model B does. That makes for conveniently
 robust communication in this scenario.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 # make the socket connection
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -287,7 +223,6 @@ seperated, signed, floating point values which are fed from the special XLoBorg
 Formatting Operations</a> for details on this.) <b>sock.sendto</b> then sends the
 message and then <a class="cow-url" href="http://docs.python.org/2/library/time.html#time.sleep"><b>time.sleep</b></a> causing Python to wait for a small interval. Then it all starts
 again &mdash; about 200 times a second.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 while True:
     message = '%+01.4f,%+01.4f,%+01.4f' \
@@ -296,15 +231,10 @@ while True:
     time.sleep(0.005)
 </pre>That's it. Not so bad. A nice warm up...</p>
 
-
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="accel_server"></a></p><a class="cow-section-anchor" name="section-2.2."></a><h2 class="cow-heading"><span class="cow-sec-number">2.2. </span>accel<span class="cow-escape">_</span>server.py</h2>
-
 <p>The server script is where the real meat of the programming is as it handles
 the simulation and display. Similar to accel<span class="cow-escape">_</span>client.py, necessary libraries
 are first imported.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 import socket
 import select
@@ -324,7 +254,6 @@ program to function even if the client isn't transmitting any data.
 screen. <b>numpy</b> is used for fast array operations to help speed up program
 execution &mdash; the RaspberryPi isn't the world's fastest computer and every
 little helps.</p>
-
 <p><b>math</b> contains the functions like <em>sin</em> and <em>cos</em> which we use to handle some
 of the translation from where the accelerometer is to where the paint is on the
 screen. <b>datetime</b> is a bit of code that got accidentally left in from an old
@@ -333,11 +262,7 @@ debugging to tell if the program was frozen or not.) <b>random</b> is used to
 generate, as it sounds, random numbers. Finally <b>RPi.GPIO</b> is used to talk with
 the GPIO pins.</p>
 
-
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="initialization"></a></p><a class="cow-section-anchor" name="section-2.2.1."></a><h3 class="cow-heading"><span class="cow-sec-number">2.2.1. </span>Initialization</h3>
-
 <p><pre class="prettyprint lang-python linenums">
 # ==============
 # initialization
@@ -345,7 +270,6 @@ the GPIO pins.</p>
 </pre>Next comes a lot of boring and tedious bits of code which I've classed under
 initialization. These are various pieces of code that need to be run just once
 to get things started.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 # port to listen on
 port = 5005
@@ -361,7 +285,6 @@ create a socket. Then we tell the socket to listen using the <b>.bind()</b>
 function. 0.0.0.0 in this case tells it to listen on all network interfaces
 (so you could use Ethernet or Wi-Fi). Then <b>.setblocking()</b> is needed for that
 non-blocking thing I mentioned before.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 # directory for saves
 SAVEDIR = os.getenv('SAVEDIR', '.')
@@ -369,7 +292,6 @@ SAVEDIR = os.getenv('SAVEDIR', '.')
 set a directory to store save files in, and otherwise defaults to '.', which is
 the current working directory (the folder you were in when you started the
 program).</p>
-
 <p><pre class="prettyprint lang-python linenums">
 # setup GPIO input for reset
 GPIO.setmode(GPIO.BCM)
@@ -386,7 +308,6 @@ that there's no floating.
 extra reading.) The last thing is the <b>button</b> variable which is used to
 indicate whether or not the button hooked up to the GPIO has been pushed or
 not. By default it's not been so it starts at 0.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 # screen solution
 XRES = int(os.getenv('XRES', 1920))
@@ -410,7 +331,6 @@ white canvas is preferable so we <b>.fill()</b> the screen with white. <em>(255,
 By default pygame writes to a buffer section of memory, so <b>.flip()</b> is
 required to tell it to display the current buffer. (A second buffer is then
 availble to draw on until the next flip &mdash; this is called double buffering.)</p>
-
 <p><pre class="prettyprint lang-python linenums">
 # length of moving average array
 AL = 20
@@ -428,7 +348,6 @@ direction, X, Y, and Z. X is into the screen, Z down it and Y across. But why
 arrays? Surely a single reading should be in a single variable? Normally that
 would be the case, but we're going to use something called a <em>moving average</em>
 (MA) to filter the input data.</p>
-
 <p>An MA is the average of, in this case, the last 20 readings. Some sort of
 filtering is almost always necessary when dealing with the sort of analog input
 data that comes from an acceleromter to prevent sudden jumps in the readings
@@ -439,14 +358,12 @@ You'll see this in the code later. I use <b>numpy</b> here because they execute 
 quickly (read: effeciently) and there are handy functions to make things
 simpler. Like <b>.ones()</b> to initialze all of <b>AZa</b> to a value of one &mdash; there's
 always by default 1G of gravity downwards.</p>
-
 <p>After dealing with the accelerometer directly are declarations for those
 variables dealing with gravity. <b>GX</b>, etc., store the best (most recent) guess
 of what direction gravity is in, as once we start moving we have a combined
 acceleration of gravity plus the user's movement. We need this to subtract
 gravity back out so we know how the user is moving. Ideally this would be done
 with a gyroscope, but we don't have one of those so we make do.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 # store gravity when fast is detected..
 GX = 0
@@ -480,7 +397,6 @@ coordinates are used for the actual subtraction as subtracting the gravity
 vector from the current acceleration vector is very easy like this &mdash; it's an
 extension of the regular
 <a class="cow-url" href="http://hotmath.com/hotmath_help/topics/adding-and-subtracting-vectors.html">subtraction of vectors</a>.</p>
-
 <p><b>PSGR</b> are the polar coordinates of gravity in the screen, which is an
 accleration field that's always downwards. If you consider that the Model A
 might not be parallel to the screen while being waved about (e.g. it's held
@@ -489,11 +405,9 @@ screen normal. I'm actually not entirely sure about this &mdash; this was all ne
 to me when I was writing it, so this is just a guess really. It seems to work
 though so I've left it in. In my experience most projects like this have fiddly
 bits like this.</p>
-
 <p><b>AX</b> etc. store the result of the moving average of the acceleromter data.
 <b>GAX</b> etc. store the current acceleration as from AX but rotated correctly for
 the screen.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 last_G = 0
 
@@ -508,7 +422,6 @@ quick Google.
 <a class="cow-url" href="http://www.ugrad.math.ubc.ca/coursedoc/math103/site2012/keshet.notes/Chapter4.pdf">This</a> is a somewhat high level explanation of what's going on, and
 <a class="cow-url" href="http://www.astarmathsandphysics.com/a_level_maths_notes/M1/a_level_maths_notes_m1_acceleration_velocity_and_displacement.html">this</a> is a bit simpler, but I'm not terribly happy with either explanation.
 I'll try and simplify it a bit, or at least put it a bit more concisely.</p>
-
 <p>Imagine you're in a car traveling down the motorway at 100 kph. In one hour
 you will have travelled 100 km. Easy? That's simple integration, going from
 velocity to displacement. Acceleration though, is the rate of change in
@@ -518,7 +431,6 @@ you'll be going 10 kph faster, so instead of 100 kph you're now going 110 kph.
 Apply that to the distance you've travelled and you have twice integration.
 (Fun fact: if you kept up that acceleration, after an hour you'd be going 3,700
 kph and would have traveled 36,370 km. Or almost around the Earth.)</p>
-
 <p><pre class="prettyprint lang-python linenums">
 # brush info
 BX = 0 # position
@@ -535,7 +447,6 @@ track of how much virtual paint is left on the brush, and <b>S</b> to keep track
 how far the brush has travelled - this is used in determining how far apart
 the paint splatters ought to be. <b>last<span class="cow-escape">_</span>stroke</b> is the time at which we last
 painted.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 # seed random number generator
 random.seed(time.time())
@@ -544,11 +455,7 @@ time. Without this, it would be possible to get the same random numbers over
 and over each time the program was run. We use the random numbers for picking
 out the paint color each stroke.</p>
 
-
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="functions"></a></p><a class="cow-section-anchor" name="section-2.2.2."></a><h3 class="cow-heading"><span class="cow-sec-number">2.2.2. </span>Functions</h3>
-
 <p><pre class="prettyprint lang-python linenums">
 # =========
 # functions
@@ -558,7 +465,6 @@ can be executed from different places in the main program. Each <em>call</em> yo
 pass different <em>arguments</em> (input parameters) that will be operated on and a
 new result <em>returned</em>. If you already know this that's handy. There are three
 functions which I've written for use in accel<span class="cow-escape">_</span>server.py.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 def polar(X, Y, Z):
     x = numpy.linalg.norm([X, Y, Z])
@@ -574,7 +480,6 @@ polar coordinates. It's used several times later to make the conversion, as
 previously mentioned, as part of rotating gravity. I've based it off the code
 in <a class="cow-url" href="http://www.processing.org/discourse/beta/num_1236393966.html">this</a> forum
 thread.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 def cartesian(X, A, B):
     x = 0 # don't bother - isn't used
@@ -588,7 +493,6 @@ the screen, x, as the coordinate into the screen, is permanently set to 0. This
 is an optimization to help the code run better on the Pi. The code here is
 based on <a class="cow-url" href="http://electron9.phys.utk.edu/vectors/3dcoordinates.htm">this</a>
 explanation of Cartesian and polar coordinates.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 def savereset():
     filename = SAVEDIR + os.sep + (&quot;%i.png&quot; % time.time())
@@ -602,7 +506,6 @@ variable as the file system serpator - '/' under Linux. ('<span class="cow-escap
 After the save path comes the actual file name, which we want to be unique so
 that we don't overwrite an old file. We also don't want to have to stop for
 user input in case there's no keyboard.</p>
-
 <p>In this scenario I've found a <a class="cow-url" href="http://en.wikipedia.org/wiki/Unix_time">Unix
 timestamp</a> to be the easiest way of doing this. It's simply the number of
 seconds since Jan. 1, 1970, but it's always going up and unless someone invents
@@ -613,11 +516,7 @@ would reset the screen at exactly the same number of seconds since the Pi was
 turned on <em>twice</em>? (A proper way to fix this though would be to check for an
 existing file first.)</p>
 
-
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="mainprogram"></a></p><a class="cow-section-anchor" name="section-2.2.3."></a><h3 class="cow-heading"><span class="cow-sec-number">2.2.3. </span>Main program</h3>
-
 <p><pre class="prettyprint lang-python linenums">
 # ============
 # main program
@@ -626,7 +525,6 @@ existing file first.)</p>
 to happen. Almost. 3 more variable declarations that in this funny spot first
 though. They ended up here though because they specifically have to do with
 code loops.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 fast = 0
 notfast = 0
@@ -641,21 +539,15 @@ This time is the difference between lifting up on the gas pedal in the car and
 pressing brake pedal to slow down. Paint droplets shouldn't stop being
 deposited on the screen between the end of starting to wave and the beginning
 of stopping to wave the Model A as that's unrealistic.</p>
-
 <p><b>running</b> is what it sounds like and is used to keep the program continually
 looping in a <b>while</b> loop. When we want to quit we set running to 0, the loop
 finishes and then the program exits.</p>
-
 <p>The main program loop consists of three phases. Phase 1 consists of basic tasks
 that need to be done over and over. Phase 2 consists of reading the
 accelerometer data and pre-processing it. Phase 3 consists of manipulating the
 paintbrush and canvas.</p>
 
-
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="phase1"></a></p><a class="cow-section-anchor" name="section-2.2.3.1."></a><h4 class="cow-heading"><span class="cow-sec-number">2.2.3.1. </span>Phase 1</h4>
-
 <p><pre class="prettyprint lang-python linenums">
     # move time forward
     dt = time.time() - last_time
@@ -667,18 +559,15 @@ statement may be skipped either increasing or decreasing execution time of the
 loop. For something that moves on the screen this is bad, so by knowing how
 long it's been since the last update we can know how far to move things, i.e.,
 distance = velocity <span class="cow-escape">*</span> time.</p>
-
 <p><pre class="prettyprint lang-python linenums">
     # no changes made to the screen so far
     draw = 0
 </pre><b>draw</b> is a marker to tell us whether or not to .flip() the screen later. If we
 don't need to, we won't. This saves some CPU time, and is one of the reasons
 dt is important.</p>
-
 <p>The next two bits of code deal with input. The first is keyboard input handled
 though PyGame. The second is GPIO input from the push button we installed,
 which we handle manually.</p>
-
 <p><pre class="prettyprint lang-python linenums">
     # check for keyboard input
     event = pygame.event.poll()
@@ -697,12 +586,10 @@ type of event is happening? There's a special <b>pygame.QUIT</b> type, which is
 triggered a number of different ways, clicking the X button in a window, by
 the kill command, etc. It checks all of those so that we can quit nicely. In
 general though we don't expect this to happen.</p>
-
 <p><b>pygame.KEYDOWN</b> is a regular keypress. Once we know it's a keypress, we can
 check which key has been pressed. If it's the Q key we indicate we want to quit
 but setting running to 0. If it's the R key we save the screen, reset it, and
 then set draw to 1 so that we know to .flip() later.</p>
-
 <p><pre class="prettyprint lang-python linenums">
     # check for GPIO input, but because it's a
     # pull down (goes from 1 to 0 when pressed)
@@ -719,7 +606,6 @@ connects the pin and ground and the pin is in a pull up state, by default
 Therefore we use <b>not()</b> to flip a 1 to a 0 and a 0 to a 1. This way
 <b>button<span class="cow-escape">_</span>now</b> instead gives the sort of value we expect - 0 when not pressed
 and 1 when pressed.</p>
-
 <p>The other thing we have to consider is what happens when the button is pressed
 and <em>held down</em>. In this case we only want to trigger a save and reset once,
 not multiple times. That's why we check not only if the button<em>now is 1, but
@@ -727,11 +613,7 @@ also that button is 0, i.e. in the previous loop it wasn't pressed. We then set
 button to button</em>now so that when we hit the next loop we know it was pressed
 and don't reset the screen.</p>
 
-
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="phase2"></a></p><a class="cow-section-anchor" name="section-2.2.3.2."></a><h4 class="cow-heading"><span class="cow-sec-number">2.2.3.2. </span>Phase 2</h4>
-
 <p><pre class="prettyprint lang-python linenums">
     # ===================
     # networking &amp; sensor
@@ -745,7 +627,6 @@ any new packets and puts them in <b>result[0]</b> (0 because you can select from
 multiple sockets). When there's something the length of results[0] will be
 non-zero and so we know to go to work. Doing it this way is potentially a
 little buggy, but seems to be OK. It might be better replaced with a for loop.</p>
-
 <p><pre class="prettyprint lang-python linenums">
         # read in data
         data = result[0][0].recvfrom(1024)
@@ -767,7 +648,6 @@ before), which we then store in the moving average array we initialized earlier
 at index Ai. Then it's incremented and if it's at the array length AL we set it
 back to 0. Remember that arrays start at index 0 so the last index is the is
 the length minus one.</p>
-
 <p><pre class="prettyprint lang-python linenums">
         # moving averages for acceleration
         AX = numpy.sum(AXa) / AL
@@ -790,7 +670,6 @@ acceleration in G(ravities), which is why we subtract 1. We then use
 always have a positive result which indicates the difference between
 acceleration due to gravity and the experienced acceleration. At rest this
 number should be very small.</p>
-
 <p><pre class="prettyprint lang-python linenums">
         # in a slow moment store most recent 
         # direction of the gravitational field
@@ -817,7 +696,6 @@ means that the only acceleration being experienced is due to gravity and so we
 can take this moment to take an estimate of gravity. However, in order to
 further ensure that it's a resonable estimate and we don't over tax the CPU
 doing calculations, we wait at least 0.12 seconds between estimates.</p>
-
 <p>So then once it's been established that it's OK to take an estimate, we do that
 by storing AX, etc., in GX, etc.. We then turn the estimate into polar
 coordinates and make a note when we made this estimate. After we take that
@@ -829,11 +707,7 @@ polar gravity and rotates it by how we know gravity to be rotated and then adds
 back on gravity as experienced by the monitor. The <b>GAZ</b> line after than
 subtracts gravity from its absolute direction. And that's it for Phase 2.</p>
 
-
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="phase3"></a></p><a class="cow-section-anchor" name="section-2.2.3.3."></a><h4 class="cow-heading"><span class="cow-sec-number">2.2.3.3. </span>Phase 3</h4>
-
 <p><pre class="prettyprint lang-python linenums">
     # ==================
     # paintbrush physics
@@ -842,7 +716,6 @@ subtracts gravity from its absolute direction. And that's it for Phase 2.</p>
 actually controls what happens on the screen. Almost everything else has been
 code to get the accelerometer data and process it sot that this section can
 interpret it and get something to <em>happen</em>.</p>
-
 <p><pre class="prettyprint lang-python linenums">
     # acceleration detection for paint strokes
     A = numpy.linalg.norm([GAY, GAZ])
@@ -851,7 +724,6 @@ going across the screen, and <b>GAZ</b> is going down the screen. (Screen
 coordinates typically start in the upper left corner. Pygame holds to this
 standard.) <b>A</b> is now therfore the total acceleration of the Model A, with
 respect to the screen, ignoring gravity.</p>
-
 <p><pre class="prettyprint lang-python linenums">
     # detect moving quickly
     if A &gt; 0.4 and fast != 1 and \
@@ -875,9 +747,8 @@ being set to 0. I also mentioned before how you get a period of 0 acceleration
 that occurs between speeding up and slowing down. We don't want to accidentally
 treat slowing down as beginning to speed up, so we enforce a slight delay (0.5
 seconds) from the end of the <b>last<span class="cow-escape">_</span>stroke</b>. We can then set fast to 1 and
-<b>notfast</b> to 0, which  resets the timer of how long we've been going slow. This
+<b>notfast</b> to 0, which resets the timer of how long we've been going slow. This
 is used in, of course, detecting the end of a brush stroke.</p>
-
 <p>There is only a low level of precision we can have over our control of where
 the virtual paintbrush is on screen given the level of and quality of input
 data that we have. To keep things interesting we use some random elements. We
@@ -890,7 +761,6 @@ use YRES as a multiplier when going from acceleration vector to starting
 coordinate though as reality is square while our screen is rectangular. If we
 used XRES we'd end up disproportionately scaling the X position to the side,
 which would feel funny to the user.</p>
-
 <p>We then reset the brush's velocity, <b>VX</b> and <b>VY</b> and the ammount of paint on
 the brush, <b>P</b>. We also then set the paint color randomly. I wish there was a
 nicer way to control this, but nothing simple springs to mind. We could have a
@@ -899,7 +769,6 @@ when the stroke starts. A project for someone perhaps. Either that or some
 variable resistors with some analog to digital interface so you could dial in a
 paint color. Awesome sounding, but actually a lot of work to do. One thing at a
 time eh?</p>
-
 <p><pre class="prettyprint lang-python linenums">
     # detect stopping
     if fast == 1 and (A &lt; 0.1 or ((BX &gt; (XRES + 200) \
@@ -923,7 +792,6 @@ in making sure we don't start again immediately in the last code block). The
 reason why we use a timer is to allow for people who may slow down and speed
 up again, the 0 acceleration cross over point, and for people who bend the
 brush around the canvas to create loops.</p>
-
 <p><pre class="prettyprint lang-python linenums">
     if fast == 1:
         # accelerate the paint brush
@@ -938,14 +806,12 @@ animation smooth even when the ammount of time it takes for the code to run
 varries. I've also added a factor of <b>170</b> to scale up the acceleration some,
 other wise it only moves a few pixels on the screen and that's not very
 exciting. 170 is just a made up number that seemed to work&mdash;an empircal value.</p>
-
 <p>The next integration is incrementing the brush position by adding on the
 current velocity. Which also must be factored by the timestep. And then another
 scaling factor, this time of <b>120</b>. Realistically these factors should probably
 be adjusted for screen resolution but I haven't worked out a formula for that.
 These numbers work reasonably well with the resolutions I've tried though, so
 I've left them alone.</p>
-
 <p><pre class="prettyprint lang-python linenums">
         # add splotches.... high velocity big 
         # splotches far apart, low small close
@@ -958,7 +824,6 @@ making paint droplets. This... is a complete cludge&mdash;a hack, a vague attemp
 reality. There's almost no real physics here. This is what in technical speak
 could be called a model. It's a rough approximation of what I expect might
 happen. Bearing that in mind I'll try and explain what's going on.</p>
-
 <p>The first thing is to remember that this bit of code follows on from the last
 if statement, so is only run while the paintbrush is moving. And then it's only
 run if there's actually paint left on the brush. Vaguely I expect that the
@@ -966,7 +831,6 @@ further the brush has been swung the more paint I expect to come off and the
 faster it's going the more paint to come off. <b>V</b> is calculated as the total
 velocity, and <b>S</b> is a running displacement. <b>d</b> is calculated as a rough
 estimtate of paint droplet spacing.</p>
-
 <p>Let's look at d in a bit more detail. Paint droplets (probably) fly off due to
 two factors:</p>
 <ul>
@@ -976,7 +840,6 @@ two factors:</p>
 </span>force you feel acting on your hand when you stick it out the car window on a <span class="cow-escape">
 </span>drive on a nice summer's day.</li>
 </ul>
-
 <p>Both of these are rather complex subjects and therefore I've sort of lumped the
 two of them together as the produce similar results&mdash;paint flying off the brush.
 d is made up of A (our acceleration) times a random factor which is the fluid
@@ -986,7 +849,6 @@ globs of paint or hairs in the brush getting tangled. We also can't forget the
 random scaling factor of <b>25</b> which was added so that things are proportioned
 nicely on the screen. (This applies to the acceleration term only as velocity
 was already scaled in the previous code block.)</p>
-
 <p><pre class="prettyprint lang-python linenums">
             if S &gt; d:
                 S = S - d
@@ -1004,7 +866,6 @@ squared, times &pi; (pi) will be it. (Yes, that's &pi;r<span class="cow-escape">
 Experimentally this matches nicely with the total ammount of paint on the
 brush being 100. Either could be tweaked to get longer or shorter chains of
 droplets.</p>
-
 <p><a class="cow-url" href="http://www.pygame.org/docs/ref/draw.html#pygame.draw.circle"><b>draw.circle()</b></a>
 is the Pygame function for drawing a circle, which we're going to assume our
 paint droplets are. (More realistically they should probably be tear shaped.)
@@ -1015,9 +876,7 @@ coordinates. (It's the difference between 8.128 and 8.0. We need the latter
 as there's only pixel 8 and pixel 9, and no pixel in between.) <b>A<span class="cow-escape">*</span>45</b> is the
 paint droplet radius, and yes, 45 is another made up factor. We set draw to 1
 so that we know to refresh the screen.</p>
-
 <p>We're almost done.</p>
-
 <p><pre class="prettyprint lang-python linenums">
     # push updates to the screen
     if draw == 1:
@@ -1025,16 +884,11 @@ so that we know to refresh the screen.</p>
 </pre>This last bit of code is run at the end of every loop last of every, which does
 the screen refresh if we've specified it.</p>
 
-
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="quiting"></a></p><a class="cow-section-anchor" name="section-2.2.4."></a><h3 class="cow-heading"><span class="cow-sec-number">2.2.4. </span>Quitting</h3>
-
-<p>This actually surprisingly easy. If you remember from before about the  while
+<p>This actually surprisingly easy. If you remember from before about the while
 loop and running. And then about checking for the KEYDOWN of k<span class="cow-escape">_</span>Q, that's half
 the quitting code right there. The other half is just tidying up. The first
 bit will get us out of the otherwise infinite loop.</p>
-
 <p><pre class="prettyprint lang-python linenums">
 # quit properly
 GPIO.cleanup()
@@ -1042,50 +896,33 @@ pygame.quit()
 </pre>This last bit is just cleaning up nicely. Let go of the GPIO pins and let go of
 the screen. Viola, done.</p>
 
-
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="systemsetup"></a></p><a class="cow-section-anchor" name="section-3."></a><h1 class="cow-heading"><span class="cow-sec-number">3. </span>System Setup &amp; Running</h1>
-
 <p>At least, done with the code. There are other nigly details to get things
 going. Most of that are regular issues with installing software or setting up
 the resolution to the monitor. Then there's the big one, networking.</p>
 
-
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="installing"></a></p><a class="cow-section-anchor" name="section-3.1."></a><h2 class="cow-heading"><span class="cow-sec-number">3.1. </span>Installing</h2>
-
-<p>What we've seen so far are two Python scripts. You can download them off of 
+<p>What we've seen so far are two Python scripts. You can download them off of
 <a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/pibrush/bin">GitHub</a>, copy to your SD card, and run almost immediately. The Model A though
 will need to have the <a class="cow-url" href="http://piborg.org/xloborg/install">XLoBorg library for
 Python installed</a>.</p>
-
 <p><em>This is a work in progress!</em>
 Alternatively, we've also prepared a .deb package which can be used to install
 PiBrush on your Pi. These are availale on our PPA, for which we have
 <a class="cow-url" href="/pages/download.html">directions</a>. After setting up the PPA the package,
 installation is easy:</p>
-
 <pre>apt-get install pibrush</pre>
-
 <p>You then will need to edit /etc/default/pibrushd to match the specifics of your
 setup. That's it! There's a manpage if you need more help. It includes
 directions for setup on the Model A (client).</p>
-
 <pre>man pibrush</pre>
-
-
-
 <p><a name="networking"></a></p><a class="cow-section-anchor" name="section-3.2."></a><h2 class="cow-heading"><span class="cow-sec-number">3.2. </span>Networking</h2>
-
 <p>There are two ways to handle networking. The standard way would be to use a
 regular Wi-Fi access point (or router), with the Model B connected over either
 with a Wi-Fi dongle or an ethernet wire, and the Model A connected with a USB
 Wi-Fi dongle. The Wi-Fi access point then relays the information between the
 Model A and Model B. This is the setup in most homes and doesns't require
 anything special &mdash; see our <a class="cow-url" href="/pages/blinkip.html#wifi">wifi instructions here</a>.</p>
-
 <p>Then there's what we did for our display at the
 <a class="cow-url" href="http://pi.gate.ac.uk/posts/2013/09/16/open-culture-tech/">Ideas Bazaar</a>,
 which is cut out the middle man. We used ad hoc Wi-Fi which doesns't rely on
@@ -1093,18 +930,15 @@ an existing network (but <em>does</em> require two Wi-Fi dongles). With ad hoc
 networking, the Pis communicate with each other directly. This means that the
 Pis aren't affected by a lack of Wi-Fi network, which is often the case when
 you're on the move. Let's look at how to do this.</p>
-
 <p>First you'll need to tell the Pi that you want it to use ad hoc networking. You
 can do this by editing <tt>/etc/wpa<span class="cow-escape">_</span>supplicant/wpa<span class="cow-escape">_</span>supplicant.conf</tt> and adding
 the following lines:</p>
-
 <pre>network={
         ssid=&quot;pibrush&quot;
         key_mgmt=NONE
         frequency=2432
         mode=1
 }</pre>
-
 <p>This tells the Pi to search for the ad hoc network. Now, because there's no
 access point there's also no
 <a class="cow-url" href="http://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol">DHCP</a>,
@@ -1113,25 +947,18 @@ telling computers how to talk to each other. Without that we have to tell the
 two Pis how to find each other manually. This means <b>static IP addresses</b>. We
 set these up in Debian by editing the <tt>/etc/network/interfaces</tt> file and
 removing the dhcp line and replacing it with this:</p>
-
 <pre>iface default inet static
 address 192.168.31.1
 netmask 255.255.255.0</pre>
-
 <p>On the Model A change the 31.1 to 31.2. The other file to edit is the
 <tt>/etc/hosts</tt> file, adding the following two lines:</p>
-
 <pre>192.168.31.1 modelb
 192.168.31.2 modela</pre>
-
 <p>On the next boot the two Pis will talk to each other directly! You're all
 set to go! Good luck!</p>
-
 <p><hr></p>
-
 <p>You can see complete configuration files online on GitHub
 <a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/pibrush/config">here</a>.</p>
-
 <p><b>Warning!</b>
 If you're relying on Wi-Fi to access your RaspberryPis, these changes <em>WILL
 BREAK THAT!</em> If you do this accidentally and get locked out you can always
@@ -1141,30 +968,20 @@ Wi-Fi network with your laptop, if you connect you can assign your laptop
 another IP like 192.168.31.3 and then your laptop and Pis should be able to
 talk.</p>
 
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
 <p><a name="art"></a></p><a class="cow-section-anchor" name="section-4."></a><h1 class="cow-heading"><span class="cow-sec-number">4. </span>Art</h1>
-
 <p>Here's what we made together at the Ideas Bazaar...</p>
-
 <p><a class="cow-url" href="/pages/images/pibrush/art/1379031321.png"><img class="cow-img" src="/pages/images/pibrush/thumbs/art/1379031321.jpg" alt="Number 1"></a></p>
-
 <p><a class="cow-url" href="/pages/images/pibrush/art/1379034522.png"><img class="cow-img" src="/pages/images/pibrush/thumbs/art/1379034522.jpg" alt="Number 2"></a></p>
-
 <p><a class="cow-url" href="/pages/images/pibrush/art/1379036808.png"><img class="cow-img" src="/pages/images/pibrush/thumbs/art/1379036808.jpg" alt="Number 3"></a></p>
-
-
 <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-
 </section>
-
 </div>
-<div id="middleColumn" class="yui3-u-1-5"> <!-- column 2 -->
+<div id="middleColumn" class="yui3-u-1-5"> 
 <div class="midColContent">
-  <a class="article-thumb" href="/images/articles/pibrush.jpg"><img
-    src="/images/articles/thumbs/pibrush.jpg"
-    height="75" width="75" alt="pibrush"></a>
- <span class="article-summary"><em>Turning an accelerometer into a paint brush with Raspberry Pi</em>.</span> 
+<a class="article-thumb" href="/images/articles/pibrush.jpg"><img
+src="/images/articles/thumbs/pibrush.jpg"
+height="75" width="75" alt="pibrush"></a>
+<span class="article-summary"><em>Turning an accelerometer into a paint brush with Raspberry Pi</em>.</span>
 <br/> <br/>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -1181,7 +998,6 @@ talk.</p>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-<!-- __CONTENTS__ -->
 <div class="cow-contents"><h2 class="cow-heading">Contents</h2>
 <p><ul>
 <li><a href="#section-1.">1. Introduction</a></li>
@@ -1200,46 +1016,41 @@ talk.</p>
 <li>&nbsp;&nbsp;<a href="#section-3.2.">3.2. Networking</a></li>
 <li><a href="#section-4.">4. Art</a></li>
 </ul></p></div>
-  <section id="extras" class="body">
-  </section><!-- /#extras -->
-
-
-  </div>
+<section id="extras" class="body">
+</section>
 </div>
+</div>
+</div> 
 
-  </div> <!-- #mainContent -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-  <div id="footer">
-    <table border="0" align="right"><tbody><tr>
-      <td style="vertical-align:bottom; text-align:left;">
-      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
-      </td>
-      <td style="vertical-align:bottom; text-align:right;">
-      <font size="-2">
-        © Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
-          1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
-        This website is licenced under the
-        <a rel="license"
-        href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
-        <a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
-        <a href="https://www.gnu.org/licenses/">the GNU licences</a> and
-        others. All our products and services supplied <b>with no warranty</b>.<br/>
-        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
-        <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/pages/pibrush.html">Print</a>.
-      </font>
-      </td>
-      <td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
-        alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
-      </td>
-      <td>
-        <a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
-          alt="The University of Sheffield" height="70" width="165"</a>
-      </td>
-    </tr>
-    </tbody></table>
-  </div>
-
+<div id="footer">
+<table border="0" align="right"><tbody><tr>
+<td style="vertical-align:bottom; text-align:left;">
+<span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+</td>
+<td style="vertical-align:bottom; text-align:right;">
+<font size="-2">
+© Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
+1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+This website is licenced under the
+<a rel="license"
+href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+<a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
+<a href="https://www.gnu.org/licenses/">the GNU licences</a> and
+others. All our products and services supplied <b>with no warranty</b>.<br/>
+<em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
+<a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/pages/pibrush.html">Print</a>.
+</font>
+</td>
+<td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+</td>
+<td>
+<a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+alt="The University of Sheffield" height="70" width="165"</a>
+</td>
+</tr>
+</tbody></table>
+</div>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

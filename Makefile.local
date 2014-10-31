@@ -1,5 +1,8 @@
 # Makefile.local
 
+# site parameterisation #####################################################
+SITE=hamish.gate.ac.uk
+
 # list of pages etc. ########################################################
 STANDARD_PAGES=\
 about.html download.html basics.html schools.html notipi.html legocases.html \
@@ -9,7 +12,20 @@ index.html ks1.html get-mopi.html mopi-v5.html festival.html adverts.html
 NO_META_PAGES=piroomba.html
 DRAFT_PAGES=press-14.html airpi-files
 
-# mangle the outreach day post ##############################################
+# prepare stuff specific to this site
+local-prepare:
+	@cd $(INPUTDIR)/basics && \
+          for f in *.yam; do \
+	    BASE=`echo $$f |sed 's,\.yam$$,,'`; \
+	    [ ! -e $$BASE.html -o $$BASE.yam -nt basics.html ] && \
+	      $(Y2H) -F basics.yam && break; \
+	  done; \
+          cp basics.html ../pages
+	@cp $(INPUTDIR)/piroomba/piroomba.html $(INPUTDIR)/pages
+	cd $(INPUTDIR)/pages && $(Y2H) -Fna && \
+          $(EPI) $(STANDARD_PAGES) && $(EPI) -n $(NO_META_PAGES)
+
+# mangle in video clips etc. ################################################
 local-finalise:
 	TMPF=/tmp/pi-gate-$$$$; \
 	TMPF2=/tmp/pi-gate-$$$$-2; \
