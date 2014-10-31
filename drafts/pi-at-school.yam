@@ -1,0 +1,38 @@
+Y1 Impressions of Computing Sessions
+
+_Hamish Cunningham, October 2014_
+
+Goal: to give some initial impressions of computing technology as something
+that we create.
+
+Method: short small group sessions with hands-on electronics and Raspberry Pi
+play.
+
+Challenges: making the material accessible to a very young age group; adapting
+to wide ranges of motor skills and technology literacy.
+
+Inputs
+
+- University of Sheffield Raspberry Pi outreach work -- http://pi.gate.ac.uk/
+- Raspberry Pi foundation teacher resources --
+  http://www.raspberrypi.org/resources/teach/
+- Computing at School site, specifically _A computational thinking guide &
+  Progression Pathways assessment framework including computational thinking:
+  KS1 (Y1) to KS3 (Y9)_ --
+  http://community.computingatschool.org.uk/resources/2324
+
+Session plans
+
+- what makes computers work? (with a _Snap Circuits_ introductory electronics
+  play set)
+- let's make a computer! (with a Raspberry Pi kit)
+- computers use _instructions_ (with a Robot Turtles board game; reference the
+  BeeBots that the school is using)
+- how are robots made? (with a Pi-based robot controlled from web browsers
+  etc.; again reference the BeeBot)
+- robot spies! (control the robot from Scratch; move to a location and take a
+  picture)
+- electronics + computers = ...? (reprise the simplest concepts from the first
+  session on Pi GPIO)
+- making music with programming (Sonic Pi)
+- how computer games work (Pi-specific Minecraft hacking)
