@@ -57,6 +57,7 @@ help:
 	@echo '   minify                compress the output html             '
 	@echo '   fix-image-sizes       add missing dimensions to img tags   '
 	@echo '   archive               make an archive copy of .htmls       '
+	@echo '                         (warning: interacts with s3upload!)  '
 	@echo '   archive-diff          diff the archive against the output  '
 	@echo '   fix-rss-feeds         absolutise the URLs in the RSS feeds '
 	@echo '                                                              '
@@ -98,11 +99,11 @@ ec2upload: fix-rss-feeds minify
           --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
 gateupload: fix-rss-feeds minify
 	rsync -e "ssh -p $(SSH_PORT)" -hP -rvz --delete --delete-excluded \
-          $(OUTPUTDIR)/ $${GE1_USER}@gate.ac.uk:/data/herd/pi.gate.ac.uk/html \
+          $(OUTPUTDIR)/ $${GE1_USER}@gate.ac.uk:/data/herd/$(SITE)/html \
           --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
 s3upload: fix-rss-feeds minify
 	s3cmd sync -r output/ --exclude '.htaccess' --exclude='.htpasswd' \
-          --delete-removed s3://pi.gate.ac.uk/
+          --delete-removed s3://$(SITE)/
 
 # for each .yam in content/ fix missing image sizes in the .html and do diff
 fix-image-sizes:
@@ -135,19 +136,7 @@ record-image-size-diffs:
 # other targets ###############################################################
 
 # this does regeneration from GATEwiki sources and the like
-prepare:
-	# special stuff specific to this site
-	@cd $(INPUTDIR)/basics && \
-          for f in *.yam; do \
-	    BASE=`echo $$f |sed 's,\.yam$$,,'`; \
-	    [ ! -e $$BASE.html -o $$BASE.yam -nt basics.html ] && \
-	      $(Y2H) -F basics.yam && break; \
-	  done; \
-          cp basics.html ../pages
-	@cp $(INPUTDIR)/piroomba/piroomba.html $(INPUTDIR)/pages
-	cd $(INPUTDIR)/pages && $(Y2H) -Fna && \
-          $(EPI) $(STANDARD_PAGES) && $(EPI) -n $(NO_META_PAGES)
-	# stuff for all sites
+prepare: local-prepare
 	@YAMS=`find $(INPUTDIR) -name '*.yam'`; \
         for f in $$YAMS; do \
           BASE=`echo $$f |sed 's,\.yam$$,,'`; HTML=$${BASE}.html; \
@@ -286,7 +275,7 @@ checklinks:
         for f in `find . -name '*.html'`; do \
           sed -i \
             -e 's,https:,http:,g' \
-            -e 's,http://pi.gate.ac.uk/,/,g' \
+            -e 's,http://$(SITE)/,/,g' \
             $$f; \
         done; \
         echo "starting http server in `pwd`; now run make linkchecker"; \
@@ -300,7 +289,7 @@ linkchecker:
 
 # list all the .html files in the s3 bucket
 s3list:
-	s3cmd -r ls s3://pi.gate.ac.uk | grep '\.html$$'>/tmp/pi.gate.ac.uk-htmls.txt
+	s3cmd -r ls s3://$(SITE) | grep '\.html$$'>/tmp/$(SITE)-htmls.txt
 
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post
 .PHONY: draft fix-rss-feeds checklinks linkchecker s3list local-prepare
