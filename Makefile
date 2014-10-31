@@ -9,7 +9,7 @@ INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
-SSH_HOST=ec2-46-137-21-97.eu-west-1.compute.amazonaws.com
+SSH_HOST=some.ip.address
 SSH_PORT=22
 SSH_USER=ubuntu
 SSH_TARGET_DIR=/var/www
@@ -303,4 +303,4 @@ s3list:
 	s3cmd -r ls s3://pi.gate.ac.uk | grep '\.html$$'>/tmp/pi.gate.ac.uk-htmls.txt
 
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post
-.PHONY: draft fix-rss-feeds checklinks linkchecker s3list
+.PHONY: draft fix-rss-feeds checklinks linkchecker s3list local-prepare

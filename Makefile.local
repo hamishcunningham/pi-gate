@@ -14,16 +14,7 @@ DRAFT_PAGES=press-14.html airpi-files
 
 # prepare stuff specific to this site
 local-prepare:
-	@cd $(INPUTDIR)/basics && \
-          for f in *.yam; do \
-	    BASE=`echo $$f |sed 's,\.yam$$,,'`; \
-	    [ ! -e $$BASE.html -o $$BASE.yam -nt basics.html ] && \
-	      $(Y2H) -F basics.yam && break; \
-	  done; \
-          cp basics.html ../pages
-	@cp $(INPUTDIR)/piroomba/piroomba.html $(INPUTDIR)/pages
-	cd $(INPUTDIR)/pages && $(Y2H) -Fna && \
-          $(EPI) $(STANDARD_PAGES) && $(EPI) -n $(NO_META_PAGES)
+	:
 
 # mangle in video clips etc. ################################################
 local-finalise:
