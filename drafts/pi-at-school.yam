@@ -5,8 +5,7 @@ _Hamish Cunningham, October 2014_
 Goal: to give some initial impressions of computing technology as something
 that we create.
 
-Method: short small group sessions with hands-on electronics and Raspberry Pi
-play.
+Method: short small group sessions with hands-on electronics and Raspberry Pi.
 
 Challenges: making the material accessible to a very young age group; adapting
 to wide ranges of motor skills and technology literacy.
@@ -23,16 +22,21 @@ Inputs
 
 Session plans
 
+(We probably won't get around to all of them, and some may have to split if
+they're too large.)
+
 - what makes computers work? (with a _Snap Circuits_ introductory electronics
-  play set)
-- let's make a computer! (with a Raspberry Pi kit)
+  play set); preview the Pi
+- let's make a computer! (with a Raspberry Pi kit); preview the board game
 - computers use _instructions_ (with a Robot Turtles board game; reference the
-  BeeBots that the school is using)
+  BeeBots that the school is using); preview the Pi robot
 - how are robots made? (with a Pi-based robot controlled from web browsers
-  etc.; again reference the BeeBot)
+  etc.; again reference the BeeBot); preview Scratch
 - robot spies! (control the robot from Scratch; move to a location and take a
-  picture)
+  picture); preview breadboards and flashing LEDs
 - electronics + computers = ...? (reprise the simplest concepts from the first
-  session on Pi GPIO)
-- making music with programming (Sonic Pi)
-- how computer games work (Pi-specific Minecraft hacking)
+  session on Pi GPIO); preview Pi music
+- making music with programming (Sonic Pi); preview Minecraft
+- how computer games work (Pi-specific Minecraft hacking); preview free play
+  session
+- free play: choose an activity
