@@ -31,10 +31,6 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 MARKUP = ('rst', 'md', 'html')
-
-#DEFAULT_DATE_FORMAT = ('%Y-%d-%m %H:%M')
-#FILES_TO_COPY = (('.htaccess', '.htaccess'), ('.htpasswd', '.htpasswd'),)
-#STATIC_PATHS = (['files', 'images', 'pages/images'])
 STATIC_PATHS = ['files', 'images', 'pages/images', '.htaccess', '.htpasswd']
 FILENAME_METADATA = ('(?P<date>\d{4}-\d{2}-\d{2}).*')
 PAGE_EXCLUDES = (['basics', 'airpi-files'])

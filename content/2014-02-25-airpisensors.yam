@@ -35,7 +35,7 @@ Uploaded successfully%>
 
 This is the combined temperature moisture probe. It's an
 %(https://www.adafruit.com/products/385, Adafruit) special, which means I can
-start there for learning more. %(/files/DHT22.pdf, The datasheet) is of course
+start there for learning more. %(/pages/airpi-files/DHT22.pdf, The datasheet) is of course
 another good source. The two important bits from the Adafruit page are these
 two pieces of information:
 
@@ -191,7 +191,7 @@ about 8 to turn lights on and off in the dark of my closet. Because of that I
 just could not see how you could use an LDR to get to a Lux reading.
 (%(http://en.wikipedia.org/wiki/Lux, Lux) is the standard light measure, the
 same way that meters are for distance.) However, looking at the
-%(/files/PD0001.pdf, GL5528 datasheet) I was surprised to find that there
+%(/pages/airpi-files/PD0001.pdf, GL5528 datasheet) I was surprised to find that there
 actually is a proper relationship between resistance and lux, or illuminance.
 
 %image(images/environment/sensors/ldr/graph.png, GL5528 luminance vs
@@ -316,7 +316,7 @@ Then why multiply by 1000? That's to get the reading in mV. Because unlike the
 previous sensors, which measure by resistance, the UVI-01 is a direct voltage
 reading. Which is why the third line of code there is a multiplication by a
 factor. That's a factory standard calibration. You can see it in the following
-graph from the %(/files/UVI-01-E.pdf, datasheet):
+graph from the %(/pages/airpi-files/UVI-01-E.pdf, datasheet):
 
 %(images/environment/sensors/uv/uv.png, %image(images/environment/sensors/uv/uv_small.png))
 _Click for a graph you can actually read..._
@@ -347,7 +347,7 @@ sunblock!
 *BMP085 pressure sensor*
 
 Another %(https://www.adafruit.com/products/391, Adafruit favorite). I
-immediately like it for %(/files/BMP085_DataSheet_Rev.1.0_01July2008.pdf,
+immediately like it for %(/pages/airpi-files/BMP085_DataSheet_Rev.1.0_01July2008.pdf,
 another reason): "Fully calibrated". What they do is they run a calibration of
 the sensor in the factory and burn the calibration co-efficients into the chip.
 When the AirPi software reads the value off the pressure transducer, it then
