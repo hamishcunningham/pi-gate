@@ -1,64 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width = device-width">
-<title>Building an AirPi</title>
-<link rel="stylesheet" href="/theme/css/main.css">
-<link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed"/>
-<link rel="stylesheet" href="/theme/css/gatepage.css">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<!--[if IE]><script src="/theme/js/html5shiv-googlecode-com-html5.js"></script><![endif]-->
-<!--[if lt IE 7]><style type="text/css" media="screen">
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Building an AirPi</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
     body {
       behavior: url('/theme/images/menu/csshover.htc');
       font-size: 100%;
     }
-    </style> <link rel="stylesheet" href="/theme/css/ie-menus.css"/><![endif]-->
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
 
-<style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
 
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
 
-<script src="/theme/js/prototype-171-min.js"></script>
-<script src="/theme/js/gatepage.js"></script>
-
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
-
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
 </head>
+
 <body id="index" class="home">
 <div class='yui3-g-r'>
-<div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> 
+  <div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> <!-- column 1 -->
 <section id="content" class="body">
-<article>
-<header>
-<h1 class="entry-title">
-<a href="/posts/2014/02/07/airpi1/" rel="bookmark"
-title="Permalink to Building an AirPi">Building an AirPi</a></h1>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/posts/2014/02/07/airpi1/" rel="bookmark"
+           title="Permalink to Building an AirPi">Building an AirPi</a></h1>
 <div id="socialButtons">
-<span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2014/02/07/airpi1/"
-target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
-height="30" width="30"></a></span>
-<span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-title="Syndication feed"><img
-height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
-<span>&nbsp;<a href="/posts/2014/02/07/airpi1/#disqus_thread"
-title="Leave a comment"><img
-src="/theme/images/comment.png" height="30" width="30"></a></span>
-<span>&nbsp;<a href="/print/posts/2014/02/07/airpi1/"
-title="Print"><img
-src="/theme/images/print.png" height="30" width="30"></a></span>
-</div> </header>
-<div class="entry-content">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2014/02/07/airpi1/"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/posts/2014/02/07/airpi1/#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/posts/2014/02/07/airpi1/"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    </header>
+
+    <div class="entry-content">
 <footer class="post-info">
-<a class="article-thumb" href="/images/articles/airpi1.jpg"><img
-src="/images/articles/thumbs/airpi1.jpg"
-height="75" width="75" alt="airpi1"></a>
-<span class="article-summary"><em>Building an AirPi sensor rig</em>.</span>
-<br/> 
-Tags:<span class="tag-list"> <a href="/tag/airpi.html">airpi</a> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/environmental.html">environmental</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-02-07T00:00:00">Fri 07 February 2014,</span>
-<a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
-</footer>
+  <a class="article-thumb" href="/images/articles/airpi1.jpg"><img
+    src="/images/articles/thumbs/airpi1.jpg"
+    height="75" width="75" alt="airpi1"></a>
+    <span class="article-summary"><em>Building an AirPi sensor rig</em>.</span>
+ <br/>   <!-- In <a href="/category/news.html">News</a> -->
+  
+Tags:<span class="tag-list"> <a href="/tag/airpi.html">airpi</a> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/environmental.html">environmental</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>  <br/>   <span class="published" title="2014-02-07T00:00:00">Fri 07 February 2014,</span>
+  <a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
+</footer><!-- /.post-info -->      
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 
 <p>An <a class="cow-url" href="http://airpi.es/">AirPi</a> is an open hardware environmental sensor
 platform. Weather and air quality monitoring using low cost components that
@@ -66,6 +84,7 @@ you can order and then assemble yourself. Really it's a pretty neat project.
 What they do is give you a component list and a schematic diagram (and PCB
 layout too, if you're into that) so that you have quite a deal of flexibility
 in what your monitoring station can do. The complete list includes:</p>
+
 <ul>
 <li>Air pressure</li>
 <li>Temperature</li>
@@ -76,8 +95,10 @@ in what your monitoring station can do. The complete list includes:</p>
 <li>NO2 level</li>
 <li>CO level</li>
 </ul>
+
 <p><img class="cow-img" src="/images/environment/airpi/atairpi.jpg">
 <em>An AirPi promo photo...</em></p>
+
 <p>Of course, what you build yourself almost never looks as nice as what the stock
 photo looks like. For starters, I know I haven't got easy access to PCB
 fabrication so I'm going to be building a breadboard AirPi. The first step to
@@ -88,6 +109,7 @@ Most stuff can be ordered easily enough either through places like
 Those were my sources, and in the end only one part (the UV sensor) had to come
 from outside the UK. I got a multi-resistor pack and breadboard from Maplin
 rather than eBay as that was a bit easier.</p>
+
 <p>Keep in mind though that the component list on that page <b>isn't exhaustive</b>.
 I found out only on reading the assembly directions that a bit more was
 necessary, particularly to use the UV sensor you also need 0.1uF capacitor
@@ -96,19 +118,24 @@ multi-pack from Maplin. There's no specific direction about what LDR (Light
 Dependant Resistor) either. Based off of comments in the forums I ordered
 a pack of GL5528, which have a light resistance of 10K-20K&Omega; and a darkness
 resistance of 1M&Omega;.</p>
+
 <p><a class="cow-url" href="/images/environment/airpi/components.jpg"><img class="cow-img" src="/images/environment/airpi/components_thumb.jpg"></a>
 <em>Here are all the components</em></p>
+
 <p>In addition to all the bits above and the breadboard, I ordered an
 <a class="cow-url" href="http://www.ebay.co.uk/itm/111260606543">Adafruit cobbler clone</a> and some
 <a class="cow-url" href="http://www.ebay.co.uk/itm/231080275924">solid core jumper wires</a> so that I
 could at least do a tidy breadboard. I was unable to order the NO2 or CO
 sensors as the only folks who sell them are in the states and the shipping
 was killer.</p>
+
 <p>So. On to building! Unfortunately, not all shipping times are equal and I
 wanted to get started playing so my first prototype only has the air quality
 sensor and the light level sensor.</p>
+
 <p><a class="cow-url" href="/images/environment/airpi/prototype1.jpg"><img class="cow-img" src="/images/environment/airpi/prototype1_thumb.jpg"></a>
 <em>My solid core wires hadn't arrived yet either, so messy!</em></p>
+
 <p>When almost everything had arrived, I started to build prototype 2. All I was
 missing was the UV sensor. By the time I finished building though, the sensor
 had arrived and I added it in as well. Working on the breadboard ends up being
@@ -121,8 +148,10 @@ checking <a class="cow-url" href="/pages/airpi-files/2600pdf.pdf">several</a>
 <a class="cow-url" href="/pages/airpi-files/DHT22.pdf">the</a> <a class="cow-url" href="/pages/airpi-files/fn957.pdf">different</a>
 <a class="cow-url" href="/pages/airpi-files/UVI-01-E.pdf">datasheets</a>. A digital multi-meter was a
 good friend as well.</p>
+
 <p><a class="cow-url" href="/images/environment/airpi/prototype2.jpg"><img class="cow-img" src="/images/environment/airpi/prototype2_thumb.jpg"></a>
 <em>Much nicer!</em></p>
+
 <p>All things considered the AirPi directions are really quite good. It took so
 long because it's a matter of having confidence that I'd done it right. Combine
 that with the logic puzzle of individual sensor placement. As the directions
@@ -132,24 +161,29 @@ things together to make a tidier circuit. The fact that you can jump from the
 you, like I've done, place them close together on the breadboard, <em>and you
 notice it</em>. Things like that that take up the time, and then cross-checking it
 to make sure it's right takes up even more.</p>
+
 <p>Fortunately in the end I only had three real electrical mysteries (aside from
 plugging things in in the wrong spot). The first was that I misinterpreted what
 had to be done with the light level sensor. The directions describe its
 connection in text only and it just confused me. They make sense now though...</p>
+
 <p>The second issue doesn't really have anything to do with the AirPi. The cobbler
 I've got has GPIO pins 9 and 17 swapped on the PCB labeling, and testing with a
 multimeter they seem to do neither. This is a ground and +3.3V fortunately, but
 connecting the ground on the pressure transducer to what may have been +3.3V
 accidentally... not so good.</p>
+
 <p><img class="cow-img" src="/images/environment/airpi/badpins.png">
 <em>Backwards! Yikes!</em></p>
+
 <p>My third electrical mystery was much more annoying than either of those two.
 The long story short is that I had the UV sensor plugged in backwards. The long
-leg goes to pin 3, and the short leg connects to ground. Unfortunately, to
+leg goes to pin 3, and the short leg connects to ground. Unfortunately, to 
 figure out this was the case I had to go and 'debug' the rest of the UV
 circuit. Which is fine in principle, until you realize that before I started
 this I had no idea how an op-amp worked or what it really does. (Yes, the name
 is kind of an indicator, but that really doesn't explain the electronics.)</p>
+
 <p>Fortunately Chris Gammell has an
 <a class="cow-url" href="http://chrisgammell.com/how-does-an-op-amp-work-part-1/">excellent
 explanation</a> that made about 60% sense to me. I'll see if I can summarize my
@@ -160,10 +194,13 @@ over the input to output. Sort of. Anyway, the directions mentioning &quot;470 t
 is referring to this multiplication factor of the sensor output, and is why I
 could use 1K&Omega; and 470K&Omega; resistors instead of the 10K&Omega; and 4.7M&Omega; resistors they
 did.</p>
+
 <p><img class="cow-img" src="/images/environment/airpi/op-amp circuit.png">
 <em>Roughly what an op-amp does...</em></p>
+
 <p>There are other effects that come into play, I don't really understand all of
 this:</p>
+
 <ul>
 <li>As near as I can tell the multiplication works as the op-amp is really an <span class="cow-escape">
 </span>oscillator. The resistor that links the op-amp output and the pin of the <span class="cow-escape">
@@ -173,32 +210,38 @@ this:</p>
 </span>happens very rapidly (oscillates!) and results in an even voltage thats the <span class="cow-escape">
 </span>multiplied output.</li>
 </ul>
-<ul>
-<li>Chris' explanation has the signal being amplified attached to the <span class="cow-escape">
+
+ <ul>
+ <li>Chris' explanation has the signal being amplified attached to the <span class="cow-escape">
 </span>&quot;inverting input&quot; while the AirPi has the UV output connected to the <span class="cow-escape">
 </span>&quot;non-inverting input&quot;. I think this has to do with how the UV sensor is a <span class="cow-escape">
 </span>diode and we're connecting one end to ground.</li>
-</ul>
-<ul>
-<li>The capacitor in the circuit (not pictured here) has to do with <span class="cow-escape">
+ </ul>
+
+ <ul>
+ <li>The capacitor in the circuit (not pictured here) has to do with <span class="cow-escape">
 </span>stabilizing the feedback loop because of the response speed of the UV sensor.</li>
-</ul>
+ </ul>
+
 <ul>
 <li>The resistor in parallel with the UV sensor ensures a minimum current <span class="cow-escape">
 </span>level. The higher that resistor is, the greater the voltage because of <span class="cow-escape">
 </span>Ohm's law 1/Rtotal = 1/Ra + 1/Rb. I think this explains that graph on the <span class="cow-escape">
 </span>datasheet.</li>
 </ul>
+
 <p>This brings me on to the thing I wish most from the AirPi project: <b>an
 explanation of why and how things work</b>. Right now it's a really nice
 monitoring tool, which you could use to learn about the environment. But it
 could be an electronics teaching tool as well.</p>
+
 <p>But that's enough boring electronics. On to software! There's a set of
 directions on the AirPi page to get you started. It includes installing all the
 dependencies which is pretty good. I did all of that except for the 'eeml'
 steps - these are for connecting to <a class="cow-url" href="https://xively.com/">Xively</a>. This is the
 service AirPi uses for storing and distributing stuff. It looked a bit complex
 for getting started though, which is why I've skipped it.</p>
+
 <p>Once the dependencies are installed and the AirPi
 <a class="cow-url" href="https://github.com/tomhartley/AirPi.git">Git Repository</a> has been cloned, the
 first step is configuring AirPi.cfg. There's a bit more to it than the
@@ -206,15 +249,19 @@ directions let on though. You may need to edit the I2CBus parameter, I had to
 change it to 1 to get it to work with my Model A. The UVI-01 ADCPin is
 incorrect with respect to the assembly directions, it should be 3 not 4. I also
 had to disable the MICS sensors as I don't have these.</p>
+
 <p>There's also a small bug in Upload.py with regards to the AirQuality pull-up
 resistor. Line 118 should be changed from</p>
+
 <p><pre class="prettyprint lang-python">
 airSensor = AQSensor.AQSensor(adc,AQADC,pullup)
 </pre>to</p>
+
 <p><pre class="prettyprint lang-python">
 airSensor = AQSensor.AQSensor(adc,AQADC,pullup=pullup)
 </pre>Since I didn't do the eeml stuff, I also needed to comment out the eeml imports
 at the start of Upload.py. Once that's done though it runs!</p>
+
 <pre>Temp-DHT:       26.1 C
 Humidity:       35.7 %
 Air Quality:    16920.56
@@ -223,17 +270,23 @@ UV Level:       0.48 UVI
 Temp-BMP:       25.6 C
 Pressure:       97912.6 Pa
 </pre>
+
 <p>An AirPi built and running! The question is where we go from here? I'm planning
 to now collect data for a bit and see if I can massage it and get something
 neat out of it. What does Air Quality 16920 even mean? I'll want to check the
 calibration of the sensors in general and make sure it's not all nonsense. For
 example, I'll use some thermometers and a barometer to cross check those
 readings.</p>
+
 <p>I'm also going to look into altering the software. A capability to log and
 display info without going through a third party service would be nice. I know
 the logging should be possible at least! I also just did a blog post about
 <a class="cow-non-existant-url" href="/posts/2014/01/25/raingauge/">connecting a raingauge</a> to the Pi. I'm pretty
 certain that can be added into the AirPi setup. Stay tuned!</p>
+
+
 <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+
 <br/> <br/>
 </html>

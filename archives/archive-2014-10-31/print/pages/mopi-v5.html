@@ -1,54 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width = device-width">
-<title>MoPi++: Version 5 and Beyond</title>
-<link rel="stylesheet" href="/theme/css/main.css">
-<link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed"/>
-<link rel="stylesheet" href="/theme/css/gatepage.css">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<!--[if IE]><script src="/theme/js/html5shiv-googlecode-com-html5.js"></script><![endif]-->
-<!--[if lt IE 7]><style type="text/css" media="screen">
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>MoPi++: Version 5 and Beyond</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
     body {
       behavior: url('/theme/images/menu/csshover.htc');
       font-size: 100%;
     }
-    </style> <link rel="stylesheet" href="/theme/css/ie-menus.css"/><![endif]-->
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
 
-<style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
 
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
 
-<script src="/theme/js/prototype-171-min.js"></script>
-<script src="/theme/js/gatepage.js"></script>
-
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
-
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
 </head>
+
 <body id="index" class="home">
 <div class='yui3-g-r'>
-<div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> 
-<section id="content" class="body">
-<h1 class="entry-title">MoPi++: Version 5 and Beyond</h1>
+  <div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> <!-- column 1 -->
+        
+<section id="content" class="body">    
+    <h1 class="entry-title">MoPi++: Version 5 and Beyond</h1>
 <div id="socialButtons">
-<span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/mopi-v5.html"
-target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
-height="30" width="30"></a></span>
-<span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-title="Syndication feed"><img
-height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
-<span>&nbsp;<a href="/pages/mopi-v5.html#disqus_thread"
-title="Leave a comment"><img
-src="/theme/images/comment.png" height="30" width="30"></a></span>
-<span>&nbsp;<a href="/print/pages/mopi-v5.html"
-title="Print"><img
-src="/theme/images/print.png" height="30" width="30"></a></span>
-</div>
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/mopi-v5.html"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/pages/mopi-v5.html#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/pages/mopi-v5.html"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    
+    
+
 <p><em>Hot-swap Mobile Power for the Pi</em></p>
+
 <h1 class="cow-heading"><span class="cow-escape">*</span><span class="cow-escape">*</span><span class="cow-escape">*</span><span class="cow-escape">*</span> Please don't link or distribute this page <span class="cow-escape">*</span><span class="cow-escape">*</span><span class="cow-escape">*</span><span class="cow-escape">*</span></h1>
+
 <p><em><a class="cow-url" href="http://pi.gate.ac.uk/pages/about.html#hamish">Hamish Cunningham</a>, Lubo,
 Fred, August 2014&mdash;...</em></p>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
 <div class="cow-contents"><h2 class="cow-heading">Contents</h2>
 <p><ul>
@@ -63,101 +83,139 @@ Fred, August 2014&mdash;...</em></p>
 <li><a href="#section-3.">3. Implementation Notes</a></li>
 <li><a href="#section-4.">4. Candidate Requirements</a></li>
 </ul></p></div>
+
 <p><a class="cow-url" href="/pages/images/mopi/logo-heli-1.png"><img class="cow-img" src="/pages/images/mopi/logo-heli-1-200x150.png" alt="MoPi Heli Logo" width="200" height="150"></a></p>
+
 <p>This page discusses use cases and candidate requirements for MoPi Version 5,
 which is intended to be a retail version (or versions &mdash; we will probably move
 to several different models at this point).</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-1."></a><h1 class="cow-heading"><span class="cow-sec-number">1. </span>Versions</h1>
+
 <p>Let's call the current version <b>MoPi Classic</b>, and upcoming future version(s)
 <b>MoPi++</b>?</p>
+
 <p>MoPi has been through four versions so far:</p>
+
 <ol>
 <li>the initial <a class="cow-url" href="/pages/images/mopi/thumbs/prototype-regulator-05.jpg">prototype</a>
-(with separate regulator and controller boards)</li>
+  (with separate regulator and controller boards)</li>
 <li>the almost-fits-in-a-pibow
-<a class="cow-url" href="/pages/images/mopi/proto2-01.jpg">prototype</a></li>
-<li>the pre-production Kickstarter
-<a class="cow-url" href="/pages/images/mopi/closeups/1.jpg">prototype</a></li>
+  <a class="cow-url" href="/pages/images/mopi/proto2-01.jpg">prototype</a></li>
+<li>the pre-production Kickstarter 
+  <a class="cow-url" href="/pages/images/mopi/closeups/1.jpg">prototype</a></li>
 <li>the Kickstarter
-<a class="cow-url" href="/pages/images/mopi/closeups/2.jpg">delivery board</a> (in both stackable and
-low-profile variants)</li>
+  <a class="cow-url" href="/pages/images/mopi/closeups/2.jpg">delivery board</a> (in both stackable and
+  low-profile variants)</li>
 </ol>
+
 <p>Version 4. (<b>MoPi Classic</b>) is a production quality board, and is available
 via the <a class="cow-url" href="http://pi.gate.ac.uk/pages/get-mopi.html">pre-order page</a>.</p>
+
 <p>MoPi Version 5 (<b>MoPi++</b>) will be a retail version (or version<em>s</em> &mdash; we will
 probably move to several different models at this point).</p>
+
 <p>If there is demand we may maintain availability of MoPi Classic even when
 MoPi++ variants become available.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>Use Cases</h1>
 
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-2.1."></a><h2 class="cow-heading"><span class="cow-sec-number">2.1. </span>Laptop, UPS</h2>
+
 <p>Two very common uses to which our backers wish to put MoPi are:</p>
+
 <ul>
 <li>laptop-style devices (including tablets, portable music players, phones and
-the like)</li>
+  the like)</li>
 <li>UPS devices (catering for intermittent power disruption)</li>
 </ul>
+
 <p>A UPS and the power subsystem of a laptop actually behave in very similar ways
 &mdash; when there is external power it is used to both power the device and charge
 the internal batteries; when the power drops the batteries take over. (If
 there is a difference between the two, it is that for a laptop fast charging
 is an advantage, whereas for a UPS this doesn't matter too much.)</p>
+
 <p>For laptops in particular a reasonably accurate estimate of remaining battery
 life is required. Hot swap of batteries is also an advantage.</p>
+
 <p>Implications:</p>
+
 <ul>
 <li>we can only support these use cases with specific defined battery
-configurations</li>
+  configurations</li>
 <li>configurations requiring external charging are excluded (which rules out the
-8x NiMH holder configuration, for example)</li>
+  8x NiMH holder configuration, for example)</li>
 <li>we should support several configurations of different weight &mdash; a user may
-want to power a whole laptop rig and have plenty of space for heavy
-batteries, or just power a Model A+ with a small LCD and a few buttons on it
-for a music player, for example)</li>
+  want to power a whole laptop rig and have plenty of space for heavy
+  batteries, or just power a Model A+ with a small LCD and a few buttons on it
+  for a music player, for example)</li>
 </ul>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-2.2."></a><h2 class="cow-heading"><span class="cow-sec-number">2.2. </span>Solar</h2>
+
 <p>The user wants to power a Pi from solar panels. Probably they also want a
 battery backup for when the sun goes in or down, and then they naturally want
 to also charge the batteries when there is excess power avaiable.</p>
+
 <p>A variant of this use case is where mains power is also available. Now the
 user wants to use all the solar power that is available, but if there is
 insufficient current to supplement it with mains power. Again a battery backup
 will need to be kept charged.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-2.3."></a><h2 class="cow-heading"><span class="cow-sec-number">2.3. </span>Wireless Power</h2>
+
 <p>This is a somewhat artificial use case, which is more technology push than
 user pull, but it seems likely that wireless charging will become widespread
 (you can already use it in some big restaurant chains in some countries, and
 IKEA is rumoured to be building slots for charger coils into new furniture
 designs).</p>
+
 <p>In addition W&uuml;rth Electronics (under contract from TI) are keen to see
 development of 3rd-party boards incorporating their coils, and no doubt other
 big suppliers are working in similar directions.</p>
+
 <p>The main choice for us is between</p>
+
 <ol>
 <li>an integrated board that combines both circuitry from MoPi and from the
-W&uuml;rth, or</li>
+  W&uuml;rth, or</li>
 <li>a composite device that includes a MoPi and a 3rd-party receiver-side coil
-as separate circuits </li>
+  as separate circuits </li>
 </ol>
+
 <p>In the latter case we need to support 5V input; in the former we have quite a
 difficult integration task due to the sophistication of the components on the
 W&uuml;rth example board (which is a 4-layer board with microscopic components!).</p>
+
 <p><b>Note</b>: this is likely to be mainly a <em>charging</em> technology; i.e. it only
 really makes sense when we have a specific device with integrated batteries
 and charging.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-2.4."></a><h2 class="cow-heading"><span class="cow-sec-number">2.4. </span>Multiple Boards, Multiple Boxes, Multiple Physical Interfaces</h2>
+
 <p>Inevitably people want to use MoPi with other add-on boards and in lots of
 different types of cases. They also want to put the physical user interface
 components (the power switch and LEDs) in other places.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-2.5."></a><h2 class="cow-heading"><span class="cow-sec-number">2.5. </span>Remote Monitoring, e.g. Kinder Scout</h2>
+
 <p>Several backers have described remote monitoring applications, e.g. one whose
 Pi wakes up every few hours and takes a photo of a building site.</p>
+
 <p>There are also many scientific and environmental applications. Kinder Scout is
 a hill in the English Penines covered with a large area of peat bog that has
 suffered erosion due to acid rain degrading the vegetation that normally binds
@@ -165,125 +223,150 @@ the soil. My brother volunteers as part of a project that began by analysing
 the conditions causing the erosion, and then reseeded the area with new
 vegetation. The project uses a set of dip test wells which contain sensors
 that read and store data about water conditions periodically.</p>
+
 <p>Project staff visit once a week to collect the data from the sensors. We can
 envisage a Pi-based solution using MoPi, if we can attain e.g. 2-week run-time
 without a huge battery.</p>
+
 <p>Another requirement here is accurate time keeping &mdash; perhaps available if we
 hook up MoPi's RTC properly?</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-2.6."></a><h2 class="cow-heading"><span class="cow-sec-number">2.6. </span>The World and Her Dog</h2>
+
 <p>We shouldn't forget what is distinctive and attractive about MoPi Classic.
 Most of our backers didn't buy batteries from us &mdash; they use their own, or
 they plug in solar panels, or an old laptop power supply, or their car
 cigarette lighter, or etc. MoPi Classic copes with all of these.</p>
+
 <p>We need to continue to support diverse supplies, hot swap, and all the rest.
 Indeed in some cases we should try and improve on current facilities.</p>
+
 <p>Implication: where we start (in MoPi++) to support use cases which will only
 work for specific configurations we need to layer these on top of the
 underlying flexible engine that we have in MoPi Classic.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-3."></a><h1 class="cow-heading"><span class="cow-sec-number">3. </span>Implementation Notes</h1>
+
 <ol>
 <li>In some cases we will need to define the battery set. We have a choice of
-NiMH, Lead Acid (for UPS or solar devices) and LiPo. NiMH wins over LiPo for
-safety; Lead Acid is only appropriate for static devices.</li>
+  NiMH, Lead Acid (for UPS or solar devices) and LiPo. NiMH wins over LiPo for
+  safety; Lead Acid is only appropriate for static devices.</li>
 <li>Several use cases will be easier to cater for if we put a micro USB on MoPi
-and mandate the connection of mains-driven (5V) supplies there. We might
-even support options like solar and wireless this way (as there are solar
-rigs available now with 5V regulators built in, or we might sell a simple 5V
-regulator for the 18V panels).</li>
-<li>To support the maximum number of boxes and combinations with other boards a
-separate &quot;bus board&quot; PCB that duplicates the GPIO pins looks like a good
-solution. This could be arranged in both horizontal and vertical versions,
-with 2-way and 3-way options, and variants for the Model A/B and for the B+. </li>
+  and mandate the connection of mains-driven (5V) supplies there. We might
+  even support options like solar and wireless this way (as there are solar
+  rigs available now with 5V regulators built in, or we might sell a simple 5V
+  regulator for the 18V panels).</li>
+<li>To support the maximum number of boxes and combinations with other boards a 
+  separate &quot;bus board&quot; PCB that duplicates the GPIO pins looks like a good
+  solution. This could be arranged in both horizontal and vertical versions,
+  with 2-way and 3-way options, and variants for the Model A/B and for the B+. </li>
 </ol>
 
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-4."></a><h1 class="cow-heading"><span class="cow-sec-number">4. </span>Candidate Requirements</h1>
+
 <p><b>All Pi models.</b> Improve support for the B+ by avoiding resting on C1.
 Continue to support the Models A and B. Support the Compute Module (though
 this is not yet a major use case, it is likely to increase in future). This
 means:</p>
+
 <ul>
 <li>2A max output. (The B+ will supply close to 2A over its USB connections, and
-also requires power for other components.)</li>
+  also requires power for other components.)</li>
 <li>More flexible / lower cost GPIO connection. We need only 6 pins now, and
-might use a small low-profile connector coupled with an optional &quot;bus board&quot;
-to allow stacking of additional boards as required (with versions for both
-A/B and B+). For better ground connectivity we might also go with 10 pins.</li>
+  might use a small low-profile connector coupled with an optional &quot;bus board&quot;
+  to allow stacking of additional boards as required (with versions for both
+  A/B and B+). For better ground connectivity we might also go with 10 pins.</li>
 <li>For the compute module we should copy the open developer host board and add
-MoPi functionality to it.</li>
+  MoPi functionality to it.</li>
 <li>Switch and LED's to be side-facing (to support both A/B and B+), with
-enhanced remoting options.</li>
+  enhanced remoting options.</li>
 </ul>
+
 <p><b>5V input.</b> If we support 5V input then we can support wireless charging, and
 more battery pack configurations. If we support input voltages down to 3.7V we
 can support single LiPo sources.</p>
+
 <p><b>Charging.</b> A common user requirement is charging, usually for applications
 involving one or more of:</p>
+
 <ul>
 <li>uninterruptible power</li>
 <li>solar power</li>
 <li>laptop-style operation</li>
 </ul>
+
 <p>In each case there is a mains-derived or solar-derived input (often 5V but
 also up to e.g. 18V) which comes and goes. When present it should trickle
 charge the batteries; when absent batteries should be used to power the Pi in
 the normal way.</p>
+
 <p><b>Which batteries?!</b> We've worked hard to support many different types of
 battery and non-battery as viable input supplies. We can't do this for
 charging though &mdash; we should pick whatever configuration makes best sense and
 support only that. (E.g. multiples of 4 NiMH, or lead acid, or some
 pre-packaged LiPo.)</p>
+
 <p><b>Wireless power.</b> See above.</p>
+
 <p><b>Incremental improvements.</b></p>
+
 <ul>
 <li>Remoting pads (with holes) for switch and LEDs.</li>
 <li>When a current-limited input is attached and results in &lt;5V out of the
-regulator (e.g. solar panels during cloudy spells), the microcontroller
-should refuse to power the Pi. (Otherwise we can see situations where MoPi
-tries to supply 5V, fails, and ends up sending an inadequate supply to the
-Pi.) So the input LEDs (and status sensing) should respond to current, as
-well as voltage.</li>
+  regulator (e.g. solar panels during cloudy spells), the microcontroller
+  should refuse to power the Pi. (Otherwise we can see situations where MoPi
+  tries to supply 5V, fails, and ends up sending an inadequate supply to the
+  Pi.) So the input LEDs (and status sensing) should respond to current, as
+  well as voltage.</li>
 <li>Add a halt script to simbamond to trigger after the filesystems are
-unmounted (in rc0.d) that will ping MoPi and say &quot;halt now&quot;. (The firmware
-should halt 45 secs after power off requests anyhow, if the ping doesn't
-come.)</li>
+  unmounted (in rc0.d) that will ping MoPi and say &quot;halt now&quot;. (The firmware
+  should halt 45 secs after power off requests anyhow, if the ping doesn't
+  come.)</li>
 <li>Add a &quot;boot complete&quot; signal from simbamond to MoPi. The 60 second power-on
-delay is too conservative. Let's reduce it to 2 seconds like the current
-version of simbamond.</li>
+  delay is too conservative. Let's reduce it to 2 seconds like the current
+  version of simbamond.</li>
 <li>[<em>Rejected? Not relevant if we add micro USB 5V input?</em>] The 3.3V feed on
-the Pi should be used to power the microcontroller to maintain consistent
-power to MoPi when in UPS-type configurations.
-<ul>
-<li>Notes from Fred:
-<ul>
-<li>The main scenario for the 3.3 feed would be so that you could
-configure/query the MoPi without having to have batteries connected.
-Then you could have I2C commands to start/stop the regulator, i.e. a
-software power button.</li>
-<li>A 5V micro USB on the MoPi itself that supplied the 3.3V to the
-micro-controller would probably do this as well. However, because of
-casing issues it still might not always be used. For expert users maybe
-a solder bridge/jumper on the board that could be used to enable a 3.3
-feed from the Pi to the MoPi? I know for example that my Lego cases
-would probably need to be redesigned heavily to accommodate a 5V feed on
-the MoPi board.</li>
-</ul></li>
-</ul></li>
+  the Pi should be used to power the microcontroller to maintain consistent
+  power to MoPi when in UPS-type configurations.
+  <ul>
+  <li>Notes from Fred:
+    <ul>
+    <li>The main scenario for the 3.3 feed would be so that you could
+      configure/query the MoPi without having to have batteries connected.
+      Then you could have I2C commands to start/stop the regulator, i.e. a
+      software power button.</li>
+    <li>A 5V micro USB on the MoPi itself that supplied the 3.3V to the
+      micro-controller would probably do this as well. However, because of
+      casing issues it still might not always be used. For expert users maybe
+      a solder bridge/jumper on the board that could be used to enable a 3.3
+      feed from the Pi to the MoPi? I know for example that my Lego cases
+      would probably need to be redesigned heavily to accommodate a 5V feed on
+      the MoPi board.</li>
+    </ul></li>
+  </ul></li>
 <li>It is quite frequent to get a blinking source amber LED when there is no
-power on a particular source (even with no power connected at all).</li>
+  power on a particular source (even with no power connected at all).</li>
 <li>It is quite frequent in development to wish that the power inputs would
-reset on rising voltage, and not have to power down to cycle this behaviour.
-This is likey to increase when we support more laptop style, solar and UPS
-devices.</li>
+  reset on rising voltage, and not have to power down to cycle this behaviour.
+  This is likey to increase when we support more laptop style, solar and UPS
+  devices.</li>
 </ul>
+
 <p><b>Nice to have...</b></p>
+
 <ul>
 <li>In-situ firmware re-flash. (Probably too expensive.)</li>
 <li>Persistent config data. (Probably too expensive. Also risky when the
-microcontroller can get into inconsistent states.)</li>
+  microcontroller can get into inconsistent states.)</li>
 <li>RTC functionality with Linux driver. (Requires investigation of existing
-kernel support for particular chips; one may match MoPi...)</li>
+  kernel support for particular chips; one may match MoPi...)</li>
 </ul>
+
 </section>
+
 </div>

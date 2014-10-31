@@ -1,78 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width = device-width">
-<title>Pi GATE — Sheffield Pi-Tronics</title>
-<link rel="stylesheet" href="/theme/css/main.css">
-<link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed"/>
-<link rel="stylesheet" href="/theme/css/gatepage.css">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<!--[if IE]><script src="/theme/js/html5shiv-googlecode-com-html5.js"></script><![endif]-->
-<!--[if lt IE 7]><style type="text/css" media="screen">
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Pi GATE — Sheffield Pi-Tronics</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
     body {
       behavior: url('/theme/images/menu/csshover.htc');
       font-size: 100%;
     }
-    </style> <link rel="stylesheet" href="/theme/css/ie-menus.css"/><![endif]-->
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
 
-<style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
 
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
 
-<script src="/theme/js/prototype-171-min.js"></script>
-<script src="/theme/js/gatepage.js"></script>
-
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
-
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
 </head>
+
 <body id="index" class="home">
 <div class='yui3-g-r'>
-<div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> 
+  <div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> <!-- column 1 -->
 <h1>Archives for July 2014</h1>
-<dl>
-<dt>Sun 27 July 2014</dt>
-<dd><a href="/posts/2014/07/27/battery-life/">AA battery life with the Model A and Model B</a></dd>
-<dt>Tue 15 July 2014</dt>
-<dd><a href="/posts/2014/07/15/model-b-plus/">MoPi and the Model B+ Pi</a></dd>
-<dt>Thu 10 July 2014</dt>
-<dd><a href="/posts/2014/07/10/mopi-remote-switch/">Fitting a Remote Power Switch to MoPi</a></dd>
-</dl>
-<section id="extras" class="body">
-</section>
-</div>
-</div>
-</div> 
 
-<div id="footer">
-<table border="0" align="right"><tbody><tr>
-<td style="vertical-align:bottom; text-align:left;">
-<span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
-</td>
-<td style="vertical-align:bottom; text-align:right;">
-<font size="-2">
-© Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
-1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
-This website is licenced under the
-<a rel="license"
-href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
-<a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
-<a href="https://www.gnu.org/licenses/">the GNU licences</a> and
-others. All our products and services supplied <b>with no warranty</b>.<br/>
-<em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
-<a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/posts/2014/07/index.html">Print</a>.
-</font>
-</td>
-<td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
-alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
-</td>
-<td>
-<a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
-alt="The University of Sheffield" height="70" width="165"</a>
-</td>
-</tr>
-</tbody></table>
+<dl>
+    <dt>Sun 27 July 2014</dt>
+    <dd><a href="/posts/2014/07/27/battery-life/">AA battery life with the Model A and Model B</a></dd>
+    <dt>Tue 15 July 2014</dt>
+    <dd><a href="/posts/2014/07/15/model-b-plus/">MoPi and the Model B+ Pi</a></dd>
+    <dt>Thu 10 July 2014</dt>
+    <dd><a href="/posts/2014/07/10/mopi-remote-switch/">Fitting a Remote Power Switch to MoPi</a></dd>
+</dl>
+  <section id="extras" class="body">
+  </section><!-- /#extras -->
+
+
+  </div>
 </div>
+
+  </div> <!-- #mainContent -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
+          1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
+        <a href="https://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
+        <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/posts/2014/07/index.html">Print</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+        alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+          alt="The University of Sheffield" height="70" width="165"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

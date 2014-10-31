@@ -1,131 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width = device-width">
-<title>About</title>
-<link rel="stylesheet" href="/theme/css/main.css">
-<link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed"/>
-<link rel="stylesheet" href="/theme/css/gatepage.css">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<!--[if IE]><script src="/theme/js/html5shiv-googlecode-com-html5.js"></script><![endif]-->
-<!--[if lt IE 7]><style type="text/css" media="screen">
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>About</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
     body {
       behavior: url('/theme/images/menu/csshover.htc');
       font-size: 100%;
     }
-    </style> <link rel="stylesheet" href="/theme/css/ie-menus.css"/><![endif]-->
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
 
-<style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
 
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
 
-<script src="/theme/js/prototype-171-min.js"></script>
-<script src="/theme/js/gatepage.js"></script>
-
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
-
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
 </head>
+
 <body id="index" class="home">
-<div id="topBar">
-<span id="topLogo">
-<span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
-height="55" width="46"></a></span>
-<span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
-<span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
-alt="The University of Sheffield" height="55" width="113"</a><a
-href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
-height="55" width="132"></a></span>
-</span>
-<div class="horizontal menu">
-<ul>
-<li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+        height="55" width="46"></a></span>
+      <span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+      <span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+        alt="The University of Sheffield" height="55" width="113"</a><a
+          href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+            height="55" width="132"></a></span>
+    </span>
+    <div class="horizontal menu">
+      <ul>
+      <li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+      <!--
+      using a custom menu at present...
+      -->
+      <li><b><a href="#">Projects</a></b>
+      <!-- TODO generate this from content/pages/index -->
+        <ul>
+        <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+        <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+        <li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+        <li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+        <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+        <!--
+        <li><a href="/pages/snowcam.html">SnowCam: Off the Radar Cameras</a></li>
+        -->
+        <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+        <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+        <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+        <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+        <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+        </ul></li>
+      <li><b><a href="#">MoPi</a></b>
+        <ul>
+        <li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+        <li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+        <li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+        <li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+        </ul></li>
+      <!-- <li><a href="/">Blog</a></li> -->
+      <!--
+      <li><a href="/pages/basics.html#resources">Download</a></li>
+      -->
+      <li><a href="/pages/download.html">Download</a></li>
+      <!--
+      <li><a href="/pages/shop.html">Shop</a></li>
+      -->
+      <li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
 
-<li><b><a href="#">Projects</a></b>
+  <!-- header menus (?!) -->
+  <div id="header">
+  </div>
 
-<ul>
-<li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
-<li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
-<li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
-<li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
-<li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
 
-<li><a href="/pages/legocases.html">LEGO Cases</a></li>
-<li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
-<li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
-<li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
-<li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
-</ul></li>
-<li><b><a href="#">MoPi</a></b>
-<ul>
-<li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
-<li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
-<li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
-<li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
-</ul></li>
+  <!-- main content div -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <div id="mainContent">
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+        <li ><a href="/category/news.html">News</a></li>
+    </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
 
-
-<li><a href="/pages/download.html">Download</a></li>
-
-<li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
-<li><a href="/pages/about.html">About</a></li>
-</ul>
-</div>
-
-<div id="topLoginEtc">
-<form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
-<label class="pageLink" for="as_q">Search:</label>
-<input type="text" name="as_q" size="6" maxlength="255">
-<input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
-</form>
-</div>
-</div>
-
-<div id="header">
-</div>
-
-<div id="topSeparator"> </div>
-
-
-<div id="mainContent">
-
-
-
+<!-- YUI responsive columns -->
 <div class='yui3-g-r'>
-<div id="leftColumn" class="yui3-u-1-2"> 
-<section id="content" class="body">
-<h1 class="entry-title">About</h1>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+        
+<section id="content" class="body">    
+    <h1 class="entry-title">About</h1>
 <div id="socialButtons">
-<span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/about.html"
-target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
-height="30" width="30"></a></span>
-<span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-title="Syndication feed"><img
-height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
-<span>&nbsp;<a href="/pages/about.html#disqus_thread"
-title="Leave a comment"><img
-src="/theme/images/comment.png" height="30" width="30"></a></span>
-<span>&nbsp;<a href="/print/pages/about.html"
-title="Print"><img
-src="/theme/images/print.png" height="30" width="30"></a></span>
-</div>
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/about.html"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/pages/about.html#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/pages/about.html"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    
+    
 
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <h1 class="cow-heading">Site Map</h1>
+
 <p><a class="cow-url" href="http://pi.gate.ac.uk/">Pi.GATE.ac.uk</a> is two things wrapped up together:</p>
+
 <ul>
 <li>a blog about the <a class="cow-url" href="http://www.raspberrypi.org/">Raspberry Pi</a> and related
-subjects</li>
+  subjects</li>
 <li>a set of <a class="cow-url" href="/pages/index.html">in-depth articles</a> covering various Pi projects</li>
 </ul>
+
 <p>The blog is in the usual format... just hit <a class="cow-url" href="/">the front page</a>, check out
 the articles, their tags, etc., and see what you find...</p>
+
 <p>The projects list <a class="cow-url" href="/pages/index.html">is here</a>.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <h1 class="cow-heading">Dramatis Personae</h1>
+
 <p><a name="hamish"></a></p>
 <table>
 <tr><td> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 <b>Hamish Cunningham</b></p>
+
 <p><img class="cow-img" src="/pages/images/hamish-headshot.jpg" alt="Hamish" width="150"></p>
 </td><td>
 <p><br> <br>
@@ -133,11 +180,13 @@ Every night <a class="cow-url" href="http://gate.ac.uk/hamish">Hamish</a> creeps
 under a rock in the basement of the <a class="cow-url" href="http://www.shef.ac.uk/">University of
 Sheffield</a>'s <a class="cow-url" href="http://www.shef.ac.uk/dcs/">CS</a> department and turns into
 an open hardware wannabe with Pi pretensions.</p>
+
 <p>He's working on tutorial materials for various Pi-based projects on
 <a class="cow-url" href="http://pi.gate.ac.uk/">pi.gate.ac.uk</a>.</p>
 </td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </td><td> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 This is his corner of the workshop:</p>
+
 <p><img class="cow-img" src="http://www.saatchi-gallery.co.uk/imgs/artists/emin-tracey/tracey-emin-my-bed.jpg" alt="Tracey Emin's bed" width="150"></p>
 </td></tr>
 </table>
@@ -146,13 +195,16 @@ This is his corner of the workshop:</p>
 <table>
 <tr><td> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 <b>Fred Sonnenwald</b></p>
+
 <p><img class="cow-img" src="http://www.shef.ac.uk/polopoly_fs/1.75576!/image/ss1.png" alt="Fred's
 research" width="175"></p> </td><td>
 <p><br> <br>
 <a class="cow-url" href="http://www.shef.ac.uk/civil/staff/research/sonnenwaldf">Fred</a>
 is a PhD student in Civil Engineering, which he says is quite similar
 to lego with lots of hard sums added.</p>
+
 <p>Fred wants a quadcopter for his next birthday.</p>
+
 </td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </td><td> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br> <br>
@@ -164,17 +216,20 @@ to lego with lots of hard sums added.</p>
 <table>
 <tr><td> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 <b>Peter Wallis</b></p>
+
 <p><img class="cow-img" src="/pages/images/piroomba/roopiTop.jpg" alt="Pete's hoover" width="150"></p>
 </td><td> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br> <br>
 <a class="cow-url" href="http://www.cfpm.org/~peter/">Pete</a> is an old school electronics hacker and
-AI boffin with an unusual taste in household applicances &mdash;
+AI boffin with an unusual taste in household applicances &mdash; 
 he's working <a class="cow-url" href="/pages/piroomba.html">on a hoover he can talk to</a>. (Perhaps so it
 can't run away in the middle of the conversation?!)</p>
+
 <p><b>Do not</b> press the red button on <a class="cow-url" href="http://www.cfpm.org/~peter/">Pete's home page</a>.</p>
 </td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </td><td> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 When you take an EEG image of Pete's brain it looks like this:</p>
+
 <p><img class="cow-img" src="/pages/images/piroomba/rooPieCircuit.png" alt="PiRoomba" width="150"></p>
 </td></tr>
 </table>
@@ -183,6 +238,7 @@ When you take an EEG image of Pete's brain it looks like this:</p>
 <table>
 <tr><td> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 <b>Helen Beetham</b></p>
+
 <p><img class="cow-img" src="/pages/images/helen.jpg" alt="Helen Beetham" width="125"></p> </td><td>
 <p><br> <br>
 <a class="cow-url" href="http://design-4-learning.blogspot.com/">Helen</a> is an eLearning guru
@@ -190,6 +246,7 @@ who's working on filling the skills gap between the UK's ambitions to replace
 word processing with something actually worth knowing on the one hand, and the
 ability of our schools to start teach computing at very short notice on the
 other.</p>
+
 </td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </td><td> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 <a class="cow-url" href="http://www.beyondcurrenthorizons.org.uk/helen-beetham/"><img class="cow-img" src="http://www.transitiontogether.org.uk/wp-content/uploads/2012/06/contactbike.jpg" alt="Tandem++" width="150"></a>
@@ -201,6 +258,7 @@ other.</p>
 <table>
 <tr><td> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 <b>Lubo Bonchev</b> </p>
+
 <p><img class="cow-img" src="/pages/images/lubo.jpg" alt="Lubomir Bonchev" width="150"></p> </td><td>
 <p><br> <br>
 <a class="cow-url" href="http://bg.linkedin.com/pub/lubomir-bonchev/9/355/751">Lubo</a>
@@ -208,6 +266,7 @@ has worked on everything from solar panels to satelite phones, from hard-drive
 firmware to stepper motor controllers. He designed the circuitry for the MoPi
 <a class="cow-url" href="/pages/mopi.html">hot-swap mobile Pi power supplies</a>. (And he has an encyclopaedic
 knowledge of the post-fermentation properties of the Mavrud grape!)</p>
+
 </td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </td><td> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 <a class="cow-url" href="http://bg.linkedin.com/pub/lubomir-bonchev/9/355/751"><img class="cow-img" src="/pages/images/selcom.jpg" alt="Selcom" width="100"></a>
@@ -220,6 +279,7 @@ at <a class="cow-url" href="http://www.selcomltd.com/">Selcom Custom Electronics
 <table>
 <tr><td> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 <b>James Wallbank</b> </p>
+
 <p><a class="cow-url" href="http://access-space.org/doku.php?id=about:team#james_wallbankceo"><img class="cow-img" src="/pages/images/james.jpg" alt="James Wallbank" width="100" height="100"></a></p> </td><td>
 <p><br> <br>
 <a class="cow-url" href="http://access-space.org/doku.php?id=about:team#james_wallbankceo">James</a>
@@ -228,6 +288,7 @@ ranking for the query <a class="cow-url" href="http://google.co.uk/search?q=acce
 space&quot;</a> than Nasa. James can almost certainly sell you a ticket to the moon at
 a much lower price than most people (though it may take a while longer to crank
 out a working space vehicle on the 3D printer).</p>
+
 </td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </td><td> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 <a class="cow-url" href="http://access-space.org/"><img class="cow-img" src="/pages/images/logo-access-space.png" alt="Access Space" width="200" height="68"></a></p>
@@ -236,22 +297,29 @@ out a working space vehicle on the 3D printer).</p>
 <p><hr>
 <hr></p>
 
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="workshop"></a></p><h2 class="cow-heading">Directions to the Workshop</h2>
+
 <p>CADS, the <a class="cow-url" href="http://www.cads-online.co.uk/">Creative Arts Development Space</a> 7
 Smithfield, Sheffield, South Yorkshire S3.</p>
+
 <ul>
 <li><a class="cow-url" href="http://tinyurl.com/pi-gate-workshop">Map</a></li>
 <li><a class="cow-url" href="http://tinyurl.com/pi-gate-workshop-streetview">Streetview</a></li>
 </ul>
+
 <p>You'll need to phone when you get here &mdash; there's no doorbell...</p>
+
 </section>
+
 </div>
-<div id="middleColumn" class="yui3-u-1-5"> 
+<div id="middleColumn" class="yui3-u-1-5"> <!-- column 2 -->
 <div class="midColContent">
-<a class="article-thumb" href="/images/articles/about.jpg"><img
-src="/images/articles/thumbs/about.jpg"
-height="75" width="75" alt="about"></a>
-<span class="article-summary"><em>Pi-Tronics from the GATE people</em>.</span>
+  <a class="article-thumb" href="/images/articles/about.jpg"><img
+    src="/images/articles/thumbs/about.jpg"
+    height="75" width="75" alt="about"></a>
+ <span class="article-summary"><em>Pi-Tronics from the GATE people</em>.</span> 
 <br/> <br/>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -268,41 +336,47 @@ height="75" width="75" alt="about"></a>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-<section id="extras" class="body">
-</section>
-</div>
-</div>
-</div> 
+<!-- __CONTENTS__ -->
+  <section id="extras" class="body">
+  </section><!-- /#extras -->
 
-<div id="footer">
-<table border="0" align="right"><tbody><tr>
-<td style="vertical-align:bottom; text-align:left;">
-<span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
-</td>
-<td style="vertical-align:bottom; text-align:right;">
-<font size="-2">
-© Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
-1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
-This website is licenced under the
-<a rel="license"
-href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
-<a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
-<a href="https://www.gnu.org/licenses/">the GNU licences</a> and
-others. All our products and services supplied <b>with no warranty</b>.<br/>
-<em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
-<a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/pages/about.html">Print</a>.
-</font>
-</td>
-<td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
-alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
-</td>
-<td>
-<a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
-alt="The University of Sheffield" height="70" width="165"</a>
-</td>
-</tr>
-</tbody></table>
+
+  </div>
 </div>
+
+  </div> <!-- #mainContent -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
+          1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
+        <a href="https://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
+        <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/pages/about.html">Print</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+        alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+          alt="The University of Sheffield" height="70" width="165"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -1,76 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width = device-width">
-<title>Pi GATE — Sheffield Pi-Tronics - environmental</title>
-<link rel="stylesheet" href="/theme/css/main.css">
-<link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed"/>
-<link rel="stylesheet" href="/theme/css/gatepage.css">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<!--[if IE]><script src="/theme/js/html5shiv-googlecode-com-html5.js"></script><![endif]-->
-<!--[if lt IE 7]><style type="text/css" media="screen">
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Pi GATE — Sheffield Pi-Tronics - environmental</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
     body {
       behavior: url('/theme/images/menu/csshover.htc');
       font-size: 100%;
     }
-    </style> <link rel="stylesheet" href="/theme/css/ie-menus.css"/><![endif]-->
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
 
-<style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
 
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
 
-<script src="/theme/js/prototype-171-min.js"></script>
-<script src="/theme/js/gatepage.js"></script>
-
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
-
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
 </head>
+
 <body id="index" class="home">
 <div class='yui3-g-r'>
-<div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> 
-<aside id="featured" class="body">
-<article>
-<h1 class="entry-title"><a href="/posts/2014/04/21/airpisoftware/">The AirPi Software</a></h1>
+  <div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> <!-- column 1 -->
+    
+    
+
+      <aside id="featured" class="body">
+        <article>
+          <h1 class="entry-title"><a href="/posts/2014/04/21/airpisoftware/">The AirPi Software</a></h1> 
 <div id="socialButtons">
-<span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2014/04/21/airpisoftware/"
-target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
-height="30" width="30"></a></span>
-<span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-title="Syndication feed"><img
-height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
-<span>&nbsp;<a href="/posts/2014/04/21/airpisoftware/#disqus_thread"
-title="Leave a comment"><img
-src="/theme/images/comment.png" height="30" width="30"></a></span>
-<span>&nbsp;<a href="/print/posts/2014/04/21/airpisoftware/"
-title="Print"><img
-src="/theme/images/print.png" height="30" width="30"></a></span>
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2014/04/21/airpisoftware/"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/posts/2014/04/21/airpisoftware/#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/posts/2014/04/21/airpisoftware/"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
 </div><footer class="post-info">
-<a class="article-thumb" href="/images/articles/airpisoftware.jpg"><img
-src="/images/articles/thumbs/airpisoftware.jpg"
-height="75" width="75" alt="airpisoftware"></a>
-<span class="article-summary"><em>Taking a look at improvements to the AirPi software</em>.</span>
-<br/> 
-Tags:<span class="tag-list"> <a href="/tag/airpi.html">airpi</a> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/environmental.html">environmental</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2014-04-21T00:00:00">Mon 21 April 2014,</span>
-<a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
-</footer>
+  <a class="article-thumb" href="/images/articles/airpisoftware.jpg"><img
+    src="/images/articles/thumbs/airpisoftware.jpg"
+    height="75" width="75" alt="airpisoftware"></a>
+    <span class="article-summary"><em>Taking a look at improvements to the AirPi software</em>.</span>
+ <br/>   <!-- In <a href="/category/news.html">News</a> -->
+  
+Tags:<span class="tag-list"> <a href="/tag/airpi.html">airpi</a> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/environmental.html">environmental</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>  <br/>   <span class="published" title="2014-04-21T00:00:00">Mon 21 April 2014,</span>
+  <a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
+</footer><!-- /.post-info -->
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 
 <p>OK, it's been a while. For those that don't remember, the <a class="cow-url" href="http://airpi.es/">AirPi</a> is a low-cost weather station add-on project for the Raspberry Pi. I've
 previously written about <a class="cow-non-existant-url" href="/posts/2014/02/07/airpi1/">building it from
 scratch</a>, <a class="cow-non-existant-url" href="/posts/2014/02/14/airpiupdate/">soldering it up</a>, and then most
 recently <a class="cow-non-existant-url" href="/posts/2014/02/25/airpisensors/">interpreting sensor readings</a>.
 Since then I've been working on making those readings more accessible.</p>
+
 <p>That's the beauty of open source software and projects really. Tom Hartley (the
 AirPi guy) posted their software on <a class="cow-url" href="https://github.com/tomhartley/AirPi">GitHub</a>, an open software source code repository. I
 <a class="cow-url" href="https://github.com/guruthree/AirPi">forked it</a>, or created a copy of the
 code, to make my own modifications. After two months of on and off again
 changes and testing, I feel it's about as done as it's going to get.</p>
+
 <p>My goal here is to introduce everyone to what I think are the really nifty
 things I've added in. I've fixed a few bugs in the original code as I've found
 them. I've also then fixed the bugs I introduced myself in the new code, but we
 can gloss over them... The big fix I think is the high CPU load the software
 had, which only needed the addition of a simple <tt>time.sleep()</tt> to make it more
 reasonable.</p>
+
 <p>The first of the new features is <b>Raingauge Support</b>. Previously I
 <a class="cow-non-existant-url" href="/posts/2014/01/25/raingauge/">looked at them</a>, and now I've translated the
 logging code I wrote there and applied it to the AirPi framework. We've just
@@ -78,23 +101,31 @@ gotten even more weather-station-esqe. Just connect the raingauge to GPIO pin
 17 and ground. In a similar vein I also added back in support for the <b>TGS-2600
 Air Quality Sensor</b> and the <b>UVI-01 Ultra Violet Sensor</b>. This was all pretty
 trivial still. This was all mostly just extensions of what was already there.</p>
+
 <p><a class="cow-url" href="/images/environment/software/raingauge2.jpg"><img class="cow-img" src="/images/environment/software/raingauge2_thumb.jpg"></a>
 <em>The raingauge connection...</em></p>
+
 <p>On to more exciting things! Last time I more or less pointed out that a chunk
 of the sensor readings were uncalibrated. Not anymore! There's now a module
 that let's the software output calibrated readings. &quot;What's the use?&quot; you
 might say? Ah well, for starters I also added a CSV output module. The AirPi
 is now compatible with industry standard file formats... also known as a
 (comma separated value) spreadsheet. It get's better than that though:</p>
+
 <p>... (wait for it) ... The Crown Jewels:</p>
+
 <p><a class="cow-url" href="/images/environment/software/webinterface.png"><img class="cow-img" src="/images/environment/software/webinterface_small.png"></a></p>
+
 <p>Instead of uploading to Xively, which requires Internet access and relies on a
 third-party service, I've <b>built in an HTTP server</b>. Starting the AirPi
 software with this module enabled starts the Pi listening on port 8080
 for HTTP requests. Going there loads up a pretty, but fast site that's based
 on <a class="cow-url" href="http://getbootstrap.com/">Twitter Bootstrap</a>.</p>
+
 <p>But wait! There's more!</p>
+
 <p><a class="cow-url" href="/images/environment/software/webinterface2.png"><img class="cow-img" src="/images/environment/software/webinterface2_thumb.png"></a></p>
+
 <p>Not only can you see the current reading, you can also view graphs.
 Interactively explore what the weather's been doing over the last 24 hours
 with the click of a button. This is of course customizable. You could show the
@@ -102,15 +133,18 @@ last hour or the last 2 weeks, but longer periods require more free memory and
 will load a bit slower. Check out our <b><a class="cow-url" href="/pages/airpi-files/airpi_demo/">interactive demo site</a></b>. It's not a real Pi there for reasons of my router
 being unhappy, but it behaves just like the real thing. Open the drop down to
 bring up a graph. Select an area on a graph to zoom.</p>
+
 <p>Sharp eyed observes will have also noticed the RSS feed icon in the upper right
 hand corner. This is to allow for easy export of results to other software. I
 suspect minimal modifications will allow
 <a class="cow-url" href="https://github.com/uduncanu/AirPi/commit/9e13c3ab0e902d563a78e98addc7aac6eda5a35e">this JSON output</a> module to be served over HTTP for easy export as well.</p>
+
 <p>The reason I was after RSS? How many people have heard of
 <a class="cow-url" href="http://conky.sourceforge.net/">Conky</a>? It's a system monitor applet that
 displays system information on the screen in a corner of the desktop. It's a
 bit like the gadgets of Windows Vista/7 or OS X dashboard widgets. Well,
 anyway Conky, like gadgets or widgets, supports RSS feeds.</p>
+
 <pre>=== ${rss http://airpi:8080/rss.xml 10 feed_title} ===
 ${rss http://airpi:8080/rss.xml 10 item_title 0}: ${rss http://airpi:8080/rss.xml 10 item_desc 0}
 ${rss http://airpi:8080/rss.xml 10 item_title 1}: ${rss http://airpi:8080/rss.xml 10 item_desc 1}
@@ -121,13 +155,17 @@ ${rss http://airpi:8080/rss.xml 10 item_title 5}:
   ${rss http://airpi:8080/rss.xml 10 item_desc 5}
 ${rss http://airpi:8080/rss.xml 10 item_title 6}: ${rss http://airpi:8080/rss.xml 10 item_desc 6}
 ${rss http://airpi:8080/rss.xml 10 item_title 7}: ${rss http://airpi:8080/rss.xml 10 item_desc 7}</pre>
+
 <p>Adding the above bit of config to the end of my <tt>.conkyrc</tt> file gives me this
 (below) in the upper right corner of my desktop. The weather on my terms. Just
 what an AirPi should do.</p>
+
 <p><img class="cow-img" src="/images/environment/software/conky.png"></p>
+
+
 <p>
 <b><a href="/posts/2014/04/21/airpisoftware/#disqus_thread">Comment on this post</a>.</b>
-</p> </article>
-</aside>
-</div>
-
+</p>        </article>
+      </aside><!-- /#featured -->
+  </div>
+  <!-- column 2 -->

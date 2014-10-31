@@ -1,123 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width = device-width">
-<title>Pi GATE — Sheffield Pi-Tronics - pi-alikes</title>
-<link rel="stylesheet" href="/theme/css/main.css">
-<link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed"/>
-<link rel="stylesheet" href="/theme/css/gatepage.css">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<!--[if IE]><script src="/theme/js/html5shiv-googlecode-com-html5.js"></script><![endif]-->
-<!--[if lt IE 7]><style type="text/css" media="screen">
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Pi GATE — Sheffield Pi-Tronics - pi-alikes</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
     body {
       behavior: url('/theme/images/menu/csshover.htc');
       font-size: 100%;
     }
-    </style> <link rel="stylesheet" href="/theme/css/ie-menus.css"/><![endif]-->
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
 
-<style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
 
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
 
-<script src="/theme/js/prototype-171-min.js"></script>
-<script src="/theme/js/gatepage.js"></script>
-
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
-
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
 </head>
+
 <body id="index" class="home">
-<div id="topBar">
-<span id="topLogo">
-<span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
-height="55" width="46"></a></span>
-<span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
-<span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
-alt="The University of Sheffield" height="55" width="113"</a><a
-href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
-height="55" width="132"></a></span>
-</span>
-<div class="horizontal menu">
-<ul>
-<li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+        height="55" width="46"></a></span>
+      <span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+      <span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+        alt="The University of Sheffield" height="55" width="113"</a><a
+          href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+            height="55" width="132"></a></span>
+    </span>
+    <div class="horizontal menu">
+      <ul>
+      <li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+      <!--
+      using a custom menu at present...
+      -->
+      <li><b><a href="#">Projects</a></b>
+      <!-- TODO generate this from content/pages/index -->
+        <ul>
+        <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+        <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+        <li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+        <li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+        <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+        <!--
+        <li><a href="/pages/snowcam.html">SnowCam: Off the Radar Cameras</a></li>
+        -->
+        <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+        <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+        <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+        <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+        <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+        </ul></li>
+      <li><b><a href="#">MoPi</a></b>
+        <ul>
+        <li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+        <li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+        <li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+        <li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+        </ul></li>
+      <!-- <li><a href="/">Blog</a></li> -->
+      <!--
+      <li><a href="/pages/basics.html#resources">Download</a></li>
+      -->
+      <li><a href="/pages/download.html">Download</a></li>
+      <!--
+      <li><a href="/pages/shop.html">Shop</a></li>
+      -->
+      <li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
 
-<li><b><a href="#">Projects</a></b>
+  <!-- header menus (?!) -->
+  <div id="header">
+  </div>
 
-<ul>
-<li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
-<li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
-<li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
-<li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
-<li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
 
-<li><a href="/pages/legocases.html">LEGO Cases</a></li>
-<li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
-<li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
-<li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
-<li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
-</ul></li>
-<li><b><a href="#">MoPi</a></b>
-<ul>
-<li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
-<li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
-<li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
-<li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
-</ul></li>
+  <!-- main content div -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <div id="mainContent">
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+        <li ><a href="/category/news.html">News</a></li>
+    </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
 
-
-<li><a href="/pages/download.html">Download</a></li>
-
-<li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
-<li><a href="/pages/about.html">About</a></li>
-</ul>
-</div>
-
-<div id="topLoginEtc">
-<form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
-<label class="pageLink" for="as_q">Search:</label>
-<input type="text" name="as_q" size="6" maxlength="255">
-<input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
-</form>
-</div>
-</div>
-
-<div id="header">
-</div>
-
-<div id="topSeparator"> </div>
-
-
-<div id="mainContent">
-
-
-
+<!-- YUI responsive columns -->
 <div class='yui3-g-r'>
-<div id="leftColumn" class="yui3-u-1-2"> 
-<aside id="featured" class="body">
-<article>
-<h1 class="entry-title"><a href="/posts/2013/12/01/cubieboard2/">The Cubieboard2</a></h1>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+    
+    
+
+      <aside id="featured" class="body">
+        <article>
+          <h1 class="entry-title"><a href="/posts/2013/12/01/cubieboard2/">The Cubieboard2</a></h1> 
 <div id="socialButtons">
-<span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2013/12/01/cubieboard2/"
-target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
-height="30" width="30"></a></span>
-<span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-title="Syndication feed"><img
-height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
-<span>&nbsp;<a href="/posts/2013/12/01/cubieboard2/#disqus_thread"
-title="Leave a comment"><img
-src="/theme/images/comment.png" height="30" width="30"></a></span>
-<span>&nbsp;<a href="/print/posts/2013/12/01/cubieboard2/"
-title="Print"><img
-src="/theme/images/print.png" height="30" width="30"></a></span>
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2013/12/01/cubieboard2/"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/posts/2013/12/01/cubieboard2/#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/posts/2013/12/01/cubieboard2/"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
 </div><footer class="post-info">
-<a class="article-thumb" href="/images/articles/cubieboard2.jpg"><img
-src="/images/articles/thumbs/cubieboard2.jpg"
-height="75" width="75" alt="cubieboard2"></a>
-<span class="article-summary"><em>A review of the Cubieboard 2</em>.</span>
-<br/> 
-Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-alikes.html">pi-alikes</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-12-01T00:00:00">Sun 01 December 2013,</span>
-<a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
-</footer>
+  <a class="article-thumb" href="/images/articles/cubieboard2.jpg"><img
+    src="/images/articles/thumbs/cubieboard2.jpg"
+    height="75" width="75" alt="cubieboard2"></a>
+    <span class="article-summary"><em>A review of the Cubieboard 2</em>.</span>
+ <br/>   <!-- In <a href="/category/news.html">News</a> -->
+  
+Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-alikes.html">pi-alikes</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>  <br/>   <span class="published" title="2013-12-01T00:00:00">Sun 01 December 2013,</span>
+  <a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
+</footer><!-- /.post-info -->
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 
 <p>A while back we presented a <a class="cow-url" href="/pages/hardware.html">review</a> of different
 &quot;Pi-Alikes&quot;. Computers similar to the RaspberryPi - low cost and low power.
@@ -125,12 +166,16 @@ The question we set out to answer was &quot;what exactly does 'low power' mean?&
 Turns out that for the most part low power was exactly that&mdash;low energy
 consumption and low computational power too. The RaspberryPi and its
 contemporaries won't break any records but they won't break the bank either.</p>
+
 <p>Enter the Cubieboard2. We mentioned that this had been announced and we
 finally got our hands on one:</p>
+
 <p><a class="cow-url" href="/images/articles/cubieboard2.jpg"><img class="cow-img" src="/images/hardware/thumbs/cubieboard2.jpg" alt="Cubieboard2"></a></p>
+
 <p>Hardware wise, the Cubieboard2 is pretty much identical to the original except
 for its <b>A20</b> dual-core chip and <em>double the RAM</em> (1 GB). There's the same
 ethernet, HDMI, SATA, etc. Instead of Android 4.0.4 it ships with 4.2.2.</p>
+
 <p>Despite the similarities, the first rule of Cubieboard2 is that it is not
 Cubieboard1. Which means that as much as one might want to use the Cubieboard
 image, a new SD card image needs to be written. They exist, but were somewhat
@@ -140,6 +185,7 @@ Cubieboard2, so I resorted to Google and found
 <a class="cow-url" href="http://cubieboard.org/2013/09/07/lubuntu-desktopserver-firmwares-release-for-a20-cubieboard-20130907/">this</a>.
 In retrospect I should have just started on the Cubieboard pages and followed
 the nice big download link.</p>
+
 <p>Booting up you see the nice two penguins in the framebuffer that indicate two
 CPUs. And then nothing, for quite a long time while the system boots. That was
 very disconcerting and I was almost sure something was wrong. With the dual
@@ -150,111 +196,136 @@ certainly the SD card. X11 does feel pretty responsive though, and there's not
 that much of a slow down when multitasking. That's probably the real benefit of
 the second core. That and a tasty 1 GB of RAM make this surprisingly powerful
 for the price and size.</p>
+
 <p><em>The two Tux penguins show the kernel recognizing two CPUs...</em>
 <img class="cow-img" src="/images/hardware/dualtux.jpg" alt="Look Ma! Dual core!"></p>
+
 <p>The best concrete way to compare performance is, of course, a benchmark.
 First though, some stupid bug in something-Google made apt-get nearly
 impossible to use.
 <a class="cow-url" href="https://muffinresearch.co.uk/linux-fix-for-apt-get-update-waiting-for-headers/">see here</a>
 for a fix. That was annoying and necessary to sort out because otherwise there
 wouldn't be the necessary software installed to run the benchmarks.</p>
+
 <p>I have to say that I thought the Cubieboard2 performed better, but I was
 absolutely blown away by some of the benchmark results. Network and disk
 performance were effectively the same, so we can ignore those. What's really
 interesting are the CPU benchmarks. First, integer performance. On a
 core-for-core basis it was about the same as a Cubieboard. This means that
 overall there's twice the performance when factoring both cores.</p>
+
 <p><img class="cow-img" src="/images/hardware/results2/dhry_mips.svg.jpg" alt="Integer Math"></p>
+
 <p>Where the Cubieboard2 really shines though is in the floating point arena.
 Whatever changes they made between the A10 and A20 CPU, Cubieboard and
 Cubieboard 2, the two SD card images, it made a huge difference. Results
 indicate nearly <em>three</em> times the performance. Across both cores that would be
 <b>six times</b> faster over all. (That's 4x faster than the Pi too!) It's
 absolutely staggering.</p>
+
 <p><img class="cow-img" src="/images/hardware/results2/whet_mflops.svg.jpg" alt="Floating Point Math"></p>
+
 <p>These performance improvements aren't just smoke dust either. There's real
 world benefit. bzip2 compression ended up performing about the same. Still,
 that's two times the performance considering both cores. There may be a
 limiting factor with the SD card here.</p>
+
 <p><img class="cow-img" src="/images/hardware/results2/bzip2_min.svg.jpg" alt="bzip2 Compression"></p>
+
 <p>MP3 encoding performance was just fantastic however. Half the time of the
 Cubieboard and still significantly faster than the Model B. That's effectively
 four times faster when considering both cores. I do believe that what I thought
 was faster performance when using the Cubieboard2 is indeed the case.</p>
+
 <p><img class="cow-img" src="/images/hardware/results2/lame_min.svg.jpg" alt="MP3 Encoding"></p>
+
 <p>My conclusion? Why would anyone want a Cubieboard anymore? Cubieboard2 all the
 way. I sincerely look forward to the next hardware revision of the RaspberryPi
 if they can get the same sort of performance improvements.</p>
+
+
 <p>
 <b><a href="/posts/2013/12/01/cubieboard2/#disqus_thread">Comment on this post</a>.</b>
-</p> </article>
-</aside>
-</div>
+</p>        </article>
+      </aside><!-- /#featured -->
+  </div>
+  <!-- column 2 -->
+  <div id="middleColumn" class="yui3-u-1-5">
+        <section id="content" class="body">
+          <h1>Other articles</h1>
+          <ol id="posts-list" class="hfeed">
+    
 
-<div id="middleColumn" class="yui3-u-1-5">
-<section id="content" class="body">
-<h1>Other articles</h1>
-<ol id="posts-list" class="hfeed">
-<li><article class="hentry">
-<hr/>
-<header>
-<h1><a href="/posts/2013/06/26/alternatives/" rel="bookmark"
-title="Permalink to It's a Jungle Out There">It's a Jungle Out There</a></h1>
-</header>
-<div class="entry-content">
+ 
+      <li><article class="hentry">
+        <hr/>
+        <header>
+          <h1><a href="/posts/2013/06/26/alternatives/" rel="bookmark"
+               title="Permalink to It's a Jungle Out There">It's a Jungle Out There</a></h1>
+        </header>
+        
+        <div class="entry-content">
 <footer class="post-info">
-<a class="article-thumb" href="/images/articles/alternatives.jpg"><img
-src="/images/articles/thumbs/alternatives.jpg"
-height="75" width="75" alt="alternatives"></a>
-<span class="article-summary"><em>A survey of Pi-alike hardware</em>.</span>
-<br/> 
-Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-alikes.html">pi-alikes</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span> <br/> <span class="published" title="2013-06-26T00:00:00">Wed 26 June 2013,</span>
-<a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
-</footer> 
-<a class="readmore" href="/posts/2013/06/26/alternatives/">read more</a>
-
-</div>
-</article></li>
-</ol>
-</section>
+  <a class="article-thumb" href="/images/articles/alternatives.jpg"><img
+    src="/images/articles/thumbs/alternatives.jpg"
+    height="75" width="75" alt="alternatives"></a>
+    <span class="article-summary"><em>A survey of Pi-alike hardware</em>.</span>
+ <br/>   <!-- In <a href="/category/news.html">News</a> -->
+  
+Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-alikes.html">pi-alikes</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>  <br/>   <span class="published" title="2013-06-26T00:00:00">Wed 26 June 2013,</span>
+  <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer><!-- /.post-info -->        <!-- A survey of Pi-alike hardware -->
+        <a class="readmore" href="/posts/2013/06/26/alternatives/">read more</a>
+        <!-- <p>
+<b><a href="/posts/2013/06/26/alternatives/#disqus_thread">Comment on this post</a>.</b>
+</p> -->
+        </div><!-- /.entry-content -->
+      </article></li>
+      </ol><!-- /#posts-list -->
+      </section><!-- /#content -->
 <p class="paginator">
-Page 1 / 1
+    Page 1 / 1
 </p>
-<section id="extras" class="body">
-</section>
-</div>
-</div>
-</div> 
+  <section id="extras" class="body">
+  </section><!-- /#extras -->
 
-<div id="footer">
-<table border="0" align="right"><tbody><tr>
-<td style="vertical-align:bottom; text-align:left;">
-<span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
-</td>
-<td style="vertical-align:bottom; text-align:right;">
-<font size="-2">
-© Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
-1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
-This website is licenced under the
-<a rel="license"
-href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
-<a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
-<a href="https://www.gnu.org/licenses/">the GNU licences</a> and
-others. All our products and services supplied <b>with no warranty</b>.<br/>
-<em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
-<a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/tag/pi-alikes.html">Print</a>.
-</font>
-</td>
-<td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
-alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
-</td>
-<td>
-<a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
-alt="The University of Sheffield" height="70" width="165"</a>
-</td>
-</tr>
-</tbody></table>
+
+  </div>
 </div>
+
+  </div> <!-- #mainContent -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
+          1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
+        <a href="https://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
+        <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/tag/pi-alikes.html">Print</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+        alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+          alt="The University of Sheffield" height="70" width="165"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

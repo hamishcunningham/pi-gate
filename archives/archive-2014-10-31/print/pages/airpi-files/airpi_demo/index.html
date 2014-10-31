@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>AirPi - Sheffield</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AirPi - Sheffield">
-<meta http-equiv="refresh" content="300">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link rel="alternate" type="application/rss+xml" title="AirPi - Sheffield" href="rss.xml"/>
-<style>
+	<head>
+		<meta charset="utf-8">
+		<title>AirPi - Sheffield</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="AirPi - Sheffield">
+		<meta http-equiv="refresh" content="300">
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="alternate" type="application/rss+xml" title="AirPi - Sheffield" href="rss.xml" />
+
+		<style>
 			body {
 				padding-top: 60px;
 			}
@@ -37,149 +39,165 @@
 			}
 		</style>
 
-<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
-</head>
-<body>
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-<div class="container">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="#">AirPi - Sheffield</a>
-</div>
-<div class="collapse navbar-collapse">
-<ul class="nav navbar-nav">
-<li><a href="#current"><span class="glyphicon glyphicon-home"></span> Sensor Readings</a></li>
-<li><a href="#about"><span class="glyphicon glyphicon-question-sign"></span> About</a></li>
-</ul>
-<ul class="nav navbar-nav pull-right">
-<li><a href="rss.xml"><img src="img/rss_icon.png"/> RSS</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="container">
-<div class="panel-group" id="accordion">
-<a name="current"></a>
-<h1>Sensor Readings</h1>
-<p>Last update: Mon, 21 Apr 2014 20:11:42 UTC</p>
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">AirPi - Sheffield</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#current"><span class="glyphicon glyphicon-home"></span> Sensor Readings</a></li>
+						<li><a href="#about"><span class="glyphicon glyphicon-question-sign"></span> About</a></li>
+					</ul>
+					<ul class="nav navbar-nav pull-right">
+						<li><a href="rss.xml"><img src="img/rss_icon.png" /> RSS</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="container">
+
+			<div class="panel-group" id="accordion">
+				<a name="current"></a>
+				<h1>Sensor Readings</h1>
+				<p>Last update: Mon, 21 Apr 2014 20:11:42 UTC</p>
+				
 <div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-0">
-Temperature: 26.2 (C)
-</a></h4>
-</div>
-<div id="collapse-0" class="panel-collapse collapse">
-<div class="panel-body"><p>
-Sensor: <em>BMP085</em><br/>
-Description: <em>BOSCH combined temperature and pressure sensor.</em>
-</p></div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-1">
-Pressure: 992.62 (hPa)
-</a></h4>
-</div>
-<div id="collapse-1" class="panel-collapse collapse">
-<div class="panel-body"><p>
-Sensor: <em>BMP085</em><br/>
-Description: <em>BOSCH combined temperature and pressure sensor.</em>
-</p></div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-2">
-Relative_Humidity: 42.0 (%)
-</a></h4>
-</div>
-<div id="collapse-2" class="panel-collapse collapse">
-<div class="panel-body"><p>
-Sensor: <em>DHT22</em><br/>
-Description: <em>A combined temperature and humidity sensor.</em>
-</p></div>
-</div>
+	<div class="panel-heading">
+		<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-0">
+			Temperature: 26.2 (C)
+		</a></h4>
+	</div>
+	<div id="collapse-0" class="panel-collapse collapse">
+		<div class="panel-body"><p>
+			Sensor: <em>BMP085</em><br/>
+			Description: <em>BOSCH combined temperature and pressure sensor.</em>
+		</p></div>
+	</div>
 </div>
 <div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-3">
-Temperature: 25.6 (C)
-</a></h4>
-</div>
-<div id="collapse-3" class="panel-collapse collapse">
-<div class="panel-body"><p>
-Sensor: <em>DHT22</em><br/>
-Description: <em>A combined temperature and humidity sensor.</em>
-</p></div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-4">
-Light_Level: 5.89 (Lux)
-</a></h4>
-</div>
-<div id="collapse-4" class="panel-collapse collapse">
-<div class="panel-body"><p>
-Sensor: <em>LDR</em><br/>
-Description: <em>A light dependent resistor</em>
-</p></div>
-</div>
+	<div class="panel-heading">
+		<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-1">
+			Pressure: 992.62 (hPa)
+		</a></h4>
+	</div>
+	<div id="collapse-1" class="panel-collapse collapse">
+		<div class="panel-body"><p>
+			Sensor: <em>BMP085</em><br/>
+			Description: <em>BOSCH combined temperature and pressure sensor.</em>
+		</p></div>
+	</div>
 </div>
 <div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-5">
-Air_Quality: 18245.95 (Corrected Ohms)
-</a></h4>
-</div>
-<div id="collapse-5" class="panel-collapse collapse">
-<div class="panel-body"><p>
-Sensor: <em>TGS2600</em><br/>
-Description: <em>A generic air quality sensor</em>
-</p></div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-6">
-UVI: 0.13 (UVI)
-</a></h4>
-</div>
-<div id="collapse-6" class="panel-collapse collapse">
-<div class="panel-body"><p>
-Sensor: <em>UVI-01</em><br/>
-Description: <em>A UV sensitive photodiode</em>
-</p></div>
-</div>
+	<div class="panel-heading">
+		<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-2">
+			Relative_Humidity: 42.0 (%)
+		</a></h4>
+	</div>
+	<div id="collapse-2" class="panel-collapse collapse">
+		<div class="panel-body"><p>
+			Sensor: <em>DHT22</em><br/>
+			Description: <em>A combined temperature and humidity sensor.</em>
+		</p></div>
+	</div>
 </div>
 <div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-7">
-Bucket_tips: 0.0 (mm)
-</a></h4>
+	<div class="panel-heading">
+		<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-3">
+			Temperature: 25.6 (C)
+		</a></h4>
+	</div>
+	<div id="collapse-3" class="panel-collapse collapse">
+		<div class="panel-body"><p>
+			Sensor: <em>DHT22</em><br/>
+			Description: <em>A combined temperature and humidity sensor.</em>
+		</p></div>
+	</div>
 </div>
-<div id="collapse-7" class="panel-collapse collapse">
-<div class="panel-body"><p>
-Sensor: <em>Maplin_N77NF</em><br/>
-Description: <em>A rain gauge.</em>
-</p></div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-4">
+			Light_Level: 5.89 (Lux)
+		</a></h4>
+	</div>
+	<div id="collapse-4" class="panel-collapse collapse">
+		<div class="panel-body"><p>
+			Sensor: <em>LDR</em><br/>
+			Description: <em>A light dependent resistor</em>
+		</p></div>
+	</div>
 </div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-5">
+			Air_Quality: 18245.95 (Corrected Ohms)
+		</a></h4>
+	</div>
+	<div id="collapse-5" class="panel-collapse collapse">
+		<div class="panel-body"><p>
+			Sensor: <em>TGS2600</em><br/>
+			Description: <em>A generic air quality sensor</em>
+		</p></div>
+	</div>
 </div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-6">
+			UVI: 0.13 (UVI)
+		</a></h4>
+	</div>
+	<div id="collapse-6" class="panel-collapse collapse">
+		<div class="panel-body"><p>
+			Sensor: <em>UVI-01</em><br/>
+			Description: <em>A UV sensitive photodiode</em>
+		</p></div>
+	</div>
 </div>
-<div>
-<a name="about"></a>
-<h1>About</h1>
-<p>This AirPi weather station is located in Sheffield, UK.</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-7">
+			Bucket_tips: 0.0 (mm)
+		</a></h4>
+	</div>
+	<div id="collapse-7" class="panel-collapse collapse">
+		<div class="panel-body"><p>
+			Sensor: <em>Maplin_N77NF</em><br/>
+			Description: <em>A rain gauge.</em>
+		</p></div>
+	</div>
 </div>
-</div>
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+			</div>
+			<div>
+				<a name="about"></a>
+				<h1>About</h1>
+				<p>This AirPi weather station is located in Sheffield, UK.</p>
+			</div>
+
+		</div>
+
+
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
 <script type="text/javascript">
 
 $(document).ready(function(){
@@ -200,5 +218,6 @@ $(document).ready(function(){
 });
 
 </script>
-</body>
+
+	</body>
 </html>

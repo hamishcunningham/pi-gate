@@ -1,52 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width = device-width">
-<title>Pi-Alikes</title>
-<link rel="stylesheet" href="/theme/css/main.css">
-<link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed"/>
-<link rel="stylesheet" href="/theme/css/gatepage.css">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<!--[if IE]><script src="/theme/js/html5shiv-googlecode-com-html5.js"></script><![endif]-->
-<!--[if lt IE 7]><style type="text/css" media="screen">
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Pi-Alikes</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
     body {
       behavior: url('/theme/images/menu/csshover.htc');
       font-size: 100%;
     }
-    </style> <link rel="stylesheet" href="/theme/css/ie-menus.css"/><![endif]-->
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
 
-<style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
 
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
 
-<script src="/theme/js/prototype-171-min.js"></script>
-<script src="/theme/js/gatepage.js"></script>
-
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
-
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
 </head>
+
 <body id="index" class="home">
 <div class='yui3-g-r'>
-<div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> 
-<section id="content" class="body">
-<h1 class="entry-title">Pi-Alikes</h1>
+  <div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> <!-- column 1 -->
+        
+<section id="content" class="body">    
+    <h1 class="entry-title">Pi-Alikes</h1>
 <div id="socialButtons">
-<span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/hardware.html"
-target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
-height="30" width="30"></a></span>
-<span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-title="Syndication feed"><img
-height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
-<span>&nbsp;<a href="/pages/hardware.html#disqus_thread"
-title="Leave a comment"><img
-src="/theme/images/comment.png" height="30" width="30"></a></span>
-<span>&nbsp;<a href="/print/pages/hardware.html"
-title="Print"><img
-src="/theme/images/print.png" height="30" width="30"></a></span>
-</div>
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/hardware.html"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/pages/hardware.html#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/pages/hardware.html"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    
+    
+
 <p><em>Let's take a look at some of the other low cost computers</em></p>
+
+
 <p><em><a class="cow-url" href="/pages/about.html#fred">Fred Sonnenwald</a>, July 2013</em></p>
+
 <div class="cow-contents"><h2 class="cow-heading">Contents</h2>
 <p><ul>
 <li><a href="#section-1.">1. Introduction</a></li>
@@ -70,24 +89,34 @@ src="/theme/images/print.png" height="30" width="30"></a></span>
 <li><a href="#section-7.">7. Conclusions</a></li>
 </ul></p></div>
 
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="intro"></a></p><a class="cow-section-anchor" name="section-1."></a><h1 class="cow-heading"><span class="cow-sec-number">1. </span>Introduction</h1>
+
 <p>The Pi is not the only device of its type. It's just the one that's recieved
 by far the most attention. What are some of the alternatives like? Perhaps
 they give us some clues about where the Pi will go next? Eben Upton said
 <a class="cow-url" href="http://www.tuxradar.com/content/%EF%BB%BFinterview-eben-upton">in
-a TuxRadar interview</a> &quot;I think it would be really sad, and probably fatal for
+a TuxRadar interview</a> &quot;I  think it would be really sad, and probably fatal for
 us, if we were still shipping the same Raspberry Pi in 2016, say&quot; (July 17th
 2013). What will the next generation of Pis look like?</p>
+
 <p>We've collected 6 other similar devices to look at. These are the APC 8750,
 BeagleBone Black, Cubieboard, DreamPlug, MK802, and TonidoPlug. They are
 based on similar hardware specifications and have in general similar
 specifications. We've looked at what's involved with getting them up and
 running and how they compare in a series of direct benchmarks.</p>
+
 <p><b>See also</b> our post on <a class="cow-non-existant-url" href="/posts/2013/12/01/cubieboard2/">the Cubie 2</a>, a
 worthy sucessor to the Cubie reviewed here.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="hardware"></a></p><a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>Hardware</h1>
+
 <p>First, the devices we've got in some more detail.</p>
+
 <table>
 <tr><td> <b>System</b> </td><td> <b>CPU</b> </td><td> <b>RAM</b> </td><td> <b>Power Consumption (Nominal /Max)</b> </td><td> <b>Cost (MSRP)</b> </td><td> <b>Original OS (Installed OS)</b> </td><td> <b>I/O</b> </td></tr>
 <tr><td> APC 8750 </td><td> VIA 800 MHz ARMv6, VFPv2 </td><td> 512 MB DDR3 </td><td> 4W/13.5W </td><td> $49.00 </td><td> Android 2.3 (Apricot R3 Debian 7.0) </td><td> HDMI, VGA, USB, Audio I/O, Ethernet </td></tr>
@@ -99,6 +128,7 @@ worthy sucessor to the Cubie reviewed here.</p>
 <tr><td> Pi Model A </td><td> Broadcom 700 MHz ARMv6, VFPv2 </td><td> 256 MB DDR2 </td><td> 2.5W </td><td> $25.00 </td><td> Raspbian Debian 7.0 </td><td> HDMI, RCA, Audio, GPIO, USB </td></tr>
 <tr><td> TonidoPlug2 </td><td> Kirkwood 800 MHz ARMv5 </td><td> 512 MB DDR3 </td><td> 5W/13W </td><td> $119.00 </td><td> Debian 6.0 </td><td> Ethernet, Wifi, USB, SATA </td></tr>
 </table>
+
 <p>All of them are ARM powered and generally have at least 512 MB of RAM. The
 one exception is the Model A Raspberry Pi with only 256 MB. Costs are
 all pretty similar too, except for the more expensive DreamPlug and TonidoPlug.
@@ -106,10 +136,14 @@ Power consumption, OS, also similar. The biggest differences are in the
 I/O ports &mdash; USB, Audio, Ethernet, GPIO, etc. &mdash; and surely has a direct
 impact on what the devices can be used for.</p>
 
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="setup"></a></p><a class="cow-section-anchor" name="section-3."></a><h1 class="cow-heading"><span class="cow-sec-number">3. </span>Initial impressions and setup</h1>
+
 <p>We'll start with a series of short introductions and starting points for each
 device, and how we got up and running with them. Here's what look like (click
 for larger images):</p>
+
 <table>
 <tr><td>
 <p><a class="cow-url" href="/pages/images/hardware/apc8750.jpg"><img class="cow-img" src="/pages/images/hardware/thumbs/apc8750.jpg" alt="APC 8750" width="150" height="93"></a></p>
@@ -149,19 +183,25 @@ for larger images):</p>
 </td></tr>
 </table>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="apc"></a></p><a class="cow-section-anchor" name="section-3.1."></a><h2 class="cow-heading"><span class="cow-sec-number">3.1. </span>APC 8750</h2>
+
 <p>The first impression you get of the APC 8750 is that it is big and clunky.
 It's a big fat board with a big fat power brick to go along with it. But it
 does some good things with that space &mdash; <a class="cow-url" href="http://www.livememe.com/ib3d6ip">Ports. Ports everywhere.</a> There's VGA output for old screens and enough USB
 ports so that you won't need a hub. There's also a proper power button on
 the circuit board. It's also ATX compatibile meaning there's a slew of cases
-out there it will fit in, even if they're going to bigger than necessary.</p>
+out there it will fit in, even if they're going to  bigger than necessary.</p>
+
 <p>While the APC 8750 ships with Android it does run Linux, and in this case
 it's actually Raspbian, the Raspberry Pi distribution. Start writing the
 <a class="cow-url" href="http://www.raspbian.org/ApricotImages">image</a> to an microSD card and then
 have a tea, because the image is a full 2 GB. It really needs to be resized
 to larger even after being written. I ran out of space running apt updates
 because I didn't the first time.</p>
+
 <p>After booting system response is relatively snappy. It doesn't stick out as
 &quot;wow that's fast&quot; but it doesns't make me cringe either. The system feels
 very average to me, which I think is the best you can expect from these
@@ -170,11 +210,16 @@ only issue I'm aware of is an apparent bug that keeps the system from
 booting if there's no monitor attached. That cuts down on a lot of use
 cases for a low power system. There also aren't any sort of GPIO headers
 so there's very little fun to be had from electronics experiments.</p>
+
 <p>Ultimately I see the system as a desktop replacement for scenarios where you
 don't need the power of a proper desktop. A PC that sits in the kitchen
 playing music is how I would place it.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="bbb"></a></p><a class="cow-section-anchor" name="section-3.2."></a><h2 class="cow-heading"><span class="cow-sec-number">3.2. </span>BeagleBone Black</h2>
+
 <p>About the size of a Pi, the BeagleBone Black is a hacker's board, pure and
 simple. Primary evidence of this comes in the guise of more GPIO pins than
 one can conviently shake a stick at. More evidence comes along as you get up
@@ -185,11 +230,13 @@ The install approach is somewhat different. Rather than just writing a dist
 image, a script formats the card and extracts a system image archive. This
 means you get to avoid resizing partitions, even if it feels less
 straight forward.</p>
+
 <p>To boot off the SD card there's a little button by the slot that you need to
 hold down. Unfortunately, this wasn't obvious at first, so I spent some time
 wondering what was going on until I figured that out. An &quot;oops&quot; moment there.
 Apparently this can be fixed so that the SD card is the default boot location
 with a uBoot flash. More system hacking.</p>
+
 <p>Once the system boots, you're in a console. A script is provided to apt-get
 install LXDE to get up and running with a GUI. Ethernet works right off the
 bat and so the install was relatively quick and painless. Overall I felt the
@@ -200,8 +247,9 @@ helped with the two system lock ups I experienced, both of which occurred on
 the same imgur page &mdash; in two different browsers. All of this adds to the
 feeling that it's a hackers system. You'd need to be an incredibly patient
 child to do anything.</p>
+
 <p>On the other hand the hardware is pretty respectable, although the close
-placement of the micro HDMI and USB port meant for me the connectors were
+placement of the micro HDMI and USB port meant for me the connectors were 
 pushing each other apart. There's no 1/8&quot; audio, but there is sound on the
 HDMI. The comprehensive LEDs (Power, CPU, SD, and MMC activity) and buttons
 on the board are a nice touch. The large number of GPIO pins also points it
@@ -210,13 +258,18 @@ choice for a project, but I would never have gotten it &quot;just because&quot;.
 simply too much work to setup. At this point I think I'd need something
 really specific in mind to buy one.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="cubie"></a></p><a class="cow-section-anchor" name="section-3.3."></a><h2 class="cow-heading"><span class="cow-sec-number">3.3. </span>Cubieboard</h2>
+
 <p>The Cubieboard is just a little bit bigger than a Pi, and for taking up a
 similar amount of space, they've jammed a whole lot of stuff in. Similar to
 the BeagleBone there are a lot of expansion pins, but there's also audio
 in/out, SATA, IR... It's impressive. The board I've got came in what's called
 &quot;rich packaging&quot; which includes some nice extras like a cardboard case, SATA
 power cable, and a debugging serial cable.</p>
+
 <p>Getting up and going is quick with the default Android install and runs well.
 There are a variety of
 <a class="cow-url" href="http://linux-sunxi.org/Install_Ubuntu_Linux_for_Cubieboard">Ubuntu</a>
@@ -225,6 +278,7 @@ and installed. The image size is large, but comes with pretty much everything
 installed. Apparently
 <a class="cow-url" href="http://cubieboard.org/2012/11/15/install-ubuntu-with-berryboot/">Berryboot</a>
 makes more distributions available, but I haven't tested this.</p>
+
 <p>Usable performance is again average, and there's plenty of free memory after
 the system finishes booting into LXDE. A nice feature is that the board can
 properly turn off from a &quot;sudo poweroff&quot; command and then has a power button
@@ -233,6 +287,7 @@ making it easy to get at everything, although like the Pi it's all along the
 different edges. This can be annoying if you want to tidy it away. As a plus
 power and ethernet are on the same side so if that's all you need it is tidy.
 (They're on opposite sides on the Pi.)</p>
+
 <p>The absolute number one thing going for this board though? One word: NAS. The
 onboard SATA gives you scope to do a lot more than normal. I think it'd be
 worth it just for that. I also think the infrared port could be a lot of fun,
@@ -241,20 +296,26 @@ these extras enough to really justify the extra price? The board still is
 still a little bit hacky. More than the Pi, less than the BeagleBoard. It's
 a really interesting system with multiple potential uses.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="dreamplug"></a></p><a class="cow-section-anchor" name="section-3.4."></a><h2 class="cow-heading"><span class="cow-sec-number">3.4. </span>DreamPlug</h2>
+
 <p>The DreamPlug is polished &mdash; at least on the outside. It's router sized and
 is cased similarly, although it actually feels more robust than a typical
-router. It's an solid, impressive feel. Unlike a router the DreamPlug
+router. It's an solid, impressive feel. Unlike a router the DreamPlug 
 is filled with lots of I/O: SD, eSATA, optical S/PDIF out &amp; 1/8&quot; jacks, USB,
 and the crown jewel I think, dual gigabit ethernet ports. All of this
 makes it essentially a low power server.</p>
+
 <p>Unlike the rest of the devices, the DreamPlug we've got ships with a proper
 version of Debian 6.0 Squeeze, which means out of the box we've only got to
 concern ourselves with logging in before we can start doing stuff. No extra
 writing to SD card, although that can be done if you want. Unfortunately,
 logging in can be a bit of a trick &mdash; there's no display after all. The first
-time I turned it on I couldn't work out what was going on. It was necessary to
+time I turned it on I couldn't work out what was going on. It was necessary to 
 <a class="cow-url" href="http://dreamplug.googlecode.com/files/DreamPlug-User%20Guide_US_v1.2-Aug-28-2012.pdf">connect the little JTAG USB&lt;-&gt;serial adapter</a> to see what was happening.</p>
+
 <p>Some fun and games with
 <a class="cow-url" href="https://alioth.debian.org/projects/minicom/">minicom</a>, a serial terminal
 emulator, and we're in business. The default setup configures the onboard
@@ -267,6 +328,7 @@ you can find solutions on the <a class="cow-url" href="http://ubuntuforums.org/"
 <a class="cow-url" href="http://www.linuxquestions.org/">LinuxQuestions</a>. The catch is you'll need
 to be compentent with the command line or at least be willing to learn to
 get things done.</p>
+
 <p>Once you surmount that little command line hurdle though, you're in business
 with something you can really use. The system has a snappy response and
 there's a site, <a class="cow-url" href="http://www.spinifex.com.au/plugs/dplugintro.html">Spinifex</a>,
@@ -278,7 +340,11 @@ to run some more major services, like a proper file server. (Yes, you can do
 this with some OpenWRT routers, but I would not consider 2 MB/s to be good
 for a file server.)</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="minipc"></a></p><a class="cow-section-anchor" name="section-3.5."></a><h2 class="cow-heading"><span class="cow-sec-number">3.5. </span>MK802+ Mini PC</h2>
+
 <p>Immediately, the MK802+ Mini PC has one thing going for it. It's size. It's
 an order of magnitude smaller than any of the other systems we're looking at
 here and it's in a case to boot. That makes it devilishly easy to transport.
@@ -288,12 +354,14 @@ However, it is also armed with a microSD card slot which with the help of
 standard Ubuntu Linux and derivatives. Just write the image to a card, pop it
 in to the slot, and it turns the MK802 into something more directly
 comparable with the other systems.</p>
+
 <p>I've loaded up the Lubuntu 1GB 1080p image and everything I've tested has
 worked out of the box. I originally tried the Ubuntu image but found it to be
 pretty much unusably slow. Really slow and a DNS resolution bug which would
 need to be manually fixed. Lubuntu manages OK but it's more just average
 slow. I suspect most of this slow down is due to running regular desktop
 software, while in comparison the Pi runs a more stripped down system.</p>
+
 <p>Hardware wise, having only 1 USB port is a bit annoying as you really need a
 hub to get things up and running normally. This goes right along with the
 special AC adapter needed to power it. Fortunately, the onboard Wifi is a
@@ -301,17 +369,23 @@ redeeming feature in this respect meaning that there aren't any more extra
 cables to deal with. Unfortunately though the onboard wifi seems to cap out at
 about 50 KB/s. I had this problem under the original Android as well. That
 might just be a poor internal antenna though as I'm in the basement here.</p>
+
 <p>Lubuntu comes with sshd enabled so after setting up Wifi the first time you
 can actually get away with completely remote access. That along with its case
 means you can more or less leave it plugged into a wall pretty much anywhere
 and have a box for running small stuff on. I think it'd be perfect for running
 irssi (IRC client) inside of a screen.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="modelb"></a></p><a class="cow-section-anchor" name="section-3.6."></a><h2 class="cow-heading"><span class="cow-sec-number">3.6. </span>Pi Model B</h2>
+
 <p>To be honest, it's a bit late in the game to have first impressions of the
 Raspberry Pi. I first got mine over a year ago, and so much has changed in
 that time as well. The Model B we have here is a Revision 2, while I started
 out on the Revision 1. Still, a general overview is in order.</p>
+
 <p>The Pi, while not the oldest of the devices here, was the game changer,
 drawing <a class="cow-url" href="http://www.bbc.co.uk/search/?q=raspberry%20pi">media attention</a>.
 There have been SheevaPlugs and BeagleBoards (and other things like
@@ -321,6 +395,7 @@ powered ARM computers. It did it well enough (and here cheap counts towards
 well) that it brought this sort of computing to mainstream attention. The Pi
 brings to life a large community, filled with people of all ages and
 specialties, even those less technical, and makes computing accessible.</p>
+
 <p>The Pi is also an order of magnitude easier to get hold of. Here in the UK I
 could walk into Maplin and walk out with a Pi in my hand. Then it's a simple
 matter to write the <a class="cow-url" href="http://www.raspberrypi.org/downloads">SD card image</a> and
@@ -329,6 +404,7 @@ hugely better than these others. The biggest difference is the composite
 video out (RCA). That's allows for connection to old TVs, or more
 interestingly <a class="cow-url" href="http://dx.com/s/reversing+monitor">a cheap reversing
 monitor</a>.</p>
+
 <p>And you know what? The hardware only got better with the Revision 2. Mounting
 holes to make it easier to use in projects. More RAM for better performance.
 Changed around GPIO. My personal favorite: the removed fuses on the USB ports.
@@ -336,24 +412,31 @@ There are USB devices that simply won't work with a Revision 1 that will with
 the Revision 2 because of this. In general when using the Revision 2
 everything feels better.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="modela"></a></p><a class="cow-section-anchor" name="section-3.7."></a><h2 class="cow-heading"><span class="cow-sec-number">3.7. </span>Pi Model A</h2>
+
 <p>The Model A was always designed to be a stripped down Model B. The same PCB,
 but with fewer components on it, making it cheaper. No ethernet, only one USB
 port, and less RAM. How much worse could it be? In terms of setup it's exactly
 the same. It's a little glimpse of the Apple ecosystem in a sense, all Pis are
 fundamentally the same hardware so we can just swap SD cards around &mdash; just
 like all Macs run OS X.</p>
+
 <p>You would think that the lack of ethernet and USB doesn't have an impact, and
 to some extent that's true. Usability of Raspbian is pretty much the same. In
 that sense it's no worse than being on a Revision 1 Model B. For me though I
 think it's summed up in two words: &quot;USB Hub&quot;. Mouse <em>and</em> keyboard? Hub. Want
 internet too? A USB ethernet or Wifi adapter. They're not insurmountable.
 Linux and Wifi is in a much better state than it was 5 years ago.</p>
+
 <p>I think that if you're going to use the Model A like you'd use a Model B, you
 should just get the Model B. The &quot;extra&quot; cost comes out of money you'd end up
 spending on USB accessories. It's all around just a better experience. The
 Model A still has a place though. It's the more hardware project oriented
 version of the Pi.</p>
+
 <p>Like the Model B Revision 2, the polyfuses are removed so the Model A can be
 be back powered through the USB port. Fewer components means overall lower
 power consumption for when on batteries. This can be lowered even further by
@@ -362,7 +445,11 @@ power comsumption makes it ideal and the lack of USB and ethernet doesn't
 mean much. Robotics, weather balloons &mdash; plenty of fun things to do. Locally
 there's a guy using one for <a class="cow-url" href="http://xkcd.com/442/">kite photography</a>.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="tonido"></a></p><a class="cow-section-anchor" name="section-3.8."></a><h2 class="cow-heading"><span class="cow-sec-number">3.8. </span>TonidoPlug2</h2>
+
 <p>The TonidoPlug is an interesting bit of hardware for testing because it's
 really designed as appliance instead of a general purpose computing device.
 It's a NAS device. The idea is that you pop in an internal 2.5&quot; SATA disk or
@@ -370,17 +457,20 @@ connect a USB hard drive and serve the files off it. As a result all it's got
 is the SATA bay, ethernet port, wifi, and a USB port. There's no debug
 interface &mdash; it's a purpose built <a class="cow-url" href="http://en.wikipedia.org/wiki/SheevaPlug">SheevaPlug</a>, which puts it in the same family of devices as the DreamPlug as
 above.</p>
+
 <p>The TonidoPlug ships with a stripped down Debian Squeeze with special
 TonidoPlug software on top of it for management. Remember, think appliance.
-That's not to say that you can't mess around with it, it's just not really
+That's not to say that you can't mess around with it, it's just not really 
 designed for it.e onboard 512 MB flash doesn't leave much space. Fortunately
 it can booted off of other devices so I've set it up to run off the internal
 <a class="cow-url" href="http://www.tonido.com/communitywiki/doku.php?id=advanceduses:usbboot">SATA disk</a>.</p>
+
 <p>Also like the DreamPlug the TonidoPlug is something of an excercise in Linux
 hacking. The directions for setting up the SATA disk are straight forward, but
 I did hit a few minor issues along the way which confirmed it for me. The
 TonidoPlug is something that generally &quot;just works&quot; but that you can mess
 around with if you want to, but don't have to. That really gives you options.</p>
+
 <p>The TonidoPlug is very simple and it's in a pretty slick case. You can move
 it easily but I'm not sure why you'd want to. The power is a mains input
 which means it's tied down, but it also removes the complexity of an adapter
@@ -388,12 +478,17 @@ too. In the end, I think I see the TonidoPlug best used for exactly what it
 says on the tin &mdash; serving files. You just get a bit more control. Want to
 do it with Apache? Can do. Samba? NFS? Anything with Linux can be done.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="benchmarks"></a></p><a class="cow-section-anchor" name="section-4."></a><h1 class="cow-heading"><span class="cow-sec-number">4. </span>Benchmarks</h1>
+
 <p>I will start by saying that these are not comprehensive benchmarks, but are
 instead <em>indicative</em> benchmarks. There are here to give an overview of the
 potential performance of each device and aid in a less subjective comparison.
 They will also help us understand how the different hardware of each device
 impacts on performance so that we can evaluate future devices as well.</p>
+
 <p>Six different benchmarks have been carried out, which break down into three
 categories. Input/output performance, theoretical performance, and practical
 performance. For I/O, <a class="cow-url" href="http://iperf.sourceforge.net/">iperf</a> has been used
@@ -403,16 +498,23 @@ and read performance. Theoretical performance was measured through the
 classic <a class="cow-url" href="http://en.wikipedia.org/wiki/Dhrystone">Dhrystone</a> integer and
 <a class="cow-url" href="http://en.wikipedia.org/wiki/Whetstone_%28benchmark%29">Whetstone</a> floating
 point tests. The practical tests were a <a class="cow-url" href="http://www.bzip.org/">bzip2</a>
-compression of a 54 MB wav file the MP3 encoding of it using
+compression of a 54 MB wav file  the MP3 encoding of it using
 <a class="cow-url" href="http://lame.sourceforge.net/">lame</a>.</p>
+
 <p>Each benchmark has been run 3 times. Mean results are plotted below, with the
 error bars showing the minimum and maximum value. The script we used to run
 the benchmarks is available online in our
 <a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/hardware/bin/dobm.sh">git repository</a>.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="io"></a></p><a class="cow-section-anchor" name="section-4.1."></a><h2 class="cow-heading"><span class="cow-sec-number">4.1. </span>Input/Output performance</h2>
+
 <p>For all I/O tests, higher values indicate better performance.</p>
+
 <p><img class="cow-img" src="/pages/images/hardware/results/network_graph.jpg" alt="Networking" width="600" height="320"></p>
+
 <p>Networking performance quite nicely breaks down into three groups. We see top
 performance from the DreamPlug and TonidoPlug with their gigabit ethernet.
 The APC 8750, BeagleBone, Cubieboard, and Pi Model B all have a pretty good
@@ -422,36 +524,48 @@ have onboard ethernet, used a USB 1.1 ethernet adapter I had lying around.
 Performance pretty much topped out at the theoretical maximum there of 11
 mbits. The MK802 with its Wifi is the bottom performer. This echoes the
 comments I made earlier about its poor performance during setup.</p>
+
 <p><img class="cow-img" src="/pages/images/hardware/results/disk_cache.jpg" alt="Disk Cache" width="600" height="320"></p>
+
 <p>Disk cache is a little bit mis-leading. This is more accurately an effective
 test of memory throughput. Every time you read from the disk it's stored in
 memory in case the same disk read is requested again. In that case it's read
 from the faster memory cache instead of re-reading it off the disk.</p>
+
 <p>The disk cache results are a bit all over the board. It would be nice if they
 conviently matched up with memory speed or CPU, but they don't. The error
 bars are almost always pretty small as well indicating pretty consistent
 performance. In general these speeds are all so quick (greater than 120 MB/s)
 that the cache speed exceeds hard disk speeds and so the caching will have a
 positve impact.</p>
+
 <p>My main worry here is the signifcantly lower cache speed of the Cubieboard.
 This indicates that cacheing will not have much of an impact. For certain use
 cases where there are many repeated small reads, such as serving web pages,
 this is less than ideal.</p>
+
 <p><img class="cow-img" src="/pages/images/hardware/results/disk_read.jpg" alt="Disk Read" width="600" height="320"></p>
+
 <p>The Cubieboard, DreamPlug, and TonidoPlug were all benchmarked with a SATA
 hard disk, and consequently have significantly higher read speeds. The
 performance of the other devices is about as expected and consistent with
 mid-range flash memory. Obviously, better SD cards (e.g. Class 10) where
 applicable will speed things up, but that comes with increased costs. A USB
 hard drive could speed things up too, but with the same caveat.</p>
+
 <p>Write performance, which we have not benchmarked, will always be slower than
 read performance. This is particularly true for flash memory like SD cards.
 In many cases this won't be a problem as data will written to the file system
 cache and be stored in memory, then gradually written to disk while other
 tasks are carried out.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="theoretical"></a></p><a class="cow-section-anchor" name="section-4.2."></a><h2 class="cow-heading"><span class="cow-sec-number">4.2. </span>Theoretical performance</h2>
+
 <p>Higher MIPS and MFLOPS values indicate greater performance.</p>
+
 <p>MIPS, or million instructions per second, provides a rough indicator of
 what I think of as base system performance. Most regular program functions
 take advantage of only integer math operations, such as pointers in C
@@ -459,18 +573,23 @@ programs, and so the Dhrystone helps us evaluate what many system operations
 will perform like. MFLOPS, or million floating point operations per second,
 gives an evaluation of a processor's performance in executing the more
 complex mathmatical operations we use, for example, in most games.</p>
+
 <p><img class="cow-img" src="/pages/images/hardware/results/dhry_mips.jpg" alt="Integer Math" width="600" height="320"></p>
+
 <p>For integer math, we can quite clearly see the impact of processer
 architecture and clock speed. The TonidoPlug ranks rock bottom as an ARMv5
-chip, despite having a higher clock than a Raspberry Pi with its ARMv6 -
+chip, despite having a higher clock than a Raspberry Pi with its ARMv6 - 
 800 vs 700 MHz. The DreamPlug uses the same ARMv5 and just about matches the
 Pi, but at a 70% faster clock speed of 1.2 GHz.</p>
+
 <p>The APC uses the same ARMv6 as the Pi, but at 800 MHz just out performs it.
 The dynamic overclocking of the Pi, if enabled, should easily match or exceed
 this performance it. The real winners here though are the ARMv7 based
 systems &mdash; the BeagleBone Black, Cubieboard, and MK802 &mdash; with performance
 more than double the Pi, despite only a 1 GHz clock speed.</p>
+
 <p><img class="cow-img" src="/pages/images/hardware/results/whet_mflops.jpg" alt="Floating Point Math" width="600" height="320"></p>
+
 <p>In contrast however, it is interesting to see how the ARMv7 chips perform in
 terms of floating point performance. All of them integrate NEON
 <a class="cow-url" href="http://en.wikipedia.org/wiki/Floating-point_unit">FPUs</a>, or floating
@@ -479,12 +598,14 @@ integrated into, the main CPU. They aid in carrying out floating point math
 as a specialized sub-processor. The NEON FPU is designed for carrying out
 vector mathmatics, which are typically associated with multimedia functions
 such as H.264 decoding.</p>
+
 <p>The benchmark results show a worse performance for the NEON FPU than the
 ARMv6 based systems &mdash; the APC and Pi &mdash; which are armed with more generic
 previous generation VFPv2 FPUS. The lower performance is probably a result
 of the fact that the Whetstone test is a generic benchmark. It's not
 optimized for vector mathmatics and takes no real advantage of the potential
 parallelization that the NEON FPU can add.</p>
+
 <p>Unfortuantely, the lack of vectorization is typical of most software running
 under Linux which suggests that for most cases of pure processing that the
 ARMv6 systems are the way to go. Based on the in performance between the APC
@@ -494,20 +615,28 @@ my desktop, it still represents the best available in terms of these low-cost
 computing devices. The ARMv5 Tonido and DreamPlug systems have no FPU and
 clearly have lower performance.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="Practical"></a></p><a class="cow-section-anchor" name="section-4.3."></a><h2 class="cow-heading"><span class="cow-sec-number">4.3. </span>Practical performance</h2>
+
 <p>Lower times indicate greater performance.</p>
+
 <p>These two benchmarks, bzip2 compression and MP3 encoding, have been run to
 give a more practical indication of relative performance through relatively
 common complex computational tasks. bzip2, as a lossless compression
 algorithm consists almost entirely of integer math and places load on memory
 and disk I/O.</p>
+
 <p>MP3 encoding is on the other hand a &quot;lossy&quot; compression technique. Not all
 of the data is retained, which allows for signficantly smaller file sizes.
 This is what can cause the distortions we hear in low quality MP3 recordings
 when compared to the original uncompressed audio file. MP3 encoding consists
 mostly of floating point arithmetic, such as Fast Fourier Transforms, and
 some load on memory.</p>
+
 <p><img class="cow-img" src="/pages/images/hardware/results/bzip2_min.jpg" alt="bzip2 Compression" width="600" height="320"></p>
+
 <p>In general bzip2 performance is pretty similar between devices. Everything
 performs on the same order of magnitude and in general looks to be pretty
 well linked to clock speed. The BeagleBone, Cubieboard, MK802, and DreamPlug
@@ -517,29 +646,38 @@ but in this case the older ARMv5 performs sligthly poorer. The Pi takes the
 longest to compress with its 700 MHz CPU, with the APC and TonidoPlug just
 ahead of it with slightly faster 800 MHz CPUs. The APC comes out just ahead
 though possibly due to it's newer ARMv6 architecture.</p>
+
 <p><img class="cow-img" src="/pages/images/hardware/results/lame_min.jpg" alt="MP3 Encoding" width="600" height="320"></p>
+
 <p>Variation in MP3 encoding performance as expected follows floating point
 performance, with the DreamPlug and TonidoPlug at rock bottom with their lack
 of FPU. The three NEON ARMv7 systems come in approximately second, with the
 ARMv6 systems coming in first.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="Thoughts"></a></p><a class="cow-section-anchor" name="section-4.4."></a><h2 class="cow-heading"><span class="cow-sec-number">4.4. </span>Some thoughts</h2>
+
 <p>What we've seen evidenced in the benchmarks are mostly architectural
 differences rather than fundamental differences between devices. Gigabit
 ethernet is of course faster, and so are hard drives. Faster CPUs go faster,
 and FPUs do indeed aid performance. The lackluster perforamnce of NEON is a
 bit of an upset. In general though there's been no real difference between
 devices.</p>
+
 <p>However, we can see some interesting performance differences by factoring in
 power consumption. (After all, CPU usuage usually is the greatest drain in
 power in these sorts of devices.) Bearing in mind that the power information
 presented here is theoretical, not measured, we can see some interesting
 things.</p>
+
 <ul>
 <li>The APC which performs better than the Pi due to its faster clock may not <span class="cow-escape">
 </span>really be that much better due to its higher power consumption. There's only <span class="cow-escape">
 </span>a 0.5 W difference from the Model B, the Model A draws 1.5 W less.</li>
 </ul>
+
 <ul>
 <li>The BeagleBone draws only 1 W, which the lowest of any of the devices. <span class="cow-escape">
 </span>For the same power you could have three BeagleBones or one CubieBoard or <span class="cow-escape">
@@ -547,16 +685,22 @@ things.</p>
 </span>capability for power use this makes much more sense.</li>
 </ul>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="media"></a></p><a class="cow-section-anchor" name="section-5."></a><h1 class="cow-heading"><span class="cow-sec-number">5. </span>Practical application &mdash; media player</h1>
+
 <p>Say we want to setup a low-cost low-power home media center. Can we do it
 with these devices? The answer is generally &quot;Yes&quot; &mdash; at least in part or to
 some extent. Let's take a look.</p>
+
 <p>First, about half of the devices come with Android, and with that comes
 access to <a class="cow-url" href="http://play.google.com">Google Play</a> which means there's a wide
 variety of easily available software for playing media. Combined with an HDMI
 out, this means you can be up and running with the APC 8750, Cubieboard,
 or MK802 in no time flat. The Cubieboard would even let you hook up a SATA
 disk direct for storing media. All of them stream video off YouTube too.</p>
+
 <p>Then there are the Plug devices which don't have any video out. The
 TonidoPlug as a device designed as fileserver includes a
 <a class="cow-url" href="http://en.wikipedia.org/wiki/Digital_Living_Network_Alliance">DLNA</a> server
@@ -568,11 +712,13 @@ out of the box. The audio out on the DreamPlug, which includes optical
 playing media, using something like <a class="cow-url" href="http://www.musicpd.org/">MPD</a> to
 remotely control it from a phone. Again, a hard drive can be direct
 connected to easily share media.</p>
+
 <p>For the Raspberry Pis, the <a class="cow-url" href="http://www.raspbmc.com/">Raspbmc</a> project
 with easy install brings XBMC, or Xbox Media Center, to the Pi, turning the
 Pi into pretty much a full fledged Media Center. It needs some additional
 storage to be usesful, a SMB share over the network or a USB drive, but it's
 pretty painless, easy, and works well.</p>
+
 <p>By far the trickiest device to setup a media center I think is the
 BeagleBone. Or at least, it doesn't appear to be straight forward which I
 get the feeling is typical for the BeagleBone. It looks like a partial
@@ -582,12 +728,17 @@ as a Google Summer of Code project, but I get the feeling it's incomplete.
 media player project available.
 <a class="cow-url" href="http://circuitco.com/support/index.php?title=Android#Android_On_The_BeagleBone_Black">Installing Android</a> may be the best bet, although there's no Google Play.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="nextgen"></a></p><a class="cow-section-anchor" name="section-6."></a><h1 class="cow-heading"><span class="cow-sec-number">6. </span>The Next Generation</h1>
+
 <p><em>These are the voyages...</em> Well, no, not really. More like next generation
 hardware. Based on the devices we've looked at here and perhaps a perusal
 of the cell phone market, we can make educated guesses of what the next
 generation of Raspberry Pi devices might look like &mdash; the Mark II, Revision
 3, Model C, whatever it will be called.</p>
+
 <p>First let's consider what's already available in terms of newer hardware.
 There's the <a class="cow-url" href="http://apc.io/products/rock/">APC Rock</a> which is based on a
 a newer ARMv7 CPU, similar to what we've seen in some of the devices we've
@@ -597,45 +748,56 @@ double RAM and a dual core CPU. The MK802 also at this point has
 the MK802IV. It features even more RAM &mdash; 2 GB &mdash; and a quad core CPU. As
 well as Bluetooth. These devices all still feature Android as the primary OS,
 but support other Linux variants.</p>
+
 <p>Those were just the devices directly related to the one's we've looked at
 there are others on the market as well, such as the
 <a class="cow-url" href="http://www.marsboard.com/">MarsBoard</a> and the
 <a class="cow-url" href="http://www.solid-run.com/cubox">CuBox</a>. These are ARMv7 devices with 1.2
 GHz and 800 MHz CPUs respectively and 1 GB of DDR3 each.</p>
+
 <p>Recent mid-range phones are shipping now dual core CPUs, like the
 <a class="cow-url" href="http://www.gsmarena.com/samsung_galaxy_ace_2_i8160-4559.php">Samsung Galaxy
 Ace 2</a> and the <a class="cow-url" href="http://www.gsmarena.com/nokia_lumia_520-5322.php">Nokia
-Lumia 520</a>, previously the purview of only the high-end phones like the
+Lumia 520</a>, previously the purview of only the high-end phones like the 
 <a class="cow-url" href="http://www.gsmarena.com/samsung_i9100_galaxy_s_ii-3621.php">Samsung Galaxy
 S2</a> and the <a class="cow-url" href="http://www.gsmarena.com/motorola_atrix_4g-3708.php">Motorola
 Atrix 4G</a> just two short years ago. High-end phones today are equipped with
 quad core CPUs.</p>
+
 <p>We can look at the availability and specification of devices and see, as
 always a general trend of decreasing cost for components of similar
 specification. How much will the costs have dropped in 3 years to meet Eben's
 2016? It's hard to say. Any device out then will probably have had to have
 been in development for a year or more. Based on what we see today though I
 think we can make a few reasonable guesses.</p>
+
 <ul>
 <li>Almost everything will impact system specifications, while GPIO remains <span class="cow-escape">
 </span>relatively unchanged. Arduino today is much the same it was 2 years ago.</li>
 </ul>
+
 <ul>
 <li>DDR3, and more of it. Memory is one of the most effective ways to make a <span class="cow-escape">
 </span>system better. Power requirements will be shrinking and we already see it <span class="cow-escape">
 </span>in many devices now.</li>
 </ul>
+
 <ul>
 <li>Dual core. I'm not sure about this one, but there's a trend. This may <span class="cow-escape">
 </span>really be for Pi, Round 3 (<em>Voyager</em>).</li>
 </ul>
+
 <ul>
 <li>On board flash memory. If costs are low enough it may be added. It's been <span class="cow-escape">
 </span>common on lots of the devices we've looked at here, and could be a boon for <span class="cow-escape">
 </span>educational programs.</li>
 </ul>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="conclusions"></a></p><a class="cow-section-anchor" name="section-7."></a><h1 class="cow-heading"><span class="cow-sec-number">7. </span>Conclusions</h1>
+
 <p>In some respects we're looking at very fundamentally equivalent systems. Our
 benchmarks show very similar performance, and that's quite clearly linked
 with hardware specification. What's more different is the effort involved
@@ -643,6 +805,7 @@ with system setup and the I/O ports, and the latter is probably most
 critical. That's what really determines the differences with what you can
 do. If you have a project in mind find the device that makes it easiest.
 There's probably not much all else different between them.</p>
+
 <p>If the I/O ports don't matter though (or even if in some cases they do), I'd
 personally recommend sticking with the Raspberry Pi. I would love dual
 ethernet, but I think I love the community around the Pi more.
@@ -653,8 +816,12 @@ loads of good projects you can do with a Pi. I keep hearing about them from
 I think is that the Pi was so much easier to approach than the other
 devices. Nothing else made me quite so excited. But hey, that's me &mdash; find
 something that works for you.</p>
+
 <p><b>Note!</b></p>
+
 <p>We've since reviewed the Cubieboard2!
 <a class="cow-url" href="/posts/2013/12/01/cubieboard2/ ">Check it out!</a></p>
+
 </section>
+
 </div>

@@ -1,50 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width = device-width">
-<title>Downloads and Resources</title>
-<link rel="stylesheet" href="/theme/css/main.css">
-<link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed"/>
-<link rel="stylesheet" href="/theme/css/gatepage.css">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<!--[if IE]><script src="/theme/js/html5shiv-googlecode-com-html5.js"></script><![endif]-->
-<!--[if lt IE 7]><style type="text/css" media="screen">
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Downloads and Resources</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
     body {
       behavior: url('/theme/images/menu/csshover.htc');
       font-size: 100%;
     }
-    </style> <link rel="stylesheet" href="/theme/css/ie-menus.css"/><![endif]-->
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
 
-<style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
 
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
 
-<script src="/theme/js/prototype-171-min.js"></script>
-<script src="/theme/js/gatepage.js"></script>
-
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
-<link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
-
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
 </head>
+
 <body id="index" class="home">
 <div class='yui3-g-r'>
-<div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> 
-<section id="content" class="body">
-<h1 class="entry-title">Downloads and Resources</h1>
+  <div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> <!-- column 1 -->
+        
+<section id="content" class="body">    
+    <h1 class="entry-title">Downloads and Resources</h1>
 <div id="socialButtons">
-<span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/download.html"
-target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
-height="30" width="30"></a></span>
-<span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-title="Syndication feed"><img
-height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
-<span>&nbsp;<a href="/pages/download.html#disqus_thread"
-title="Leave a comment"><img
-src="/theme/images/comment.png" height="30" width="30"></a></span>
-<span>&nbsp;<a href="/print/pages/download.html"
-title="Print"><img
-src="/theme/images/print.png" height="30" width="30"></a></span>
-</div>
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/download.html"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/pages/download.html#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/pages/download.html"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    
+    
+
 <div class="cow-contents"><h2 class="cow-heading">Contents</h2>
 <p><ul>
 <li><a href="#section-1.">1. Software and Source Code</a></li>
@@ -55,10 +71,14 @@ src="/theme/images/print.png" height="30" width="30"></a></span>
 <li><a href="#section-4.">4. Circuits: Calculators, Simulators, Diagrams</a></li>
 </ul></p></div>
 
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="code"></a></p><a class="cow-section-anchor" name="section-1."></a><h1 class="cow-heading"><span class="cow-sec-number">1. </span>Software and Source Code</h1>
+
 <p>The <a class="cow-url" href="http://www.raspberrypi.org/archives/tag/alex-bradbury">Raspbian
 maintainers</a> have been kind enough to include the <a class="cow-url" href="/pages/mopi.html">SimBaMon
 battery monitor</a> in their repository, so you can just do this:</p>
+
 <p><pre class="prettyprint lang-bash">
   sudo apt-get install simbamond
 </pre>Packaged versions of some of the other projects (and snapshot development
@@ -67,122 +87,160 @@ versions of SimBaMon) are available from
 PPA<span class="cow-footnote" name="footnote1"><sup><a href="#footnote1">1</a></sup></span>
 set up to be suitable for Raspbian). See <a class="cow-url" href="#installing">the next section</a> for
 installation instructions.</p>
+
 <p>Source code for all the projects is available on the <a class="cow-url" href="http://github.com/">Git
 Hub</a> open source hosting site. The project is called
 <a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics">Pi-Tronics</a>. To get started
 install git and clone the master branch:</p>
+
 <p><pre class="prettyprint lang-bash">
 git clone git://github.com/hamishcunningham/pi-tronics.git
 </pre>This will create a directory <tt>pi-tronics</tt> on your local system. See the file
 <tt>README.txt</tt> in that directory for details of what is where.</p>
+
 <p>You can also browse the code on-line &mdash; here's the
 <a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/basics/bin/flood-alarm.sh">flood alarm script</a>, for example.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="installing"></a></p><a class="cow-section-anchor" name="section-1.1."></a><h2 class="cow-heading"><span class="cow-sec-number">1.1. </span>Installing Pi-GATE Software</h2>
+
 <p>To install from our Ubuntu personal archive:</p>
+
 <p><b>1.</b> Add this line to /etc/apt/sources.list:</p>
+
 <p><pre class="prettyprint lang-bash">
 deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main
 </pre>You can use a text editor (e.g. nano) to do this, or paste this one-liner into
 a terminal prompt:</p>
+
 <p><pre class="prettyprint lang-bash">
 echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main |sudo tee -a /etc/apt/sources.list
 </pre><b>2.</b> Import the <a class="cow-url" href="http://www.gnupg.org/">GPG</a> encryption key from Ubuntu so
 that the Pi can verify the package's validity:</p>
+
 <p><pre class="prettyprint lang-bash">
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com --recv-key 6C12C1CF
 </pre><b>3.</b> Update your list of available packages (this may take a couple of
 minutes):</p>
+
 <p><pre class="prettyprint lang-bash">
   sudo apt-get update
 </pre><b>4.</b> Install the package (where &quot;package-name&quot; is one of our packages, e.g.
 &quot;<a class="cow-url" href="/pages/mopi.html#simbamon">simbamond</a>&quot; for <a class="cow-url" href="/pages/mopi.html">the battery monitor</a>):</p>
+
 <p><pre class="prettyprint lang-bash">
   sudo apt-get install package-name
 </pre>And that's it!</p>
+
 <p>Note: the above gets you the most recent stable release; if you want to live
 on the edge, you can get more recent experimental builds by adding the
 snapshot PPA to your sources list, e.g.:</p>
+
 <p><pre class="prettyprint lang-bash">
 echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate-snapshots/ubuntu precise main |sudo tee -a /etc/apt/sources.list
 </pre><a name="wiringpi"></a></p><a class="cow-section-anchor" name="section-1.2."></a><h2 class="cow-heading"><span class="cow-sec-number">1.2. </span>Installing WiringPi for Raspbian</h2>
+
 <p>On Raspbian, you can install <a class="cow-url" href="http://wiringpi.com/">WiringPi</a> from a .deb
 file like this:</p>
+
 <p><pre class="prettyprint lang-bash">
   wget https://raw.github.com/hamishcunningham/wiringpi/master/package/2.13/unstable/wiringpi_2.13_armhf.deb
   sudo dpkg -i ./wiringpi_2.13_armhf.deb
 </pre>See our page <a class="cow-url" href="/pages/package.html">on Pi software packaging</a> for more details.</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="pi-books"></a></p><a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>Books and Sites about the Pi</h1>
+
 <p>Books about the Pi are proliferating almost as rapidly as the community of Pi
 aficionados.<span class="cow-footnote" name="footnote2"><sup><a href="#footnote2">2</a></sup></span> These are three of my favourites:</p>
+
 <ul>
 <li><a class="cow-url" href="http://www.amazon.co.uk/Raspberry-User-Guide-Eben-Upton/dp/111846446X/">Eben Upton and Gareth Halfacree's</a> book <em>The Raspberry Pi User Guide</em> is
-definitely the first place to start. Required reading.</li>
+  definitely the first place to start. Required reading.</li>
 <li><a class="cow-url" href="http://www.amazon.co.uk/Raspberry-Pi-Manual-practical-revolutionary/dp/0857332953/">Gray Girling's Haynes manual</a> is my all-time favourite so far, perhaps
-because I remember my brother using these manuals to figure out how to fix
-his <a class="cow-url" href="http://en.wikipedia.org/wiki/Triumph_Herald">Triumph Herald</a> way back
-when. It also has great graphics and an excellent mix of hardware and
-software, plus some philosophy and history to boot. I love it.</li>
+  because I remember my brother using these manuals to figure out how to fix
+  his <a class="cow-url" href="http://en.wikipedia.org/wiki/Triumph_Herald">Triumph Herald</a> way back
+  when. It also has great graphics and an excellent mix of hardware and
+  software, plus some philosophy and history to boot. I love it.</li>
 <li>Slightly off the beaten track, but a great fit for the Pi's mischievous
-implications, I recommend
-<a class="cow-url" href="http://www.amazon.co.uk/Raspberry-Secret-Agents-Stefan-Sjogelid/dp/1849695784/">Stefan Sjogelid's</a> <em>Raspberry Pi for Secret Agents</em>. If the NSA and GCHQ are
-going to <a class="cow-url" href="http://www.guardian.co.uk/world/prism">spy on every citizen</a> for
-no good reason shouldn't we spy on them in return?!</li>
+  implications, I recommend
+  <a class="cow-url" href="http://www.amazon.co.uk/Raspberry-Secret-Agents-Stefan-Sjogelid/dp/1849695784/">Stefan Sjogelid's</a> <em>Raspberry Pi for Secret Agents</em>. If the NSA and GCHQ are
+  going to <a class="cow-url" href="http://www.guardian.co.uk/world/prism">spy on every citizen</a> for
+  no good reason shouldn't we spy on them in return?!</li>
 </ul>
+
 <p>If it's your birthday, ask for a book token &mdash; there's more to drool over in
 the next section.</p>
+
 <p>There are also lots of <b>great websites</b> about the Pi &mdash; some that stand out:</p>
+
 <ul>
 <li>The <a class="cow-url" href="http://www.raspberrypi.org/">Pi foundation's site</a> is the place to
-start: lots of good reference material, and there's always something new to
-read on the blog. For discussion and advice,
-<a class="cow-url" href="http://www.raspberrypi.org/phpBB3/">the community forums</a> are excellent.</li>
+  start: lots of good reference material, and there's always something new to
+  read on the blog. For discussion and advice,
+  <a class="cow-url" href="http://www.raspberrypi.org/phpBB3/">the community forums</a> are excellent.</li>
 <li><a class="cow-url" href="http://www.cl.cam.ac.uk/">Cambridge Univerity Computer Lab</a> is where the
-original idea for the Pi came from, and they host
-<a class="cow-url" href="http://www.cl.cam.ac.uk/projects/raspberrypi/">a great set of Pi
-materials</a> including
-<a class="cow-url" href="http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/">these tutorials</a>.</li>
+  original idea for the Pi came from, and they host
+  <a class="cow-url" href="http://www.cl.cam.ac.uk/projects/raspberrypi/">a great set of Pi
+  materials</a> including
+  <a class="cow-url" href="http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/">these tutorials</a>.</li>
 <li><a class="cow-url" href="http://www.themagpi.com/">The MagPi</a> monthly eZine is well worth a look,
-as is the <a class="cow-url" href="http://piweekly.net/">Pi Weekly</a> email news digest.</li>
+  as is the <a class="cow-url" href="http://piweekly.net/">Pi Weekly</a> email news digest.</li>
 <li><a class="cow-url" href="http://wiringpi.com">The WiringPi library site</a> is also well worth a
-visit.</li>
+  visit.</li>
 </ul>
+
 <p>There are oodles and oodles of Pi hobby sites &mdash; really too many to make a
 list these days!</p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 <p><a name="electronics-resources"></a></p><a class="cow-section-anchor" name="section-3."></a><h1 class="cow-heading"><span class="cow-sec-number">3. </span>Electronics Books and Sites</h1>
+
 <p>For introductions to basic circuit building, breadboarding or soldering, and
 to hacker electronics in general, see for example:</p>
+
 <ul>
 <li><a class="cow-url" href="http://www.simonmonk.org/">Simon Monk's</a> 2013 book
-<a class="cow-url" href="http://www.simonmonk.org/?page_id=74">Hacking Electronics</a>, which achieves
-a nice balance between explaining relevant theory and quickly getting on
-with practical stuff right from the start. Although some of the chapters are
-specific to the Arduino<span class="cow-footnote" name="footnote3"><sup><a href="#footnote3">3</a></sup></span> there's a lot of generally useful stuff too, including
-introductions to breadboarding, stripboard, soldering and the like. A good
-book if you're in a hurry.</li>
+  <a class="cow-url" href="http://www.simonmonk.org/?page_id=74">Hacking Electronics</a>, which achieves
+  a nice balance between explaining relevant theory and quickly getting on
+  with practical stuff right from the start. Although some of the chapters are
+  specific to the Arduino<span class="cow-footnote" name="footnote3"><sup><a href="#footnote3">3</a></sup></span> there's a lot of generally useful stuff too, including
+  introductions to breadboarding, stripboard, soldering and the like. A good
+  book if you're in a hurry.</li>
 <li>The 2009
-<a class="cow-url" href="http://www.makershed.com/Make_Electronics_book_by_Charles_Platt_p/9780596153748.htm">Make Electronics</a> by Charles Platt, which also has loads of great
-introductory material, and is a typically high quality O'Reilly production
-with <a class="cow-url" href="http://makezine.com/">Make Magazine</a>'s usual emphasis on colourful
-graphics and detailed instructions for the hobbyist. This book is very
-detailed and has lots of intriguing background<span class="cow-footnote" name="footnote4"><sup><a href="#footnote4">4</a></sup></span>.</li>
+  <a class="cow-url" href="http://www.makershed.com/Make_Electronics_book_by_Charles_Platt_p/9780596153748.htm">Make Electronics</a> by Charles Platt, which also has loads of great
+  introductory material, and is a typically high quality O'Reilly production
+  with <a class="cow-url" href="http://makezine.com/">Make Magazine</a>'s usual emphasis on colourful
+  graphics and detailed instructions for the hobbyist. This book is very
+  detailed and has lots of intriguing background<span class="cow-footnote" name="footnote4"><sup><a href="#footnote4">4</a></sup></span>.</li>
 <li>The <a class="cow-url" href="http://elinux.org/">Embedded Linux wiki</a> has great globs of Pi-related
-stuff, including a bunch of very useful <a class="cow-url" href="http://elinux.org/RPi_Tutorials">tutorials</a>.</li>
+  stuff, including a bunch of very useful <a class="cow-url" href="http://elinux.org/RPi_Tutorials">tutorials</a>.</li>
 <li><a class="cow-url" href="http://adafruit.com/">AdaFruit</a>'s <a class="cow-url" href="http://learn.adafruit.com/">tutorial
-pages</a> include an excellent guide to
-<a class="cow-url" href="http://learn.adafruit.com/adafruit-guide-excellent-soldering">soldering</a>
-(and one for <a class="cow-url" href="http://learn.adafruit.com/multimeters">measuring</a>).</li>
+  pages</a> include an excellent guide to
+  <a class="cow-url" href="http://learn.adafruit.com/adafruit-guide-excellent-soldering">soldering</a>
+  (and one for <a class="cow-url" href="http://learn.adafruit.com/multimeters">measuring</a>).</li>
 <li>Another useful beginners' site is <a class="cow-url" href="http://electronicsclub.info/">Electronics Club</a>.</li>
 </ul>
+
 <p>And lots and lots of others!<span class="cow-footnote" name="footnote5"><sup><a href="#footnote5">5</a></sup></span></p>
 
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 <a class="cow-section-anchor" name="section-4."></a><h1 class="cow-heading"><span class="cow-sec-number">4. </span>Circuits: Calculators, Simulators, Diagrams</h1>
+
 <p>The circuit diagrams are available on
 <a class="cow-url" href="https://www.circuitlab.com/user/hamish/">Circuit Lab</a> under the Creative
 Commons <a class="cow-url" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA
 licence</a>.</p>
+
+<!--% %(https://www.circuitlab.com/browse/by-tag/hamish-cunningham/, Circuit Lab)-->
+
 
 <p>For circuit debugging these Voltage/Resistance/Current calculators are useful:
 <a class="cow-url" href="http://www.the12volt.com/ohm/ohmslawcalculators.asp">this one</a>,
@@ -205,23 +263,23 @@ the phrase &quot;raspberry pi&quot;!</span>
 <li>
 <a class="cow-footnote-anchor" name="footnote3"></a>
 <span class="cow-footnote-text" name="footnote3">The <a class="cow-url" href="http://www.arduino.cc/">Arduino</a> is
-an extremely capable device that is both fore-runner and partner to the Pi.
-Based on a micro-controller chip, Arduino has been a major driver of the
-wave of low cost, flexible and open hardware on whose crest the Pi is now
-riding. It has a larger set of interaction functions (higher power and
-better safeguarded than on the Pi), but is a bit less powerful and
-general-purpose from a computational point-of-view. No doubt both will
-co-exist, and a good number of projects combining them are already
-available.</span>
+  an extremely capable device that is both fore-runner and partner to the Pi.
+  Based on a micro-controller chip, Arduino has been a major driver of the
+  wave of low cost, flexible and open hardware on whose crest the Pi is now
+  riding. It has a larger set of interaction functions (higher power and
+  better safeguarded than on the Pi), but is a bit less powerful and
+  general-purpose from a computational point-of-view. No doubt both will
+  co-exist, and a good number of projects combining them are already
+  available.</span>
 </li>
 <li>
 <a class="cow-footnote-anchor" name="footnote4"></a>
 <span class="cow-footnote-text" name="footnote4">I never knew, for
-example, that in terms of the movement of electrons electricity flows
-backwards from negative to positive, and that the conventional reverse flow
-is just that &mdash; a convention dating back to a
-<a class="cow-url" href="http://www.allaboutcircuits.com/vol_1/chpt_1/7.html">mistaken conjecture</a>
-by Benjamin Franklin. Well I never!</span>
+  example, that in terms of the movement of electrons electricity flows
+  backwards from negative to positive, and that the conventional reverse flow
+  is just that &mdash; a convention dating back to a
+  <a class="cow-url" href="http://www.allaboutcircuits.com/vol_1/chpt_1/7.html">mistaken conjecture</a>
+  by Benjamin Franklin. Well I never!</span>
 </li>
 <li>
 <a class="cow-footnote-anchor" name="footnote5"></a>
@@ -233,5 +291,7 @@ starter course in electrical engineering.</span>
 </ol></p>
 </span>
 <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
 </section>
+
 </div>
