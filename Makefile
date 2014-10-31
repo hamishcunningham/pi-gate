@@ -63,6 +63,8 @@ help:
 	@echo '   post                  create files for a new post          '
 	@echo '   draft                 create files for a new draft post    '
 	@echo '                                                              '
+	@echo '   checklinks/linchecker check links locally                  '
+	@echo '                                                              '
 
 # local stuff
 include Makefile.local
@@ -280,7 +282,7 @@ draft:
 
 # checklinks
 checklinks:
-	rsync --delete -a output link-check-output; \
+	rsync --delete -a output/ link-check-output; \
 	cd link-check-output; \
         for f in `find . -name '*.html'`; do \
           sed -i \
@@ -296,7 +298,6 @@ linkchecker:
           --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:28.0) Gecko/20100101  Firefox/28.0" \
           http://localhost:8000; \
         :
-
 
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post
 .PHONY: draft fix-rss-feeds checklinks linkchecker
