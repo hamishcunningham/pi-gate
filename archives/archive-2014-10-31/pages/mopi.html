@@ -1,0 +1,2715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>MoPi: Hot-Swap Mobile Power for the Pi</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+        height="55" width="46"></a></span>
+      <span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+      <span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+        alt="The University of Sheffield" height="55" width="113"</a><a
+          href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+            height="55" width="132"></a></span>
+    </span>
+    <div class="horizontal menu">
+      <ul>
+      <li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+      <!--
+      using a custom menu at present...
+      -->
+      <li><b><a href="#">Projects</a></b>
+      <!-- TODO generate this from content/pages/index -->
+        <ul>
+        <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+        <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+        <li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+        <li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+        <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+        <!--
+        <li><a href="/pages/snowcam.html">SnowCam: Off the Radar Cameras</a></li>
+        -->
+        <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+        <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+        <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+        <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+        <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+        </ul></li>
+      <li><b><a href="#">MoPi</a></b>
+        <ul>
+        <li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+        <li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+        <li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+        <li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+        </ul></li>
+      <!-- <li><a href="/">Blog</a></li> -->
+      <!--
+      <li><a href="/pages/basics.html#resources">Download</a></li>
+      -->
+      <li><a href="/pages/download.html">Download</a></li>
+      <!--
+      <li><a href="/pages/shop.html">Shop</a></li>
+      -->
+      <li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
+
+  <!-- header menus (?!) -->
+  <div id="header">
+  </div>
+
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
+
+  <!-- main content div -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <div id="mainContent">
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+        <li ><a href="/category/news.html">News</a></li>
+    </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
+
+<!-- YUI responsive columns -->
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+        
+<section id="content" class="body">    
+    <h1 class="entry-title">MoPi: Hot-Swap Mobile Power for the Pi</h1>
+<div id="socialButtons">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/mopi.html"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/pages/mopi.html#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/pages/mopi.html"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    
+    
+
+<!-- _
+%(about.html#hamish, Hamish Cunningham),
+%(about.html#lubo, Lubo Bontchev),
+and %(about.html#fred, Fred Sonnenwald),
+%br August 2013 -- June 2014_ -->
+<h2 class="cow-heading">MoPi is mobile, hot-swap and 24/7 power for the Raspberry Pi. <br>
+<a class="cow-non-existant-url" href="/pages/get-mopi.html">I want one! <span class="cow-escape">(</span>how to order<span class="cow-escape">)</span></a></h2>
+<h2 class="cow-heading">Something not working? <br>
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/issues">Raise an issue</a>.</h2>
+
+<p><em>(In early 2014 we ran a <a class="cow-url" href="http://tinyurl.com/mobile-pi">Kickstarter campaign</a>
+to fund the first production version, which is due for delivery in June 2014.
+If you missed it, you can
+<a class="cow-url" href="http://shop.pimoroni.com/products/mopi-mobile-pi-power">get one from
+Pimoroni</a>.)</em><span class="cow-footnote" name="footnote1"><sup><a href="#footnote1">1</a></sup></span></p>
+
+
+
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Pi to Go!</a></li>
+<li><a href="#section-2.">2. User Guide</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.1.">2.1. Warnings!!!</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.2.">2.2. Installation and Use</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.2.1.">2.2.1. Quick Start</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.2.2.">2.2.2. Installing the Software</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.2.3.">2.2.3. Connecting the Power and the Pi</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.2.4.">2.2.4. Turn On, Turn Off</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.3.">2.3. Choosing and Configuring Batteries (Etc.)</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.3.1.">2.3.1. Choosing Default Supply Profiles</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.3.2.">2.3.2. Using the Configuration Tool on the Pi</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.3.3.">2.3.3. Command Line, Python API and Daemon Config Hacking</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.4.">2.4. Troubleshooting and FAQ</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.4.1.">2.4.1. Wh...?</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.4.2.">2.4.2. Pi Models: A, B, B+, Compute Module</a></li>
+<li><a href="#section-3.">3. Background: Mobile Pi Power</a></li>
+<li>&nbsp;&nbsp;<a href="#section-3.1.">3.1. The Prototypes</a></li>
+<li>&nbsp;&nbsp;<a href="#section-3.2.">3.2. The Perfect Battery Pack</a></li>
+<li><a href="#section-4.">4. The MoPi Software Suite</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.1.">4.1. simbamond, the simbamon daemon</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.2.">4.2. The Python API</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.3.">4.3. MoPi from the Command Line</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.4.">4.4. Configuring Your Power Supplies</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.5.">4.5. Monitoring</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.6.">4.6. simbamon: a simple battery monitor</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-4.6.1.">4.6.1. Design Notes</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-4.6.2.">4.6.2. Implementation</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-4.6.3.">4.6.3. Installing simbamon</a></li>
+<li><a href="#section-5.">5. How it Works: the Hardware</a></li>
+<li><a href="#section-6.">6. Testing</a></li>
+<li>&nbsp;&nbsp;<a href="#section-6.1.">6.1. The Longer-Lasting Snack</a></li>
+<li>&nbsp;&nbsp;<a href="#section-6.2.">6.2. Battery life</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-6.2.1.">6.2.1. Battery life under load</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-6.2.2.">6.2.2. What the sun says</a></li>
+<li>&nbsp;&nbsp;<a href="#section-6.3.">6.3. Methods in the Madness: Debugging and Software Development</a></li>
+<li><a href="#section-7.">7. In the Wild: Applications</a></li>
+<li>&nbsp;&nbsp;<a href="#section-7.1.">7.1. Outdoor Adventure Kit</a></li>
+<li>&nbsp;&nbsp;<a href="#section-7.2.">7.2. Outdoor Experimenter Kit (Light)</a></li>
+<li>&nbsp;&nbsp;<a href="#section-7.3.">7.3. Outdoor Experimenter Kit (Light and Air)</a></li>
+<li>&nbsp;&nbsp;<a href="#section-7.4.">7.4. Kickstarter Backer Projects</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-7.4.1.">7.4.1. Night Camera</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-7.4.2.">7.4.2. K9</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-7.4.3.">7.4.3. Self-Balancer</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-7.4.4.">7.4.4. Garden Camera</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-7.4.5.">7.4.5. Remote Switch</a></li>
+<li><a href="#section-8.">8. Batteries, Holders and Chargers</a></li>
+<li><a href="#section-9.">9. Other Directions</a></li>
+<li>&nbsp;&nbsp;<a href="#section-9.1.">9.1. A Possible Charging Circuit</a></li>
+<li>&nbsp;&nbsp;<a href="#section-9.2.">9.2. Other Options</a></li>
+<li><a href="#section-10.">10. Linux is Lovely</a></li>
+<li>&nbsp;&nbsp;<a href="#section-10.1.">10.1. Glitches in the Pi's I2C Bus</a></li>
+<li>&nbsp;&nbsp;<a href="#section-10.2.">10.2. Installing I2C</a></li>
+<li>&nbsp;&nbsp;<a href="#section-10.3.">10.3. Debugging with I2C Tools</a></li>
+</ul></p></div>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-1."></a><h1 class="cow-heading"><span class="cow-sec-number">1. </span>Pi to Go!</h1>
+
+<p>MoPi is mobile and 24/7 power for the Pi. On your bike, up a tree, or for your
+home server: we've got you covered.</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/logo-heli-1.png"><img class="cow-img" src="/pages/images/mopi/logo-heli-1-200x150.png" alt="MoPi Heli Logo" width="200" height="150"></a></p>
+
+<p>Features:</p>
+
+<ul>
+<li>multiple inputs &mdash; standard batteries, car power sockets, old laptop
+  supplies, solar panels, and more... all attachable via standard screw
+  terminals</li>
+<li>hot-swap power replacement without stopping work</li>
+<li>shutdown the Pi cleanly when batteries discharge</li>
+<li>integrated on/off switch</li>
+<li>usable as a UPS (uninterruptible power supply) by attaching both batteries
+  and mains</li>
+<li>on-board LED indicators and on screen linux system notifications</li>
+<li>configuration of multiple battery chemistries and number of cells from a UI
+  on the Pi</li>
+<li>full API in Python, plus a shell-friendly command-line interface</li>
+<li>stackable headers allowing connections of multiple boards at once (e.g. MoPi
+  + XLoBorg, or MoPi + AirPi, or etc.).</li>
+<li>PCB remoting pads for the power switch</li>
+<li>self-resetting fuse for over-current protection</li>
+<li>two-way communication via the I2C bus</li>
+<li>remote power-off: tell MoPi to power down the Pi when logged-in remotely
+  (after a clean shutdown, of course)</li>
+<li>timer-based wake-up: tell MoPi what time you want your Pi to wakeup, then
+  power it down and MoPi will boot the Pi as requested</li>
+<li>3.3V supply mod: swap three resistors and supply 3.3V, overpowering the Pi's
+  on-board regulator and saving the power that is dissipated there, for weight
+  and battery life critical applications like ballooning</li>
+<li>supports Pi models A, B and B+</li>
+<li>wide input voltage range: 6.2V to 20V<span class="cow-footnote" name="footnote2"><sup><a href="#footnote2">2</a></sup></span></li>
+</ul>
+
+<p>And it even fits in the Pibow (and other well-known Pi cases):</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/custom-lid-120313.jpg"><img class="cow-img" src="/pages/images/mopi/custom-lid-120313-500x.jpg" alt="MoPi in a Pibow" width="500"></a></p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="userguide"></a></p><a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>User Guide</h1>
+
+<p><a name="warnings"></a></p><a class="cow-section-anchor" name="section-2.1."></a><h2 class="cow-heading"><span class="cow-sec-number">2.1. </span>Warnings!!!</h2>
+
+<ul>
+<li>DO NOT plug MoPi onto your Pi while the Pi is powered up!</li>
+<li>DO NOT touch electronic components when they're powered up &mdash; you may
+  damage them, or burn your fingers!</li>
+<li>AVOID handling circuit boards when charged with static!</li>
+<li>ALWAYS read the small print on <em>all</em> components supplied with your MoPi</li>
+<li>ALWAYS treat batteries and other power supplies with respect &mdash; if abused
+  the energy they contain may surprise you in dangerous ways!</li>
+<li>DO NOT feed MoPi to your dog, eat nuts if you're allergic to them, or lose
+  your sense of humour.<span class="cow-footnote" name="footnote3"><sup><a href="#footnote3">3</a></sup></span></li>
+</ul>
+
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="quick-install"></a></p><a class="cow-section-anchor" name="section-2.2."></a><h2 class="cow-heading"><span class="cow-sec-number">2.2. </span>Installation and Use</h2>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2.2.1."></a><h3 class="cow-heading"><span class="cow-sec-number">2.2.1. </span>Quick Start</h3>
+
+<p>If you're in a hurry:</p>
+
+<ol>
+<li>Install the battery monitoring software and shutdown:
+  <ul>
+  <li>sudo apt-get update</li>
+  <li>sudo apt-get install simbamond</li>
+  <li>sudo poweroff</li>
+  </ul></li>
+<li>Connect your batteries to the MoPi</li>
+<li>Attach the MoPi to your Pi and press the Power Button for 3 seconds</li>
+</ol>
+
+<p><a class="cow-url" href="/pages/images/mopi/quickstart/schematic6.png"><img class="cow-img" src="/pages/images/mopi/quickstart/schematic6-500x745.png" alt="Quick start guide" width="500" height="745"></a></p>
+
+<p>For more details on each step, see below.</p>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2.2.2."></a><h3 class="cow-heading"><span class="cow-sec-number">2.2.2. </span>Installing the Software</h3>
+
+<p>As noted above, you can install the battery monitoring software like this:</p>
+
+  <ul>
+  <li>sudo apt-get update</li>
+  <li>sudo apt-get install simbamond</li>
+  </ul>
+
+<p>(We assume you're using the <a class="cow-url" href="http://www.raspbian.org/">Raspbian flavour</a> of
+<a class="cow-url" href="http://debian.org">Debian</a> GNU Linux here.)</p>
+
+<p>Occasionally this method may cause glitches (if you've a very old version of
+the rest of the operating system installed, for example). The most cautious
+recipe is to update your firmware and the operating system, then install the
+MoPi software, and to reboot between each step:</p>
+
+<ul>
+<li>sudo apt-get update</li>
+<li>sudo apt-get upgrade</li>
+<li>sudo reboot</li>
+<li>sudo rpi-update</li>
+<li>sudo reboot</li>
+<li>sudo apt-get install simbamond</li>
+<li>sudo poweroff</li>
+</ul>
+
+<p><a name="no-mopi-warning"></a>
+Note that if you're installing the software without MoPi attached, or without
+power attached to MoPi, you will get a warning message<span class="cow-footnote" name="footnote4"><sup><a href="#footnote4">4</a></sup></span>; just
+ignore it at this point!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2.2.3."></a><h3 class="cow-heading"><span class="cow-sec-number">2.2.3. </span>Connecting the Power and the Pi</h3>
+
+<p>Next connect one or more power supply to MoPi using the screw terminals on the
+underside of the board. Then gently push fit MoPi onto your Raspberry Pi's
+GPIO pins. Make sure you do this with the Raspberry Pi turned off, or you risk
+a reset.</p>
+
+<p>The components on the MoPi are as follows:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/mopi-with-key-schematic.png"><img class="cow-img" src="/pages/images/mopi/mopi-with-key-schematic-500x262.png" alt="Board connections schematic 1" width="500" height="262"></a></p>
+
+<p>When connecting two power sources (e.g. two battery packs, or one solar panel
+and one battery pack) the ground wires (-ve, typically black) both share the
+middle connector on the screw terminals. The live wires (+ve, typically red)
+then get one each of the other connectors. The lower of the supply connections
+shown in the schematics corresponds to <em>source 1</em>; the other to <em>source 2</em>.</p>
+
+<p>When you've connected your supplies, MoPi then fits onto the Pi as shown on
+the right:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/mopi-with-key-schematic-02.png"><img class="cow-img" src="/pages/images/mopi/mopi-with-key-schematic-02-500x138.png" alt="Board connections schematic
+2" width="500" height="138"></a></p>
+
+<p>The charge level of each source is signalled by the two amber LEDs on the top
+of the board, and the overall health of the supplies by a single
+RGB<span class="cow-footnote" name="footnote5"><sup><a href="#footnote5">5</a></sup></span> LED.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2.2.4."></a><h3 class="cow-heading"><span class="cow-sec-number">2.2.4. </span>Turn On, Turn Off</h3>
+
+<p>When the Pi is powered off, press the power button for 3 seconds to turn it
+on.<span class="cow-footnote" name="footnote6"><sup><a href="#footnote6">6</a></sup></span></p>
+
+<p>When the Pi is powered on, press the power button for 3 seconds to turn it
+off. This will shut the Pi down cleanly (which can take up to around 30
+seconds). If you hold the power button down for 10 seconds, the power will
+shut down immediately.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="bat-mgmt"></a></p><a class="cow-section-anchor" name="section-2.3."></a><h2 class="cow-heading"><span class="cow-sec-number">2.3. </span>Choosing and Configuring Batteries (Etc.)</h2>
+
+<p>The short story is this:</p>
+
+<ul>
+<li>Any power supply connected to the MoPi must be capable of at least 6.2V
+  under load, and no more than 20V.</li>
+<li>The MoPi must be configured correctly both to avoid damage to rechargeable
+  batteries and to avoid unexpected shutdowns!</li>
+</ul>
+
+<p>How do I configure MoPi? There are 3 ways:</p>
+
+<ol>
+<li>Choose one of the on-board defaults&mdash;easy peasy!</li>
+<li>Use the Configuration Tool<span class="cow-footnote" name="footnote7"><sup><a href="#footnote7">7</a></sup></span> on your Pi&mdash;straightforward.</li>
+<li>Use the command-line interface, and/or edit the daemon config data
+  on your Pi&mdash;advanced.</li>
+</ol>
+
+<p>Let's take each of these in turn...</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="default-profiles"></a></p><a class="cow-section-anchor" name="section-2.3.1."></a><h3 class="cow-heading"><span class="cow-sec-number">2.3.1. </span>Choosing Default Supply Profiles</h3>
+
+<p>MoPi has two default supply profiles built-in:</p>
+
+<ol>
+<li>Non-rechargeable or non-battery supplies.</li>
+<li>Eight NiMH AA rechargeable batteries.</li>
+</ol>
+
+<p>The default is #1, so that any supply can power the MoPi. To choose #2, you
+need to remove the small jumper on the screw terminal side of the MoPi, either
+completely or replaced on only one of the pins.</p>
+
+<p><b>Note</b>: when we supply MoPi with batteries we fit the jumper to choose profile
+#2, that is so it matches NiMh the batteries we shipped!</p>
+
+<p>You can see the jumper in this picture: the little black component sticking up
+and overlapping with the right hand end of the white sticker on the GPIO
+connector (labelled 0014):</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/closeups/1.jpg"><img class="cow-img" src="/pages/images/mopi/closeups/1-500x344.jpg" alt="MoPi closeup" width="500" height="344"></a></p>
+
+<p>Here's a closer view:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/closeups/5.jpg"><img class="cow-img" src="/pages/images/mopi/closeups/5-500x326.jpg" alt="MoPi closeup" width="500" height="326"></a></p>
+
+<p>Now here's what it looks like when you remove the top to select profile #2:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/closeups/4.jpg"><img class="cow-img" src="/pages/images/mopi/closeups/4-500x308.jpg" alt="MoPi closeup" width="500" height="308"></a></p>
+
+<p>And here's the top of the jumper replaced on only one pin, again selecting
+profile #2: This is useful to avoid losing the tiny little thing!</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/closeups/6.jpg"><img class="cow-img" src="/pages/images/mopi/closeups/6-500x382.jpg" alt="MoPi closeup" width="500" height="382"></a></p>
+
+<!--% %(images/mopi/closeups/2.jpg, %image(images/mopi/closeups/2-500x408.jpg, MoPi closeup, 500, 408))-->
+
+<!--% %(images/mopi/closeups/3.jpg, %image(images/mopi/closeups/3-500x343.jpg, MoPi closeup, 500, 343))-->
+
+<!--% %(images/mopi/closeups/7.jpg, %image(images/mopi/closeups/7-500x372.jpg, MoPi closeup, 500, 372))-->
+
+<!--% %(images/mopi/closeups/8.jpg, %image(images/mopi/closeups/8-500x371.jpg, MoPi closeup, 500, 371))-->
+
+<!--% %(images/mopi/closeups/9.jpg, %image(images/mopi/closeups/9-500x381.jpg, MoPi closeup, 500, 381))-->
+
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="configuration-tool"></a></p><a class="cow-section-anchor" name="section-2.3.2."></a><h3 class="cow-heading"><span class="cow-sec-number">2.3.2. </span>Using the Configuration Tool on the Pi</h3>
+
+<p>If you're using a supply that doesn't match MoPi's two <a class="cow-url" href="#default-profiles">built-in profiles</a> you need to run a configuration utility on the Pi itself.
+This will prompt you to enter details of the supply, then calculate
+appropriate values to send to the board over I2C. It will also store the
+config data and resend it to the board after reboots as necessary.</p>
+
+<p>To start the configuration tool open a terminal and do:</p>
+
+<pre>
+sudo mopi
+</pre>
+
+<p>The tool operates in the same way as the Raspberry Pi's configuration tool
+(<tt>raspi-config</tt>). Select the option to configure one or both of MoPi's
+supplies, and then:</p>
+
+<ul>
+<li><em>Type of supply</em>. This is one of <b>rechargeable battery</b>, <b>non-rechargeables</b>
+  (like standard Alkaline batteries), or <b>non-battery</b> (like an AC adapter).</li>
+<li><em>Number of cells</em>. This is the <b>number of individual battery cells</b> in your
+  supply. Note that some batteries incorporate several cells &mdash; e.g. a9V PP3
+  has 6 cells internally. If you're not using batteries select &quot;1&quot;. We shipped
+  out sets of 8 NiMH batteries, you would select 8 here.</li>
+<li><em>Battery chemistry</em>. The <b>type of battery</b> you're connecting. For example 
+  &quot;Alkaline&quot; or &quot;NiMH&quot; (or &quot;N/A&quot; for non-battery supplies).</li>
+</ul>
+
+<p>After entering this data the tool will give details of the values it has
+calculated and offer to write these to the MoPi board. There is detail of
+<a class="cow-url" href="#config-ui">these values and how the tool works</a> below.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2.3.3."></a><h3 class="cow-heading"><span class="cow-sec-number">2.3.3. </span>Command Line, Python API and Daemon Config Hacking</h3>
+
+<p>Finally, if you want more control, or the other methods are insufficiently
+scarey, you can use <a class="cow-url" href="#cli">the command-line tool</a> directly, or edit
+<a class="cow-url" href="#simbamon">the simbamon daemon</a> configuration data, or write code using the
+<a class="cow-url" href="#api">Python API</a>.</p>
+
+<p>A quick demo of using the cli setting the default 8 NiMH profile:</p>
+
+<pre>
+sudo mopicli -wc 1 11200 10000 8800 8000
+</pre>
+
+<p>For more details, see <a class="cow-url" href="#software">the software</a> below.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2.4."></a><h2 class="cow-heading"><span class="cow-sec-number">2.4. </span>Troubleshooting and FAQ</h2>
+
+<p><a class="cow-url" href="/pages/images/mopi/packet/img-20140421-113013.jpg"><img class="cow-img" src="/pages/images/mopi/packet/img-20140421-113013-500x391.jpg" alt="Packaging 4" width="500" height="391"></a></p>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2.4.1."></a><h3 class="cow-heading"><span class="cow-sec-number">2.4.1. </span>Wh...?</h3>
+
+<p><hr>
+<a name="faq-gpio-pins"></a>
+<b>&gt;&gt;&gt; Which GPIO pins does MoPi use?</b></p>
+
+<p>As of version 4 (the Kickstarter version) MoPi uses these pins:</p>
+
+<ul>
+<li>pin 2 (and/or pin 4): 5V out</li>
+<li>pins 3 and 5: i2c bus</li>
+<li>pin 6 (or any other grounded pin): 0v</li>
+</ul>
+
+<p>(For a good Pi pinout diagram see <a class="cow-url" href="http://wiringpi.com/pins/">the WiringPi
+site</a>.)</p>
+
+
+<p><hr>
+<a name="faq-no-mopi-warning"></a>
+<b>&gt;&gt;&gt; I get a warning during software installation</b></p>
+
+<p>If you're installing the software without MoPi attached to the Pi, or without
+power attached to MoPi, you will get this warning message:</p>
+
+<p><tt>/usr/sbin/simbamon: /usr/sbin/mopicli not working; MoPi not attached or
+powered? (mopicli. I2C bus input/output error on read word. Check bus? Check
+connection?)</tt></p>
+
+<p>In this case you can safely ignore it.</p>
+
+
+<p><hr>
+<a name="faq-stackable"></a>
+<b>&gt;&gt;&gt; Should I get a stackable header or a low-profile one?</b> <br>
+<b>&gt;&gt;&gt; What if the power switch isn't accessible?</b></p>
+
+<p>If you want to fit your MoPi into tight spaces, you probably want a small
+(low-profile) header. If you want to stack MoPi with other Pi add-on boards,
+then you want a big, &quot;stackable&quot;, header.</p>
+
+<p>Note that if you do get the stackable version, when you put another board on
+top of MoPi it may hide the power switch and/or the LEDs. In the case of the
+power switch there are solder pads on the PCB, right next to the button, to
+allow fitting of a remote power switch.</p>
+
+
+<p><hr>
+<a name="faq-stackable2"></a>
+<b>&gt;&gt;&gt; How do I connect another board?</b></p>
+
+<p>If you want to use MoPi in combination with another Pi add-on board (e.g.
+AirPi) you need a) to have ordered the version with stackable header pins, and
+b) to remove the plastic collar that the board is shipped with the prevent
+bending. Then the other board will just slip down onto the MoPi headers just
+like those on the Pi.</p>
+
+<p>If you've got a low profile MoPi (without the stacking pins) don't despair &mdash;
+if you other board has stacking pins then MoPi can go on the top (which is
+better, in fact, as you'll be able to access the power switch too!).</p>
+
+<p>MoPi <em>should</em> be compatible with all other Pi add-on boards, as we only use
+the I2C bus, which supports the connection of multiple devices.</p>
+
+
+<p><hr>
+<a name="faq-voltage-low"></a>
+<b>&gt;&gt;&gt; I connected a power source but MoPi won't start...?</b></p>
+
+<p>MoPi needs a minimum of 6.2 volts to run. Then it also has a (configurable)
+&quot;safe depth of discharge&quot; setting to prevent damage to rechargeable batteries.
+If the sources connected aren't higher than the highest of these, MoPi will
+refuse to power the Pi. (If there is enough voltage to run the
+microcontroller, it will blink the relevant amber LED a few times to signal
+the problem.)</p>
+
+<p>Solutions:</p>
+
+<ul>
+<li>Ensure that the <a class="cow-url" href="#default-profiles">Jumper</a> that selects the default
+  battery profile is set for profile #1 (non-rechargeable) as this lets the
+  MoPi power on under the most conditions. Be aware though that you may
+  damage your rechargeable batteries if you don't configure the MoPi for them
+  in software on boot, so make sure you've appropriatly...</li>
+<li><a class="cow-url" href="#config-ui">Configure the MoPi</a> to accept the supply (if it will reliably
+  exceed 6.2 volts under load).</li>
+<li>If it still doesn't start, the batteries may be discharged! Connect some
+  freshly charged ones or a higher voltage supply.</li>
+</ul>
+
+<p>Sometimes the reported voltage for a particular source seems to be high enough
+to drive the Pi, but MoPi considers it too low &mdash; why? When a new source is
+connected it is shunted through a simulated load for a few tenths of a second.
+Batteries drop their voltage under load, and the lower their level of charge,
+the larger the drop. MoPi measures the voltage under load, and if it is too
+low it will refuse to use that supply. After disconnecting a power supply,
+wait a few seconds before connecting a new one so that the MoPi registers the
+disconnection and will re-test the newly connected battery pack.</p>
+
+
+<p><hr>
+<a name="faq-regulator"></a>
+<b>&gt;&gt;&gt; What type of regulator chip is it? What is the voltage range?</b></p>
+
+<p>MoPi uses a switched-mode regulator (a TPS5430 or TPS5430), so almost no power
+is wasted.</p>
+
+<p>The input voltage range is 6.2V to 20V. There's no step-up circuitry so the
+battery or solar panel rig or etc. has to supply 6.2V at minimum. Consider
+connecting multiple batteries or panels in series to increase voltage.</p>
+
+
+<p><hr>
+<a name="faq-fuse"></a>
+<b>&gt;&gt;&gt; Is it safe to bypass the Pi's built-in fuse?</b></p>
+
+<p>Yes &mdash; in this case...</p>
+
+<p>The issue: MoPi supplies power to the Pi over the GPIO pins, instead of via
+the micro USB connector (which it leaves free so that mains power can be
+plugged in at the same time as batteries if required). The 5V feed from GPIO
+involves bypassing the Pi's built-in fuse (which is in line with the USB
+connector).</p>
+
+<p>Is this safe?</p>
+
+<p>Given a correctly functioning Pi and peripherals, then the answer is a clear
+&quot;yes&quot;. But what about if the Pi is faulty, or if a pin is shorted out, or if
+someone connects a 3 bar electric heater to it? :-)</p>
+
+<p>Three considerations:</p>
+
+<p>First, MoPi is currently capable of supplying up to 2A, after which there is
+an internal current limiting circuit. It uses standard voltage and power
+regulation circuitry which is robust and mature, and will not allow over-volt
+or over-current on the output.</p>
+
+<p>Second, we're supplying from batteries, not mains &mdash; so as long as we don't
+over-consume from the battery (which in principle we can't short of a major
+internal fault) there's a limit to the amount of power we can supply to a
+faulty Pi.</p>
+
+<p>Third, not having an internal fuse is pretty standard behaviour &mdash; poke around
+in the electronics of all those power supplies sitting around in your desk
+drawer and you won't generally find fuses.</p>
+
+<p>Having said that, we added an autorecovery fuse to version 3 just to be
+ticking all the boxes. ;-)</p>
+
+
+<p><hr>
+<a name="faq-voltage-pi"></a>
+<b>&gt;&gt;&gt; Can I access the voltage data on MoPi from the Pi?</b></p>
+
+<p>Yes!</p>
+
+<p>The software on the Pi that talks to MoPi, simbamond, is open source and
+available here:
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon">https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon</a> (See also
+<a class="cow-url" href="http://pi.gate.ac.uk/pages/download.html">http://pi.gate.ac.uk/pages/download.html</a>.) The Raspbian maintainers have
+added simbamond to their repository, so you can install it in the same way as
+any other Pi sofware.</p>
+
+<p>Simbamond listens to MoPi and logs the data in a standard manner, which other
+applications can then consume as required. There's also a Python API and a
+command-line interface (CLI):</p>
+
+<pre>
+sudo mopicli -v -v1 -v2
+</pre>
+
+<p>For more details, see <a class="cow-url" href="#software">the software</a> below.</p>
+
+
+<p><hr>
+<a name="faq-mains-solar"></a>
+<b>&gt;&gt;&gt; Can I combine mains and solar power?</b></p>
+
+<p>Yes!</p>
+
+<p>This should work so long as you connect the mains-derived power to one of
+MoPi's inputs (it will have to be a supply &gt;= 6.2 volts). MoPi will then use
+mains whenever the solar output dips below the mains supply. The ideal would
+be a solar panel rig that outputs e.g. 15v coupled with a 12v mains supply, or
+some similar config.</p>
+
+<p>Note also that the Pi will draw significant current, depending on the model
+and the peripherals, and you will needs sufficient panels (and sunshine!) to
+generate the requisite power. As a very rough guide, we've had some success
+with two 10W panels running a model B (without peripherals).</p>
+
+<p>(We're running a rig now in the workshop that has two 18V panels in parallel;
+watch <a class="cow-url" href="http://pi.gate.ac.uk/">http://pi.gate.ac.uk/</a> and we'll post the results!) </p>
+
+<!--% TODO-->
+
+
+
+<p><hr>
+<a name="faq-deep-discharge"></a>
+<b>&gt;&gt;&gt; How do we avoid deep discharge of rechargeables?</b></p>
+
+<p>The short answer it to shutdown before it happens. Rechargeable batteries
+don't like being completely discharged. We always need to stop drawing from
+the battery at some distance above some minimum voltage level. This level
+varies for different battery chemistries (NiMH, LiPo, lead/acid, etc.) and
+for different numbers of cells (eight AAs vs. two PP3s vs. one car battery,
+etc.).</p>
+
+<p>MoPi listens continuously to the voltage level on the battery inputs. How does
+it know when that level is getting low? Let's identify two separate low-level
+points: first, the absolute low voltage level is the point where our
+micro-controller can no longer reliably run the switching regulator to produce
+a constant 5V (around 6.2 volts). The second low voltage (critical) point is
+just above the deep discharge level, which depends on the batteries attached.
+When you use the <a class="cow-url" href="#configuration-tool">configuration tool</a> this critical
+voltage point sent to the MoPi. As long as you've correctly configured your
+batteries, we should be avoiding deep discharge.</p>
+
+<p>When the MoPi decides the input voltage is critical (for either or both of its
+two supplies), simbamond warns the user and shuts down the Pi cleanly (from
+software first, using &quot;sudo halt&quot;, and then by cutting power).
+How do we decide when to do this, that is to say, how do we pick the critical
+voltage level? We've done some research on batteries. For eight NiMH 1.2 volt
+cells the critical voltage is around 8 volts. For non-rechargeables, or solar
+panels or a water turbine, it is the same as the absolute low level (6.2V) as
+these can't suffer deep discharge.</p>
+
+<p>Be aware though that be default the MoPi assumes that standard non-rechargable
+battires (e.g. Alkalines) or an AC adapter have been connected, which sets the
+critical voltage level to 6.2V. This is to get you off the ground, as the MoPi
+will power on with almost anything attached like this. However, on boot the
+MoPi <b>must be configured correctly for your batteries</b> or you risk damaging
+your batteries through deep discharge, which is what we're trying to avoid.
+This default is selectable though through our two <a class="cow-url" href="#default-profiles">default profiles</a>. If you recieved batteries from us (the &quot;battery heaven&quot;,
+UPS and outdoor kit rewards) your MoPi will instead by default be configured
+for 8 NiMH AA cells.</p>
+
+<p>The critical voltage level is kind of short notice though for replacing
+batteries. The configuration tool also specifies a low voltage level, which is
+when the LED on the MoPi turns red and you start recieving low battery
+notifications. This is set to be 1.1<span class="cow-escape">*</span>critical, so for 8 AA NiMH batteries
+it's 8.8 volts. (There are other voltage levels defined too. Read more
+<a class="cow-url" href="#config-ui">later</a>.)</p>
+
+
+<p><hr>
+<a name="faq-3volt"></a>
+<b>&gt;&gt;&gt; How do I modify it to produce 3.3V?</b></p>
+
+<ol>
+<li>Take out R22.</li>
+<li>Solder this resistor on position R23.</li>
+<li>Replace R15 with 5.6 KOhm 1% 0603 size.</li>
+</ol>
+
+
+<p><hr>
+<a name="faq-mkmod-error"></a>
+<b>&gt;&gt;&gt; Mkmod error when upgrading.</b></p>
+
+<p>If you get a message like &quot;libkmod: ERROR ../libkmod/libkmod.c:554
+kmod<em>search</em>moddep: could not open moddep file
+'/lib/modules/3.6.11+/modules.dep.bin'&quot; when installing try a reboot followed
+by &quot;sudo apt-get -f install&quot;.</p>
+
+
+<p><hr>
+<a name="faq-i2c-error"></a></p>
+
+<p><b>&gt;&gt;&gt; The I2C bus doesn't work after install.</b></p>
+
+<p>If the I2C bus appears not to be working after installing simbamon, try a
+reboot. Sometimes the Python SMBus module appears not to load correctly.</p>
+
+
+<p><hr>
+<a name="faq-remote-switch"></a></p>
+
+<p><b>&gt;&gt;&gt; How do I add a remote power switch?</b></p>
+
+<p>There's a <a class="cow-url" href="#remote-power-switch">description here</a>.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2.4.2."></a><h3 class="cow-heading"><span class="cow-sec-number">2.4.2. </span>Pi Models: A, B, B+, Compute Module</h3>
+
+<p>MoPi will work fine with the Raspberry Pi models A, B, and the
+<a class="cow-url" href="http://www.raspberrypi.org/introducing-raspberry-pi-model-b-plus/">Model B
+Plus Pi</a> released summer 2014. (We don't currently support the Compute Module
+directly, but we're working on it!)</p>
+
+<p>The Model B+ is an evolution on the original Model B; it looks like this:</p>
+
+<p><img class="cow-img" src="/pages/images/model-b-plus-500x337.jpg" alt="Model B+ Pi" width="500" height="337"></p>
+
+<p>From a mobile power point of view the B+ will perform a bit better than the B
+&mdash; they're replaced the rather wasteful LDO regulator of the original with a
+switched-mode supply, and with the revamp and extension of the USB subsystem
+they've also improved power handling there.</p>
+
+<p>And the good news is that there's no issue with the new CPU position on the
+B+. MoPi's connection terminals actually sit on C1 (a large capacitor near the
+CPU), and not on the CPU itself. You can see this here:</p>
+
+<!--% YOUTUBE BPLUS CLIP HERE-->
+<p align="center"> <iframe width="560" height="315" src="//www.youtube.com/embed/dEx0jNc7CaE" frameborder="0" allowfullscreen></iframe> </p>
+
+
+<p>So we're good to go &mdash; initial indications are that the B+ is an even better
+platform for mobile power (and MoPi) than the Model B...</p>
+
+<p><b>PS</b> If you fire up a B+ with an operating system you've been using on one of
+the older models, you may discover that e.g. your USB keyboard doesn't work:
+you need the most recent operating systems to run the B+. One easy way to get
+one is to download a <a class="cow-url" href="http://www.raspberrypi.org/downloads/">new copy of
+NOOBS</a> and unzip it onto a micro-SD card.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-3."></a><h1 class="cow-heading"><span class="cow-sec-number">3. </span>Background: Mobile Pi Power</h1>
+
+<p>The Pi has many advantages as a mobile platform: if the rain gets in, or a dog
+eats it, a replacement doesn't break the bank, and, for a general-purpose
+device, power requirements are very low.</p>
+
+<p>Early in 2013 we realised that we needed better power management for our
+mobile projects on <a class="cow-url" href="http://pi.gate.ac.uk/">Pi.GATE.ac.uk</a>. Five volt USB
+battery packs are common, but none of them can communicate their level of
+charge to the Pi. That means lots of unanticipated power cuts &mdash; a good way to
+corrupt your SD card... :-(</p>
+
+<p>And then we realised that standard rechargeables are more planet friendly. And
+then that it would be cool to be able to hot-swap supplies, and that if we
+could do that could we make it work as a UPS too, and how about adding a power
+switch, and...</p>
+
+<p>Fast forward: we ran a successful
+<a class="cow-url" href="https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi/">Kickstarter crowdfunding campaign</a> and now we're delivering the 4th generation
+of our mobile power board. Read on!</p>
+
+<p>Below we'll run through the characteristics of mobile power for the Pi, and
+follow through with the design of <b><em>MoPi</em></b>, an add-on battery pack circuit
+with Raspbian-friendly software that does lots of useful stuff for the Mobile
+Pi.</p>
+
+<p>There are three dimensions to the problem of mobile power for the Pi:</p>
+
+<ul>
+<li><em>Regulation</em>, to supply the constant 5 volts<span class="cow-footnote" name="footnote8"><sup><a href="#footnote8">8</a></sup></span> at up
+  to around 1 amp that the (Model B) Pi requires.</li>
+<li><em>Control</em>:  keeping a check on battery charge, switching the regulator off
+  when charge is getting low, and reporting the current level to a monitor.</li>
+<li><em>Monitoring</em>: reading level indications from <a class="cow-url" href="/pages/basics.html#gpio-pins">a GPIO
+  connection</a>, reporting it to the Pi user and shutting the operating system
+  down cleanly when levels get critically low.</li>
+</ul>
+
+<p>The first two of these need some special hardware; the third is written as a
+software <em>daemon</em>.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-3.1."></a><h2 class="cow-heading"><span class="cow-sec-number">3.1. </span>The Prototypes</h2>
+
+<p>We've now developed four versions (the last of which is being supplied to our
+Kickstarter backers in June 2014). Here's what version 4 looks like:</p>
+
+<table> <tr><td>
+<p><a class="cow-url" href="/pages/images/mopi/pimoroni/lowprofile-1.jpg"><img class="cow-img" src="/pages/images/mopi/pimoroni/lowprofile-1-500x500.jpg" alt="MoPi product pic"></a></p>
+</td><td>
+<p><a class="cow-url" href="/pages/images/mopi/pimoroni/stackable-2.jpg"><img class="cow-img" src="/pages/images/mopi/pimoroni/stackable-2-500x500.jpg" alt="MoPi product pic"></a></p>
+</td></tr> <tr><td>
+<p><a class="cow-url" href="/pages/images/mopi/pimoroni/b+-lowprofile-3.jpg"><img class="cow-img" src="/pages/images/mopi/pimoroni/b+-lowprofile-3-500x500.jpg" alt="MoPi product pic"></a></p>
+</td><td>
+<p><a class="cow-url" href="/pages/images/mopi/pimoroni/lowprofile-1.jpg"><img class="cow-img" src="/pages/images/mopi/pimoroni/lowprofile-1-500x500.jpg" alt="MoPi product pic"></a></p>
+</td></tr> <tr><td>
+<p><a class="cow-url" href="/pages/images/mopi/pimoroni/b+-lowprofile-1.jpg"><img class="cow-img" src="/pages/images/mopi/pimoroni/b+-lowprofile-1-500x500.jpg" alt="MoPi product pic" width="500" height="500"></a></p>
+</td><td>
+<p><a class="cow-url" href="/pages/images/mopi/pimoroni/b+-lowprofile-2.jpg"><img class="cow-img" src="/pages/images/mopi/pimoroni/b+-lowprofile-2-500x500.jpg" alt="MoPi product pic"></a></p>
+</td></tr> <tr><td>
+<p><a class="cow-url" href="/pages/images/mopi/pimoroni/lowprofile-2.jpg"><img class="cow-img" src="/pages/images/mopi/pimoroni/lowprofile-2-500x500.jpg" alt="MoPi product pic"></a></p>
+</td><td>
+<p><a class="cow-url" href="/pages/images/mopi/pimoroni/lowprofile-3.jpg"><img class="cow-img" src="/pages/images/mopi/pimoroni/lowprofile-3-500x500.jpg" alt="MoPi product pic"></a></p>
+</td></tr> <tr><td>
+<p><a class="cow-url" href="/pages/images/mopi/pimoroni/stackable-1.jpg"><img class="cow-img" src="/pages/images/mopi/pimoroni/stackable-1-500x500.jpg" alt="MoPi product pic"></a></p>
+</td><td>
+<p><a class="cow-url" href="/pages/images/mopi/version-4-top.jpg"><img class="cow-img" src="/pages/images/mopi/version-4-top-500x375.jpg" alt="Version 4 top" width="500" height="375"></a></p>
+</td></tr> <tr><td>
+<p><a class="cow-url" href="/pages/images/mopi/closeups/2.jpg"><img class="cow-img" src="/pages/images/mopi/closeups/2-500x408.jpg" alt="Version 4 closeup 2" width="500" height="408"></a></p>
+</td><td>
+<p><a class="cow-url" href="/pages/images/mopi/closeups/1.jpg"><img class="cow-img" src="/pages/images/mopi/closeups/1-500x344.jpg" alt="Version 4 closeup 1" width="500" height="344"></a></p>
+</td></tr>
+</table>
+
+<!--% %(images/mopi/version-4-bottom.jpg,-->
+
+<!--% %image(images/mopi/version-4-bottom-500x375.jpg, Version 4 bottom, 500, 375))-->
+
+
+<p>Here's what the level 3 revision looked like (<em>without</em> the wiring connector
+or the GPIO connector or the power switch, which were soldered by hand after
+these pictures were taken):</p>
+
+<p>Top of the board:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/pre-production-boards-02.jpg"><img class="cow-img" src="/pages/images/mopi/pre-production-boards-02-500x375.jpg" alt="Pre-production MoPi
+top" width="500" height="375"></a></p>
+
+<p>Underneath the board:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/pre-production-boards-01.jpg"><img class="cow-img" src="/pages/images/mopi/pre-production-boards-01-500x375.jpg" alt="Pre-production MoPi bottom" width="500" height="375"></a></p>
+
+<p>The stackable headers (for when MoPi is used in tandem with other add-on
+boards) take up quite a lot of vertical space in order to provide a set of
+pass-through pins above the MoPi board. Therefore we offered two versions,
+one with the stackable header and one with a standard low-profile header.</p>
+
+<p>This is the stackable header that we're using (from Adafruit):</p>
+
+<p><a class="cow-url" href="https://www.adafruit.com/products/1112"><img class="cow-img" src="https://www.adafruit.com/images/medium/1112_MED.jpg" alt="Adafruit Stacking
+Header"></a></p>
+
+<p>You can see an example here of the low-profile header, on the revision 2
+board:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/mopi-underside.jpg"><img class="cow-img" src="/pages/images/mopi/mopi-underside-500x326.jpg" alt="MoPi 2 underside" width="500" height="326"></a></p>
+
+<p>Here's the other side of the second-generation prototype board with some
+batteries:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/proto2-01.jpg"><img class="cow-img" src="/pages/images/mopi/proto2-01-500x379.jpg" alt="mopi prototype 2/1" width="500" height="379"></a></p>
+
+<p>The shape of the PCB allows it to fit into the
+<a class="cow-url" href="http://shop.pimoroni.com/products/pibow-raspberry-pi-case">Pibow</a> without blocking the Pi's
+display output (soon to be used for the
+<a class="cow-url" href="http://www.raspberrypi.org/">Pi Foundation</a>'s
+<a class="cow-url" href="http://raspi.tv/2014/raspberry-pi-official-7-inch-dsi-prototype-preview">DSI touch screen</a>). There's space for a pass-through GPIO header so that other
+add-on boards can share space on the Pi, separate LEDs for overall function
+and for the two power inputs, and a neat little power switch on the top.</p>
+
+<p>(The good people at <a class="cow-url" href="http://www.pimoroni.com/">Pimoroni</a> are doing a custom
+lid for their Pibow case to give direct access to MoPi's power switch and
+stacking header. <a class="cow-non-existant-url" href="/posts/2014/06/03/custom-pibow-lid/">See it here!</a>)</p>
+
+<p>And here are the first-generation prototype boards:</p>
+<table> <tr><td> &nbsp;&nbsp;</td><td>
+<p><a class="cow-url" href="/pages/images/mopi/prototype-regulator-05.jpg"><img class="cow-img" src="/pages/images/mopi/thumbs/prototype-regulator-05.jpg" alt="mopi prototype 5" width="200" height="194"></a></p>
+</td><td> &nbsp;&nbsp;&nbsp; </td><td>
+<p><a class="cow-url" href="/pages/images/mopi/prototype-controller-01.jpg"><img class="cow-img" src="/pages/images/mopi/thumbs/prototype-controller-01.jpg" alt="mopi prototype 6" width="270" height="195"></a></p>
+</td></tr>
+</table>
+<p>The software is <a class="cow-url" href="http://www.fsf.org/about/what-is-free-software">open source</a>
+(of course) and available at
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon">our
+Pi-Tronics repository</a>.</p>
+
+<p>The basic functionality was all in place by early 2014; the success of the
+Kickstarter allowed us to add lots of new features, including:</p>
+
+<ul>
+<li>Dealing with more rechargeable battery chemistries.</li>
+<li>The internal Pi circuitry can run on 3.3 volts (saving some power loss in
+  the on-board linear regulator &mdash; <a class="cow-url" href="http://www.daveakerman.com/">Dave
+  Akerman's balloons</a> use this strategy to increase battery life); MoPi can
+  now be hacked to support 3.3 volt output. :-)</li>
+<li>2-way communication (on the I2C bus) between MoPi and Pi supports
+  configuration from the Pi.</li>
+<li>Screw terminals, stackable headers, remoting pads and self-resetting fuse.</li>
+<li>Remote power-off and timer-based wake-up added.</li>
+</ul>
+
+<p>The next two sections discusses the <a class="cow-url" href="#perfect">overall design</a> of MoPi and
+then the <a class="cow-url" href="#monitoring">monitoring and configuration software</a>. Then we give
+some detail of <a class="cow-url" href="#howitworks">how it works</a>, and look at <a class="cow-url" href="#measures">system
+performance</a> and measure how long a Pi can run with various configurations and
+battery types. We also describe a few of the <a class="cow-url" href="#wild">millions of
+applications</a> for mobile Pi power. Finally we link to <a class="cow-url" href="#batteries">sites
+selling batteries</a> and some other <a class="cow-url" href="#other">useful resources</a>.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="perfect"></a></p><a class="cow-section-anchor" name="section-3.2."></a><h2 class="cow-heading"><span class="cow-sec-number">3.2. </span>The Perfect Battery Pack</h2>
+
+<p><a class="cow-url" href="http://pi.gate.ac.uk/pages/images/mopi/perfect-pack.png"><img class="cow-img" src="/pages/images/mopi/perfect-pack.png" alt="The perfect pack" width="563" height="295"></a></p>
+
+<p>What would the perfect Pi battery pack look like? It should be:</p>
+
+<p><b>Low cost</b>. Dedicated battery supplies like those sold as phone charging
+devices are great, but when they no longer hold charge the whole unit has to
+be recycled. Standard commodity batteries and the reusable chargers that serve
+them are well-established and already present in many households. They're the
+cheapest and most flexible option.</p>
+
+<p><b>Flexible</b>. Got a solar panel handy? I want to plug it into the circuitry and
+have it drive the Pi as long as the sun shines, then let a battery take over
+when the clouds come. Stuck for power but got an old laptop supply or 12 volt
+car charger handy? Strip the cables, connect, and power my Pi please! Plugging
+a bunch of peripherals? I want to be able to drive them all via my battery
+pack. And etc.</p>
+
+<p><b>Polite</b>. When you're running your laptop on battery and it runs out of juice
+it gives you a nice polite warning message or two, and, when the level gets
+really low, it automagically shuts down the machine. This is important to
+allow the operating system (e.g. <a class="cow-url" href="/pages/basics.html#footnote1">Raspbian Linux</a> on
+the Pi) to close up any open files and generally tidy the house before power
+disappears. Just killing the power without warning is risky &mdash; sometimes
+nothing bad happens, but in the worst case you can end up with a machine that
+won't boot and needs a complete reinstall. So I want my battery pack to signal
+the Pi when levels are low, so that the Pi can shut itself down cleanly. Good
+manners are important, after all. :-)</p>
+
+<p>While we're at it, if the battery pack is going to tell the Pi when it is
+getting low and needs to shut down, why not have an <b>on/off switch</b> into the
+bargain? The &quot;off&quot; signal triggers clean shutdown, and is very convenient when
+you're using the Pi in any kind of kiosk or appliance context. Several
+projects have implemented this type of on/off facility in its own right &mdash;
+e.g. <a class="cow-url" href="http://lowpowerlab.com/atxraspi/">the ATX Pi supply</a> or the
+<a class="cow-url" href="http://www.susa.net/wordpress/2012/11/raspberry-pi-power-controller/">PIC
+controller</a> &mdash; it's definitely a useful function to have on board.</p>
+
+<p><b>Uninterruptible</b>. I don't want to stop work when my battery is low if I've
+got a charged pack handy (or a different source of power, like a car cigarette
+lighter socket or the like). So I'd like my battery pack to support <b>hot-swap</b>
+of a new electricity supply, either a new set of batteries or some other new
+input.</p>
+
+<p><b>Eco-friendly</b>. One of the great things about the Pi is its low carbon
+footprint. The recent ones in <a class="cow-url" href="http://pi.gate.ac.uk/">my lab</a> are made in
+Wales, so they haven't travelled half way around the world to reach me. The
+base system is bare-bones, which encourages reuse of power supplies, monitors,
+cables and the like. The power consumption is low &mdash; particularly for the
+Model A, which gets by on 300 mA or below (at 5 volts this adds up to around
+1.5 watts &mdash; contrast that with
+<a class="cow-url" href="https://secure.www.upenn.edu/computing/resources/category/hardware/article/computer-power-usage">50 watts and above</a> for a desktop PC!). There's no spare planet and our
+resources are definetely finite, so we definitely want to support rechargeable
+batteries. Preferably not the built-in variety (like a mobile phone) that are
+hard to recycle.</p>
+
+<p><b>Communicative</b>. I want to know when the battery is full, when it is starting
+to get low and when it is critical. I want to be able to get those signals
+both when logged in to the Pi and visually from the battery pack itself.
+(Look! Flashing lights!)</p>
+
+<p><b>Robust</b>. I'm pretty unreliable at the best of times. When crawling through
+the underbrush with a camera-equiped Pi rig
+<a class="cow-non-existant-url" href="/posts/2013/08/05/chasing-pine-martens/">in search of Pine Marten lairs</a> I'm
+very likely to plug the wrong end of the stick and end up with my foot in my
+mouth, to coin a mixed metaphor or three. Over-volt and spike protection are
+definitely requirements.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="software"></a></p><a class="cow-section-anchor" name="section-4."></a><h1 class="cow-heading"><span class="cow-sec-number">4. </span>The MoPi Software Suite</h1>
+
+<p>This section describes how the MoPi software suite works and how the
+architecture of MoPi hangs together.</p>
+
+<p>There are four main parts of the puzzle:</p>
+
+<ul>
+<li>A <em>daemon</em> which runs in the background on the Pi, which is called
+  <a class="cow-url" href="#simbamond">simbamond</a> (simbamon daemon, or SImple BAttery MONnitor
+  daemon). It is available as a package for Raspbian, and installing it pulls
+  in all MoPi software.</li>
+<li>An interface that communicates with the MoPi hardware over the I2C protocol.
+  This interface is wrapped up as a <a class="cow-url" href="#api">Python API</a>.</li>
+<li>A <a class="cow-url" href="#cli">command-line tool</a> that uses the Python API and provides a
+  language-neutral portable method for talking to the board from the Pi.</li>
+<li>A <a class="cow-url" href="#configuration-tool">configuration user interface</a> that simplifies the
+  process of setting up MoPi to deal with different types and numbers of
+  batteries, and other types of power supply.</li>
+</ul>
+
+<p>All of the code for these components is
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon">available on GitHub</a>.</p>
+
+<p>The rest of this section discusses each of the main elements in turn,
+describes how to check up on the beast as it runs, and finishes up with more
+detail of the implementation of the daemon.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="simbamond"></a></p><a class="cow-section-anchor" name="section-4.1."></a><h2 class="cow-heading"><span class="cow-sec-number">4.1. </span>simbamond, the simbamon daemon</h2>
+
+<p>When the Pi (or any other Linux system) boots, several system services are
+started that will run continuously until the machine is shut down again. These
+services are called <em>daemons</em>, of which simbamon is one. The first point of
+entry, used by the operating system to start, stop, etc., is an init (think
+initialisation) script:
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamond.default"><tt>/etc/init.d/simbamond</tt></a>. This script (which you can think of as a wrapper for
+management) calls another script to do the real work:
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamon"><tt>/usr/sbin/simbamon</tt></a>.</p>
+
+<p>One of key features of MoPi is that it supports many different types of
+batteries and many other types of power supply (from solar panels to elastic
+bands!). Coping with the requirements of all these monsters needs a huge wodge
+of configuration data, which (following Debian Linux convention) lives in
+<tt>/etc/default/</tt> in a file (again, confusingly) called
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamond.init"><tt>simbamond</tt></a>.<span class="cow-footnote" name="footnote9"><sup><a href="#footnote9">9</a></sup></span></p>
+
+<p>Together these three script files make up a new system service that polls the
+MoPi hardware every couple of seconds and shouts loudly when an electron
+shortage appears on the horizon. If no one is listening and the shortage gets
+acute, the daemon tells the Pi to take a rest and issues the <tt>shutdown</tt>
+command.</p>
+
+<p>There is <a class="cow-non-existant-url" href="/pages/mopi.html#simbamon">more detail below</a>.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="api"></a></p><a class="cow-section-anchor" name="section-4.2."></a><h2 class="cow-heading"><span class="cow-sec-number">4.2. </span>The Python API</h2>
+
+<p>How do we talk to the hardware? From MoPi version 3 onwards we shifted away
+from using the Pi's general-purpose GPIO pins (using a tool called WiringPi).
+This worked well, but it used a pin for each bit of data that we wanted to
+ship between the board and the Pi. As time went on we found more and more data
+that we needed to share (and we also came across other add-on boards that use
+lots of GPIO pins &mdash; e.g. <a class="cow-url" href="http://pi.gate.ac.uk/posts/2014/02/07/airpi1/">AirPi</a>).</p>
+
+<p>Luckily the Pi also hosts several other inter-board communication options,
+including the I2C protocol, which uses only two pins, can talk to multiple
+devices over the same two wires, and allows transfer of much larger amounts of
+data.</p>
+
+<p>There are two ways to talk over I2C from the Pi: a set of command-line tools
+written in C, and a Python module. Both work, but the Python version seems to
+have had more attention from Pi users and developers, and even has support for
+multi-byte reads. So we've implemented an API for MoPi in Python<span class="cow-footnote" name="footnote10"><sup><a href="#footnote10">10</a></sup></span>, which
+now lives in a file called
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopiapi.py"><tt>mopiapi.py</tt></a>. For Python programmers this code provides a natural and
+efficient method of including MoPi facilities in their programs. For example,
+writing a system tray applet...</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="cli"></a></p><a class="cow-section-anchor" name="section-4.3."></a><h2 class="cow-heading"><span class="cow-sec-number">4.3. </span>MoPi from the Command Line</h2>
+
+<p>The observant amongst you may have noticed that simbamon is not written in
+Python<span class="cow-footnote" name="footnote11"><sup><a href="#footnote11">11</a></sup></span> &mdash; how does the daemon talk to the board when the API is in Python?
+That's where
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopicli"><tt>mopcli</tt></a> comes in, which is a command-line interface to the Python API. This
+script provides convenient methods for the daemon to use, or for Pi users to
+query and configure the board, or for our configuration utility &mdash; which by
+amazing coincidence is described next.</p>
+
+<p>To see what the beast can do, ask it for help by typing <tt>sudo mopicli -h</tt>;
+you'll get something like this:</p>
+
+<pre>
+Usage: mopicli [-h] [options]
+This tool is for interfacing with the MoPi battery power add-on
+  board for the Raspberry Pi. (http://pi.gate.ac.uk)
+Package Version 4.0
+Version 0.5, API 0.3
+
+Miscellaneous:
+  -i x	I2C bus
+    Where x is the I2C bus that connects the MoPi to the Raspberry Pi. If ths
+    flag is not set, the default bus of 1 is used, based on board revision.
+  -fv	Firmware version
+  -sn	Serial number
+  -h	Display this message
+  -e	Read everything possible from the MoPi
+  -nl	No labels on output
+
+Status:
+  -s	MoPi status word
+  -sv	Verbose status
+  -v	Current source voltage in mV
+  -v1	Source #1 voltage in mV
+  -v2	Source #2 voltage in mV
+
+Read configuration options:
+  -rc	Combined source #1/#2 conf
+  -rc1	Source #1 conf
+  -rc2	Source #2 conf
+  -ron	Power on delay
+  -rsd	Shutdown delay
+
+Write configuration options:
+  -wc t mV mV mV mV	Combined source #1/#2 conf
+  -wc1 t mV mV mV mV	Source #1 conf
+  -wc2 t mV mV mV mV	Source #2 conf
+    Where t (type) is 1 for rechargeable batteries, 2 for non-rechargeable
+    batteries, 3 for PSU / DC adapter, and the four mV settings are the
+    mmaximum, good, low, and critical voltage levels.
+  -won seconds		Power on timer in seconds
+    This timer counts down from the moment the MoPi is powered off and turns it
+    back on when reaching zero.
+  -wsd seconds		Shutdown timer in seconds
+    This timer counts down from the moment it is set and powers off the MoPi
+    when reaching zero.
+
+All options may be used simultaneously. When doing so, they execute in the
+  order they are listed in in this help message. However, only one of each may
+  be used.
+</pre>
+
+<p>As easy as pie.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="config-ui"></a></p><a class="cow-section-anchor" name="section-4.4."></a><h2 class="cow-heading"><span class="cow-sec-number">4.4. </span>Configuring Your Power Supplies</h2>
+
+<p>Not quite so easy is choosing the correct voltage settings for different
+battery chemistries and different combinations of cells (not to mention other
+types of power supply). In each case MoPi needs to know:</p>
+
+<ul>
+<li>What is the approximate voltage that the battery will supply when fully
+  charged?</li>
+<li>What is the point at which we're getting low on charge? (And therefore may
+  expect to run out of juice within a few minutes or so.)</li>
+<li>what is the minimum safe discharge voltage? (Just above the critical deep
+  discharge level of the batteries.)</li>
+</ul>
+
+<p>The mid-point between the first two voltages is is the conventional definition
+of what a good level of charge is, so that's where we swap between lighting up
+our RGB led in blue and lighting it in green. When we reach the low charge
+point we turn the LED red, and when we reach the minimum safe discharge
+voltage (or the minimum safe operating voltage of our micro-controller at 6.2V
+if that is higher) then we initiate shutdown.</p>
+
+<p>Let's look at each of these values in more detail:</p>
+
+<ul>
+<li><em>Fully-charged voltage</em>. This is equal to the fully-charged voltage of each
+  cell in the battery pack multiplied by the number of cells. Like most things
+  with batteries, it varies according to battery chemistry &mdash; e.g. an Alkaline
+  cell generates 1.5V; a NiMH 1.2V; a LiIon 3.7V.</li>
+<li><em>The low charge level</em>. When you record the voltage delivered by a battery
+  over time, most of the curves exhibit a knee shape. Before the knee voltage
+  drop is reasonably slow; after the knee if drops much more sharply. We need
+  to try and warn the user around the knee point, so that they have enough
+  time to replace the battery before it drains completely, but not so much
+  time that there is still lots of usable charge left.</li>
+<li><em>Minimum safe discharge voltage</em>. This applies to all rechargeable
+  batteries. If we discharge below this level, then the capacity to recharge
+  will be impared. This makes it a very important factor in battery life for
+  the long term, and one which we've done a lot of work to model and adapt to.
+  (Ever wondered why the rechargeables that you put in your alarm clock or
+  torch lasted such a short time? Most devices have no way of knowing about
+  the minimum discharge level for the particular chemistry you're using!)</li>
+<li><em>Minimum safe operating level</em>. MoPi uses a sophisticated microcontroller to
+  analyse battery behaviour, control its LEDs and deliver data to the software
+  suite running on the Pi. If the supply voltage to MoPi falls below a certain
+  level (around 6.2V) then the microcontroller may terminate, or even start to
+  behave unpredictably. It is very important to trap rapid voltage drop before
+  it reaches this point.</li>
+</ul>
+
+<p>To deal with all these considerations, the current version of the software
+stores these values:</p>
+
+<pre>
+        TYPE         CELL/FULL  MIN
+
+  1     non-battery     9.0     6.2
+  2     NiMH            1.2     0.95
+  3     Alkaline        1.5     0.8
+  4     Lead Acid       2.0     1.58
+  5     Lithium Ion     3.7     3.0
+  6     LiPo            4.2     3.0
+  7     NiCd            1.2     1.1
+</pre>
+
+<p>When we know what chemistry we're dealing with, and how many cells, we can
+then make good guesses about where the four levels above should fall. But how
+do we know what the chemistry is? Two ways:</p>
+
+<ul>
+<li>We have <a class="cow-url" href="#default-profiles">two built-in defaults</a>, one for 8 NiMH cells
+  (which is the battery pack that we're supplying to backers who requested
+  one), and one for 8   Alkaline non-rechargeables. The latter is what MoPi
+  will assume when running out of the box; the former is activated by
+  removing the on-board jumper provided for the purpose<span class="cow-footnote" name="footnote12"><sup><a href="#footnote12">12</a></sup></span>.</li>
+<li>You tell us! To this end we have developed a configuration UI on the Pi,
+  which is the last piece in our four part software puzzle.</li>
+</ul>
+
+<p>The configuration UI uses the same tools as the Raspberry Pi's utility
+(<tt>raspi-config</tt>), so it should be simple and familiar, and it can be used over
+all types of connections (including remote login with <tt>ssh</tt>). Here's a
+screenshot or three:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/config-01.png"><img class="cow-img" src="/pages/images/mopi/config-01.png" alt="MoPi Config UI 1" width="500" height="336"></a></p>
+
+<p><em>The main entry screen.</em> <br> <br></p>
+
+<p><a class="cow-url" href="/pages/images/mopi/config-02.png"><img class="cow-img" src="/pages/images/mopi/config-02.png" alt="MoPi Config UI 2" width="500" height="333"></a></p>
+
+<p><em>Configuring one of the power supplies, battery chemistry.</em> <br> <br></p>
+
+<p><a class="cow-url" href="/pages/images/mopi/config-03.png"><img class="cow-img" src="/pages/images/mopi/config-03.png" alt="MoPi Config UI 3" width="500" height="334"></a></p>
+
+<p><em>Getting status data (there's lots more in the newest version!).</em></p>
+
+<p>Dive into
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopi">the source code here</a>.</p>
+
+<p>And now you know more about batteries than you ever wanted to &mdash; just like me!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-4.5."></a><h2 class="cow-heading"><span class="cow-sec-number">4.5. </span>Monitoring</h2>
+
+<p>As you can imagine, figuring out how all this stuff is working and identifying
+bugs and incorrect behaviour is quite a challenge. Luckily we have some great
+tools to help us, one of which is <a class="cow-url" href="https://mmonit.com/">Monit</a>. This little
+gem is itself a daemon, and it has facilities for one thousand and one
+different types of monitoring task. You can listen to your webserver and
+restart it if it fails, or check the general load of the machine you're
+running on, or &mdash; in our case &mdash; check that the simbamon service is running,
+and if not start it up.</p>
+
+<p>To use it, all we need to do is <tt>sudo apt-get install monit</tt> in the usual way,
+then edit <tt>/etc/monit/monitrc</tt>. This is the config we're using to monitor
+simbamon on one of our test rigs:</p>
+
+<p><pre class="prettyprint lang-bash">
+###############################################################################
+# monit config for simbamond, from /etc/monit/monitrc #########################
+
+# monitoring UI (serve on port 8888 and allow connections from one IP address)
+set httpd port 8888 and
+  allow 192.168.1.111
+
+# general system status
+check system mopi-15
+  if loadavg (1min) &gt; 4 then alert
+  if loadavg (5min) &gt; 2 then alert
+  if memory usage &gt; 75% then alert
+  if swap usage &gt; 25% then alert
+  if cpu usage (user) &gt; 70% then alert
+  if cpu usage (system) &gt; 30% then alert
+  if cpu usage (wait) &gt; 20% then alert
+
+# monitor simbamond
+check process simbamond with pidfile /var/run/simbamond.pid
+  start program = &quot;/usr/sbin/service simbamond start&quot; with timeout 60 seconds
+  stop program  = &quot;/usr/sbin/service simbamond stop&quot;
+  restart program = &quot;/usr/sbin/service simbamond restart&quot; with timeout 60 seconds
+  if cpu &gt; 60% for 2 cycles then alert
+  if cpu &gt; 80% for 5 cycles then restart
+  if totalmem &gt; 200.0 MB for 5 cycles then restart
+  if children &gt; 250 then restart
+  if loadavg(5min) greater than 10 for 8 cycles then stop
+  if 3 restarts within 5 cycles then timeout
+  group mopi
+###############################################################################
+</pre>You can then see what's going on by either or both of</p>
+
+<ul>
+<li><tt>cat /var/log/monit.log</tt> (<tt>| grep simbamon</tt> is also useful)</li>
+<li>pointing your browser at <tt><span class="cow-escape">h</span>ttp://my-pi-ip-address:8888</tt> (if you need to
+  find your IP address various methods are <a class="cow-non-existant-url" href="/pages/blinkip.html">discussed
+  here</a>)</li>
+</ul>
+
+<p>This is great for keeping check on things during load testing (particularly
+heavy loads which have a tendency to cause odd corner case bugs to trigger),
+but it is also a great tool for maximising service availability &mdash; the
+configuration code above will restart simbamon within a couple of minutes
+should it ever crash, for example.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="simbamon"></a></p><a class="cow-section-anchor" name="section-4.6."></a><h2 class="cow-heading"><span class="cow-sec-number">4.6. </span>simbamon: a simple battery monitor</h2>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-4.6.1."></a><h3 class="cow-heading"><span class="cow-sec-number">4.6.1. </span>Design Notes</h3>
+
+<p>There are a variety of ways that laptops communicate with and control their
+batteries, including the
+<a class="cow-url" href="http://batteryuniversity.com/learn/article/inner_workings_of_a_smart_battery">Smart Battery specification</a> (which often uses SMBus, a variant of the I2C
+interface that the Pi supports). In Linux the resultant data feed is then
+modelled using a power management abstraction (of which ACPI is the most
+recent) and manipulated using a driver specific to the battery in use.</p>
+
+<p>Sounds like a good idea? Yes, in the abstract, but implementing a new driver
+is quite a job &mdash;
+<a class="cow-url" href="https://github.com/torvalds/linux/blob/master/drivers/acpi/battery.c">here's
+one</a> that runs to 1200 lines of C code, for example. It is also not clear how
+to do this when we have the ability to plug in batteries of different types,
+which is something we really wanted to support.</p>
+
+<p>What to do?</p>
+
+<p>If in doubt, take the simple option. All Linux systems share the system
+service or <em>daemon</em> concept. A system-level process which gets run during 
+startup. It is quite easy to implement a battery monitor daemon that
+listens on the Pi's I2C bus for level changes signalled by the MoPi
+microcontroller board. The daemon then makes entries in the standard system
+logs as a simple way to share data with other subsystems, and can be
+configured to send a warning message to all users if levels are low. Best of
+all, the daemon can easily shut down the Pi cleanly before the regulator
+voltage gets too low for reliable operation.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-4.6.2."></a><h3 class="cow-heading"><span class="cow-sec-number">4.6.2. </span>Implementation</h3>
+
+<p>This section gives more detail of the implementation of the simbamon battery
+monitoring daemon. It is designed for the MoPi boards, but should be quite
+easily reusable for other battery power projects. simbamon is an open source
+Linux daemon for:</p>
+
+<ul>
+<li>Monitoring battery levels (for us this is done via the   <a class="cow-url" href="#cku"><tt>mopicli</tt></a>
+  command).</li>
+<li>Sending warning messages to the user if the battery is low.</li>
+<li>Shutting down cleanly at critical battery levels.</li>
+<li>Managing a power supply on/off switch.</li>
+<li>Writing relevant data to the system logs.</li>
+</ul>
+
+<p>You can find
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon">the source code</a> on GitHub. The core of the daemon is defined in three files:</p>
+
+<ul>
+<li><tt>/etc/init.d/simbamond</tt> &mdash; an interface to the <tt>init</tt> subsystem that Linux
+  uses to manage daemons (amongst other things)</li>
+<li><tt>/usr/sbin/simbamon</tt> &mdash; the daemon itself</li>
+<li><tt>/etc/default/simbamond</tt> &mdash; configuration data</li>
+</ul>
+
+<p>The first of these, <tt>simbamond</tt>, is used by the operating system to start and
+stop simbamon at boot or shutdown time, and can be used to control simbamon
+manually when required. For example this command will stop the daemon:</p>
+
+<p><pre class="prettyprint lang-bash">
+sudo service simbamond stop
+</pre>The configuration file, (also) <tt>simbamond</tt>, defines how simbamon will take
+action. Of primary interest is the last few lines, which specifies the battery
+configuration in <a class="cow-url" href="#cli">CLI</a> format. There's some generic stuff at the top
+too about monitoring frequency and stuff, it's pretty well explained in the
+file.</p>
+
+<p><pre class="prettyprint lang-bash">
+####################################################################
+# local config - DON'T EDIT THIS LINE!
+# -wc 1 11200 10000 8800 8000
+# end of local config - DON'T EDIT THIS LINE EITHER!
+</pre>The MoPi microcontroller supplies these states via the Raspberry Pi's
+<a class="cow-url" href="http://en.wikipedia.org/wiki/I%C2%B2C">I2C bus</a> (and also sets on-board
+indicator LEDs accordingly). The core of simbamon, a shell script that lives
+in <tt>/usr/sbin/simbamon</tt>, implements an infinite loop that checks the levels
+being reported every few seconds and takes any necessary action. The <tt>wall</tt>
+command is used to send messages to any user currently logged in.</p>
+
+<p>Here's a condensed version of the main loop (error checking, debug logging and
+other details omitted):</p>
+
+<p><pre class="prettyprint lang-bash">
+while :
+do
+  # loop indices
+  i=$(( ${i} + 1 )); j=$(( ${j} + 1 ))
+
+  # get MoPi status
+  MOPI_STATUS=&quot;`mopicli -nl -s`&quot;
+
+  # action states (shutdown or warn)
+  if s_forced_shutdown &quot;$MOPI_STATUS&quot;
+  then
+    wall &lt;&lt;&lt; &quot;${NAME}: power off requested: shutting down now!!!&quot;
+    logger &quot;${NAME}: shutting down (POWER_OFF; ${MOPI_STATUS})&quot;
+    eval &quot;$SHUTDOWN&quot;
+  elif s_bat_critical &quot;$MOPI_STATUS&quot;
+  then
+    wall &lt;&lt;&lt; &quot;${NAME}: battery empty: shutting down now!!!&quot;
+    logger &quot;${NAME}: shutting down (BAT_SHUTDOWN; ${MOPI_STATUS})&quot;
+    eval &quot;$SHUTDOWN&quot;
+  elif s_bat_low &quot;$MOPI_STATUS&quot;
+  then
+    if [ $PREV_WARNING -eq 0 -o $(( $i - $PREV_WARNING )) -ge $WAIT_LOOPS ]
+    then
+      PREV_WARNING=$i
+      wall &lt;&lt;&lt; &quot;${NAME}: ${LMESS} is low! connect new battery or shut down&quot;
+      logger &quot;${NAME}: BAT_WARNING (${MOPI_STATUS})&quot;
+    fi
+  fi
+
+  # routine log messages
+  [ &quot;$DEBUG&quot; = on -o ${j} -eq ${LOG_INTERVAL} ] &amp;&amp; \
+    logger &quot;${NAME}: ${LMESS} is ${MOPI_STATUS} at `pdate` (i=${i})&quot; &amp;&amp; j=0
+
+  # take a break
+  sleep ${MONITOR_FREQUENCY}
+done &amp;
+</pre>Here is the
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamon">current version of the code</a>.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="installing"></a></p><a class="cow-section-anchor" name="section-4.6.3."></a><h3 class="cow-heading"><span class="cow-sec-number">4.6.3. </span>Installing simbamon</h3>
+
+<p>The <a class="cow-url" href="http://www.raspberrypi.org/archives/tag/alex-bradbury">Raspbian
+maintainers</a> have been kind enough to include simbamon in their repository, so
+you can just do this (as <a class="cow-url" href="#quick-install">noted above</a>):</p>
+
+<p><pre class="prettyprint lang-bash">
+  sudo apt-get install simbamond
+</pre>Our software is also available from an
+<a class="cow-url" href="https://launchpad.net/~hamish-dcs/+archive/pi-gate">Ubuntu Personal Package
+Archive</a> (PPA). (The Ubuntu infrastructure doesn't currently work for binary
+Pi packages, but simbamon and the rest of the MoPi suite is implemented in
+script (shell and Python), so we're ok in this case.)<span class="cow-footnote" name="footnote13"><sup><a href="#footnote13">13</a></sup></span>
+To install from this archive:</p>
+
+<p><b>1.</b> Add this line to /etc/apt/sources.list:</p>
+
+<p><pre class="prettyprint lang-bash">
+deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main
+</pre>You can use a text editor (e.g. nano) to do this, or paste this one-liner into
+a terminal prompt:</p>
+
+<p><pre class="prettyprint lang-bash">
+echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main |sudo tee -a /etc/apt/sources.list
+</pre><b>2.</b> Import the <a class="cow-url" href="http://www.gnupg.org/">GPG</a> encryption key from Ubuntu so
+that the Pi can verify the package's validity:</p>
+
+<p><pre class="prettyprint lang-bash">
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com --recv-key 6C12C1CF
+</pre><b>3.</b> Update your list of available packages (this may take a couple of
+minutes):</p>
+
+<p><pre class="prettyprint lang-bash">
+  sudo apt-get update
+</pre><b>4.</b> Install the package:</p>
+
+<p><pre class="prettyprint lang-bash">
+  sudo apt-get install simbamond
+</pre>And that's it!</p>
+
+<p>Note: the above gets you the most recent stable release; if you want to live
+on the edge, you can get more recent experimental builds by adding the
+snapshot PPA to your sources list, e.g.:</p>
+
+<p><pre class="prettyprint lang-bash">
+echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate-snapshots/ubuntu precise main |sudo tee -a /etc/apt/sources.list
+</pre><a name="howitworks"></a></p><a class="cow-section-anchor" name="section-5."></a><h1 class="cow-heading"><span class="cow-sec-number">5. </span>How it Works: the Hardware</h1>
+
+<p>The MoPi circuitry consists of two parts: a single-chip microcontroller and a
+five volt switching mode regulator. The microcontroller (with embedded
+firmware) implements all the functions related to voltage level monitoring,
+level signalling (via the LEDs and the GPIO interface), and on/off switching
+of the +5V supply to the Pi. Battery voltage levels are measured using the
+built-in microcontroller ADC<span class="cow-footnote" name="footnote14"><sup><a href="#footnote14">14</a></sup></span>.</p>
+
+<p>The schematic looks like this:</p>
+
+<p><img class="cow-img" src="/pages/images/mopi/schematic.png" alt="An early MoPi schematic" width="500" height="292"></p>
+
+<p>Two yellow (or amber) LEDs are positioned next to the twin power pack inputs
+(screw terminals), and indicate their status (blinking when either voltage is
+critically low). The overall voltage level of both power inputs is indicated
+by one RGB (three colour) LED and is also sent to the Raspberry Pi over the
+I2C bus. The 5 volts to the Pi is generated by a highly efficient switch mode
+voltage stabiliser, driven by the microcontroller. An open source daemon
+running on the Pi listens to the I2C signal, informs the user of low battery
+levels and shuts the Pi down cleanly when levels are critically low (or when
+the power switch is pressed, or a delayed shutdown counter expires).</p>
+
+<p>To start the 5V generator the power button should be pressed and held for 3
+seconds. The microcontroller checks the voltage level of the attached battery
+packs under load and if it is above the defined critical battery threshold, it
+switches the stabiliser on to generate 5V for the Pi. The yellow LED for the
+connected power input lights up, and the RGB LED lights up blue when the
+battery pack is fully charged (or green if the voltage level is within the
+acceptable operating range). The current voltage level is also accessible to
+the simbamon daemon on the Pi via I2C<span class="cow-footnote" name="footnote15"><sup><a href="#footnote15">15</a></sup></span>. During operation, the
+microcontroller continuously monitors the voltage level, and when it falls
+beneath a low battery level that it believes leaves only a few minutes of
+operational time, it switches the RGB LED to red. Simultaneously the yellow
+LED for the low battery starts flashing, indicating that the pack needs
+replacement.</p>
+
+<!--% YOUTUBE MOPI BOARD CLIP HERE-->
+<p align="center"> <iframe width="480" height="360" src="//www.youtube.com/embed/33ZzeEIOMLg" frameborder="0" allowfullscreen></iframe> </p>
+
+
+<p>At the same time the LED turns red and the yellow LED starts flashing,
+simbamon (the monitoring daemon on the Pi) gets a low battery flag and informs
+the user that they should either plug in another supply or shut down (again by
+pressing the power button for 3 seconds). If nothing changes and the battery
+continues to discharge down to a critical level, then the RGB LED starts
+flashing red and MoPi forces a shutdown. The user can then remove the old
+battery pack for charging.<span class="cow-footnote" name="footnote16"><sup><a href="#footnote16">16</a></sup></span></p>
+
+<p>Behaviour has to be adjusted for multiple battery chemistries; this is done
+within the microcontroller firmware and can be <a class="cow-url" href="#configuration-tool">configured from the Pi</a>. MoPi has two <a class="cow-url" href="#default-profiles">default discharging
+profiles</a> pre-programmed &mdash; one for NiMH rechargeable batteries and one for
+ordinary Alkaline batteries. Out of the box the Alkaline profile is active; to
+choose the NiMH profile, remove the small jumper located on the under side of
+the board. The jumper applies to both power inputs. The state of the jumper
+can be overridden via configuration from the Pi, separately for each one of
+the power inputs. <b>Note</b>:</p>
+
+<ul>
+<li>The jumper is tiny, and easy to lose. If you need to remove it, do so, but
+  it is then best to replace it, but on only one of the pins.</li>
+<li>When supplying MoPi <em>with NiMH rechargeables</em> we remove the jumper to
+  activate the relevant default profile. (And replace it on only one pin.)</li>
+</ul>
+
+<p>MoPi can be used as a UPS (Uninterruptible Power Supply) in two ways. If the
+Pi is powered over its 5V micro-USB socket and that power drops while MoPi is
+active, the supply fails over transparently, allowing the Pi to continue work
+uninterruped. Note though that if the battery supply drops to critical level
+simbamon will shut the Pi down. We're working on various circuits that work
+around this issue. Alternatively an AC adapter can be plugged into one power
+input on the MoPi and batteries into the other. Neither option gets around
+charging the batteries. Like we said, we're working on it.</p>
+<!--% TODO-->
+
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="measures"></a></p><a class="cow-section-anchor" name="section-6."></a><h1 class="cow-heading"><span class="cow-sec-number">6. </span>Testing</h1>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-6.1."></a><h2 class="cow-heading"><span class="cow-sec-number">6.1. </span>The Longer-Lasting Snack</h2>
+
+<p>So, how long will the batteries last?</p>
+
+<p>My first test was a Model B Pi with almost no load (USB keyboard and mouse;
+monitor attached over HDMI but switched off after starting the test; no
+network or other peripherals). Using eight rechargeable Duracell AA NiMH 2400
+mAh batteries (like
+<a class="cow-url" href="http://www.amazon.co.uk/Duracell-Rechargeable-Accu-2400-Batteries/dp/B0031OE6LG/ref=sr_1_2?ie=UTF8&amp;qid=1375768484&amp;sr=8-2&amp;keywords=duracell+nimh">these ones</a>) the Pi ran for 9 hours 31 minutes. Not bad! Especially when you
+consider that the MoPi regulator supports hot-swap of new charged packs &mdash;
+this looks very viable for mobile Pi applications of all shapes and sizes.</p>
+
+<p>For comparison I set up the same rig with a USB battery pack from RS
+(<a class="cow-url" href="http://uk.rs-online.com/web/p/power-banks/7757508/">this one</a>, a 5200 mAh
+Lithium polymer model). The results were remarkably similar, with the RS pack
+lasting for 9 hours and 21 minutes.</p>
+
+<p>Since then we've conducted <a class="cow-url" href="#detailed-testing">101 different tests</a>. There
+are three key factors in battery life: <b>1.</b> Model A vs. Model B; <b>2.</b> the
+peripherals; <b>3.</b> Activity. To summarise:</p>
+
+<ul>
+<li>You can expect a Model A in some cases to get more than double the battery
+  life of a Model B.</li>
+<li>What you connect to the Pi makes a huge difference. For example, WiFi is a
+  power hog. It will more than halve the battery life of a Model A. It will be
+  even worse on a Model B. A keyboard or accelerometer in contrast, is cheap.
+  <a class="cow-url" href="http://www.piborg.com/xloborg">XLoBorg</a> won't reduce your running time by
+  much in comparison.</li>
+<li>How much you're doing impacts things. If the Pi is effectively idle, just
+  running wit the odd SD card read/write you get the best battery life. As you
+  use the CPU more battery life goes down.</li>
+</ul>
+
+<p>You can also connect two battery packs to MoPi and get double the running
+time.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="detailed-testing"></a></p><a class="cow-section-anchor" name="section-6.2."></a><h2 class="cow-heading"><span class="cow-sec-number">6.2. </span>Battery life</h2>
+
+<p>We've tried using the MoPi in a few different ways, with different
+combinations of Pis, Peripherals, Batteries, and Tasks to find out how long
+the batteries can last. So far we've tried the Model A with some different USB
+devices and with different batteries. We've also tried the Model B with
+different batteries. Let's have a look at some of the results...</p>
+
+<p>A Model A with two sets of 8 fresh RS NiMH 2600 mAH batteries (16 total):
+<img class="cow-img" src="/pages/images/mopi/graphs/mopia2.16fresh.png"></p>
+
+<p>First a quick explanation of the plot. The top half of the figure shows the
+voltage levels. The aqua line is the voltage level of the active power source.
+The batteries pretty much drain perfectly in parallel so it's effectively
+really the voltage level of each battery pack in this case. (If there's only
+one pack attached it's the voltage level of that pack.) The dashed blue,
+green, red, and crimson lines are the voltage levels that affect LED color.
+Above the green line the LED is blue. Below the green line it's green, until
+the red line where it's red. Below the crimson line the LED is flashing red
+and the MoPi is about to shutdown.</p>
+
+<p>The bottom half of the figure shows what we're most interested... <em>time</em>.
+Specifically the colored bar shows how long the MoPi was showing each color on
+the RGB status LED. The yellow bit of the bar corresponds to how long the
+input status LED was flashing. So in this case we had 5 hours 30 minutes of
+blue LED. 43 hours 8 minutes of green LED. 2 hours 44 minutes of red LED. A
+whopping total of 50 hours 38 minutes. Of a Pi. Turned on. Running on AA
+batteries.</p>
+
+<p>This of course is pretty much the ideal scenario. The Raspberry Pi was just
+sitting there, nothing attached, not doing anything but logging voltage once
+every 5 seconds. The batteries were brand new. The little dips in the aqua
+line probably correspond to the SD card being written to or some service (like
+cron) on the Pi activating briefly before going back to being an idle process.</p>
+
+<p>Let's look at a less ideal scenario. Two sets of the same batteries connected
+to a Model A, but this time they're old. They've been through at least a dozen
+or two recharge cycles. There's USB Ethernet<span class="cow-footnote" name="footnote17"><sup><a href="#footnote17">17</a></sup></span> with an active SSH connection. What happens now?
+<img class="cow-img" src="/pages/images/mopi/graphs/mopia2.16old.usbethernet.png"></p>
+
+<p>Oh my! Battery life is now down to half of what it was! Only 24 hours 19
+minutes in this case. The Ethernet and SSH connection has definetely used some
+power. How much it's hard to tell, but this is definetely a more realistic 
+usage scenario.</p>
+
+<p>The shape of the discharge curve is also interesting to see. Voltage drops
+much more sharply, giving less warning that the batteries are low. This is
+almost certainly a result of the age of the batteries.</p>
+
+<p>Now how about just 8 old batteries:
+<img class="cow-img" src="/pages/images/mopi/graphs/mopia2.8old.usbethernet.png"></p>
+
+<p>12 hours! It's pretty much bang on half the uptime for half the batteries.</p>
+
+<p>What about WiFi now? Same deal, Model A, 8 old batteries and an active SSH
+connection:
+<img class="cow-img" src="/pages/images/mopi/graphs/mopia1.8old.wifi.png"></p>
+
+<p>10 hours 30 minutes. We've paid a 1:30 penalty for wireless flexibility.
+That's roughly 12% drop in battery life. With two battery packs we'd loose
+around 3 hours of battery life.</p>
+
+<p>What about the Model B? Let's go back to full idle and 8 fresh batteries:
+<img class="cow-img" src="/pages/images/mopi/graphs/mopib2.8fresh.noethernet.png"></p>
+
+<p>10 hours 46 minutes. Wait, what? With a Model A we'd expect around 24 hours
+for 8 fresh batteries. What's different then between the Model A and the
+Model B? There are at least two things: 512 MB of RAM vs 256 MB of RAM; and
+the Model B has the on board Ethernet (which includes a USB hub for the two
+USB ports that the Model B sports). I'm inclined to blame the USB chip here.
+According to the <a class="cow-url" href="http://ww1.microchip.com/downloads/en/DeviceDoc/9512.pdf">datasheet</a> it has a pretty high current draw at 3.3V, which needs to go
+through the very ineffecient linear regulator on the Model B, further sucking
+power.</p>
+
+<p>On a side note we can confirm these batteries are fresh by the shape of the
+dishcarge curve. That sharp drop off is missing.</p>
+
+<p>Let's connect the Ethernet on the Model B, but still leave off an active
+connection:
+<img class="cow-img" src="/pages/images/mopi/graphs/mopib2.8fresh.ethernet.png"></p>
+
+<p>Ouch. We've lost another hour and a half. Simply by connecting the Ethernet,
+which further activates the USB chip and lights up those LEDs and has the
+system ready to respond to incoming packets.</p>
+
+<p>Let's see what happens with activity and old batteries now:
+<img class="cow-img" src="/pages/images/mopi/graphs/mopib1.8old.ethernet.png"></p>
+
+<p>Down to 7 hours 39 minutes. That's another hour and a half or so. Based on
+the information about power consumption available, that still looks like it's
+mostly due to the Ethernet rather than the age of the batteries. Clearly the
+way to go is to use a Model A. Anything to get away from the USB chip.</p>
+
+<!--%http://www.raspberrypi.org/forums/viewtopic.php?p=164893-->
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-6.2.1."></a><h3 class="cow-heading"><span class="cow-sec-number">6.2.1. </span>Battery life under load</h3>
+
+<p>So far the testing presented has been essentially an idle system (just
+logging) or a system under light load (active ssh). The next set of testing
+cranked up CPU usage to look in more detail at how that impacted battery life.
+The first question is how to achieve CPU load?</p>
+
+<p>Overclockers, people who crank up their CPU speed, often ask the same
+question. In their case though, they're not looking to look into battery life,
+but instead they want to check that their system remains stable and won't
+crash even at higher speeds. They call this &quot;stress testing&quot;, which is really
+just essentially creating CPU load. A popular method of stress testing a CPU
+is to use
+<a class="cow-url" href="http://en.wikipedia.org/wiki/Prime95#Use_for_stress_testing">Prime95</a>.</p>
+
+<p>Prime95 is a program that verifies known prime numbers are indeed prime as
+calculated. Often when a CPU is under extreme conditions, the calculations
+start to come out incorrect, and this tells an overclocker to reduce CPU speed
+to increase stability. This bit isn't so interesting as we're not really
+overclocking the Pi (although it is <a class="cow-url" href="http://elinux.org/RPiconfig#Overclocking">possible</a>). The idea though of calculating prime numbers to generate CPU load
+is what we're after.</p>
+
+<p>A few years ago I played around with testing prime numbers in C++. I rewrote
+that program to be something suitable for applying CPU load to the Pi and put
+it on <a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/loadtest">GitHub</a>.</p>
+
+<p>So! Our first test setup now looks like this. A Model A with 16 AAs and CPU
+load applied in the form of our prime number testing program:
+<img class="cow-img" src="/pages/images/mopi/graphs/mopia2.16fresh.cpuload.png"></p>
+
+<p>An uptime of around 41 hours. That's a drop of around 9 hours. However, there
+are actually two things happening in this test. There's CPU load yes, but also
+the batteries were charged a few days before actually being used. As a result
+the start voltage is a little bit lower: 10.4 V as opposed to 10.8 V. Shelf
+discharge will account for some loss of uptime. Here it's probably around 45
+minutes, but this only gets worse with older batteries.</p>
+
+<p>I'll perform this test again later with more freshly charged batteries, but
+there's an important lesson here. We've said it before and we'll say it again.
+Battery life is <b>variable</b>. It's not just how you're using your Pi, or what's
+connected, but also the batteries themselves can affect how long it runs for.
+The more absolutely consistent you can get your setup the more predictable
+battery life will be, but it's a good idea to have a plan for when the
+batteries run low. That's why the MoPi can tell the Pi to shutdown.</p>
+
+<p>But what about the Model B? Yes, we tested that too. 8 AAs, Ethernet, and
+active SSH displaying our prime number results:
+<img class="cow-img" src="/pages/images/mopi/graphs/mopib2.8fresh.ethernet.cpuload.png"></p>
+
+<p>Just under 8 hours with CPU load and Ethernet... compared to 9 hours without
+CPU load? More time (1.5 hours) is lost simply by connecting the Ethernet than
+by using the CPU. This says two things. The first, which I've already said, is
+that the Ethernet is extremely power hungry on the Model B. The second is that
+really, the CPU of the Pi is pretty energy efficient.</p>
+
+<p>Food for thought. In 8 hours, the Model B managed to check if numbers were
+prime from 1 up to 690k. My Core i5 desktop did the same check in <em>6 and a
+half minutes</em>...</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="solar"></a></p><a class="cow-section-anchor" name="section-6.2.2."></a><h3 class="cow-heading"><span class="cow-sec-number">6.2.2. </span>What the sun says</h3>
+
+<p>Solar power! We've tried two setups. A low power setup using old panels, and a
+setup using brand new quite beefy panels. Needless to say we've had more luck
+with the latter, but the former is interesting too...</p>
+
+<p>Way back in 2002 I tried powering my Z scale model trains with solar panels to
+some small success. Since then I've held onto the eighteen 5 V/30 mA Panasonic
+BP-376634 panels I got then, which I try on different projects every now and
+then. I sucessfully charged a Nokia. I couldn't power a Model B when it was
+new. But mostly they sit in a drawer. Now though I have a Model A, which I've
+proved to myself has a much lower energy requirement so I thought I'd try them
+out yet again.</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/solar/DSCF0674.JPG"><img class="cow-img" src="/pages/images/mopi/solar/small/DSCF0674.JPG" alt="Solar Test #1"></a></p>
+
+<p>Even though I have eighteen of the panels, my shelf space is limited, some are
+damanaged, and the aligator clips I use for connecting them are also damaged.
+It was practical to setup 9, which I put into three sets of three panels for
+15 V and 90 mA. While this is probably less than the requirements of the Model
+A, I figured they might supplement the batteries some and increase how long I
+could run on a single pack. Which to be fair, they did... </p>
+
+<p>After configuring the input on the MoPi to non-battery source using the
+<tt>mopi</tt> command, a Model A with 8 older AAs and Wi-fi does this:
+<img class="cow-img" src="/pages/images/mopi/graphs/solar/mopia1.8old.wifi.2.png"></p>
+
+<p>10 and a half hours, which agrees with the time above. Now with the panels:
+<img class="cow-img" src="/pages/images/mopi/graphs/solar/mopia1.8old.wifi.solar.png"></p>
+
+<p>10 hours, and <b>45 minutes</b>! A whole extra 15 minutes! To be fair as well,
+these batteries probably sat a bit after charging before I used them for this
+test, so it does seem to help out some, just don't count on it. I suspect
+using 10 panels to up the voltage (getting 20 V) would have helped a bit as
+well.</p>
+
+<p>In any event, I know we can do better. See below the outside of our workshop:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/solar/DSCF0078.JPG"><img class="cow-img" src="/pages/images/mopi/solar/small/DSCF0078.JPG" alt="Beefy Panels"></a></p>
+
+<p>The eyes of that smile are made up of
+<a class="cow-url" href="http://www.maplin.co.uk/p/10w-solar-panel-kit-l14br">Maplin 10 W</a> panels,
+rated at 17.5 V or 580 mA. And we have two of them. (We also live in Britain
+where it's not particularly sunny. That's why we have two of them.) They're
+connected in parallel to one of the inputs of a MoPi powering a Model B. (You
+can also see the Pi is connected to Ethernet &mdash; this is so that it keeps the
+time...)</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/solar/DSCF0088.JPG"><img class="cow-img" src="/pages/images/mopi/solar/small/DSCF0088.JPG" alt="Panel Specs"></a></p>
+
+<p><a class="cow-url" href="/pages/images/mopi/solar/DSCF0093.JPG"><img class="cow-img" src="/pages/images/mopi/solar/small/DSCF0093.JPG" alt="The Pi in Question"></a></p>
+
+<p>I've also done something clever. The Pi in this case is configured to shutdown
+nicely around 8 PM. Before this though the MoPi's power-on timer is set for 14
+hours, so that the Pi will turn on at 10 AM. This means the Pi is on when the
+sun is up, and off when it's down. Ideally then this setup should last ages
+past the 8 hours the 8 AAs it's also attached to would suggest. Let's see...</p>
+
+<p><img class="cow-img" src="/pages/images/mopi/graphs/solar/mopisolar.1.png"></p>
+
+<p>Nearly 19 hours! That's pretty good! We can see huge spikes in the graph where
+we're in direct sunlight and the panels overpower the batteries. At this
+point, with some clever circuitry, we could store that energy. Unfortuantely
+that's something we've not sorted, but now we know it's probably doable.</p>
+
+<p><img class="cow-img" src="/pages/images/mopi/graphs/solar/mopisolar.2.png"></p>
+
+<p>A second trial shows similar results. The sharp eyed here may notice that
+there's no red time, that's because it actually slept a second night and
+powered on the next day for another 17 minutes until the batteries died. At 10
+AM those windows aren't in direct sunlight yet to keep it going, so for
+plotting reasons I left it off. Over 19 hours!</p>
+
+<p>You can also see a slight increase in voltage from 24 to 26 hours, which I
+believe are the panels coming into direct light providing more current to
+offset the draw from the batteries. A Model A would have been entirely solar
+powered that day. It's definitely feasible to power a Pi off solar.</p>
+
+<p>So to summarize:</p>
+
+<p>Bigger panels are better, but even little ones can help. Get the panels
+positioned so that they're in direct sunlight for as long as possible.
+Provided the panels are powerful enough, they will still help even out of
+direct light, but it's exponential. It'd be good to charge the batteries when
+there's extra power, because there clearly is here. We'll let you know if we
+sort it.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-6.3."></a><h2 class="cow-heading"><span class="cow-sec-number">6.3. </span>Methods in the Madness: Debugging and Software Development</h2>
+
+<p>Most of our testing used external power supplies to make the development
+cycles faster. (Well, would <em>you</em> want to add &quot;wait for the batteries to
+discharge&quot; to every edit/compile/test loop?!) Check out this large humming
+monster:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/test-rigs/sofia-20140421-154603.jpg"><img class="cow-img" src="/pages/images/mopi/test-rigs/sofia-20140421-154603-500x375.jpg" alt="Test Rig" width="500" height="375"></a></p>
+
+<p>The Pi is drawing 170 mA; MoPi is getting 11.9 volts from the PSU. The PSU
+connects up to one of MoPi's supply inputs using a couple of re-purposed panel
+pins:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/test-rigs/sofia-20140421-113148.jpg"><img class="cow-img" src="/pages/images/mopi/test-rigs/sofia-20140421-113148-500x375.jpg" alt="Test Rig" width="500" height="375"></a></p>
+
+<p>Mission control (helicopter not strictly necessary):</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/test-rigs/sofia-20140421-154651.jpg"><img class="cow-img" src="/pages/images/mopi/test-rigs/sofia-20140421-154651-500x375.jpg" alt="Test Rig" width="500" height="375"></a></p>
+
+<!--% %image(images/mopi/test-rigs/sofia-20140421-113213-500x375.jpg, Test Rig, 500)-->
+
+<!--% %image(images/mopi/test-rigs/sofia-20140421-154556-500x375.jpg, Test Rig, 500)-->
+
+<!--% %image(images/mopi/test-rigs/sofia-20140421-113123-500x375.jpg, Test Rig, 500)-->
+
+<!--% %image(images/mopi/test-rigs/sofia-20140421-113138-500x375.jpg, Test Rig, 500)-->
+
+
+<p>We've also got a flash new PSU down at the workshop:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/test-rigs/workshop-20140409-153037.jpg"><img class="cow-img" src="/pages/images/mopi/test-rigs/workshop-20140409-153037-500x375.jpg" alt="Test Rig" width="500" height="375"></a></p>
+
+<p><a class="cow-url" href="/pages/images/mopi/test-rigs/workshop-20140409-153052.jpg"><img class="cow-img" src="/pages/images/mopi/test-rigs/workshop-20140409-153052-500x375.jpg" alt="Test Rig" width="500" height="375"></a></p>
+
+<p>And here's Fred after I just showed him the bill:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/test-rigs/workshop-20140409-153131.jpg"><img class="cow-img" src="/pages/images/mopi/test-rigs/workshop-20140409-153131-500x375.jpg" alt="Test Rig" width="500" height="375"></a></p>
+
+<p>While we're showing my snaps, here's one of my absolute favourite bits of kit
+ever:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/test-rigs/workshop-20140409-153029.jpg"><img class="cow-img" src="/pages/images/mopi/test-rigs/workshop-20140409-153029-500x375.jpg" alt="Test Rig" width="500" height="375"></a></p>
+<!--% %image(images/mopi/test-rigs/workshop-20140409-153021-500x375.jpg, Test Rig, 500)-->
+
+
+<p>This multimeter has been running reliably for 30 years! Ok, at some point I
+couldn't get the batteries any more, so I had to bodge up a container for a
+different size, but apart from that it has been pretty much perfect. I plugged
+it into our new PSU, dialed up 6.2 volts and hey presto! The meter and the PSU
+agreed 100%. Can I marry my multimeter?</p>
+
+<p>We've got a new shiney one too, but the romance just isn't there:</p>
+
+<!--% %image(images/mopi/test-rigs/workshop-20140409-153039-500x375.jpg, Test Rig, 500)-->
+
+<p><a class="cow-url" href="/pages/images/mopi/test-rigs/workshop-20140409-153043.jpg"><img class="cow-img" src="/pages/images/mopi/test-rigs/workshop-20140409-153043-500x375.jpg" alt="Test Rig" width="500" height="375"></a></p>
+
+<p>In early testing we often reached states that caused error conditions of one
+sort or another on the Pi. For example:</p>
+
+<ul>
+<li>The green indicator LED repeatedly blinks three times when the <tt>loader.bin</tt>
+  bootloader file is not present &mdash; in our case this was because a hard
+  power shutdown caused corruption of the SD card.</li>
+<li>The red power indicator LED may blink if the battery charge is very low and
+  it is failing to drive the Pi (and if the microcontroller is not properly
+  shutting down the regulator).</li>
+</ul>
+
+<p>In cases like these the Embedded Linux wiki page on
+<a class="cow-url" href="http://elinux.org/R-Pi_Troubleshooting">RPI troubleshooting</a> is your friend!
+Another useful part of the Pi-oneer's toolkit is the excellent
+<a class="cow-url" href="http://www.raspberrypi.org/archives/4100">NOOBS</a> setup from the Pi
+foundation, which makes it easier to restore your SD card after failures.</p>
+
+<p>But inevitably the life of electronics prototyping brings its fair share of
+mystery &mdash; why have my GPIO monitoring pins all gone low, all of a sudden,
+when the indicator LED and the microcontroller still work? Cue much head
+scratching and serious faces. Followed by a session with the debug header and
+the diagnostics rig on the microcontroller &mdash; and it turns out that a single
+page of memory (which happenned to contain the code running the IO pins) has
+been wiped, presumably by power fluctuations at the low battery state. Time to
+add some more diodes!</p>
+
+<p>And here's a typical gotcha:</p>
+
+<ul>
+<li>Step 1: have the bright idea of reusing the <em>battery totally empty</em> state
+  for the <em>shutdown button pressed</em> state.</li>
+<li>Step 2: implement the code changes in the daemon and install. Reboot.</li>
+<li>Step 3: oops, my Pi just shut down as soon as it started. Hmmm.</li>
+<li>Step 4: oh yeah, that's also the default state of the GPIO pins when the
+  MoPi rig isn't connected. Ah. That means that my Pi is going to shutdown
+  every time I start it up. And Lubo just took the prototype boards back to
+  the lab. Um. Looks like the <em>Donkey of the Day</em> award is coming my way
+  again.</li>
+<li>Step 5: waste half an hour remembering how to mount the SD card read-write
+  on another machine and manually editing the daemon.</li>
+</ul>
+
+<p>We learn from our mistakes &mdash; that's why I make as many as possible.</p>
+
+<p>Finally, the current author has found it useful to run around in circles,
+screaming and shouting. (It doesn't fix the electronics, of course, but if
+you're lucky it generates sympathy in those around you, or at least a desire
+on their part to give you a beer to shut you up.)</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="wild"></a></p><a class="cow-section-anchor" name="section-7."></a><h1 class="cow-heading"><span class="cow-sec-number">7. </span>In the Wild: Applications</h1>
+
+<p>Want to strap a hackable GoPro-type cam to your skiing helmet? Or make a
+Wii-type remote and splash virtual paint onto your devices? Or measure
+atmospheric pollution in the garden with the AirPi sensor kit? The Raspberry
+Pi is a great platform for these types of applications, but you'll need a
+mobile power supply when you get out and about away from the wall socket.</p>
+
+<p><a class="cow-url" href="/pages/images/pibrush/art/1379031321.png"><img class="cow-img" src="/pages/images/pibrush/art/1379031321-500x281.png" alt="Number 1" width="500" height="281"></a></p>
+
+<p>If you've been following The Story of Pi these last couple of years you'll
+have come across 1001 power supplies &mdash; from batteries to solar panels, from
+car connections to water turbines. The Pi was designed to give a boost to
+science and technology education, and it has already made a huge impact &mdash;
+here in the UK, for example, we have a shiney new computing curriculum in the
+works. There a whole load of reasons why we need to <b>educate our kids about
+technology</b>, and how technology can help them cope with the challenges that
+the future holds. And not just any technology &mdash; the Pi has a low carbon
+footprint and is made in the EU.</p>
+
+<p>The MoPi Kickstarter offered three Pi outdoor experimenter kits to help teach
+the links between technology, climate, wildlife and the like:</p>
+
+<ul>
+<li>Outdoor Adventurer Kit</li>
+<li>Outdoor Experimenter Kit (Light)</li>
+<li>Outdoor Experimenter Kit (Light and Air)</li>
+</ul>
+
+<p>Then there's various projects that our backers have started (yours not here?
+send us a pic!).</p>
+
+<p>We'll detail them here to give a flavour of the applications of the thing, but
+really the sky's the limit: every mobile Pi project has a place for MoPi.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-7.1."></a><h2 class="cow-heading"><span class="cow-sec-number">7.1. </span>Outdoor Adventure Kit</h2>
+
+<p>The base level kit has everything you need to get out and about: a Raspberry
+Pi Model B, case, SD card, and a MoPi board with NiMH batteries, holder and
+charger (and a wall supply for when you get home!).</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-7.2."></a><h2 class="cow-heading"><span class="cow-sec-number">7.2. </span>Outdoor Experimenter Kit (Light)</h2>
+
+<p>This kit has all of the previous one, plus the Raspberry Pi camera module (day
+or night versions). Ideal for all types of outdoor motion-sensing and
+photography projects. If you haven't tried the excellent
+<a class="cow-url" href="http://www.raspberrypi.org/camera">Pi camera yet</a> here are a couple of
+examples:</p>
+
+<p>Forest Gump came by the office when we were testing an early battery-powered
+camera rig (a hackable &quot;GoPro&quot;?!):</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/gump2.jpg"><img class="cow-img" src="/pages/images/mopi/gump2-500x375.jpg" alt="Forest Gump" width="500" height="375"></a></p>
+
+<p>The next olympic downhill ski champion straps a Pi cam to his head:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/vladi-skiing-rig-1.jpg"><img class="cow-img" src="/pages/images/mopi/vladi-skiing-rig-1-300x400.jpg" alt="Vladi skiing" width="300" height="400"></a></p>
+
+<!--% YOUTUBE SKIING CLIP HERE-->
+<p align="center"> <iframe width="480" height="360" src="//www.youtube.com/embed/73hIeQLm3aY" frameborder="0" allowfullscreen></iframe> </p>
+
+
+<p>Here's the camera rig:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/ski-cam.jpg"><img class="cow-img" src="/pages/images/mopi/ski-cam-500x343.jpg" alt="Vladi skiing" width="500" height="343"></a></p>
+
+<p>People have done all sorts of stuff with these cameras &mdash; from videoing Teddy
+Bears in the stratosphere to night filming wildlife &mdash; the educational
+opportunities are obvious.</p>
+
+<p>Where do you want to use yours?!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-7.3."></a><h2 class="cow-heading"><span class="cow-sec-number">7.3. </span>Outdoor Experimenter Kit (Light and Air)</h2>
+
+<p>If you watch the film <a class="cow-url" href="http://chasingice.co.uk/">Chasing Ice</a> you can't fail
+to be amazed when a vast chunk of glacier the size of Manhattan suddenly
+disintegrates before your eyes. What are the climate changes that have
+triggered these massive events? How do they play out in the air we're
+breathing? How do you measure atmospheric conditions, and what science can we
+use to explain changes in those conditions?</p>
+
+<p>Meet <a class="cow-url" href="http://airpi.es/">AirPi</a>, a brilliant Pi-based atmospheric monitoring
+kit that ran a crowdfunding campaign in 2013 and started shipping in the
+autumn. The <b>Outdoor Experimenter Light and Air Kit</b> includes an AirPi with
+the mobile rig, all set to get out and about measuring temperature, relative
+humidity, air pressure, light levels, smoke, and the concentrations of the
+harmful gas pollutants carbon monoxide and nitrogen dioxide, and plotting the
+results direct to a webserver running on the Pi.</p>
+
+<p>Here's <a class="cow-url" href="http://airpi.es/">the AirPi board</a>, sensor and indicator set:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/air-pi-2022x1317.jpg"><img class="cow-img" src="/pages/images/mopi/air-pi-500x326.jpg" alt="The AirPi Kit" width="500" height="326"></a></p>
+
+<p>And here's one we built up on a breadboard:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/air-pi-breadboard.jpg"><img class="cow-img" src="/pages/images/mopi/air-pi-breadboard-500x375.jpg" alt="AirPi on a Breadboard" width="500" height="375"></a></p>
+
+<p>From version 3 MoPi uses a different set of GPIO pins in order to avoid
+conflicts with AirPi (thanks Tom Hartley, creator of AirPi, for his help with
+this).</p>
+
+<p>We've done <a class="cow-non-existant-url" href="/tag/airpi.html">a lot of work with AirPi</a> and beefed up its
+software offering a bit &mdash; which Tom is going to include in the next official
+distribution.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="backer-projects"></a></p><a class="cow-section-anchor" name="section-7.4."></a><h2 class="cow-heading"><span class="cow-sec-number">7.4. </span>Kickstarter Backer Projects</h2>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-7.4.1."></a><h3 class="cow-heading"><span class="cow-sec-number">7.4.1. </span>Night Camera</h3>
+
+<p>Thomas Farber's night camera:</p>
+
+<p><img class="cow-img" src="/pages/images/mopi/thomas-farber-night-camera.jpg" alt="Thomas Farber night camera" width="500" height="281"></p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-7.4.2."></a><h3 class="cow-heading"><span class="cow-sec-number">7.4.2. </span>K9</h3>
+
+<p>Twisted Monk's K9:</p>
+
+<p><img class="cow-img" src="/pages/images/mopi/twisted-monk-k9-600x450.jpg" alt="Twisted Monk K9" width="600" height="450"></p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="zach-balancer"></a></p><a class="cow-section-anchor" name="section-7.4.3."></a><h3 class="cow-heading"><span class="cow-sec-number">7.4.3. </span>Self-Balancer</h3>
+
+<p><a class="cow-url" href="https://twitter.com/ZacharyIgielman">Zachary Igielman</a>'s
+self-balancing gizmo with MoPi and <a class="cow-url" href="http://ryanteck.uk/">RyanTeck</a>'s motor
+controller:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/zach-balancer.jpg"><img class="cow-img" src="/pages/images/mopi/zach-balancer-500x670.jpg" alt="Zach's self-balancer" width="500" height="670"></a></p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="garden-cam"></a></p><a class="cow-section-anchor" name="section-7.4.4."></a><h3 class="cow-heading"><span class="cow-sec-number">7.4.4. </span>Garden Camera</h3>
+
+<p>Here's Alexandre Besnard's garden camera:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/alex-b-1.jpg"><img class="cow-img" src="/pages/images/mopi/alex-b-1-500x375.jpg" alt="IMAGE CAPTION" width="500" height="375"></a></p>
+
+<p><a class="cow-url" href="/pages/images/mopi/alex-b-2.jpg"><img class="cow-img" src="/pages/images/mopi/alex-b-2-500x375.jpg" alt="IMAGE CAPTION" width="500" height="375"></a></p>
+
+<p><a class="cow-url" href="/pages/images/mopi/alex-b-3.jpg"><img class="cow-img" src="/pages/images/mopi/alex-b-3-500x375.jpg" alt="IMAGE CAPTION" width="500" height="375"></a></p>
+
+<p>He's using the Pice case, and says &quot;Pice is a great case for using the pi as a
+camera and I will use it to observe the evolution of some plants in my garden.
+Mopi is the perfect power supply.&quot;</p>
+
+<p>Thanks Alexandre!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="remote-power-switch"></a></p><a class="cow-section-anchor" name="section-7.4.5."></a><h3 class="cow-heading"><span class="cow-sec-number">7.4.5. </span>Remote Switch</h3>
+
+<p>Daniel T, one of our Kickstarter backers, wanted to fit a remote power switch
+to his board. (It has one fitted, but if you're building something with a case
+and need the switch to be somewhere away from the Pi and/or MoPi then there
+are a couple of remoting pads on MoPi for the purpose.) Here's the result:</p>
+
+<!--% YOUTUBE REMOTE SWITCH CLIP HERE-->
+<p align="center"> <iframe width="560" height="315" src="//www.youtube.com/embed/y-VpN4tElQQ" frameborder="0" allowfullscreen></iframe> </p>
+
+
+<p>Daniel hasn't got the soldering bug yet :-) so I fitted one for him, and here
+are the pics...</p>
+
+<p>It is an easy job &mdash; just wire up an SPST push-to-make switch to the two pads
+next to the power switch:</p>
+
+<!--% %(images/mopi/remote-switch/remote-switch-1.jpg,-->
+
+<!--% %image(images/mopi/remote-switch/remote-switch-1-500x375.jpg, MoPi remote switch, 500, 375))-->
+
+
+<p><a class="cow-url" href="/pages/images/mopi/remote-switch/remote-switch-3.jpg"><img class="cow-img" src="/pages/images/mopi/remote-switch/remote-switch-3-500x375.jpg" alt="MoPi remote switch" width="500" height="375"></a></p>
+
+<p>And voila:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/remote-switch/remote-switch-2.jpg"><img class="cow-img" src="/pages/images/mopi/remote-switch/remote-switch-2-500x375.jpg" alt="MoPi remote switch" width="500" height="375"></a></p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="batteries"></a></p><a class="cow-section-anchor" name="section-8."></a><h1 class="cow-heading"><span class="cow-sec-number">8. </span>Batteries, Holders and Chargers</h1>
+
+<p>Here are links to some of the batteries, battery holders and chargers that
+we've been testing MoPi with:</p>
+
+<p>From <a class="cow-url" href="http://rs-online.com/">RS Components</a>:</p>
+<ul>
+<li><a class="cow-url" href="http://uk.rs-online.com/web/p/aa-rechargeable-batteries/6170773/">RS AA NiMH battery, 1.2V 2600 mAh</a></li>
+<li><a class="cow-url" href="http://uk.rs-online.com/web/p/battery-chargers-aaa-aa-c-d-9-volt/0383241/">AA/AAA charger 250 mA</a></li>
+</ul>
+
+<p>From <a class="cow-url" href="http://uk.farnell.com/">Farnell</a>:</p>
+<ul>
+<li><a class="cow-url" href="http://uk.farnell.com/multicomp/bt00839/battery-holder-8xaa-pk5/dp/3829583">x8 AA battery holder</a></li>
+<li><a class="cow-url" href="http://uk.farnell.com/duracell/5000394065710/battery-nimh-1-2v-2400mah-pk4/dp/1330278">Duracell AA NiMH 2400 mAh 4-pack</a></li>
+<li><a class="cow-url" href="http://uk.farnell.com/energizer/635429/battery-precision-ni-mh-aa-2400mah/dp/2075715">Energiser AA NiMH 2400 mAh 4-pack</a></li>
+<li><a class="cow-url" href="http://uk.farnell.com/ansmann/5107343-uk/charger-basic-4-plus/dp/1294240">x4 AA battery charger</a></li>
+</ul>
+
+<p>From <a class="cow-url" href="http://maplin.co.uk/">Maplin</a>:</p>
+<ul>
+<li><a class="cow-url" href="http://www.maplin.co.uk/extra-high-capacity-nimh-rechargeable-battery-value-packs-46414">NiMH AA 2400 mAh 8-pack</a></li>
+<li><a class="cow-url" href="http://www.maplin.co.uk/hybrid-the-next-generation-rechargeable-battery-219932">Hybrid AA 2100 mAh 4-pack</a></li>
+<li><a class="cow-url" href="http://www.maplin.co.uk/batteries-and-power/batteries/battery-chargers">AA
+  chargers</a></li>
+<li><a class="cow-url" href="http://www.maplin.co.uk/aa-size-battery-holders-31427">x8 AA battery
+  holder RK44X</a></li>
+</ul>
+
+<!--% TODO add RadioShack-->
+
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="other"></a></p><a class="cow-section-anchor" name="section-9."></a><h1 class="cow-heading"><span class="cow-sec-number">9. </span>Other Directions</h1>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-9.1."></a><h2 class="cow-heading"><span class="cow-sec-number">9.1. </span>A Possible Charging Circuit</h2>
+
+<p>One feature that we didn't manage to get sufficient backing for was battery
+charging. This feature would be a great addition to MoPi, but it turns out to
+be pretty difficult. :-( In fact, charging with lots of different chemistries
+may not be possible at all on a tiny device like the MoPi. (Most manufacturers
+of charging ICs only support one chemistry per chip, for example, and some
+only support charging a single cell per chip! Many chargers also rely on
+having a temperature sensor in physical proximity to the batteries
+themselves.)<span class="cow-footnote" name="footnote18"><sup><a href="#footnote18">18</a></sup></span> The other challenge is that we've got a really
+small surface area to work with on the PCB.</p>
+
+<p>Still, a number of our backers want to use MoPi with a charger (e.g. to charge
+batteries from solar panels during the day and then run on batteries
+overnight), so we've been working on a configuration with an external charger.
+For example, here's how we think a UPS configuration with charging could look:</p>
+
+<p><a class="cow-url" href="https://www.circuitlab.com/circuit/dsguk8/ups-configuration/"><img class="cow-img" src="/pages/images/mopi/ups-with-charger.png" alt="UPS with charger" width="540" height="405"></a></p>
+
+<p>We haven't tested this yet, but it <em>should</em> work. ;-)</p>
+
+<p>There are a number of potential gotchas in this type of circuit. For example,
+when the mains power drops, the Pi must be powered pretty much instantly in
+order to avoid triggering a reboot. There are no big capacitors on the Pi's
+PCB to buffer its consumption of 300-500 mA without power. To deal with this
+requirement we need MoPi to be always on and monitoring the Pi's 5V feed, even
+when that feed isn't being supplied by MoPi itself. (This doesn't waste much
+power as our microcontroller is very efficient.) When MoPi sees the 5V rail
+start to fall the controller immediately enables its 5V stabilizer, taking
+over supply of power to the Pi.</p>
+
+<p>In the circuit above, when there is mains, the charger is generating e.g. +12V
+DC and the relay's coil is energized. The contact is switched to the normal
+open position and is passing +12V to charge the batteries. When mains drops,
+the relay is switching to the normal closed position and charging will stop.
+MoPi is powered all the time &mdash; and so, we hope, is the Pi. (What does the
+diode do? When the +12V goes down, accumulated energy in the relay's coil must
+be dissipated. The diode is shorting the coil to do that. Otherwise the
+relay's contact will stay closed for a longer time.)</p>
+
+<p>More on this when we get time to test it out in practice.</p>
+
+<p>In the meantime we've been working on various solar options... Watch
+<a class="cow-url" href="http://pi.gate.ac.uk/">http://pi.gate.ac.uk/</a> for updates.</p>
+<!--% TODO-->
+
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-9.2."></a><h2 class="cow-heading"><span class="cow-sec-number">9.2. </span>Other Options</h2>
+
+<p>For voltage regulation another option is a UBEC<span class="cow-footnote" name="footnote19"><sup><a href="#footnote19">19</a></sup></span> &mdash; a device popular with
+radio-controlled aircraft people, and hence nice and light-weight, and also
+fairly cheap, e.g.:
+<a class="cow-url" href="http://www.giantshark.co.uk/hobbywing-3amp-ubec-p-402342.html">this one</a>,
+<a class="cow-url" href="http://www.modelaccessories.co.uk/hobbywing-3amp-ubec.html">this one</a> or
+<a class="cow-url" href="http://www.hobbyking.co.uk/hobbyking/store/uh_viewItem.asp?idProduct=28160">this one</a>. UBECs are switched-mode regulators, just like our MoPi regulator
+board, so they don't waste power when converting high DC to 5 volt DC.</p>
+
+<p>Some other useful links about Pi battery projects: on
+<a class="cow-url" href="http://www.raspberrypi-spy.co.uk/2013/02/running-a-raspberry-pi-from-6-aa-batteries/">Raspberry Spy</a>; on the
+<a class="cow-url" href="http://www.raspberrypiforums.com/forums/tutorials/article/17-how-to-portably-power-your-raspberry-pi-with-a-battery/">Raspberry Pi Forums</a>.</p>
+
+<p><a class="cow-url" href="http://www.amazon.co.uk/Raspberry-Pi-Manual-practical-revolutionary/dp/0857332953/">Gray Girling's Pi owners' manual</a> also has a good discussion about battery
+supplies and their subtleties (and is generally an excellent investment for
+the Pi enthusiast).</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-10."></a><h1 class="cow-heading"><span class="cow-sec-number">10. </span>Linux is Lovely</h1>
+
+<p>One of the great things about the Pi is that it runs a <a class="cow-url" href="http://fsf.org/">free
+and open source</a> software stack. This makes development so much easier &mdash;
+and here's an example of why...</p>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-10.1."></a><h2 class="cow-heading"><span class="cow-sec-number">10.1. </span>Glitches in the Pi's I2C Bus</h2>
+
+<p>The I2C bus is a great way to ship data between the Pi and add-on boards like
+MoPi. It is also a bit of a pig to get working: the CPU in the Pi has a
+hardware bug that causes intermittent bad reads from the bus. Quoting
+<a class="cow-url" href="https://github.com/raspberrypi/linux/issues/254">Renata Wolff</a>:</p>
+
+<p><blockquote>
+The broadcom BCM2835 has a (hardware) bug in the I2C module.</p>
+
+<p>The BCM implements &quot;clock stretching&quot; in a bad way:</p>
+
+<p>Instead of ensuring a minimum &quot;hightime&quot; for the clock, the BCM lets the I2C
+clock internally run on, and when it's time to flip the clock again, it checks
+wether or not the clock has become high, and if it is low, it does a &quot;clock
+stretch&quot;. However if just in the few nanoseconds before this check the slave
+releases the clock signal indicating it is ready for a new clock, the clock
+pulse may become as short as 40ns. (that's the lowest I'm able to measure, and
+that of course is quite rare). With a 100kHz (10 microseconds) I2C clock, the
+&quot;bad&quot; moments to release the clock are 5 microseconds apart.
+</blockquote></p>
+
+<p>(See also <a class="cow-url" href="https://dl.dropbox.com/u/3669512/2835_I2C%20interface.pdf">Gert
+van Loo's description here</a>.) This took us a quite a few debug cycles to cope
+with! Below some details of one of the methods used (the others involving lot
+of sweating over a hot oscilloscope, trawling system logs and the like!).</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-10.2."></a><h2 class="cow-heading"><span class="cow-sec-number">10.2. </span>Installing I2C</h2>
+
+<p>Now that MoPi uses I2C as its communication mechanism, we have to enable this
+in the simbamon package. Here's how we do it<span class="cow-footnote" name="footnote20"><sup><a href="#footnote20">20</a></sup></span>:</p>
+
+<ul>
+<li>if i2c-tools isn't already installed, install it:
+  <ul>
+  <li><tt>sudo apt-get install i2c-tools</tt></li>
+  </ul></li>
+<li>(you might as well do the same with <tt>python-smbus</tt> for testing purpose)</li>
+<li>edit <tt>/etc/modules</tt> and add lines <tt>i2c-bcm2708</tt> and <tt>i2c-dev</tt></li>
+<li>edit <tt>/etc/modprobe.d/raspi-blacklist</tt> (if it exists) and comment out the
+  line <tt>blacklist i2c-bcm2708</tt> (by adding a <tt>#</tt> at the start of the line)</li>
+</ul>
+
+<p>(The <tt>postinst</tt> script in our Debian package for simbamon does all this for
+you, by the way.)</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-10.3."></a><h2 class="cow-heading"><span class="cow-sec-number">10.3. </span>Debugging with I2C Tools</h2>
+
+<p>The process of developing our interface involved hacking the <tt>i2c-tools</tt>
+package to play with the multi-byte read facility in the <tt>i2cdump</tt> command.
+On a closed-source operating system, of course, you would be stymied at this
+point. On Linux it is super easy :-)</p>
+
+<p>Here's how to pull down the source code, rebuild and test:</p>
+
+<ul>
+<li>edit <tt>/etc/apt/sources.lst</tt> and add this line:
+  <ul>
+  <li><tt>deb-src <a class="cow-url" href="http://mirrordirector.raspbian.org/raspbian/">http://mirrordirector.raspbian.org/raspbian/</a> wheezy main contrib
+    non-free rpi</tt></li>
+  </ul></li>
+<li>then
+  <ul>
+  <li><tt>sudo apt-get update</tt></li>
+  <li><tt>mkdir i2c-tools</tt></li>
+  <li><tt>cd i2c-tools</tt></li>
+  <li><tt>apt-get source i2c-tools</tt></li>
+  </ul></li>
+<li>then <tt>make</tt> will recompile (the tools are in the directory <tt>tools</tt>)</li>
+</ul>
+
+<p>Hey presto, I can hack away at the C code and get immediate feedback with
+commands like <tt>sudo tools/i2cdump -y 1 0x0b i</tt> (where <tt>0x0b</tt> is MoPi's
+designated I2C address &mdash; the smart battery address)<span class="cow-footnote" name="footnote21"><sup><a href="#footnote21">21</a></sup></span>.</p>
+<span class="cow-footnote-section">
+<h1 class="cow-heading">Footnotes</h1>
+<p><ol>
+<li>
+<a class="cow-footnote-anchor" name="footnote1"></a>
+<span class="cow-footnote-text" name="footnote1"><em>A huge thank you to Bo Meson, Fred Sonnenwald, Gen
+Gorrell, Vladimir Marinov, Georgi Marinov, Louise Illien, Julian Briggs,
+Caroline Ivimey-Parr, Angus Roberts, Joe Polifroni, Todor Primov, Anthony
+Toole, and all our
+<a class="cow-url" href="https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi/backers">Kickstarter backers</a>!</em></span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote2"></a>
+<span class="cow-footnote-text" name="footnote2">We quote a 20V max voltage to
+  leave some headroom. We've run the board up to 25V but don't recommend it as
+  a general rule.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote3"></a>
+<span class="cow-footnote-text" name="footnote3">A lawyer questioning a doctor during a trial:
+  <br>
+Q: &quot;Doctor, before you performed the autopsy, did you check for a pulse?&quot; <br>
+A: &quot;No.&quot; <br>
+Q: &quot;Did you check for blood pressure?&quot; <br>
+A: &quot;No.&quot; <br>
+Q: &quot;Did you check for breathing?&quot; <br>
+A: &quot;No.&quot; <br>
+Q: &quot;So, then, it is possible that the patient was alive when you began the
+autopsy?&quot; <br>
+A: &quot;No.&quot; <br>
+Q: &quot;How can you be so sure, doctor?&quot; <br>
+A: &quot;Because his brain was sitting on my desk in a jar.&quot; <br>
+Q: &quot;But could the patient have still been alive nevertheless?&quot; <br>
+A: &quot;It is possible that he could have been alive and practicing law
+somewhere.&quot;</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote4"></a>
+<span class="cow-footnote-text" name="footnote4">This warning
+means MoPi is not attached or powered up: &quot;/usr/sbin/simbamon:
+/usr/sbin/mopicli not working; MoPi not attached or powered? <span class="cow-escape">(</span>mopicli. I2C
+bus input/output error on read word. Check bus? Check connection?<span class="cow-escape">)</span>&quot;.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote5"></a>
+<span class="cow-footnote-text" name="footnote5">RGB: red, green and blue. For us, Blue means you're fully charged.
+Green means things are OK. Red and you should be either preparing to shutdown
+or replacing batteries.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote6"></a>
+<span class="cow-footnote-text" name="footnote6">Note that when MoPi powers up the Pi, it then waits 60 seconds
+for the boot process to finish. During this period power off requests will
+be ignored.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote7"></a>
+<span class="cow-footnote-text" name="footnote7">Our Configuration Tool is a command line
+user interface, similar to <tt>raspi-config</tt>.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote8"></a>
+<span class="cow-footnote-text" name="footnote8">The keen amongst you
+  may know that the Pi can, in fact, run on 3.3V &mdash; more on that later.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote9"></a>
+<span class="cow-footnote-text" name="footnote9">Again confusingly &mdash; this will become a theme &mdash; the
+names of the files as they live in the source package are different from their
+names when installed. If you don't like being confused, you might want to
+avoid talking to computer people as a general rule. For example, the MoPi
+board works on milivolts; the I2C communication uses centivolts; the user
+interface uses volts; the API uses milivolts. And all for good reasons!</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote10"></a>
+<span class="cow-footnote-text" name="footnote10">And
+no one complained about the whitespace rules! Who'd have thought it?!</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote11"></a>
+<span class="cow-footnote-text" name="footnote11">In common with most daemons, simbamon is written in shell
+script.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote12"></a>
+<span class="cow-footnote-text" name="footnote12">Configuration
+  provided by the user overrides the jumper for the current power cycle &mdash;
+  and beyond, when simbamon is running as the daemon will persist the config
+  values. The firmware reads the jumper at each power up and initializes the
+  cut-off points with Ni-MH or Alkaline values.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote13"></a>
+<span class="cow-footnote-text" name="footnote13">The main
+archive (for stable releases) is at
+<a class="cow-url" href="https://launchpad.net/~hamish-dcs/+archive/pi-gate">https://launchpad.net/~hamish-dcs/+archive/pi-gate</a> with a development snapshot
+archive at <a class="cow-url" href="https://launchpad.net/~hamish-dcs/+archive/pi-gate-snapshots">https://launchpad.net/~hamish-dcs/+archive/pi-gate-snapshots</a>.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote14"></a>
+<span class="cow-footnote-text" name="footnote14">ADC: Analogue to Digital Converter.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote15"></a>
+<span class="cow-footnote-text" name="footnote15">Prior to version 4 a three-bit
+coded voltage level is sent to the Pi over GPIO using <a class="cow-url" href="http://wiringpi.com/">WiringPi</a> pins 4, 5 and 6 (physical pins 16/18/22).</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote16"></a>
+<span class="cow-footnote-text" name="footnote16">Note: a flashing yellow LED for a low
+supply will not reset until that supply has been disconnected for a few seconds
+and then replaced with a good supply.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote17"></a>
+<span class="cow-footnote-text" name="footnote17">This is an old USB 1.1
+device, which means it's current draw is limited by the spec. It's not too too
+high.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote18"></a>
+<span class="cow-footnote-text" name="footnote18">We like our backers. We'd rather not incinerate them if
+not completely necessary.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote19"></a>
+<span class="cow-footnote-text" name="footnote19">UBEC stands for
+Universal Battery Elimination Circuit, which is rather a misnomer as they're
+often used to regulate battery supplies. Hey ho.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote20"></a>
+<span class="cow-footnote-text" name="footnote20">The key steps are
+described in various places, including
+<a class="cow-url" href="https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c">on Adafruit</a>.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote21"></a>
+<span class="cow-footnote-text" name="footnote21">For a revision 1
+Pi &mdash; the very early boards &mdash; use <tt>0</tt> instead of <tt>1</tt>.</span>
+</li>
+</ol></p>
+</span>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+</section>
+
+</div>
+<div id="middleColumn" class="yui3-u-1-5"> <!-- column 2 -->
+<div class="midColContent">
+  <a class="article-thumb" href="/images/articles/mopi.jpg"><img
+    src="/images/articles/thumbs/mopi.jpg"
+    height="75" width="75" alt="mopi"></a>
+ <span class="article-summary"><em>Hot-Swap, Mobile and 24/7 Power for the Pi</em>.</span> 
+<br/> <br/>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'pi-gate'; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<!-- __CONTENTS__ -->
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Pi to Go!</a></li>
+<li><a href="#section-2.">2. User Guide</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.1.">2.1. Warnings!!!</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.2.">2.2. Installation and Use</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.2.1.">2.2.1. Quick Start</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.2.2.">2.2.2. Installing the Software</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.2.3.">2.2.3. Connecting the Power and the Pi</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.2.4.">2.2.4. Turn On, Turn Off</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.3.">2.3. Choosing and Configuring Batteries (Etc.)</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.3.1.">2.3.1. Choosing Default Supply Profiles</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.3.2.">2.3.2. Using the Configuration Tool on the Pi</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.3.3.">2.3.3. Command Line, Python API and Daemon Config Hacking</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.4.">2.4. Troubleshooting and FAQ</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.4.1.">2.4.1. Wh...?</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-2.4.2.">2.4.2. Pi Models: A, B, B+, Compute Module</a></li>
+<li><a href="#section-3.">3. Background: Mobile Pi Power</a></li>
+<li>&nbsp;&nbsp;<a href="#section-3.1.">3.1. The Prototypes</a></li>
+<li>&nbsp;&nbsp;<a href="#section-3.2.">3.2. The Perfect Battery Pack</a></li>
+<li><a href="#section-4.">4. The MoPi Software Suite</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.1.">4.1. simbamond, the simbamon daemon</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.2.">4.2. The Python API</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.3.">4.3. MoPi from the Command Line</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.4.">4.4. Configuring Your Power Supplies</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.5.">4.5. Monitoring</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.6.">4.6. simbamon: a simple battery monitor</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-4.6.1.">4.6.1. Design Notes</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-4.6.2.">4.6.2. Implementation</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-4.6.3.">4.6.3. Installing simbamon</a></li>
+<li><a href="#section-5.">5. How it Works: the Hardware</a></li>
+<li><a href="#section-6.">6. Testing</a></li>
+<li>&nbsp;&nbsp;<a href="#section-6.1.">6.1. The Longer-Lasting Snack</a></li>
+<li>&nbsp;&nbsp;<a href="#section-6.2.">6.2. Battery life</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-6.2.1.">6.2.1. Battery life under load</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-6.2.2.">6.2.2. What the sun says</a></li>
+<li>&nbsp;&nbsp;<a href="#section-6.3.">6.3. Methods in the Madness: Debugging and Software Development</a></li>
+<li><a href="#section-7.">7. In the Wild: Applications</a></li>
+<li>&nbsp;&nbsp;<a href="#section-7.1.">7.1. Outdoor Adventure Kit</a></li>
+<li>&nbsp;&nbsp;<a href="#section-7.2.">7.2. Outdoor Experimenter Kit (Light)</a></li>
+<li>&nbsp;&nbsp;<a href="#section-7.3.">7.3. Outdoor Experimenter Kit (Light and Air)</a></li>
+<li>&nbsp;&nbsp;<a href="#section-7.4.">7.4. Kickstarter Backer Projects</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-7.4.1.">7.4.1. Night Camera</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-7.4.2.">7.4.2. K9</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-7.4.3.">7.4.3. Self-Balancer</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-7.4.4.">7.4.4. Garden Camera</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-7.4.5.">7.4.5. Remote Switch</a></li>
+<li><a href="#section-8.">8. Batteries, Holders and Chargers</a></li>
+<li><a href="#section-9.">9. Other Directions</a></li>
+<li>&nbsp;&nbsp;<a href="#section-9.1.">9.1. A Possible Charging Circuit</a></li>
+<li>&nbsp;&nbsp;<a href="#section-9.2.">9.2. Other Options</a></li>
+<li><a href="#section-10.">10. Linux is Lovely</a></li>
+<li>&nbsp;&nbsp;<a href="#section-10.1.">10.1. Glitches in the Pi's I2C Bus</a></li>
+<li>&nbsp;&nbsp;<a href="#section-10.2.">10.2. Installing I2C</a></li>
+<li>&nbsp;&nbsp;<a href="#section-10.3.">10.3. Debugging with I2C Tools</a></li>
+</ul></p></div>
+  <section id="extras" class="body">
+  </section><!-- /#extras -->
+
+
+  </div>
+</div>
+
+  </div> <!-- #mainContent -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
+          1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
+        <a href="https://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
+        <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/pages/mopi.html">Print</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+        alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+          alt="The University of Sheffield" height="70" width="165"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

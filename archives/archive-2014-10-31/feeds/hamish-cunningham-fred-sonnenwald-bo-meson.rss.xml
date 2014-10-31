@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pi GATE — Sheffield Pi-Tronics</title><link>/</link><description></description><atom:link href="https://pi.gate.ac.uk/feeds/hamish-cunningham-fred-sonnenwald-bo-meson.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 16 Sep 2013 00:00:00 +0100</lastBuildDate><item><title>Open Culture Tech</title><link>/posts/2013/09/16/open-culture-tech/</link><description>
+
+&lt;!--% *Stop press:* here's the webserver for the Pi-Cam exhibit:--&gt;
+
+&lt;!--% http://002.cam.pagekite.me/--&gt;
+
+
+&lt;p&gt;On wednesday of this week Sheffield's
+&lt;a class="cow-url" href="http://www.sheffield.ac.uk/ideasbazaar"&gt;Ideas Bazaar&lt;/a&gt; will spring into
+action, mixing together a witch's brew of artists, scientists and engineers of
+all shapes, sizes, and personal hygene statuses. A select group of the Pi.GATE
+team (Bo, Fred and Hamish) have been bending their enormous collective
+intellect towards finding their way to that end of the campus without a
+satnav. If we make it, we'll let you know. (Want to join in? Hit the &amp;quot;contact&amp;quot;
+button above.)&lt;/p&gt;
+
+&lt;p&gt;In the meantime, here are some of our notes for the event:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/pi-brush-snap.jpg" alt="Pi Brush snapshot"&gt;&lt;/p&gt;
+
+&lt;p&gt;There is a new conjunction emerging around open hardware, maker culture, and
+art. Parallels exist with the explosive change in pop culture pressaged by
+punk in the late 1970s: from the Homebrew Computer Club trading circuits and
+information; from Iain M. Banks' legacy of utopian technofutures, blending
+electro-augmented humanity with benevolent AI; from the wearable electronics
+kits (e.g. from &lt;a class="cow-url" href="http://adafruit.com/"&gt;Adafruit.com&lt;/a&gt; &amp;mdash; echoing Lady Ada
+Lovelace, inventor of the computer algorithm); to the latest rounds of
+sampling and remix.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="http://en.wikipedia.org/wiki/List_of_open-source_hardware_projects"&gt;Open-source hardware&lt;/a&gt; allows people to make their own robots, cameras,
+electrocardiagraph machines and even full computers by downloading schematics
+and building &amp;mdash; incorporating any changes they need &amp;mdash; and, typically, free
+open-source software is available to run these projects. 3D printers have
+helped this adoption of the open-everything ethos.&lt;/p&gt;
+
+&lt;p&gt;As this site and many others testify, there are stacks of DIY projects based
+on the Raspberry Pi, and the flood showns no sign of slowing. The Pi is a
+small cheap computer which is very easy to cobble together with other devices.
+It has a large community behind it and is one of the drivers behind proposed
+changes in the &lt;a class="cow-url" href="/pages/schools.html"&gt;schools ICT curriculum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As part of a trend to open hardware and maker culture the Pi is also a vehicle
+for localist responses to climate change and peak oil: the more we manufacture
+locally the more secure we are (the Pi is made in Wales); the less energy we
+use the less carbon we pump into the atmosphere (the Pi is low power).&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Future Making&lt;/em&gt;&lt;/b&gt; will be a rolling event over two days with around a dozen
+exhibits plus an hourly short stage show. The target audience is anyone
+curious, with secondary schools invited to attend if the timing of the event
+permits.  The performers are expected to be engineers, musicians, social
+scientists, dancers, hackers and visual artists.&lt;/p&gt;
+
+&lt;p&gt;Some more of the gorey details (from
+&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/"&gt;our GitHub repository&lt;/a&gt;):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/open-culture-tech-small.pdf?raw=true"&gt;Open Culture Tech&lt;/a&gt;: entering the age of open electronics&lt;/li&gt;
+&lt;li&gt;&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/schools.pdf?raw=true"&gt;Open Schools Tech&lt;/a&gt;: programming is back on the curriculum!&lt;/li&gt;
+&lt;li&gt;&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/pi-brush-code.pdf?raw=true"&gt;Pi Brush&lt;/a&gt;, perfect project for the digital Jackson Pollock&lt;/li&gt;
+&lt;li&gt;&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/snowcam.pdf?raw=true"&gt;SnowCam&lt;/a&gt;, a programmable spook-free camera&lt;/li&gt;
+&lt;li&gt;&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/future-making.pdf?raw=true"&gt;Future Making&lt;/a&gt;, exploring open {X} tech&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And to whet your appetite, a random selection of the artbites:&lt;/p&gt;
+
+&lt;p&gt;Google gave $1m to fund Pi hardware for schools. Eben Upton (of the Pi
+foundation) is the Chesire Cat impersonator here:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/google-donation-350x237.jpg" alt="Google schools donation.jpg" width="350" height="237"&gt;&lt;/p&gt;
+
+&lt;p&gt;That's all very well, but &amp;quot;At Boots science is for boys and pink princess toys
+are for girls&amp;quot; &amp;mdash;
+&lt;a class="cow-url" href="http://minigirlgeek.wordpress.com/"&gt;Amy Mather&lt;/a&gt; (14-year-old Pi hacker) at
+&lt;a class="cow-url" href="http://wutheringbytes.com/"&gt;Wuthering Bytes&lt;/a&gt;, September 14th 2013.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/amymather-300x300.jpg" alt="Amy Mather" width="300" height="300"&gt;&lt;/p&gt;
+
+&lt;p&gt;What to do? Commission J.K. Rowling to write The Adventures of Princess Pi?
+Seek venture capital for Pink Electronics Ltd.? Or order a large consignment
+of Barbie-the-Programmer dolls?&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/barbie-374x500.jpg" alt="Barbie the programmer" width="374" height="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;(from the &lt;a class="cow-url" href="http://www.wisecampaign.org.uk/"&gt;WISE&lt;/a&gt;
+&lt;a class="cow-url" href="http://www.wisecampaign.org.uk/blogs/getset-women/2010/05/barbie"&gt;blog&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Perhaps games with a porpoise would interest girls? (Sorry.)&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/games-with-a-porpoise-350x228.png" alt="Games with a porpoise" width="350" height="228"&gt;&lt;/p&gt;
+
+&lt;p&gt;Enough frivolity. Amy also said we need:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;better role models&lt;/li&gt;
+&lt;li&gt;better opportunities&lt;/li&gt;
+&lt;li&gt;no discrimination (&lt;a class="cow-url" href="http://www.equalpayportal.co.uk/"&gt;equal pay for equal
+  work&lt;/a&gt;!)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some organisations working in this direction (click through for details):&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="http://www.stemnet.org.uk/"&gt;&lt;img class="cow-img" src="/images/stemnet-339x115.gif" alt="StemNet" width="339" height="115"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="https://www.codeclub.org.uk/"&gt;&lt;img class="cow-img" src="/images/code-club-150x150.svg" alt="Code Club" width="150" height="150"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There are more; please &lt;a class="cow-url" href="https://gate.ac.uk/g8/contact"&gt;ping us&lt;/a&gt; to add to
+this list! And if you're in Sheffield this Wednesday, come say hi. Ciao.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/pibrush.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham, Fred Sonnenwald, Bo Meson</dc:creator><pubDate>Mon, 16 Sep 2013 00:00:00 +0100</pubDate><guid>tag:,2013-09-16:posts/2013/09/16/open-culture-tech/</guid><category>schools</category><category>maker culture</category><category>open hardware</category><category>open culture</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category><category>ideas bazaar</category></item></channel></rss>

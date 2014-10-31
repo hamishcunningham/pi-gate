@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Pi GATE — Sheffield Pi-Tronics - rain</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+        height="55" width="46"></a></span>
+      <span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+      <span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+        alt="The University of Sheffield" height="55" width="113"</a><a
+          href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+            height="55" width="132"></a></span>
+    </span>
+    <div class="horizontal menu">
+      <ul>
+      <li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+      <!--
+      using a custom menu at present...
+      -->
+      <li><b><a href="#">Projects</a></b>
+      <!-- TODO generate this from content/pages/index -->
+        <ul>
+        <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+        <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+        <li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+        <li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+        <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+        <!--
+        <li><a href="/pages/snowcam.html">SnowCam: Off the Radar Cameras</a></li>
+        -->
+        <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+        <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+        <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+        <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+        <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+        </ul></li>
+      <li><b><a href="#">MoPi</a></b>
+        <ul>
+        <li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+        <li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+        <li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+        <li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+        </ul></li>
+      <!-- <li><a href="/">Blog</a></li> -->
+      <!--
+      <li><a href="/pages/basics.html#resources">Download</a></li>
+      -->
+      <li><a href="/pages/download.html">Download</a></li>
+      <!--
+      <li><a href="/pages/shop.html">Shop</a></li>
+      -->
+      <li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
+
+  <!-- header menus (?!) -->
+  <div id="header">
+  </div>
+
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
+
+  <!-- main content div -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <div id="mainContent">
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+        <li ><a href="/category/news.html">News</a></li>
+    </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
+
+<!-- YUI responsive columns -->
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+    
+    
+
+      <aside id="featured" class="body">
+        <article>
+          <h1 class="entry-title"><a href="/posts/2014/01/25/raingauge/">Connecting a Rain Gauge</a></h1> 
+<div id="socialButtons">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2014/01/25/raingauge/"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/posts/2014/01/25/raingauge/#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/posts/2014/01/25/raingauge/"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div><footer class="post-info">
+  <a class="article-thumb" href="/images/articles/raingauge.jpg"><img
+    src="/images/articles/thumbs/raingauge.jpg"
+    height="75" width="75" alt="raingauge"></a>
+    <span class="article-summary"><em>Connecting a Rain Gauge to a Raspberry Pi</em>.</span>
+ <br/>   <!-- In <a href="/category/news.html">News</a> -->
+  
+Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/environmental.html">environmental</a> <a href="/tag/rain.html">rain</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>  <br/>   <span class="published" title="2014-01-25T00:00:00">Sat 25 January 2014,</span>
+  <a class="url fn" href="/author/fred-sonnenwald.html">Fred Sonnenwald</a>.
+</footer><!-- /.post-info -->
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+
+<p>A what? A rain gauge. It counts the depth of rainfall per unit area. So it
+might report that over the last 24 hours there were 2 mm of rainfall per
+meter squared. Over an area the size of Sheffield (around 300 km<span class="cow-escape">^</span>2), that
+translates to 600,000 cubic meters or on the order of 240 Olympic size swimming
+pools. That sounds like a lot, but realistically when you consider that the
+River Don is 110 km long, that volume of water isn't so much. The floods here
+in June 2007 were the result of over <em>200</em> mm of rainfall in two weeks.
+60,000,000 m<span class="cow-escape">^</span>3 for just Sheffield, combined with the much greater surrounding
+area... Now we can see why having a rain gauge might be interesting.</p>
+
+<p><a class="cow-url" href="/images/environment/rain/tippingbucket.jpg"><img class="cow-img" src="/images/environment/rain/tippingbucket_small.jpg" alt="Inside a tipping bucket rain gauge"></a></p>
+
+<p>So how does a rain gauge work? There are a few different types, but most common
+and what I've got is called a
+<a class="cow-url" href="http://en.wikipedia.org/wiki/Tipping_bucket_rain_gauge#Tipping_bucket_rain_gauge">tipping bucket rain gauge</a>. Basically there's a little see-saw inside. The rain
+fills up a bucket on one end and it tips over so that it empties and the bucket
+on the other side starts to fill. Each time the bucket tips it passes a magnet
+over a <a class="cow-url" href="http://en.wikipedia.org/wiki/Reed_switch">reed switch</a> making a
+momentary electrical connection. The buckets are calibrated to a volume of
+water, which means if you can count how many times the switch closes you know
+how much rainfall there's been.</p>
+
+<p><a class="cow-url" href="/images/environment/rain/reedswitch.jpg"><img class="cow-img" src="/images/environment/rain/reedswitch_small.jpg" alt="The rain gauge's reed switch"></a></p>
+
+<p>The rain gauge I've been showing here is one you can have for a fiver from
+<a class="cow-url" href="http://www.maplin.co.uk/p/maplin-replacement-rain-gauge-for-n25frn85fyn96gy-n77nf">Maplin</a>. It has an RJ-11 plug on the end you'll probably need to cut off to
+connect it to the Pi. Still, This suprisingly low cost means anyone can have a
+play at weather monitoring, and personally I've always found rain to be pretty
+neat. Onwards!</p>
+
+<p>Basically what it boils down to is that each tip of the bucket in the rain
+gauge is identical to a button press. We can easily then connect the gauge as
+if it were a button. I've connected mine to ground and GPIO 17. After that all
+we need to do then is to monitor for button presses which is pretty straight
+forward. It can be done two ways. A continuous loop can run checking the value
+of the GPIO. This is pretty resource intensive. Or we can use GPIO interrupts,
+similar to what I did in the <a class="cow-non-existant-url" href="/posts/2014/01/18/3dasintv/">3D project</a>. This
+is where closing the circuit (pressing the button, the bucket tipping) triggers
+a software event.</p>
+
+<p><a class="cow-url" href="/images/environment/rain/connection.jpg"><img class="cow-img" src="/images/environment/rain/connection_small.jpg" alt="The electrical connection for the gauge"></a></p>
+
+<p>Fortunately
+<a class="cow-url" href="http://raspi.tv/2013/how-to-use-interrupts-with-python-on-the-raspberry-pi-and-rpi-gpio">RasPi.TV</a> has written a quite nice article on how to use interrupts with
+Python. The <a class="cow-url" href="https://pypi.python.org/pypi/RPi.GPIO">RPi.GPIO</a> function library
+has a simple call to register listening for interrupts on a given PIN:
+<tt>GPIO.add<span class="cow-escape">_</span>event<span class="cow-escape">_</span>detect</tt>. This makes it dirt simple to create a monitoring
+program. I've uploaded the code I've written to
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/environment/rain.py">GitHub</a>, but I'll go over the important bits here.</p>
+
+<p><pre class="prettyprint lang-python">
+GPIO.setmode(GPIO.BCM)  
+GPIO.setup(PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+</pre>This is pretty standard and if you've done any GPIO work before you should
+recognize it as initializing the GPIO. The <tt>setup</tt> function here tells the
+system we'll be using <tt>PIN</tt> (17) for input, and that we should use it in
+pull-up mode. That is to say, we connect the internal resitor attached to the
+pin to +3.3 V. This allows it to be clear when the rain gauge closes the
+circuit to ground that there's been a change.</p>
+
+<p><pre class="prettyprint lang-python">
+# variable to keep track of how much rain
+rain = 0
+
+# the call back function for each bucket tip
+def cb(channel):
+	global rain
+	rain = rain + CALIBRATION
+
+# register the call back for pin interrupts
+GPIO.add_event_detect(PIN, GPIO.FALLING, callback=cb, bouncetime=300)
+</pre>We have a variable <tt>rain</tt> that is a counter for the amount of rainfall. We then
+have a function (<tt>cb</tt>) that adds the bucket amount to it, the <tt>CALIBRATION</tt>
+variable which for this gauge is 0.2794 mm per tip. The <tt>add<span class="cow-escape">_</span>event<span class="cow-escape">_</span>detect</tt>
+function then sets up the interrupt listening on <tt>PIN</tt>. Because we've set the
+pin in pull-up mode, we're listening for a <em>falling edge</em>, that is the
+transition from +3.3 V to 0 V. When this occurs we'll call the <em>callback</em>
+function <tt>cb</tt>. The <tt>bouncetime</tt> specifies that the <tt>cb</tt> can't be called any
+more frequently than once every 300 ms. This prevents counting a rapid
+alteration between switch states, called bouncing.</p>
+
+<p>The program output is a CSV log file which in column A has a unix timestamp,
+and in column B has a rainfall amount. I've set it up to log every 5 seconds,
+but really that can be a much longer minute or 5 minute interval even. I like
+the higher frequency because if it's raining really hard, you can't catch small
+temporal variations with a longer monitoring frequency. It's easy in comparison
+though to go from 5 second to 5 minute readings.</p>
+
+<p>The other thing to bear in mind is that how the program is that while the
+bucket in the gauge fills up slowly, you only get an instantaneous result.
+There won't have been 0.2794 mm of rain in the last 5 seconds, but instead it
+will have occured in the interval since the last reading. This is a
+post-processing consideration if you're interested in producing rainfall over
+time graphs, but isn't an issue for totals.</p>
+
+<p><a class="cow-url" href="/images/environment/rain/outdoors.jpg"><img class="cow-img" src="/images/environment/rain/outdoors_small.jpg" alt="The gauge placed outside"></a></p>
+
+<p>Some minor comments about rain gauge placement. Higher is better. They should
+be secured, and outside of what's called a building's shadow. Rain can be
+carried by the wind and if the wind is coming from the other side of the
+building the reading's likely to be off. Bearing all that in mind, I can't
+meet any of those conditions properly. My rain gauge is at least outside
+though. Let's look at some of the data. (I've plotted it quickly using
+<a class="cow-url" href="https://www.gnu.org/software/octave/">Octave</a>.)</p>
+
+<p><img class="cow-img" src="/images/environment/rain/23rd.png" alt="Rain on the 23rd"></p>
+
+<p>There are some teething problems. The above graph goes from 0900 on the 23rd
+to 0900 on the 24th. I know for a fact there was no rainfall that evening.
+Indeed, it was dry as a bone and most small puddles had evaporated. I suspect
+maybe that the wind or cold weather was having an effect, but I'm really not
+sure. In the meantime I'm keeping an eye out for false readings. Maybe an
+interrupt bug?</p>
+
+<p><img class="cow-img" src="/images/environment/rain/24th.png" alt="Rain on the 24th"></p>
+
+<p>Ignoring them, the data is actually pretty good. According to this figure, last
+night (from around 1700 to 2200) we had around 7 mm of rainfall. That's a
+fairly average rainfall and I actually remember it happening. The value also
+compares favorably to other rain gauges I have access to. They're a few km away
+and reported 6 to 6.4 mm of rainfall.</p>
+
+<p>As a fun project if you're in Sheffield, you can compare how much rain you're
+recording to the <a class="cow-url" href="https://twitter.com/WPWeather">Weston Park Museum's weather
+station</a>! There are other monitoring stations around the country and world a
+little bit of Googling should help out there.</p>
+
+
+
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<p>
+<b><a href="/posts/2014/01/25/raingauge/#disqus_thread">Comment on this post</a>.</b>
+</p>        </article>
+<p class="paginator">
+    Page 1 / 1
+</p>
+      </aside><!-- /#featured -->
+      </ol><!-- /#posts-list -->
+      </section><!-- /#content -->
+  <section id="extras" class="body">
+  </section><!-- /#extras -->
+
+
+  </div>
+</div>
+
+  </div> <!-- #mainContent -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
+          1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
+        <a href="https://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
+        <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/tag/rain.html">Print</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+        alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+          alt="The University of Sheffield" height="70" width="165"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

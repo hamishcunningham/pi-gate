@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Basics</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+        height="55" width="46"></a></span>
+      <span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+      <span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+        alt="The University of Sheffield" height="55" width="113"</a><a
+          href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+            height="55" width="132"></a></span>
+    </span>
+    <div class="horizontal menu">
+      <ul>
+      <li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+      <!--
+      using a custom menu at present...
+      -->
+      <li><b><a href="#">Projects</a></b>
+      <!-- TODO generate this from content/pages/index -->
+        <ul>
+        <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+        <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+        <li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+        <li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+        <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+        <!--
+        <li><a href="/pages/snowcam.html">SnowCam: Off the Radar Cameras</a></li>
+        -->
+        <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+        <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+        <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+        <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+        <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+        </ul></li>
+      <li><b><a href="#">MoPi</a></b>
+        <ul>
+        <li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+        <li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+        <li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+        <li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+        </ul></li>
+      <!-- <li><a href="/">Blog</a></li> -->
+      <!--
+      <li><a href="/pages/basics.html#resources">Download</a></li>
+      -->
+      <li><a href="/pages/download.html">Download</a></li>
+      <!--
+      <li><a href="/pages/shop.html">Shop</a></li>
+      -->
+      <li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
+
+  <!-- header menus (?!) -->
+  <div id="header">
+  </div>
+
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
+
+  <!-- main content div -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <div id="mainContent">
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+        <li ><a href="/category/news.html">News</a></li>
+    </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
+
+<!-- YUI responsive columns -->
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+        
+<section id="content" class="body">    
+    <h1 class="entry-title">Basics</h1>
+<div id="socialButtons">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/basics.html"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/pages/basics.html#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/pages/basics.html"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    
+    
+
+<p><em>Getting started with Pi-Tronics: adding electronics to your Pi</em></p>
+
+
+<p><em><a class="cow-non-existant-url" href="/pages/about.html#hamish">Hamish Cunningham</a>, April 11th 2013</em></p>
+
+<!--
+TODOs
+- notes from from Gordon:
+  - Interesting that you're using an emitter follower in the buzzer example -
+    is that intentional? The buzzer will only see about 2.7v across it which
+    might be marginal. I'd be tempted to put it on the collector and drive it
+    off the 5v line, but maybe that's just me...
+  - Describe option without resistors on switches; describe gpio up/down
+-->
+
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Interaction Electronics</a></li>
+<li><a href="#section-2.">2. Lighting Lights, Listening to Switches</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.1.">2.1. Pins on the GPIO Header</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.2.">2.2. Talking to the GPIO from Software</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.3.">2.3. Reading from Switches</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.4.">2.4. Putting it Together: Sensor plus LED</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.5.">2.5. Getting a Buzz Out of Trannies</a></li>
+<li><a href="#section-3.">3. Parent Alarm</a></li>
+<li><a href="#section-4.">4. A Flood in the Basement</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.1.">4.1. Hooking it all Together</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.2.">4.2. Building and Installing</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-4.2.1.">4.2.1. The Software</a></li>
+<li><a href="#section-5.">5. Books and Resources</a></li>
+<li>&nbsp;&nbsp;<a href="#section-5.1.">5.1. Software and Source Code</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-5.1.1.">5.1.1. Installing Pi-GATE Software</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-5.1.2.">5.1.2. Installing WiringPi for Raspbian</a></li>
+<li>&nbsp;&nbsp;<a href="#section-5.2.">5.2. Books and Sites about the Pi</a></li>
+<li>&nbsp;&nbsp;<a href="#section-5.3.">5.3. Electronics Books and Sites</a></li>
+<li>&nbsp;&nbsp;<a href="#section-5.4.">5.4. Circuits: Calculators, Simulators, Diagrams</a></li>
+<li><a href="#section-6.">6. Warning!</a></li>
+</ul></p></div>
+
+<p><a name="interaction-electronics"></a>
+<a class="cow-section-anchor" name="section-1."></a><h1 class="cow-title-heading"><span class="cow-sec-number">1. </span>Interaction Electronics</h1>
+
+<p>The Pi is a <em>general purpose</em> computer. It runs <a class="cow-url" href="http://www.gnu.org/">GNU</a>
+<a class="cow-url" href="http://www.linuxfoundation.org/">Linux</a><span class="cow-footnote" name="footnote1"><sup><a href="#footnote1">1</a></sup></span>, which is an operating system
+used in satellites and phones, desktops and tablets, supercomputers and
+set-top boxes. It has graphics capabilities good enough for full HD video,
+plus computational power and memory sufficient to run a web browser or an
+office productivity suite. It has a good selection of standard
+interconnectivity options (including ethernet, HDMI, stereo analogue sound,
+and USB). Packing all of this into a very cheap, low power and low footprint
+(made in the UK!) device is truly game changing.</p>
+
+<p>Another game changer with the Pi is its ability to connect directly to
+electronic circuits that can take readings from the physical environment and
+trigger actions in that environment (and/or over the network). When you couple
+a general purpose computing device with the Pi's extremely accessible
+interaction electronics all sorts of projects become so simple that everyone
+from school kids (Raspberry Pirates!) to absent-minded academic types can
+achieve them within a short space of time. This combination of general purpose
+computer with accessible electronics is a radical development. Welcome to the
+birth of Pi-tronics!</p>
+
+<p><a name="gpio-intro"></a>
+The Pi's connections for getting data from sensors and for activating external
+gizmos are called <em>general purpose input output</em> pins, or GPIO pins. The
+simplest of these will either sense or output a small voltage (3.3 volts, not
+enough to give you a shock!). We can connect simple electronic circuits to
+these pins to get the Pi interacting with its environment.</p>
+
+<p>The Pi's GPIO pins are accessible via various software packages, which frees
+us from the tyranny of the keyboard/mouse/screen combination and allows us to
+program software to read from sensors and respond to changing conditions.</p>
+
+<p>Below we'll give <b>an introduction to sensing and responding with the Pi</b>, and
+detail some projects that can be completed in a few hours with a few pounds'
+worth of materials. These projects will teach you how to couple the Pi's GPIO
+pins with easy-to-build interaction electronics:</p>
+
+<ul>
+<li><a class="cow-url" href="#hello-world">controlling an LED</a> (<em>hello world!</em>) and reading from a switch</li>
+<li><a class="cow-url" href="#parent-alarm">hide! my parents are coming!</a> (a simple alarm system)</li>
+<li><a class="cow-url" href="#flood-alarm">a flood alarm</a> with text message notifications to your phone</li>
+</ul>
+
+<p>These projects use a prototyping tool called a breadboard to get started
+quickly and easily. For introductions to this way of working, and to hacker
+electronics in general, see the <a class="cow-url" href="#electronics-resources">electronics
+resources section</a>.</p>
+
+<p><b>Disclaimer</b>: it is possible fry your Pi by doing this type of thing &mdash; please
+see <a class="cow-url" href="#warning">this warning</a> for details.</p>
+</p>
+
+<p><a name="hello-world"></a>
+<a class="cow-section-anchor" name="section-2."></a><h1 class="cow-title-heading"><span class="cow-sec-number">2. </span>Lighting Lights, Listening to Switches</h1>
+
+<p>Pretty much the simplest thing we can do with the Pi's GPIO header is to light
+up an LED<span class="cow-footnote" name="footnote2"><sup><a href="#footnote2">2</a></sup></span> &mdash; let's make this our <em>Hello
+World!</em><span class="cow-footnote" name="footnote3"><sup><a href="#footnote3">3</a></sup></span> example.</p>
+
+<p>Materials used:</p>
+<ul>
+<li>a breadboard</li>
+<li>resistors (270&Omega;, 1k&Omega;, 10k&Omega;)</li>
+<li>green and red LEDs</li>
+<li>link wire</li>
+<li>a switch</li>
+<li>jumper cables</li>
+<li>a multimeter (optional)</li>
+</ul>
+
+<p>To create a <em>Hello World!</em> lighting circuit we only need two electronic
+components, an LED to light up and a resistor to prevent more current flowing
+through the LED than it can handle.<span class="cow-footnote" name="footnote4"><sup><a href="#footnote4">4</a></sup></span> Here's the circuit
+diagram<span class="cow-footnote" name="footnote5"><sup><a href="#footnote5">5</a></sup></span>:</p>
+
+<p><a class="cow-url" href="https://www.circuitlab.com/circuit/m4rfw9/just-an-led-raspberry-pi/"><img class="cow-img" src="/pages/images/just-an-led-ras-pi.jpg" alt="just an LED" width="500" height="199"></a></p>
+
+<p>Here D1 is the LED we're lighting up and R1 is a resistor that prevents too
+much current flowing in the circuit. V1 represents the 3.3 volt power supply
+that the Pi makes available, with +ve on GPIO pin 1 and ground on pin 6.
+<b>Note</b> that I'm using the physical header pin numbers here as these are the
+easiest numbers to quickly match up to the Pi circuit board (just count left
+to right and top to bottom). There are several other ways to refer to the
+pins, however, and several <em>gotchas</em> along the way &mdash; for more detail see the
+discussion on <a class="cow-url" href="#gpio-pins">GPIO pins</a> below).</p>
+
+<p>If we transfer this design onto our breadboard, we end up with something
+looking like this: <br> <img class="cow-img" src="/pages/images/bbd-simple-led.jpg" alt="simple LED
+breadboard" width="500" height="375"></p>
+
+<p>So far, so boring: this is pretty much the equivalent of connecting a torch
+bulb to a battery and going &quot;ahhh&quot; at the pretty light. More interesting,
+especially in the context of our earlier discussion on general purpose devices
+and <a class="cow-url" href="#interaction-electronics">interaction electronics</a>, is to drive the LED
+by software; to do this all we need to do physically is connect the circuit to
+a different pin on the GPIO header, in this case pin 11. Now spot the
+difference:</p>
+
+<p><a class="cow-url" href="https://www.circuitlab.com/circuit/vxz53u/driving-an-led-via-software-raspberry-pi/"><img class="cow-img" src="/pages/images/driving-an-led-via-software-ras-pi.jpg" alt="driving an LED" width="500" height="199"></a></p>
+
+<p>Note the shift from pin 1 to pin 11 on the GPIO header. That's all! Now we're
+almost ready to start turning the LED on and off using software running on the
+Pi, but first we need to take a detour into the murky world of GPIO pin
+numbering. (If you're lucky enough to have your Mum nearby you may want to ask
+her to hold your hand while reading the next section. If it ends in tears
+don't say I didn't warn you.)</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="gpio-pins"></a></p><a class="cow-section-anchor" name="section-2.1."></a><h2 class="cow-heading"><span class="cow-sec-number">2.1. </span>Pins on the GPIO Header</h2>
+
+<p>I think if I went on a course in Egyptian hieroglyphics for a month and then
+revised my <a class="cow-url" href="http://www.ioccc.org/">obfuscated C</a> notes for a while I could
+probably come up with a numbering scheme for the GPIO pins which was perhaps
+half as confusing as the existing one. Actually that's a little unfair, but
+the problem is that there are four <em>separate</em> ways to refer to the pins, all
+different, all useful. To begin with, there are two offical numbering schemes,
+one relating to the physical header on the Pi circuit board that we actually
+make connections to (numbered 1 to 26), and the other relating to where they
+interface to the Broadcom <em>system on a chip</em> at the heart of the beast (the
+<a class="cow-url" href="http://www.broadcom.com/products/BCM2835">BCM2835</a>). Then there's also a
+name for the function of the pin (e.g. 'GPIO 0'), and an extra complication is
+that a couple of pins changed function in the 'revision 2' version of the Pi.
+Finally, the way that we access the pins through software also has its own
+nomenclature, and, because some of that software generalises across multiple
+devices (e.g. the Pi and the Arduino) again the numbering is completely
+different.</p>
+
+<p>I think I'd need to add runes and Clingon symbols to the mix if I was really
+trying to challenge the supremacy of the confusion that can result here.</p>
+
+<p>Luckily there are a number of good sources to turn to for help. My favourite
+is from Gordon Henderson, creator of <a class="cow-url" href="http://wiringpi.com/">Wiring Pi</a>, an
+excellent software library for talking to the Pi (and several other boards). I
+recommend printing out <a class="cow-url" href="http://wiringpi.com/pins/">Gordon's key to the GPIO
+pins</a> and keeping it handy at all times. I also <b>strongly recommend</b> working
+on the Pi with the pins positionned in the top right corner, not the other way
+around, so that the numbers on the diagram match up with the orientation of
+the Pi. So <em>do not</em> do the following if you value your sanity (assuming you
+still have some left, that is<span class="cow-footnote" name="footnote6"><sup><a href="#footnote6">6</a></sup></span>): <br> <img class="cow-img" src="/pages/images/upside-down-gpio.jpg" alt="wrong!" width="500" height="356"></p>
+
+<p>The Pi's GPIO facilities cover a lot of other useful functions that we've not
+even hinted at so far. Consult one of <a class="cow-url" href="#pi-books">the Pi books</a> for details,
+or see this <a class="cow-url" href="http://t.co/JIRxM6qBAm">nice summary one-pager</a> from
+<a class="cow-url" href="http://pimoroni.com/">Pimoroni</a>, makers of the fabulously cute PiBow case &mdash;
+<br> <img class="cow-img" src="/pages/images/pibow.jpg" alt="PiBow" width="300" height="267"> <br> &mdash; and home of the
+<a class="cow-url" href="http://www.raspberrypi.org/archives/221">Pi logo's creator</a>, Paul
+Beech<span class="cow-footnote" name="footnote7"><sup><a href="#footnote7">7</a></sup></span>.</p>
+
+<!--% pibow image url: http://cdn.shopify.com/s/files/1/0174/1800/products/pibow-classic_1024x1024.jpg?2712-->
+
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="gpio-software"></a></p><a class="cow-section-anchor" name="section-2.2."></a><h2 class="cow-heading"><span class="cow-sec-number">2.2. </span>Talking to the GPIO from Software</h2>
+
+<p>Now we're ready to write some software to control the interaction electronics
+that we're connecting to the Pi.</p>
+
+<p>Although the Linux operating system running on your Pi provides access to the
+GPIO pins at a low level via the <em>sysfs</em> virtual file system, it is generally
+easier to use a higher level library that abstracts a little further away from
+the underlying hardware. Such libraries exist for (at least) Perl, Unix shell
+script, Python, Scratch and Java. We'll use the <a class="cow-url" href="http://wiringpi.com/">WiringPi</a> library from <a class="cow-url" href="https://projects.drogon.net/">Gordon Henderson</a>,
+which makes available the same abstractions for various devices and is a well
+tested and robust piece of kit. (Thanks Gordon!)</p>
+
+<p>WiringPi provides a convenient command-line program called <tt>gpio</tt> that we can
+use to control and read from the GPIO pins, and we'll use this in our
+examples. This means that we're going to be programming in <em>Unix shell
+script</em>, which is the command language that the Pi's
+<a class="cow-url" href="http://www.raspbian.org/">Raspbian</a> Linux operating system drops you
+into by default when you log in. This language can be used from the command
+prompt (the <tt>$</tt> or <tt>#</tt> that appears on screen to prompt you to make an input)
+and can also be collected into a file and used as a command (or script) in
+itself. This makes it the most direct way to experiment with Pi programming
+(not to mention controlling many types of computer), and is well worth
+learning, even if you're also learning a higher level language like Scratch,
+Java or Python.</p>
+
+<p>GPIO pins either listen for a signal (in input mode) or produce a signal (in
+output mode). Our first job when programming GPIO interaction code, then, is
+to decide which mode the pins we're working with should be in, and ask
+WiringPi to set them up accordingly. Refering back to our circuit diagram,
+<br>
+<a class="cow-url" href="https://www.circuitlab.com/circuit/vxz53u/driving-an-led-via-software-raspberry-pi/"><img class="cow-img" src="/pages/images/driving-an-led-via-software-ras-pi.jpg" alt="driving an LED" width="500" height="199"></a> <br> we see that header pin 11 is what we're using to drive the LED &mdash;
+i.e. make an <em>output</em> &mdash; and that therefore we need to set pin 11 into output
+mode. For reasons <a class="cow-url" href="#gpio-pins">discussed above</a> header pin 11 is known to
+WiringPi as GPIO 0, so we use the <tt>gpio</tt> utility to set the mode for that pin
+like this:</p>
+
+<p><tt>gpio mode 0 out</tt></p>
+
+<p>We can read this as &quot;call the gpio program to set the mode of pin 0 to
+output&quot;. (We don't need to do anything with pin 6, as this is always connected
+to ground and doesn't have a mode setting.) Next, let's turn our output pin on
+and see our LED light up:</p>
+
+<p><tt>gpio write 0 1</tt></p>
+
+<p>Again we're operating on pin 0, this time setting it high (to 3.3 volts &mdash; see
+next section).</p>
+
+<p>And now turn it off again (to 0 volts):</p>
+
+<p><tt>gpio write 0 0</tt></p>
+
+<p>Magic!</p>
+
+<p>For our next trick, let's get our Pi to sense something in the outside world,
+and respond to that input by again turning the LED on and off.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="switches"></a></p><a class="cow-section-anchor" name="section-2.3."></a><h2 class="cow-heading"><span class="cow-sec-number">2.3. </span>Reading from Switches</h2>
+
+<p>Let's recap where we've got to. First we hooked up an LED and a resistor to
+the Pi's 3.3v supply, then moved it onto one of the GPIO pins and discovered
+how to switch it on and off via software. Now let's look at an example of the
+other side of the interaction coin, reading from a sensor. To get us started
+we'll use a switch as a sensor, and get our Pi software to respond to the
+position of the switch.</p>
+
+<p>There are several example circuits for this type of thing knocking around; our
+starting point below is adapted from
+<a class="cow-url" href="http://elinux.org/RPi_Tutorial_EGHS:Switch_Input">an Embedded Linux
+tutorial</a>. Another good source (though using Python instead of shell script)
+is this 
+<a class="cow-url" href="http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/robot/buttons_and_switches/">physical computing tutorial</a> from the Cambridge University lab where the
+<a class="cow-url" href="http://www.raspberrypi.org/about">Pi originated</a>.</p>
+
+<p>To make things a little more interesting we'll combine the data we get from
+the switch with the LED control circuit we developed above. In each case we're
+using the Pi's native logic voltage of 3.3 volts to signify binary 1 and using
+0 volts to signify binary 0. (We can think of these as &quot;on&quot; and &quot;off&quot;, or
+&quot;high&quot; and &quot;low&quot;, or even &quot;true&quot; and &quot;false&quot;, depending on what sort of mood
+we're in.) We'll read either a 0 or a 1 from our circuit depending on whether
+the switch is either open or closed respectively.</p>
+
+<p>First here's the circuit to read the position of a switch<span class="cow-footnote" name="footnote8"><sup><a href="#footnote8">8</a></sup></span>:
+<br>
+<a class="cow-url" href="https://www.circuitlab.com/circuit/2475qd/switch-with-pull-down-resistor-raspberry-pi/"><img class="cow-img" src="/pages/images/switch-with-pull-down-resistor.jpg" alt="reading from switch" width="450" height="243"></a> <br> We connect the switch SW1 to the (always on) 3.3v supply (header pin
+1), so that when the switch is in the on position it will supply the logical
+high value. Resistor R1 prevents mishaps if we accidentally set header pin 11
+to output at low (i.e. try to get the poor thing to pull the 3.3v supply to
+0v, with unhappy consequences). Then we use a <em>pull down resistor</em>, R2, to
+drag pin 11 low when the switch is open. When the switch is closed, R2 being
+much higher than R1 implies that pin 11 will be pulled high by the 3.3v supply
+from pin 1.</p>
+
+<p>Confused? There's more explanation in the Embedded Linux tutorial linked
+above, and a much more detailed presentation 
+<a class="cow-url" href="http://www.ladyada.net/learn/arduino/lesson5.html">at AdaFruit</a>. (The latter
+is in relation to the Arduino but the principles are the same.)</p>
+
+<p>The breadboard to implement this circuit looks like this: <br>
+<img class="cow-img" src="/pages/images/bbd-simple-switch.jpg" alt="simple switch breadboard" width="500" height="375"></p>
+
+<p>All we need now is some code to test what position the switch is in. We're
+sensing on header pin 11, which is WiringPi's 0, so we set 0 to input mode:</p>
+
+<p><tt>gpio mode 0 in</tt></p>
+
+<p>Now we can read the value like this:</p>
+
+<p><tt>gpio read 0</tt></p>
+
+<p>When the switch is on this will return a 1, and when it is off a 0. We're on a
+roll!<span class="cow-footnote" name="footnote9"><sup><a href="#footnote9">9</a></sup></span></p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2.4."></a><h2 class="cow-heading"><span class="cow-sec-number">2.4. </span>Putting it Together: Sensor plus LED</h2>
+
+<p>We've nearly completed our lightening tour of the basics of interaction
+electronics with the Pi's GPIO facility. To finish off we'll connect up the
+sensing and responding sides of the picture. Here's a circuit which combines
+sensing from a switch with turning an LED on and off via software. The result
+is that we will now both sense from the switch and respond to the sensor data
+from software.</p>
+
+<p><a class="cow-url" href="https://www.circuitlab.com/circuit/886nta/sensing-from-switch-and-driving-led-raspberry-pi/"><img class="cow-img" src="/pages/images/sensing-from-switch-and-driving-led.jpg" alt="switch and LED" width="550" height="229"></a></p>
+
+<p>Nothing new here &mdash; we've just combined the LED driver circuit that we began
+with and the switch reader circuit from the previous section. Here we have the
+switch sensor to the left and the LED driver to the right.</p>
+
+<p>The breadboard to implement this circuit looks like this: <br>
+<img class="cow-img" src="/pages/images/bbd-switch-plus-led.jpg" alt="switch plus LED breadboard" width="500" height="375"></p>
+
+<p><img class="cow-img" src="/pages/images/bbd-switch-plus-led-detail.jpg" alt="switch plus LED breadboard
+detail" width="500" height="468"> <br> We've use a four-way switch (in &quot;dual in line&quot; or DIL
+pin style) because we had one handy and because it was easy to connect to the
+breadboard, but we're only using one of its channels &mdash; the equivalent of an
+SPST or
+&quot;<a class="cow-url" href="http://en.wikipedia.org/wiki/Single_pole,_single_throw#Contact_terminology">single pole single throw</a>&quot; switch.</p>
+
+<p>The code to drive this uses some neat features of Unix shell script:</p>
+
+<p><pre class="prettyprint lang-bash">
+gpio mode 0 in
+gpio mode 1 out
+
+while :
+do
+  gpio write 1 `gpio read 0`
+  sleep 1
+done
+</pre>The <tt>while :</tt> loop repeats forever (in shell &quot;:&quot; is a no-op command which
+always returns true, so the loop never hits a termination condition). We do
+this so that the program keeps testing to see if the switch position has
+changed. We don't really need to do this every few milliseconds, so to make
+the resultant load on the machine a little lower we use <tt>sleep</tt> to pause the
+program and set a wakeup timer in the operating system. The value of &quot;1&quot;
+passed to <tt>sleep</tt> means &quot;one second&quot;, so our loop will run once per second, or
+thereabouts.<span class="cow-footnote" name="footnote10"><sup><a href="#footnote10">10</a></sup></span></p>
+
+<p>The forward quotes (or backticks) in <tt>gpio write 1 `gpio read 0`</tt> do &quot;command
+substitution&quot;: they run the command contained between the two quotes and
+replace the command with whatever is returned, then running the enclosing
+command. Here we're saying &quot;read a value from GPIO 0&quot; and then &quot;write that
+value to GPIO 1&quot;. When the switch is on GPIO 0 will read high (and the command
+will return 1), at which point we'll write 1 to GPIO 1, our output pin which
+is driving the LED (so the LED will turn on). If the switch is off, then GPIO
+0 will read low, returning 0 which will then be written to the output pin and
+turn the LED off.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2.5."></a><h2 class="cow-heading"><span class="cow-sec-number">2.5. </span>Getting a Buzz Out of Trannies</h2>
+
+<p>We've done the <em>let there be light!</em> bit &mdash; how about making a noise to go
+with it? We'll finish up this part by hooking up buzzer to make an annoying
+whiney sound, partly because we'll need one of these later for our 
+<a class="cow-url" href="#flood-alarm">flood alarm</a> project, and partly because it will introduce us
+to a new component, the <em>transistor</em> (or <em>trannie</em> in British English &mdash; North
+Americans please change your Google Translate preferences accordingly ☺).</p>
+
+<p>Transistors are incredibly powerfull little gizmos, and their invention was
+one of the biggest steps in the history of solid state electronics, leading
+directly to the creation of integrated circuits (or <em>silicon chips</em> in the
+popular vernacular) and the whole miniaturisation feeding frenzy that the
+techy world has been enthralled by for the last half century or so.</p>
+
+<p>Transistors allow the rapid and efficient switching of a large flow of current
+using a much smaller flow. Amongst many other things this is the basis of the
+amplification that pretty much every hifi, TV, phone, MP3 player, etc. etc.
+uses to drive their loudspeakers. If it wasn't for transistors we'd all be
+carrying around car batteries and keeping nice and warm from the
+<a class="cow-url" href="http://en.wikipedia.org/wiki/Vacuum_tube">thermionic valves</a><span class="cow-footnote" name="footnote11"><sup><a href="#footnote11">11</a></sup></span> in our devices:</p>
+
+<p><a class="cow-url" href="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/5651RegulatorTubeInOperation.jpg/200px-5651RegulatorTubeInOperation.jpg"><img class="cow-img" src="/pages/images/thermionic-valve.jpg" alt="Thermionic valve" width="300" height="410"></a></p>
+
+<p>In the circuits above we've done our LED switching using the Pi's GPIO pins
+directly. These pins are only designed to deliver a very small current flow;
+if we want to drive a loudspeaker or a buzzer then we need more juice, and an
+easy and efficient way to supply it is to add a transistor to the mix. Our
+GPIO pin will still do the basic switching, but the transistor will mediate
+between GPIO and buzzer. Here's the circuit diagram:</p>
+
+<p><a class="cow-url" href="https://www.circuitlab.com/circuit/p989jw/using-a-transistor-to-drive-a-buzzer-raspberry-pi/"><img class="cow-img" src="/pages/images/using-a-transistor-to-drive-a-buzzer.jpg" alt="transistor driving
+buzzer" width="500" height="266"></a></p>
+
+<p>The transistor, Q1, has three pins, called base (b), collector (c) and emitter
+(e). When the base is set high (via GPIO header pin 11 in this case) the
+resistance between the collector and emitter is switched low. We place the
+buzzer in series with the transistor's collector/emitter pair and feed
+positive voltage through header pin 1. The effect is that the signal we send
+on header pin 11 (Wiring Pi's GPIO 0) will now turn the buzzer on or off.</p>
+
+<p>Here's the circuit wired up on our trusty breadboard: <br>
+<img class="cow-img" src="/pages/images/bbd-transistor-driving-buzzer.jpg" alt="transistor driving buzzer" width="500" height="375"></p>
+
+<p>Finally here's an example data sheet for a common transistor, if you're
+curious about the gorey details, for the
+<a class="cow-url" href="http://alltransistors.com/transistor.php?transistor=23414">BC549C
+transistor</a>.</p>
+
+<p><hr></p>
+
+<p>So we've now written programs on the Pi that can both sense from the outside
+world (e.g. the position of the switch) and send out a response (lighting or
+extinguishing an LED, or buzzing a buzzer). We've taken our first steps in
+interaction electronics; now its time to look at a couple of simple projects
+that we can build using the techniques that we've learned so far.</p>
+</p>
+
+<p><a name="parent-alarm"></a>
+<a class="cow-section-anchor" name="section-3."></a><h1 class="cow-title-heading"><span class="cow-sec-number">3. </span>Parent Alarm</h1>
+
+<p>Parents &mdash; they're quite handy for doing the shopping and making breakfast and
+the like, but they do tend to get in the way, don't they? And even perfectly
+innocent teenage activities like building a particle accelerator in your
+bedroom can easily lead to awkward questions and family misunderstandings.</p>
+
+<p>Let's use a Pi and a pressure mat to give an early warning of parental feet in
+the corridor.</p>
+
+<p>Materials:</p>
+<ul>
+<li>bell wire or similar</li>
+<li>a pressure pad sensor</li>
+<li>a breadboard</li>
+<li>resistors (270&Omega;, 1k&Omega;, 10k&Omega;)</li>
+<li>green and red LEDs</li>
+<li>link wire</li>
+<li>jumper cables</li>
+<li>a multimeter (optional)</li>
+</ul>
+
+<p>The first part is easy: we just replace the switch in the <a class="cow-url" href="#switches">reading
+from switches</a> circuit with a pressure mat<span class="cow-footnote" name="footnote12"><sup><a href="#footnote12">12</a></sup></span>. Here's an example
+mat:</p>
+
+<p><img class="cow-img" src="/pages/images/pressure-mat.jpg" alt="a pressure mat" width="500" height="375"></p>
+
+<p>This works just like a switch &mdash; there are two wires to connect to, and when a
+heavy object (e.g. a parent) stands on the mat the two wires are connected
+(i.e. the resistance between them cycles between very high and very
+low).<span class="cow-footnote" name="footnote13"><sup><a href="#footnote13">13</a></sup></span>
+So we can use exactly the same circuit we used earlier for reading from a
+switch and turning an LED on or off:</p>
+
+<p><a class="cow-url" href="https://www.circuitlab.com/circuit/886nta/sensing-from-switch-and-driving-led-raspberry-pi/"><img class="cow-img" src="/pages/images/sensing-from-switch-and-driving-led.jpg" alt="switch and LED" width="550" height="229"></a></p>
+
+<p>One limitation of this circuit is that if Mum should happen to pop in one day
+and zap 50,000 volts across the Pi's GPIO pins the poor thing is unlikely to
+remain enthusiastic about driving our indicator LED &mdash; but we won't actually
+know that anything has changed, because as it stands there is no indication of
+normal operation as opposed to the various possible failure conditions. The
+next circuit addresses this limitation by adding another LED that is lit up
+when the pressure pad is <em>not</em> being stood on. That way we'll have an
+indicator of what state the system is in for both the &quot;everything's ok&quot; and
+the &quot;run and hide!&quot; conditions, so we'll immediately know if we've forgotten
+to switch the thing on, or if one of the LEDs has died, or etc.</p>
+
+<p>The circuit: <br>
+<a class="cow-url" href="https://www.circuitlab.com/circuit/56x6hf/an-alarm-with-two-leds-raspberry-pi/"><img class="cow-img" src="/pages/images/an-alarm-with-two-leds.jpg" alt="alarm with two LEDs" width="600" height="187"></a></p>
+
+<p>The breadboard for this circuit looks like this: <br></p>
+
+<!--% NOTE: this is actually wired up with the LEDs on pins 11 and 13 and the-->
+
+<!--% switch on 12, or similar; we just ignore this in the text, but really we-->
+
+<!--% should redo the breadboard and the local-bin/water-alarm.sh code-->
+
+
+<p><img class="cow-img" src="/pages/images/bbd-with-mat.jpg" alt="breadboard with pressure mat" width="500" height="375"></p>
+
+<p>The green LED runs when the mat is <em>not</em> being stood on, indicating that all
+is fine; the yellow LED (red would also be a good colour) lights up when it's
+time to hide the particle accelerator and pretend to be doing the homework.</p>
+
+<p>A closer look:</p>
+
+<p><img class="cow-img" src="/pages/images/bbd-with-mat-detail.jpg" alt="breadboard with pressure mat detail" width="500" height="471"></p>
+
+<p>We need a new program to drive the extra LED (which is on Wiring Pi's GPIO 2,
+connected on physical header pin 13). In Unix shell script a suitable
+program is this:</p>
+
+<p><pre class="prettyprint lang-bash">
+gpio mode 0 in
+gpio mode 1 out
+gpio mode 2 out
+
+while :
+do
+  if [ `gpio read 0` == 1 ]
+  then
+    gpio write 1 1
+    gpio write 2 0
+  else
+    gpio write 1 0
+    gpio write 2 1
+  fi
+  sleep 1
+done
+</pre>Here the two LEDs are controlled on GPIO 1 and 2, and as before we're reading
+the input on GPIO 0. When someone stands on the pressure mat the input is 1,
+and the first branch of the <tt>if</tt> statement will turn the first LED on and the
+second one off; otherwise the reverse will happen. So of our two LEDs, one
+will indicate safety and the other an alarm state.</p>
+
+<p>Job done.</p>
+</p>
+
+<p><a name="flood-alarm"></a>
+<a class="cow-section-anchor" name="section-4."></a><h1 class="cow-title-heading"><span class="cow-sec-number">4. </span>A Flood in the Basement</h1>
+
+<p>There's a poltergeist who lives in my basement. Either that, or I've had three
+completely coincidental pipe failures in the space of a couple of years. The
+last leak had such a high flow rate that if I hadn't wandered past in the
+morning and wondered what that hissing noise was we would have had a brand new
+swimming pool by the evening. The most worrying thing was that the leak came
+from a pipe joint that was brand new a year ago (and not fitted by me, either,
+but by a skilled professional<span class="cow-footnote" name="footnote14"><sup><a href="#footnote14">14</a></sup></span>).</p>
+
+<p>So I decided I needed a bit of long-term plumbing reassurance in the form of a
+water alarm that will send me an SMS text message whenever things get wetter
+than expected under the house. With a Pi and an alarm circuit like
+<a class="cow-url" href="#parent-alarm">our parent alarm</a> this turns out to be a nice project.</p>
+
+<p>Materials used:</p>
+<ul>
+<li>as per the parent alarm, minus the pressure pad</li>
+<li>a simple mobile phone with USB cable, or a network-connection and an account
+  on an SMS web service</li>
+</ul>
+
+<p>The trick here is to find a way to sense the presence of moisture. As water
+conducts electricity we can do this using a variation on one of our
+<a class="cow-url" href="#switches">switching circuits</a>: we'll run a length of two-core wire through
+all the areas where we expect flooding and strip each core so that a flood
+would connect the two cores together.</p>
+
+<p>To decide on the values for the circuit that we'll use to connect to the Pi,
+we need to test the resistance of the water connections using a multimeter; it
+turns out that we have something between 20k and 50k ohms when the bare wire
+is immersed. When the wire is dry (hopefully the long-term average!) the
+resistance will be infinite (like an open switch). We also should expect that
+the wires may touch (if someone steps on them and presses them together, for
+example), so we also have to cater for a 0 ohms resistance. To deal with these
+possibilities we'll use a 1k limiting resistor and a 100k pull down resistor
+like this:
+<br> <a class="cow-url" href="https://www.circuitlab.com/circuit/at8v7f/water-sensor-raspberry-pi/"><img class="cow-img" src="/pages/images/water-sensor-raspberry-pi.jpg" alt="water sensor" width="500" height="211"></a> <br>
+Here's what happens in our three cases:</p>
+<ul>
+<li>When the wire is dry, R1 acts as an infinite resistance, and pin 11 (which
+  we set in input mode) is pulled low via R2 and R3.</li>
+<li>When the wire is wet, R1's resistance will be some way lower than that of R3
+  (the pull down resistor) and so pin 11 will be pulled high.</li>
+<li>If the wires are shorted R1's resistance will be close to zero, but we will
+  not draw too much current from the Pi because of the presence of R2.</li>
+</ul>
+
+<p>The code to read from our water sensor is very simple: <tt>gpio mode 0 in</tt> sets
+things up, and <tt>gpio read 0</tt> takes a reading. When things get wet (or there's
+a short circuit) the read statement will return 1; otherwise it will return 0.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="alarm-integration"></a></p><a class="cow-section-anchor" name="section-4.1."></a><h2 class="cow-heading"><span class="cow-sec-number">4.1. </span>Hooking it all Together</h2>
+
+<p>Finishing off the flood alarm is a matter of combining the LED and buzzer
+notification circuits with the water sensor just above. The breadboard looks
+like this:</p>
+
+<p><img class="cow-img" src="/pages/images/bbd-flood-alarm-detail.jpg" alt="final flood alarm breadboard" width="500" height="375"></p>
+
+<p>Here it is in context, with a fantastically expensive test rig consisting of a
+length of bell wire to dip in a plastic box full of wet stuff:</p>
+
+<p><img class="cow-img" src="/pages/images/flood-alarm-context.jpg" alt="final flood alarm context" width="500" height="266"></p>
+
+<p>Here's the complete circuit diagram:</p>
+
+<p><a class="cow-url" href="https://www.circuitlab.com/circuit/vhp9ma/flood-alarm-raspberry-pi/"><img class="cow-img" src="/pages/images/flood-alarm.jpg" alt="flood alarm" width="850" height="246"></a></p>
+
+<p>This combines the buzzer and LED driver circuits (one for the buzzer and red
+LED, using a transistor driver, and one for the green LED using GPIO alone)
+and the water sensor circuit. With a working and tested version running on the
+breadboard, we're all ready to build it, box it and install it!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="alarm-build"></a></p><a class="cow-section-anchor" name="section-4.2."></a><h2 class="cow-heading"><span class="cow-sec-number">4.2. </span>Building and Installing</h2>
+
+<p>Now, I want my breadboard for other things, and I want to box up the beastie
+for installation in my basement, so the final step is to solder it all
+together onto a permanent fixture &mdash; in this case a piece of stripboard:</p>
+
+<p><img class="cow-img" src="/pages/images/flood-alarm-stripboard.jpg" alt="build: stripboard" width="500" height="274"></p>
+
+<p>Stripboard is very like breadboard in layout, with a sequence of conductive
+strips on the underneath of the board:</p>
+
+<p><img class="cow-img" src="/pages/images/bare-stripboard.png" alt="bare stripboard" width="500" height="500"></p>
+
+<p>If we need to we can make breaks in the strips, which I did underneath the row
+of resistors that you can see at the left-hand end of the board here:</p>
+
+<p><img class="cow-img" src="/pages/images/flood-alarm-stripboard-3.jpg" alt="build: stripboard 3" width="500" height="387"></p>
+
+<p>And here it is from the reverse angle:</p>
+
+<p><img class="cow-img" src="/pages/images/flood-alarm-stripboard-4.jpg" alt="build: stripboard 4" width="500" height="375"></p>
+
+<p>Here is the complete build, all ready for installation:</p>
+
+<!--% %image(images/flood-alarm-stripboard-2.jpg, build: stripboard 2, 500)-->
+
+<p><img class="cow-img" src="/pages/images/flood-alarm-stripboard-5.jpg" alt="build: stripboard 5" width="500" height="498"></p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="alarm-software-and-install"></a></p><a class="cow-section-anchor" name="section-4.2.1."></a><h3 class="cow-heading"><span class="cow-sec-number">4.2.1. </span>The Software</h3>
+
+<p>The software for the beast is a bit more complex than we've worked with before
+&mdash; it loops forever and takes care of sending an <a class="cow-non-existant-url" href="/pages/notipi.html">SMS
+notification</a> when it senses a flood, but it also does some standard shell
+magic like processing command-line options, giving help messages and the like.
+To prevent too many messages, when it finds a flood that doesn't go away it
+also waits progressively longer periods before testing again.</p>
+
+<p>Here's the code:</p>
+
+<p><pre class="prettyprint lang-bash">
+#!/usr/bin/env bash
+# flood-alarm.sh
+
+# standard locals
+alias cd='builtin cd'
+P=&quot;$0&quot;
+USAGE=&quot;`basename ${P}` [-h(elp)] [-w(et)] [-d(ry)]\n
+\twet and dry are for testing; normally we are run without options\n
+\tand loop forever waiting for state changes on GPIO 2...&quot;
+OPTIONSTRING=hwd
+
+# specific locals
+WET=0
+DRY=0
+STATUS=none
+pdate() { date '+%b %d %Y %T'; }
+
+# message &amp; exit if exit num present
+usage() { echo -e Usage: $USAGE; [ ! -z &quot;$1&quot; ] &amp;&amp; exit $1; }
+
+# process options
+while getopts $OPTIONSTRING OPTION
+do
+  case $OPTION in
+    h)	usage 0 ;;
+    d)	DRY=1; WET=0 ;;
+    w)	WET=1; DRY=0 ;;
+    *)	usage 1 ;;
+  esac
+done 
+shift `expr $OPTIND - 1`
+
+# get started
+echo
+echo ========================================================================
+echo Hello! no flooding today, we hope...
+pdate
+echo
+
+# set up the gpio pins
+gpio mode 0 out # pin 0 is the buzzer and red led
+gpio mode 1 out # pin 1 is the green led
+gpio mode 2 in  # pin 2 is the water sensing circuit
+
+# helpers for processing state changes
+statusDry() {
+  if [ $STATUS == wet ]
+  then
+    echo Becoming dry at `pdate`...
+  else
+    echo Staying dry at `pdate`...
+  fi
+  STATUS=dry
+  gpio write 0 0
+  gpio write 1 1
+}
+statusWet() {
+  if [ $STATUS == dry ]
+  then
+    echo Eek! Becoming wet! `pdate`
+  else
+    echo Bugger. Staying wet! `pdate`
+  fi
+  STATUS=wet
+  gpio write 0 1
+  gpio write 1 0
+}
+
+# helper to send notifications when wetness persists
+notifyFlooding() {
+  DATE_TIME=`date '+%b %d %Y %T'`
+
+  # send an SMS over the net
+  PW=`cat flood-alarm-data-secure-store/bulksms.txt`
+  SMS_STATUS=`./hc-sendbulksms.sh -u hcunningham \
+    -p &quot;${PW}&quot; -n 447712341234 -m &quot;Flooding in the basement? $DATE_TIME&quot;`
+  echo &quot;BulkSMS says: ${SMS_STATUS}&quot;
+
+  # we could also use our NotiPi code here to send an SMS over the phone...
+}
+
+# either do a state change (for debugging), or loop
+if [ $DRY == 1 ]
+then
+  statusDry
+elif [ $WET == 1 ]
+then
+  statusWet
+else
+  # after an alarm wait at least 30 mins before re-testing
+  MIN_DELAY=30
+  DELAY=${MIN_DELAY}
+  while :
+  do
+    WET=`gpio read 2`
+    if [ $WET == 0 ]
+    then
+      statusDry
+      DELAY=${MIN_DELAY}
+      sleep 1
+    else
+      # wait a little and test again, just to be sure
+      sleep 3
+      WET=`gpio read 2`
+      [ $WET == 0 ] &amp;&amp; echo 'Hmmm... false alarm!' &amp;&amp; statusDry &amp;&amp; continue
+      
+      # raise the alarm
+      statusWet
+      notifyFlooding
+      echo Taking a break for ${DELAY} minutes...
+      sleep ${DELAY}m
+
+      # if it is still wet we want to sleep longer next time
+      DELAY=`expr 2 \* ${DELAY}`
+      if [ $DELAY -gt 1440 ] 
+      then
+        # max delay is 24 hours
+        DELAY=1440
+      fi
+    fi
+  done
+fi
+</pre>And it works!</p>
+
+<p>Almost.</p>
+
+<p>It worked fine in the office, but when I wired it up in the basement I started
+getting false triggers. This seemed to be an effect of the cable runs that I
+chose &mdash; whereas my initial test rig was just one long length of wire, I
+initially attached four separate runs in the basement, to cover joints on two
+of the pipes that had leaked previously and also two floor locations where
+water collects when there's flooding. Here's an example of the former:</p>
+
+<p><img class="cow-img" src="/pages/images/flood-alarm-sensor.jpg" alt="installation: sensor" width="500" height="375"></p>
+
+<p>The separate cable runs were then joined by twisting the wires together, like
+this:</p>
+
+<!--% %image(images/flood-alarm-twisted-wires.jpg, installation: wires, 500)-->
+
+<p><img class="cow-img" src="/pages/images/flood-alarm-twisted-wires-2.jpg" alt="installation: wires 2" width="500" height="375"></p>
+
+<p><img class="cow-img" src="/pages/images/flood-alarm-twisted-wires-3.jpg" alt="installation: wires 3" width="500" height="330"></p>
+<!--% %image(images/flood-alarm-twisted-wires-4.jpg, installation: wires 4, 500)-->
+
+
+<p><img class="cow-img" src="/pages/images/flood-alarm-twisted-wires-5.jpg" alt="installation: wires 5" width="500" height="384"></p>
+
+<p>This arrangement created a level of
+<a class="cow-url" href="https://en.wikipedia.org/wiki/Capacitance">capacitance</a> in the wiring rig
+that was, over time, enough to trigger the GPIO pin in reading state. After a
+few seconds, it would trigger. To fix the problem, I did two things:</p>
+
+<ul>
+<li>reduced the capacitance by using a different jointing method (a
+  mini-breadboard), and removing one of the wire runs</li>
+<li>added a software delay of three seconds before raising an alarm</li>
+</ul>
+
+<p>The latter appears in the script above and looks like this:</p>
+
+<p><pre class="prettyprint lang-bash">
+      sleep 3
+      WET=`gpio read 2`
+      [ $WET == 0 ] &amp;&amp; echo 'Hmmm... false alarm!' &amp;&amp; statusDry &amp;&amp; continue
+</pre>This code branch is followed whenever we get a &quot;wet&quot; reading, and says &quot;first
+sleep for 3 seconds, then test the indication again&quot;. When we find that the
+wet reading has gone away we treat it as a false alarm and continue waiting
+for a new reading.</p>
+
+<p>A couple of other wrinkles: the alarm Pi has no monitor attached, so we need
+to set this going with <a class="cow-url" href="http://en.wikipedia.org/wiki/Nohup"><tt>nohup</tt></a> to
+prevent the process dying when we log out. To be precise:</p>
+
+<p><pre class="prettyprint lang-bash">
+nohup bash -c &quot;`pwd`/flood-alarm.sh &amp;&quot;
+</pre>The output from the script is then collected in <tt>nohup.out</tt> and we can watch
+new entries being written like this:</p>
+
+<p><pre class="prettyprint lang-bash">
+tail -f nohup.out
+</pre>Finally, the local network is protected by a firewall and
+<a class="cow-url" href="https://en.wikipedia.org/wiki/Network_address_translation">network address
+translation</a> in our broadband router. To allow us to log in when not at home,
+I used the excellent <a class="cow-url" href="https://pagekite.net/">PageKite</a> system to forward
+<a class="cow-url" href="http://www.openssh.org/">Open SSH</a> traffic to the Pi running the alarm
+system. (If you don't know SSH, time to find out &mdash; it is an essential tool
+for secure communication to your Pi-based systems (and others).<span class="cow-footnote" name="footnote15"><sup><a href="#footnote15">15</a></sup></span>)</p>
+
+<p>And that's it. Now I can sleep easy... until my phone gets a text, that is!</p>
+</p>
+
+<p><a name="resources"></a>
+<a class="cow-section-anchor" name="section-5."></a><h1 class="cow-title-heading"><span class="cow-sec-number">5. </span>Books and Resources</h1>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="code"></a></p><a class="cow-section-anchor" name="section-5.1."></a><h2 class="cow-heading"><span class="cow-sec-number">5.1. </span>Software and Source Code</h2>
+
+<p>Packaged versions of some of the projects (e.g. the <a class="cow-non-existant-url" href="/pages/mopi.html">SimBaMon
+battery monitor</a>) is available from
+<a class="cow-url" href="https://launchpad.net/~hamish-dcs/+archive/pi-gate">https://launchpad.net/~hamish-dcs/+archive/pi-gate</a> (an Ubuntu
+PPA<span class="cow-footnote" name="footnote16"><sup><a href="#footnote16">16</a></sup></span>
+set up to be suitable for Raspbian). See <a class="cow-url" href="#installing">the next section</a> for
+installation instructions.</p>
+
+<p>Source code for all the projects is available on the <a class="cow-url" href="http://github.com/">Git
+Hub</a> open source hosting site. The project is called
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics">Pi-Tronics</a>. To get started
+install git and clone the master branch:</p>
+
+<p><pre class="prettyprint lang-bash">
+git clone git://github.com/hamishcunningham/pi-tronics.git
+</pre>This will create a directory <tt>pi-tronics</tt> on your local system. See the file
+<tt>README.txt</tt> in that directory for details of what is where.</p>
+
+<p>You can also browse the code on-line &mdash; here's the
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/basics/bin/flood-alarm.sh">flood alarm script</a>, for example.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="installing"></a></p><a class="cow-section-anchor" name="section-5.1.1."></a><h3 class="cow-heading"><span class="cow-sec-number">5.1.1. </span>Installing Pi-GATE Software</h3>
+
+<p>To install from our Ubuntu personal archive:</p>
+
+<p><b>1.</b> Add this line to /etc/apt/sources.list:</p>
+
+<p><pre class="prettyprint lang-bash">
+deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main
+</pre>You can use a text editor (e.g. nano) to do this, or paste this one-liner into
+a terminal prompt:</p>
+
+<p><pre class="prettyprint lang-bash">
+echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate/ubuntu precise main |sudo tee -a /etc/apt/sources.list
+</pre><b>2.</b> Import the <a class="cow-url" href="http://www.gnupg.org/">GPG</a> encryption key from Ubuntu so
+that the Pi can verify the package's validity:</p>
+
+<p><pre class="prettyprint lang-bash">
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com --recv-key 6C12C1CF
+</pre><b>3.</b> Update your list of available packages (this may take a couple of
+minutes):</p>
+
+<p><pre class="prettyprint lang-bash">
+  sudo apt-get update
+</pre><b>4.</b> Install the package (where &quot;package-name&quot; is one of our packages, e.g.
+&quot;<a class="cow-non-existant-url" href="/pages/mopi.html#simbamon">simbamond</a>&quot; for <a class="cow-non-existant-url" href="/pages/mopi.html">the battery monitor</a>):</p>
+
+<p><pre class="prettyprint lang-bash">
+  sudo apt-get install package-name
+</pre>And that's it!</p>
+
+<p>Note: the above gets you the most recent stable release; if you want to live
+on the edge, you can get more recent experimental builds by adding the
+snapshot PPA to your sources list, e.g.:</p>
+
+<p><pre class="prettyprint lang-bash">
+echo deb http://ppa.launchpad.net/hamish-dcs/pi-gate-snapshots/ubuntu precise main |sudo tee -a /etc/apt/sources.list
+</pre><a name="wiringpi"></a></p><a class="cow-section-anchor" name="section-5.1.2."></a><h3 class="cow-heading"><span class="cow-sec-number">5.1.2. </span>Installing WiringPi for Raspbian</h3>
+
+<p>On Raspbian, you can install <a class="cow-url" href="http://wiringpi.com/">WiringPi</a> from a .deb
+file like this:</p>
+
+<p><pre class="prettyprint lang-bash">
+  wget https://raw.github.com/hamishcunningham/wiringpi/master/package/2.13/unstable/wiringpi_2.13_armhf.deb
+  sudo dpkg -i ./wiringpi_2.13_armhf.deb
+</pre>See our page <a class="cow-non-existant-url" href="/pages/package.html">on Pi software packaging</a> for more details.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="pi-books"></a></p><a class="cow-section-anchor" name="section-5.2."></a><h2 class="cow-heading"><span class="cow-sec-number">5.2. </span>Books and Sites about the Pi</h2>
+
+<p>Books about the Pi are proliferating almost as rapidly as the community of Pi
+aficionados.<span class="cow-footnote" name="footnote17"><sup><a href="#footnote17">17</a></sup></span> These are three of my favourites:</p>
+
+<ul>
+<li><a class="cow-url" href="http://www.amazon.co.uk/Raspberry-User-Guide-Eben-Upton/dp/111846446X/">Eben Upton and Gareth Halfacree's</a> book <em>The Raspberry Pi User Guide</em> is
+  definitely the first place to start. Required reading.</li>
+<li><a class="cow-url" href="http://www.amazon.co.uk/Raspberry-Pi-Manual-practical-revolutionary/dp/0857332953/">Gray Girling's Haynes manual</a> is my all-time favourite so far, perhaps
+  because I remember my brother using these manuals to figure out how to fix
+  his <a class="cow-url" href="http://en.wikipedia.org/wiki/Triumph_Herald">Triumph Herald</a> way back
+  when. It also has great graphics and an excellent mix of hardware and
+  software, plus some philosophy and history to boot. I love it.</li>
+<li>Slightly off the beaten track, but a great fit for the Pi's mischievous
+  implications, I recommend
+  <a class="cow-url" href="http://www.amazon.co.uk/Raspberry-Secret-Agents-Stefan-Sjogelid/dp/1849695784/">Stefan Sjogelid's</a> <em>Raspberry Pi for Secret Agents</em>. If the NSA and GCHQ are
+  going to <a class="cow-url" href="http://www.guardian.co.uk/world/prism">spy on every citizen</a> for
+  no good reason shouldn't we spy on them in return?!</li>
+</ul>
+
+<p>If it's your birthday, ask for a book token &mdash; there's more to drool over in
+the next section.</p>
+
+<p>There are also lots of <b>great websites</b> about the Pi &mdash; some that stand out:</p>
+
+<ul>
+<li>The <a class="cow-url" href="http://www.raspberrypi.org/">Pi foundation's site</a> is the place to
+  start: lots of good reference material, and there's always something new to
+  read on the blog. For discussion and advice,
+  <a class="cow-url" href="http://www.raspberrypi.org/phpBB3/">the community forums</a> are excellent.</li>
+<li><a class="cow-url" href="http://www.cl.cam.ac.uk/">Cambridge Univerity Computer Lab</a> is where the
+  original idea for the Pi came from, and they host
+  <a class="cow-url" href="http://www.cl.cam.ac.uk/projects/raspberrypi/">a great set of Pi
+  materials</a> including
+  <a class="cow-url" href="http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/">these tutorials</a>.</li>
+<li><a class="cow-url" href="http://www.themagpi.com/">The MagPi</a> monthly eZine is well worth a look,
+  as is the <a class="cow-url" href="http://piweekly.net/">Pi Weekly</a> email news digest.</li>
+<li><a class="cow-url" href="http://wiringpi.com">The WiringPi library site</a> is also well worth a
+  visit.</li>
+</ul>
+
+<p>There are oodles and oodles of Pi hobby sites &mdash; really too many to make a
+list these days!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="electronics-resources"></a></p><a class="cow-section-anchor" name="section-5.3."></a><h2 class="cow-heading"><span class="cow-sec-number">5.3. </span>Electronics Books and Sites</h2>
+
+<p>For introductions to basic circuit building, breadboarding or soldering, and
+to hacker electronics in general, see for example:</p>
+
+<ul>
+<li><a class="cow-url" href="http://www.simonmonk.org/">Simon Monk's</a> 2013 book
+  <a class="cow-url" href="http://www.simonmonk.org/?page_id=74">Hacking Electronics</a>, which achieves
+  a nice balance between explaining relevant theory and quickly getting on
+  with practical stuff right from the start. Although some of the chapters are
+  specific to the Arduino<span class="cow-footnote" name="footnote18"><sup><a href="#footnote18">18</a></sup></span> there's a lot of generally useful stuff too, including
+  introductions to breadboarding, stripboard, soldering and the like. A good
+  book if you're in a hurry.</li>
+<li>The 2009
+  <a class="cow-url" href="http://www.makershed.com/Make_Electronics_book_by_Charles_Platt_p/9780596153748.htm">Make Electronics</a> by Charles Platt, which also has loads of great
+  introductory material, and is a typically high quality O'Reilly production
+  with <a class="cow-url" href="http://makezine.com/">Make Magazine</a>'s usual emphasis on colourful
+  graphics and detailed instructions for the hobbyist. This book is very
+  detailed and has lots of intriguing background<span class="cow-footnote" name="footnote19"><sup><a href="#footnote19">19</a></sup></span>.</li>
+<li>The <a class="cow-url" href="http://elinux.org/">Embedded Linux wiki</a> has great globs of Pi-related
+  stuff, including a bunch of very useful <a class="cow-url" href="http://elinux.org/RPi_Tutorials">tutorials</a>.</li>
+<li><a class="cow-url" href="http://adafruit.com/">AdaFruit</a>'s <a class="cow-url" href="http://learn.adafruit.com/">tutorial
+  pages</a> include an excellent guide to
+  <a class="cow-url" href="http://learn.adafruit.com/adafruit-guide-excellent-soldering">soldering</a>
+  (and one for <a class="cow-url" href="http://learn.adafruit.com/multimeters">measuring</a>).</li>
+<li>Another useful beginners' site is <a class="cow-url" href="http://electronicsclub.info/">Electronics Club</a>.</li>
+</ul>
+
+<p>And lots and lots of others!<span class="cow-footnote" name="footnote20"><sup><a href="#footnote20">20</a></sup></span></p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-5.4."></a><h2 class="cow-heading"><span class="cow-sec-number">5.4. </span>Circuits: Calculators, Simulators, Diagrams</h2>
+
+<p>The circuit diagrams are available on
+<a class="cow-url" href="https://www.circuitlab.com/user/hamish/">Circuit Lab</a> under the Creative
+Commons <a class="cow-url" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA
+licence</a>.</p>
+
+<!--% %(https://www.circuitlab.com/browse/by-tag/hamish-cunningham/, Circuit Lab)-->
+
+
+<p>For circuit debugging these Voltage/Resistance/Current calculators are useful:
+<a class="cow-url" href="http://www.the12volt.com/ohm/ohmslawcalculators.asp">this one</a>,
+<a class="cow-url" href="http://www.rapidtables.com/calc/electric/ohms-law-calculator.htm">this one</a>,
+and <a class="cow-url" href="http://www.sengpielaudio.com/calculator-ohm.htm">this one</a> all worked
+well for me at one time or another.</p>
+
+<!--% There are oodles and oodles of Pi hobby sites -- when I started-->
+
+<!--% %(http://raspberrypi.goddess-gate.com/, this one) stood out, but really there-->
+
+<!--% are too many to make a list these days!-->
+
+</p>
+
+<p><a name="warning"></a>
+<a class="cow-section-anchor" name="section-6."></a><h1 class="cow-title-heading"><span class="cow-sec-number">6. </span>Warning!</h1>
+
+<p><a class="cow-url" href="https://img.medscape.com/slide/migrated/editorial/cmecircle/2008/9146/images/slide61.jpg"><img class="cow-img" src="https://img.medscape.com/slide/migrated/editorial/cmecircle/2008/9146/images/slide61.jpg" alt="recipes for disaster" width="500" height="376"></a></p>
+<!--% from http://www.medscape.org/viewarticle/573016-->
+
+
+<p>Although all the voltages we're working with here are too small to hurt a big
+lump of a thing like a human being, it <em>is</em> perfectly possible to destroy your
+Pi by making connections to the wrong pins! It is also theoretically possible
+to create enough heat to start a fire (probably only if you pile something
+extremely flammable on top of it all and wait a week or so, but nevertheless
+please be warned).</p>
+
+<p>The Pi has very low power consumption, but if you're an electronics newcomer
+(or even just dopey and error-prone like me) the safe thing to do is always
+power down whenever you're not working on your rig. And to <b>proceed with
+caution</b>!</p>
+
+<p><b>Soldering</b> brings with it its own set of potential gotchas of course. There's
+a clue to this in the involvement of a hot iron, molten metal and heated wires
+&mdash; we leave it as an exercise for the reader as to what happens when you touch
+something really hot with a part of your anatomy. If in doubt, don't try this
+at home.</p>
+
+<p>Finally, please note that it is quite possible that these paragraphs contain
+nuts. Why don't sharks eat lawyers? Professional courtesy.</p>
+</p>
+<span class="cow-footnote-section">
+<h1 class="cow-heading">Footnotes</h1>
+<p><ol>
+<li>
+<a class="cow-footnote-anchor" name="footnote1"></a>
+<span class="cow-footnote-text" name="footnote1">To be picky, the Pi's
+default operating system's full title would be <em>the
+<a class="cow-url" href="http://www.raspbian.org/">Raspbian</a> distribution of
+<a class="cow-url" href="http://www.debian.org/">Debian</a> <a class="cow-url" href="http://www.gnu.org/">GNU</a>
+<a class="cow-url" href="http://www.linuxfoundation.org/">Linux</a></em>.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote2"></a>
+<span class="cow-footnote-text" name="footnote2">LED: Light Emitting Diode.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote3"></a>
+<span class="cow-footnote-text" name="footnote3">'Hello world!' is
+<a class="cow-url" href="https://en.wikipedia.org/wiki/Hello_world_program">by convention</a> the first
+program we write in a new language or for a new device.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote4"></a>
+<span class="cow-footnote-text" name="footnote4">Gordon Henderson gives a good
+presentation of how to do this in his
+<a class="cow-url" href="https://projects.drogon.net/raspberry-pi/gpio-examples/tux-crossing/gpio-examples-1-a-single-led/">GPIO examples pages</a>.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote5"></a>
+<span class="cow-footnote-text" name="footnote5"><a class="cow-url" href="https://www.circuitlab.com/browse/by-tag/hamish-cunningham/">Circuit diagrams</a> were drawn and debugged using the excellent
+<a class="cow-url" href="http://circuitlab.com/">CircuitLab</a>.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote6"></a>
+<span class="cow-footnote-text" name="footnote6">This product may contain (or have been
+written by) nuts.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote7"></a>
+<span class="cow-footnote-text" name="footnote7">Bet you didn't know the logo incorporates a 3D buckyball. Like
+I know what one is<span class="cow-footnote" name="footnote21"><sup><a href="#footnote21">21</a></sup></span>. Please don't tell my old chemistry teacher. Mind you, that was back
+in the early 1930s, so buckyballs may not have been invented then. At lunch
+time we used to go and suck on a piece of coal to take the hunger pangs off.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote8"></a>
+<span class="cow-footnote-text" name="footnote8">Note that
+we represent GPIO pins that are in input mode as ground in the diagrams &mdash;
+strictly speaking this is inaccurate, but it does allow us to run simulations
+on the circuits in CircuitLab. If you know a better way please let me know!</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote9"></a>
+<span class="cow-footnote-text" name="footnote9">If your head is hurting, try slapping yourself sharply in the
+face three times<span class="cow-footnote" name="footnote22"><sup><a href="#footnote22">22</a></sup></span>.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote10"></a>
+<span class="cow-footnote-text" name="footnote10">The exact length of time before the wakeup call comes is
+dependent on what else the machine is doing at the time.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote11"></a>
+<span class="cow-footnote-text" name="footnote11">You
+can still see valves &mdash; or <em>vacuum tubes</em> &mdash; in action in some music kit. One
+reason for this is that when they're driven hard they distort an analogue
+music signal in interesting ways &mdash; that's the origin of the &quot;fuzz box&quot; guitar
+effect, or Jimmy Hendrix's entire sound repertoire, or etc.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote12"></a>
+<span class="cow-footnote-text" name="footnote12">Note: don't position this
+mat or the wires connecting to it anywhere that someone is likely to trip over
+it. See also <a class="cow-url" href="#warning">this warning</a>. May contain nuts.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote13"></a>
+<span class="cow-footnote-text" name="footnote13">This type of thing is commonly used in burglar alarm circuits.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote14"></a>
+<span class="cow-footnote-text" name="footnote14">And not one called
+<a class="cow-url" href="http://sillof.com/images/Customs/gilliam/tg-B-harry.jpg">Harry Tuttle</a>.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote15"></a>
+<span class="cow-footnote-text" name="footnote15">And
+make sure you change your Pi's password to something fiendish before putting
+it on a network!</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote16"></a>
+<span class="cow-footnote-text" name="footnote16">PPA: Personal Package Archive. Usually used for Ubuntu software
+packages but also useful for certain types of packages for the Raspberry Pi.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote17"></a>
+<span class="cow-footnote-text" name="footnote17">In July 2013 Google lists more than 12 million hits for
+the phrase &quot;raspberry pi&quot;!</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote18"></a>
+<span class="cow-footnote-text" name="footnote18">The <a class="cow-url" href="http://www.arduino.cc/">Arduino</a> is
+  an extremely capable device that is both fore-runner and partner to the Pi.
+  Based on a micro-controller chip, Arduino has been a major driver of the
+  wave of low cost, flexible and open hardware on whose crest the Pi is now
+  riding. It has a larger set of interaction functions (higher power and
+  better safeguarded than on the Pi), but is a bit less powerful and
+  general-purpose from a computational point-of-view. No doubt both will
+  co-exist, and a good number of projects combining them are already
+  available.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote19"></a>
+<span class="cow-footnote-text" name="footnote19">I never knew, for
+  example, that in terms of the movement of electrons electricity flows
+  backwards from negative to positive, and that the conventional reverse flow
+  is just that &mdash; a convention dating back to a
+  <a class="cow-url" href="http://www.allaboutcircuits.com/vol_1/chpt_1/7.html">mistaken conjecture</a>
+  by Benjamin Franklin. Well I never!</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote20"></a>
+<span class="cow-footnote-text" name="footnote20">If you really want to get in deep, here
+are two comprehensive sources: <a class="cow-url" href="http://www.allaboutcircuits.com/">All About
+Circuits</a>; the <a class="cow-url" href="https://6002x.mitx.mit.edu/">MIT Circuits and Electronics</a>
+starter course in electrical engineering.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote21"></a>
+<span class="cow-footnote-text" name="footnote21">And to think I work just round the corner from the
+<a class="cow-url" href="http://www.sheffield.ac.uk/kroto/about-harry-kroto">Kroto institute</a>. Shame
+on me.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote22"></a>
+<span class="cow-footnote-text" name="footnote22">This probably won't help, but it will be amusing for
+anyone who's watching.</span>
+</li>
+</ol></p>
+</span>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+</section>
+
+</div>
+<div id="middleColumn" class="yui3-u-1-5"> <!-- column 2 -->
+<div class="midColContent">
+  <a class="article-thumb" href="/images/articles/basics.jpg"><img
+    src="/images/articles/thumbs/basics.jpg"
+    height="75" width="75" alt="basics"></a>
+ <span class="article-summary"><em>Getting started with Pi-Tronics: adding electronics to your Pi</em>.</span> 
+<br/> <br/>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'pi-gate'; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<!-- __CONTENTS__ -->
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Interaction Electronics</a></li>
+<li><a href="#section-2.">2. Lighting Lights, Listening to Switches</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.1.">2.1. Pins on the GPIO Header</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.2.">2.2. Talking to the GPIO from Software</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.3.">2.3. Reading from Switches</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.4.">2.4. Putting it Together: Sensor plus LED</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.5.">2.5. Getting a Buzz Out of Trannies</a></li>
+<li><a href="#section-3.">3. Parent Alarm</a></li>
+<li><a href="#section-4.">4. A Flood in the Basement</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.1.">4.1. Hooking it all Together</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.2.">4.2. Building and Installing</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-4.2.1.">4.2.1. The Software</a></li>
+<li><a href="#section-5.">5. Books and Resources</a></li>
+<li>&nbsp;&nbsp;<a href="#section-5.1.">5.1. Software and Source Code</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-5.1.1.">5.1.1. Installing Pi-GATE Software</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-5.1.2.">5.1.2. Installing WiringPi for Raspbian</a></li>
+<li>&nbsp;&nbsp;<a href="#section-5.2.">5.2. Books and Sites about the Pi</a></li>
+<li>&nbsp;&nbsp;<a href="#section-5.3.">5.3. Electronics Books and Sites</a></li>
+<li>&nbsp;&nbsp;<a href="#section-5.4.">5.4. Circuits: Calculators, Simulators, Diagrams</a></li>
+<li><a href="#section-6.">6. Warning!</a></li>
+</ul></p></div>
+  <section id="extras" class="body">
+  </section><!-- /#extras -->
+
+
+  </div>
+</div>
+
+  </div> <!-- #mainContent -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
+          1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
+        <a href="https://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
+        <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/pages/basics.html">Print</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+        alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+          alt="The University of Sheffield" height="70" width="165"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

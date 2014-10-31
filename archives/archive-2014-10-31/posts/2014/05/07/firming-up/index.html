@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>MoPi: Firming up the Software</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+        height="55" width="46"></a></span>
+      <span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+      <span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+        alt="The University of Sheffield" height="55" width="113"</a><a
+          href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+            height="55" width="132"></a></span>
+    </span>
+    <div class="horizontal menu">
+      <ul>
+      <li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+      <!--
+      using a custom menu at present...
+      -->
+      <li><b><a href="#">Projects</a></b>
+      <!-- TODO generate this from content/pages/index -->
+        <ul>
+        <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+        <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+        <li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+        <li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+        <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+        <!--
+        <li><a href="/pages/snowcam.html">SnowCam: Off the Radar Cameras</a></li>
+        -->
+        <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+        <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+        <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+        <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+        <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+        </ul></li>
+      <li><b><a href="#">MoPi</a></b>
+        <ul>
+        <li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+        <li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+        <li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+        <li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+        </ul></li>
+      <!-- <li><a href="/">Blog</a></li> -->
+      <!--
+      <li><a href="/pages/basics.html#resources">Download</a></li>
+      -->
+      <li><a href="/pages/download.html">Download</a></li>
+      <!--
+      <li><a href="/pages/shop.html">Shop</a></li>
+      -->
+      <li><a href="https://gate.ac.uk/g8/contact">Contact</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
+
+  <!-- header menus (?!) -->
+  <div id="header">
+  </div>
+
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
+
+  <!-- main content div -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <div id="mainContent">
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+        <li class="active"><a href="/category/news.html">News</a></li>
+    </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
+
+<!-- YUI responsive columns -->
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/posts/2014/05/07/firming-up/" rel="bookmark"
+           title="Permalink to MoPi: Firming up the Software">MoPi: Firming up the Software</a></h1>
+<div id="socialButtons">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2014/05/07/firming-up/"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/posts/2014/05/07/firming-up/#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/posts/2014/05/07/firming-up/"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+  <a class="article-thumb" href="/images/articles/firming-up.jpg"><img
+    src="/images/articles/thumbs/firming-up.jpg"
+    height="75" width="75" alt="firming-up"></a>
+    <span class="article-summary"><em>Hot-swap, uninterruptible, multi-supply mobile power for the Raspberry Pi — and unlimited outdoor adventures!</em>.</span>
+ <br/>   <!-- In <a href="/category/news.html">News</a> -->
+  
+Tags:<span class="tag-list"> <a href="/tag/kickstarter.html">kickstarter</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>  <br/>   <span class="published" title="2014-05-07T00:00:00">Wed 07 May 2014,</span>
+  <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer><!-- /.post-info -->      
+<h2 class="cow-heading">[MoPi is <b>mobile</b>, <b>hot-swap</b> and <b>24/7 power</b> for the Raspberry Pi. <br>
+<a class="cow-url" href="/pages/get-mopi.html">How to order.</a>]</h2>
+
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. The View from the Pi</a></li>
+<li><a href="#section-2.">2. The SimBaMon Daemon</a></li>
+<li><a href="#section-3.">3. The Python API</a></li>
+<li><a href="#section-4.">4. MoPi from the Command Line</a></li>
+<li><a href="#section-5.">5. Configuring Your Power Supplies</a></li>
+<li><a href="#section-6.">6. Monitoring</a></li>
+</ul></p></div>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-1."></a><h1 class="cow-heading"><span class="cow-sec-number">1. </span>The View from the Pi</h1>
+
+<p>The MoPi software suite is now feature complete. That means that all the
+facilities which MoPi makes available on the Raspberry Pi which it is powering
+are now available for testing. This post describes how this software works and
+how the architecture of MoPi hangs together.</p>
+
+<p>There are four main parts of the puzzle:</p>
+
+<ul>
+<li>A <em>daemon</em> which runs in the background on the Pi, which is called
+  <a class="cow-url" href="/pages/mopi.html#simbamon">SimBaMon</a> (a Simple Battery Monitor). SimBaMon
+  is available as a package for Raspbian, and installing it pulls in all the
+  other facilities.</li>
+<li>An interface that communicates with the MoPi hardware over the I2C protocol.
+  This interface is wrapped up as a Python API.</li>
+<li>A command-line tool that uses the Python API and provides a language-neutral
+  portable method for talking to the board from the Pi.</li>
+<li>A configuration user interface that simplifies the process of setting up
+  MoPi to deal with different types and numbers of batteries, and other types
+  of power supply.</li>
+</ul>
+
+<p>All of the code for these components is
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon">available on GitHub</a>, and details of how to install are available on
+<a class="cow-url" href="/pages/download.html">our download page</a>. (<b>Note</b>: to run the current
+version of the code you need the snapshot repository; the version in the Pi
+Foundation's repository won't be updated until we make an official release.)</p>
+
+<p>The rest of the post discusses each of the main elements in turn, and finishes
+up with a note about monitoring the beast as it runs. First, though, a note
+about our delivery schedule. Having lost some time
+<a class="cow-non-existant-url" href="/posts/2014/04/20/shakey-testing/">through illness</a>, and spent quite a long
+time getting the I2C protocol to work reliably, it is now looking unlikely
+that we'll deliver before next month. (On the up-side that means we'll be able
+to deliver all in one go, as the
+<a class="cow-non-existant-url" href="/posts/2014/04/20/shakey-testing/#section-2.">second shipment</a> of
+microncontrollers is due early in June.) We're getting close to finalising
+version 4 (the first production version), but we'd hate to ship it with a
+firmware bug that would mean returning the boards for re-flashing. We hope you
+agree it is best to wait a little longer. With a bit of luck this will be the
+last of the delays, and we'll hit the original target of June 2014 to finish
+all deliveries as promised.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>The SimBaMon Daemon</h1>
+
+<p>When the Pi (or any other Linux system) boots, several system services are
+started that will run continuously until the machine is shut down again. These
+services are called <em>daemons</em>, and this is how SimBaMon is implemented.
+Following the standard naming convention, the daemon is called <tt>simbamond</tt>,
+and the first point of entry (used by the operating system to start, stop,
+etc.) is a script that lives in
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamond.default"><tt>/etc/init.d/simbamond</tt></a>. This script (which is a management type person)
+calls another to do all the real work; this other (hard working type) lives in
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamon"><tt>/usr/sbin/simbamon</tt></a>.</p>
+
+<p>One of key features of MoPi is that it supports many different types of
+batteries and many other types of power supply (from solar panels to elastic
+bands!). Coping with the requirements of all these monsters needs a huge wodge
+of configuration data, which (following Debian Linux convention) lives in
+<tt>/etc/default</tt> in a file (again, confusingly) called
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamond.init"><tt>simbamond</tt></a>.<span class="cow-footnote" name="footnote1"><sup><a href="#footnote1">1</a></sup></span></p>
+
+<p>Together these three script files make up a new system service that polls the
+MoPi hardware every couple of seconds and shouts loudly when an electron
+shortage appears on the horizon. If no one is listening and the shortage gets
+acute, the daemon tells the Pi to take a rest and issues the <tt>shutdown</tt>
+command.</p>
+
+<p>There is <a class="cow-url" href="/pages/mopi.html#simbamon">more detail here</a> (though it is a little
+out of date at time of writing).</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-3."></a><h1 class="cow-heading"><span class="cow-sec-number">3. </span>The Python API</h1>
+
+<p>How do we talk to the hardware? From MoPi version 3 onwards we shifted away
+from using the Pi's general-purpose GPIO pins (using a tool called WiringPi).
+This worked well, but it used a pin for each bit of data that we wanted to
+ship between the board and the Pi. As time went on we found more and more data
+that we needed to share (and we also came across other add-on boards that use
+lots of GPIO pins &mdash; e.g. <a class="cow-url" href="http://pi.gate.ac.uk/posts/2014/02/07/airpi1/">AirPi</a>).</p>
+
+<p>Luckily the Pi also hosts several other inter-board communication options,
+including the I2C protocol, which uses only two pins, can talk to multiple
+devices over the same two wires, and allows transfer of much larger amounts of
+data.</p>
+
+<p>There are two ways to talk over I2C from the Pi: a set of command-line tools
+written in C, and a Python module. Both work, but the Python version seems to
+have had more attention from Pi users and developers, and has support for
+multi-byte reads (which requires a bit of hacking to get working in the C). So
+we've implemented an API for MoPi in Python<span class="cow-footnote" name="footnote2"><sup><a href="#footnote2">2</a></sup></span>, which now lives in a
+file called
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopiapi.py"><tt>mopiapi.py</tt></a>.</p>
+
+<p>For Python programmers this code provides a natural and efficient method of
+including MoPi facilities in their programs.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-4."></a><h1 class="cow-heading"><span class="cow-sec-number">4. </span>MoPi from the Command Line</h1>
+
+<p>The observant amongst you may have noticed that SimBaMon is not written in
+Python<span class="cow-footnote" name="footnote3"><sup><a href="#footnote3">3</a></sup></span> &mdash; how does the daemon talk to the board when the API is in Python?
+That's where
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopicli"><tt>mopcli</tt></a> comes in, which is a command-line interface to the Python API. This
+script provides convenient methods for the daemon to use, or for Pi users to
+query and configure the board, or for our configuration utility &mdash; which by
+amazing coincidence is described next.</p>
+
+<p>To see what the beast can do, ask it for help by typing <tt>sudo mopicli -h</tt>;
+you'll get something like this:</p>
+
+<pre>
+Usage: mopicli [-h] [options]
+Version 0.2, API 0.2
+
+Miscellaneous:
+  -i          I2C bus (default: 1)
+  -fv         Firmware version
+  -sn         Serial number
+  -h          Display this message
+
+Status:
+  -s          MoPi status word
+  -sv         Verbose status
+  -v          Current battery voltage in mV
+  -v1/-v2     Battery #1/#2 voltage in mV
+
+Read configuration options:
+  -rc         Combined battery #1 and #2 configuration
+  -rc1/-rc2   Configuration of battery #1/#2
+  -rpon       Power on delay
+  -rs         Shutdown delay
+
+Write configuration options:
+  -wc mV mV mV         Combined battery #1 and #2 configuration
+  -wc1/-wc2 mV mV mV   Configuration of battery #1/#2
+  -wpon seconds        Power on delay seconds
+  -ws seconds          Shutdown delay seconds
+
+All options may be used simultaneously. When doing so, they execute in the
+  order they are listed in in this help message. However, only one of each may
+  be used.
+</pre>
+
+<p>As easy as pie.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-5."></a><h1 class="cow-heading"><span class="cow-sec-number">5. </span>Configuring Your Power Supplies</h1>
+
+<p>Not quite so easy is choosing the correct voltage settings for different
+battery chemistries and different combinations of cells (not to mention other
+types of power supply). In each case MoPi needs to know:</p>
+
+<ul>
+<li>what is the approximate voltage that the battery will supply when fully
+  charged</li>
+<li>what is the point at which we're getting low on charge (and may expect to
+  run out within a few minutes or so)</li>
+<li>what is the minimum safe discharge voltage</li>
+</ul>
+
+<p>The mid-point between the first two voltages is is the conventional definition
+of what a good level of charge is, so that's where we swap between lighting up
+our RGB led in blue and lighting it in green. When we reach the low charge
+point we turn the LED red, and when we reach the minimum safe discharge
+voltage (or the minimum safe operating voltage if that is higher) then we
+initiate shutdown.</p>
+
+<p>Let's look at each of these values in more detail:</p>
+
+<ul>
+<li><em>Fully-charged voltage</em>. This is equal to the fully-charged voltage of each
+  cell in the battery pack multiplied by the number of cells. Like most things
+  with batteries, it varies according to battery chemistry &mdash; e.g. an Alkaline
+  cell generates 1.5V; a NiMH 1.2V; a LiIon 3.7V.</li>
+<li><em>The low charge level</em>. When you record the voltage delivered by a battery
+  over time, most of the curves exhibit a knee shape. Before the knee voltage
+  drop is reasonably slow; after the knee if drops much more sharply. We need
+  to try and warn the user around the knee point, so that they have enough
+  time to replace the battery before it drains completely, but not so much
+  time that there is still lots of usable charge left.</li>
+<li><em>Minimum safe discharge voltage</em>. This applies to all rechargeable
+  batteries. If we discharge below this level, then the capacity to recharge
+  will be impared. This makes it a very important factor in battery life for
+  the long term, and one which we've done a lot of work to model and adapt to.
+  (Ever wondered why the rechargeables that you put in your alarm clock or
+  torch lasted such a short time? Most devices have no way of knowing about
+  the minimum discharge level for the particular chemistry you're using!)</li>
+<li><em>Minimum safe operating level</em>. MoPi uses a sophisticated microcontroller to
+  analyse battery behaviour, control its LEDs and deliver data to the software
+  suite running on the Pi. If the supply voltage to MoPi falls below a certain
+  level (around 6.2V) then the microcontroller may terminate, or even start to
+  behave unpredictably. It is very important to trap rapid voltage drop before
+  it reaches this point.</li>
+</ul>
+
+<p>To deal with all these considerations, the current version of the software
+stores these values:</p>
+
+<pre>
+        TYPE         CELL/FULL  MIN
+
+  1     non-battery     9.0     6.2
+  2     NiMH            1.2     0.95
+  3     Alkaline        1.5     0.8
+  4     Lead Acid       2.0     1.58
+  5     Lithium Ion     3.7     3.0
+  6     LiPo            4.2     3.0
+  7     NiCd            1.2     1.1
+</pre>
+
+<p>When we know what chemistry we're dealing with, and how many cells, we can
+then make good guesses about where the four levels above should fall. But how
+do we know what the chemistry is? Two ways:</p>
+
+<ul>
+<li>We have two built-in defaults, one for 8 NiMH cells (which is the battery
+  pack that we're supplying to backers who requested one), and one for 8
+  Alkaline non-rechargeables. The former is what MoPi will assume when running
+  out of the box; the latter is activated by removing the on-board jumper
+  provided for the purpose<span class="cow-footnote" name="footnote4"><sup><a href="#footnote4">4</a></sup></span>.</li>
+<li>You tell us! To this end we have developed a configuration UI on the Pi,
+  which is the last piece in our four part software puzzle.</li>
+</ul>
+
+<p>The configuration UI uses the same tools as the Raspberry Pi's utility
+(<tt>raspi-config</tt>), so it should be simple and familiar, and it can be used over
+all types of connections (including remote login with <tt>ssh</tt>). Here's a
+screenshot or three:</p>
+
+<p><img class="cow-img" src="/images/mopi/config-01.png" alt="MoPi Config UI 1" width="650"></p>
+
+<p><em>The main entry screen.</em> <br> <br></p>
+
+<p><img class="cow-img" src="/images/mopi/config-02.png" alt="MoPi Config UI 2" width="650"></p>
+
+<p><em>Configuring one of the power supplies, battery chemistry.</em> <br> <br></p>
+
+<p><img class="cow-img" src="/images/mopi/config-03.png" alt="MoPi Config UI 3" width="650"></p>
+
+<p><em>Getting status data (there's lots more in the newest version!).</em></p>
+
+<p>Dive into
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopi">the source code here</a>.</p>
+
+<p>And now you know more about batteries than you ever wanted to &mdash; just like me!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-6."></a><h1 class="cow-heading"><span class="cow-sec-number">6. </span>Monitoring</h1>
+
+<p>As you can imagine, figuring out how all this stuff is working and identifying
+bugs and incorrect behaviour is quite a challenge. Luckily we have some great
+tools to help us, one of which is <a class="cow-url" href="https://mmonit.com/">Monit</a>. This little
+gem is itself a daemon, and it has facilities for one thousand and one
+different types of monitoring task. You can listen to your webserver and
+restart it if it fails, or check the general load of the machine you're
+running on, or &mdash; in our case &mdash; check that the SimBaMon service is running,
+and if not start it up.</p>
+
+<p>To use it, all we need to do is <tt>sudo apt-get install monit</tt> in the usual way,
+then edit <tt>/etc/monit/monitrc</tt>. This is the config we're using to monitor
+SimBaMon on one of our test rigs:</p>
+
+<p><pre class="prettyprint lang-bash">
+###############################################################################
+# monit config for simbamond, from /etc/monit/monitrc #########################
+
+# monitoring UI (serve on port 8888 and allow connections from one IP address)
+set httpd port 8888 and
+  allow 192.168.1.111
+
+# general system status
+check system mopi-15
+  if loadavg (1min) &gt; 4 then alert
+  if loadavg (5min) &gt; 2 then alert
+  if memory usage &gt; 75% then alert
+  if swap usage &gt; 25% then alert
+  if cpu usage (user) &gt; 70% then alert
+  if cpu usage (system) &gt; 30% then alert
+  if cpu usage (wait) &gt; 20% then alert
+
+# monitor simbamond
+check process simbamond with pidfile /var/run/simbamond.pid
+  start program = &quot;/usr/sbin/service simbamond start&quot; with timeout 60 seconds
+  stop program  = &quot;/usr/sbin/service simbamond stop&quot;
+  restart program = &quot;/usr/sbin/service simbamond restart&quot; with timeout 60 seconds
+  if cpu &gt; 60% for 2 cycles then alert
+  if cpu &gt; 80% for 5 cycles then restart
+  if totalmem &gt; 200.0 MB for 5 cycles then restart
+  if children &gt; 250 then restart
+  if loadavg(5min) greater than 10 for 8 cycles then stop
+  if 3 restarts within 5 cycles then timeout
+  group mopi
+###############################################################################
+</pre>You can then see what's going on by either or both of</p>
+
+<ul>
+<li><tt>cat /var/log/monit.log</tt> (<tt>grep simbamon ...</tt> is also useful)</li>
+<li>pointing your browser at <tt><span class="cow-escape">h</span>ttp://my-pi-ip-address:8888</tt> (if you need to
+  find your IP address various methods are <a class="cow-url" href="/pages/blinkip.html">discussed
+  here</a>)</li>
+</ul>
+
+<p>This is great for keeping check on things during load testing (particularly
+heavy loads which have a tendency to cause odd corner case bugs to trigger),
+but it is also a great tool for maximising service availability &mdash; the
+configuration code above will restart SimBaMon within a couple of minutes
+should it ever crash, for example.</p>
+
+<p>Enjoy...</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+
+
+<p><b><a class="cow-url" href="/pages/mopi.html">Read the main article</a>.</b></p>
+<span class="cow-footnote-section">
+<h1 class="cow-heading">Footnotes</h1>
+<p><ol>
+<li>
+<a class="cow-footnote-anchor" name="footnote1"></a>
+<span class="cow-footnote-text" name="footnote1">Again confusingly &mdash; this will become a theme &mdash; the
+names of the files as they live in the source package are different from their
+names when installed. If you don't like being confused, you might want to
+avoid talking to computer people as a general rule. For example, the MoPi
+board works on milivolts; the I2C communication uses centivolts; the user
+interface uses volts; the API uses milivolts. And all for good reasons!</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote2"></a>
+<span class="cow-footnote-text" name="footnote2">And no one complained
+about the whitespace rules! Who'd have thought it?!</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote3"></a>
+<span class="cow-footnote-text" name="footnote3">In common with most daemons, SimBaMon is written in shell
+script.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote4"></a>
+<span class="cow-footnote-text" name="footnote4">Configuration provided by the user
+  overrides the jumper for the current power cycle &mdash; and beyond, when
+  SimBaMon is running as the daemon will persist the config values. The
+  firmware reads the jumper at each power up and initializes the cut-off
+  points with Ni-MH or Alkaline values.</span>
+</li>
+</ol></p>
+</span>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+
+<br/> <br/>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'pi-gate'; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+
+</div>
+<div id="emptyMiddleColumn" class="yui3-u-1-24"> <!-- column 2 -->
+  <section id="extras" class="body">
+  </section><!-- /#extras -->
+
+
+  </div>
+</div>
+
+  </div> <!-- #mainContent -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
+          1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
+        <a href="https://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
+        <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/posts/2014/05/07/firming-up/index.html">Print</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+        alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+          alt="The University of Sheffield" height="70" width="165"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
