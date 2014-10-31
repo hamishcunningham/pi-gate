@@ -13,7 +13,7 @@ uninterruptible power for the Raspberry Pi!
 %(/pages/get-mopi.html, How to order.)]
 
 %(https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi,
-%image(http://pi.gate.ac.uk/static/images/mopi/logo-heli-text-500x359.png,
+%image(http://pi.gate.ac.uk/images/mopi/logo-heli-text-500x359.png,
 MoPi: Set your Pi Free!, 500, 359))
 
 The ranks of Raspberry Pi add-ons gain a new member today with the launch of a
@@ -29,8 +29,8 @@ the Pi cleanly when batteries discharge.
 There's an integrated power switch, and the device doubles as a UPS
 (uninterruptible power supply) when both batteries and mains are connected.
 
-%(http://pi.gate.ac.uk/static/images/mopi/mopi-with-key.png,
-%image(http://pi.gate.ac.uk/static/images/mopi/mopi-with-key-small.png, MoPi prototype, 500, 358))
+%(http://pi.gate.ac.uk/images/mopi/mopi-with-key.png,
+%image(http://pi.gate.ac.uk/images/mopi/mopi-with-key-small.png, MoPi prototype, 500, 358))
 
 Battery power isn't new to the Pi, of course, but up to now there hasn't been
 a way to protect your Pi from getting an abrupt power cut when the batteries
@@ -55,8 +55,8 @@ The team behind the project include Linux and Pi specialists from the
 people from Pimoroni Ltd., the company behind the iconic
 %(http://shop.pimoroni.com/collections/pibow, Pibow case):
 
-%(http://pi.gate.ac.uk/static/images/mopi/mopi-in-pibow-500x375.jpg,
-%image(http://pi.gate.ac.uk/static/images/mopi/mopi-in-pibow-small.jpg, MoPi in a Pibow, 500, 375))
+%(http://pi.gate.ac.uk/images/mopi/mopi-in-pibow-500x375.jpg,
+%image(http://pi.gate.ac.uk/images/mopi/mopi-in-pibow-small.jpg, MoPi in a Pibow, 500, 375))
 
 You can sign up from £18 (early bird discount), or spend more and pick up a
 UPS rig, or various outdoor experimenter kits (the latter with an orientation

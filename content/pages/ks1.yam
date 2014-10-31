@@ -41,10 +41,10 @@ reward and get a custom Pibow lid!)
 
 *Where do you want to use yours?!*
 
-%(http://pi.gate.ac.uk/static/images/mopi/mopi-with-key.png,
+%(http://pi.gate.ac.uk/images/mopi/mopi-with-key.png,
 %image(images/mopi/mopi-with-key.png, MoPi prototype, 500, 358))
 
-%(http://pi.gate.ac.uk/static/images/mopi/proto2-01.jpg,
+%(http://pi.gate.ac.uk/images/mopi/proto2-01.jpg,
 %image(images/mopi/proto2-01-500x379.jpg, MoPi prototype, 500, 379))
 
 
@@ -100,7 +100,7 @@ Pi power looks like. Read on!
 %#perfect
 %2 The Perfect Pack
 
-%(http://pi.gate.ac.uk/static/pages/images/mopi/perfect-pack.png,
+%(http://pi.gate.ac.uk/pages/images/mopi/perfect-pack.png,
 %image(images/mopi/perfect-pack.png, The perfect pack, 563, 295))
 
 What would the perfect Pi battery pack look like? It should be:

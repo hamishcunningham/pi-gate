@@ -832,7 +832,7 @@ selling batteries) and some other %(#other, useful resources).
 %#perfect
 %2 The Perfect Battery Pack
 
-%(http://pi.gate.ac.uk/static/pages/images/mopi/perfect-pack.png,
+%(http://pi.gate.ac.uk/pages/images/mopi/perfect-pack.png,
 %image(images/mopi/perfect-pack.png, The perfect pack, 563, 295))
 
 What would the perfect Pi battery pack look like? It should be:

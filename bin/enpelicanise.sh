@@ -81,16 +81,16 @@ replace-meta-tags-etc() {
     [ -z "$SLUG" ]     && SLUG=`basename ${f} |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
     [ -z "$SUMMARY" ]  && SUMMARY=`grep -i '<title' ${f} |sed -e 's,<title>,,I' -e 's,</title>,,I'`
     [ -z "$TAGS" ]     && TAGS="pi,raspberrypi,raspi,gate"
-    [ ! -z "$STATUS" ] && STATUS_MARKUP="<meta name=\"status\" contents=\"${STATUS}\" />"
+    [ ! -z "$STATUS" ] && STATUS_MARKUP="<meta name=\"status\" content=\"${STATUS}\" />"
 #TODO build assoc array of tags and allow default set as previous line
 
     # the base text to add into the header
-    METAS="<meta name=\"author\" contents=\"${AUTHOR}\" />\n\
-<meta name=\"category\" contents=\"${CATEGORY}\" />\n\
-<meta name=\"slug\" contents=\"${SLUG}\" />\n\
+    METAS="<meta name=\"author\" content=\"${AUTHOR}\" />\n\
+<meta name=\"category\" content=\"${CATEGORY}\" />\n\
+<meta name=\"slug\" content=\"${SLUG}\" />\n\
 ${STATUS_MARKUP}\n\
-<meta name=\"summary\" contents=\"${SUMMARY}\" />\n\
-<meta name=\"tags\" contents=\"${TAGS}\" />"
+<meta name=\"summary\" content=\"${SUMMARY}\" />\n\
+<meta name=\"tags\" content=\"${TAGS}\" />"
 
     # set date from filename, or PUBDATE from file, or use TODAY
     if `echo ${f} | grep -q '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-'`
@@ -100,10 +100,10 @@ ${STATUS_MARKUP}\n\
     elif [ ! -z "${PUBDATE}" ]
     then
       METAS="${METAS}\n\
-<meta name=\"date\" contents=\"${PUBDATE}\" />"
+<meta name=\"date\" content=\"${PUBDATE}\" />"
     else
       METAS="${METAS}\n\
-<meta name=\"date\" contents=\"${TODAY}\" />"
+<meta name=\"date\" content=\"${TODAY}\" />"
     fi
 
     # add the metas etext

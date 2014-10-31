@@ -278,5 +278,25 @@ draft:
 	echo 'TODO: remove draft status & rename to '$$PUBNAME >>$${OUT}; \
 	echo created draft in $${OUT}
 
+# checklinks
+checklinks:
+	rsync --delete -a output link-check-output; \
+	cd link-check-output; \
+        for f in `find . -name '*.html'`; do \
+          sed -i \
+            -e 's,https:,http:,g' \
+            -e 's,http://pi.gate.ac.uk/,/,g' \
+            $$f; \
+        done; \
+        echo "starting http server in `pwd`; now run make linkchecker"; \
+	$(PY) -m pelican.server; \
+        :
+linkchecker:
+	linkchecker --no-warnings \
+          --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:28.0) Gecko/20100101  Firefox/28.0" \
+          http://localhost:8000; \
+        :
+
+
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post
-.PHONY: draft fix-rss-feeds
+.PHONY: draft fix-rss-feeds checklinks linkchecker
