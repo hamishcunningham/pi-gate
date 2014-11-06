@@ -167,16 +167,26 @@ finalise: local-finalise
 	@for f in $(DRAFT_PAGES); do \
           cp -r $(INPUTDIR)/pages/$${f} $(OUTPUTDIR)/pages; \
         done
+	# the printable tree
 	@cd $(OUTPUTDIR); for f in `find . -name '*.html'`; do \
           mkdir -p print/`dirname $${f}`; \
-          sed -n -e '1,/<body id="index" class="home">/p' \
-              -e '/<div class=.yui3-g-r.>/,/<div id="[a-z]*[mM]iddleColumn" class="yui3-u-1-5">/p' \
-            $${f} | sed \
-              -e 's,<div id="leftColumn" class="yui3-u-1-2">,<div id="leftColumn" class="yui3-u-1-2" style="width: 90%">,' \
-              -e '/<div id="[a-z]*[mM]iddleColumn" class="yui3-u-1-/,/<.body>/d' \
-              -e '/<div id="disqus_thread">/,/<.body>/d' \
-            >print/$${f}; \
+          sed -r -n \
+            -e '/<\!-- start main content -->/,/<\!-- end main content -->/p' \
+          $${f} \
+TODO add in a simple <head>
+delete comments
+          >print/$${f}; \
         done
+#           -e '1,/(<body id="index" class="home">|<body>)/p' \
+#           -e '1,/<body>/p' \
+
+#         sed -n \
+#           -e '1,/<body id="index" class="home">/p' \
+#           -e '/<div class=.yui3-g-r.>/,/<div id="[a-z]*[mM]iddleColumn" class="yui3-u-1-5">/p' \
+#           -e '/<!-- start main content -->/,/<!-- end main content -->/p' \
+#         $${f} | sed \
+#           -e 's,<div id="leftColumn" class="yui3-u-1-2">,<div id="leftColumn" class="yui3-u-1-2" style="width: 90%">,' \
+#           -e '/<div id="[a-z]*[mM]iddleColumn" class="yui3-u-1-/,/<.body>/d' \
 
 # various housekeeping files
 google-site-verify:
