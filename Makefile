@@ -167,6 +167,7 @@ finalise: local-finalise
 	@for f in $(DRAFT_PAGES); do \
           cp -r $(INPUTDIR)/pages/$${f} $(OUTPUTDIR)/pages; \
         done
+	# print tree
 	@cd $(OUTPUTDIR); for f in `find . -name '*.html'`; do \
           mkdir -p print/`dirname $${f}`; \
           sed -n -e '1,/<body id="index" class="home">/p' \
@@ -177,6 +178,7 @@ finalise: local-finalise
               -e '/<div id="disqus_thread">/,/<.body>/d' \
             >print/$${f}; \
         done
+	$(MAKE) local-print
 
 # various housekeeping files
 google-site-verify:
@@ -293,3 +295,4 @@ s3list:
 
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post
 .PHONY: draft fix-rss-feeds checklinks linkchecker s3list local-prepare
+.PHONY: local-print

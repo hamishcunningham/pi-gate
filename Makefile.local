@@ -51,3 +51,7 @@ local-finalise:
           -e "/CONTACT FORM HERE/ r $${TMPF7}" \
             `find output -name '*.html'`; \
         rm $${TMPF} $${TMPF2} $${TMPF3} $${TMPF4} $${TMPF5} $${TMPF6} $${TMPF7}
+
+# make any necessary local mods to the print tree
+local-print:
+	:
