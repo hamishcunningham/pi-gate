@@ -291,7 +291,8 @@ linkchecker:
 
 # list all the .html files in the s3 bucket
 s3list:
-	s3cmd -r ls s3://$(SITE) | grep '\.html$$'>/tmp/$(SITE)-htmls.txt
+	s3cmd -r ls s3://$(SITE)                   >/tmp/$(SITE)-all.txt
+#	s3cmd -r ls s3://$(SITE) | grep '\.html$$' >/tmp/$(SITE)-htmls.txt
 
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post
 .PHONY: draft fix-rss-feeds checklinks linkchecker s3list local-prepare
