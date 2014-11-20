@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>MoPi: Mobile Power for the Pi</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+        height="55" width="46"></a></span>
+      <span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+      <span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+        alt="The University of Sheffield" height="55" width="113"</a><a
+          href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+            height="55" width="132"></a></span>
+    </span>
+    <div class="horizontal menu">
+      <ul>
+      <li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+      <!--
+      using a custom menu at present...
+      -->
+      <li><b><a href="#">Projects</a></b>
+      <!-- TODO generate this from content/pages/index -->
+        <ul>
+        <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+        <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+        <li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+        <li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+        <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+        <!--
+        <li><a href="/pages/snowcam.html">SnowCam: Off the Radar Cameras</a></li>
+        -->
+        <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+        <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+        <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+        <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+        <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+        </ul></li>
+      <li><b><a href="#">MoPi</a></b>
+        <ul>
+        <li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+        <li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+        <li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+        <li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+        </ul></li>
+      <!-- <li><a href="/">Blog</a></li> -->
+      <li><a href="/pages/download.html">Download</a></li>
+      <li><a href="/pages/contact.html">Contact</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
+
+  <!-- header menus (?!) -->
+  <div id="header">
+  </div>
+
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
+
+  <!-- main content div -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <div id="mainContent">
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+        <li ><a href="/category/news.html">News</a></li>
+    </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
+
+<!-- YUI responsive columns -->
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+        
+<section id="content" class="body">    
+    <h1 class="entry-title">MoPi: Mobile Power for the Pi</h1>
+<div id="socialButtons">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/ks1.html"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/pages/ks1.html#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/pages/ks1.html"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    
+    
+
+<p><em>Hot-swap Mobile Power for the Pi</em></p>
+
+<h1 class="cow-heading"><span class="cow-escape">*</span><span class="cow-escape">*</span><span class="cow-escape">*</span><span class="cow-escape">*</span> Please don't link or distribute this page <span class="cow-escape">*</span><span class="cow-escape">*</span><span class="cow-escape">*</span><span class="cow-escape">*</span></h1>
+
+<p><em><a class="cow-url" href="http://pi.gate.ac.uk/pages/about.html#hamish">Hamish Cunningham</a>
+December 2013-January 2014</em></p>
+
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Pi to Go!</a></li>
+<li>&nbsp;&nbsp;<a href="#section-1.1.">1.1. I Want One!</a></li>
+<li><a href="#section-2.">2. The Story So Far</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.1.">2.1. The Perfect Pack</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.2.">2.2. The Prototypes</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.3.">2.3. A Longer-Lasting Snack</a></li>
+<li><a href="#section-3.">3. The Future: Development Schedule</a></li>
+<li>&nbsp;&nbsp;<a href="#section-3.1.">3.1. Power to the People</a></li>
+<li>&nbsp;&nbsp;<a href="#section-3.2.">3.2. Experimenter Kits for Schools and Outdoor Adventurers</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-3.2.1.">3.2.1. Outdoor Adventure Kit</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-3.2.2.">3.2.2. Outdoor Experimenter Kit (Light)</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-3.2.3.">3.2.3. Outdoor Experimenter Kit (Light and Air)</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-3.2.4.">3.2.4. How Kickstarter Will Help</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-3.2.5.">3.2.5. Production and Fulfillment Plan</a></li>
+<li><a href="#section-4.">4. How MoPi Works</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.1.">4.1. Monitoring</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-4.1.1.">4.1.1. SimBaMon: a Simple Battery Monitor daemon</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-4.1.1.1.">4.1.1.1. Installing SimBaMon</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.2.">4.2. The Hardware</a></li>
+<li><a href="#section-5.">5. Stretch Goals</a></li>
+</ul></p></div>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-1."></a><h1 class="cow-heading"><span class="cow-sec-number">1. </span>Pi to Go!</h1>
+
+<p>MoPi is mobile and 24/7 power for the Pi. On your bike, up a tree, or for your
+home server: we've got you covered.</p>
+
+<!--% %(images/mopi/logo-heli-1.png,-->
+
+<!--% %image(images/mopi/logo-heli-1-200x150.png, MoPi Heli Logo, 200, 150))-->
+
+
+<p>Features:</p>
+
+<ul>
+<li>multiple inputs &mdash; standard batteries, car power sockets, old laptop
+  supplies, solar panels, ...</li>
+<li>hot-swap power replacement without stopping work</li>
+<li>shutdown the Pi cleanly when batteries discharge</li>
+<li>integrated on/off switch</li>
+<li>UPS (uninterruptible power) when using both batteries and mains</li>
+<li>on-board LED indicators and on-Pi notifications</li>
+</ul>
+
+<p>And it even fits in the Pibow (and other well-known Pi cases):</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/mopi-in-pibow.jpg"><img class="cow-img" src="/pages/images/mopi/mopi-in-pibow-500x375.jpg" alt="MoPi in a Pibow" width="500" height="375"></a></p>
+
+<p>Back this Kickstarter from <b>less than &pound;20/&euro;25/$30</b> (early bird) and we'll have
+you powered up in no time. Or pick up one of our <b>outdoor experimenter kits</b>
+and help us deliver field-trip science rigs for schools. (Add &pound;2.25 to any
+reward and get a custom Pibow lid!)</p>
+
+<p><b>Where do you want to use yours?!</b></p>
+
+<p><a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/mopi-with-key.png"><img class="cow-img" src="/pages/images/mopi/mopi-with-key.png" alt="MoPi prototype" width="500" height="358"></a></p>
+
+<p><a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/proto2-01.jpg"><img class="cow-img" src="/pages/images/mopi/proto2-01-500x379.jpg" alt="MoPi prototype" width="500" height="379"></a></p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-1.1."></a><h2 class="cow-heading"><span class="cow-sec-number">1.1. </span>I Want One!</h2>
+
+<p>Great! Click on one of the pledges listed to the right of the page.</p>
+
+<p>The options:</p>
+
+<ul>
+<li>Just MoPi: pledge <b>&pound;18</b> (early bird) or <b>&pound;24</b>.</li>
+<li>MoPi, rechargeable batteries and charger: pledge <b>&pound;48</b> (early bird) or
+  <b>&pound;59</b>.</li>
+<li>Don't interrupt! The cheapest UPS on the market: pledge <b>&pound;75</b> (early bird)
+  or <b>&pound;89</b>.</li>
+<li>Kit and caboodle:
+  <ul>
+  <li>for Pi-on-the-Road Adventurers kit pledge <b>&pound;130</b></li>
+  <li>for Outdoor Experimenters (Light) pledge <b>&pound;157</b></li>
+  <li>for Outdoor Experimenters (Light and Air) pledge <b>&pound;239</b></li>
+  </ul></li>
+<li>Make me a lab:
+  <ul>
+  <li>an outdoor rig for 10-pupil classes is <b>&pound;2,140</b></li>
+  <li>for an on-site workshop pledge <b>&pound;3,340</b>.</li>
+  </ul></li>
+<li>Or, just pledge <b>&pound;2</b> and we'll keep you in touch.</li>
+<li>And add <b>&pound;2.25</b> to any pledge and we'll upgrade your Pibow case with a
+  custom MoPi-friendly lid.</li>
+</ul>
+
+<p>Payment by barter, bitcoin, or bourbon biscuits in bulk: probably fine, but
+phone first!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>The Story So Far</h1>
+<h2 class="cow-heading">NOTE: video 2 goes here...</h2>
+
+<p>About a year ago we realised that we needed better power management for our
+mobile projects on
+<a class="cow-url" href="http://pi.gate.ac.uk/">Pi.GATE.ac.uk</a>. Five volt USB
+battery packs are common, but none of them can communicate their level of
+charge to the Pi. That means lots of unanticipated power cuts &mdash; a good way to
+corrupt your SD card :-(</p>
+
+<p>And then we realised that standard rechargeables are more planet friendly. And
+then that it would be cool to be able to hot-swap supplies, and that if we
+could do that then why not make it a UPS too, and how about adding a power
+switch, and...</p>
+
+<p>Fast forward: we're onto our third prototype and we think we know what perfect
+Pi power looks like. Read on!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="perfect"></a></p><a class="cow-section-anchor" name="section-2.1."></a><h2 class="cow-heading"><span class="cow-sec-number">2.1. </span>The Perfect Pack</h2>
+
+<p><a class="cow-url" href="http://pi.gate.ac.uk/pages/images/mopi/perfect-pack.png"><img class="cow-img" src="/pages/images/mopi/perfect-pack.png" alt="The perfect pack" width="563" height="295"></a></p>
+
+<p>What would the perfect Pi battery pack look like? It should be:</p>
+
+<p><b>Low cost</b>. Dedicated battery supplies like those sold as phone charging
+devices are great, but when they no longer hold charge the whole unit has to
+be recycled. Standard commodity batteries and the reusable chargers that serve
+them are well-established and already present in many households. They're the
+cheapest and most flexible option.</p>
+
+<p><b>Flexible</b>. Got a solar panel handy? I want to plug it into the circuitry and
+have it drive the Pi as long as the sun shines, then let a battery take over
+when the clouds come. Stuck for power but got an old laptop supply or 12 volt
+car charger handy? Strip the cables, connect, and power my Pi please! Plugging
+a bunch of peripherals? I want to be able to drive them all via my battery
+pack. And etc.</p>
+
+<p><b>Polite</b>. When you're running your laptop on battery and it runs out of juice
+it gives you a nice polite warning message or two, and, when the level gets
+really low, it automagically shuts down the machine. This is important to
+allow the operating system (e.g.
+<a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html#footnote1">Raspbian Linux</a> on the Pi)
+to close up any open files and generally tidy the house before power
+disappears. Just killing the power without warning is risky &mdash; sometimes
+nothing bad happens, but in the worst case you can end up with a machine that
+won't boot and needs a complete reinstall. So I want my battery pack to signal
+the Pi when levels are low, so that the Pi can shut itself down cleanly. Good
+manners are important, after all :-)</p>
+
+<p>And if the battery pack is going to tell the Pi when it is getting low and
+needs to shut down, why not have an <b>on/off switch</b> into the bargain? The
+&quot;off&quot; signal triggers clean shutdown, and is very convenient when you're using
+the Pi in any kind of kiosk or appliance context. Several projects have
+implemented this type of on/off facility in its own right &mdash; e.g.
+<a class="cow-url" href="http://lowpowerlab.com/atxraspi/">the ATX Pi supply</a> or the
+<a class="cow-url" href="http://www.susa.net/wordpress/2012/11/raspberry-pi-power-controller/">PIC
+controller</a> &mdash; it's definitely a useful function to have on board.</p>
+
+<p><b>Uninterruptible</b>. I don't want to stop work when my battery is low if I've
+got a charged pack handy (or a different source of power, like a car cigarette
+lighter socket or the like). So I'd like my battery pack to support <b>hot-swap</b>
+of a new electricity supply, either a new set of batteries or some other new
+input.</p>
+
+<p><b>Eco-friendly</b>. One of the great things about the Pi is its low carbon
+footprint. The recent ones in <a class="cow-url" href="http://pi.gate.ac.uk/">my lab</a> are made in
+Wales, so they haven't travelled half way around the world to reach me. The
+base system is bare-bones, which encourages reuse of power supplies, monitors,
+cables and the like. The power consumption is low &mdash; particularly for the
+Model A, which gets by on 300 mA or below (at 5 volts this adds up to around
+1.5 watts &mdash; contrast that with
+<a class="cow-url" href="https://secure.www.upenn.edu/computing/resources/category/hardware/article/computer-power-usage">50 watts and above</a> for a desktop PC!). There's no spare planet; there's no
+Plan B if we destroy this one. So we definitely want to support rechargeable
+batteries, and preferably not the built-in variety that are hard to recycle.</p>
+
+<p><b>Communicative</b>. I want to know when the battery is full, when it is starting
+to get low and when it is critical. I want to be able to get those signals
+both when logged in to the Pi and visually from the battery pack itself.
+(Look! Flashing lights!)</p>
+
+<p><b>Robust</b>. I'm pretty unreliable at the best of times. When crawling through
+the underbrush with a camera-equiped Pi rig
+<a class="cow-url" href="http://pi.gate.ac.uk/posts/2013/08/05/chasing-pine-martens/">in search of
+Pine Marten lairs</a> I'm very likely to plug the wrong end of the stick and end
+up with my foot in my mouth, to coin a mixed metaphor or three. Over-volt and
+spike protection are definitely requirements.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2.2."></a><h2 class="cow-heading"><span class="cow-sec-number">2.2. </span>The Prototypes</h2>
+
+<p>We're now working on our third-generation prototype, which will be the final
+test board before we start volume production &mdash; see the development schedule
+below. This was the second-generation prototype:</p>
+
+<p><img class="cow-img" src="/pages/images/mopi/proto2-01-500x379.jpg" alt="mopi prototype 2/1" width="500" height="379"></p>
+
+<p>The shape of the PCB allows it to fit into the
+<a class="cow-url" href="http://shop.pimoroni.com/collections/pibow">Pibow</a> without blocking the Pi's
+display output (currently unused but on the list for future development at
+<a class="cow-url" href="http://www.raspberrypi.org/">The Foundation</a>). There's space for a
+pass-through GPIO header so that other add-on boards can share space on the
+Pi, separate LEDs for overall function and for the two power inputs, and a
+neat little power switch on the top.</p>
+
+<p>(The good people at <a class="cow-url" href="http://www.pimoroni.com/">Pimoroni</a> are going to do a
+custom lid for their
+<a class="cow-url" href="http://shop.pimoroni.com/collections/pibow">Pibow</a> case
+to give access to MoPi's power switch. We'll also supply templates if you need
+to drill out an existing Pibow or other popular case.)</p>
+
+<p>And here are the first-generation prototype boards (with separate regulator
+and controller):</p>
+
+<table> <tr><td> &nbsp;&nbsp;</td><td>
+<p><a class="cow-url" href="/pages/images/mopi/prototype-regulator-05.jpg"><img class="cow-img" src="/pages/images/mopi/thumbs/prototype-regulator-05.jpg" alt="mopi prototype 5" width="200" height="194"></a></p>
+</td><td> &nbsp;&nbsp;&nbsp; </td><td>
+<p><a class="cow-url" href="/pages/images/mopi/prototype-controller-01.jpg"><img class="cow-img" src="/pages/images/mopi/thumbs/prototype-controller-01.jpg" alt="mopi prototype 6" width="270" height="195"></a></p>
+</td></tr>
+</table>
+
+<p>The software is <a class="cow-url" href="http://www.fsf.org/about/what-is-free-software">open source</a>
+(of course) and available at
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon">our
+Pi-Tronics repository</a>.</p>
+
+<p>There is lots of detail of how it all works below, but first let's take a look
+at performance.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-2.3."></a><h2 class="cow-heading"><span class="cow-sec-number">2.3. </span>A Longer-Lasting Snack</h2>
+
+<p>So, how long will the batteries last?</p>
+
+<p>My first test was a Model B Pi with almost no load (USB keyboard and mouse;
+monitor attached over HDMI but switched off after starting the test; no
+network or other peripherals). Using eight rechargeable Duracell AA NiMH 2400
+mAh batteries (like
+<a class="cow-url" href="http://www.amazon.co.uk/Duracell-Rechargeable-Accu-2400-Batteries/dp/B0031OE6LG/ref=sr_1_2?ie=UTF8&amp;qid=1375768484&amp;sr=8-2&amp;keywords=duracell+nimh">these ones</a>) the Pi ran for 9 hours 31 minutes. Not bad! Especially when you
+consider that the MoPi regulator supports hot-swap of new charged packs &mdash;
+this looks very viable for mobile Pi applications of all shapes and sizes.</p>
+
+<p>For comparison I set up the same rig with a USB battery pack from RS
+(<a class="cow-url" href="http://uk.rs-online.com/web/p/power-banks/7757508/">this one</a>, a 5200 mAh
+Lithium polymer model). The results were remarkably similar, with the RS pack
+lasting for 9 hours and 21 minutes.</p>
+
+<p>Since then we've conducted 101 different tests. There are two key factors in
+Pi battery life: <b>1.</b> Model A vs. Model B; <b>2.</b> the peripherals. To summarise:</p>
+
+<ul>
+<li>You can expect a Model A to get near to double the life of a Model B.</li>
+<li>What you connect to the Pi makes a huge difference. For example: WiFi is a
+  power hog: halve your expected battery life if you're using it. An
+  accelerometer, in contrast, is cheap: e.g.
+  <a class="cow-url" href="http://www.piborg.com/xloborg">XLoBorg</a> won't reduce your running time by much at all.</li>
+</ul>
+
+<p>You can also connect two battery packs to MoPi and get double the running
+time.</p>
+
+<!--% TODO more test results here; PP3s, lead acid monster, etc.-->
+
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-3."></a><h1 class="cow-heading"><span class="cow-sec-number">3. </span>The Future: Development Schedule</h1>
+
+<p><a class="cow-url" href="/pages/images/mopi/logo-balloon-1.png"><img class="cow-img" src="/pages/images/mopi/logo-balloon-1-150x244.png" alt="MoPi Balloon Logo" width="150" height="244"></a>
+We've got two sets of developments we want to make: 1. finishing off the
+perfect Pi power board (next section); 2. putting together some
+imagination-capturing outdoor learning kits for schools (below).</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-3.1."></a><h2 class="cow-heading"><span class="cow-sec-number">3.1. </span>Power to the People</h2>
+
+<p>The basic functionality is all in place &mdash; just pledge us your &pound;20 and we'll
+get you on the road ASAP. (With your own batteries &mdash; we'll also supply
+high-capacity rechargeable batteries for the more expensive pledges, or a UPS
+rig, or even a full kit including Pi and the works for &pound;130. A bargain!)</p>
+
+<p><b>Future developments</b>:</p>
+
+<ul>
+<li>dealing with more rechargeable battery chemistries (we currently support
+  Alkaline and NiMH; Lithium-ion is in progress)</li>
+<li>the internal Pi circuitry can run on 3.3 volts (saving some power loss in
+  the on-board linear regulator &mdash; <a class="cow-url" href="http://www.daveakerman.com/">Dave
+  Akerman's balloons</a> use this strategy to increase battery life); we'd love
+  to add a mode that supports 3.3V</li>
+<li>the communication is currently one-way: MoPi tells the Pi about the state of
+  the batteries, signals for shutdown requests and so on &mdash; if we add 2-way
+  communication (on the I2C bus or using one extra GPIO pin) then we'll be
+  able to support configuration from the Pi itself</li>
+<li>to support the widest range of battery options we can't do charging; it
+  would be nice to add an option for charging common configurations</li>
+</ul>
+
+<p>With your help we'll add all of that to the mix!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-3.2."></a><h2 class="cow-heading"><span class="cow-sec-number">3.2. </span>Experimenter Kits for Schools and Outdoor Adventurers</h2>
+
+<p>The Pi was designed to give a boost to science and technology education, and
+it has already made a huge impact &mdash; here in the UK, for example, we have a
+shiney <a class="cow-url" href="http://pi.gate.ac.uk/pages/schools.html">new computing curriculum</a> in
+the works. There a whole load of reasons why we need to <b>educate our kids
+about technology</b>, and how technology can help them cope with the challenges
+that the future holds. And not just any technology &mdash; the Pi has a low carbon
+footprint, and it's the first mainstream device to be made in Europe for many
+a year. </p>
+
+<p>We're involved with putting together Pi kits for schools &mdash; only for indoor
+use up to now, but this Kickstarter will allow us to create outdoor
+experimenter kits to help teach the links between technology, climate,
+wildlife and the like.</p>
+
+<p>We're offering three kits (for young or old!):</p>
+
+<ul>
+<li>Outdoor Adventurer Kit</li>
+<li>Outdoor Experimenter Kit (Light)</li>
+<li>Outdoor Experimenter Kit (Light and Air)</li>
+</ul>
+
+<p>Then we're offering a set of kits that make up a <b>Schools Outdoor Lab</b> rig,
+complete with a selection of fully worked lesson plans to get you started.
+Ideal for teaching basic physics, climate, environment, biology (and of course
+computing). If you cover our travel expenses we'll even run a introductory lab
+day for you on site.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-3.2.1."></a><h3 class="cow-heading"><span class="cow-sec-number">3.2.1. </span>Outdoor Adventure Kit</h3>
+
+<p>The base level kit has everything you need to get out and about: a Raspberry
+Pi Model B, case, SD card, and a MoPi board with NiMH batteries, holder and
+charger (and a wall supply for when you get home!).</p>
+
+<p>Buy one for yourself and be on the road in minutes. This kit also makes a
+great gift for someone yet to experience The Joy of Pi :-)</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-3.2.2."></a><h3 class="cow-heading"><span class="cow-sec-number">3.2.2. </span>Outdoor Experimenter Kit (Light)</h3>
+
+<p>This kit has all of the previous one, plus the Raspberry Pi camera module (day
+or night versions). Ideal for all types of outdoor motion-sensing and
+photography projects. If you haven't tried the excellent
+<a class="cow-url" href="http://www.raspberrypi.org/camera">Pi camera yet</a> here are a couple of
+examples:</p>
+
+<p>Forest Gump came by the office when we were testing an early battery-powered
+camera rig (a hackable &quot;GoPro&quot;?!):</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/gump2.jpg"><img class="cow-img" src="/pages/images/mopi/gump2-500x375.jpg" alt="Forest Gump" width="500" height="375"></a></p>
+
+<p>The next olympic downhill ski champion straps a Pi cam to his head:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/vladi-skiing-rig-1.jpg"><img class="cow-img" src="/pages/images/mopi/vladi-skiing-rig-1-300x400.jpg" alt="Vladi skiing" width="300" height="400"></a></p>
+
+<!--% YOUTUBE SKIING CLIP HERE-->
+<p align="center"> <iframe width="480" height="360" src="//www.youtube.com/embed/73hIeQLm3aY" frameborder="0" allowfullscreen></iframe> </p>
+
+
+<p>Here's the camera rig:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/ski-cam.jpg"><img class="cow-img" src="/pages/images/mopi/ski-cam-500x343.jpg" alt="Vladi skiing" width="500" height="343"></a></p>
+
+<p>People have done all sorts of stuff with these cameras &mdash; from videoing Teddy
+Bears in the stratosphere to night filming wildlife &mdash; the educational
+opportunities are obvious.</p>
+
+<p>Where do you want to use yours?!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-3.2.3."></a><h3 class="cow-heading"><span class="cow-sec-number">3.2.3. </span>Outdoor Experimenter Kit (Light and Air)</h3>
+
+<p>If you watch the film <a class="cow-url" href="http://chasingice.co.uk/">Chasing Ice</a> you can't fail
+to be amazed when a vast chunk of glacier the size of Manhattan suddenly
+disintegrates before your eyes. What are the climate changes that have
+triggered these massive events? How do they play out in the air we're
+breathing? How do you measure atmospheric conditions, and what science can we
+use to explain changes in those conditions?</p>
+
+<p>Meet <a class="cow-url" href="http://airpi.es/">AirPi</a>, a brilliant Pi-based atmospheric monitoring
+kit that ran a crowdfunding campaign in 2013 and started shipping in the
+autumn. If you pick the <b>Outdoor Experimenter Light and Air Kit</b> pledge we'll
+include an AirPi with your mobile rig, all set to get out and about measuring
+temperature, relative humidity, air pressure, light levels, smoke, and the
+concentrations of the harmful gas pollutants carbon monoxide and nitrogen
+dioxide, and plotting the results direct to a webserver running on the Pi.</p>
+
+<p>Here's <a class="cow-url" href="http://airpi.es/">the AirPi board</a>, sensor and indicator set:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/air-pi-2022x1317.jpg"><img class="cow-img" src="/pages/images/mopi/air-pi-500x326.jpg" alt="The AirPi Kit" width="500" height="326"></a></p>
+
+<p>And here's one we built up on a breadboard:</p>
+
+<p><a class="cow-url" href="/pages/images/mopi/air-pi-breadboard.jpg"><img class="cow-img" src="/pages/images/mopi/air-pi-breadboard-500x375.jpg" alt="AirPi on a Breadboard" width="500" height="375"></a></p>
+
+<p>The third MoPi prototype uses a different set of GPIO pins in order to avoid
+conflicts with AirPi (thanks Tom Hartley, creator of AirPi, for his help with
+this).</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-3.2.4."></a><h3 class="cow-heading"><span class="cow-sec-number">3.2.4. </span>How Kickstarter Will Help</h3>
+
+<p>There are <b>two chunks of work</b> here: first is putting together a hardware set
+that can do stuff that kids (and their teachers!) get interested in; second,
+and at least as important, is developing the lesson plans, learning and
+evaluation materials that make it quick enough and easy enough to incorporate
+the Pi into existing educational schedules.</p>
+
+<p>We've got our own <a class="cow-url" href="http://pi.gate.ac.uk/pages/about.html#elearn">educational
+specialist</a> all lined up, and your support on Kickstarter will unlock the
+resources to make it work. And we'll make it all open source in return.</p>
+
+<p>If you have the funds to pay for a whole outdoor lab (for multiples of 10
+students) then we'll supply you with the whole kit and caboodle &mdash; and even
+come visit to deliver an on-site training day for teachers, parents and
+pupils. (With
+<a class="cow-url" href="https://www.gov.uk/government/organisations/disclosure-and-barring-service">DBS/CRB registered</a> and <a class="cow-url" href="http://www.stemnet.org.uk/ambassadors/">STEM
+ambassador</a> instructors. Travel costs and volume limitations apply!) If you
+want to dip your toe and support our development of the educational materials
+then just pick up one of the kits listed above.</p>
+
+<p>Thanks!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-3.2.5."></a><h3 class="cow-heading"><span class="cow-sec-number">3.2.5. </span>Production and Fulfillment Plan</h3>
+
+<p>We'll carry out the development plans detailed above in the following stages:</p>
+
+<ul>
+<li>Complete prototype board level 3. We have a few hardware changes left to
+  make (changing GPIO pins to fit in with AirPi; adding better connectors;
+  etc.). Then we'll revise the PCB layout and order another batch of
+  prototypes. Solder them up (with a <b>big</b> magnifying glass &mdash; the
+  surface-mount components are tiny!) and get testing. We'll make a bigger
+  batch for version 3 than previously, and push them out to heavy Pi users to
+  get use and abuse and a final round of feedback. Continue work on the daemon
+  and the firmware (mainly the 2-way communication code and Pi-based
+  configuration option). Start project updates and regular newsletter to
+  friends and the community.
+  <ul>
+  <li>Completion: February 2014. (Project updates ongoing through September.)</li>
+  </ul></li>
+<li>Finalise the design of the production board. Fix any residual issues arising
+  from testing. Incorporate any feedback from Kickstarter backers (you!).
+  Start ordering components, kit parts and PCBs in bulk. Finalise the
+  pick-and-place manufacturing process and start pre-production testing.
+  Continue work on the firmware and produce the production binary for flashing
+  to the production boards. Address any stability issues in the daemon code.
+  <ul>
+  <li>Completion: March 2014.</li>
+  </ul></li>
+<li>Start taking delivery of the production boards. Fulfill the early bird
+  orders. (This is our last opportunity to make firmware changes. Test, test
+  and test again!) Resume work on the educational materials: catch up on
+  developments in the curricula, the Cambridge GCSE MOOC, etc.; more project
+  work with the camera and with the air sensors board. Set up pre-order
+  mechanism for retail version. The daemon should be very stable by now.
+  <ul>
+  <li>Completion: April 2014. (Educational work continues through the summer.)</li>
+  </ul></li>
+<li>Fulfill remaining (non-early bird) orders for all single item and kit
+  rewards. Select lesson plans for delivery with the schools rigs next month.
+  Solicit additional GitHub committers for the daemon code to help with
+  long-term maintainability.
+  <ul>
+  <li>Completion: May 2014.</li>
+  </ul></li>
+<li>Finalise the first version of the educational materials. Prepare schools rig
+  orders. Revisit long-term production and retail supply options. Work on the
+  workshop days and deliver some trial runs locally. Agree delivery schedule
+  for workshop days.
+  <ul>
+  <li>Completion: June 2014.</li>
+  </ul></li>
+<li>Finalise the workshop days and deliver. Set up sustainable production
+  process and retail board supply. Set up sustainability mechanisms for the
+  educational materials.
+  <ul>
+  <li>Completion: September 2014. (Workshop delivery ongoing. Retail board
+    supply ongoing.)</li>
+  </ul></li>
+<li>Collapse in a small pile.</li>
+</ul>
+
+<!--
+- 1: Friends
+  - Estimated delivery: Feb 2014
+- 2: A MoPi Board (early bird)
+  - Estimated delivery: Apr 2014
+- 3: A MoPi Board
+  - Estimated delivery: Apr 2014
+- 4: A MoPi Board, Batteries, Charger (early bird)
+  - Estimated delivery: Apr 2014
+- 5: A MoPi Board, Batteries, Charger
+  - Estimated delivery: May 2014
+- 6: UPS -- MoPi Board, Two Sets of Batteries, Charger, Mains Supply (early
+  bird)
+  - Estimated delivery: May 2014
+- 7: UPS -- MoPi Board, Two Sets of Batteries, Charger, Mains Supply
+  - Estimated delivery: May 2014
+- 8: Outdoor Adventure Kit (Pi etc., MoPi, batteries, etc.)
+  - Estimated delivery: May 2014
+- 9: Outdoor Experimenter Kit 1 (Light) (previous plus Pi camera)
+  - Estimated delivery: May 2014
+- 10: Outdoor Experimenter Kit 2 (Light and Air) (previous plus AirPi)
+  - Estimated delivery: May 2014
+- 11: Schools Outdoor Lab Rig (ten Light and Air kits)
+  - Estimated delivery: Jun 2014
+- 12: Outdoor Rig Workshop (previous plus on-site mobile Pi day)
+  - Estimated delivery: Sep 2014
+-->
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-4."></a><h1 class="cow-heading"><span class="cow-sec-number">4. </span>How MoPi Works</h1>
+
+<p>There are three dimensions to the problem of mobile power for the Pi:</p>
+
+<ul>
+<li><em>regulation</em>, to supply the constant 5 volts at up to around 1 amp that the
+  Pi requires</li>
+<li><em>control</em>:  keeping a check on battery charge, switching the regulator off
+  when charge is getting low, and reporting the current level to a monitor</li>
+<li><em>monitoring</em>: reading level indications from
+  <a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html#gpio-pins">a GPIO connection</a>,
+  reporting it to the Pi user and shutting the operating system down cleanly
+  when levels get critically low</li>
+</ul>
+
+<p>The first two of these need some special hardware (see &quot;The Hardware&quot; below);
+the third is written as a software
+<em>daemon</em>. (We'll sketch these here &mdash;
+Pi.GATE.ac.uk has more of <a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html">the gorey
+details</a>.)</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="monitoring"></a></p><a class="cow-section-anchor" name="section-4.1."></a><h2 class="cow-heading"><span class="cow-sec-number">4.1. </span>Monitoring</h2>
+
+<p>All Linux systems share the concept of a <em>daemon</em>, which is a system-level
+service which gets run during operating system startup. It is quite easy to
+implement a battery monitor daemon that listens on the Pi's GPIO pins for
+level changes signalled by the MoPi microcontroller board. The daemon then
+makes entries in the standard system logs as a simple way to share data with
+other subsystems, and can be configured to send a warning message to all users
+if levels are low. Best of all, the daemon can easily shut down the Pi cleanly
+before the regulator voltage gets too low for reliable operation.</p>
+
+<p>The rest of this section describes the implementation of the daemon. It is
+designed for the MoPi boards, but should be quite easily reusable for other
+battery power projects.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="simbamon"></a></p><a class="cow-section-anchor" name="section-4.1.1."></a><h3 class="cow-heading"><span class="cow-sec-number">4.1.1. </span>SimBaMon: a Simple Battery Monitor daemon</h3>
+
+<p>SimBaMon is an open source Linux daemon for</p>
+
+<ul>
+<li>monitoring battery levels (via
+  <a class="cow-url" href="http://wiringpi.com/the-gpio-utility/">the gpio command</a>)</li>
+<li>sending warning messages to the user if the battery is low</li>
+<li>shutting down cleanly at critical battery levels</li>
+<li>managing a power supply on/off switch</li>
+<li>writing relevant data to the system logs</li>
+</ul>
+
+<p>You can find
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon">the source code</a> on GitHub. The core of the daemon is defined in three files:</p>
+
+<ul>
+<li><tt>/etc/simbamon.conf</tt>    &mdash; configuration data</li>
+<li><tt>/usr/sbin/simbamon</tt>    &mdash; the daemon itself</li>
+<li><tt>/etc/init.d/simbamond</tt> &mdash; an interface to the <tt>init</tt> subsystem that Linux
+  uses to manage daemons (amongst other things)</li>
+</ul>
+
+<p>The last of these, <tt>simbamond</tt>, is used by the operating system to start and
+stop SimBaMon at boot or shutdown time, and can be used to control the daemon
+manually when required. For example this command will stop the daemon:</p>
+
+<p>sudo service simbamond stop</p>
+
+<p>The configuration file, <tt>simbamon.conf</tt>, defines a set of states in which the
+monitor will take some action (power off, battery empty, battery level
+critical, battery level low, battery level good).</p>
+
+<p>The MoPi microcontroller supplies these states via three Raspberry Pi
+<a class="cow-url" href="http://pi.gate.ac.uk/pages/basics.html#gpio-intro">GPIO pins</a> (and also sets
+on-board indicator LEDs accordingly). The core of SimBaMon, a shell script
+that lives in <tt>/usr/sbin/simbamon</tt>, implements an infinite loop that checks
+the levels being reported over GPIO every few seconds and takes any necessary
+action. The three GPIO pins connected to MoPi are used as a 3-bit binary
+value, which we convert to decimal using the <tt>bc</tt> command. The <tt>wall</tt> (write
+all) command is used to send messages to any logged in user.</p>
+
+<p>Here's the main loop:</p>
+
+<p><a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamon"><img class="cow-img" src="/pages/images/mopi/simbamon-code.png" alt="SimBaMon Main Loop" width="500" height="553"></a></p>
+
+<p>Here is the
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/">current version of the code</a>. There is a full test rig, including debug mode
+(no shutdowns, shorter intervals) and simulation mode (GPIO input is
+simulated).</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="installing"></a></p><a class="cow-section-anchor" name="section-4.1.1.1."></a><h4 class="cow-heading"><span class="cow-sec-number">4.1.1.1. </span>Installing SimBaMon</h4>
+
+<p>The <a class="cow-url" href="http://www.raspberrypi.org/archives/tag/alex-bradbury">Raspbian
+maintainers</a> have been kind enough to include SimBaMon in their repository, so
+you can just do this:</p>
+
+<p><pre class="prettyprint lang-bash">
+  sudo apt-get install simbamond
+</pre>The software is also available from an
+<a class="cow-url" href="https://launchpad.net/~hamish-dcs/+archive/pi-gate">Ubuntu Personal Package
+Archive</a> (PPA). (The Ubuntu infrastructure doesn't currently work for binary
+Pi packages, but SimBaMon is implemented in script, so we're ok in this case.)</p>
+
+<p>SimBaMon depends on Gordon Henderson's <a class="cow-url" href="http://wiringpi.com/">Wiring Pi</a>, and
+we've
+<a class="cow-url" href="http://pi.gate.ac.uk/posts/2013/10/09/wiring-pi-package/">made a
+Raspbian package</a> for that library which should be in the Foundation
+repository soon.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="howitworks"></a></p><a class="cow-section-anchor" name="section-4.2."></a><h2 class="cow-heading"><span class="cow-sec-number">4.2. </span>The Hardware</h2>
+
+<p>The MoPi circuitry consists of two parts: a single-chip microcontroller and a
+five volt switching mode regulator. The microcontroller (with embedded
+firmware) implements all the functions related to voltage level monitoring,
+level signalling (via the LEDs and the GPIO interface), and on/off switching
+of the +5V supply to the Pi. Battery voltage levels are measured using the
+built-in microcontroller ADC (Analogue to Digital Converter).</p>
+
+<p>The schematic looks like this:</p>
+
+<p><img class="cow-img" src="/pages/images/mopi/schematic.png" alt="An early MoPi schematic" width="500" height="292"></p>
+
+<p>Two yellow LEDs are positioned next to the twin power pack inputs, and
+indicate their status (blinking when either voltage is critically low). The
+overall voltage level of both power inputs is indicated by one RGB (three
+colour) LED and is also sent to the Raspberry Pi over three GPIO lines. The 5
+volts to the Pi is generated by a highly efficient switch mode voltage
+stabiliser, driven by the microcontroller. An open source daemon running on
+the Pi listens to the GPIO signal, informs the user of low battery levels and
+shuts the Pi down cleanly when levels are critically low (or when the power
+switch is pressed).</p>
+
+<p>To start the 5V generator the power button should be pressed and held for 3
+seconds. The microcontroller checks the voltage level of the attached battery
+packs and if it is above the defined operating threshold, it switches the
+stabiliser on to generate 5V for the Pi. The LED for the battery (or other)
+power input lights up, and the RGB LED lights up blue when the battery pack is
+fully charged (or green if the voltage level is within the acceptable
+operating range). A three-bit coded voltage level is also sent to the Pi over
+GPIO (using
+<a class="cow-url" href="http://wiringpi.com/">WiringPi</a> pins 4, 5 and 6 &mdash; physical pins
+16/18/22 &mdash; though this changes in version 3 to accomodate AirPi). During
+operation, the microcontroller continuously monitors the voltage level, and
+when it falls beneath a safe level it switches the RGB LED to red.
+Simultaneously the yellow LED for the low battery starts flashing, indicating
+that the pack needs replacement.</p>
+
+<!--% YOUTUBE MOPI BOARD CLIP HERE-->
+<p align="center"> <iframe width="480" height="360" src="//www.youtube.com/embed/33ZzeEIOMLg" frameborder="0" allowfullscreen></iframe> </p>
+
+
+<p>Then the daemon SimBaMon on the Pi gets a low battery signal and informs the
+user that they should either plug in another supply or shut down (again by
+pressing the power button for 3 seconds). If nothing changes and the battery
+continues to discharge down to a critical level, then the RGB LED starts
+flashing red and MoPi forces a shutdown. If the user wishes to continue to
+work and connects a new, charged battery pack (or other supply) to the second
+connector within 30 seconds then the new battery will prevent the shutdown,
+and the RGB LED will switch back to blue or green. The new input's
+corresponding yellow LED will light up. The user can then remove the old
+battery pack for charging.</p>
+
+<p>Behaviour has to be adjusted for multiple battery chemistries; this is done
+within the microcontroller firmware. (In version 3 we also support chemistry
+configuration on the Pi itself, giving a wider range of options.)</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a class="cow-section-anchor" name="section-5."></a><h1 class="cow-title-heading"><span class="cow-sec-number">5. </span>Stretch Goals</h1>
+
+<p>Thanks to our backers so far we're going beyond our baseline. We've figured
+out a bunch of extras we can offer in MoPi if we get further (and the level of
+funding we'll need to make them viable):</p>
+
+<ul>
+<li>150% (unlocked!): <b>screw terminals</b>, <b>stackable headers</b>, <b>remoting pads</b>
+  and <b>self-resetting fuse</b> added</li>
+<li>175% (nearly there!): <b>two-way communication</b> and <b>remote power-off</b> added</li>
+<li>200%: <b>3.3V supply</b> mod added</li>
+<li>250%: <b>timer-based wake-up</b> added</li>
+<li>300%: <b>The PiBrush</b> reward released</li>
+<li>375%: <b>battery charging</b> added</li>
+<li>430%: <b>The HackCam</b> reward released</li>
+<li>590%: <b>input voltage boost</b> added</li>
+<li>999%: <b>The Pablet</b> reward released</li>
+</ul>
+
+<p>When we reach <u>150% funded</u> (nearly there!) we can make these improvements:</p>
+
+<ul>
+<li><b>Screw terminals</b>. This will make it easier to connect all different types
+  of power supply (from batteries to water turbines) direct to MoPi.</li>
+<li><b>Stackable headers</b>. We'll put a stacking header directly onto the board
+  (and adopt the same case lid style as for the
+  <a class="cow-url" href="http://shop.pimoroni.com/products/model-a-pibow">Pibow Model A</a>). This
+  will make it easier to connect multiple boards at once (e.g. MoPi + XLoBorg,
+  or MoPi + AirPi, or etc.).</li>
+<li><b>Remoting pads</b>. We'll add remoting pads for the power switch to help with
+  applications where MoPi sits away from the edge of the case. This will allow
+  the connection of an additional power switch.</li>
+<li><b>Self-resetting fuse</b>. MoPi supplies power directly through the GPIO pins,
+  which bypasses the Pi's built-in fuse. We think this is safe &mdash; but to be
+  doubly sure we'll add a fuse in MoPi.</li>
+</ul>
+
+<p>When we get to <u>175% funded</u> we will add:</p>
+
+<ul>
+<li><b>Two-way communication</b>. We're moving to I2C for communication between the
+  Pi and MoPi, which will mean complete configurability from the Pi. (It will
+  also minimise our use of GPIO pins and maximise the number of other Pi
+  add-on boards that we can run with.)</li>
+<li><b>Remote power off</b>. You'll be able to tell MoPi to power down the Pi when
+  logged-in remotely (after a clean shutdown, of course).</li>
+</ul>
+
+<p>If we get to <u>200% funded</u> we will add the ability to mod MoPi for <b>3.3V
+operation</b> (overpowering the Pi's on-board regulator and saving the power that
+is dissipated there, for weight and battery life critical applications like
+ballooning).</p>
+
+<p>If we make it to <u>250% funded</u> we'll add timer-based wakeup &mdash; tell MoPi
+what time you want your Pi to wakeup, then power it down and MoPi will boot
+the Pi as requested.</p>
+
+<p>If we get to <u>300% funded</u> we will offer our virtual paintbrush rig &mdash; <b>The
+<a class="cow-url" href="http://pi.gate.ac.uk/pages/pibrush.html">PiBrush</a></b> &mdash; as a reward. PiBrush
+combines a MoPi with an accelerometer and is a great way to engage kids with
+Python programming and the physics of motion. When you've got one you've also
+got a programmable Pi-based Wii-remote-alike, and there are a ton of cool
+applications waiting.</p>
+
+<p>Now, the one you've all been waiting for: <b>charging</b>! That's by a long head
+our most requested feature &mdash; but it is also pretty difficult :-(  In fact,
+dealing with lots of different chemistries may not be possible on a tiny
+device like MoPi (most manufacturers of charging ICs only support one
+chemistry per chip, for example, and some only support charging a <em>single
+cell</em> per chip!). The other challenge is that we've got a really small surface
+area to work with on the PCB. So we need to get quite a bit further to have
+the necessary resources... but if we reach <u>375% funding</u>, then we'll do it!
+We're not promising to charge every battery under the sun, but we'll provide
+charging for at least one popular configuration.</p>
+
+<p>If we make it to <u>430% funded</u> we'll offer <b>The HackCam</b>, a Model A Pi, a
+camera module, wifi and a MoPi, wrapped up in a water-resistant box with a 3
+inch screen and the switching to make it work in the way you'd expect. The
+pictures are served directly to the web by an Apache running on the Pi, and
+with everything open source (of course) you can tweak the photographic
+parameters to your heart's content. A camera you can log in to!</p>
+
+<p>Some applications would benefit from the addition of a
+<b>voltage boost</b>, e.g. when you've got a small surface area of photo-voltaic
+(solar) panel and want to trickle charge a backup battery. If we reach <u>590%
+funding</u> we'll add a buck booster to cater for these applications.</p>
+
+<p>Finally (for now!) if we get to <u>999% funding</u> we'll offer <b>The Pablet</b>,
+combining MoPi with this
+<a class="cow-url" href="http://shop.pimoroni.com/products/pitft-pibow">touchscreen and case rig</a>.
+We'll mod the case to add a couple of PP3 clips, and an external power switch.
+Hey presto! a Pi-based &quot;tablet&quot;!</p>
+
+<p>(And if we reach 4000% Lubo says we can attach a rocket to it, though I'm a
+little suspicious that he's not totally sincere on that one.)</p>
+</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h1 class="cow-heading"><em>Set your Pi free!</em></h1>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+</section>
+
+</div>
+<div id="middleColumn" class="yui3-u-1-5"> <!-- column 2 -->
+<div class="midColContent">
+  <a class="article-thumb" href="/images/articles/ks1.jpg"><img
+    src="/images/articles/thumbs/ks1.jpg"
+    height="75" width="75" alt="ks1"></a>
+ <span class="article-summary"><em>Hot-swap Mobile Power for the Pi</em>.</span> 
+<br/> <br/>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'pi-gate'; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<!-- __CONTENTS__ -->
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Pi to Go!</a></li>
+<li>&nbsp;&nbsp;<a href="#section-1.1.">1.1. I Want One!</a></li>
+<li><a href="#section-2.">2. The Story So Far</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.1.">2.1. The Perfect Pack</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.2.">2.2. The Prototypes</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.3.">2.3. A Longer-Lasting Snack</a></li>
+<li><a href="#section-3.">3. The Future: Development Schedule</a></li>
+<li>&nbsp;&nbsp;<a href="#section-3.1.">3.1. Power to the People</a></li>
+<li>&nbsp;&nbsp;<a href="#section-3.2.">3.2. Experimenter Kits for Schools and Outdoor Adventurers</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-3.2.1.">3.2.1. Outdoor Adventure Kit</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-3.2.2.">3.2.2. Outdoor Experimenter Kit (Light)</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-3.2.3.">3.2.3. Outdoor Experimenter Kit (Light and Air)</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-3.2.4.">3.2.4. How Kickstarter Will Help</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-3.2.5.">3.2.5. Production and Fulfillment Plan</a></li>
+<li><a href="#section-4.">4. How MoPi Works</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.1.">4.1. Monitoring</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-4.1.1.">4.1.1. SimBaMon: a Simple Battery Monitor daemon</a></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section-4.1.1.1.">4.1.1.1. Installing SimBaMon</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.2.">4.2. The Hardware</a></li>
+<li><a href="#section-5.">5. Stretch Goals</a></li>
+</ul></p></div>
+  <section id="extras" class="body">
+  </section><!-- /#extras -->
+
+
+  </div>
+</div>
+
+  </div> <!-- #mainContent -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
+          1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
+        <a href="https://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
+        <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/pages/ks1.html">Print</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+        alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+          alt="The University of Sheffield" height="70" width="165"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

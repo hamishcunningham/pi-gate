@@ -1,0 +1,1266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pi GATE — Sheffield Pi-Tronics</title><link>/</link><description></description><atom:link href="https://pi.gate.ac.uk/feeds/fred-sonnenwald.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 03 Aug 2014 00:00:00 +0100</lastBuildDate><item><title>Solar MoPi</title><link>/posts/2014/08/03/solar-mopi/</link><description>
+
+&lt;p&gt;In some of the sunny days we've had this summer, we've managed to try out
+hooking up Solar Panels as one of the power inputs to MoPi. The results are
+pretty good. A fairly decent panel setup can power even the Model B
+completely. In lower light levels or with less powerful panels, they can help
+increase battery life. We managed up to 19 hours with a Model B and 8 AAs by
+shutting down overnight:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/graphs/solar/mopisolar.2.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;That's pretty good. Those spikes are when the panels overpower the batteries
+completely. The next step is to work out how to charge in those conditions.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html#solar"&gt;Read more in the main article!&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+
+
+
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fred Sonnenwald</dc:creator><pubDate>Sun, 03 Aug 2014 00:00:00 +0100</pubDate><guid>tag:,2014-08-03:posts/2014/08/03/solar-mopi/</guid><category>kickstarter</category><category>batteries</category><category>solar</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category><category>batteries</category></item><item><title>AA battery life with the Model A and Model B</title><link>/posts/2014/07/27/battery-life/</link><description>
+
+&lt;p&gt;We've conducted some tests to help people get a feel for how long AA batteries
+should power a Rasberry Pi in a variety of configurations when using MoPi. We
+don't have results from &lt;a class="cow-non-existant-url" href="/posts/2014/07/15/model-b-plus/"&gt;the B+ yet&lt;/a&gt;, but
+that's coming soon...&lt;/p&gt;
+
+&lt;p&gt;For now though, the best case scenario? &lt;b&gt;50 hours&lt;/b&gt; using the Model A with 16
+AAs!&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/graphs/mopia2.16fresh.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;That's best case, of course, with the Pi not doing anything much, but it does
+illustrate the potential.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html#detailed-testing"&gt;Read more in the main article!&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+
+
+
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fred Sonnenwald</dc:creator><pubDate>Sun, 27 Jul 2014 00:00:00 +0100</pubDate><guid>tag:,2014-07-27:posts/2014/07/27/battery-life/</guid><category>kickstarter</category><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category><category>batteries</category></item><item><title>The AirPi Software</title><link>/posts/2014/04/21/airpisoftware/</link><description>
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+
+
+&lt;p&gt;OK, it's been a while. For those that don't remember, the &lt;a class="cow-url" href="http://airpi.es/"&gt;AirPi&lt;/a&gt; is a low-cost weather station add-on project for the Raspberry Pi. I've
+previously written about &lt;a class="cow-non-existant-url" href="/posts/2014/02/07/airpi1/"&gt;building it from
+scratch&lt;/a&gt;, &lt;a class="cow-non-existant-url" href="/posts/2014/02/14/airpiupdate/"&gt;soldering it up&lt;/a&gt;, and then most
+recently &lt;a class="cow-non-existant-url" href="/posts/2014/02/25/airpisensors/"&gt;interpreting sensor readings&lt;/a&gt;.
+Since then I've been working on making those readings more accessible.&lt;/p&gt;
+
+&lt;p&gt;That's the beauty of open source software and projects really. Tom Hartley (the
+AirPi guy) posted their software on &lt;a class="cow-url" href="https://github.com/tomhartley/AirPi"&gt;GitHub&lt;/a&gt;, an open software source code repository. I
+&lt;a class="cow-url" href="https://github.com/guruthree/AirPi"&gt;forked it&lt;/a&gt;, or created a copy of the
+code, to make my own modifications. After two months of on and off again
+changes and testing, I feel it's about as done as it's going to get.&lt;/p&gt;
+
+&lt;p&gt;My goal here is to introduce everyone to what I think are the really nifty
+things I've added in. I've fixed a few bugs in the original code as I've found
+them. I've also then fixed the bugs I introduced myself in the new code, but we
+can gloss over them... The big fix I think is the high CPU load the software
+had, which only needed the addition of a simple &lt;tt&gt;time.sleep()&lt;/tt&gt; to make it more
+reasonable.&lt;/p&gt;
+
+&lt;p&gt;The first of the new features is &lt;b&gt;Raingauge Support&lt;/b&gt;. Previously I
+&lt;a class="cow-non-existant-url" href="/posts/2014/01/25/raingauge/"&gt;looked at them&lt;/a&gt;, and now I've translated the
+logging code I wrote there and applied it to the AirPi framework. We've just
+gotten even more weather-station-esqe. Just connect the raingauge to GPIO pin
+17 and ground. In a similar vein I also added back in support for the &lt;b&gt;TGS-2600
+Air Quality Sensor&lt;/b&gt; and the &lt;b&gt;UVI-01 Ultra Violet Sensor&lt;/b&gt;. This was all pretty
+trivial still. This was all mostly just extensions of what was already there.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/software/raingauge2.jpg"&gt;&lt;img class="cow-img" src="/images/environment/software/raingauge2_thumb.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;The raingauge connection...&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;On to more exciting things! Last time I more or less pointed out that a chunk
+of the sensor readings were uncalibrated. Not anymore! There's now a module
+that let's the software output calibrated readings. &amp;quot;What's the use?&amp;quot; you
+might say? Ah well, for starters I also added a CSV output module. The AirPi
+is now compatible with industry standard file formats... also known as a
+(comma separated value) spreadsheet. It get's better than that though:&lt;/p&gt;
+
+&lt;p&gt;... (wait for it) ... The Crown Jewels:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/software/webinterface.png"&gt;&lt;img class="cow-img" src="/images/environment/software/webinterface_small.png"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead of uploading to Xively, which requires Internet access and relies on a
+third-party service, I've &lt;b&gt;built in an HTTP server&lt;/b&gt;. Starting the AirPi
+software with this module enabled starts the Pi listening on port 8080
+for HTTP requests. Going there loads up a pretty, but fast site that's based
+on &lt;a class="cow-url" href="http://getbootstrap.com/"&gt;Twitter Bootstrap&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;But wait! There's more!&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/software/webinterface2.png"&gt;&lt;img class="cow-img" src="/images/environment/software/webinterface2_thumb.png"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Not only can you see the current reading, you can also view graphs.
+Interactively explore what the weather's been doing over the last 24 hours
+with the click of a button. This is of course customizable. You could show the
+last hour or the last 2 weeks, but longer periods require more free memory and
+will load a bit slower. Check out our &lt;b&gt;&lt;a class="cow-url" href="/pages/airpi-files/airpi_demo/"&gt;interactive demo site&lt;/a&gt;&lt;/b&gt;. It's not a real Pi there for reasons of my router
+being unhappy, but it behaves just like the real thing. Open the drop down to
+bring up a graph. Select an area on a graph to zoom.&lt;/p&gt;
+
+&lt;p&gt;Sharp eyed observes will have also noticed the RSS feed icon in the upper right
+hand corner. This is to allow for easy export of results to other software. I
+suspect minimal modifications will allow
+&lt;a class="cow-url" href="https://github.com/uduncanu/AirPi/commit/9e13c3ab0e902d563a78e98addc7aac6eda5a35e"&gt;this JSON output&lt;/a&gt; module to be served over HTTP for easy export as well.&lt;/p&gt;
+
+&lt;p&gt;The reason I was after RSS? How many people have heard of
+&lt;a class="cow-url" href="http://conky.sourceforge.net/"&gt;Conky&lt;/a&gt;? It's a system monitor applet that
+displays system information on the screen in a corner of the desktop. It's a
+bit like the gadgets of Windows Vista/7 or OS X dashboard widgets. Well,
+anyway Conky, like gadgets or widgets, supports RSS feeds.&lt;/p&gt;
+
+&lt;pre&gt;=== ${rss http://airpi:8080/rss.xml 10 feed_title} ===
+${rss http://airpi:8080/rss.xml 10 item_title 0}: ${rss http://airpi:8080/rss.xml 10 item_desc 0}
+${rss http://airpi:8080/rss.xml 10 item_title 1}: ${rss http://airpi:8080/rss.xml 10 item_desc 1}
+${rss http://airpi:8080/rss.xml 10 item_title 2}: ${rss http://airpi:8080/rss.xml 10 item_desc 2}
+${rss http://airpi:8080/rss.xml 10 item_title 3}: ${rss http://airpi:8080/rss.xml 10 item_desc 3}
+${rss http://airpi:8080/rss.xml 10 item_title 4}: ${rss http://airpi:8080/rss.xml 10 item_desc 4}
+${rss http://airpi:8080/rss.xml 10 item_title 5}:
+  ${rss http://airpi:8080/rss.xml 10 item_desc 5}
+${rss http://airpi:8080/rss.xml 10 item_title 6}: ${rss http://airpi:8080/rss.xml 10 item_desc 6}
+${rss http://airpi:8080/rss.xml 10 item_title 7}: ${rss http://airpi:8080/rss.xml 10 item_desc 7}&lt;/pre&gt;
+
+&lt;p&gt;Adding the above bit of config to the end of my &lt;tt&gt;.conkyrc&lt;/tt&gt; file gives me this
+(below) in the upper right corner of my desktop. The weather on my terms. Just
+what an AirPi should do.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/software/conky.png"&gt;&lt;/p&gt;
+
+
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fred Sonnenwald</dc:creator><pubDate>Mon, 21 Apr 2014 00:00:00 +0100</pubDate><guid>tag:,2014-04-21:posts/2014/04/21/airpisoftware/</guid><category>airpi</category><category>hardware</category><category>pi-tronics</category><category>environmental</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Interpreting AirPi Sensor Readings</title><link>/posts/2014/02/25/airpisensors/</link><description>
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+
+
+&lt;p&gt;For a few posts now I've been talking about the &lt;a class="cow-url" href="http://airpi.es/"&gt;AirPi&lt;/a&gt;, an
+environmental monitoring platform for the RaspberryPi. At the end of
+&lt;a class="cow-non-existant-url" href="/posts/2014/02/07/airpi1/"&gt;these&lt;/a&gt;&lt;a class="cow-non-existant-url" href="/posts/2014/02/14/airpiupdate/"&gt;two&lt;/a&gt;
+posts, I made the point that while it's great that I've got output from the
+AirPi it doesn't mean much if I don't know what it means. Today I'll be going
+through the output (below) and looking at the sensor specs in more details to
+get an idea of what the numbers mean. Apologies for a potentially boring very
+texty post.&lt;/p&gt;
+
+&lt;pre&gt;Temp-DHT:       26.1 C
+Humidity:       35.7 %
+Air Quality:    16920.56
+Light Level:    4.91 Lux
+UV Level:       0.48 UVI
+Temp-BMP:       25.6 C
+Pressure:       97912.6 Pa
+&lt;/pre&gt;
+
+&lt;pre&gt;Time: 2014-02-11 20:37:56.611572
+Temperature: 32.4 C
+Pressure: 977.71 hPa
+Relative_Humidity: 25.7000007629 %
+Light_Level: 7698.96193772 Ohms
+Nitrogen_Dioxide: 7607.57314974 Ohms
+Carbon_Monoxide: 301176.470588 Ohms
+Volume: 90.3225806452 mV
+Uploaded successfully&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;b&gt;The DHT22 (humidity)&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the combined temperature moisture probe. It's an
+&lt;a class="cow-url" href="https://www.adafruit.com/products/385"&gt;Adafruit&lt;/a&gt; special, which means I can
+start there for learning more. &lt;a class="cow-url" href="/pages/airpi-files/DHT22.pdf"&gt;The datasheet&lt;/a&gt; is of course
+another good source. The two important bits from the Adafruit page are these
+two pieces of information:&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Good for 0-100% humidity readings with 2-5% accuracy&lt;/li&gt;
+&lt;li&gt;Good for -40 to 80&amp;deg;C temperature readings &amp;plusmn;0.5&amp;deg;C accuracy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/blockquote&gt;&lt;/p&gt;
+
+&lt;p&gt;A responses range of 0% to 100% humidity means that it's OK to put a DHT22
+pretty much anyplace other than a rainforest. A rainforest, and anyplace else
+extraordinarily wet is a no go because checking the datasheet that's 100%
+&lt;em&gt;Relative Humidity&lt;/em&gt; (RH). (See &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Humidity"&gt;this&lt;/a&gt; for a
+bit more about humidity. Effectively once the air is super-saturated for the
+temperature we're over 100% RH and so the sensor won't be very happy.&lt;/p&gt;
+
+&lt;p&gt;Some good news is that the data sheet says this:&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Calibrated digital signal&lt;/li&gt;
+&lt;li&gt;Fully interchangeable&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/blockquote&gt;&lt;/p&gt;
+
+&lt;p&gt;Nominally then every sensor is identical and should give the same reading given
+identical conditions. In practice this is very rarely the case. We know this
+for sure given the &amp;quot;2-5&lt;span class="cow-escape"&gt;%&lt;/span&gt;&amp;quot; accuracy claim. Reading the datasheet again, this
+comes across as typically &amp;plusmn;2% accuracy, with a maximum of &amp;plusmn;5%. In most cases
+then the reading should be fairly accurate. Because the sensor is digital,
+there's also no need to take into account anything in the circuit, so we don't
+need to do anything to the values produced by the software.&lt;/p&gt;
+
+&lt;p&gt;The sensor resolution is tenths of a percent (see the 35.7% of above). Based
+on &amp;plusmn;2% accuracy, this number could be anywhere from 33.7% to 37.7% RH.
+Hopefully sensor error falls along a normal distribution, meaning that if we
+collect data on trends over time, something like a moving average will give a
+more accurate reading by averaging out the effect of errors. The moral here is
+don't be lulled by that extra 0.1% humidity, that on its own won't make a
+difference.&lt;/p&gt;
+
+&lt;p&gt;Repeatability is another factor to consider, independent of accuracy. The
+datasheet says &amp;plusmn;1%, which means sequential readings given identical conditions
+will still vary some. Then there's long term repeatability. &amp;quot;Long-term
+stability&amp;quot; is in the datasheet as &amp;plusmn;0.5% a year, so given identical conditions
+today and a year later, there could be a slight difference in RH, no matter
+what. There's also something called
+&lt;a class="cow-url" href="http://zone.ni.com/devzone/cda/ph/p/id/227#toc7"&gt;hysteresis&lt;/a&gt;, which is &amp;plusmn;0.3%.
+This one's a bit tricky to explain. If the humidity was rising, the reading of
+35.7% could have a different meaning than if the humidity was falling. In
+either case the value could have been anywhere from 35.4% to 36.0%.&lt;/p&gt;
+
+&lt;p&gt;You may wonder what's the point of having a sensor resolution of 0.1% RH if the
+accuracy means it could practically be any old value. Imagine if you had 10 of
+these, all measuring. That extra resolution could be used to narrow down what
+the humidity was if you looked for a value that fell into the range of all the
+accuracy windows of all the sensors. Plus it's not impossible that an increase
+in humidity of 0.1% wouldn't be detected, you just need to take it with a grain
+of salt.&lt;/p&gt;
+
+&lt;p&gt;Considering the temperature side of the DHT22 some more, the accuracy,
+resolution, and repeatability are all much better at &amp;plusmn;0.2&amp;deg;C, 0.1&amp;deg;C, and &amp;plusmn;0.2&amp;deg;C
+according to the datasheet. I'm not quite sure where Adafruit got &amp;plusmn;0.5&amp;deg;C, but
+I'm inclined to go with the datasheet. There's no stability or hysteresis
+listed, so it looks like the temperature readings should be fairly accurate and
+consistent over time.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;b&gt;The TGS2600&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the combined Air Quality sensor. It's analogue so it goes through the
+AirPi's Analogue-to-Digital Converter (ADC). We need to understand a bit more
+about the electronics and AirPi software this time to understand what the value
+of &amp;quot;16920.56&amp;quot; means. Looking through the data sheet gives us this formula:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/tgs2600/formula.png" alt="Rs = (Vc x Rl)/Vout - Rl" width="192" height="58"&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;em&gt;Rs&lt;/em&gt; is sensor resistance, Vc is sensor input voltage, &lt;em&gt;Rl&lt;/em&gt; is load
+resistance, and &lt;em&gt;Vout&lt;/em&gt; is measured sensor voltage. Looking through the
+&lt;a class="cow-url" href="https://github.com/tomhartley/AirPi/blob/non-modular/interfaces/MCP3008/AQSensor.py#L19"&gt;AirPi code&lt;/a&gt;, we see this:&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class="prettyprint lang-python"&gt;
+resistance = (vin/result - 1)*self.pullup
+&lt;/pre&gt;You may notice that if you multiply &lt;tt&gt;self.pullup&lt;/tt&gt; inside the brackets you end
+up with the formula for the datasheet. You find if you follow the variables in
+the code and do comparisons of the AirPi circuit diagram and the &amp;quot;Basic
+Measuring Circuit&amp;quot; diagram in the datasheet, that we're looking at the same
+things. So that value of 16920.56 is the &lt;em&gt;Rs&lt;/em&gt; value, or the resistance across
+the TGS2600 sensor.&lt;/p&gt;
+
+&lt;p&gt;The next question then now that we know exactly what 16920 is, is what does it
+mean? For that we have to know what the TGS2600 is sensitive to. It says right
+at the top of the datasheet &amp;quot;for the detection of Air Contaminants&amp;quot; but we can
+be a bit more precise than that. They specifically list sensitivity to methane,
+carbon monoxide (CO), iso-butane, ethanol, and hydrogen. Of course how they do
+this is a bit round about. They do it by showing this graph:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/tgs2600/sensitivity_characteristics.png" alt="TGS2600 Sensitivity Characteristics"&gt;&lt;/p&gt;
+
+&lt;p&gt;This shows a link between the concentration of the different chemicals in
+parts-per-million (ppm)&amp;mdash;ppm can be thought of like percent, except for one in
+one million rather than one in one hundred. It gives us this information in
+relation to &amp;quot;&lt;em&gt;Rs/Ro&lt;/em&gt;&amp;quot;, which is the ratio of sensor resistance, which is what
+the AirPi actually measures to &amp;quot;sensor resistance in fresh air&amp;quot;. Which is
+unfortunate. This tells us the sensor really needs calibration with fresh air
+before we have a meaningful reading. How else do we know what the resistance
+in fresh air is? And even then, we still don't know what gas has caused the
+quality to drop. 50 ppm of CO or 4 ppm of iso-butane?&lt;/p&gt;
+
+&lt;p&gt;But wait! There's more! Next to the graph on sensitivity characteristics
+there's this beauty:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/tgs2600/temperature_characteristics.png" alt="TGS2600 Temperature/Humidity Dependency"&gt;&lt;/p&gt;
+
+&lt;p&gt;So not only does the sensor react to air quality, but humidity and temperature
+as well. This actually isn't that uncommon, but means a correction factor needs
+to be applied to each reading. Happily the DHT22 can be used to work this out.
+Say it's 30&amp;deg; out at 50% RH. We read across the x-axis, then interpolate halfway
+between the 65% and 35% lines to tell us that in fresh air &lt;em&gt;Rs/Ro&lt;/em&gt; would read
+just over 0.9, so call it 0.91. We need to divide the &lt;em&gt;Rs&lt;/em&gt; reading by this
+value to correct it to what it would be at the standard 20&amp;deg;C 65% RH they used
+for the sensitivity graph.&lt;/p&gt;
+
+&lt;p&gt;The need for calibration and taking into account temperature and humidity is
+discouraging, but the sensor can still give useful information. Someone using
+the data from it simply needs to be aware of these things so that he doesn't
+draw incorrect conclusions. For example at the very least the temperature and
+humidity corrections should be applied. The fresh air calibration probably
+isn't really necessary given that you don't know what gas is affecting it. I
+suspect though that it can be worked out approximately by looking at a long
+data series that has been corrected for temperature and humidity. The peak &lt;em&gt;Rs&lt;/em&gt;
+value measured is probably the &amp;quot;fresh air&amp;quot; quality, or a &amp;quot;close enough&amp;quot; guess.&lt;/p&gt;
+
+&lt;p&gt;You may notice that I haven't said anything about accuracy for the TGS2600.
+That's because the datasheet doesn't say much about it other than 10 ppm H2
+(that's hydrogen). The DHT22 also had an on-board analog to digital conversion
+that in this case is being handled by the ADC, which I think has a high enough
+resolution that's it's a non-issue. All things considered I suspect that the
+ultimate lack of reliable calibration means that accuracy is a non-issue. Just
+take the reading with a grain of salt and remember to correct for temperature
+and humidity.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;b&gt;The Light-Dependent Resistor (LDR), GL5528&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;This one, I have to admit before actually looking into it, I thought was going
+to be meaningless. Mostly because I remember playing with an LDR when I was
+about 8 to turn lights on and off in the dark of my closet. Because of that I
+just could not see how you could use an LDR to get to a Lux reading.
+(&lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Lux"&gt;Lux&lt;/a&gt; is the standard light measure, the
+same way that meters are for distance.) However, looking at the
+&lt;a class="cow-url" href="/pages/airpi-files/PD0001.pdf"&gt;GL5528 datasheet&lt;/a&gt; I was surprised to find that there
+actually is a proper relationship between resistance and lux, or illuminance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/ldr/graph.png" alt="GL5528 luminance vs
+photo-resistance"&gt;&lt;/p&gt;
+
+&lt;p&gt;On a &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Log-log_plot"&gt;log-log graph&lt;/a&gt;, there's an
+approximately linear relationship between the two which means that if we
+calculate the resistance of the LDR, we can estimate the lux fairly reliably.
+I use qualitatives like &amp;quot;approximately&amp;quot; and &amp;quot;fairly&amp;quot; because there's that gray
+region on the graph&amp;mdash;the relation can be anywhere in there. That's quite the
+potential error in there, and the darker it is the greater that uncertainty is
+due to the log-log scale. We can still approximate things though and hope for
+the best.&lt;/p&gt;
+
+&lt;p&gt;Now how to do that approximation. Looking in the
+&lt;a class="cow-url" href="https://github.com/tomhartley/AirPi/blob/non-modular/interfaces/MCP3008/LightSensor.py#L14"&gt;AirPi code&lt;/a&gt; I downloaded that matches the directions:&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class="prettyprint lang-python"&gt;
+rs = ((3.3 - vout) / vout) * 5.6
+&lt;/pre&gt;To which I say, &amp;quot;what?&amp;quot;, because that's the code that produces the lux number
+of &amp;quot;4.91 Lux&amp;quot; I posted above. I believe that's just plain wrong, because
+there's two things wrong here. There's nothing taking into account the pull-up
+resistor of 2.2K&amp;Omega; for starters. The 5.6 I could imagine to be a calibration
+co-efficient, and I suppose that nominally it could take into account that 
+resistor, but then what takes care of the log-log relation ship? I'd expect to
+see either an &lt;tt&gt;ln()&lt;/tt&gt; or an &lt;tt&gt;exp()&lt;/tt&gt; because of that. It could simplify all of
+that in as I haven't worked through the math there yet, but for the same reason
+a teacher doesn't like it when you don't show your work, I'm confused. So I set
+out to work out what's going on.&lt;/p&gt;
+
+&lt;p&gt;The first thing I do is check the code that goes with the updated hardware
+revision and
+&lt;a class="cow-url" href="https://github.com/tomhartley/AirPi/blob/master/sensors/analogue.py#L41"&gt;see this&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class="prettyprint lang-python"&gt;
+resOut = self.pullUp/((vin/vout)-1)
+&lt;/pre&gt;Ah ha. This looks better, more like what we say for the TGS2600 above when we
+were calculating resistance, except in this case it's a one-over (as in one
+divided by) relation. This makes sense because it's a pull-up instead of a
+pull-down situation (vin and vout are reversed). On a side note, this sort
+of calculation is called a &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Voltage_divider"&gt;voltage divider&lt;/a&gt;. Anyway, when the new software says &amp;quot;7698.96193772 Ohms&amp;quot; for
+the light sensor that's exactly what it is. It still needs to be converted to
+lux, but at least it's clearer that this is the case.&lt;/p&gt;
+
+&lt;p&gt;The conversion should therefore be pretty straightforward (once the wacky math
+on the older software is reversed and the correct resistance value obtained).
+It is too, after wrapping one's head around the log-log. Fortunately the fact
+that it's log-log works for us, making it easier to deal with. Essentially we
+can treat it as a regular linear plot of &lt;em&gt;y = mx + b&lt;/em&gt;, but replacing &lt;em&gt;y&lt;/em&gt; and
+&lt;em&gt;x&lt;/em&gt; with &lt;tt&gt;ln(&lt;/tt&gt;&lt;em&gt;y&lt;/em&gt;&lt;tt&gt;)&lt;/tt&gt; and &lt;tt&gt;ln(&lt;/tt&gt;&lt;em&gt;x&lt;/em&gt;&lt;tt&gt;)&lt;/tt&gt; (natural logarithms). At which point it's
+only a minor nuisance to fire up Matlab (or Octave) and use &lt;tt&gt;polyfit()&lt;/tt&gt; to work
+out a linear regression after reading some values off the graph:&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class="prettyprint lang-octave"&gt;
+&amp;gt;&amp;gt; polyfit(log([1 2 100]), log([60 40 2.8]), 1)
+
+ans =
+
+   -0.6704    4.1215
+
+&lt;/pre&gt;Plug that into &lt;em&gt;y = mx + b&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/ldr/luxformula1.png" alt="ln(Rs/1000) = -0.6704ln(lux)+4.125" width="418" height="65"&gt;&lt;/p&gt;
+
+&lt;p&gt;Apply some algebra and rearrange to solve for the lux value given resistance:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/ldr/luxformula2.png" alt="lux = e^a, a = (ln(Rs/1000)-4.125)/-0.6704" width="391" height="80"&gt;&lt;/p&gt;
+
+&lt;p&gt;Viola! This should give me a value that I'm confident reflects reality
+somewhat. (&lt;em&gt;Rs&lt;/em&gt; is divided by 1000 because the y-axis of the graph above has K&amp;Omega;
+for the units.) I've undoubtedly introduced some error by reading off values
+from the graph, but this could be compensated for by adding more values. I
+suspect that won't have much of an impact though. Overall I wouldn't use this
+or the LDR for life or death situations, but it's close enough. Keep in mind
+that if your LDR isn't a 5528 then the function above probably won't be 
+correct anymore and should be recalculated off the appropriate datasheet.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;b&gt;UV sensor UVI-01&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;Really, I think this is one of the coolest bits of the AirPi and I think it's a
+shame it's missing from the newer hardware revision. I suppose I can see why
+you might replace it with a microphone, but really, UV. How awesome? A measure
+of direct sunlight intensity. Potentially something there in calculating
+evapo-transpiration, a key part of catchment models. (So that you know how much
+rain water can be sucked into the ground!) Also used for working out how much
+to water crops.&lt;/p&gt;
+
+&lt;p&gt;Right, the sensor. I have no idea electrically how this thing that looks like
+an LED is an LED in reverse, but the rest of it makes some sort of sense. It
+had better given that last time I spent a good while working out that I plugged
+it in backwards. What that means though is that when I see
+&lt;a class="cow-url" href="https://github.com/tomhartley/AirPi/blob/non-modular/interfaces/MCP3008/LightSensor.py#L17"&gt;this&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class="prettyprint lang-python"&gt;
+sensorVoltage = vout / 471
+millivolts = sensorVoltage * 1000
+UVI = millivolts * (5.25/20)
+&lt;/pre&gt;It actually makes sense. Why divide by 471? That's because that's the ratio
+of the two resistors around the CA314 op-amp. According to 
+&lt;a class="cow-url" href="http://airpi.es/step2.php"&gt;the directions&lt;/a&gt; you're supposed to use a 10K&amp;Omega; and
+a 4.7M&amp;Omega; for R1 and R2 respectively, that's a ratio of 470, or the amplification
+ratio. It's specifically that ratio that's important so you could essentially
+use anything in the 1K&amp;Omega; to 30K&amp;Omega; range for R1 as long as R2 was 470 times
+greater. Can't make 470 times? Edit that line of code with the 471 divider. (I
+used 1K&amp;Omega; and 470K&amp;Omega;, because the Maplin resistor kit doesn't go over 1M&amp;Omega;.)&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/airpi/op-amp circuit.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;Then why multiply by 1000? That's to get the reading in mV. Because unlike the
+previous sensors, which measure by resistance, the UVI-01 is a direct voltage
+reading. Which is why the third line of code there is a multiplication by a
+factor. That's a factory standard calibration. You can see it in the following
+graph from the &lt;a class="cow-url" href="/pages/airpi-files/UVI-01-E.pdf"&gt;datasheet&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/sensors/uv/uv.png"&gt;&lt;img class="cow-img" src="/images/environment/sensors/uv/uv_small.png"&gt;&lt;/a&gt;
+&lt;em&gt;Click for a graph you can actually read...&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;There are four very linear lines, for 0.5M&amp;Omega;, 1M&amp;Omega;, 2M&amp;Omega;, and 3M&amp;Omega;, resistor put in
+parallel with the UVI-01. The AirPi directions follow the factory
+recommendation and use a 1M&amp;Omega; resistor. It's just a matter of reading off the
+purple lines to get the 5.25 and 20 as the slope of the line, it's very
+convenient as there's no y-intercept. Just read over and down from the 20.00,
+and there we have it. A very nice, easy sensor to read with what appears to be
+a fairly reliable direct reading of
+&lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Ultraviolet_index"&gt;UV Index&lt;/a&gt;, or UVI.&lt;/p&gt;
+
+&lt;p&gt;There's just one caveat&amp;mdash;&amp;quot;Inaccuracy: 15&lt;span class="cow-escape"&gt;%&lt;/span&gt;&amp;quot;. So given higher levels of UV, i.e.,
+when it's more critical, the accuracy goes down. At least, that's how I read
+it. So on normal day with a UVI of 5, it could be somewhere between 4.25 and
+5.75. That window gets bigger at higher readings. Although to be fair, if we
+actually look at the scale on that nice Wikipedia link, at higher values of
+UVI, we'd be roasting to a crisp anyway, no matter the accuracy. &lt;/p&gt;
+
+&lt;p&gt;Simply knowing the UVI value is up there is enough. Given we know about the
+inaccuracy though we can stick some error bars on there and be informed. It's
+still probably more reliable than a TGS2600 or an LDR because it doesn't
+require a specific calibration. Full steam ahead for knowing when you need
+sunblock!&lt;/p&gt;
+
+
+&lt;p&gt;&lt;b&gt;BMP085 pressure sensor&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;Another &lt;a class="cow-url" href="https://www.adafruit.com/products/391"&gt;Adafruit favorite&lt;/a&gt;. I
+immediately like it for &lt;a class="cow-url" href="/pages/airpi-files/BMP085_DataSheet_Rev.1.0_01July2008.pdf"&gt;another reason&lt;/a&gt;: &amp;quot;Fully calibrated&amp;quot;. What they do is they run a calibration of
+the sensor in the factory and burn the calibration co-efficients into the chip.
+When the AirPi software reads the value off the pressure transducer, it then
+applies this in-built calibration. We can therefore be reasonably confident in
+the value being obtained.&lt;/p&gt;
+
+&lt;p&gt;Provided we're aware of the inherent sensor accuracy and resolution. In this
+case the datasheet says typically &amp;plusmn;1.0 hPa with a maximum of &amp;plusmn;2.5 hPa for
+pressure between 700 and 1100 hPa between 0&amp;deg;C and 60&amp;deg;C. This gets a bit worse
+at even lower pressures (300 to 700 hPa a maximum of &amp;plusmn;3.0 hPa) and temperatures
+(300 to 1100 hPa at -20&amp;deg;C to 0&amp;deg;C typically &amp;plusmn;1.5 hPa  and a maximum of &amp;plusmn;4.0
+hPa). For the temperature readings that the BMP085 takes we're looking at
+typically &amp;plusmn;0.5&amp;deg;C with a maximum of &amp;plusmn;1.5&amp;deg;C. (This is a little bit worse than the
+DHT22.)&lt;/p&gt;
+
+&lt;p&gt;The BMP085 also has one other interesting setting, which is oversampling.
+(&amp;quot;mode&amp;quot; in the AirPi software.) The sensor in this case can be told to take
+multiple readings internally and return an average value. Because they're very
+close in time the assumption is that they're effectively the same reading (i.e.
+the pressure won't have changed much) and so averaging will cancel out any
+other effects that would introduce noise into the pressure reading. By default
+the AirPi uses the setting that averages 2 readings. The sensor is capable of
+doing a maximum of 8 readings internally, but there's a penalty in time and
+power consumption for doing this. The latter probably has more impact because
+the software isn't running as quickly as 25 ms resolution (the time for 8
+readings).&lt;/p&gt;
+
+&lt;p&gt;So taking this all into account, the temperature reading won't be so good, but
+the pressure reading should be excellent. Remember that
+&lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Atmospheric_pressure#Standard_atmospheric_pressure"&gt;standard atmospheric pressure&lt;/a&gt; is 1013.25 hPa, which means that &amp;plusmn;1.0 hPa is
+actually &amp;plusmn;0.1%. As pressure gets lower that becomes a slightly higher fraction,
+but even under the worst of conditions (cold weather and low pressure) we're
+still only talking about &amp;plusmn;0.5% error or so. I feel here Bosch lives up to the
+brand name recognition and delivers a good product. It's similar to the feeling
+I got using
+&lt;a class="cow-url" href="http://www.ge-mcs.com/en/pressure-and-level/depth-and-level/ptxpdcr-1830.html"&gt;GE Sensing PDCR 1830 Druck Pressure Sensors&lt;/a&gt; in academic research. (Although
+there it's &amp;plusmn;0.06% error!)&lt;/p&gt;
+
+&lt;p&gt;The next thing is to talk bout how the AirPi software uses the data from the
+sensor. The data sheet suggests two uses and both are implemented in the AirPi
+software. The first is to use the pressure to calculate the altitude. The
+higher up you are the lower the pressure will be and this expresses as an
+exponential function:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/bmp085/pressure_alt.png" alt="altitude = 44330 x (1-(p/p0)^(1/5.255))" width="394" height="76"&gt;&lt;/p&gt;
+
+&lt;p&gt;Here &lt;em&gt;p0&lt;/em&gt; is pressure at sea level, so 1013.25 hPa and &lt;em&gt;p&lt;/em&gt; is the pressure
+reading from the sensor.&lt;/p&gt;
+
+&lt;p&gt;The second use is to calculate the pressure at sea level given a known
+altitude:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/sensors/bmp085/pressure_sea.png" alt="p0 = p / ((1 - altitude/44330)^5.255)" width="247" height="63"&gt;&lt;/p&gt;
+
+&lt;p&gt;It's the second of these which is used by default in the AirPi software,
+assuming an altitude of 35 m above sea level. Sheffield is a hilly place and as
+a result altitude over the area actually varies quite a bit. I think my house
+is a bit higher given that when the AirPi says 98.2 hPa, the barometer on my
+wall reads 97.1 hPa. Which brings me to my point here: I'd rather have the
+pressure reading as is, just like the wall barometer. While the sensor is
+accurate enough to give a precise pressure reading, the readings are really
+only interesting to me for the trends they show. That is to say, to help me
+predict the weather! (Typically low pressure = bad weather, high pressure =
+good weather.)&lt;/p&gt;
+
+
+&lt;p&gt;&lt;b&gt;The rest of the sensors&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;I've only gone through the sensors I have on my AirPi breadboard. I leave the
+remaining microphone, NO and CO meters, as an exercise for the reader. Or
+another later article. What I have here is enough so that in a post or two I
+can look at my data and see what there is to see.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;b&gt;Summary&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two major things of interesting in a monitoring setup like this.
+What's happening now, and what's happened previously. Here's what I think
+everything is best for:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DHT22 Humidity: Trends&lt;/li&gt;
+&lt;li&gt;DHT22 Temperature: Current readings and trends&lt;/li&gt;
+&lt;li&gt;TGS2600: Trends&lt;/li&gt;
+&lt;li&gt;LDR (GL5528): Trends&lt;/li&gt;
+&lt;li&gt;UVI-01: Current readings and trends&lt;/li&gt;
+&lt;li&gt;BMP085 Pressure:  Current readings and trends&lt;/li&gt;
+&lt;li&gt;BMP085 Temperature: Trends&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I suspect that overall what's going to be really exciting is looking at
+magnitude of change over time, rather than looking at specific values. Stay
+tuned to see what my room has been like since I built the AirPi!&lt;/p&gt;
+
+
+&lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"&gt;&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fred Sonnenwald</dc:creator><pubDate>Tue, 25 Feb 2014 00:00:00 +0000</pubDate><guid>tag:,2014-02-25:posts/2014/02/25/airpisensors/</guid><category>airpi</category><category>hardware</category><category>pi-tronics</category><category>environmental</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>AirPi Update - A kit!</title><link>/posts/2014/02/14/airpiupdate/</link><description>
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+
+
+&lt;p&gt;&lt;a class="cow-non-existant-url" href="/posts/2014/02/07/airpi1/"&gt;Last time&lt;/a&gt; I introduced everyone to the
+&lt;a class="cow-url" href="http://airpi.es/"&gt;AirPi&lt;/a&gt;, an open environmental sensor platform. They
+provide a list of components, schematics, and software for you to build a
+rather tiny Pi sized weather station. I went through the process of ordering
+the parts and bread-boarding it up before. They also, however, provide
+everything in a convenient ready-to-solder kit, which is what I'll be writing
+about today.&lt;/p&gt;
+
+&lt;p&gt;Hamish went over to Cambridge for
+&lt;a class="cow-url" href="https://www.facebook.com/cambridgeraspberryjam"&gt;CamJam&lt;/a&gt;, the local
+RaspberryJam they've got over there. He had the chance to meet with some
+interesting folks, including Tom Hartley, one of the AirPi developers. He also
+picked up one of those kits so that I had something new to play with while
+some data records on my breadboard system.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/box.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/box.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;Kitbox&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/boxcontents.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/boxcontents.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;And all the stuff in it&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The first thing to know is that this is AirPi v1.2. This isn't what the
+directions on the site are currently for. This is a newer hardware revision,
+with a slightly different load-out. The primary difference is that the UV sensor
+has been replaced with a microphone. I'm not too sure about this change, but it
+means that the CA314 op-amp has been replaced with a MCP6283.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/pcbtop.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/pcbtop.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;PCB top&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/pcbbottom.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/pcbbottom.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;PCB bottom&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also see there on the PCB spots for two LEDs (LED1 and LED2). These
+aren't new hardware per-say, they just may be new to you. The LEDs are included
+in the assembly directions, I simply didn't include them as I didn't feel the
+need for more blinking lights on the Pi. It's customisable hardware after
+all&amp;mdash;gotta take advantage of that! The AirPi does itself. The kit comes with
+the separate MICS-2710 (NO2) and MICS-5525 (CO) sensors, which I couldn't get
+for my breadboard.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/mostlydone.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/mostlydone.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;Just about everything soldered on&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/mostlydonebottom.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/mostlydonebottom.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;You can see where the board has melted some&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;This took me about an hour and a half to do. The only thing that's not soldered
+yet is the connector for the Pi. I was very involved in actually sorting
+everything out though that I forgot to take more pictures of the process. It's
+like following a set of LEGO directions so from that point of view it's easy.
+The catch is that soldering is sometimes hard. Which, as I've pointed out
+above, has led to me melting the board a little in some places, and odd shaped
+blobs of solder in others.&lt;/p&gt;
+
+&lt;p&gt;You can see on the PCB the empty TGS2600 location, which is fine as it's been
+replaced with the MICS sensors. You can also see one resistor of a different
+color. That's because somehow, probably sometime between the kit being made and
+me getting it, a 330&amp;Omega; resistor was lost. Fortunately my trusty Maplin kit of
+resistors saves the day, but I must say that working out which resistor was
+which was the hardest part of doing this kit. The colors on the printed card
+are hard to distinguish, and it's hard to distinguish them on the resistors
+themselves. Impossible on the tiny little ones, like the 100&amp;Omega; and 100K&amp;Omega;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/done.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/done.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;Done!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/donebottom.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/donebottom.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;And the reverse&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Soldering on the Pi connector was interesting. 26 very tightly spaced little
+contacts that I soldered from the bottom. That side with a huge chunk of
+plastic in the way. Somehow it seemed like a better idea than approaching it
+from the top, but I don't know really. I used a GPIO ribbon cable to work out
+how much the connector on the bottom needed to stick through.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/onapi.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/onapi.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;Sticking it on a pi&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/onapiside.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/onapiside.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;A pretty compact package&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;After putting the AirPi on top of a Pi, I realised that the placing GPIO header
+placing turned out to be near perfect. But due to dumb luck. If I hadn't had
+the GPIO ribbon idea, I would have would up having to re-solder it. You can see
+how darn near it is to there not being enough clearance. Ouch.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/onapiside2.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/onapiside2.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;Eeek! That's close!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;And then to test if it works. It's important to note that the different board
+has a different software version to go with it, this time off of the trunk of
+the &lt;a class="cow-url" href="https://github.com/tomhartley/AirPi"&gt;Git repository&lt;/a&gt;. Configuring is
+easier this time around though as the software matches the hardware perfectly.
+Only two minor configuration changes are necessary. One in sensors.cfg to set
+the correct I2C bus. The other in outputs.cfg to disable Xively as I'm only
+testing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/takingareading.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/takingareading.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;I put it in my half disassembled LEGO case for powering up to test&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It runs perfectly out of the box! You can see the green LED lighting up on a
+reading. Output is shown below. I'm not entirely convinced the temperature is
+correct, but everything else is reasonable, I think... At this point I struggle
+from the same problem as I did last time, which is I still haven't quite worked
+out how to interpret the data. I admit though that this version of the software
+is more honest. Calling it Ohms for an analogue sensor reading without
+calibration is probably the correct way to go.&lt;/p&gt;
+
+&lt;pre&gt;Time: 2014-02-11 20:37:56.611572
+Temperature: 32.4 C
+Pressure: 977.71 hPa
+Relative_Humidity: 25.7000007629 %
+Light_Level: 7698.96193772 Ohms
+Nitrogen_Dioxide: 7607.57314974 Ohms
+Carbon_Monoxide: 301176.470588 Ohms
+Volume: 90.3225806452 mV
+Uploaded successfully&lt;/pre&gt;
+
+&lt;p&gt;I'm not entirely convinced about the utility of the microphone. Maybe an
+indirect measure of wind? All told though a pleasant and funkit to build. The
+difficulty is about average. Some bits to solder are tricky, but nothing's
+impossible, especially if you have some previous experience. This kit has now
+been sent off to Lubo, our electronics specialist, for additional compatibility
+testing with the MoPi. In the meantime I continue to collect data from my
+breadboard prototype to see what I can do with it. Stay tuned for a report!&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi1.2/theend.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi1.2/thumbs/theend.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;The end&lt;/em&gt;&lt;/p&gt;
+
+
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fred Sonnenwald</dc:creator><pubDate>Fri, 14 Feb 2014 00:00:00 +0000</pubDate><guid>tag:,2014-02-14:posts/2014/02/14/airpiupdate/</guid><category>airpi</category><category>hardware</category><category>pi-tronics</category><category>environmental</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Building an AirPi</title><link>/posts/2014/02/07/airpi1/</link><description>
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+
+
+&lt;p&gt;An &lt;a class="cow-url" href="http://airpi.es/"&gt;AirPi&lt;/a&gt; is an open hardware environmental sensor
+platform. Weather and air quality monitoring using low cost components that
+you can order and then assemble yourself. Really it's a pretty neat project.
+What they do is give you a component list and a schematic diagram (and PCB
+layout too, if you're into that) so that you have quite a deal of flexibility
+in what your monitoring station can do. The complete list includes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Air pressure&lt;/li&gt;
+&lt;li&gt;Temperature&lt;/li&gt;
+&lt;li&gt;Humidity&lt;/li&gt;
+&lt;li&gt;Light level&lt;/li&gt;
+&lt;li&gt;UV level&lt;/li&gt;
+&lt;li&gt;General air quality&lt;/li&gt;
+&lt;li&gt;NO2 level&lt;/li&gt;
+&lt;li&gt;CO level&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/airpi/atairpi.jpg"&gt;
+&lt;em&gt;An AirPi promo photo...&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Of course, what you build yourself almost never looks as nice as what the stock
+photo looks like. For starters, I know I haven't got easy access to PCB
+fabrication so I'm going to be building a breadboard AirPi. The first step to
+that is ordering components. On the AirPi site they give a
+&lt;a class="cow-url" href="http://airpi.es/step1.php"&gt;good list&lt;/a&gt; of the components you need to have.
+Most stuff can be ordered easily enough either through places like
+&lt;a class="cow-url" href="http://uk.rs-online.com/"&gt;RS Components&lt;/a&gt; or the rest off of eBay shops.
+Those were my sources, and in the end only one part (the UV sensor) had to come
+from outside the UK. I got a multi-resistor pack and breadboard from Maplin
+rather than eBay as that was a bit easier.&lt;/p&gt;
+
+&lt;p&gt;Keep in mind though that the component list on that page &lt;b&gt;isn't exhaustive&lt;/b&gt;.
+I found out only on reading the assembly directions that a bit more was
+necessary, particularly to use the UV sensor you also need 0.1uF capacitor
+and a CA314 op-amp. The list also doesn't give all the resistors, hence the
+multi-pack from Maplin. There's no specific direction about what LDR (Light
+Dependant Resistor) either. Based off of comments in the forums I ordered
+a pack of GL5528, which have a light resistance of 10K-20K&amp;Omega; and a darkness
+resistance of 1M&amp;Omega;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi/components.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi/components_thumb.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;Here are all the components&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In addition to all the bits above and the breadboard, I ordered an
+&lt;a class="cow-url" href="http://www.ebay.co.uk/itm/111260606543"&gt;Adafruit cobbler clone&lt;/a&gt; and some
+&lt;a class="cow-url" href="http://www.ebay.co.uk/itm/231080275924"&gt;solid core jumper wires&lt;/a&gt; so that I
+could at least do a tidy breadboard. I was unable to order the NO2 or CO
+sensors as the only folks who sell them are in the states and the shipping
+was killer.&lt;/p&gt;
+
+&lt;p&gt;So. On to building! Unfortunately, not all shipping times are equal and I
+wanted to get started playing so my first prototype only has the air quality
+sensor and the light level sensor.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi/prototype1.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi/prototype1_thumb.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;My solid core wires hadn't arrived yet either, so messy!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;When almost everything had arrived, I started to build prototype 2. All I was
+missing was the UV sensor. By the time I finished building though, the sensor
+had arrived and I added it in as well. Working on the breadboard ends up being
+something of a logic puzzle. How do I get things where I want them, using a
+minimum of wire? Without short-circuiting? Or having things stick up? Despite
+already having some practice and familiarity with the circuit from building
+prototype 1, prototype 2 definitely took longer to build. Lots of cross
+checking &lt;a class="cow-url" href="/pages/airpi-files/2600pdf.pdf"&gt;several&lt;/a&gt;
+&lt;a class="cow-url" href="/pages/airpi-files/21295d.pdf"&gt;of&lt;/a&gt;
+&lt;a class="cow-url" href="/pages/airpi-files/DHT22.pdf"&gt;the&lt;/a&gt; &lt;a class="cow-url" href="/pages/airpi-files/fn957.pdf"&gt;different&lt;/a&gt;
+&lt;a class="cow-url" href="/pages/airpi-files/UVI-01-E.pdf"&gt;datasheets&lt;/a&gt;. A digital multi-meter was a
+good friend as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/airpi/prototype2.jpg"&gt;&lt;img class="cow-img" src="/images/environment/airpi/prototype2_thumb.jpg"&gt;&lt;/a&gt;
+&lt;em&gt;Much nicer!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;All things considered the AirPi directions are really quite good. It took so
+long because it's a matter of having confidence that I'd done it right. Combine
+that with the logic puzzle of individual sensor placement. As the directions
+are given on a sensor-by-sensor basis, there's no sense of when you can connect
+things together to make a tidier circuit. The fact that you can jump from the
++5V of the air quality sensor to the +5V of the op-amp is incredibly handy if
+you, like I've done, place them close together on the breadboard, &lt;em&gt;and you
+notice it&lt;/em&gt;. Things like that that take up the time, and then cross-checking it
+to make sure it's right takes up even more.&lt;/p&gt;
+
+&lt;p&gt;Fortunately in the end I only had three real electrical mysteries (aside from
+plugging things in in the wrong spot). The first was that I misinterpreted what
+had to be done with the light level sensor. The directions describe its
+connection in text only and it just confused me. They make sense now though...&lt;/p&gt;
+
+&lt;p&gt;The second issue doesn't really have anything to do with the AirPi. The cobbler
+I've got has GPIO pins 9 and 17 swapped on the PCB labeling, and testing with a
+multimeter they seem to do neither. This is a ground and +3.3V fortunately, but
+connecting the ground on the pressure transducer to what may have been +3.3V
+accidentally... not so good.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/airpi/badpins.png"&gt;
+&lt;em&gt;Backwards! Yikes!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;My third electrical mystery was much more annoying than either of those two.
+The long story short is that I had the UV sensor plugged in backwards. The long
+leg goes to pin 3, and the short leg connects to ground. Unfortunately, to 
+figure out this was the case I had to go and 'debug' the rest of the UV
+circuit. Which is fine in principle, until you realize that before I started
+this I had no idea how an op-amp worked or what it really does. (Yes, the name
+is kind of an indicator, but that really doesn't explain the electronics.)&lt;/p&gt;
+
+&lt;p&gt;Fortunately Chris Gammell has an
+&lt;a class="cow-url" href="http://chrisgammell.com/how-does-an-op-amp-work-part-1/"&gt;excellent
+explanation&lt;/a&gt; that made about 60% sense to me. I'll see if I can summarize my
+understanding... An op-amp takes a voltage level (in this case from the UV
+sensor) and multiplies it (approximately) by the ratio of the resistors between
+it and ground and it and the op-amp output. This is done with a feedback loop
+over the input to output. Sort of. Anyway, the directions mentioning &amp;quot;470 times&amp;quot;
+is referring to this multiplication factor of the sensor output, and is why I
+could use 1K&amp;Omega; and 470K&amp;Omega; resistors instead of the 10K&amp;Omega; and 4.7M&amp;Omega; resistors they
+did.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/airpi/op-amp circuit.png"&gt;
+&lt;em&gt;Roughly what an op-amp does...&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;There are other effects that come into play, I don't really understand all of
+this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;As near as I can tell the multiplication works as the op-amp is really an &lt;span class="cow-escape"&gt;
+&lt;/span&gt;oscillator. The resistor that links the op-amp output and the pin of the &lt;span class="cow-escape"&gt;
+&lt;/span&gt;op-amp that's not attached to whatever it is you want to multiply causes, for &lt;span class="cow-escape"&gt;
+&lt;/span&gt;example, an over-voltage. This triggers a state change to under-voltage. The &lt;span class="cow-escape"&gt;
+&lt;/span&gt;resistor carries this back across which causes over-voltage again. This all &lt;span class="cow-escape"&gt;
+&lt;/span&gt;happens very rapidly (oscillates!) and results in an even voltage thats the &lt;span class="cow-escape"&gt;
+&lt;/span&gt;multiplied output.&lt;/li&gt;
+&lt;/ul&gt;
+
+ &lt;ul&gt;
+ &lt;li&gt;Chris' explanation has the signal being amplified attached to the &lt;span class="cow-escape"&gt;
+&lt;/span&gt;&amp;quot;inverting input&amp;quot; while the AirPi has the UV output connected to the &lt;span class="cow-escape"&gt;
+&lt;/span&gt;&amp;quot;non-inverting input&amp;quot;. I think this has to do with how the UV sensor is a &lt;span class="cow-escape"&gt;
+&lt;/span&gt;diode and we're connecting one end to ground.&lt;/li&gt;
+ &lt;/ul&gt;
+
+ &lt;ul&gt;
+ &lt;li&gt;The capacitor in the circuit (not pictured here) has to do with &lt;span class="cow-escape"&gt;
+&lt;/span&gt;stabilizing the feedback loop because of the response speed of the UV sensor.&lt;/li&gt;
+ &lt;/ul&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The resistor in parallel with the UV sensor ensures a minimum current &lt;span class="cow-escape"&gt;
+&lt;/span&gt;level. The higher that resistor is, the greater the voltage because of &lt;span class="cow-escape"&gt;
+&lt;/span&gt;Ohm's law 1/Rtotal = 1/Ra + 1/Rb. I think this explains that graph on the &lt;span class="cow-escape"&gt;
+&lt;/span&gt;datasheet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This brings me on to the thing I wish most from the AirPi project: &lt;b&gt;an
+explanation of why and how things work&lt;/b&gt;. Right now it's a really nice
+monitoring tool, which you could use to learn about the environment. But it
+could be an electronics teaching tool as well.&lt;/p&gt;
+
+&lt;p&gt;But that's enough boring electronics. On to software! There's a set of
+directions on the AirPi page to get you started. It includes installing all the
+dependencies which is pretty good. I did all of that except for the 'eeml'
+steps - these are for connecting to &lt;a class="cow-url" href="https://xively.com/"&gt;Xively&lt;/a&gt;. This is the
+service AirPi uses for storing and distributing stuff. It looked a bit complex
+for getting started though, which is why I've skipped it.&lt;/p&gt;
+
+&lt;p&gt;Once the dependencies are installed and the AirPi
+&lt;a class="cow-url" href="https://github.com/tomhartley/AirPi.git"&gt;Git Repository&lt;/a&gt; has been cloned, the
+first step is configuring AirPi.cfg. There's a bit more to it than the
+directions let on though. You may need to edit the I2CBus parameter, I had to
+change it to 1 to get it to work with my Model A. The UVI-01 ADCPin is
+incorrect with respect to the assembly directions, it should be 3 not 4. I also
+had to disable the MICS sensors as I don't have these.&lt;/p&gt;
+
+&lt;p&gt;There's also a small bug in Upload.py with regards to the AirQuality pull-up
+resistor. Line 118 should be changed from&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class="prettyprint lang-python"&gt;
+airSensor = AQSensor.AQSensor(adc,AQADC,pullup)
+&lt;/pre&gt;to&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class="prettyprint lang-python"&gt;
+airSensor = AQSensor.AQSensor(adc,AQADC,pullup=pullup)
+&lt;/pre&gt;Since I didn't do the eeml stuff, I also needed to comment out the eeml imports
+at the start of Upload.py. Once that's done though it runs!&lt;/p&gt;
+
+&lt;pre&gt;Temp-DHT:       26.1 C
+Humidity:       35.7 %
+Air Quality:    16920.56
+Light Level:    4.91 Lux
+UV Level:       0.48 UVI
+Temp-BMP:       25.6 C
+Pressure:       97912.6 Pa
+&lt;/pre&gt;
+
+&lt;p&gt;An AirPi built and running! The question is where we go from here? I'm planning
+to now collect data for a bit and see if I can massage it and get something
+neat out of it. What does Air Quality 16920 even mean? I'll want to check the
+calibration of the sensors in general and make sure it's not all nonsense. For
+example, I'll use some thermometers and a barometer to cross check those
+readings.&lt;/p&gt;
+
+&lt;p&gt;I'm also going to look into altering the software. A capability to log and
+display info without going through a third party service would be nice. I know
+the logging should be possible at least! I also just did a blog post about
+&lt;a class="cow-non-existant-url" href="/posts/2014/01/25/raingauge/"&gt;connecting a raingauge&lt;/a&gt; to the Pi. I'm pretty
+certain that can be added into the AirPi setup. Stay tuned!&lt;/p&gt;
+
+
+&lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"&gt;&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fred Sonnenwald</dc:creator><pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate><guid>tag:,2014-02-07:posts/2014/02/07/airpi1/</guid><category>airpi</category><category>hardware</category><category>pi-tronics</category><category>environmental</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Connecting a Rain Gauge</title><link>/posts/2014/01/25/raingauge/</link><description>
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+
+
+&lt;p&gt;A what? A rain gauge. It counts the depth of rainfall per unit area. So it
+might report that over the last 24 hours there were 2 mm of rainfall per
+meter squared. Over an area the size of Sheffield (around 300 km&lt;span class="cow-escape"&gt;^&lt;/span&gt;2), that
+translates to 600,000 cubic meters or on the order of 240 Olympic size swimming
+pools. That sounds like a lot, but realistically when you consider that the
+River Don is 110 km long, that volume of water isn't so much. The floods here
+in June 2007 were the result of over &lt;em&gt;200&lt;/em&gt; mm of rainfall in two weeks.
+60,000,000 m&lt;span class="cow-escape"&gt;^&lt;/span&gt;3 for just Sheffield, combined with the much greater surrounding
+area... Now we can see why having a rain gauge might be interesting.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/rain/tippingbucket.jpg"&gt;&lt;img class="cow-img" src="/images/environment/rain/tippingbucket_small.jpg" alt="Inside a tipping bucket rain gauge"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So how does a rain gauge work? There are a few different types, but most common
+and what I've got is called a
+&lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Tipping_bucket_rain_gauge#Tipping_bucket_rain_gauge"&gt;tipping bucket rain gauge&lt;/a&gt;. Basically there's a little see-saw inside. The rain
+fills up a bucket on one end and it tips over so that it empties and the bucket
+on the other side starts to fill. Each time the bucket tips it passes a magnet
+over a &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Reed_switch"&gt;reed switch&lt;/a&gt; making a
+momentary electrical connection. The buckets are calibrated to a volume of
+water, which means if you can count how many times the switch closes you know
+how much rainfall there's been.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/rain/reedswitch.jpg"&gt;&lt;img class="cow-img" src="/images/environment/rain/reedswitch_small.jpg" alt="The rain gauge's reed switch"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The rain gauge I've been showing here is one you can have for a fiver from
+&lt;a class="cow-url" href="http://www.maplin.co.uk/p/maplin-replacement-rain-gauge-for-n25frn85fyn96gy-n77nf"&gt;Maplin&lt;/a&gt;. It has an RJ-11 plug on the end you'll probably need to cut off to
+connect it to the Pi. Still, This suprisingly low cost means anyone can have a
+play at weather monitoring, and personally I've always found rain to be pretty
+neat. Onwards!&lt;/p&gt;
+
+&lt;p&gt;Basically what it boils down to is that each tip of the bucket in the rain
+gauge is identical to a button press. We can easily then connect the gauge as
+if it were a button. I've connected mine to ground and GPIO 17. After that all
+we need to do then is to monitor for button presses which is pretty straight
+forward. It can be done two ways. A continuous loop can run checking the value
+of the GPIO. This is pretty resource intensive. Or we can use GPIO interrupts,
+similar to what I did in the &lt;a class="cow-non-existant-url" href="/posts/2014/01/18/3dasintv/"&gt;3D project&lt;/a&gt;. This
+is where closing the circuit (pressing the button, the bucket tipping) triggers
+a software event.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/rain/connection.jpg"&gt;&lt;img class="cow-img" src="/images/environment/rain/connection_small.jpg" alt="The electrical connection for the gauge"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Fortunately
+&lt;a class="cow-url" href="http://raspi.tv/2013/how-to-use-interrupts-with-python-on-the-raspberry-pi-and-rpi-gpio"&gt;RasPi.TV&lt;/a&gt; has written a quite nice article on how to use interrupts with
+Python. The &lt;a class="cow-url" href="https://pypi.python.org/pypi/RPi.GPIO"&gt;RPi.GPIO&lt;/a&gt; function library
+has a simple call to register listening for interrupts on a given PIN:
+&lt;tt&gt;GPIO.add&lt;span class="cow-escape"&gt;_&lt;/span&gt;event&lt;span class="cow-escape"&gt;_&lt;/span&gt;detect&lt;/tt&gt;. This makes it dirt simple to create a monitoring
+program. I've uploaded the code I've written to
+&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/environment/rain.py"&gt;GitHub&lt;/a&gt;, but I'll go over the important bits here.&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class="prettyprint lang-python"&gt;
+GPIO.setmode(GPIO.BCM)  
+GPIO.setup(PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+&lt;/pre&gt;This is pretty standard and if you've done any GPIO work before you should
+recognize it as initializing the GPIO. The &lt;tt&gt;setup&lt;/tt&gt; function here tells the
+system we'll be using &lt;tt&gt;PIN&lt;/tt&gt; (17) for input, and that we should use it in
+pull-up mode. That is to say, we connect the internal resitor attached to the
+pin to +3.3 V. This allows it to be clear when the rain gauge closes the
+circuit to ground that there's been a change.&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class="prettyprint lang-python"&gt;
+# variable to keep track of how much rain
+rain = 0
+
+# the call back function for each bucket tip
+def cb(channel):
+	global rain
+	rain = rain + CALIBRATION
+
+# register the call back for pin interrupts
+GPIO.add_event_detect(PIN, GPIO.FALLING, callback=cb, bouncetime=300)
+&lt;/pre&gt;We have a variable &lt;tt&gt;rain&lt;/tt&gt; that is a counter for the amount of rainfall. We then
+have a function (&lt;tt&gt;cb&lt;/tt&gt;) that adds the bucket amount to it, the &lt;tt&gt;CALIBRATION&lt;/tt&gt;
+variable which for this gauge is 0.2794 mm per tip. The &lt;tt&gt;add&lt;span class="cow-escape"&gt;_&lt;/span&gt;event&lt;span class="cow-escape"&gt;_&lt;/span&gt;detect&lt;/tt&gt;
+function then sets up the interrupt listening on &lt;tt&gt;PIN&lt;/tt&gt;. Because we've set the
+pin in pull-up mode, we're listening for a &lt;em&gt;falling edge&lt;/em&gt;, that is the
+transition from +3.3 V to 0 V. When this occurs we'll call the &lt;em&gt;callback&lt;/em&gt;
+function &lt;tt&gt;cb&lt;/tt&gt;. The &lt;tt&gt;bouncetime&lt;/tt&gt; specifies that the &lt;tt&gt;cb&lt;/tt&gt; can't be called any
+more frequently than once every 300 ms. This prevents counting a rapid
+alteration between switch states, called bouncing.&lt;/p&gt;
+
+&lt;p&gt;The program output is a CSV log file which in column A has a unix timestamp,
+and in column B has a rainfall amount. I've set it up to log every 5 seconds,
+but really that can be a much longer minute or 5 minute interval even. I like
+the higher frequency because if it's raining really hard, you can't catch small
+temporal variations with a longer monitoring frequency. It's easy in comparison
+though to go from 5 second to 5 minute readings.&lt;/p&gt;
+
+&lt;p&gt;The other thing to bear in mind is that how the program is that while the
+bucket in the gauge fills up slowly, you only get an instantaneous result.
+There won't have been 0.2794 mm of rain in the last 5 seconds, but instead it
+will have occured in the interval since the last reading. This is a
+post-processing consideration if you're interested in producing rainfall over
+time graphs, but isn't an issue for totals.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/environment/rain/outdoors.jpg"&gt;&lt;img class="cow-img" src="/images/environment/rain/outdoors_small.jpg" alt="The gauge placed outside"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some minor comments about rain gauge placement. Higher is better. They should
+be secured, and outside of what's called a building's shadow. Rain can be
+carried by the wind and if the wind is coming from the other side of the
+building the reading's likely to be off. Bearing all that in mind, I can't
+meet any of those conditions properly. My rain gauge is at least outside
+though. Let's look at some of the data. (I've plotted it quickly using
+&lt;a class="cow-url" href="https://www.gnu.org/software/octave/"&gt;Octave&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/rain/23rd.png" alt="Rain on the 23rd"&gt;&lt;/p&gt;
+
+&lt;p&gt;There are some teething problems. The above graph goes from 0900 on the 23rd
+to 0900 on the 24th. I know for a fact there was no rainfall that evening.
+Indeed, it was dry as a bone and most small puddles had evaporated. I suspect
+maybe that the wind or cold weather was having an effect, but I'm really not
+sure. In the meantime I'm keeping an eye out for false readings. Maybe an
+interrupt bug?&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/environment/rain/24th.png" alt="Rain on the 24th"&gt;&lt;/p&gt;
+
+&lt;p&gt;Ignoring them, the data is actually pretty good. According to this figure, last
+night (from around 1700 to 2200) we had around 7 mm of rainfall. That's a
+fairly average rainfall and I actually remember it happening. The value also
+compares favorably to other rain gauges I have access to. They're a few km away
+and reported 6 to 6.4 mm of rainfall.&lt;/p&gt;
+
+&lt;p&gt;As a fun project if you're in Sheffield, you can compare how much rain you're
+recording to the &lt;a class="cow-url" href="https://twitter.com/WPWeather"&gt;Weston Park Museum's weather
+station&lt;/a&gt;! There are other monitoring stations around the country and world a
+little bit of Googling should help out there.&lt;/p&gt;
+
+
+
+&lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"&gt;&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fred Sonnenwald</dc:creator><pubDate>Sat, 25 Jan 2014 00:00:00 +0000</pubDate><guid>tag:,2014-01-25:posts/2014/01/25/raingauge/</guid><category>hardware</category><category>pi-tronics</category><category>environmental</category><category>rain</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>3D? As in TV?</title><link>/posts/2014/01/18/3dasintv/</link><description>
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+
+
+&lt;p&gt;A year or two ago I connected a small 132x32 pixel LCD display to one of my
+Raspberry Pis. The idea behind it was that I could use it to display small
+status updates or anything else I wanted. Mostly from that aspect it ended up
+being a clock.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/3d/tv/clock_big.jpg"&gt;&lt;img class="cow-img" src="/images/3d/tv/clock_small.jpg" alt="A rather fancy clock"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Once I got some code written for text, my next thought was &amp;quot;could I do video?&amp;quot;
+There were a few hurdles there to overcome as well. Codec? Framerate? I ended
+making up a solution where I read in 2-bit (black and white) bitmap image and
+displayed it. Repeat 24 times a second and you have video.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/3d/tv/frames.gif" alt="Raw frames"&gt;
+&lt;img class="cow-img" src="/images/3d/tv/video.gif" alt="Video in action"&gt;&lt;/p&gt;
+
+&lt;p&gt;I noticed something interesting though, in that I could push out images a lot
+faster than 24 FPS. I could reach just over the 120 FPS. This is the magic
+number for what's known as
+&lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Active_shutter_3D_system"&gt;active 3D TV&lt;/a&gt;. In
+Active 3D, the special glasses effectively blank out one eye than the other
+rapidly. At the same time the TV is showing the left eye, right, left, right,
+etc., at the same speed. (3D in movie theatres, for example
+&lt;a class="cow-url" href="http://en.wikipedia.org/wiki/RealD_Cinema"&gt;RealD 3D&lt;/a&gt;, typically uses
+polarized light.)&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/3d/tv/animation.gif" alt="Active 3D"&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two ways that active glasses are controlled by TVs. The first,
+impractical way is radio. Typically Bluetooth. The other way, which fits right
+in the realm of hacker electronics, is Infrared. (Just like a remote control!)
+Knowing this then I needed a was an infrared transmission from the Pi to the
+glasses, and then to match this up with the software I'd already written to
+display video. The latter, is easy. The former, not so much so.&lt;/p&gt;
+
+&lt;p&gt;The first stumbling block is the infrared transmission signal. Like a remote
+control, it's also a specially coded signal. And like for TVs, many makers
+have different signals for their glasses. Fortunately, someone has already
+made an
+&lt;a class="cow-url" href="http://cmst.curtin.edu.au/local/docs/pubs/2011-17-woods-helliwell-3D-Sync-IR.pdf"&gt;analysis&lt;/a&gt; of the different signals using an oscilloscope. I managed to find a
+reasonably priced pair of nVidia 3D glases. The protocol for them looks like
+this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/3d/tv/nvidia protocol.png" alt="nVidia 3D glasses Infrared Protocol"&gt;&lt;/p&gt;
+
+&lt;p&gt;Unfortunately the timing of those infrared pulses is in &lt;em&gt;micro&lt;/em&gt;seconds. This is
+a small problem. The Pi can't consistently execute code at microsecond timing.
+Millisecond's about the best it can do because Raspbian isn't what's called a
+&lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Real-time_operating_system"&gt;Real-time operating
+system&lt;/a&gt;. It spends a lot of time instead cycling between different tasks, any
+of which can call for CPU time at any moment and interrupting whatever else is
+happening.&lt;/p&gt;
+
+&lt;p&gt;In a real-time situation like sending a infrared signal, we can't have the
+kernel deciding to take a pause in the middle to do something else.
+Fortunately, most microcontrollers are real-time, and so will do exactly
+what you tell them to in the order you tell them to.
+&lt;a class="cow-url" href="http://morethanuser.blogspot.co.uk/2013/05/ir-remote-emulator-with-attiny45.html"&gt;More Than User&lt;/a&gt; used an attiny45 to create an infrared remote. I haven't got
+one of those, but I do have a
+&lt;a class="cow-url" href="https://estore.ti.com/EZ430-F2013-MSP430-USB-Stick-Development-Tool-P800.aspx"&gt;EZ430-F2013&lt;/a&gt; which is this crazy TI micro-controller in a USB stick format
+thing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/3d/tv/ez430_big.jpg"&gt;&lt;img class="cow-img" src="/images/3d/tv/ez430_small.jpg" alt="The EZ430"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The EZ430 is very nice in that it comes with a proper development environment
+and a &amp;quot;let's blink the LED&amp;quot; code example&amp;mdash;blinking an Infrared LED is what I
+wanted to do after all! What I really needed to do then was to learn how to
+control blink timing precisely. Things now get a little technical.
+Microcontroller programming isn't exactly easy and this was new ground for me.&lt;/p&gt;
+
+&lt;p&gt;Eventually I learned that the EZ430 has an onboard 8 MHz clock crystal. What's
+neat about this is that you can do something called a &lt;em&gt;timer interrupt&lt;/em&gt;. There
+are different ways to go about it, but in general in this case I tell the
+EZ430 to count down from X to 0, which X is the number of clock ticks. If I
+could put in the number 8,000,000 for X, I'd have an exact timing of 1 second.&lt;/p&gt;
+
+&lt;p&gt;It's not quite that easy though. The counter is only a 16-bit integer which
+means I can only count down from 32,767. Fortunately there are clock dividers
+available which let you tweak it around. The catch here is that the protocol
+has &lt;em&gt;half&lt;/em&gt;microsecond timing. That means I can't divide down directly to 1
+MHz timing, and instead can only divide down to 2 MHz timing. My counter then
+has to be twice the numbers shown in the protocol diagram.&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class="prettyprint lang-c"&gt;
+// set up the timer
+DCOCTL = CALDCO_8MHZ;
+BCSCTL1 = CALBC1_8MHZ;
+BCSCTL2 |= DIVS_2; // divide by 4
+TACTL = TASSEL_2 + MC_1 + ID_0;
+&lt;/pre&gt;At this point I could control the glasses! I was thrilled! The next challenge
+then arrises: connecting this to the Pi. Enter &lt;em&gt;input pin interrupts&lt;/em&gt;. The
+EZ430 has 8 digital input/output pins. One of them is used as an output for
+the infrared LED to talk to the glasses. Another pin I changed to an input,
+and then enabled a &lt;em&gt;rising edge&lt;/em&gt; interrupt on it. This means as soon as voltage
+at the pin is detected it triggers a code call. From this I can then start the
+timer and open one eye and close the other.&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class="prettyprint lang-c"&gt;
+// setup interrupt on pin 3
+P1IE = BIT3;
+P1IES &amp;amp;= ~BIT3; // rising edge
+_EINT();
+&lt;/pre&gt;Hurrah! I connect the input pin on the EZ430 to a GPIO output from the Pi and
+I have glasses control. Now in my video program after a frame is drawn I simply
+turn the connected GPIO pin on and off again, triggering an interrupt on the
+EZ430, which ends up sending an infred signal to the glasses. Gives a very good
+feeling. It may have taken 10 minutes to read this far but it took hours to
+learn what I needed on the EZ430 on work it all out.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/3d/tv/schematic.png" alt="Devices Schematic"&gt;&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, my 3D TV doesn't work. As near as I can tell all the electronics
+are fine. I just missed one thing. Despite the fact that I can push out 120 FPS
+to the LCD there's still a lag for the crystals to change (this is the &amp;quot;response
+time&amp;quot; you might have seen advertised on your monitor). The timing on the little
+LCD I installed is far greater than the 8 milliseconds needed. Maybe there's a
+way around needing 120 FPS for the glasses, but I haven't exactly worked it out
+yet. So far now the bits and pieces sit on my desk. A good idea and fun to do.
+Close yes, but no cigar. &lt;/p&gt;
+
+
+&lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"&gt;&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fred Sonnenwald</dc:creator><pubDate>Sat, 18 Jan 2014 00:00:00 +0000</pubDate><guid>tag:,2014-01-18:posts/2014/01/18/3dasintv/</guid><category>hardware</category><category>3d-display</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>The Cubieboard2</title><link>/posts/2013/12/01/cubieboard2/</link><description>
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+
+
+&lt;p&gt;A while back we presented a &lt;a class="cow-url" href="/pages/hardware.html"&gt;review&lt;/a&gt; of different
+&amp;quot;Pi-Alikes&amp;quot;. Computers similar to the RaspberryPi - low cost and low power.
+The question we set out to answer was &amp;quot;what exactly does 'low power' mean?&amp;quot;
+Turns out that for the most part low power was exactly that&amp;mdash;low energy
+consumption and low computational power too. The RaspberryPi and its
+contemporaries won't break any records but they won't break the bank either.&lt;/p&gt;
+
+&lt;p&gt;Enter the Cubieboard2. We mentioned that this had been announced and we
+finally got our hands on one:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/articles/cubieboard2.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/cubieboard2.jpg" alt="Cubieboard2"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hardware wise, the Cubieboard2 is pretty much identical to the original except
+for its &lt;b&gt;A20&lt;/b&gt; dual-core chip and &lt;em&gt;double the RAM&lt;/em&gt; (1 GB). There's the same
+ethernet, HDMI, SATA, etc. Instead of Android 4.0.4 it ships with 4.2.2.&lt;/p&gt;
+
+&lt;p&gt;Despite the similarities, the first rule of Cubieboard2 is that it is not
+Cubieboard1. Which means that as much as one might want to use the Cubieboard
+image, a new SD card image needs to be written. They exist, but were somewhat
+harder to find than they were for the original Cubieboard. The
+&lt;a class="cow-url" href="http://linux-sunxi.org/Main_Page"&gt;Sunxi Wiki&lt;/a&gt; isn't well updated for the
+Cubieboard2, so I resorted to Google and found
+&lt;a class="cow-url" href="http://cubieboard.org/2013/09/07/lubuntu-desktopserver-firmwares-release-for-a20-cubieboard-20130907/"&gt;this&lt;/a&gt;.
+In retrospect I should have just started on the Cubieboard pages and followed
+the nice big download link.&lt;/p&gt;
+
+&lt;p&gt;Booting up you see the nice two penguins in the framebuffer that indicate two
+CPUs. And then nothing, for quite a long time while the system boots. That was
+very disconcerting and I was almost sure something was wrong. With the dual
+core CPU you'd expect things to feel faster, but it's hard to tell. Starting
+was disconcerting without any output. Starting Chromium was slow, but of course
+it would be compared to my desktop with an SSD. Part of the slowness is almost
+certainly the SD card. X11 does feel pretty responsive though, and there's not
+that much of a slow down when multitasking. That's probably the real benefit of
+the second core. That and a tasty 1 GB of RAM make this surprisingly powerful
+for the price and size.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The two Tux penguins show the kernel recognizing two CPUs...&lt;/em&gt;
+&lt;img class="cow-img" src="/images/hardware/dualtux.jpg" alt="Look Ma! Dual core!"&gt;&lt;/p&gt;
+
+&lt;p&gt;The best concrete way to compare performance is, of course, a benchmark.
+First though, some stupid bug in something-Google made apt-get nearly
+impossible to use.
+&lt;a class="cow-url" href="https://muffinresearch.co.uk/linux-fix-for-apt-get-update-waiting-for-headers/"&gt;see here&lt;/a&gt;
+for a fix. That was annoying and necessary to sort out because otherwise there
+wouldn't be the necessary software installed to run the benchmarks.&lt;/p&gt;
+
+&lt;p&gt;I have to say that I thought the Cubieboard2 performed better, but I was
+absolutely blown away by some of the benchmark results. Network and disk
+performance were effectively the same, so we can ignore those. What's really
+interesting are the CPU benchmarks. First, integer performance. On a
+core-for-core basis it was about the same as a Cubieboard. This means that
+overall there's twice the performance when factoring both cores.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/hardware/results2/dhry_mips.svg.jpg" alt="Integer Math"&gt;&lt;/p&gt;
+
+&lt;p&gt;Where the Cubieboard2 really shines though is in the floating point arena.
+Whatever changes they made between the A10 and A20 CPU, Cubieboard and
+Cubieboard 2, the two SD card images, it made a huge difference. Results
+indicate nearly &lt;em&gt;three&lt;/em&gt; times the performance. Across both cores that would be
+&lt;b&gt;six times&lt;/b&gt; faster over all. (That's 4x faster than the Pi too!) It's
+absolutely staggering.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/hardware/results2/whet_mflops.svg.jpg" alt="Floating Point Math"&gt;&lt;/p&gt;
+
+&lt;p&gt;These performance improvements aren't just smoke dust either. There's real
+world benefit. bzip2 compression ended up performing about the same. Still,
+that's two times the performance considering both cores. There may be a
+limiting factor with the SD card here.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/hardware/results2/bzip2_min.svg.jpg" alt="bzip2 Compression"&gt;&lt;/p&gt;
+
+&lt;p&gt;MP3 encoding performance was just fantastic however. Half the time of the
+Cubieboard and still significantly faster than the Model B. That's effectively
+four times faster when considering both cores. I do believe that what I thought
+was faster performance when using the Cubieboard2 is indeed the case.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/hardware/results2/lame_min.svg.jpg" alt="MP3 Encoding"&gt;&lt;/p&gt;
+
+&lt;p&gt;My conclusion? Why would anyone want a Cubieboard anymore? Cubieboard2 all the
+way. I sincerely look forward to the next hardware revision of the RaspberryPi
+if they can get the same sort of performance improvements.&lt;/p&gt;
+
+
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fred Sonnenwald</dc:creator><pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate><guid>tag:,2013-12-01:posts/2013/12/01/cubieboard2/</guid><category>hardware</category><category>pi-alikes</category><category>pi</category><category>raspberrypi</category><category>gate</category></item></channel></rss>

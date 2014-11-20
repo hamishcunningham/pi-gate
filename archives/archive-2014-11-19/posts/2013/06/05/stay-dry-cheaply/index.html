@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Stay Dry Cheaply</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+        height="55" width="46"></a></span>
+      <span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+      <span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+        alt="The University of Sheffield" height="55" width="113"</a><a
+          href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+            height="55" width="132"></a></span>
+    </span>
+    <div class="horizontal menu">
+      <ul>
+      <li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+      <!--
+      using a custom menu at present...
+      -->
+      <li><b><a href="#">Projects</a></b>
+      <!-- TODO generate this from content/pages/index -->
+        <ul>
+        <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+        <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+        <li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+        <li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+        <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+        <!--
+        <li><a href="/pages/snowcam.html">SnowCam: Off the Radar Cameras</a></li>
+        -->
+        <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+        <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+        <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+        <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+        <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+        </ul></li>
+      <li><b><a href="#">MoPi</a></b>
+        <ul>
+        <li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+        <li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+        <li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+        <li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+        </ul></li>
+      <!-- <li><a href="/">Blog</a></li> -->
+      <li><a href="/pages/download.html">Download</a></li>
+      <li><a href="/pages/contact.html">Contact</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
+
+  <!-- header menus (?!) -->
+  <div id="header">
+  </div>
+
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
+
+  <!-- main content div -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <div id="mainContent">
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+        <li class="active"><a href="/category/news.html">News</a></li>
+    </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
+
+<!-- YUI responsive columns -->
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/posts/2013/06/05/stay-dry-cheaply/" rel="bookmark"
+           title="Permalink to Stay Dry Cheaply">Stay Dry Cheaply</a></h1>
+<div id="socialButtons">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2013/06/05/stay-dry-cheaply/"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/posts/2013/06/05/stay-dry-cheaply/#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/posts/2013/06/05/stay-dry-cheaply/"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+  <a class="article-thumb" href="/images/articles/stay-dry-cheaply.jpg"><img
+    src="/images/articles/thumbs/stay-dry-cheaply.jpg"
+    height="75" width="75" alt="stay-dry-cheaply"></a>
+    <span class="article-summary"><em>A simple DIY flood alarm</em>.</span>
+ <br/>   <!-- In <a href="/category/news.html">News</a> -->
+  
+Tags:<span class="tag-list"> <a href="/tag/hardware.html">hardware</a> <a href="/tag/gpio.html">gpio</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>  <br/>   <span class="published" title="2013-06-05T00:00:00">Wed 05 June 2013,</span>
+  <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer><!-- /.post-info -->      
+
+<p>One of the projects in our <a class="cow-url" href="/pages/basics.html">basic pi-tronics</a> tutorial is
+a <a class="cow-url" href="/pages/basics.html#flood-alarm">simple flooding alarm</a> which senses
+unwanted water flows and sends a text message (or makes a tweet, or etc.) to
+give you a heads up before things get extremely damp.</p>
+
+<p>This type of thing is a good illustration of how the Pi can result in <b>really
+cheap</b> solutions &mdash; I just came across a commercial alternative to this
+circuit (but without the SMS functions) that costs more than &pound;400! The
+Pi-based version has a total materials cost of around &pound;50. Quite a saving.</p>
+
+<!--% http://www.serverscheck.com/-->
+
+
+<p>That's not to say that the commercial version is overpriced; it comes in a
+lovely metal box, has full service and support behind it, etc. etc. But for
+someone who just wants something simple and cheap (and fun to build!) the Pi
+really wins on price.</p>
+
+<p>Some of the reasons for this are:</p>
+
+<ul>
+<li>DIY is cheap, at least when the base materials are also cheap</li>
+<li>a general purpose computer means much less need for (expensive) specialist
+  hardware</li>
+<li>sharing: the rapid growth of the Pi community and their philosophy of
+  openness and sharing means it is easy to build on the work of others (which
+  also goes for the Linux operating system that the Pi runs on)</li>
+</ul>
+
+<p>Ok, I used up several evenings and weekends, but it was more fun than watching
+the telly :-)</p>
+
+
+
+<p><b><a class="cow-url" href="/pages/basics.html">Read the main article</a>.</b></p>
+
+
+<br/> <br/>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'pi-gate'; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+
+</div>
+<div id="emptyMiddleColumn" class="yui3-u-1-24"> <!-- column 2 -->
+  <section id="extras" class="body">
+  </section><!-- /#extras -->
+
+
+  </div>
+</div>
+
+  </div> <!-- #mainContent -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
+          1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
+        <a href="https://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
+        <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/posts/2013/06/05/stay-dry-cheaply/index.html">Print</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+        alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+          alt="The University of Sheffield" height="70" width="165"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

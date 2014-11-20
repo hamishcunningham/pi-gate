@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Pi GATE — Sheffield Pi-Tronics - </title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+        height="55" width="46"></a></span>
+      <span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+      <span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+        alt="The University of Sheffield" height="55" width="113"</a><a
+          href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+            height="55" width="132"></a></span>
+    </span>
+    <div class="horizontal menu">
+      <ul>
+      <li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+      <!--
+      using a custom menu at present...
+      -->
+      <li><b><a href="#">Projects</a></b>
+      <!-- TODO generate this from content/pages/index -->
+        <ul>
+        <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+        <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+        <li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+        <li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+        <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+        <!--
+        <li><a href="/pages/snowcam.html">SnowCam: Off the Radar Cameras</a></li>
+        -->
+        <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+        <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+        <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+        <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+        <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+        </ul></li>
+      <li><b><a href="#">MoPi</a></b>
+        <ul>
+        <li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+        <li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+        <li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+        <li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+        </ul></li>
+      <!-- <li><a href="/">Blog</a></li> -->
+      <li><a href="/pages/download.html">Download</a></li>
+      <li><a href="/pages/contact.html">Contact</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
+
+  <!-- header menus (?!) -->
+  <div id="header">
+  </div>
+
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
+
+  <!-- main content div -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <div id="mainContent">
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+        <li ><a href="/category/news.html">News</a></li>
+    </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
+
+<!-- YUI responsive columns -->
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+    
+    
+
+      <aside id="featured" class="body">
+        <article>
+          <h1 class="entry-title"><a href="/posts/2014/09/16/resilient-cultures/">Open Tech for Resilience</a></h1> 
+<div id="socialButtons">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2014/09/16/resilient-cultures/"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/posts/2014/09/16/resilient-cultures/#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/posts/2014/09/16/resilient-cultures/"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div><footer class="post-info">
+  <a class="article-thumb" href="/images/articles/resilient-cultures.jpg"><img
+    src="/images/articles/thumbs/resilient-cultures.jpg"
+    height="75" width="75" alt="resilient-cultures"></a>
+    <span class="article-summary"><em>Open technology for resilient society</em>.</span>
+ <br/>   <!-- In <a href="/category/news.html">News</a> -->
+  
+Tags:<span class="tag-list"> <a href="/tag/resilience.html">resilience</a> <a href="/tag/sustainability.html">sustainability</a> <a href="/tag/open-source.html">open source</a> <a href="/tag/open-data.html">open data</a> <a href="/tag/open-hardware.html">open hardware</a> <a href="/tag/.html"></a>.</span>  <br/>   <span class="published" title="2014-09-16T00:00:00">Tue 16 September 2014,</span>
+  <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer><!-- /.post-info -->
+<h1 class="cow-heading">Festival of the Mind 2014</h1>
+
+<p><b>Resilience</b> is ability to bounce back from stresses, strains and shocks.
+<em>Resilient Cultures</em> is a two-day event at the
+<a class="cow-url" href="http://festivalofthemind.group.shef.ac.uk/">Festival of the Mind 2014</a>
+about how <em>open source software</em>, <em>open data</em> and
+<em>open hardware</em> can help build social resilience.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<h1 class="cow-heading">Programme</h1>
+
+<ul>
+<li>Friday 19th September 9.30 &mdash; 2.30: <b>schools only</b>
+  (<a class="cow-url" href="https://www.sheffield.ac.uk/ssid/maps/firth">Firth Hall</a>)</li>
+<li>Friday 19th 8pm &mdash; midnight:
+  <a class="cow-url" href="https://www.facebook.com/events/636695496443567/">Resilient Cultures gig</a>
+  at Audacious Art Space</li>
+<li>Saturday 20th September 10 &mdash; 4: <b>open to all</b> (Firth Hall)</li>
+</ul>
+
+<p>The Exhibits:</p>
+
+<ul>
+<li>Build a <b>Raspberry Pi Weather Station</b> (Jo Bates, Information Studies): have
+  a go at building your own Raspberry Pi weather station and sharing the data
+  that you generate directly with the Met Office's  <a class="cow-url" href="http://wow.metoffice.gov.uk">Weather Observations Website</a>.</li>
+<li><b>Open Wearable Electronics</b> (Charlotte Godley): Learn how to put together a
+  simple, customisable flashing circuit using boards you can put into your
+  clothing! See how this can then be customised to your own colours and style
+  and inspiration of what projects this could be put into.</li>
+<li><b>Bio-Microscopy</b> (Ashley Cadby, Physics): gain a whole new perspective on
+  microbes and their habits with this exhibit of high-power microscopes
+  operating at variable focal lengths to expose the secret life of bacteria.</li>
+<li><b>Chaos and Structure</b>, Maths and Code (Sam Dolan, Maths) will explore
+  <em>deterministic chaos</em> where simple algorithms often lead to unexpected and
+  beautiful structures like fractals.</li>
+<li><b>Sheffield's Raspberry Pi Factory</b> (Gee Bartlett from Pimoroni) will
+  showcase simple robotics and games from Sheffield's own Pi company.</li>
+<li><b>Everyday Growing Cultures</b> (Farida Vis, Information Studies) explores the
+  potential of digital engagement and open data for allotment holders and
+  those interested in cultivating currently unused plots of council-owned
+  land, in order to build stronger, more active communities, benefit local
+  economies and improve environmental sustainability and food security. </li>
+<li>The <b>PiBrush</b> (Fred Sonnenwald, Hamish Cunningham) is an interactive art and
+  technology exhibit that simulates flicking paint off the end of a paintbrush
+  onto canvas &mdash; as Jackson Pollock famously did in the 1940s and 50s. It uses
+  two Raspberry Pis and an accelerometer.</li>
+<li><b><a class="cow-url" href="http://roboplant.wordpress.com/">RoboPlant</a></b> (Colin Osborne, Plant
+  Biology / Alastair Buckley, Physics) is a human-sized robot mimicking the
+  replicable stages of photosynthesis in plants. Photovoltaic panels absorb
+  light and convert it into electricity. This powers an electrolyser which
+  splits water into hydrogen and oxygen.</li>
+<li><b>Game Technology Against Cancer</b> (Cassie Limb). Come and play with the cells
+  that keep you standing, explore their environment in an inflatable bone
+  sculpture, connect with the smallest cells that support your every step and
+  play the latest in cancer busting open source games!</li>
+<li><b>Laser-Cut Geodesics</b> (James Wallbank, Access Space) will showcase geodesic
+  dome and hexayurt models built from laser-cut panels for <em>resilient modular
+  architecture</em>.</li>
+<li><b>3D Scanning</b> (John Moseley, Access Space): 3D printers herald new
+  possibilities in micro-manufacturing &mdash; but how do we create the designs
+  that they print? This exhibit will showcase 3D scanning, taking 3D objects
+  and turning them into computational models.</li>
+<li><b>Open Source Music</b> (Mark Hadman): hand-coded digital and hand-soldered
+  analogue sound machines used for live ambient/drone performance by Mark
+  Hadman (aka Spandril).</li>
+<li><b>Numbers to Grooves</b> (Dominic Moore). Turn yourself into an 8 bit analogue
+  computer via the miracles of tapping, bashing and bumping. Dominic's
+  workshop will build live rhythm machines from its participants. Digital
+  music technology works on <em>encodings</em> &mdash; as does musical notation &mdash; but
+  here the encoding is you and the computer is the group. This is how music
+  originated &mdash; and it was all 100% <em>open source</em> up until a few hundred years
+  ago! Music is almost certainly older than language itself &mdash; so we're all
+  music experts! Specialist musicians and musicologists have a specialised
+  nomenclature and notation for representing tunes and rhythms, but Dominic
+  will remind us that the digital is always only an approximation of sound and
+  that we all know how to make music already &mdash; and we're the real thing!</li>
+<li><b>Big Data and Gut Bacteria</b> (Keith Harris, Maths). Big Data is a buzzterm
+  for the collection of data sets so complex that they become extremely
+  difficult to store and analyse using traditional techniques. The belief is
+  that Big Data will allow correlations to be found that will enable us to
+  spot business trends, prevent disease outbreaks, combat crime, etc., but big
+  data may be unrepresentative leading to biased results and the 'discovery'
+  of relationships from chance correlations.  Can the graphical visualisation
+  of multidimensional data help?</li>
+</ul>
+ 
+<!--% Rhythm and Number (Dominic Moore): programming rhythms using number-->
+
+<!--% selection -- open algorithms for music creation.-->
+
+
+<!--% Plus Bo and Anna's performance ...-->
+
+
+<p><a class="cow-url" href="/images/fotm-charlotte-wearables.png"><img class="cow-img" src="/images/fotm-charlotte-wearables-500x707.png" alt="Open Source Wearables" width="500" height="707.png"></a></p>
+
+<p><a class="cow-url" href="/images/fotm-gtac.png"><img class="cow-img" src="/images/fotm-gtac-500x707.png" alt="GTAC" width="500" height="707.png"></a></p>
+
+<p><a class="cow-url" href="/images/fotm-sam-chaos.png"><img class="cow-img" src="/images/fotm-sam-chaos-500x707.png" alt="Predictable Chaos" width="500" height="707.png"></a></p>
+
+<p><a class="cow-url" href="/images/rescult-3.jpg"><img class="cow-img" src="/images/rescult-3-500x500.jpg" alt="Resilient Cultures" width="500" height="500"></a></p>
+
+<p><a class="cow-url" href="/images/growing-futures.png"><img class="cow-img" src="/images/growing-futures-500x273.png" alt="Everyday Growing Futures" width="500" height="273.png"></a></p>
+
+<p><a class="cow-url" href="/images/jo-weather-station.jpg"><img class="cow-img" src="/images/jo-weather-station-500x255.jpg" alt="Pi Weather Station" width="500" height="255"></a></p>
+
+<p><a class="cow-url" href="/images/pi-brush-snap.jpg"><img class="cow-img" src="/images/pi-brush-snap-500x284.jpg" alt="The PiBrush" width="500" height="284"></a></p>
+
+<p>Want to play? Join us on Saturday 20th September (10.30am to 2pm) at
+<a class="cow-url" href="https://www.sheffield.ac.uk/ssid/maps/firth">Firth Hall</a>.</p>
+
+<p><hr>
+<a class="cow-url" href="http://hamish.gate.ac.uk/">Hamish Cunningham</a>,
+<a class="cow-url" href="https://www.sheffield.ac.uk/is/staff/bates">Jo Bates</a>,
+<a class="cow-url" href="http://92.27.63.80/">Bo Meson</a>.</p>
+
+
+<p>
+<b><a href="/posts/2014/09/16/resilient-cultures/#disqus_thread">Comment on this post</a>.</b>
+</p>        </article>
+      </aside><!-- /#featured -->
+  </div>
+  <!-- column 2 -->
+  <div id="middleColumn" class="yui3-u-1-5">
+        <section id="content" class="body">
+          <h1>Other articles</h1>
+          <ol id="posts-list" class="hfeed">
+    
+
+ 
+      <li><article class="hentry">
+        <hr/>
+        <header>
+          <h1><a href="/posts/2013/11/18/fruitful-jam/" rel="bookmark"
+               title="Permalink to Fruitful Jam">Fruitful Jam</a></h1>
+        </header>
+        
+        <div class="entry-content">
+<footer class="post-info">
+  <a class="article-thumb" href="/images/articles/fruitful-jam.jpg"><img
+    src="/images/articles/thumbs/fruitful-jam.jpg"
+    height="75" width="75" alt="fruitful-jam"></a>
+    <span class="article-summary"><em>Manchester Raspberry Jam</em>.</span>
+ <br/>   <!-- In <a href="/category/news.html">News</a> -->
+  
+Tags:<span class="tag-list"> <a href="/tag/schools.html">schools</a> <a href="/tag/jam.html">jam</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a> <a href="/tag/.html"></a>.</span>  <br/>   <span class="published" title="2013-11-18T00:00:00">Mon 18 November 2013,</span>
+  <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer><!-- /.post-info -->        <!-- Manchester Raspberry Jam -->
+        <a class="readmore" href="/posts/2013/11/18/fruitful-jam/">read more</a>
+        <!-- <p>
+<b><a href="/posts/2013/11/18/fruitful-jam/#disqus_thread">Comment on this post</a>.</b>
+</p> -->
+        </div><!-- /.entry-content -->
+      </article></li>
+    
+
+ 
+      <li><article class="hentry">
+        <hr/>
+        <header>
+          <h1><a href="/posts/2013/11/14/mopi-proto2/" rel="bookmark"
+               title="Permalink to Mobile Hot-Swap Power for the Pi">Mobile Hot-Swap Power for the Pi</a></h1>
+        </header>
+        
+        <div class="entry-content">
+<footer class="post-info">
+  <a class="article-thumb" href="/images/articles/mopi-proto2.jpg"><img
+    src="/images/articles/thumbs/mopi-proto2.jpg"
+    height="75" width="75" alt="mopi-proto2"></a>
+    <span class="article-summary"><em>Second prototype MoPi board</em>.</span>
+ <br/>   <!-- In <a href="/category/news.html">News</a> -->
+  
+Tags:<span class="tag-list"> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a> <a href="/tag/.html"></a>.</span>  <br/>   <span class="published" title="2013-11-14T00:00:00">Thu 14 November 2013,</span>
+  <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer><!-- /.post-info -->        <!-- Second prototype MoPi board -->
+        <a class="readmore" href="/posts/2013/11/14/mopi-proto2/">read more</a>
+        <!-- <p>
+<b><a href="/posts/2013/11/14/mopi-proto2/#disqus_thread">Comment on this post</a>.</b>
+</p> -->
+        </div><!-- /.entry-content -->
+      </article></li>
+      </ol><!-- /#posts-list -->
+      </section><!-- /#content -->
+<p class="paginator">
+    Page 1 / 1
+</p>
+  <section id="extras" class="body">
+  </section><!-- /#extras -->
+
+
+  </div>
+</div>
+
+  </div> <!-- #mainContent -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
+          1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
+        <a href="https://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
+        <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/tag/.html">Print</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+        alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+          alt="The University of Sheffield" height="70" width="165"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

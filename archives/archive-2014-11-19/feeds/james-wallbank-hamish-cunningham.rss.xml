@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pi GATE — Sheffield Pi-Tronics</title><link>/</link><description></description><atom:link href="https://pi.gate.ac.uk/feeds/james-wallbank-hamish-cunningham.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 02 Oct 2013 00:00:00 +0100</lastBuildDate><item><title>Never Work With Children or Animals</title><link>/posts/2013/10/02/children-and-animals/</link><description>
+
+
+
+&lt;p&gt;We've got 50 of them coming in &amp;mdash; children, that is, not animals, and
+hopefully we'll be able to tell the difference relatively easily :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="http://ambassadors.rcweb.dcs.shef.ac.uk/"&gt;The scheme&lt;/a&gt; is an opportunity for
+girls and boys who have an interest in computing to get a feel for subjects
+ranging from computer games and graphics to programming hardware, from large
+scale everyday uses in mobile apps and social media to highly specialised
+applications from small research teams. As part of the scheme &lt;b&gt;everyone gets a
+Raspberry Pi&lt;/b&gt; to take home, and we're throwing in a few bits and pieces of
+electronics to get the experimenter ball rolling.&lt;/p&gt;
+
+&lt;!--% YOUTUBE BLUE PETER CLIP HERE--&gt;
+
+
+&lt;p&gt;One of &lt;a class="cow-url" href="/pages/basics.html#interaction-electronics"&gt;the beauties of
+the Pi&lt;/a&gt; is how easy it is to connect up a few cheap components and jump
+straight into the realm of physical computing. Using a couple of Raspberry Pi
+&lt;a class="cow-url" href="http://www.ocr.org.uk/qualifications/by-subject/computing/raspberry-pi/"&gt;recipe cards from OCR&lt;/a&gt; we'll do two taster projects:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;traffic lights: cycling red, amber and green LEDs&lt;/li&gt;
+&lt;li&gt;jelly baby siren: turning a squidgy sweet into a siren switch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Any student caught eating their jelly baby before wiring it up to the Pi will
+be made to stay behind and clean out the stables.&lt;/p&gt;
+
+&lt;p&gt;And no elephants on site. At all. Or I'm going home.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;hr&gt;&lt;/p&gt;&lt;h1 class="cow-heading"&gt;Postscript&lt;/h1&gt;
+
+&lt;p&gt;The day went well :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="http://www.cl.cam.ac.uk/~am21/"&gt;Alan Mycroft&lt;/a&gt; from the
+&lt;a class="cow-url" href="http://raspberrypi.org"&gt;Raspberry Pi foundation&lt;/a&gt; gave a lively talk
+introducing fundamentals of computing and helped out with our lab sessions.
+(And ate several jelly babies, though none of the ones with paper clips
+stuffed in them, luckily.) All the materials are available in
+&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/outreach"&gt;our Pi-Tronics repository&lt;/a&gt; but they definitely need some revision &amp;mdash; the
+authors learned more than the students from the day!&lt;/p&gt;
+
+&lt;p&gt;Plugging jumpers onto GPIO pins can be tricky:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/ambassadors/pi-oneers-003-300x450.jpg" alt="Pi-Oneers at the Cutlers
+Ambassadors day" width="300"&gt;&lt;/p&gt;
+&lt;!--% images/ambassadors/pi-oneers-003-550x825.jpg--&gt;
+
+
+&lt;p&gt;Here's one of the authors demonstrating the art of
+&lt;a class="cow-url" href="http://www.ocr.org.uk/Images/125881-recipe-card-singing-jelly-baby.pdf"&gt;squeezing a jelly baby&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/ambassadors/pi-oneers-001-500x333.jpg" alt="Pi-Oneers at the Cutlers
+Ambassadors day" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;And a student setting up her police siren sound file:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/ambassadors/pi-oneers-002-550x367.jpg" alt="Pi-Oneers at the Cutlers
+Ambassadors day" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;Here's &lt;a class="cow-url" href="http://staffwww.dcs.shef.ac.uk/people/S.Wrigley/"&gt;Stuart Wrigley&lt;/a&gt;
+demonstrating his Pi-in-a-quadcopter system for sensing river water levels
+during flood events:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/outreach-day-2.jpg" alt="quadcopter demo" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;(Spot the authors looking gormless!)&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/outreach-day-3.jpg" alt="quadcopter detail" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;Now everyone wants a quadcopter :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/outreach-day-1.jpg" alt="Pi-oneers in the quad" width="500"&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;hr&gt;
+Hamish's spiel:
+&lt;blockquote&gt;
+Hands up who's been to IKEA?&lt;/p&gt;
+
+&lt;p&gt;And when you got home you put the stuff together yourselves, right?&lt;/p&gt;
+
+&lt;p&gt;My grandad was a carpenter, and when he was your age No One built their own
+wardrobe &amp;mdash; they got a skilled guy like him to build it for them.&lt;/p&gt;
+
+&lt;p&gt;Well now, in your time, we're seeing the same process with computers. For your
+generation, you can pick up a few bits and pieces and put them together
+yourselves.&lt;/p&gt;
+
+&lt;p&gt;But now it's even better, because computers can be programmed, so after you
+put them together you can get them to do all sorts of new and wierd and
+wonderful stuff...&lt;/p&gt;
+
+&lt;p&gt;That's the future, and it's yours more than it is mine &amp;mdash; and I envy you!&lt;/p&gt;
+
+&lt;p&gt;Let's put a bit of that future on the tables in front of you... let's plug in
+those computers that you have in your bags and put them together with some
+bits and pieces of electronics and program them to do something, and see where
+it takes us...&lt;/p&gt;
+
+&lt;!--% ... quick start guide ...--&gt;
+
+&lt;p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/schools.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">James Wallbank &amp; Hamish Cunningham</dc:creator><pubDate>Wed, 02 Oct 2013 00:00:00 +0100</pubDate><guid>tag:,2013-10-02:posts/2013/10/02/children-and-animals/</guid><category>schools</category><category>education</category><category>pi</category><category>raspberrypi</category><category>gate</category></item></channel></rss>

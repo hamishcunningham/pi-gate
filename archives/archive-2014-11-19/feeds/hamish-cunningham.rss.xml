@@ -1,0 +1,2049 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pi GATE — Sheffield Pi-Tronics</title><link>/</link><description></description><atom:link href="https://pi.gate.ac.uk/feeds/hamish-cunningham.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 16 Sep 2014 00:00:00 +0100</lastBuildDate><item><title>Sheffield Schools Raspberry Pi Bank Launch</title><link>/posts/2014/09/16/pi-bank/</link><description>
+
+&lt;p&gt;This Friday sees the launch of our Pi Bank: a set of 20 kits containing Pi
+rigs that are now available for short-term loan to Sheffield schools and
+others:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/pi-bank/img-20140916-124059.jpg"&gt;&lt;img class="cow-img" src="/images/pi-bank/img-20140916-124059-500x667.jpg" alt="Kit Pile" width="500" height="667"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Each kit has a Pi, power supplies (inc. &lt;a class="cow-url" href="/pages/mopi.html"&gt;for batteries&lt;/a&gt;
+etc.), screen adapters (VGA and DVI) and GPIO cabling:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/pi-bank/img-20140916-122800.jpg"&gt;&lt;img class="cow-img" src="/images/pi-bank/img-20140916-122800-500x398.jpg" alt="A Pi Kit" width="500" height="398"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In addition there are 10 Pi cameras, 10 audio cards and 10 simple robot kits.&lt;/p&gt;
+
+&lt;p&gt;Funding has been provided by the University's outreach programme and by
+Pimoroni:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/pi-bank/img-20140916-122817.jpg"&gt;&lt;img class="cow-img" src="/images/pi-bank/img-20140916-122817-500x375.jpg" alt="Kit Label" width="500" height="375"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;James Wallbank of &lt;a class="cow-url" href="http://access-space.org/"&gt;Access Space&lt;/a&gt; and Brian dropped
+in to see the new kits and talk about James' and John Moseley's geodesics and
+3D scanning exhibits for the &lt;a class="cow-url" href="/pages/festival.html"&gt;Resilient Cultures&lt;/a&gt; event
+at the &lt;a class="cow-url" href="http://festivalofthemind.group.shef.ac.uk/"&gt;Festival of the Mind&lt;/a&gt;
+this Friday and Saturday:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/pi-bank/img-20140916-125300.jpg"&gt;&lt;img class="cow-img" src="/images/pi-bank/img-20140916-125300-500x667.jpg" alt="James and Brian" width="500" height="667"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And I learned how to do timer selfies with my new &lt;a class="cow-url" href="http://www.fairphone.com/"&gt;FairPhone&lt;/a&gt; :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/pi-bank/img-20140916-124006.jpg"&gt;&lt;img class="cow-img" src="/images/pi-bank/img-20140916-124006-500x667.jpg" alt="Hamish With Kits" width="500" height="667"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Come and join us on Saturday 20th September (10.30am to 2pm) at
+&lt;a class="cow-url" href="https://www.sheffield.ac.uk/ssid/maps/firth"&gt;Firth Hall&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/festival.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Tue, 16 Sep 2014 00:00:00 +0100</pubDate><guid>tag:,2014-09-16:posts/2014/09/16/pi-bank/</guid><category>schools</category><category>education</category><category>pi</category><category>raspberrypi</category><category>gate</category><category>pi bank</category><category>mopi</category></item><item><title>Open Tech for Resilience</title><link>/posts/2014/09/16/resilient-cultures/</link><description>
+&lt;h1 class="cow-heading"&gt;Festival of the Mind 2014&lt;/h1&gt;
+
+&lt;p&gt;&lt;b&gt;Resilience&lt;/b&gt; is ability to bounce back from stresses, strains and shocks.
+&lt;em&gt;Resilient Cultures&lt;/em&gt; is a two-day event at the
+&lt;a class="cow-url" href="http://festivalofthemind.group.shef.ac.uk/"&gt;Festival of the Mind 2014&lt;/a&gt;
+about how &lt;em&gt;open source software&lt;/em&gt;, &lt;em&gt;open data&lt;/em&gt; and
+&lt;em&gt;open hardware&lt;/em&gt; can help build social resilience.&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;h1 class="cow-heading"&gt;Programme&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Friday 19th September 9.30 &amp;mdash; 2.30: &lt;b&gt;schools only&lt;/b&gt;
+  (&lt;a class="cow-url" href="https://www.sheffield.ac.uk/ssid/maps/firth"&gt;Firth Hall&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Friday 19th 8pm &amp;mdash; midnight:
+  &lt;a class="cow-url" href="https://www.facebook.com/events/636695496443567/"&gt;Resilient Cultures gig&lt;/a&gt;
+  at Audacious Art Space&lt;/li&gt;
+&lt;li&gt;Saturday 20th September 10 &amp;mdash; 4: &lt;b&gt;open to all&lt;/b&gt; (Firth Hall)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Exhibits:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Build a &lt;b&gt;Raspberry Pi Weather Station&lt;/b&gt; (Jo Bates, Information Studies): have
+  a go at building your own Raspberry Pi weather station and sharing the data
+  that you generate directly with the Met Office's  &lt;a class="cow-url" href="http://wow.metoffice.gov.uk"&gt;Weather Observations Website&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Open Wearable Electronics&lt;/b&gt; (Charlotte Godley): Learn how to put together a
+  simple, customisable flashing circuit using boards you can put into your
+  clothing! See how this can then be customised to your own colours and style
+  and inspiration of what projects this could be put into.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Bio-Microscopy&lt;/b&gt; (Ashley Cadby, Physics): gain a whole new perspective on
+  microbes and their habits with this exhibit of high-power microscopes
+  operating at variable focal lengths to expose the secret life of bacteria.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Chaos and Structure&lt;/b&gt;, Maths and Code (Sam Dolan, Maths) will explore
+  &lt;em&gt;deterministic chaos&lt;/em&gt; where simple algorithms often lead to unexpected and
+  beautiful structures like fractals.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Sheffield's Raspberry Pi Factory&lt;/b&gt; (Gee Bartlett from Pimoroni) will
+  showcase simple robotics and games from Sheffield's own Pi company.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Everyday Growing Cultures&lt;/b&gt; (Farida Vis, Information Studies) explores the
+  potential of digital engagement and open data for allotment holders and
+  those interested in cultivating currently unused plots of council-owned
+  land, in order to build stronger, more active communities, benefit local
+  economies and improve environmental sustainability and food security. &lt;/li&gt;
+&lt;li&gt;The &lt;b&gt;PiBrush&lt;/b&gt; (Fred Sonnenwald, Hamish Cunningham) is an interactive art and
+  technology exhibit that simulates flicking paint off the end of a paintbrush
+  onto canvas &amp;mdash; as Jackson Pollock famously did in the 1940s and 50s. It uses
+  two Raspberry Pis and an accelerometer.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;&lt;a class="cow-url" href="http://roboplant.wordpress.com/"&gt;RoboPlant&lt;/a&gt;&lt;/b&gt; (Colin Osborne, Plant
+  Biology / Alastair Buckley, Physics) is a human-sized robot mimicking the
+  replicable stages of photosynthesis in plants. Photovoltaic panels absorb
+  light and convert it into electricity. This powers an electrolyser which
+  splits water into hydrogen and oxygen.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Game Technology Against Cancer&lt;/b&gt; (Cassie Limb). Come and play with the cells
+  that keep you standing, explore their environment in an inflatable bone
+  sculpture, connect with the smallest cells that support your every step and
+  play the latest in cancer busting open source games!&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Laser-Cut Geodesics&lt;/b&gt; (James Wallbank, Access Space) will showcase geodesic
+  dome and hexayurt models built from laser-cut panels for &lt;em&gt;resilient modular
+  architecture&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;3D Scanning&lt;/b&gt; (John Moseley, Access Space): 3D printers herald new
+  possibilities in micro-manufacturing &amp;mdash; but how do we create the designs
+  that they print? This exhibit will showcase 3D scanning, taking 3D objects
+  and turning them into computational models.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Open Source Music&lt;/b&gt; (Mark Hadman): hand-coded digital and hand-soldered
+  analogue sound machines used for live ambient/drone performance by Mark
+  Hadman (aka Spandril).&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Numbers to Grooves&lt;/b&gt; (Dominic Moore). Turn yourself into an 8 bit analogue
+  computer via the miracles of tapping, bashing and bumping. Dominic's
+  workshop will build live rhythm machines from its participants. Digital
+  music technology works on &lt;em&gt;encodings&lt;/em&gt; &amp;mdash; as does musical notation &amp;mdash; but
+  here the encoding is you and the computer is the group. This is how music
+  originated &amp;mdash; and it was all 100% &lt;em&gt;open source&lt;/em&gt; up until a few hundred years
+  ago! Music is almost certainly older than language itself &amp;mdash; so we're all
+  music experts! Specialist musicians and musicologists have a specialised
+  nomenclature and notation for representing tunes and rhythms, but Dominic
+  will remind us that the digital is always only an approximation of sound and
+  that we all know how to make music already &amp;mdash; and we're the real thing!&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Big Data and Gut Bacteria&lt;/b&gt; (Keith Harris, Maths). Big Data is a buzzterm
+  for the collection of data sets so complex that they become extremely
+  difficult to store and analyse using traditional techniques. The belief is
+  that Big Data will allow correlations to be found that will enable us to
+  spot business trends, prevent disease outbreaks, combat crime, etc., but big
+  data may be unrepresentative leading to biased results and the 'discovery'
+  of relationships from chance correlations.  Can the graphical visualisation
+  of multidimensional data help?&lt;/li&gt;
+&lt;/ul&gt;
+ 
+&lt;!--% Rhythm and Number (Dominic Moore): programming rhythms using number--&gt;
+
+&lt;!--% selection -- open algorithms for music creation.--&gt;
+
+
+&lt;!--% Plus Bo and Anna's performance ...--&gt;
+
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/fotm-charlotte-wearables.png"&gt;&lt;img class="cow-img" src="/images/fotm-charlotte-wearables-500x707.png" alt="Open Source Wearables" width="500" height="707.png"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/fotm-gtac.png"&gt;&lt;img class="cow-img" src="/images/fotm-gtac-500x707.png" alt="GTAC" width="500" height="707.png"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/fotm-sam-chaos.png"&gt;&lt;img class="cow-img" src="/images/fotm-sam-chaos-500x707.png" alt="Predictable Chaos" width="500" height="707.png"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/rescult-3.jpg"&gt;&lt;img class="cow-img" src="/images/rescult-3-500x500.jpg" alt="Resilient Cultures" width="500" height="500"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/growing-futures.png"&gt;&lt;img class="cow-img" src="/images/growing-futures-500x273.png" alt="Everyday Growing Futures" width="500" height="273.png"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/jo-weather-station.jpg"&gt;&lt;img class="cow-img" src="/images/jo-weather-station-500x255.jpg" alt="Pi Weather Station" width="500" height="255"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/pi-brush-snap.jpg"&gt;&lt;img class="cow-img" src="/images/pi-brush-snap-500x284.jpg" alt="The PiBrush" width="500" height="284"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Want to play? Join us on Saturday 20th September (10.30am to 2pm) at
+&lt;a class="cow-url" href="https://www.sheffield.ac.uk/ssid/maps/firth"&gt;Firth Hall&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;hr&gt;
+&lt;a class="cow-url" href="http://hamish.gate.ac.uk/"&gt;Hamish Cunningham&lt;/a&gt;,
+&lt;a class="cow-url" href="https://www.sheffield.ac.uk/is/staff/bates"&gt;Jo Bates&lt;/a&gt;,
+&lt;a class="cow-url" href="http://92.27.63.80/"&gt;Bo Meson&lt;/a&gt;.&lt;/p&gt;
+
+
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Tue, 16 Sep 2014 00:00:00 +0100</pubDate><guid>tag:,2014-09-16:posts/2014/09/16/resilient-cultures/</guid><category>resilience</category><category>sustainability</category><category>open source</category><category>open data</category><category>open hardware</category><category></category></item><item><title>MoPi Running the Pi Model B+</title><link>/posts/2014/08/02/b-plus-again/</link><description>
+
+&lt;p&gt;I'm writing this post on a 
+&lt;a class="cow-url" href="http://www.raspberrypi.org/introducing-raspberry-pi-model-b-plus/"&gt;Model B
+Plus Pi&lt;/a&gt; :-)&lt;/p&gt;
+
+&lt;p&gt;And the good news is that there's no issue with the new CPU position on the
+B+. MoPi's connection terminals actually sit on C1 (a large capacitor near the
+CPU), and not on the CPU itself. You can see this here:&lt;/p&gt;
+
+&lt;!--% YOUTUBE BPLUS CLIP HERE--&gt;
+
+
+&lt;p&gt;So we're good to go &amp;mdash; initial indications are that the B+ is an even better
+platform for mobile power (and &lt;a class="cow-url" href="/pages/mopi.html"&gt;MoPi&lt;/a&gt;) than the Model B...&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;PS&lt;/b&gt; if you fire up a B+ and discover that your USB keyboard doesn't work,
+note that you need the most recent operating systems. One easy way to get one
+is to download a &lt;a class="cow-url" href="http://www.raspberrypi.org/downloads/"&gt;new copy of NOOBS&lt;/a&gt;
+and unzip it onto a micro-SD card.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Sat, 02 Aug 2014 00:00:00 +0100</pubDate><guid>tag:,2014-08-02:posts/2014/08/02/b-plus-again/</guid><category>kickstarter</category><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>MoPi and the Model B+ Pi</title><link>/posts/2014/07/15/model-b-plus/</link><description>
+
+&lt;p&gt;Let's cut a long story short: MoPi should work fine with the
+&lt;a class="cow-url" href="http://www.raspberrypi.org/introducing-raspberry-pi-model-b-plus/"&gt;Model B
+Plus Pi&lt;/a&gt; announced yesterday.&lt;/p&gt;
+
+&lt;p&gt;The Model B+ is an evolution on the original Model B; it looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/model-b-plus-500x337.jpg" alt="Model B+ Pi" width="500" height="337"&gt;&lt;/p&gt;
+
+&lt;p&gt;From a mobile power point of view the B+ will perform a bit better than the B
+&amp;mdash; they're replaced the rather wasteful LDO regulator of the original with a
+switched-mode supply, and with the revamp and extension of the USB subsystem
+they've also improved power handling there.&lt;/p&gt;
+
+&lt;!--
+There's one caveat to using the B+ with MoPi, which is that left to its own
+devices the battery terminal connector will rest on the CPU, which has been
+repositionned. That will bring a risk of heat damage to the connector (and
+possibly overheating of the CPU), so a small collar or shim will need to be
+used to raise MoPi by a couple of millimeters.
+--&gt;
+
+&lt;p&gt;I've a couple of Model B+ boards and will post some pics in a few days...&lt;/p&gt;
+
+&lt;p&gt;So don't be afraid to pick up a Model B+ if you fancy one! It looks like a
+great addition to the Pi stable.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Tue, 15 Jul 2014 00:00:00 +0100</pubDate><guid>tag:,2014-07-15:posts/2014/07/15/model-b-plus/</guid><category>kickstarter</category><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Fitting a Remote Power Switch to MoPi</title><link>/posts/2014/07/10/mopi-remote-switch/</link><description>
+
+&lt;p&gt;Daniel T, one of our Kickstarter backers for &lt;a class="cow-url" href="/pages/mopi.html"&gt;MoPi&lt;/a&gt;, wanted
+to fit a remote power switch to his board. (It has one fitted, but if you're
+building something with a case and need the switch to be somewhere away from
+the Pi and/or MoPi then there are a couple of remoting pads on MoPi for the
+purpose.) Here's the result:&lt;/p&gt;
+
+&lt;!--% YOUTUBE REMOTE SWITCH CLIP HERE--&gt;
+
+
+&lt;p&gt;Daniel hasn't got the soldering bug yet :-) so I fitted one for him, and here
+are the pics...&lt;/p&gt;
+
+&lt;p&gt;It is an easy job &amp;mdash; just wire up an SPST push-to-make switch to the two pads
+next to the power switch:&lt;/p&gt;
+
+&lt;!--% %(images/mopi/remote-switch/remote-switch-1.jpg,--&gt;
+
+&lt;!--% %image(images/mopi/remote-switch/remote-switch-1-500x375.jpg, MoPi remote switch, 500, 375))--&gt;
+
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/remote-switch/remote-switch-3.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/remote-switch/remote-switch-3-500x375.jpg" alt="MoPi remote switch" width="500" height="375"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And voila:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/remote-switch/remote-switch-2.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/remote-switch/remote-switch-2-500x375.jpg" alt="MoPi remote switch" width="500" height="375"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;For my next trick, I will turn a pumpkin into a penguin. Watch this space.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Thu, 10 Jul 2014 00:00:00 +0100</pubDate><guid>tag:,2014-07-10:posts/2014/07/10/mopi-remote-switch/</guid><category>kickstarter</category><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Custom PiBow Lid for MoPi</title><link>/posts/2014/06/03/custom-pibow-lid/</link><description>
+
+&lt;p&gt;Thanks to Paul and Connor at &lt;a class="cow-url" href="http://pimoroni.com/"&gt;Pimoroni&lt;/a&gt; we now have a
+prototype of the custom
+&lt;a class="cow-url" href="http://shop.pimoroni.com/products/pibow-raspberry-pi-case"&gt;PiBow&lt;/a&gt; lid that
+they're supplying for &lt;a class="cow-url" href="/pages/mopi.html"&gt;MoPi&lt;/a&gt; :-)&lt;/p&gt;
+
+&lt;p&gt;Here are some pics of MoPi (3.3V version) running a Model A Pi in a Crystal
+PiBow with the new lid:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/custom-lid-120313.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/custom-lid-120313-500x.jpg" alt="Custom PiBow Lid" width="500"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The power button is just proud of the lid &amp;mdash; hard to press by accident, but
+easy to access when you want it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/custom-lid-120322.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/custom-lid-120322-500x.jpg" alt="Custom PiBow Lid" width="500"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--% %(images/mopi/custom-lid-120327.jpg, %image(images/mopi/custom-lid-120327-500x.jpg, Custom PiBow Lid, 500))--&gt;
+
+
+&lt;p&gt;Thanks guys!&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Tue, 03 Jun 2014 00:00:00 +0100</pubDate><guid>tag:,2014-06-03:posts/2014/06/03/custom-pibow-lid/</guid><category>kickstarter</category><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>MoPi: Firming up the Software</title><link>/posts/2014/05/07/firming-up/</link><description>
+&lt;h2 class="cow-heading"&gt;[MoPi is &lt;b&gt;mobile&lt;/b&gt;, &lt;b&gt;hot-swap&lt;/b&gt; and &lt;b&gt;24/7 power&lt;/b&gt; for the Raspberry Pi. &lt;br&gt;
+&lt;a class="cow-url" href="/pages/get-mopi.html"&gt;How to order.&lt;/a&gt;]&lt;/h2&gt;
+
+&lt;div class="cow-contents"&gt;&lt;h2 class="cow-heading"&gt;Contents&lt;/h2&gt;
+&lt;p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#section-1."&gt;1. The View from the Pi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#section-2."&gt;2. The SimBaMon Daemon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#section-3."&gt;3. The Python API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#section-4."&gt;4. MoPi from the Command Line&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#section-5."&gt;5. Configuring Your Power Supplies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#section-6."&gt;6. Monitoring&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;&lt;/div&gt;
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-1."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;1. &lt;/span&gt;The View from the Pi&lt;/h1&gt;
+
+&lt;p&gt;The MoPi software suite is now feature complete. That means that all the
+facilities which MoPi makes available on the Raspberry Pi which it is powering
+are now available for testing. This post describes how this software works and
+how the architecture of MoPi hangs together.&lt;/p&gt;
+
+&lt;p&gt;There are four main parts of the puzzle:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A &lt;em&gt;daemon&lt;/em&gt; which runs in the background on the Pi, which is called
+  &lt;a class="cow-url" href="/pages/mopi.html#simbamon"&gt;SimBaMon&lt;/a&gt; (a Simple Battery Monitor). SimBaMon
+  is available as a package for Raspbian, and installing it pulls in all the
+  other facilities.&lt;/li&gt;
+&lt;li&gt;An interface that communicates with the MoPi hardware over the I2C protocol.
+  This interface is wrapped up as a Python API.&lt;/li&gt;
+&lt;li&gt;A command-line tool that uses the Python API and provides a language-neutral
+  portable method for talking to the board from the Pi.&lt;/li&gt;
+&lt;li&gt;A configuration user interface that simplifies the process of setting up
+  MoPi to deal with different types and numbers of batteries, and other types
+  of power supply.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of the code for these components is
+&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon"&gt;available on GitHub&lt;/a&gt;, and details of how to install are available on
+&lt;a class="cow-url" href="/pages/download.html"&gt;our download page&lt;/a&gt;. (&lt;b&gt;Note&lt;/b&gt;: to run the current
+version of the code you need the snapshot repository; the version in the Pi
+Foundation's repository won't be updated until we make an official release.)&lt;/p&gt;
+
+&lt;p&gt;The rest of the post discusses each of the main elements in turn, and finishes
+up with a note about monitoring the beast as it runs. First, though, a note
+about our delivery schedule. Having lost some time
+&lt;a class="cow-non-existant-url" href="/posts/2014/04/20/shakey-testing/"&gt;through illness&lt;/a&gt;, and spent quite a long
+time getting the I2C protocol to work reliably, it is now looking unlikely
+that we'll deliver before next month. (On the up-side that means we'll be able
+to deliver all in one go, as the
+&lt;a class="cow-non-existant-url" href="/posts/2014/04/20/shakey-testing/#section-2."&gt;second shipment&lt;/a&gt; of
+microncontrollers is due early in June.) We're getting close to finalising
+version 4 (the first production version), but we'd hate to ship it with a
+firmware bug that would mean returning the boards for re-flashing. We hope you
+agree it is best to wait a little longer. With a bit of luck this will be the
+last of the delays, and we'll hit the original target of June 2014 to finish
+all deliveries as promised.&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-2."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;2. &lt;/span&gt;The SimBaMon Daemon&lt;/h1&gt;
+
+&lt;p&gt;When the Pi (or any other Linux system) boots, several system services are
+started that will run continuously until the machine is shut down again. These
+services are called &lt;em&gt;daemons&lt;/em&gt;, and this is how SimBaMon is implemented.
+Following the standard naming convention, the daemon is called &lt;tt&gt;simbamond&lt;/tt&gt;,
+and the first point of entry (used by the operating system to start, stop,
+etc.) is a script that lives in
+&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamond.default"&gt;&lt;tt&gt;/etc/init.d/simbamond&lt;/tt&gt;&lt;/a&gt;. This script (which is a management type person)
+calls another to do all the real work; this other (hard working type) lives in
+&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamon"&gt;&lt;tt&gt;/usr/sbin/simbamon&lt;/tt&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;One of key features of MoPi is that it supports many different types of
+batteries and many other types of power supply (from solar panels to elastic
+bands!). Coping with the requirements of all these monsters needs a huge wodge
+of configuration data, which (following Debian Linux convention) lives in
+&lt;tt&gt;/etc/default&lt;/tt&gt; in a file (again, confusingly) called
+&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamond.init"&gt;&lt;tt&gt;simbamond&lt;/tt&gt;&lt;/a&gt;.&lt;span class="cow-footnote" name="footnote1"&gt;&lt;sup&gt;&lt;a href="#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Together these three script files make up a new system service that polls the
+MoPi hardware every couple of seconds and shouts loudly when an electron
+shortage appears on the horizon. If no one is listening and the shortage gets
+acute, the daemon tells the Pi to take a rest and issues the &lt;tt&gt;shutdown&lt;/tt&gt;
+command.&lt;/p&gt;
+
+&lt;p&gt;There is &lt;a class="cow-url" href="/pages/mopi.html#simbamon"&gt;more detail here&lt;/a&gt; (though it is a little
+out of date at time of writing).&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-3."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;3. &lt;/span&gt;The Python API&lt;/h1&gt;
+
+&lt;p&gt;How do we talk to the hardware? From MoPi version 3 onwards we shifted away
+from using the Pi's general-purpose GPIO pins (using a tool called WiringPi).
+This worked well, but it used a pin for each bit of data that we wanted to
+ship between the board and the Pi. As time went on we found more and more data
+that we needed to share (and we also came across other add-on boards that use
+lots of GPIO pins &amp;mdash; e.g. &lt;a class="cow-url" href="http://pi.gate.ac.uk/posts/2014/02/07/airpi1/"&gt;AirPi&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Luckily the Pi also hosts several other inter-board communication options,
+including the I2C protocol, which uses only two pins, can talk to multiple
+devices over the same two wires, and allows transfer of much larger amounts of
+data.&lt;/p&gt;
+
+&lt;p&gt;There are two ways to talk over I2C from the Pi: a set of command-line tools
+written in C, and a Python module. Both work, but the Python version seems to
+have had more attention from Pi users and developers, and has support for
+multi-byte reads (which requires a bit of hacking to get working in the C). So
+we've implemented an API for MoPi in Python&lt;span class="cow-footnote" name="footnote2"&gt;&lt;sup&gt;&lt;a href="#footnote2"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;, which now lives in a
+file called
+&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopiapi.py"&gt;&lt;tt&gt;mopiapi.py&lt;/tt&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For Python programmers this code provides a natural and efficient method of
+including MoPi facilities in their programs.&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-4."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;4. &lt;/span&gt;MoPi from the Command Line&lt;/h1&gt;
+
+&lt;p&gt;The observant amongst you may have noticed that SimBaMon is not written in
+Python&lt;span class="cow-footnote" name="footnote3"&gt;&lt;sup&gt;&lt;a href="#footnote3"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt; &amp;mdash; how does the daemon talk to the board when the API is in Python?
+That's where
+&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopicli"&gt;&lt;tt&gt;mopcli&lt;/tt&gt;&lt;/a&gt; comes in, which is a command-line interface to the Python API. This
+script provides convenient methods for the daemon to use, or for Pi users to
+query and configure the board, or for our configuration utility &amp;mdash; which by
+amazing coincidence is described next.&lt;/p&gt;
+
+&lt;p&gt;To see what the beast can do, ask it for help by typing &lt;tt&gt;sudo mopicli -h&lt;/tt&gt;;
+you'll get something like this:&lt;/p&gt;
+
+&lt;pre&gt;
+Usage: mopicli [-h] [options]
+Version 0.2, API 0.2
+
+Miscellaneous:
+  -i          I2C bus (default: 1)
+  -fv         Firmware version
+  -sn         Serial number
+  -h          Display this message
+
+Status:
+  -s          MoPi status word
+  -sv         Verbose status
+  -v          Current battery voltage in mV
+  -v1/-v2     Battery #1/#2 voltage in mV
+
+Read configuration options:
+  -rc         Combined battery #1 and #2 configuration
+  -rc1/-rc2   Configuration of battery #1/#2
+  -rpon       Power on delay
+  -rs         Shutdown delay
+
+Write configuration options:
+  -wc mV mV mV         Combined battery #1 and #2 configuration
+  -wc1/-wc2 mV mV mV   Configuration of battery #1/#2
+  -wpon seconds        Power on delay seconds
+  -ws seconds          Shutdown delay seconds
+
+All options may be used simultaneously. When doing so, they execute in the
+  order they are listed in in this help message. However, only one of each may
+  be used.
+&lt;/pre&gt;
+
+&lt;p&gt;As easy as pie.&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-5."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;5. &lt;/span&gt;Configuring Your Power Supplies&lt;/h1&gt;
+
+&lt;p&gt;Not quite so easy is choosing the correct voltage settings for different
+battery chemistries and different combinations of cells (not to mention other
+types of power supply). In each case MoPi needs to know:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;what is the approximate voltage that the battery will supply when fully
+  charged&lt;/li&gt;
+&lt;li&gt;what is the point at which we're getting low on charge (and may expect to
+  run out within a few minutes or so)&lt;/li&gt;
+&lt;li&gt;what is the minimum safe discharge voltage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The mid-point between the first two voltages is is the conventional definition
+of what a good level of charge is, so that's where we swap between lighting up
+our RGB led in blue and lighting it in green. When we reach the low charge
+point we turn the LED red, and when we reach the minimum safe discharge
+voltage (or the minimum safe operating voltage if that is higher) then we
+initiate shutdown.&lt;/p&gt;
+
+&lt;p&gt;Let's look at each of these values in more detail:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Fully-charged voltage&lt;/em&gt;. This is equal to the fully-charged voltage of each
+  cell in the battery pack multiplied by the number of cells. Like most things
+  with batteries, it varies according to battery chemistry &amp;mdash; e.g. an Alkaline
+  cell generates 1.5V; a NiMH 1.2V; a LiIon 3.7V.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The low charge level&lt;/em&gt;. When you record the voltage delivered by a battery
+  over time, most of the curves exhibit a knee shape. Before the knee voltage
+  drop is reasonably slow; after the knee if drops much more sharply. We need
+  to try and warn the user around the knee point, so that they have enough
+  time to replace the battery before it drains completely, but not so much
+  time that there is still lots of usable charge left.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Minimum safe discharge voltage&lt;/em&gt;. This applies to all rechargeable
+  batteries. If we discharge below this level, then the capacity to recharge
+  will be impared. This makes it a very important factor in battery life for
+  the long term, and one which we've done a lot of work to model and adapt to.
+  (Ever wondered why the rechargeables that you put in your alarm clock or
+  torch lasted such a short time? Most devices have no way of knowing about
+  the minimum discharge level for the particular chemistry you're using!)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Minimum safe operating level&lt;/em&gt;. MoPi uses a sophisticated microcontroller to
+  analyse battery behaviour, control its LEDs and deliver data to the software
+  suite running on the Pi. If the supply voltage to MoPi falls below a certain
+  level (around 6.2V) then the microcontroller may terminate, or even start to
+  behave unpredictably. It is very important to trap rapid voltage drop before
+  it reaches this point.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To deal with all these considerations, the current version of the software
+stores these values:&lt;/p&gt;
+
+&lt;pre&gt;
+        TYPE         CELL/FULL  MIN
+
+  1     non-battery     9.0     6.2
+  2     NiMH            1.2     0.95
+  3     Alkaline        1.5     0.8
+  4     Lead Acid       2.0     1.58
+  5     Lithium Ion     3.7     3.0
+  6     LiPo            4.2     3.0
+  7     NiCd            1.2     1.1
+&lt;/pre&gt;
+
+&lt;p&gt;When we know what chemistry we're dealing with, and how many cells, we can
+then make good guesses about where the four levels above should fall. But how
+do we know what the chemistry is? Two ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We have two built-in defaults, one for 8 NiMH cells (which is the battery
+  pack that we're supplying to backers who requested one), and one for 8
+  Alkaline non-rechargeables. The former is what MoPi will assume when running
+  out of the box; the latter is activated by removing the on-board jumper
+  provided for the purpose&lt;span class="cow-footnote" name="footnote4"&gt;&lt;sup&gt;&lt;a href="#footnote4"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;You tell us! To this end we have developed a configuration UI on the Pi,
+  which is the last piece in our four part software puzzle.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The configuration UI uses the same tools as the Raspberry Pi's utility
+(&lt;tt&gt;raspi-config&lt;/tt&gt;), so it should be simple and familiar, and it can be used over
+all types of connections (including remote login with &lt;tt&gt;ssh&lt;/tt&gt;). Here's a
+screenshot or three:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/config-01.png" alt="MoPi Config UI 1" width="650"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The main entry screen.&lt;/em&gt; &lt;br&gt; &lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/config-02.png" alt="MoPi Config UI 2" width="650"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Configuring one of the power supplies, battery chemistry.&lt;/em&gt; &lt;br&gt; &lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/config-03.png" alt="MoPi Config UI 3" width="650"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Getting status data (there's lots more in the newest version!).&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Dive into
+&lt;a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/mopi"&gt;the source code here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;And now you know more about batteries than you ever wanted to &amp;mdash; just like me!&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-6."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;6. &lt;/span&gt;Monitoring&lt;/h1&gt;
+
+&lt;p&gt;As you can imagine, figuring out how all this stuff is working and identifying
+bugs and incorrect behaviour is quite a challenge. Luckily we have some great
+tools to help us, one of which is &lt;a class="cow-url" href="https://mmonit.com/"&gt;Monit&lt;/a&gt;. This little
+gem is itself a daemon, and it has facilities for one thousand and one
+different types of monitoring task. You can listen to your webserver and
+restart it if it fails, or check the general load of the machine you're
+running on, or &amp;mdash; in our case &amp;mdash; check that the SimBaMon service is running,
+and if not start it up.&lt;/p&gt;
+
+&lt;p&gt;To use it, all we need to do is &lt;tt&gt;sudo apt-get install monit&lt;/tt&gt; in the usual way,
+then edit &lt;tt&gt;/etc/monit/monitrc&lt;/tt&gt;. This is the config we're using to monitor
+SimBaMon on one of our test rigs:&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class="prettyprint lang-bash"&gt;
+###############################################################################
+# monit config for simbamond, from /etc/monit/monitrc #########################
+
+# monitoring UI (serve on port 8888 and allow connections from one IP address)
+set httpd port 8888 and
+  allow 192.168.1.111
+
+# general system status
+check system mopi-15
+  if loadavg (1min) &amp;gt; 4 then alert
+  if loadavg (5min) &amp;gt; 2 then alert
+  if memory usage &amp;gt; 75% then alert
+  if swap usage &amp;gt; 25% then alert
+  if cpu usage (user) &amp;gt; 70% then alert
+  if cpu usage (system) &amp;gt; 30% then alert
+  if cpu usage (wait) &amp;gt; 20% then alert
+
+# monitor simbamond
+check process simbamond with pidfile /var/run/simbamond.pid
+  start program = &amp;quot;/usr/sbin/service simbamond start&amp;quot; with timeout 60 seconds
+  stop program  = &amp;quot;/usr/sbin/service simbamond stop&amp;quot;
+  restart program = &amp;quot;/usr/sbin/service simbamond restart&amp;quot; with timeout 60 seconds
+  if cpu &amp;gt; 60% for 2 cycles then alert
+  if cpu &amp;gt; 80% for 5 cycles then restart
+  if totalmem &amp;gt; 200.0 MB for 5 cycles then restart
+  if children &amp;gt; 250 then restart
+  if loadavg(5min) greater than 10 for 8 cycles then stop
+  if 3 restarts within 5 cycles then timeout
+  group mopi
+###############################################################################
+&lt;/pre&gt;You can then see what's going on by either or both of&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;tt&gt;cat /var/log/monit.log&lt;/tt&gt; (&lt;tt&gt;grep simbamon ...&lt;/tt&gt; is also useful)&lt;/li&gt;
+&lt;li&gt;pointing your browser at &lt;tt&gt;&lt;span class="cow-escape"&gt;h&lt;/span&gt;ttp://my-pi-ip-address:8888&lt;/tt&gt; (if you need to
+  find your IP address various methods are &lt;a class="cow-url" href="/pages/blinkip.html"&gt;discussed
+  here&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is great for keeping check on things during load testing (particularly
+heavy loads which have a tendency to cause odd corner case bugs to trigger),
+but it is also a great tool for maximising service availability &amp;mdash; the
+configuration code above will restart SimBaMon within a couple of minutes
+should it ever crash, for example.&lt;/p&gt;
+
+&lt;p&gt;Enjoy...&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;span class="cow-footnote-section"&gt;
+&lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
+&lt;p&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote1"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote1"&gt;Again confusingly &amp;mdash; this will become a theme &amp;mdash; the
+names of the files as they live in the source package are different from their
+names when installed. If you don't like being confused, you might want to
+avoid talking to computer people as a general rule. For example, the MoPi
+board works on milivolts; the I2C communication uses centivolts; the user
+interface uses volts; the API uses milivolts. And all for good reasons!&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote2"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote2"&gt;And no one complained
+about the whitespace rules! Who'd have thought it?!&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote3"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote3"&gt;In common with most daemons, SimBaMon is written in shell
+script.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote4"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote4"&gt;Configuration provided by the user
+  overrides the jumper for the current power cycle &amp;mdash; and beyond, when
+  SimBaMon is running as the daemon will persist the config values. The
+  firmware reads the jumper at each power up and initializes the cut-off
+  points with Ni-MH or Alkaline values.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+&lt;/span&gt;
+&lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"&gt;&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Wed, 07 May 2014 00:00:00 +0100</pubDate><guid>tag:,2014-05-07:posts/2014/05/07/firming-up/</guid><category>kickstarter</category><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Wobbling, Coding, Wobbling, Testing</title><link>/posts/2014/04/20/shakey-testing/</link><description>
+&lt;h2 class="cow-heading"&gt;[MoPi is &lt;b&gt;mobile&lt;/b&gt;, &lt;b&gt;hot-swap&lt;/b&gt; and &lt;b&gt;24/7 power&lt;/b&gt; for the Raspberry Pi.
+&lt;a class="cow-url" href="/pages/get-mopi.html"&gt;How to order.&lt;/a&gt;]&lt;/h2&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/first-boxed-batch-april-2014.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/first-boxed-batch-april-2014-500.jpg" alt="Boxed batch" width="500"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class="cow-contents"&gt;&lt;h2 class="cow-heading"&gt;Contents&lt;/h2&gt;
+&lt;p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#section-1."&gt;1. Waving, Drowning, or ...?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#section-2."&gt;2. MoPi v3 and v4: Results So Far&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#section-3."&gt;3. Packaging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#section-4."&gt;4. Working with the New Board&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#section-5."&gt;5. Linux is Lovely&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&amp;nbsp;&amp;nbsp;&lt;a href="#section-5.1."&gt;5.1. Enabling I2C and Debugging with I2C Tools&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;&lt;/div&gt;
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-1."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;1. &lt;/span&gt;Waving, Drowning, or ...?&lt;/h1&gt;
+
+&lt;p&gt;(With apologies to &lt;a class="cow-url" href="http://www.bbc.co.uk/arts/poetry/outloud/smith.shtml"&gt;Stevie Smith&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p&gt;Ok, so it was raining solidly for the second straight day of our (working)
+holiday, but what the hell &amp;mdash; I was tucked up in bed, and The Little Monster
+was still asleep at gone 9 local time. Life was fine. And then I tried to sit
+up, and the world started spinning. Hmmm. Not so fine.&lt;/p&gt;
+
+&lt;p&gt;Labyrinthitis is a murky syndrome involving the tiny hairs in your inner ear
+that allow us to balance. If there's a change in the liquid that activates
+them, then all sorts of wierd and wonderful things can happen &amp;mdash; including
+vertigo. A frequent result, apparently, is projectile oral expulsion of
+whatever you've been scoffing recently &amp;mdash; see for example
+&lt;a class="cow-url" href="http://www.pcarter.com.au/books/ride-like-hell-and-youll-get-there/"&gt;Paul
+Carter's account&lt;/a&gt;&lt;span class="cow-footnote" name="footnote1"&gt;&lt;sup&gt;&lt;a href="#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt; &amp;mdash; but lucky
+for me I didn't go through that stage.&lt;/p&gt;
+
+&lt;p&gt;I do feel somewhat wobbly, though, and testing new versions of the MoPi
+firmware from Lubo has been a bit tricky for the last few days...&lt;/p&gt;
+
+&lt;p&gt;All part of life's rich tapestry, no doubt. Onwards.&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-2."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;2. &lt;/span&gt;MoPi v3 and v4: Results So Far&lt;/h1&gt;
+
+&lt;p&gt;The good news is that we're pretty convinced that the
+&lt;a class="cow-non-existant-url" href="/posts/2014/03/27/pre-propduction-mopi/"&gt;version 3 prototype&lt;/a&gt; is a solid
+basis for the first full production run (version 4, which we'll be delivering
+to our &lt;a class="cow-url" href="http://kck.st/1gK5U3t"&gt;Kickstarter backers&lt;/a&gt; in May and June). We've
+ordered the PCBs and most of the components. (Below more details of the
+development and testing process.)&lt;/p&gt;
+
+&lt;p&gt;The bad news is that there's a world-wide shortage of the Silicon Labs
+microcontroller that we're using&lt;span class="cow-footnote" name="footnote2"&gt;&lt;sup&gt;&lt;a href="#footnote2"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt; :-( &lt;br&gt; &lt;br&gt;
+&lt;img class="cow-img" src="/images/falling-shipping-containers.jpg" alt="Falling Shipping
+Containers"&gt;&lt;span class="cow-footnote" name="footnote3"&gt;&lt;sup&gt;&lt;a href="#footnote3"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt; &lt;br&gt; &lt;br&gt; &amp;mdash; we've only
+managed to order around half of what we need for immediate delivery. The other
+half is on order for delivery in the first week of June. If the situation
+stays the same then this means we will be delivering to the first half of our
+backers in May and the second half in June. (We'll do this in
+first-come-first-served order.)&lt;/p&gt;
+
+&lt;p&gt;If anyone has 300 spare controllers we'd love to hear from you...&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-3."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;3. &lt;/span&gt;Packaging&lt;/h1&gt;
+
+&lt;p&gt;Big thanks to Georgi Marinov from &lt;a class="cow-url" href="http://www.engview.com/"&gt;EngView systems&lt;/a&gt;
+for designing a beautiful packet for MoPi:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/packaging-01.jpg" alt="The Packaging 1" width="500"&gt;&lt;/p&gt;
+
+&lt;!--% %image(images/mopi/packet/img-20140421-112941.jpg, Packaging 2, 500)--&gt;
+
+
+&lt;p&gt;And you can also spot the new stackable headers version here (with a
+stabilising device at the top which we'll ship it with &amp;mdash; the long pins are
+very easy to bend!).&lt;/p&gt;
+
+&lt;!--% %image(images/mopi/packet/img-20140421-112958.jpg, Packaging 3, 500)--&gt;
+
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/packet/img-20140421-113013.jpg" alt="Packaging 4" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks Joro! (And thanks Gen for the logo!)&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-4."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;4. &lt;/span&gt;Working with the New Board&lt;/h1&gt;
+
+&lt;p&gt;Our present work has several objectives:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;verify that the new MoPi board implements all (old and new) functions
+  correctly&lt;/li&gt;
+&lt;li&gt;develop an API for I2C access to the board&lt;/li&gt;
+&lt;li&gt;convert SimBaMon to use the new API&lt;/li&gt;
+&lt;li&gt;add a configuration utility to allow users on the Pi to configure the board&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We're doing this using external power supplies to make the development cycles
+faster. (Well, would &lt;em&gt;you&lt;/em&gt; want to add &amp;quot;wait for the batteries to discharge&amp;quot;
+to every edit/compile/test loop?!) I'm writing this post next to a large
+humming monster:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/sofia-20140421-154603-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;The Pi is drawing 170 mA; MoPi is getting 11.9 volts from the PSU. The PSU
+connects up to one of MoPi's supply inputs using a couple of re-purposed panel
+pins:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/sofia-20140421-113148-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;Mission control (helicopter not strictly necessary):&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/sofia-20140421-154651-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+
+&lt;!--% %image(images/mopi/test-rigs/sofia-20140421-113213-500.jpg, Test Rig, 500)--&gt;
+
+&lt;!--% %image(images/mopi/test-rigs/sofia-20140421-154556-500.jpg, Test Rig, 500)--&gt;
+
+&lt;!--% %image(images/mopi/test-rigs/sofia-20140421-113123-500.jpg, Test Rig, 500)--&gt;
+
+&lt;!--% %image(images/mopi/test-rigs/sofia-20140421-113138-500.jpg, Test Rig, 500)--&gt;
+
+
+&lt;p&gt;We've also got a flash new PSU down at the workshop:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-153037-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-153052-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;And here's Fred after I just showed him the bill:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-153131-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;While we're showing my snaps, here's one of my absolute favourite bits of kit
+ever:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-153029-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+&lt;!--% %image(images/mopi/test-rigs/workshop-20140409-153021-500.jpg, Test Rig, 500)--&gt;
+
+
+&lt;p&gt;This multimeter has been running reliably for 30 years! Ok, at some point I
+couldn't get the batteries any more, so I had to bodge up a container for a
+different size, but apart from that it has been pretty much perfect. I plugged
+it into our new PSU, dialed up 6.2 volts and hey presto! The meter and the PSU
+agreed 100%. Can I marry my multimeter?&lt;/p&gt;
+
+&lt;p&gt;We've got a new shiney one too, but the romance just isn't there:&lt;/p&gt;
+
+&lt;!--% %image(images/mopi/test-rigs/workshop-20140409-153039-500.jpg, Test Rig, 500)--&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-153043-500.jpg" alt="Test Rig" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;Anyhow, after this work is finished, we will:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;run a bunch of battery tests using the 2600 mAh AAs that we're going to ship
+  to backers who chose rewards with batteries in&lt;/li&gt;
+&lt;li&gt;complete the user guide and developer documentation&lt;/li&gt;
+&lt;li&gt;scratch our heads and wonder what we've forgotten?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here are the battery rigs waiting to go:&lt;/p&gt;
+
+&lt;!--% %image(images/mopi/test-rigs/workshop-20140409-152525-500.jpg, Battery Rig, 500)--&gt;
+
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-152533-500.jpg" alt="Battery Rig" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/test-rigs/workshop-20140409-152538-500.jpg" alt="Battery Rig" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;Do say: wow, you're really taking this seriously! Don't say: so, Professor
+Cunningham, you popped out to buy a battery about a year ago and you haven't
+actually finished yet?&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-5."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;5. &lt;/span&gt;Linux is Lovely&lt;/h1&gt;
+
+&lt;p&gt;One of the great things about the Pi is that it runs a &lt;a class="cow-url" href="http://fsf.org/"&gt;free
+and open source&lt;/a&gt; software stack. This makes development so much easier &amp;mdash;
+and here's an example of why...&lt;/p&gt;
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-5.1."&gt;&lt;/a&gt;&lt;h2 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;5.1. &lt;/span&gt;Enabling I2C and Debugging with I2C Tools&lt;/h2&gt;
+
+&lt;p&gt;Now that MoPi uses I2C as its communication mechanism, we have to enable this
+in the SimBaMon package. Here's how we do it&lt;span class="cow-footnote" name="footnote4"&gt;&lt;sup&gt;&lt;a href="#footnote4"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;if i2c-tools isn't already installed, install it:
+  &lt;ul&gt;
+  &lt;li&gt;&lt;tt&gt;sudo apt-get install i2c-tools&lt;/tt&gt;&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;(you might as well do the same with &lt;tt&gt;python-smbus&lt;/tt&gt; for testing purpose)&lt;/li&gt;
+&lt;li&gt;edit &lt;tt&gt;/etc/modules&lt;/tt&gt; and add lines &lt;tt&gt;i2c-bcm2708&lt;/tt&gt; and &lt;tt&gt;i2c-dev&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;edit &lt;tt&gt;/etc/modprobe.d/raspi-blacklist&lt;/tt&gt; (if it exists) and comment out the
+  line &lt;tt&gt;blacklist i2c-bcm2708&lt;/tt&gt; (by adding a &lt;tt&gt;#&lt;/tt&gt; at the start of the line)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The process of developing our interface involved hacking the &lt;tt&gt;i2c-tools&lt;/tt&gt;
+package to play with the multi-byte read facility in the &lt;tt&gt;i2cdump&lt;/tt&gt; command.
+On a closed-source operating system, of course, you would be stymied at this
+point. On Linux it is super easy :-)&lt;/p&gt;
+
+&lt;p&gt;Here's how to pull down the source code, rebuild and test:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;edit &lt;tt&gt;/etc/apt/sources.lst&lt;/tt&gt; and add this line:
+  &lt;ul&gt;
+  &lt;li&gt;&lt;tt&gt;deb-src &lt;a class="cow-url" href="http://mirrordirector.raspbian.org/raspbian/"&gt;http://mirrordirector.raspbian.org/raspbian/&lt;/a&gt; wheezy main contrib
+    non-free rpi&lt;/tt&gt;&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;then
+  &lt;ul&gt;
+  &lt;li&gt;&lt;tt&gt;sudo apt-get update&lt;/tt&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;tt&gt;mkdir i2c-tools&lt;/tt&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;tt&gt;cd i2c-tools&lt;/tt&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;tt&gt;apt-get source i2c-tools&lt;/tt&gt;&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;then &lt;tt&gt;make&lt;/tt&gt; will recompile (the tools are in the directory &lt;tt&gt;tools&lt;/tt&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hey presto, I can hack away at the C code and get immediate feedback with
+commands like &lt;tt&gt;sudo tools/i2cdump -y 1 0x0b i&lt;/tt&gt; (where &lt;tt&gt;0x0b&lt;/tt&gt; is MoPi's
+designated I2C address &amp;mdash; the smart battery address)&lt;span class="cow-footnote" name="footnote5"&gt;&lt;sup&gt;&lt;a href="#footnote5"&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+
+&lt;!--% %2 Joining In--&gt;
+
+
+&lt;!--% You can see some of the checkins for the --&gt;
+
+&lt;!--% TODO--&gt;
+
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;span class="cow-footnote-section"&gt;
+&lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
+&lt;p&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote1"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote1"&gt;He ended up in an ambulance being rushed to
+hospital, but then it must be tough being a macho Aussie :-&lt;span class="cow-escape"&gt;)&lt;/span&gt;.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote2"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote2"&gt;Quite why this little component has
+gone out of stock is a mystery. Perhaps a containerful fell off a ship
+somewhere? Or a huge client of the manufacturer ordered 10s of thousands? Or
+perhaps Apple has identified us as an important competitor and is seeking to
+slow down our meteoric rise? Answers on a postcard please...&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote3"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote3"&gt;Image from
+&lt;a class="cow-url" href="http://setsail.com/submerged-shipping-containers/"&gt;http://setsail.com/submerged-shipping-containers/&lt;/a&gt;.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote4"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote4"&gt;The key steps are
+described in various places, including
+&lt;a class="cow-url" href="https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c"&gt;on Adafruit&lt;/a&gt;.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote5"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote5"&gt;For a revision 1
+Pi &amp;mdash; the very early boards &amp;mdash; use &lt;tt&gt;0&lt;/tt&gt; instead of &lt;tt&gt;1&lt;/tt&gt;.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+&lt;/span&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Sun, 20 Apr 2014 00:00:00 +0100</pubDate><guid>tag:,2014-04-20:posts/2014/04/20/shakey-testing/</guid><category>kickstarter</category><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Pre-Production MoPi Boards</title><link>/posts/2014/03/27/pre-propduction-mopi/</link><description>
+
+&lt;p&gt;MoPi level 3 is now in testing :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;[MoPi is &lt;b&gt;mobile&lt;/b&gt;, &lt;b&gt;hot-swap&lt;/b&gt; and &lt;b&gt;24/7 power&lt;/b&gt; for the Raspberry Pi.
+&lt;a class="cow-url" href="/pages/get-mopi.html"&gt;How to order.&lt;/a&gt;]&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;This is, we hope, the final pre-production prototype board. It differs quite a
+lot from the previous prototype (which is the one you may have seen on our
+&lt;a class="cow-url" href="https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi"&gt;Kickstarter page&lt;/a&gt; &amp;mdash; if you missed it you can sign up for
+&lt;a class="cow-url" href="/pages/get-mopi.html"&gt;pre-orders here&lt;/a&gt;). The success of the
+crowdfunding campaign allowed us to add a bunch of new features (aka &lt;em&gt;stretch
+goals&lt;/em&gt;). The new board has these new hardware and firmware features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;screw terminals&lt;/li&gt;
+&lt;li&gt;stackable headers&lt;/li&gt;
+&lt;li&gt;remoting pads &lt;/li&gt;
+&lt;li&gt;self-resetting fuse &lt;/li&gt;
+&lt;li&gt;two-way communication using I2C&lt;/li&gt;
+&lt;li&gt;remote power-off&lt;/li&gt;
+&lt;li&gt;3.3V supply mod&lt;/li&gt;
+&lt;li&gt;timer-based wake-up&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This post describes some of our work on testing the new board and on updating
+the &lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html#simbamon"&gt;SimBaMon&lt;/a&gt; software that
+manages it from the Pi. Then we look at a possible arrangement for adding
+battery charging to the picture, and finish up with a revised delivery
+schedule.&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-1."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;1. &lt;/span&gt;The Final Prototype&lt;/h1&gt;
+
+&lt;p&gt;Here's what the level 3 revision looks like (&lt;em&gt;without&lt;/em&gt; the wiring connector or
+the GPIO connector or the power switch, which were soldered by hand after
+these pictures were taken):&lt;/p&gt;
+
+&lt;p&gt;Top of the board:
+&lt;img class="cow-img" src="/images/mopi/pre-production-boards-02.jpg" alt="Pre-production MoPi top"&gt;&lt;/p&gt;
+
+&lt;p&gt;Underneath the board:
+&lt;img class="cow-img" src="/images/mopi/pre-production-boards-01.jpg" alt="Pre-production MoPi bottom"&gt;&lt;/p&gt;
+
+&lt;p&gt;The stackable headers (for when MoPi is used in tandem with other add-on
+boards) take up quite a lot of vertical space in order to provide a set of
+pass-through pins above the MoPi board. Therefore we're offering two versions,
+one with the stackable header and one with a standard low-profile header. (If
+you're a backer you'll have had a message about filling in a survey form on
+which one you prefer.)&lt;/p&gt;
+
+&lt;p&gt;This is the stackable header that we're using (from Adafruit):
+&lt;a class="cow-url" href="http://www.adafruit.com/products/1112"&gt;&lt;img class="cow-img" src="http://www.adafruit.com/images/medium/1112_MED.jpg" alt="Adafruit Stacking
+Header"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you're opting for the low-profile header you can see an example here, on
+the level 2 board:
+&lt;img class="cow-img" src="/images/mopi/mopi-underside.jpg" alt="MoPi 2 underside"&gt;.&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-2."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;2. &lt;/span&gt;A Possible Charging Circuit&lt;/h1&gt;
+
+&lt;p&gt;One feature that we didn't manage to get sufficient backing for was battery
+charging. This feature would be a great addition to MoPi, but it turns out to
+be pretty difficult :-( In fact, dealing with lots of different chemistries
+may not be possible at all on a tiny device like MoPi. (Most manufacturers of
+charging ICs only support one chemistry per chip, for example, and some only
+support charging a single cell per chip! Many chargers also rely on having a
+temperature sensor in physical proximity to the batteries
+themselves.)&lt;span class="cow-footnote" name="footnote1"&gt;&lt;sup&gt;&lt;a href="#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt; The other challenge is that we've got a really
+small surface area to work with on the PCB.&lt;/p&gt;
+
+&lt;p&gt;Still, a number of our backers want to use MoPi with a charger (e.g. to charge
+batteries from solar panels during the day and then run on batteries
+overnight), so we've been working on a configuration with an external charger.
+For example, here's how we think a UPS configuration with charging could look:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="https://www.circuitlab.com/circuit/dsguk8/ups-configuration/"&gt;&lt;img class="cow-img" src="/images/mopi/ups-with-charger.png" alt="UPS with charger" width="540" height="405"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We haven't tested this yet, but it &lt;em&gt;should&lt;/em&gt; work ;-)&lt;/p&gt;
+
+&lt;p&gt;There are a number of potential gotchas in this type of circuit. For example,
+when the mains power drops, the Pi must be powered pretty much instantly in
+order to avoid triggering a reboot. There are no big capacitors on the Pi's
+PCB to buffer its consumption of 300-500 mA without power. To deal with this
+requirement we need MoPi to be always on and monitoring the Pi's 5V feed, even
+when that feed isn't being supplied by MoPi itself. (This doesn't waste much
+power as our microcontroller is very efficient.) When MoPi sees the 5V rail
+start to fall the controller immediately enables its 5V stabilizer, taking
+over supply of power to the Pi.&lt;/p&gt;
+
+&lt;p&gt;In the circuit above, when there is mains, the charger is generating e.g. +12V
+DC and the relay's coil is energized. The contact is switched to the normal
+open position and is passing +12V to charge the batteries. When mains drops,
+the relay is switching to the normal closed position and charging will stop.
+MoPi is powered all the time &amp;mdash; and so, we hope, is the Pi. (What does the
+diode do? When the +12V goes down, accumulated energy in the relay's coil must
+be dissipated. The diode is shorting the coil to do that. Otherwise the
+relay's contact will stay closed for a longer time.)&lt;/p&gt;
+
+&lt;p&gt;More on this when we get time to test it out in practice.&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+&lt;a class="cow-section-anchor" name="section-3."&gt;&lt;/a&gt;&lt;h1 class="cow-heading"&gt;&lt;span class="cow-sec-number"&gt;3. &lt;/span&gt;Revised Schedule&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;I love deadlines. I love the whooshing sound they make as they rush past.&lt;/em&gt;
+[Douglas Adams]&lt;/p&gt;
+
+&lt;p&gt;Ok, we're a little behind. We launched a week later than the plan (my fault &amp;mdash;
+I didn't allow enough time for the Kickstarter approval process&lt;span class="cow-footnote" name="footnote2"&gt;&lt;sup&gt;&lt;a href="#footnote2"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;), and then
+we ran for a week longer than planned, and then we met our stretch goals for
+several things that required additional changes to the level 3 prototype
+board, not to mention orders from suppliers we haven't used before.&lt;/p&gt;
+
+&lt;p&gt;This means that we've only now started testing the level 3 board,
+approximately a month behind the original schedule. We've also got some
+significant changes to make to the division of responsibilities between the
+software running on the Pi and the firmware running on the MoPi
+microcontroller. The latter is extremely important to get right for the
+production boards, as flashing a new firmware revision requires special
+hardware.&lt;/p&gt;
+
+&lt;p&gt;Our best guess for the delivery of version 4 (for our Kickstarter backers) and
+then version 5 (for &lt;a class="cow-url" href="http://pi.gate.ac.uk/posts/2014/03/11/mopi-funded/"&gt;pre-order subscribers&lt;/a&gt; and for retail supply) is now as follows.&lt;/p&gt;
+
+&lt;p&gt;(To cut a long story short we now plan to start delivering Kickstarter rewards
+in May. If we hit issues with component supply or that require hardware
+revision this might slip to June.)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Complete prototype board level 3. This is now done for the hardware and we
+  have the boards in testing. Firmware and software changes remain to be done.
+  Supply boards to Pimoroni who are designing the custom PiBow lid.
+  &lt;ul&gt;
+  &lt;li&gt;Completion: mid April 2014.&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Finalise the design of the production board. Fix any residual issues arising
+  from testing. Incorporate any feedback from testers. Start ordering
+  components, kit parts and PCBs in bulk. Finalise the pick-and-place
+  manufacturing process and start pre-production testing. Continue work on the
+  firmware and produce the production binary for flashing to the boards.
+  Address any stability issues in the daemon code.
+  &lt;ul&gt;
+  &lt;li&gt;Completion: end April 2014.&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Start taking delivery of the production boards. (This is our last
+  opportunity to make firmware changes. Test, test and test again!) The daemon
+  needs to be very stable by now.
+  &lt;ul&gt;
+  &lt;li&gt;Completion: late May 2014.&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Fulfill early bird Kickstarter orders for all single item and kit rewards.
+  Solicit additional GitHub committers for the daemon code to help with
+  long-term maintainability.
+  &lt;ul&gt;
+  &lt;li&gt;Completion: end May 2014.&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Fulfill any remaining Kickstarter orders.
+  &lt;ul&gt;
+  &lt;li&gt;Completion: June 2014.&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Set up sustainable production process and retail board supply and fulfill
+  retail pre-orders.
+  &lt;ul&gt;
+  &lt;li&gt;Completion: Summer 2014.&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Collapse in a small pile.&lt;span class="cow-footnote" name="footnote3"&gt;&lt;sup&gt;&lt;a href="#footnote3"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;span class="cow-footnote-section"&gt;
+&lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
+&lt;p&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote1"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote1"&gt;We like our backers. We'd rather not incinerate them if
+not completely necessary.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote2"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote2"&gt;I
+pressed the big green &lt;em&gt;submit&lt;/em&gt; button on the Kickstarter 10 days before our
+planned launch date, which was the last Friday in January &amp;mdash; payday! The FAQ
+said it could take up to a week to get approval, but I should have allowed
+more time as in the end it took double that and we didn't launch until the
+following Tuesday. This turned out to be a costly mistake on my part. I'd
+lined up publicity from a really important site for that Friday, but by the
+time we were ready the person concerned had gone on holiday for two weeks &amp;mdash;
+and when they came back they had mysteriously changed their minds. From the
+way the new backer curve played out during the month it was clear that
+publication on that site would have made a huge difference &amp;mdash; perhaps double
+the number of backers. This would have taken us over the magic 1000 units
+milestone, where bulk component prices drop sharply, and allowed us to add
+several really nice features to the board. Hey ho. Life is random!&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote3"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote3"&gt;I might bring this one forward a bit
+  depending on whether my partner agrees I'm due for my mid-life crisis yet or
+  not.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+&lt;/span&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Thu, 27 Mar 2014 00:00:00 +0000</pubDate><guid>tag:,2014-03-27:posts/2014/03/27/pre-propduction-mopi/</guid><category>kickstarter</category><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>MoPi Power Board Funded to &gt;300% on Kickstarter :-)</title><link>/posts/2014/03/11/mopi-funded/</link><description>
+
+&lt;p&gt;A huge &lt;b&gt;thank you&lt;/b&gt; to all our Kickstarter backers! Our MoPi power management
+board for the Pi will now go into production :-)&lt;/p&gt;
+
+&lt;p&gt;If you missed &lt;a class="cow-url" href="http://kck.st/1gK5U3t"&gt;the Kickstarter&lt;/a&gt; and want to sign up
+for the retail version, use the form below, or surf on over to
+&lt;a class="cow-url" href="http://pi.gate.ac.uk/mopi/"&gt;the MoPi page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--% PREORDER FORM HERE--&gt;
+
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Tue, 11 Mar 2014 00:00:00 +0000</pubDate><guid>tag:,2014-03-11:posts/2014/03/11/mopi-funded/</guid><category>kickstarter</category><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Last Chance to Back Mobile Pi Kickstarter!</title><link>/posts/2014/03/07/mopi-last-chance/</link><description>
+&lt;h2 class="cow-heading"&gt;[MoPi is &lt;b&gt;mobile&lt;/b&gt;, &lt;b&gt;hot-swap&lt;/b&gt; and &lt;b&gt;24/7 power&lt;/b&gt; for the Raspberry Pi.
+&lt;a class="cow-url" href="/pages/get-mopi.html"&gt;How to order.&lt;/a&gt;]&lt;/h2&gt;
+
+&lt;p&gt;Our MoPi power management board for the Pi has had a fantastic response
+&lt;a class="cow-url" href="http://kck.st/1gK5U3t"&gt;on Kickstarter&lt;/a&gt; (a big &lt;b&gt;thanks&lt;/b&gt; to all our backers!).&lt;/p&gt;
+
+&lt;p&gt;This weekend is your last chance to back the project, which ends next Tuesday
+(11th March 2014).&lt;/p&gt;
+
+&lt;p&gt;MoPi is mobile and 24/7 power for the Pi. On your bike, up a tree, or for your
+home server:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;multiple inputs: standard batteries, car power sockets, old laptop supplies,
+  solar panels, ...&lt;/li&gt;
+&lt;li&gt;hot-swap power replacement without stopping work&lt;/li&gt;
+&lt;li&gt;shutdown the Pi cleanly when batteries discharge&lt;/li&gt;
+&lt;li&gt;integrated on/off switch&lt;/li&gt;
+&lt;li&gt;UPS (uninterruptible power) when using both batteries and mains&lt;/li&gt;
+&lt;li&gt;on-board LED indicators and on-Pi notifications&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And it even fits in the Pibow (and other popular cases)...  More at
+&lt;a class="cow-url" href="http://kck.st/1gK5U3t"&gt;http://kck.st/1gK5U3t&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;During the crowdfunding campaign we've unlocked these stretch goals: screw
+terminals, stackable headers, remoting pads, self-resetting fuse, two-way
+communication, remote power-off, 3.3V supply, timer-based wake-up.&lt;/p&gt;
+
+&lt;p&gt;Next up: taking delivery of the 3rd set of prototype boards (the PCBs are on
+order), implementing the new functions and testing, testing, testing... Then
+volume production and delivery.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://kck.st/1gK5U3t"&gt;Join us?!&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate><guid>tag:,2014-03-07:posts/2014/03/07/mopi-last-chance/</guid><category>kickstarter</category><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>A Pi Bank for Sheffield Schools</title><link>/posts/2014/03/02/schools-pi-bank/</link><description>
+
+&lt;p&gt;We're putting together a bunch of Pi kits to lend out to Sheffield Schools.&lt;/p&gt;
+
+&lt;p&gt;This has been in the planning stages for a while now but a) we're finally
+ready to go and b) &lt;a class="cow-url" href="https://twitter.com/stretchyboy"&gt;Martyn Eggleton&lt;/a&gt; from
+&lt;a class="cow-url" href="http://access-space.org/"&gt;Access Space&lt;/a&gt; had the great idea of calling it a
+&lt;em&gt;Pi Bank&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a class="cow-url" href="http://www.sheffield.ac.uk/dcs/"&gt;Department of Computer Science&lt;/a&gt; at the
+&lt;a class="cow-url" href="http://www.sheffield.ac.uk/"&gt;University of Sheffield&lt;/a&gt; has previously given
+away 50 kits as part of our &lt;a class="cow-url" href="http://ambassadors.rcweb.dcs.shef.ac.uk/"&gt;Ambassadors programme&lt;/a&gt;, but there's also been a lot of interest from schools
+who would like a visit with some Pi kits to get an idea of how they should get
+started with the Pi in the new curricula and so on.&lt;/p&gt;
+
+&lt;p&gt;Hence: a Pi Bank, with kits to take out around and about. The Uni has promised
+to bung us some dosh to kick it off, and &lt;a class="cow-url" href="http://www.pimoroni.com/"&gt;Pimoroni&lt;/a&gt;
+are going to chip in too :-)&lt;/p&gt;
+
+&lt;p&gt;We'll include the basic Pi setup, and some very simple GPIO
+&lt;a class="cow-url" href="/pages/basics.html"&gt;electronics
+projects&lt;/a&gt;. Later we'll add materials for the camera and for
+&lt;a class="cow-url" href="http://airpi.es/"&gt;AirPi&lt;/a&gt; (from our
+&lt;a class="cow-url" href="https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi"&gt;Mobile Pi project&lt;/a&gt;). If you have ideas about other good stuff to include
+please leave a comment or tweet us on &lt;a class="cow-url" href="https://twitter.com/pitronics"&gt;@PiTronics&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/ambassadors/pi-oneers-003-300x450.jpg" alt="Pi-Oneers at the Cutlers
+2013-10-02-children-and-animals.yam-Ambassadors day" width="300"&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/schools.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Sun, 02 Mar 2014 00:00:00 +0000</pubDate><guid>tag:,2014-03-02:posts/2014/03/02/schools-pi-bank/</guid><category>schools</category><category>education</category><category>pi</category><category>raspberrypi</category><category>gate</category><category>pi bank</category></item><item><title>Stretch! Bigger Plans for Mobile Pi Kickstarter</title><link>/posts/2014/02/12/stretch-goals/</link><description>
+
+&lt;p&gt;Our Kickstarter has got off to a flying start (thanks to all our backers!) :-)&lt;/p&gt;
+&lt;h2 class="cow-heading"&gt;[MoPi is &lt;b&gt;mobile&lt;/b&gt;, &lt;b&gt;hot-swap&lt;/b&gt; and &lt;b&gt;24/7 power&lt;/b&gt; for the Raspberry Pi.
+&lt;a class="cow-url" href="/pages/get-mopi.html"&gt;How to order.&lt;/a&gt;]&lt;/h2&gt;
+
+&lt;p&gt;Now that we know we can deliver the basic device we've defined &lt;em&gt;Stretch Goals&lt;/em&gt;
+to add to the crowdfunding project. They include a bunch of improvements,
+extra functions and extra rewards that we can deliver if we attract more
+backers. They're now up on the main page &amp;mdash; &lt;a class="cow-url" href="http://tinyurl.com/mobile-pi"&gt;http://tinyurl.com/mobile-pi&lt;/a&gt; and
+scroll down to Section 5 near the end &amp;mdash; and here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-section-anchor" name="section-1."&gt;&lt;/a&gt;&lt;h1 class="cow-title-heading"&gt;&lt;span class="cow-sec-number"&gt;1. &lt;/span&gt;Stretch Goals&lt;/h1&gt;
+
+&lt;p&gt;Thanks to our backers so far we're going beyond our baseline. We've figured
+out a bunch of extras we can offer in MoPi if we get further (and the level of
+funding we'll need to make them viable):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;150% (unlocked!): &lt;b&gt;screw terminals&lt;/b&gt;, &lt;b&gt;stackable headers&lt;/b&gt;, &lt;b&gt;remoting pads&lt;/b&gt;
+  and &lt;b&gt;self-resetting fuse&lt;/b&gt; added&lt;/li&gt;
+&lt;li&gt;175% (nearly there!): &lt;b&gt;two-way communication&lt;/b&gt; and &lt;b&gt;remote power-off&lt;/b&gt; added&lt;/li&gt;
+&lt;li&gt;200%: &lt;b&gt;3.3V supply&lt;/b&gt; mod added&lt;/li&gt;
+&lt;li&gt;250%: &lt;b&gt;timer-based wake-up&lt;/b&gt; added&lt;/li&gt;
+&lt;li&gt;300%: &lt;b&gt;The PiBrush&lt;/b&gt; reward released&lt;/li&gt;
+&lt;li&gt;375%: &lt;b&gt;battery charging&lt;/b&gt; added&lt;/li&gt;
+&lt;li&gt;430%: &lt;b&gt;The HackCam&lt;/b&gt; reward released&lt;/li&gt;
+&lt;li&gt;590%: &lt;b&gt;input voltage boost&lt;/b&gt; added&lt;/li&gt;
+&lt;li&gt;999%: &lt;b&gt;The Pablet&lt;/b&gt; reward released&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When we reach &lt;u&gt;150% funded&lt;/u&gt; (nearly there!) we can make these improvements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Screw terminals&lt;/b&gt;. This will make it easier to connect all different types
+  of power supply (from batteries to water turbines) direct to MoPi.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Stackable headers&lt;/b&gt;. We'll put a stacking header directly onto the board
+  (and adopt the same case lid style as for the
+  &lt;a class="cow-url" href="http://shop.pimoroni.com/products/model-a-pibow"&gt;Pibow Model A&lt;/a&gt;). This
+  will make it easier to connect multiple boards at once (e.g. MoPi + XLoBorg,
+  or MoPi + AirPi, or etc.).&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Remoting pads&lt;/b&gt;. We'll add remoting pads for the power switch to help with
+  applications where MoPi sits away from the edge of the case. This will allow
+  the connection of an additional power switch.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Self-resetting fuse&lt;/b&gt;. MoPi supplies power directly through the GPIO pins,
+  which bypasses the Pi's built-in fuse. We think this is safe &amp;mdash; but to be
+  doubly sure we'll add a fuse in MoPi.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When we get to &lt;u&gt;175% funded&lt;/u&gt; we will add:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Two-way communication&lt;/b&gt;. We're moving to I2C for communication between the
+  Pi and MoPi, which will mean complete configurability from the Pi. (It will
+  also minimise our use of GPIO pins and maximise the number of other Pi
+  add-on boards that we can run with.)&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Remote power off&lt;/b&gt;. You'll be able to tell MoPi to power down the Pi when
+  logged-in remotely (after a clean shutdown, of course).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If we get to &lt;u&gt;200% funded&lt;/u&gt; we will add the ability to mod MoPi for &lt;b&gt;3.3V
+operation&lt;/b&gt; (overpowering the Pi's on-board regulator and saving the power that
+is dissipated there, for weight and battery life critical applications like
+ballooning).&lt;/p&gt;
+
+&lt;p&gt;If we make it to &lt;u&gt;250% funded&lt;/u&gt; we'll add timer-based wakeup &amp;mdash; tell MoPi
+what time you want your Pi to wakeup, then power it down and MoPi will boot
+the Pi as requested.&lt;/p&gt;
+
+&lt;p&gt;If we get to &lt;u&gt;300% funded&lt;/u&gt; we will offer our virtual paintbrush rig &amp;mdash; &lt;b&gt;The
+&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/pibrush.html"&gt;PiBrush&lt;/a&gt;&lt;/b&gt; &amp;mdash; as a reward. PiBrush
+combines a MoPi with an accelerometer and is a great way to engage kids with
+Python programming and the physics of motion. When you've got one you've also
+got a programmable Pi-based Wii-remote-alike, and there are a ton of cool
+applications waiting.&lt;/p&gt;
+
+&lt;p&gt;Now, the one you've all been waiting for: &lt;b&gt;charging&lt;/b&gt;! That's by a long head
+our most requested feature &amp;mdash; but it is also pretty difficult :-(  In fact,
+dealing with lots of different chemistries may not be possible on a tiny
+device like MoPi (most manufacturers of charging ICs only support one
+chemistry per chip, for example, and some only support charging a &lt;em&gt;single
+cell&lt;/em&gt; per chip!). The other challenge is that we've got a really small surface
+area to work with on the PCB. So we need to get quite a bit further to have
+the necessary resources... but if we reach &lt;u&gt;375% funding&lt;/u&gt;, then we'll do it!
+We're not promising to charge every battery under the sun, but we'll provide
+charging for at least one popular configuration.&lt;/p&gt;
+
+&lt;p&gt;If we make it to &lt;u&gt;430% funded&lt;/u&gt; we'll offer &lt;b&gt;The HackCam&lt;/b&gt;, a Model A Pi, a
+camera module, wifi and a MoPi, wrapped up in a water-resistant box with a 3
+inch screen and the switching to make it work in the way you'd expect. The
+pictures are served directly to the web by an Apache running on the Pi, and
+with everything open source (of course) you can tweak the photographic
+parameters to your heart's content. A camera you can log in to!&lt;/p&gt;
+
+&lt;p&gt;Some applications would benefit from the addition of a
+&lt;b&gt;voltage boost&lt;/b&gt;, e.g. when you've got a small surface area of photo-voltaic
+(solar) panel and want to trickle charge a backup battery. If we reach &lt;u&gt;590%
+funding&lt;/u&gt; we'll add a buck booster to cater for these applications.&lt;/p&gt;
+
+&lt;p&gt;Finally (for now!) if we get to &lt;u&gt;999% funding&lt;/u&gt; we'll offer &lt;b&gt;The Pablet&lt;/b&gt;,
+combining MoPi with this
+&lt;a class="cow-url" href="http://shop.pimoroni.com/products/pitft-pibow"&gt;touchscreen and case rig&lt;/a&gt;.
+We'll mod the case to add a couple of PP3 clips, and an external power switch.
+Hey presto! a Pi-based &amp;quot;tablet&amp;quot;!&lt;/p&gt;
+
+&lt;p&gt;(And if we reach 4000% Lubo says we can attach a rocket to it, though I'm a
+little suspicious that he's not totally sincere on that one.)&lt;/p&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="http://tinyurl.com/mobile-pi"&gt;Join us and &lt;b&gt;set your Pi free&lt;/b&gt;&lt;/a&gt;!&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="http://tinyurl.com/mobile-pi"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Wed, 12 Feb 2014 00:00:00 +0000</pubDate><guid>tag:,2014-02-12:posts/2014/02/12/stretch-goals/</guid><category>kickstarter</category><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Mobile and 24/7 Power for the Pi: Kickstarter Launched!</title><link>/posts/2014/02/04/mobile-pi-kickstarter/</link><description>
+
+
+
+&lt;p&gt;We've just launched a
+&lt;a class="cow-url" href="https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi"&gt;crowd-funding campaign on Kickstarter&lt;/a&gt; for mobile and
+uninterruptible power for the Raspberry Pi!&lt;/p&gt;
+&lt;h2 class="cow-heading"&gt;[MoPi is &lt;b&gt;mobile&lt;/b&gt;, &lt;b&gt;hot-swap&lt;/b&gt; and &lt;b&gt;24/7 power&lt;/b&gt; for the Raspberry Pi.
+&lt;a class="cow-url" href="/pages/get-mopi.html"&gt;How to order.&lt;/a&gt;]&lt;/h2&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/logo-heli-text-500x359.png" alt="MoPi: Set your Pi Free!" width="500" height="359"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The ranks of Raspberry Pi add-ons gain a new member today with the launch of a
+crowdfunding campaign for &lt;em&gt;MoPi&lt;/em&gt;,
+&lt;a class="cow-url" href="https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi"&gt;Mobile Power for the Pi&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The board allows you to power the Pi from standard batteries, car power
+sockets, solar panels, old laptop supplies etc. You can then do hot-swap power
+replacement without stopping work, and an open source daemon will shut down
+the Pi cleanly when batteries discharge.&lt;/p&gt;
+
+&lt;p&gt;There's an integrated power switch, and the device doubles as a UPS
+(uninterruptible power supply) when both batteries and mains are connected.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/mopi-with-key.png"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/mopi-with-key-small.png" alt="MoPi prototype" width="500" height="358"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Battery power isn't new to the Pi, of course, but up to now there hasn't been
+a way to protect your Pi from getting an abrupt power cut when the batteries
+run out, which can lead to corruption of the SD card that the operating system
+is loaded from. &lt;/p&gt;
+
+&lt;!--%             TODO tailor this to the recipient--&gt;
+
+&lt;p&gt;Mobile Pi projects range from a simple bit of timelapse photography in the
+garden to driving Lego mindstorm robotics to near-orbit space adventures like
+&lt;a class="cow-url" href="http://www.bbc.co.uk/news/technology-23840596"&gt;Dave Akerman's balloons&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The video for the new board &amp;mdash;
+&lt;a class="cow-url" href="https://www.kickstarter.com/projects/hamishcunningham/mopi-mobile-and-24-7-power-for-the-raspberry-pi"&gt;now launched on Kickstarter&lt;/a&gt; &amp;mdash; includes a hackable &lt;em&gt;GoPro&lt;/em&gt;-type camera
+videoing downhill skiing, air pollution sensing and solar panel management.
+Details of other projects using the board prototypes are here on
+&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/mopi.html"&gt;Pi.GATE.ac.uk&lt;/a&gt;, for example this
+&lt;a class="cow-url" href="http://pi.gate.ac.uk/pages/pibrush.html"&gt;virtual paint brush rig&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The team behind the project include Linux and Pi specialists from the
+&lt;a class="cow-url" href="http://shef.ac.uk/dcs/"&gt;University of Sheffield&lt;/a&gt; &amp;mdash; and hardware
+people from Pimoroni Ltd., the company behind the iconic
+&lt;a class="cow-url" href="http://shop.pimoroni.com/collections/pibow"&gt;Pibow case&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="http://pi.gate.ac.uk/images/mopi/mopi-in-pibow-500x375.jpg"&gt;&lt;img class="cow-img" src="http://pi.gate.ac.uk/images/mopi/mopi-in-pibow-small.jpg" alt="MoPi in a Pibow" width="500" height="375"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can sign up from &amp;pound;18 (early bird discount), or spend more and pick up a
+UPS rig, or various outdoor experimenter kits (the latter with an orientation
+on schools and the new computing curriculum and the like).&lt;/p&gt;
+
+&lt;p&gt;Set your Pi free?!&lt;/p&gt;
+
+&lt;p&gt;&lt;hr&gt;
+Follow us on &lt;a class="cow-url" href="https://twitter.com/pitronics"&gt;@PiTronics&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Tue, 04 Feb 2014 00:00:00 +0000</pubDate><guid>tag:,2014-02-04:posts/2014/02/04/mobile-pi-kickstarter/</guid><category>kickstarter</category><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Video from the MadLab Pi Jam On-line</title><link>/posts/2013/12/23/madlab-jam-video/</link><description>
+
+&lt;p&gt;Forget Christmas TV, here's the hottest entertainment experience of the season
+&amp;mdash; video from the MadLab Pi Jam last November (just around the time when the 2
+millionth Pi was sold).&lt;/p&gt;
+
+&lt;p&gt;Here's &lt;a class="cow-url" href="http://youtu.be/MnZb9Gi4W24"&gt;my talk about MoPi&lt;/a&gt;, battery supplies,
+and the &lt;a class="cow-url" href="/pages/pibrush.html"&gt;PiBrush&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You'll find the other vids via &lt;a class="cow-url" href="https://www.youtube.com/user/TheBiglesp"&gt;Les
+Pounder's channel&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ho ho ho.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate><guid>tag:,2013-12-23:posts/2013/12/23/madlab-jam-video/</guid><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category><category>pibrush</category><category>raspberry</category></item><item><title>Fruitful Jam</title><link>/posts/2013/11/18/fruitful-jam/</link><description>
+
+&lt;p&gt;A big thanks to &lt;a class="cow-url" href="http://bennuttall.com/"&gt;Ben Nuttall&lt;/a&gt; and everyone who made
+the Manchester Raspberry Jam this weekend, and happy birthday to Ben and to
+&lt;a class="cow-url" href="http://shop.pimoroni.com/"&gt;Paul Beech&lt;/a&gt; (who turned 23 again on Saturday).&lt;/p&gt;
+
+&lt;p&gt;I learned a lot, and it was great to meet most of the Pi foundation people for
+the first time.&lt;/p&gt;
+
+&lt;p&gt;Two things in particular stood out for me, one about how to work with schools
+and one about the &lt;a class="cow-url" href="/pages/mopi.html"&gt;mobile hot-swap UPS battery gizmo&lt;/a&gt; that
+we've been building (and which I demo'd in &lt;a class="cow-url" href="/pages/pibrush.html"&gt;various
+applications at the Jam&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Schools.&lt;/b&gt; Several people suggested a Pi roadshow that goes into schools with
+introductory sessions, one for kids and one for teachers. This seems like a
+really good idea. &lt;a class="cow-url" href="http://www.shef.ac.uk/dcs/"&gt;Sheffield Computer Science&lt;/a&gt;
+has been running &lt;a class="cow-url" href="/posts/2013/10/02/children-and-animals/"&gt;an outreach
+programme&lt;/a&gt; which gave away 50 Pi kits to students from four local schools, and
+that has generated interest in other local schools who want to dip their toes
+in the new computing curriculum that's coming along. Unfortunately we've given
+away all our hardware! So I'll be looking for a way to club together with
+others in the region who are interested (probably under the auspices of the
+&lt;a class="cow-url" href="http://www.shu.ac.uk/research/cse/about-us/stem-unit"&gt;STEM ambassador
+programme&lt;/a&gt; being run by Linda and Richard and others down the hill at Hallam's
+&lt;a class="cow-url" href="http://www.shu.ac.uk/research/cse/"&gt;Center for Science Education&lt;/a&gt;).
+If this sounds like you, &lt;a class="cow-url" href="https://gate.ac.uk/g8/contact"&gt;give me a shout!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Mobile power.&lt;/b&gt; Both &lt;a class="cow-url" href="http://www.daveakerman.com/"&gt;Dave Akerman&lt;/a&gt;
+&lt;a class="cow-url" href="http://www.raspberrypi.org/archives/author/eben"&gt;Eben Upton&lt;/a&gt; suggested that
+we could save battery life for our &lt;a class="cow-url" href="/pages/mopi.html"&gt;mobile Pi&lt;/a&gt; add-on board
+by supplying 3.3V to the Pi instead of 5V. There's nothing on the Pi board
+itself that runs on 5V &amp;mdash; the voltage was chosen in order to take advantage of
+the USB standard and the prevalence of micro-USB chargers. The 5V input is
+dropped to 3.3V using an &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Low-dropout_regulator"&gt;LDO linear regulator&lt;/a&gt; which effectively throws away some of the power supplied
+to the Pi (half a watt perhaps), and is &amp;quot;the hottest component on the board&amp;quot;
+as a result. Dave has had good results supplying 3.3 volts and unsoldering the
+LDO from the Pi board (he and his collaborator Anthony reported battery life
+improvements of around 50% using this method). Eben suggested that supplying
+e.g. 3.35 volts might be enough to overwhelm the LDO, removing the need to
+unsolder the component. Definitely worth some experimentation!&lt;span class="cow-footnote" name="footnote1"&gt;&lt;sup&gt;&lt;a href="#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;So thanks again to Ben, and best of luck with your move to the Pi foundation
+in Cambridge. Better start working on a moustache, though?&lt;/p&gt;
+
+&lt;p&gt;Some pics by &lt;a class="cow-url" href="https://twitter.com/TonyH1212"&gt;Tony Hughes&lt;/a&gt;...&lt;/p&gt;
+
+&lt;p&gt;Dave Jones demoing his great new Python API for the camera:
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10902836713/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="/images/madjam/dave-jones-picamera-640x480.jpg" alt="Dave Jones" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A camera in a lunchbox:
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10902517783/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="/images/madjam/pi-cam-640x480.jpg" alt="Lunch Cam" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Amy shows Ben &lt;b&gt;The Cake&lt;/b&gt;:
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10902461595/sizes/z/in/set-72157637766800375/"&gt;&lt;img class="cow-img" src="/images/madjam/amy-and-ben-640x480.jpg" alt="Ben and Amy" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Dave and Babbage:
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10904637746/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="/images/madjam/dave-and-babbage-640x480.jpg" alt="Dave and Babage" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Clive does The Matrix:
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10904207966/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="/images/madjam/clive-matrix-640x480.jpg" alt="Clive Matrix" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Paul explains how big the one that got away was:
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10904384693/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="/images/madjam/paul-fishing-640x480.jpg" alt="Paul Fishing" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The author thinking he has cunningly hidden his bald patch from the crowd but
+forgetting about the mirror:
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10901782915/in/set-72157637766800375"&gt;&lt;img class="cow-img" src="/images/madjam/baldy-640x480.jpg" alt="Baldy" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;It's power, Jim, but not as we know it!&amp;quot; (MoPi second prototype.)
+&lt;a class="cow-url" href="http://www.flickr.com/photos/38750704@N07/10902307686/in/set-72157637766800375/"&gt;&lt;img class="cow-img" src="/images/madjam/mopi-again-640x480.jpg" alt="MoPi again" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;span class="cow-footnote-section"&gt;
+&lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
+&lt;p&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote1"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote1"&gt;The
+external USB connections would not be powered in this configuration, of
+course, but for long-life standalone applications &amp;mdash; like Dave's balloon
+flights &amp;mdash; the technique can work.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+&lt;/span&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate><guid>tag:,2013-11-18:posts/2013/11/18/fruitful-jam/</guid><category>schools</category><category>jam</category><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category><category></category></item><item><title>Mobile Hot-Swap Power for the Pi</title><link>/posts/2013/11/14/mopi-proto2/</link><description>
+&lt;h2 class="cow-heading"&gt;[MoPi is &lt;b&gt;mobile&lt;/b&gt;, &lt;b&gt;hot-swap&lt;/b&gt; and &lt;b&gt;24/7 power&lt;/b&gt; for the Raspberry Pi.
+&lt;a class="cow-url" href="/pages/get-mopi.html"&gt;How to order.&lt;/a&gt;]&lt;/h2&gt;
+
+&lt;p&gt;Mobile power for the Pi &amp;mdash; easy on the one hand, hard on the other: it is easy
+to plug in a 5v battery pack &amp;mdash; but when it runs out your Pi gets a power cut
+that might well corrupt the SD card.&lt;/p&gt;
+
+&lt;p&gt;Over the last year we've been designing what we hope is the perfect mobile
+power solution for the Pi, which we're calling &lt;a class="cow-url" href="/pages/mopi.html"&gt;MoPi&lt;/a&gt;, and
+we've just taken delivery of the second generation prototype. I think it does
+pretty much everything you could want for your Pi on the go:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;it will accept multiple sources, including standard AA batteries, or your
+  car cigarette lighter, or an old laptop power supply or etc.&lt;/li&gt;
+&lt;li&gt;it will let you do hot-swap power replacement without stopping work&lt;/li&gt;
+&lt;li&gt;it will shutdown your Pi cleanly if the battery charge level gets too low,
+  and it has a neat little power switch on the top to save you logging in to
+  shutdown at other times,&lt;/li&gt;
+&lt;li&gt;it behaves like a UPS&lt;span class="cow-footnote" name="footnote1"&gt;&lt;sup&gt;&lt;a href="#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt; when the
+  Pi is plugged into a mains supply&lt;/li&gt;
+&lt;li&gt;and it even fits in the Pibow (and other well-known Pi cases)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/mopi/proto2-01-500x379.jpg" alt="mopi prototype 2/1" width="500" height="379"&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;span class="cow-footnote-section"&gt;
+&lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
+&lt;p&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote1"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote1"&gt;UPS: Uninterruptible Power Supply&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+&lt;/span&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate><guid>tag:,2013-11-14:posts/2013/11/14/mopi-proto2/</guid><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category><category></category></item><item><title>A Raspbian Wrapper for Wiring Pi</title><link>/posts/2013/10/09/wiring-pi-package/</link><description>
+
+&lt;p&gt;&lt;em&gt;Packaging the WiringPi library for Raspbian&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;A lot of our recent projects have used the excellent
+&lt;a class="cow-url" href="http://wiringpi.com"&gt;WiringPi library&lt;/a&gt; to &lt;a class="cow-url" href="/pages/basics.html#gpio-software"&gt;talk to the Pi's electronics&lt;/a&gt; from software. A small frustration in this process
+has been the library's lack of integration into Raspbian... So I've written
+the code needed to do this, and made it available 
+&lt;a class="cow-url" href="https://github.com/hamishcunningham/wiringpi/"&gt;from GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Pi's default operating system,
+&lt;a class="cow-url" href="http://www.raspbian.org/"&gt;Raspbian&lt;/a&gt;, is a version of 
+&lt;a class="cow-url" href="http://www.debian.org/"&gt;Debian&lt;/a&gt;&lt;span class="cow-footnote" name="footnote1"&gt;&lt;sup&gt;&lt;a href="#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;, and has a very powerful system
+for distributing software and software updates. This system uses &lt;tt&gt;.deb&lt;/tt&gt; files
+containing &lt;em&gt;packaged&lt;/em&gt; versions of software, and it was the means to create one
+of these that was missing for WiringPi.&lt;/p&gt;
+
+&lt;p&gt;Now you can install WiringPi without having to download or compile it, like
+this:&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class="prettyprint lang-bash"&gt;
+  wget https://raw.github.com/hamishcunningham/wiringpi/master/package/2.13/unstable/wiringpi_2.13_armhf.deb
+  sudo dpkg -i ./wiringpi_2.13_armhf.deb
+&lt;/pre&gt;Hopefully Gordon will find time to pull my changes into his own repository and
+pass the package on to the Raspbian people one of these days, which will make
+the process even easier.&lt;/p&gt;
+
+&lt;p&gt;Gordon also has lots of good examples and reference materials on his site,
+like this &lt;a class="cow-url" href="http://wiringpi.com/examples/blink/"&gt;Blink project&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="/images/wiring-pi-bbd.jpg"&gt;&lt;img class="cow-img" src="/images/wiring-pi-bbd-500x295.jpg" alt="A
+WiringPi breadboard layout" width="500" height="295"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Well worth a visit!&lt;/p&gt;
+
+
+&lt;!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/package.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;span class="cow-footnote-section"&gt;
+&lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
+&lt;p&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote1"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote1"&gt;To be picky, the Pi's
+default operating system's full title would be &lt;em&gt;the
+&lt;a class="cow-url" href="http://www.raspbian.org/"&gt;Raspbian&lt;/a&gt; distribution of
+&lt;a class="cow-url" href="http://www.debian.org/"&gt;Debian&lt;/a&gt; &lt;a class="cow-url" href="http://www.gnu.org/"&gt;GNU&lt;/a&gt;
+&lt;a class="cow-url" href="http://www.linuxfoundation.org/"&gt;Linux&lt;/a&gt;&lt;/em&gt;.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+&lt;/span&gt;
+&lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"&gt;&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Wed, 09 Oct 2013 00:00:00 +0100</pubDate><guid>tag:,2013-10-09:posts/2013/10/09/wiring-pi-package/</guid><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category><category>software</category><category>packaging</category><category>raspbian</category></item><item><title>Winking Pi: Solving the IP Address Catch-22</title><link>/posts/2013/08/25/winking-pi/</link><description>
+
+&lt;p&gt;I can fit a Pi in my overnight bag, but I can't fit a monitor. How can I
+remote log into my Pi when I'm on the road? This is a Catch-22 &amp;mdash; I need a
+network address (an &lt;em&gt;IP address&lt;/em&gt;) to log in, but to get the address I need to
+be logged in. &lt;/p&gt;
+
+&lt;p&gt;A related question: I want to connect my Pi to a new WiFi network, but to
+connect I need to give the beast the network SSID and passphrase &amp;mdash; and again
+I need to log in first...&lt;/p&gt;
+
+&lt;p&gt;There are several solutions to the first problem &amp;mdash; one good one is to set up
+your Pi so that it blinks its IP address on the status LED. For the second
+problem there are also several solutions, including editing the WiFi config on
+another machine that has an SD card reader, or setting up access to your
+phone's WiFi hotspot.&lt;/p&gt;
+
+&lt;p&gt;I've written a &lt;a class="cow-url" href="/pages/blinkip.html"&gt;Raspbian package called BlinkIP&lt;/a&gt; to do
+some of this stuff, and you can download it from our new
+&lt;a class="cow-url" href="https://launchpad.net/~hamish-dcs/+archive/pi-gate"&gt;Ubuntu-hosted package
+archive&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Happy networking :-)&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/blinkip.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Sun, 25 Aug 2013 00:00:00 +0100</pubDate><guid>tag:,2013-08-25:posts/2013/08/25/winking-pi/</guid><category>network</category><category>ip address</category><category>wifi</category><category>gpio</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Chasing Pine Martens</title><link>/posts/2013/08/05/chasing-pine-martens/</link><description>
+
+&lt;p&gt;I'm in Bulgaria in a house at the foot of mount Vitosha, on the outskirts of
+the capital, Sofia. Sofia is home to something approaching 2 million people
+(which is more than 10% of the population of the whole country), and many
+travel in and out each week to find work in the big city. Vitosha is the lungs
+of the city, and its slopes are the perfect place to stay if you're keen to
+walk in its forests, or ski, or just get some cool air in the heat of the
+summer. &lt;br&gt; &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Vitosha"&gt;&lt;img class="cow-img" src="/images/vitosha-1.jpg" alt="Mount Vitosha" width="400" height="243"&gt;&lt;/a&gt; &lt;br&gt; Sitting in the
+garden at dusk the other day, we spotted a couple of dark shapes scurrying
+along &amp;mdash; pine martens! Or possibly their smaller cousin the beech marten: &lt;br&gt;
+&lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Beech_marten"&gt;&lt;img class="cow-img" src="/images/beech-marten-1.jpg" alt="A beech marten" width="200" height="317"&gt;&lt;/a&gt; &lt;br&gt; They are beautiful creatures, but quite shy,
+and they only come out after dark... You can see where this is going &amp;mdash; I
+wonder if I can capture some images with a Pi, a motion sensor and a camera
+module?&lt;/p&gt;
+
+&lt;p&gt;Well, first things first, I'm going to need to put it on top of next door's
+shed in the path of the night-time run that the martens make on their way to
+hunt mice or steal chicken's eggs from our neighbours. So I need a good
+battery pack...&lt;/p&gt;
+
+&lt;p&gt;As Gray Girling points out in his excellent
+&lt;a class="cow-url" href="http://www.amazon.co.uk/Raspberry-Pi-Manual-practical-revolutionary/dp/0857332953/"&gt;Haynes manual&lt;/a&gt;, battery power for the Pi is harder than it looks at first
+sight. The Pi requires both fairly high current (at least for the Model B) and
+a quite stable voltage. And, as I found out when I when testing my first
+efforts, an unscheduled low voltage shutdown can corrupt the SD card image and
+leave you with an unbootable setup :-(&lt;/p&gt;
+
+&lt;p&gt;Time for an analysis of &lt;a class="cow-url" href="/pages/mopi.html"&gt;the perfect Pi battery pack&lt;/a&gt;, and
+Bulgaria is the perfect place to experiment with this stuff as it's crawling
+with electronics and computing engineers (having at one time been supplier of
+around half of the USSR's computer hardware). &lt;a class="cow-url" href="/pages/about.html#lubo"&gt;Lubo
+Bontchev&lt;/a&gt; of &lt;a class="cow-url" href="http://www.selcomltd.com/"&gt;Selcom custom electronics&lt;/a&gt; has
+worked on everything from solar panels to satelites and has now built Pi.GATE
+some prototypes for hot-swap mobile Pi power. Here's the regulator circuit on
+the left and the controller on the right:&lt;/p&gt;
+
+&lt;table&gt; &lt;tr&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/prototype-regulator-05.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/thumbs/prototype-regulator-05.jpg" alt="mopi prototype 5" width="200" height="194"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/prototype-controller-01.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/thumbs/prototype-controller-01.jpg" alt="mopi prototype 1" width="270" height="195"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The &lt;em&gt;regulator&lt;/em&gt; supplies the 5 volts at 1 amp that the Pi wants, and it has
+two input connectors and some clever circuitry to support hot-swap of battery
+packs. (In the picture we've got two packs attached, one full one and one
+discharged one, while we swap from one to the other.) The &lt;em&gt;controller&lt;/em&gt;
+monitors battery levels and reports them to the Pi (over 3 binary-coded GPIO
+pins, for example) and also drives an indicator LED.&lt;/p&gt;
+
+&lt;p&gt;Now, figuring out how to test all this stuff is a lot of hard work, so,
+natural shirker that I am, I borrowed my nephew Vlady to help. He came up with
+a great idea &amp;mdash; why not take a picture of the indicator LED whenever the GPIO
+level monitoring code detects a change? Here he is (in a photo taken from the
+Pi cam) at the &lt;em&gt;Eureka!&lt;/em&gt; moment:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cow-img" src="/images/vladi.jpg" alt="Vladimir" width="300" height="266"&gt;&lt;/p&gt;
+
+&lt;p&gt;Nice one V, I think you've got yourself a job :-;&lt;/p&gt;
+
+&lt;p&gt;Our first test managed to run the model B for nine hours using eight AA NiMH
+batteries (2400mAh cells) &amp;mdash; definitely promising!&lt;/p&gt;
+
+&lt;p&gt;Some more views of the regulator:&lt;/p&gt;
+
+&lt;table&gt; &lt;tr&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/prototype-regulator-01.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/thumbs/prototype-regulator-01.jpg" alt="mopi prototype 1" width="200" height="170"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/prototype-regulator-02.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/thumbs/prototype-regulator-02.jpg" alt="mopi prototype 2" width="200" height="155"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/prototype-regulator-03.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/thumbs/prototype-regulator-03.jpg" alt="mopi prototype 3" width="200" height="203"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/mopi/prototype-regulator-04.jpg"&gt;&lt;img class="cow-img" src="/images/mopi/thumbs/prototype-regulator-04.jpg" alt="mopi prototype 4" width="200" height="233"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Now, where have those pine martens got to?&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/mopi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Mon, 05 Aug 2013 00:00:00 +0100</pubDate><guid>tag:,2013-08-05:posts/2013/08/05/chasing-pine-martens/</guid><category>batteries</category><category>mo-pi</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Lego Engineering</title><link>/posts/2013/07/11/lego-engineering/</link><description>
+
+&lt;p&gt;There's Lego, and then there's LEGO:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="cow-url" href="http://www.wired.com/underwire/2013/05/largest-lego-x-wing/"&gt;&lt;img class="cow-img" src="/images/thumbs/wired-lego-xwing.jpg" alt="BIG LEGO" width="280" height="187"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you're planning on a monster like this with millions of bricks then you
+definitely need to call in the engineers (not least to move the beast around
+&amp;mdash; it weighs more than 20 tonnes!).&lt;/p&gt;
+
+&lt;p&gt;Not to be outdone, our resident &lt;a class="cow-url" href="/pages/about.html#fred"&gt;structural engineer&lt;/a&gt;
+has put together a disquisition on the joys of &lt;a class="cow-url" href="/pages/legocases.html"&gt;LEGO
+cases for the Pi&lt;/a&gt;, including this one that he built himself &amp;mdash;
+&lt;br&gt; &lt;a class="cow-url" href="/images/case/01case.jpg"&gt;&lt;img class="cow-img" src="/images/case/thumbs/01case.jpg" alt="A lego Pi
+case" width="200" height="150"&gt;&lt;/a&gt; &lt;br&gt; &amp;mdash; with nothing but a slide rule and a copy of Newton's
+&lt;em&gt;Principia&lt;/em&gt; to help him.&lt;/p&gt;
+
+&lt;p&gt;The result is not just a &lt;em&gt;thing&lt;/em&gt; of beauty, but a &lt;em&gt;process&lt;/em&gt; of beauty :-)&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/legocases.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Thu, 11 Jul 2013 00:00:00 +0100</pubDate><guid>tag:,2013-07-11:posts/2013/07/11/lego-engineering/</guid><category>lego</category><category>cases</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Learn When You're Young</title><link>/posts/2013/06/28/neural-plasticity/</link><description>
+
+&lt;p&gt;Learn when you're young, remember when you're old.&lt;/p&gt;
+
+&lt;p&gt;When I was 16 or so I was totally obsessed by electronics of one sort or
+another. (Ok, not &lt;em&gt;totally&lt;/em&gt;; there was also space in there for thinking about
+food and about one other subject which I'll leave as an exercise for the
+reader.) I particularly remember a project that put an FM radio in a TicTac
+box &amp;mdash; kind of like this beautiful
+&lt;a class="cow-url" href="http://www.mds975.co.uk/Content/trfradios03.html"&gt;match box radio&lt;/a&gt;... &lt;br&gt;
+&lt;a class="cow-url" href="http://www.mds975.co.uk/Images/radios/austin_hellier_MK484-2-001.jpg"&gt;&lt;img class="cow-img" src="/images/match-box-radio.jpg" alt="match box radio" width="500" height="369"&gt;&lt;/a&gt; &lt;br&gt;
+...only in a &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Tic_Tac"&gt;Tic Tac&lt;/a&gt; box.&lt;/p&gt;
+
+&lt;p&gt;Heady stuff. (Ok, not as heady as the third category of 16-year-old obsession,
+but still I used to spend hours poring over a hot &lt;a class="cow-url" href="http://www.maplin.co.uk/"&gt;Maplin&lt;/a&gt; catalogue planning my next foray into the tantalising world of
+transistors (or trannies), tantalum capacitors, thin film resistors and the
+like.)&lt;/p&gt;
+
+&lt;p&gt;Fast forward ahem years (ok &amp;mdash; 32, to be precise). As part of a
+ground-breaking excursion to the very frontiers of human knowledge (otherwise
+known as &lt;a class="cow-url" href="http://pi.gate.ac.uk/"&gt;pi.gate.ac.uk&lt;/a&gt;) I'm building circuits,
+figuring out which combinations of components will solve a particular problem,
+prototyping them virtually on &lt;a class="cow-url" href="https://www.circuitlab.com/"&gt;CircuitLab&lt;/a&gt;,
+prototyping them in hardware on a breadboard, and, finally, soldering up
+&amp;quot;production prototypes&amp;quot; on a stripboard. All good clean family fun, and useful
+to boot. (Thanks, &lt;a class="cow-url" href="http://www.raspberrypi.org/"&gt;Raspberry Pi&lt;/a&gt;, for making all
+this possible!)&lt;/p&gt;
+
+&lt;p&gt;A lot of the skills and knowledge that I'm using is stuff that I haven't used
+for the intervening thirty-odd years &amp;mdash; but they're still there. What you
+learn when you're young, and what you learn when you're &lt;em&gt;interested&lt;/em&gt;, stays
+with you. It's a neural plasticity thing.&lt;/p&gt;
+
+&lt;p&gt;An upshot of all this, is that putting together a simple circuit board on a
+Friday afternoon (instead of doing what I'm paid for, ahem) is a whole lot of
+fun. And the pictures are almost as interesting as Category Three (this may
+also be an age thing). Do let me know if you agree... here they
+are: &lt;/p&gt;
+
+&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;table&gt;
+&lt;tr&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/images/flood-alarm-detail-5.jpg"&gt;&lt;img class="cow-img" src="/images/thumbs/flood-alarm-detail-5.jpg" alt="p'eye candy" width="400"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/images/flood-alarm-detail-6.jpg"&gt;&lt;img class="cow-img" src="/images/thumbs/flood-alarm-detail-6.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt; &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;table&gt;
+&lt;tr&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/images/flood-alarm-detail-3.jpg"&gt;&lt;img class="cow-img" src="/images/thumbs/flood-alarm-detail-3.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/images/flood-alarm-detail-1.jpg"&gt;&lt;img class="cow-img" src="/images/thumbs/flood-alarm-detail-1.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &lt;p&gt;&lt;a class="cow-url" href="/images/flood-alarm-detail-2.jpg"&gt;&lt;img class="cow-img" src="/images/thumbs/flood-alarm-detail-2.jpg" alt="p'eye candy"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt; &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;!--
+%[ | %[
+| %(images/flood-alarm-detail-5.jpg,
+  %image(images/thumbs/flood-alarm-detail-5.jpg, p'eye candy, 280, 133))
+| %(images/flood-alarm-detail-6.jpg,
+  %image(images/thumbs/flood-alarm-detail-6.jpg, p'eye candy, 280, 281))
+| %] |
+---
+| %[
+| %(images/flood-alarm-detail-3.jpg,
+  %image(images/thumbs/flood-alarm-detail-3.jpg, p'eye candy, 280, 214))
+| %(images/flood-alarm-detail-1.jpg,
+  %image(images/thumbs/flood-alarm-detail-1.jpg, p'eye candy, 280, 154))
+| %(images/flood-alarm-detail-2.jpg,
+  %image(images/thumbs/flood-alarm-detail-2.jpg, p'eye candy, 280, 166))
+| %] | %]
+--&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Fri, 28 Jun 2013 00:00:00 +0100</pubDate><guid>tag:,2013-06-28:posts/2013/06/28/neural-plasticity/</guid><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>It's a Jungle Out There</title><link>/posts/2013/06/26/alternatives/</link><description>
+
+&lt;p&gt;For a couple of years now I've been working on some cheap home computing stuff
+that might scratch a couple of itches with one stone&lt;span class="cow-footnote" name="footnote1"&gt;&lt;sup&gt;&lt;a href="#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a set-top media center that doesn't cost a fortune, but does have a decent
+  web browser&lt;/li&gt;
+&lt;li&gt;a way of communicating with family and friends that doesn't involve getting
+  all those dodgy adverts from Facebook&lt;span class="cow-footnote" name="footnote2"&gt;&lt;sup&gt;&lt;a href="#footnote2"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;a worm-hole generator piped into 1980 and localised on my bald patch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I'm still waiting for the worm-hole thing, but the other stuff is getting very
+do-able, and the Raspberry Pi is definitely part of the picture. To test out
+various options I picked up a bunch of different bits of hardware that do jobs
+similar to the Pi in one way or other... And &lt;a class="cow-url" href="/pages/about.html#fred"&gt;Fred&lt;/a&gt; is
+busy putting them through their paces for &lt;a class="cow-url" href="/pages/hardware.html"&gt;this review
+article&lt;/a&gt;. He's taken some pics:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/apc8750.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/apc8750.jpg" alt="APC 8750" width="150" height="93"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://apc.io/products/8750a/"&gt;APC 8750&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/beagleboneblack.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/beagleboneblack.jpg" alt="Beagle Bone Black" width="150" height="100"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://beagleboard.org/Products/BeagleBone%20Black"&gt;Beagle Bone Black&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/cubieboard.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/cubieboard.jpg" alt="CubieBoard" width="150" height="109"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://cubieboard.org/"&gt;Cubieboard&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/dreamplug.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/dreamplug.jpg" alt="DreamPlug" width="150" height="96"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://www.globalscaletechnologies.com/t-dreamplugdetails.aspx"&gt;DreamPlug&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/minipc.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/minipc.jpg" alt="MiniPC" width="150" height="104"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="https://www.miniand.com/products/MK802%20Android%20Mini%20PC"&gt;MK802 Mini PC&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/pimodela.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/pimodela.jpg" alt="Pi Model A" width="150" height="100"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://www.raspberrypi.org/archives/3215"&gt;Pi Model A&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/pimodelbrev2.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/pimodelbrev2.jpg" alt="Pi Model B rev2" width="150" height="115"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://www.raspberrypi.org/faqs"&gt;Pi Model B&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="/images/hardware/tonidoplug.jpg"&gt;&lt;img class="cow-img" src="/images/hardware/thumbs/tonidoplug.jpg" alt="Tonido Plug" width="150" height="96"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;p&gt;&lt;a class="cow-url" href="http://www.tonidoplug.com/"&gt;TonidoPlug&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;We'll keep you posted as he digs the dirt on this bunch... But if he figures
+out the worm-hole generator thing I'm off to see all the Clash gigs again
+before anything else.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/hardware.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;span class="cow-footnote-section"&gt;
+&lt;h1 class="cow-heading"&gt;Footnotes&lt;/h1&gt;
+&lt;p&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote1"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote1"&gt;Mixed metaphors?
+Love 'em!&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a class="cow-footnote-anchor" name="footnote2"&gt;&lt;/a&gt;
+&lt;span class="cow-footnote-text" name="footnote2"&gt;&amp;quot;Meet your dream partner at
+  our new site, exclusively for the balding and podgy!&amp;quot; A friend of mine
+  claims that the only reason I get dodgy adverts is because I visit dodgy
+  sites with my cookies turned on, but I'm sure there's no truth in that at
+  all. And I'll sue.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+&lt;/span&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Wed, 26 Jun 2013 00:00:00 +0100</pubDate><guid>tag:,2013-06-26:posts/2013/06/26/alternatives/</guid><category>hardware</category><category>pi-alikes</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Help! My Toast is Burning!</title><link>/posts/2013/06/10/notipifications/</link><description>
+
+&lt;p&gt;No matter how much you love your Pi, some time or other you will inevitably be
+forced to leave it behind while you do something boring like go to work, or
+listen to your parents bang on about the need to get qualified, or another of
+those little annoyances that life seems so full of. Hey ho. If your Pi is
+&lt;a class="cow-non-existant-url" href="/posts/2013/04/11/sensing-and-responding/"&gt;running a sensor&lt;/a&gt; that you need
+to be kept in touch with, then you need a way of getting your Pi to notify you
+when something important happens. &lt;a class="cow-url" href="/pages/about.html#hamish"&gt;I&lt;/a&gt; use our
+&lt;a class="cow-url" href="/pages/basics.html#flood-alarm"&gt;flood alarm&lt;/a&gt; to keep a check on some dodgy
+plumbing in my basement, for example, and need to know PDQ if the house starts
+to fill up with cold wet stuff.&lt;/p&gt;
+
+&lt;p&gt;Our latest tutorial takes us through three options for &lt;a class="cow-url" href="/pages/notipi.html"&gt;telling the outside world&lt;/a&gt; about Stuff Going On from your Pi:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;via SMS text message to your phone, using &lt;a class="cow-url" href="/pages/notipi.html#bulk-sms"&gt;a web service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;via SMS using &lt;a class="cow-url" href="/pages/notipi.html#nokia-sms"&gt;a phone&lt;/a&gt; attached to the Pi&lt;/li&gt;
+&lt;li&gt;via a &lt;a class="cow-url" href="/pages/notipi.html#pi-twitter"&gt;Twitter post&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Happy notipifications ☺&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/notipi.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Mon, 10 Jun 2013 00:00:00 +0100</pubDate><guid>tag:,2013-06-10:posts/2013/06/10/notipifications/</guid><category>software</category><category>linux</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Stay Dry Cheaply</title><link>/posts/2013/06/05/stay-dry-cheaply/</link><description>
+
+&lt;p&gt;One of the projects in our &lt;a class="cow-url" href="/pages/basics.html"&gt;basic pi-tronics&lt;/a&gt; tutorial is
+a &lt;a class="cow-url" href="/pages/basics.html#flood-alarm"&gt;simple flooding alarm&lt;/a&gt; which senses
+unwanted water flows and sends a text message (or makes a tweet, or etc.) to
+give you a heads up before things get extremely damp.&lt;/p&gt;
+
+&lt;p&gt;This type of thing is a good illustration of how the Pi can result in &lt;b&gt;really
+cheap&lt;/b&gt; solutions &amp;mdash; I just came across a commercial alternative to this
+circuit (but without the SMS functions) that costs more than &amp;pound;400! The
+Pi-based version has a total materials cost of around &amp;pound;50. Quite a saving.&lt;/p&gt;
+
+&lt;!--% http://www.serverscheck.com/--&gt;
+
+
+&lt;p&gt;That's not to say that the commercial version is overpriced; it comes in a
+lovely metal box, has full service and support behind it, etc. etc. But for
+someone who just wants something simple and cheap (and fun to build!) the Pi
+really wins on price.&lt;/p&gt;
+
+&lt;p&gt;Some of the reasons for this are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DIY is cheap, at least when the base materials are also cheap&lt;/li&gt;
+&lt;li&gt;a general purpose computer means much less need for (expensive) specialist
+  hardware&lt;/li&gt;
+&lt;li&gt;sharing: the rapid growth of the Pi community and their philosophy of
+  openness and sharing means it is easy to build on the work of others (which
+  also goes for the Linux operating system that the Pi runs on)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ok, I used up several evenings and weekends, but it was more fun than watching
+the telly :-)&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Wed, 05 Jun 2013 00:00:00 +0100</pubDate><guid>tag:,2013-06-05:posts/2013/06/05/stay-dry-cheaply/</guid><category>hardware</category><category>gpio</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Pigs and Pi</title><link>/posts/2013/05/19/pigs-and-pi/</link><description>
+
+&lt;p&gt;I have a friend and colleague called Angus (fellow member of the
+silly-name-for-an-Englishman club) who is one of surely very few people who
+are both computer programmers and pig farmers. Down on the farm Angus recently
+had some building work done, and the other day he had an illuminating chat
+with one of the guys who did the work. They were talking about smart phones,
+and this lad (he's 25) happenned to mention that his father (who's 49) had
+programmed several phone apps for the family business. It turned out that dad
+had (like Angus) been the proud owner of a ZX Spectrum in the 1980s, and had
+been inspired to progamme by the combination of cheap hardware and an open
+learning environment. His son, in contrast, was served up with a diet of
+Microsoft word processing, and knows enough about computing to fill in the
+back of a postage stamp as a result.&lt;/p&gt;
+
+&lt;p&gt;So: let's &lt;a class="cow-url" href="/pages/basics.html"&gt;get hacking on the Pi&lt;/a&gt;, and help get
+&lt;a class="cow-url" href="/pages/schools.html"&gt;Pi stuff into schools&lt;/a&gt; so that kids have a
+chance to stay ahead of the technology wave as producers and not just
+consumers!&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Sun, 19 May 2013 00:00:00 +0100</pubDate><guid>tag:,2013-05-19:posts/2013/05/19/pigs-and-pi/</guid><category>hardware</category><category>gpio</category><category>pi-tronics</category><category>schools</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>School's Out?</title><link>/posts/2013/05/18/schools-out/</link><description>
+
+&lt;p&gt;The argument for a new approach to computing in schools goes something like
+this:&lt;/p&gt;
+
+&lt;p&gt;Back in the Good Old Days (a period of time roughly co-extensive with the Lush
+Growth Age of &lt;a class="cow-url" href="http://en.wikipedia.org/wiki/Eben_Upton"&gt;Eben Upton&lt;/a&gt;'s
+tonsorial offering) there were hackable devices of an affordable nature (think
+BBC Micro, ZX Spectum and the like). Fast forward to the tennies and the home
+computers of today are either expensive machines that no one wants the rugrats
+to hack at, or games machines which the industry wastes billions on locking
+down so tightly that only an experienced hacker can get inside.&lt;/p&gt;
+
+&lt;p&gt;One of the main aims of &lt;a class="cow-url" href="http://www.raspberrypi.org/about"&gt;the Pi's
+inventors&lt;/a&gt; was to get back to a situation where kids can get their hands on a
+cheap, open platform that they can take control of, write code on, and
+generally be creative with, while learning to intervene in the digital world
+as more than just a consumer. (If all these skills migrate into mega-corp
+multinationals, the UK's computer science and engineering base &amp;mdash; not to
+mention your ordinary citizen &amp;mdash; stands less and less chance of joining the
+magic circles that dictate our technological futures.)&lt;/p&gt;
+
+&lt;p&gt;The fact that I'm writing this now, that new businesses like
+&lt;a class="cow-url" href="http://shop.pimoroni.com/"&gt;PiMoroni&lt;/a&gt; exist, and that there are more than 1
+million Raspberry Pis in the world demonstrates the wide currency of the idea.
+Even the UK government has woken up and taken notice! The UK's school
+curriculum for computing and IT is now in ferment, and with luck there will be
+a whole new ethos coming to &lt;a class="cow-url" href="/pages/schools.html"&gt;schools computing&lt;/a&gt; not too
+long from now.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/schools.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Sat, 18 May 2013 00:00:00 +0100</pubDate><guid>tag:,2013-05-18:posts/2013/05/18/schools-out/</guid><category>schools</category><category>education</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Feed me Seymour</title><link>/posts/2013/05/16/feed-me-seymour/</link><description>
+
+&lt;p&gt;What would happen if your vacuum cleaner developed a mind of its own? Have you
+always treated it kindly, and with respect? Or did you make it suck up stuff
+that it really probably would have been happier stearing clear of?&lt;/p&gt;
+
+&lt;p&gt;If Pete's &lt;a class="cow-url" href="/pages/piroomba.html"&gt;talking hoover&lt;/a&gt; project goes all AI on us, we might
+find out a little more about the thoughts of our cleaning appliances than
+anyone is ready for.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/piroomba.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Thu, 16 May 2013 00:00:00 +0100</pubDate><guid>tag:,2013-05-16:posts/2013/05/16/feed-me-seymour/</guid><category>hardware</category><category>gpio</category><category>pi-tronics</category><category>roomba</category><category>pi</category><category>raspberrypi</category><category>gate</category></item><item><title>Sensing and Responding</title><link>/posts/2013/04/11/sensing-and-responding/</link><description>
+
+&lt;p&gt;First things first: to begin learning about hacking electronics with the Pi, a
+good first step is to get the little beast to start interacting with the
+outside world &amp;mdash; lighting LEDs, responding to switches of various types,
+making alerts via Twitter or SMS.&lt;/p&gt;
+
+&lt;p&gt;We've made this &lt;a class="cow-url" href="/pages/basics.html"&gt;tutorial on the basics&lt;/a&gt; of sensing and
+responsing with the Pi, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="cow-url" href="/pages/basics.html#parent-alarm"&gt;a parent alarm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="cow-url" href="/pages/basics.html#flood-alarm"&gt;a flood alert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="cow-url" href="/pages/basics.html#resources"&gt;where to find out more&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Getting busy with a breadboard and a few simple components is a great way to
+get kids interested in the potential of the device (in ways that just
+introducing them to Scratch or Python may not). For example, when I gave a Pi
+to my niece (who's in her early teens) she was politely interested, but no
+more than that. She has already done some Scratch programming at school, and
+regularly uses a PC, a Kindle and a Blackberry. The Pi is just another
+computer for her &amp;mdash; and rather a slow one, at that. &lt;/p&gt;
+
+&lt;p&gt;I've had similar experiences with several other people. For those who are
+lucky enough to have lots of access to computers already, the fact that the Pi
+delivers a magical amount of oomph for such a cheap package is not enough to
+really spark their interest.&lt;/p&gt;
+
+&lt;p&gt;To try and make things more interesting, we've started some tutorial materials
+that hook up simple electronics to do things like warning you if your parent
+is coming up the stairs, or sending you an SMS if the bathroom is flooded, and
+the like. The first few projects are all about &lt;a class="cow-url" href="/pages/basics.html"&gt;sensing
+and responding&lt;/a&gt;: getting the Pi to interact with the outside world. All you'll
+need is a basic electronics kit (breadboard, resistors, LEDs, switches, a
+transistor or two, a buzzer, ...), some spare time and, preferably, no
+&lt;a class="cow-url" href="/pages/basics.html#warning"&gt;allergy to nerds&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;&lt;a class="cow-url" href="/pages/basics.html"&gt;Read the main article&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hamish Cunningham</dc:creator><pubDate>Thu, 11 Apr 2013 00:00:00 +0100</pubDate><guid>tag:,2013-04-11:posts/2013/04/11/sensing-and-responding/</guid><category>hardware</category><category>gpio</category><category>pi-tronics</category><category>pi</category><category>raspberrypi</category><category>gate</category></item></channel></rss>
