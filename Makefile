@@ -19,7 +19,9 @@ GROOVY=groovy
 JAVA=java
 SCRIPTS=$(BASEDIR)/bin
 Y2H=JAVA_OPTS=-Dfile.encoding=UTF-8 $(SCRIPTS)/yam2html
+PDC=pandoc -S -t html5 --template=bin/html.html5 --self-contained
 EPI=$(SCRIPTS)/enpelicanise.sh
+GETMETAS=$(SCRIPTS)/get-pdc-metas.sh
 FIXIMGS=$(SCRIPTS)/fix-image-sizes.groovy
 
 # generated targets #########################################################
@@ -71,6 +73,7 @@ help:
 # local stuff
 include Makefile.local
 
+# standard pelican stuff
 html: clean prepare $(OUTPUTDIR)/index.html \
         finalise google-site-verify robots favicon
 $(OUTPUTDIR)/%.html:
@@ -79,7 +82,6 @@ clean:
 	[ ! -d $(OUTPUTDIR) ] || find $(OUTPUTDIR) -mindepth 1 -delete
 regenerate: clean
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
-
 serve:
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server
 devserver:
@@ -135,7 +137,7 @@ record-image-size-diffs:
 
 # other targets ###############################################################
 
-# this does regeneration from GATEwiki sources and the like
+# this does regeneration from GATEwiki sources, Pandoc and the like
 prepare: local-prepare
 	@YAMS=`find $(INPUTDIR) -name '*.yam'`; \
         for f in $$YAMS; do \
@@ -143,6 +145,15 @@ prepare: local-prepare
           [ ! -e $$HTML -o $$f -nt $$HTML ] && \
             $(Y2H) $$f && $(EPI) $$HTML || :; \
         done
+	PDCS=`find $(INPUTDIR) -name '*.pdc'`; \
+	for f in $$PDCS; do \
+          BASE=`echo $$f |sed 's,\.pdc$$,,'`; HTML=$${BASE}.html; \
+          [ ! -e $$HTML -o $$f -nt $$HTML ] && \
+	    MD="`$(GETMETAS) $$f`" && \
+            echo $(PDC) $$f -M "extra-meta=$$MD" -o $$HTML && \
+            $(PDC) $$f -M "extra-meta=$$MD" -o $$HTML && \
+	    $(EPI) $$HTML || :; \
+	done
 
 # finalise the output directory
 finalise: local-finalise
