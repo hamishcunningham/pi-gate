@@ -232,7 +232,7 @@ archive-diff:
               ( echo $${f}: && \
                 diff -y -W 175 --suppress-common-lines $$f ../../output/$$f \
                 && echo ) || :; \
-          done
+          done |more
 	@echo 
 
 # delete all the .htmls dependent on .yams
