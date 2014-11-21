@@ -41,6 +41,7 @@ $for(include-before)$
 $include-before$
 $endfor$
 $if(title)$
+<!--
 <header>
 <h1 class="title">$title$</h1>
 $if(subtitle)$
@@ -53,6 +54,7 @@ $if(date)$
 <h3 class="date">$date$</h3>
 $endif$
 </header>
+-->
 $endif$
 $if(toc)$
 <nav id="$idprefix$TOC">

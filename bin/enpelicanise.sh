@@ -60,7 +60,7 @@ extract-metadata() {
       author)   AUTHOR="$*" ;;
       category) CATEGORY="$*" ;;
       pubdate)  PUBDATE="$*" ;;
-      save_as)   SAVEAS="$*" ;;
+      save_as)  SAVEAS="$*" ;;
       slug)     SLUG="$*" ;;
       status)   STATUS="$*" ;;
       summary)  SUMMARY="$*" ;;
@@ -82,9 +82,11 @@ replace-meta-tags-etc() {
     extract-metadata ${f}
 
     # default the metadata if not supplied
+    SAVEAS_MARKUP=""
+    STATUS_MARKUP=""
     [ -z "$AUTHOR" ]   && AUTHOR='Hamish Cunningham'
     [ -z "$CATEGORY" ] && CATEGORY='News'
-    [ ! -z "$SAVEAS" ] && SAVEASMARKUP="<meta name=\"save_as\" content=\"${SAVEAS}\" />"
+    [ ! -z "$SAVEAS" ] && SAVEAS_MARKUP="<meta name=\"save_as\" content=\"${SAVEAS}\" />"
     [ -z "$SLUG" ]     && SLUG=`basename ${f} |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
     [ -z "$SUMMARY" ]  && SUMMARY=`grep -i '<title' ${f} |sed -e 's,<title>,,I' -e 's,</title>,,I'`
     [ -z "$TAGS" ]     && TAGS="pi,raspberrypi,raspi,gate"
