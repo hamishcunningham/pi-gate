@@ -63,8 +63,9 @@ help:
 	@echo '   archive-diff          diff the archive against the output  '
 	@echo '   fix-rss-feeds         absolutise the URLs in the RSS feeds '
 	@echo '                                                              '
-	@echo '   post                  create files for a new post          '
-	@echo '   draft                 create files for a new draft post    '
+	@echo '   post                  create files for a new YAM post      '
+	@echo '   pdc-post              create files for a new Pandoc post   '
+	@echo '   draft                 create files for a new draft YAM post'
 	@echo '                                                              '
 	@echo '   checklinks/linchecker check links locally                  '
 	@echo '   s3list                list all the bucket .htmls           '
@@ -270,6 +271,26 @@ draft:
 	PUBNAME=`date "+%Y-%m-%d"`-$${SLUG}.yam; \
 	echo 'TODO: remove draft status & rename to '$$PUBNAME >>$${OUT}; \
 	echo created draft in $${OUT}
+pdc-post:
+	@[ -z "$${SLUG}" ] && { echo 'set SLUG to something!'; exit 1; } || :; \
+	[ -z "$${POSTFILE}" ] && POSTFILE=$${SLUG}.pdc; \
+        OUT=$(INPUTDIR)/$${POSTFILE}; \
+        [ -f $${OUT} ] || echo "---" > $${OUT}; \
+	echo "title: A post about $${SLUG}..." >> $${OUT}; \
+        echo "created $${OUT}"; \
+        git add -v $${OUT}; \
+        cd $(INPUTDIR)/images/articles >/dev/null && \
+        ln -s default.jpg $${SLUG}.jpg && cd thumbs >/dev/null && \
+        ln -s default.jpg $${SLUG}.jpg && cd .. && \
+	git add -v $${SLUG}.jpg thumbs/$${SLUG}.jpg; \
+	echo 'summary: TODO' >>$${OUT}; \
+	echo 'tags: TODO' >>$${OUT}; \
+	echo 'date: '`date` >>$${OUT}; \
+	echo '---' >>$${OUT}; \
+	echo >>$${OUT}; \
+        echo "TODO: supply better versions of $${SLUG}.jpg and " \
+          "thumbs/$${SLUG}.jpg in $(INPUTDIR)/images/articles" >>$${OUT}; \
+        echo; cat $${OUT}; echo
 
 # checklinks
 checklinks:
