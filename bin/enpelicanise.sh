@@ -42,7 +42,7 @@ extract-metadata() {
 <meta ,g' $INFILE >$$
   mv $$ $INFILE
 
-  unset AUTHOR CATEGORY PUBDATE SAVEAS SLUG STATUS SUMMARY TAGS
+  unset AUTHOR CATEGORY PUBDATE SAVEAS SLUG STATUS SUMMARY TAGS TEMPLATE
   OIFS="${IFS}"
   IFS='
 '
@@ -65,10 +65,11 @@ extract-metadata() {
       status)   STATUS="$*" ;;
       summary)  SUMMARY="$*" ;;
       tags)     TAGS="$*" ;;
+      template) TEMPLATE="$*" ;;
     esac
   done
   IFS="${OIFS}"
-  $DBG metadata for $INFILE is: AUTHOR=$AUTHOR, CATEGORY=$CATEGORY, PUBDATE=$PUBDATE, SAVEAS=$SAVEAS SLUG=$SLUG, STATUS=$STATUS, SUMMARY=$SUMMARY, TAGS=$TAGS
+  $DBG metadata for $INFILE is: AUTHOR=$AUTHOR, CATEGORY=$CATEGORY, PUBDATE=$PUBDATE, SAVEAS=$SAVEAS SLUG=$SLUG, STATUS=$STATUS, SUMMARY=$SUMMARY, TAGS=$TAGS, TEMPLATE=$TEMPLATE
 }
 
 # function to update the metatags in a set of .htmls, fix relative links, etc.
@@ -78,7 +79,7 @@ replace-meta-tags-etc() {
     echo enpelicanisating ${f} ...
 
     # allow over-riding of METAs from the file itself
-    unset AUTHOR CATEGORY PUBDATE SAVEAS SLUG STATUS SUMMARY TAGS
+    unset AUTHOR CATEGORY PUBDATE SAVEAS SLUG STATUS SUMMARY TAGS TEMPLATE
     extract-metadata ${f}
 
     # default the metadata if not supplied
@@ -89,8 +90,9 @@ replace-meta-tags-etc() {
     [ ! -z "$SAVEAS" ] && SAVEAS_MARKUP="<meta name=\"save_as\" content=\"${SAVEAS}\" />"
     [ -z "$SLUG" ]     && SLUG=`basename ${f} |sed -e 's,\.html$,,' -e 's,[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-,,'`
     [ -z "$SUMMARY" ]  && SUMMARY=`grep -i '<title' ${f} |sed -e 's,<title>,,I' -e 's,</title>,,I'`
-    [ -z "$TAGS" ]     && TAGS="pi,raspberrypi,raspi,gate"
     [ ! -z "$STATUS" ] && STATUS_MARKUP="<meta name=\"status\" content=\"${STATUS}\" />"
+    [ -z "$TAGS" ]     && TAGS="pi,raspberrypi,raspi,gate"
+    [ ! -z "$TEMPLATE" ] && TEMPLATE_MARKUP="<meta name=\"template\" content=\"${TEMPLATE}\" />"
 #TODO build assoc array of tags and allow default set as previous line
 
     # the base text to add into the header
@@ -100,7 +102,8 @@ replace-meta-tags-etc() {
 ${SAVEAS_MARKUP}\n\
 ${STATUS_MARKUP}\n\
 <meta name=\"summary\" content=\"${SUMMARY}\" />\n\
-<meta name=\"tags\" content=\"${TAGS}\" />"
+<meta name=\"tags\" content=\"${TAGS}\" />\n\
+${TEMPLATE_MARKUP}"
 
     # set date from filename, or PUBDATE from file, or use TODAY
     if `echo ${f} | grep -q '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-'`
