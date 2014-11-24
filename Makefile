@@ -146,15 +146,19 @@ prepare: local-prepare
           [ ! -e $$HTML -o $$f -nt $$HTML ] && \
             $(Y2H) $$f && $(EPI) $$HTML || :; \
         done
-	PDCS=`find $(INPUTDIR) -name '*.pdc'`; \
+	@PDCS=`find $(INPUTDIR) -name '*.pdc'`; \
 	for f in $$PDCS; do \
           BASE=`echo $$f |sed 's,\.pdc$$,,'`; HTML=$${BASE}.html; \
           [ ! -e $$HTML -o $$f -nt $$HTML ] && \
 	    MD="`$(GETMETAS) $$f`" && \
-            echo $(PDC) $$f -M "extra-meta=$$MD" -o $$HTML && \
             $(PDC) $$f -o $$HTML && \
-	    $(EPI) -M "extra-meta=$$MD" $$HTML || :; \
+	    echo $(EPI) -M "$$MD" $$HTML && \
+	    $(EPI) -M "$$MD" $$HTML || \
+	    :; \
 	done
+
+#           echo $(PDC) $$f -M "extra-meta=$$MD" -o $$HTML && \
+#    $(EPI) -M "extra-meta=$$MD" $$HTML || :; \
 
 # finalise the output directory
 finalise: local-finalise
