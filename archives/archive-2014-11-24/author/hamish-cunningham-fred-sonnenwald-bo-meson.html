@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Pi GATE — Sheffield Pi-Tronics - Hamish Cunningham, Fred Sonnenwald, Bo Meson</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+        height="55" width="46"></a></span>
+      <span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+      <span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+        alt="The University of Sheffield" height="55" width="113"</a><a
+          href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+            height="55" width="132"></a></span>
+    </span>
+    <div class="horizontal menu">
+      <ul>
+      <li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+      <!--
+      using a custom menu at present...
+      -->
+      <li><b><a href="#">Projects</a></b>
+      <!-- TODO generate this from content/pages/index -->
+        <ul>
+        <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+        <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+        <li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+        <li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+        <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+        <!--
+        <li><a href="/pages/snowcam.html">SnowCam: Off the Radar Cameras</a></li>
+        -->
+        <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+        <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+        <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+        <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+        <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+        </ul></li>
+      <li><b><a href="#">MoPi</a></b>
+        <ul>
+        <li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+        <li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+        <li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+        <li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+        </ul></li>
+      <!-- <li><a href="/">Blog</a></li> -->
+      <li><a href="/pages/download.html">Download</a></li>
+      <li><a href="/pages/contact.html">Contact</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
+
+  <!-- header menus (?!) -->
+  <div id="header">
+  </div>
+
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
+
+  <!-- main content div -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <div id="mainContent">
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+        <li ><a href="/category/news.html">News</a></li>
+    </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
+
+<!-- YUI responsive columns -->
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+    
+    
+
+      <aside id="featured" class="body">
+        <article>
+          <h1 class="entry-title"><a href="/posts/2013/09/16/open-culture-tech/">Open Culture Tech</a></h1> 
+<div id="socialButtons">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2013/09/16/open-culture-tech/"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/posts/2013/09/16/open-culture-tech/#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/posts/2013/09/16/open-culture-tech/"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div><footer class="post-info">
+  <a class="article-thumb" href="/images/articles/open-culture-tech.jpg"><img
+    src="/images/articles/thumbs/open-culture-tech.jpg"
+    height="75" width="75" alt="open-culture-tech"></a>
+    <span class="article-summary"><em>Future making: entering the age of open electronics</em>.</span>
+ <br/>   <!-- In <a href="/category/news.html">News</a> -->
+  
+Tags:<span class="tag-list"> <a href="/tag/schools.html">schools</a> <a href="/tag/maker-culture.html">maker culture</a> <a href="/tag/open-hardware.html">open hardware</a> <a href="/tag/open-culture.html">open culture</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a> <a href="/tag/ideas-bazaar.html">ideas bazaar</a>.</span>  <br/>   <span class="published" title="2013-09-16T00:00:00+01:00">Mon 16 September 2013,</span>
+  <a class="url fn" href="/author/hamish-cunningham-fred-sonnenwald-bo-meson.html">Hamish Cunningham, Fred Sonnenwald, Bo Meson</a>.
+</footer><!-- /.post-info -->
+
+<!--% *Stop press:* here's the webserver for the Pi-Cam exhibit:-->
+
+<!--% http://002.cam.pagekite.me/-->
+
+
+<p>On wednesday of this week Sheffield's
+<a class="cow-url" href="http://www.sheffield.ac.uk/ideasbazaar">Ideas Bazaar</a> will spring into
+action, mixing together a witch's brew of artists, scientists and engineers of
+all shapes, sizes, and personal hygene statuses. A select group of the Pi.GATE
+team (Bo, Fred and Hamish) have been bending their enormous collective
+intellect towards finding their way to that end of the campus without a
+satnav. If we make it, we'll let you know. (Want to join in? Hit the &quot;contact&quot;
+button above.)</p>
+
+<p>In the meantime, here are some of our notes for the event:</p>
+
+<p><img class="cow-img" src="/images/pi-brush-snap.jpg" alt="Pi Brush snapshot"></p>
+
+<p>There is a new conjunction emerging around open hardware, maker culture, and
+art. Parallels exist with the explosive change in pop culture pressaged by
+punk in the late 1970s: from the Homebrew Computer Club trading circuits and
+information; from Iain M. Banks' legacy of utopian technofutures, blending
+electro-augmented humanity with benevolent AI; from the wearable electronics
+kits (e.g. from <a class="cow-url" href="http://adafruit.com/">Adafruit.com</a> &mdash; echoing Lady Ada
+Lovelace, inventor of the computer algorithm); to the latest rounds of
+sampling and remix.</p>
+
+<p><a class="cow-url" href="http://en.wikipedia.org/wiki/List_of_open-source_hardware_projects">Open-source hardware</a> allows people to make their own robots, cameras,
+electrocardiagraph machines and even full computers by downloading schematics
+and building &mdash; incorporating any changes they need &mdash; and, typically, free
+open-source software is available to run these projects. 3D printers have
+helped this adoption of the open-everything ethos.</p>
+
+<p>As this site and many others testify, there are stacks of DIY projects based
+on the Raspberry Pi, and the flood showns no sign of slowing. The Pi is a
+small cheap computer which is very easy to cobble together with other devices.
+It has a large community behind it and is one of the drivers behind proposed
+changes in the <a class="cow-url" href="/pages/schools.html">schools ICT curriculum</a>.</p>
+
+<p>As part of a trend to open hardware and maker culture the Pi is also a vehicle
+for localist responses to climate change and peak oil: the more we manufacture
+locally the more secure we are (the Pi is made in Wales); the less energy we
+use the less carbon we pump into the atmosphere (the Pi is low power).</p>
+
+<p><b><em>Future Making</em></b> will be a rolling event over two days with around a dozen
+exhibits plus an hourly short stage show. The target audience is anyone
+curious, with secondary schools invited to attend if the timing of the event
+permits.  The performers are expected to be engineers, musicians, social
+scientists, dancers, hackers and visual artists.</p>
+
+<p>Some more of the gorey details (from
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/">our GitHub repository</a>):</p>
+
+<ul>
+<li><a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/open-culture-tech-small.pdf?raw=true">Open Culture Tech</a>: entering the age of open electronics</li>
+<li><a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/schools.pdf?raw=true">Open Schools Tech</a>: programming is back on the curriculum!</li>
+<li><a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/pi-brush-code.pdf?raw=true">Pi Brush</a>, perfect project for the digital Jackson Pollock</li>
+<li><a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/snowcam.pdf?raw=true">SnowCam</a>, a programmable spook-free camera</li>
+<li><a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/ideas-bazaar/posters/future-making.pdf?raw=true">Future Making</a>, exploring open {X} tech</li>
+</ul>
+
+<p>And to whet your appetite, a random selection of the artbites:</p>
+
+<p>Google gave $1m to fund Pi hardware for schools. Eben Upton (of the Pi
+foundation) is the Chesire Cat impersonator here:</p>
+
+<p><img class="cow-img" src="/images/google-donation-350x237.jpg" alt="Google schools donation.jpg" width="350" height="237"></p>
+
+<p>That's all very well, but &quot;At Boots science is for boys and pink princess toys
+are for girls&quot; &mdash;
+<a class="cow-url" href="http://minigirlgeek.wordpress.com/">Amy Mather</a> (14-year-old Pi hacker) at
+<a class="cow-url" href="http://wutheringbytes.com/">Wuthering Bytes</a>, September 14th 2013.</p>
+
+<p><img class="cow-img" src="/images/amymather-300x300.jpg" alt="Amy Mather" width="300" height="300"></p>
+
+<p>What to do? Commission J.K. Rowling to write The Adventures of Princess Pi?
+Seek venture capital for Pink Electronics Ltd.? Or order a large consignment
+of Barbie-the-Programmer dolls?</p>
+
+<p><img class="cow-img" src="/images/barbie-374x500.jpg" alt="Barbie the programmer" width="374" height="500"></p>
+
+<p>(from the <a class="cow-url" href="http://www.wisecampaign.org.uk/">WISE</a>
+<a class="cow-url" href="http://www.wisecampaign.org.uk/blogs/getset-women/2010/05/barbie">blog</a>).</p>
+
+<p>Perhaps games with a porpoise would interest girls? (Sorry.)</p>
+
+<p><img class="cow-img" src="/images/games-with-a-porpoise-350x228.png" alt="Games with a porpoise" width="350" height="228"></p>
+
+<p>Enough frivolity. Amy also said we need:</p>
+
+<ul>
+<li>better role models</li>
+<li>better opportunities</li>
+<li>no discrimination (<a class="cow-url" href="http://www.equalpayportal.co.uk/">equal pay for equal
+  work</a>!)</li>
+</ul>
+
+<p>Some organisations working in this direction (click through for details):</p>
+
+<p><a class="cow-url" href="http://www.stemnet.org.uk/"><img class="cow-img" src="/images/stemnet-339x115.gif" alt="StemNet" width="339" height="115"></a></p>
+
+<p><a class="cow-url" href="https://www.codeclub.org.uk/"><img class="cow-img" src="/images/code-club-150x150.svg" alt="Code Club" width="150" height="150"></a></p>
+
+<p>There are more; please <a class="cow-url" href="https://gate.ac.uk/g8/contact">ping us</a> to add to
+this list! And if you're in Sheffield this Wednesday, come say hi. Ciao.</p>
+
+
+
+<p><b><a class="cow-url" href="/pages/pibrush.html">Read the main article</a>.</b></p>
+<p>
+<b><a href="/posts/2013/09/16/open-culture-tech/#disqus_thread">Comment on this post</a>.</b>
+</p>        </article>
+<p class="paginator">
+    Page 1 / 1
+</p>
+      </aside><!-- /#featured -->
+      </ol><!-- /#posts-list -->
+      </section><!-- /#content -->
+  <section id="extras" class="body">
+  </section><!-- /#extras -->
+
+
+  </div>
+</div>
+
+  </div> <!-- #mainContent -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
+          1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
+        <a href="https://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
+        <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/author/hamish-cunningham-fred-sonnenwald-bo-meson.html">Print</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+        alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+          alt="The University of Sheffield" height="70" width="165"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

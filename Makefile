@@ -152,8 +152,8 @@ prepare: local-prepare
           [ ! -e $$HTML -o $$f -nt $$HTML ] && \
 	    MD="`$(GETMETAS) $$f`" && \
             echo $(PDC) $$f -M "extra-meta=$$MD" -o $$HTML && \
-            $(PDC) $$f -M "extra-meta=$$MD" -o $$HTML && \
-	    $(EPI) $$HTML || :; \
+            $(PDC) $$f -o $$HTML && \
+	    $(EPI) -M "extra-meta=$$MD" $$HTML || :; \
 	done
 
 # finalise the output directory

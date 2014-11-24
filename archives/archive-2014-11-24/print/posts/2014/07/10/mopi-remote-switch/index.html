@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Fitting a Remote Power Switch to MoPi</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> <!-- column 1 -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/posts/2014/07/10/mopi-remote-switch/" rel="bookmark"
+           title="Permalink to Fitting a Remote Power Switch to MoPi">Fitting a Remote Power Switch to MoPi</a></h1>
+<div id="socialButtons">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/posts/2014/07/10/mopi-remote-switch/"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/posts/2014/07/10/mopi-remote-switch/#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/posts/2014/07/10/mopi-remote-switch/"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+  <a class="article-thumb" href="/images/articles/mopi-remote-switch.jpg"><img
+    src="/images/articles/thumbs/mopi-remote-switch.jpg"
+    height="75" width="75" alt="mopi-remote-switch"></a>
+    <span class="article-summary"><em>Fitting a remote power switch to MoPi</em>.</span>
+ <br/>   <!-- In <a href="/category/news.html">News</a> -->
+  
+Tags:<span class="tag-list"> <a href="/tag/kickstarter.html">kickstarter</a> <a href="/tag/batteries.html">batteries</a> <a href="/tag/mo-pi.html">mo-pi</a> <a href="/tag/pi-tronics.html">pi-tronics</a> <a href="/tag/pi.html">pi</a> <a href="/tag/raspberrypi.html">raspberrypi</a> <a href="/tag/gate.html">gate</a>.</span>  <br/>   <span class="published" title="2014-07-10T00:00:00+01:00">Thu 10 July 2014,</span>
+  <a class="url fn" href="/author/hamish-cunningham.html">Hamish Cunningham</a>.
+</footer><!-- /.post-info -->      
+
+<p>Daniel T, one of our Kickstarter backers for <a class="cow-url" href="/pages/mopi.html">MoPi</a>, wanted
+to fit a remote power switch to his board. (It has one fitted, but if you're
+building something with a case and need the switch to be somewhere away from
+the Pi and/or MoPi then there are a couple of remoting pads on MoPi for the
+purpose.) Here's the result:</p>
+
+<!--% YOUTUBE REMOTE SWITCH CLIP HERE-->
+<p align="center"> <iframe width="560" height="315" src="//www.youtube.com/embed/y-VpN4tElQQ" frameborder="0" allowfullscreen></iframe> </p>
+
+
+<p>Daniel hasn't got the soldering bug yet :-) so I fitted one for him, and here
+are the pics...</p>
+
+<p>It is an easy job &mdash; just wire up an SPST push-to-make switch to the two pads
+next to the power switch:</p>
+
+<!--% %(images/mopi/remote-switch/remote-switch-1.jpg,-->
+
+<!--% %image(images/mopi/remote-switch/remote-switch-1-500x375.jpg, MoPi remote switch, 500, 375))-->
+
+
+<p><a class="cow-url" href="/images/mopi/remote-switch/remote-switch-3.jpg"><img class="cow-img" src="/images/mopi/remote-switch/remote-switch-3-500x375.jpg" alt="MoPi remote switch" width="500" height="375"></a></p>
+
+<p>And voila:</p>
+
+<p><a class="cow-url" href="/images/mopi/remote-switch/remote-switch-2.jpg"><img class="cow-img" src="/images/mopi/remote-switch/remote-switch-2-500x375.jpg" alt="MoPi remote switch" width="500" height="375"></a></p>
+
+<p>For my next trick, I will turn a pumpkin into a penguin. Watch this space.</p>
+
+
+<p><b><a class="cow-url" href="/pages/mopi.html">Read the main article</a>.</b></p>
+
+
+<br/> <br/>
+</html>

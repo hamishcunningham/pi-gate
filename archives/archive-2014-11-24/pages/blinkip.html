@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Blink IP</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+  <div id="topBar">
+    <span id="topLogo">
+      <span id="piLogo"><a href="http://raspberrypi.org/"><img src="/theme/images/raspi-logo.png" alt="Raspberry Pi" border="0"
+        height="55" width="46"></a></span>
+      <span id="strapLine"><a href="/">Sheffield<br/>Pi-Tronics</a></span>
+      <span id="gateLogo"><a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd-113x55.jpg"
+        alt="The University of Sheffield" height="55" width="113"</a><a
+          href="https://gate.ac.uk/"><img src="/theme/images/logo-gate.png" alt="GATE" border="0"
+            height="55" width="132"></a></span>
+    </span>
+    <div class="horizontal menu">
+      <ul>
+      <li><img src="/theme/images/arrow-right.jpg" height="40" width="40"/></li>
+      <!--
+      using a custom menu at present...
+      -->
+      <li><b><a href="#">Projects</a></b>
+      <!-- TODO generate this from content/pages/index -->
+        <ul>
+        <li><a href="/pages/basics.html">The Basics: an Introduction to Pi-Tronics</a></li>
+        <li><a href="/pages/mopi.html">Mobile Pi: Battery Packs and Power Supplies</a></li>
+        <li><a href="/pages/pibrush.html">PiBrush: Painting with the Pi and XLoBorg</a></li>
+        <li><a href="/pages/package.html">Packaging Software for the Pi</a></li>
+        <li><a href="/pages/hardware.html">Pi-Alikes: a Review of Single Board Computers</a></li>
+        <!--
+        <li><a href="/pages/snowcam.html">SnowCam: Off the Radar Cameras</a></li>
+        -->
+        <li><a href="/pages/legocases.html">LEGO Cases</a></li>
+        <li><a href="/pages/blinkip.html">Blink IP: Finding Your Address Without Login</a></li>
+        <li><a href="/pages/notipi.html">NotiPi: Sending SMS Messages, Tweets, Etc.</a></li>
+        <li><a href="/pages/piroomba.html">Roomba: a Pi on a Robot Vacuum Cleaner</a></li>
+        <li><a href="/pages/schools.html">The Pi in Schools, and the UK Curriculum</a></li>
+        </ul></li>
+      <li><b><a href="#">MoPi</a></b>
+        <ul>
+        <li><a href="/pages/mopi.html">Mobile Power for the Pi</a></li>
+        <li><a href="/pages/get-mopi.html">Buy MoPi</a></li>
+        <li><a href="/pages/images/mopi/quickstart/schematic6.png">MoPi Quick Start Guide</a></li>
+        <li><a href="/pages/mopi.html#userguide">MoPi User Guide</a></li>
+        </ul></li>
+      <!-- <li><a href="/">Blog</a></li> -->
+      <li><a href="/pages/download.html">Download</a></li>
+      <li><a href="/pages/contact.html">Contact</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      </ul>
+    </div>
+    
+    <!-- first row header links -->
+    <div id="topLoginEtc">
+      <form name="searchForm" method="GET" action="https://www.google.com/search" class="inlineForm">
+        <label class="pageLink" for="as_q">Search:</label>
+        <input type="text" name="as_q" size="6" maxlength="255">
+        <input type="hidden" name="as_sitesearch" value="pi.gate.ac.uk">
+      </form>
+    </div>
+  </div>
+
+  <!-- header menus (?!) -->
+  <div id="header">
+  </div>
+
+  <!-- sep, left/right bars, body and footer -->
+  <div id="topSeparator"> </div>
+
+  <!-- main content div -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  <div id="mainContent">
+  <!--
+  <header id="banner" class="body">
+    <nav>
+    <ul>
+        <li ><a href="/category/news.html">News</a></li>
+    </ul>
+    </nav>
+  </header>
+  -->
+  <!-- /#banner -->
+
+<!-- YUI responsive columns -->
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2"> <!-- column 1 -->
+        
+<section id="content" class="body">    
+    <h1 class="entry-title">Blink IP</h1>
+<div id="socialButtons">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/blinkip.html"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/pages/blinkip.html#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/pages/blinkip.html"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    
+    
+
+<p><em>What's my IP? Tools to find the Pi's IP address without logging in</em></p>
+
+
+<p><em><a class="cow-url" href="/pages/about.html#hamish">Hamish Cunningham</a>, August 2013</em></p>
+
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Introduction: Catch-22</a></li>
+<li>&nbsp;&nbsp;<a href="#section-1.1.">1.1. Getting the IP Address via <tt>ifconfig</tt></a></li>
+<li>&nbsp;&nbsp;<a href="#section-1.2.">1.2. Connecting to WiFi</a></li>
+<li><a href="#section-2.">2. Blink the Status LED</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.1.">2.1. Installing and Running</a></li>
+<li><a href="#section-3.">3. Write a File to the SD Card</a></li>
+<li><a href="#section-4.">4. Run PageKite</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.1.">4.1. Installing PageKite</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.2.">4.2. Configuring PageKite</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.3.">4.3. Connecting to Your Pi With PageKite</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.4.">4.4. Warning!!! Here Be Dragons!</a></li>
+<li><a href="#section-5.">5. Other Approaches</a></li>
+</ul></p></div>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-1."></a><h1 class="cow-heading"><span class="cow-sec-number">1. </span>Introduction: Catch-22</h1>
+
+<p>There's a familiar problem when you work with a Pi without a monitor &mdash; how to
+log in?</p>
+
+<p>You've plugged your Pi onto a perfectly ethernet connection, the operating
+system has worked its magic and the LINK LED is merrily blinking away to tell
+you that there's traffic on the wire... but you don't know the address! (Or:
+you've got a USB WiFi dongle, and an available network, but your Pi doesn't
+know the passphrase.)</p>
+
+<p>You need to IP address so you can log in (e.g. via <tt>ssh</tt>), but you need to log
+in to find out the IP address.
+<a class="cow-url" href="http://en.wikipedia.org/wiki/Catch-22_(logic)">Catch-22</a>!</p>
+
+<p>This page discusses various solutions to the problem:</p>
+
+<ol>
+<li>using the Pi'd status LED to <a class="cow-url" href="#blink">blink the IP number</a></li>
+<li>writing the IP address <a class="cow-url" href="#file">to file</a> on the SD card</li>
+<li>using the <a class="cow-url" href="#pagekite">PageKite</a> proxy system</li>
+</ol>
+
+<p>We'll also note <a class="cow-url" href="#other">some other approaches</a> at the end (e.g. sending an
+SMS).</p>
+
+<p>The rest of this section describes how to <a class="cow-url" href="#ifconfig">find the Pi's IP
+address</a> which will then be used by all the other methods, and also how to get
+your Pi to <a class="cow-url" href="#wifi">connect to a WiFi network</a> without logging in.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="ifconfig"></a></p><a class="cow-section-anchor" name="section-1.1."></a><h2 class="cow-heading"><span class="cow-sec-number">1.1. </span>Getting the IP Address via <tt>ifconfig</tt></h2>
+
+<p>All methods for informing you of the IP address require a way to get that
+address in the first place. For this we'll use the <tt>ifconfig</tt> command, which
+stands for &quot;interface configuration&quot;, the interfaces in question being the
+wired and wireless network ports on the Pi.</p>
+
+<p>If you open a terminal on your Pi and run <tt>ifconfig</tt> you'll see output
+something like this:</p>
+
+<pre>
+eth0      Link encap:Ethernet  HWaddr b8:00:eb:73:00:9a
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:75 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:75 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:10493 (10.2 KiB)  TX bytes:10493 (10.2 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr 00:0f:00:38:00:8a
+          inet addr:192.168.68.189  Bcast:192.168.68.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:856 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:499 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:122622 (119.7 KiB)  TX bytes:58536 (57.1 KiB)
+</pre>
+
+<p>This describes three network interfaces:</p>
+
+<ol>
+<li>the wired link, <tt>eth0</tt></li>
+<li>the &quot;loopback&quot; link, which is a virtual interface pointing back at the local
+  machine (or <em>localhost</em>)</li>
+<li>the wireless link, if one is connected, <tt>wlan0</tt></li>
+</ol>
+
+<p>Each link may (or may not) have an IP address. In the above, the wired link is
+not connected so has no address. The loopback link always has the same address
+&mdash; <tt>127.0.0.1</tt>, and is not interesting in this context as we can't use that
+address for logging in to our Pi. So in this case we're interested in the IP
+address given for <tt>wlan0</tt>, which is <tt>192.168.68.189</tt>.</p>
+
+<p>Here's a shell command which takes the output of <tt>ifconfig</tt>, picks out the
+first non-local IP address and splits it into it's four number groups:</p>
+
+<p><pre class="prettyprint lang-bash">
+MYIP=`ifconfig |grep -v 127.0.0.1 |grep 'addr:' | head -1 |\
+  sed -e 's,.*addr:,,' -e 's, .*,,' -e 's,\., ,g'`
+echo $MYIP
+</pre>The two <tt>grep</tt>s filter out</p>
+
+<ul>
+<li>the localhost address (using the <tt>-v</tt> flag to exclude all matching lines),
+  and then</li>
+<li>all lines that don't match the &quot;addr:&quot; pattern</li>
+</ul>
+
+<p>We use <tt>head -1</tt> to select only the first address. Finally, the <tt>sed</tt> (stream
+editor) command removes the &quot;addr:&quot; part of the line, then everything after
+the first space, and then changes all the &quot;.&quot;s to spaces.</p>
+
+<p>The output will be something like <tt>192 168 68 189</tt>. Now let's see how we can
+communicate that to the Pi's user.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="wifi"></a></p><a class="cow-section-anchor" name="section-1.2."></a><h2 class="cow-heading"><span class="cow-sec-number">1.2. </span>Connecting to WiFi</h2>
+
+<p>Another conundrum hits us when we've got a WiFi dongle connected to the Pi and
+there's a network available, but no way to tell the Pi about the network SSID
+and passphrase.</p>
+
+<p>The solution is to take the SD card to another machine, mount the filesystem
+and add the network details to the file
+<tt>/etc/wpa<span class="cow-escape">_</span>supplicant/wpa<span class="cow-escape">_</span>supplicant.conf</tt>. The simple cases look like this
+(for WPA):</p>
+
+<p><pre class="prettyprint lang-bash">
+network={
+  ssid=&quot;MyWifi&quot;
+  psk=&quot;1133557799&quot;
+  key_mgmt=WPA-PSK
+}
+</pre>...or this (for WEP):</p>
+
+<p><pre class="prettyprint lang-bash">
+network={
+  ssid=&quot;MyOtherWifi&quot;
+  key_mgmt=NONE
+  auth_alg=OPEN
+  wep_key0=2244668800
+}
+</pre>One very good policy, if you have a phone or a laptop that can create a wifi
+hotspot, is to put those details into your Pi's WPA config &mdash; then whenever
+you need to log into the Pi you can fire up your phone's network and your Pi
+will connect automagically. (A handy command to see what the connection is
+getting up to when logged in is this: <tt>wpa<span class="cow-escape">_</span>cli status</tt>.)</p>
+
+<p>Now let's look at how to get the IP from the Pi without logging in.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="blink"></a></p><a class="cow-section-anchor" name="section-2."></a><h1 class="cow-heading"><span class="cow-sec-number">2. </span>Blink the Status LED</h1>
+
+<p>The Pi has a set of LEDs in one corner of the board that convey various
+messages:</p>
+
+<p><img class="cow-img" src="/pages/images/status-led.jpg" alt="The status LED" width="500" height="498"> <br>
+(Image from:
+<a class="cow-url" href="http://www.rpiblog.com/2012/12/raspberry-pi-status-indicator-led-info.html">RPIBlog</a>.)</p>
+
+<p>One good option for IP address discovery is to make the status LED (which is
+marked either &quot;ACT&quot; &mdash; as in the image above &mdash; or &quot;OK&quot; depending on which
+revision you have). The question then, is &quot;who's going to run the code to
+blink the LED?&quot; I've written a daemon to do this &mdash; the code is
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/tree/master/blinkip">available on GitHub</a>, and described in the rest of this section.</p>
+
+<p>To access the Pi's status LED, we use the <tt>/sys/class</tt> tree, which makes the
+hardware available as <tt>leds/led0/brightness</tt>. We can define functions to turn
+the LED on and off like this<span class="cow-footnote" name="footnote1"><sup><a href="#footnote1">1</a></sup></span>:</p>
+
+<p><pre class="prettyprint lang-bash">
+  LED=/sys/class/leds/led0/brightness
+
+  bright() { echo 1 &gt;$LED; }
+  dark()   { echo 0 &gt;$LED; }
+</pre>And here are a couple of utility functions to pause for various durations:</p>
+
+<p><pre class="prettyprint lang-bash">
+  pause() { dark; sleep 2.5; }
+  shortpause() { dark; sleep 1; }
+</pre>We'll use these functions to blink the IP address, along with three
+conventions:</p>
+
+<ul>
+<li>each IP number group is separated from the rest by a period of rapid
+  blinking (which also signals the start and end of the whole sequence)</li>
+<li>each digit is blinked as a series of bright periods (of about a third of a
+  second each)</li>
+<li>when we have a zero we represent it as ten (so that we can distinguish zero
+  from the pauses between digits)</li>
+</ul>
+
+<p>These conventions are implemented like this:</p>
+
+<p><pre class="prettyprint lang-base">
+  rapid()  {                                # rapid blinking function
+    i=0
+    while [ $i -lt 15 ]                     # 15 rapid blinks
+    do
+      bright; sleep 0.05; dark; sleep 0.05  # 5 hundredths of a second
+      i=`expr $i + 1`                       # increment the loop index
+    done
+  }
+
+  showdigit() {                             # individual digit function
+    d=$1
+    [ $d = 0 ] &amp;&amp; d=10                      # show &quot;0&quot; as &quot;10&quot;
+    for((b=0; b&lt;$d; b++))                   # loop from 0 to the digit value
+    do
+      bright; sleep 0.3; dark; sleep 0.4
+    done
+  }
+</pre>Putting it all together, here's the function to blink the whole IP address:</p>
+
+<p><pre class="prettyprint lang-bash">
+  blink() {
+    rapid; rapid                            # blink rapidly to start with
+
+    for block in $1 $2 $3 $4                # cycle through each address block
+    do
+      numdigits=${#block}
+      for ((i=0; i &lt; $numdigits; i++))      # for each digit
+      do
+        pause
+        showdigit ${block:$i:1}             # call showdigit on 1 character
+      done
+
+      shortpause; rapid
+      shift
+    done
+  }
+</pre>We then call the function like this (using the code from <a class="cow-url" href="#ifconfig">the
+section on finding the IP</a>):</p>
+
+<p><pre class="prettyprint lang-bash">
+  MYIP=`ifconfig |grep -v 127.0.0.1 |grep 'addr:' | head -1 |\
+    sed -e 's,.*addr:,,' -e 's, .*,,' -e 's,\., ,g'`
+  blink $MYIP
+</pre>The complete code
+<a class="cow-url" href="https://github.com/hamishcunningham/pi-tronics/blob/master/blinkip/blinkip.sh">is here</a>.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="installing"></a></p><a class="cow-section-anchor" name="section-2.1."></a><h2 class="cow-heading"><span class="cow-sec-number">2.1. </span>Installing and Running</h2>
+
+<p>There's one final problem, though &mdash; who is going to call this program if I
+can't log in?! The answer is a <em>daemon</em>, a system-level service which gets run
+during operating system startup. We implemented one of these for our
+<a class="cow-url" href="/pages/mopi.html">MoPi battery monitor</a>, and we've done the same for BlinkIP. You
+can install it from our Ubuntu-hosted package archive &mdash; see
+<a class="cow-url" href="/pages/basics.html#installing">the installation guide</a> for details.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="file"></a></p><a class="cow-section-anchor" name="section-3."></a><h1 class="cow-heading"><span class="cow-sec-number">3. </span>Write a File to the SD Card</h1>
+
+<p>Another option is to have the IP address written to a file on your Pi's SD
+card, then to shutdown and read the file on another device (if you have one
+handy with a card reader). The BlinkIP code described in the previous section
+also does this for you.</p>
+
+<p>It isn't quite as reliable as the other methods, because it is possible that
+the IP address will change when you put the card back in the Pi and boot up
+again.</p>
+
+<p>BlinkIP puts the IP data into <tt>/home/pi/.blink-ip.txt</tt> by default.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="pagekite"></a></p><a class="cow-section-anchor" name="section-4."></a><h1 class="cow-heading"><span class="cow-sec-number">4. </span>Run PageKite</h1>
+
+<p>Here be dragons! <b>Please read this <a class="cow-url" href="#warning">warning first!!!</a>.</b></p>
+
+<p>Now here's a thing &mdash; it turns out that using the miraculous capabilities of
+<a class="cow-url" href="http://en.wikipedia.org/wiki/Secure_Shell">the Secure Shell</a> (SSH) and the
+fiendishly clever <a class="cow-url" href="https://pagekite.net/">PageKite system</a> we can pretty much
+avoid all this blinking business and make it easy and convenient to log in to
+the Pi from anywhere, any time &mdash; and Santa Claus will pop round to give you
+an enormous present and a kiss on the nose every couple of days<span class="cow-footnote" name="footnote2"><sup><a href="#footnote2">2</a></sup></span>.</p>
+
+<p>This miracle is brought to you by a <a class="cow-url" href="https://pagekite.net/company/">couple of
+idealistic Icelandic folk</a> who hold the unfashionable opinion that it might be
+a bad idea for Facebook, Google and the like to
+<a class="cow-url" href="http://www.bloomberg.com/news/2013-07-31/the-public-private-surveillance-partnership.html">pipe all our data wholesale into Mordor</a> so that spotty young spies at the NSA
+or GCHQ can use it to stalk their chosen love interest or persecute those
+whose political opinions they disagree with.</p>
+
+<p>A big problem with moving away from the cloud services of the mega-corps is
+that much of the time most of the machines we own are behind firewalls,
+network address translation (NAT) gateways and the like, and so we can't
+easily serve files or make connections. PageKite solves this problem by
+providing a secure proxy service. A tiny amount of data is stored on a server
+in Iceland<span class="cow-footnote" name="footnote3"><sup><a href="#footnote3">3</a></sup></span> (which now has some of the
+best Internet legal protection in the world, incidentally) &mdash; the rest of it
+stays safe on your own machines, and the spies just have to pick their noses
+and twiddle their thumbs instead.</p>
+
+<p>I first used PageKite to get access to the <a class="cow-url" href="/pages/basics.html#flood-alarm">flood
+alarm in my basement</a>, which is behind my home router and a NAT. It allows me
+to log into that Pi by doing:</p>
+
+<p><pre class="prettyprint lang-bash">
+  ssh -l pi flooding.pagekite.me
+</pre>Very nice.</p>
+
+<p>PageKite isn't that easy to set up though &mdash; I'll finish this section with a
+short guide to how I got SSH login to work.</p>
+
+<p>First, head on over to <a class="cow-url" href="https://pagekite.net/">https://pagekite.net/</a> and get a kite (they operate a
+&quot;<a class="cow-url" href="https://pagekite.net/signup/?more=bw">pay as you like</a>&quot; arrangement). We'll
+refer to your kite as <tt>MY<span class="cow-escape">_</span>KITE<span class="cow-escape">_</span>NAME</tt> below.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-4.1."></a><h2 class="cow-heading"><span class="cow-sec-number">4.1. </span>Installing PageKite</h2>
+
+<p>To install the system on your Pi, run these commands in a terminal:</p>
+
+<p><pre class="prettyprint lang-bash">
+  sudo su
+  echo deb http://pagekite.net/pk/deb/ pagekite main | tee -a /etc/apt/sources.list
+  apt-key adv --recv-keys --keyserver keys.gnupg.net AED248B1C7B2CAC3
+  apt-get update
+  apt-get install pagekite
+</pre>You also need the <em>netcat</em>, or <tt>nc</tt> command installed if it isn't already.
+This is a standard gizmo, so you can install it with:</p>
+
+<p><pre class="prettyprint lang-bash">
+  sudo apt-get install netcat
+</pre></p><!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-4.2."></a><h2 class="cow-heading"><span class="cow-sec-number">4.2. </span>Configuring PageKite</h2>
+
+<p>To configure the system for SSH and HTTP access, first go to
+<a class="cow-url" href="https://pagekite.net/">https://pagekite.net/</a> create MY<span class="cow-escape">_</span>KITE<span class="cow-escape">_</span>NAME and copy the &quot;secret&quot; (we'll call
+this YOURSECRET below). Then run these commands in a terminal (on the Pi):</p>
+
+<p><pre class="prettyprint lang-bash">
+  pagekite --add 22 ssh:MY_KITE_NAME.pagekite.me
+  pagekite --add 80 MY_KITE_NAME.pagekite.me
+</pre>Edit <tt>/etc/pagekite.d/10<span class="cow-escape">_</span>account.rc</tt> and:</p>
+
+<ul>
+<li>replace &quot;NAME.pagekite.me&quot; with MY<span class="cow-escape">_</span>KITE<span class="cow-escape">_</span>NAME</li>
+<li>replace &quot;YOURSECRET&quot; with the shared secret (available at
+  <a class="cow-url" href="https://pagekite.net/home/">https://pagekite.net/home/</a>)</li>
+<li>remove the line &quot;abort<span class="cow-escape">_</span>not<span class="cow-escape">_</span>configured&quot; and the comment above it.</li>
+</ul>
+
+<p>Now rename the file <tt>/etc/pagekite.d/80<span class="cow-escape">_</span>sshd.rc.sample</tt> to <tt>80<span class="cow-escape">_</span>sshd.rc</tt>, and
+rename <tt>/etc/pagekite.d/80<span class="cow-escape">_</span>httpd.rc.sample</tt> to
+<tt>/etc/pagekite.d/80<span class="cow-escape">_</span>httpd.rc</tt>. Then restart the service like this:</p>
+
+<p><pre class="prettyprint lang-bash">
+  sudo service pagekite restart
+</pre>Finally, add this to the file <tt>~/.ssh/config</tt> <b>on your client, not the Pi</b>
+(i.e. on the machine that you want to connect <em>from</em>):</p>
+
+<p><pre class="prettyprint lang-bash">
+  Host *.pagekite.me
+    CheckHostIP no
+    ProxyCommand /bin/nc -X connect -x %h:443 %h %p
+</pre></p><!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<a class="cow-section-anchor" name="section-4.3."></a><h2 class="cow-heading"><span class="cow-sec-number">4.3. </span>Connecting to Your Pi With PageKite</h2>
+
+<p>To connect:</p>
+
+<p><pre class="prettyprint lang-bash">
+  ssh -l pi MY_KITE_NAME.pagekite.me
+</pre>If you hit trouble, or you want to learn more about how it works, these are
+some good places to start reading:</p>
+
+<ul>
+<li><a class="cow-url" href="https://pagekite.net/wiki/Howto/GNULinux/DebianPackage/">https://pagekite.net/wiki/Howto/GNULinux/DebianPackage/</a></li>
+<li><a class="cow-url" href="https://pagekite.net/wiki/Howto/GNULinux/ConfigureYourSystem/">https://pagekite.net/wiki/Howto/GNULinux/ConfigureYourSystem/</a></li>
+<li><a class="cow-url" href="https://pagekite.net/wiki/Howto/SshOverPageKite/">https://pagekite.net/wiki/Howto/SshOverPageKite/</a></li>
+</ul>
+
+<p>Good luck!</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="warning"></a></p><a class="cow-section-anchor" name="section-4.4."></a><h2 class="cow-heading"><span class="cow-sec-number">4.4. </span>Warning!!! Here Be Dragons!</h2>
+
+<p>We're using PageKite to make a remote service available from our Pi &mdash; this
+means that a potential intruder can get in!</p>
+
+<p>Don't ignore this: there are lots and lots and lots of people (and robots) out
+there actively trying to subvert systems, and if you make an insecure machine
+visible out there in the big bad world you are very likely to be hacked, with
+all kinds of nasty consequences.</p>
+
+<p>So, at the very least, make a strong password on your Pi: use 10 or 20
+characters, upper case and lower case, punctuation and symbols. Even better,
+set up your SSH server to only allow key-based login (do set up your key
+<b>before</b> doing this!).</p>
+
+<p>Linux is probably the most secure system in the world &mdash; but nothing is secure
+if the user doesn't set things up properly.</p>
+
+<p>You have been warned.</p>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<p><a name="other"></a></p><a class="cow-section-anchor" name="section-5."></a><h1 class="cow-heading"><span class="cow-sec-number">5. </span>Other Approaches</h1>
+
+<p>Robbie Wiggins has
+<a class="cow-url" href="http://raspberrypihell.blogspot.com/2013/08/send-ip-info-on-boot-up.html">a nice script</a> to send a text message with the IP address on boot up.</p>
+
+<p>It should also be very possible to Tweet your IP, e.g. using the
+<a class="cow-url" href="/pages/notipi.html#pi-twitter">programmatic Twitter</a> code in our <a class="cow-url" href="/pages/notipi.html">Notifications</a> material.</p>
+
+<p>Finally, if you're psychic, you don't need any of these methods &mdash; just put
+your forehead close to the ethernet cable and listen for the magic numbers.</p>
+<span class="cow-footnote-section">
+<h1 class="cow-heading">Footnotes</h1>
+<p><ol>
+<li>
+<a class="cow-footnote-anchor" name="footnote1"></a>
+<span class="cow-footnote-text" name="footnote1">All the code here is in the
+<a class="cow-url" href="http://www.gnu.org/software/bash/manual/bashref.html">Bash</a> shell, a
+standard piece of free software kit on the Pi and many other systems.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote2"></a>
+<span class="cow-footnote-text" name="footnote2">Ok,
+I'm exaggerating a little about the last bit.</span>
+</li>
+<li>
+<a class="cow-footnote-anchor" name="footnote3"></a>
+<span class="cow-footnote-text" name="footnote3">You can also run a PageKite server on your own machine if
+you like, though this is quite an advanced topic.</span>
+</li>
+</ol></p>
+</span>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+</section>
+
+</div>
+<div id="middleColumn" class="yui3-u-1-5"> <!-- column 2 -->
+<div class="midColContent">
+  <a class="article-thumb" href="/images/articles/blinkip.jpg"><img
+    src="/images/articles/thumbs/blinkip.jpg"
+    height="75" width="75" alt="blinkip"></a>
+ <span class="article-summary"><em>What's my IP? Tools to find the Pi's IP address without logging</em>.</span> 
+<br/> <br/>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'pi-gate'; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<!-- __CONTENTS__ -->
+<div class="cow-contents"><h2 class="cow-heading">Contents</h2>
+<p><ul>
+<li><a href="#section-1.">1. Introduction: Catch-22</a></li>
+<li>&nbsp;&nbsp;<a href="#section-1.1.">1.1. Getting the IP Address via <tt>ifconfig</tt></a></li>
+<li>&nbsp;&nbsp;<a href="#section-1.2.">1.2. Connecting to WiFi</a></li>
+<li><a href="#section-2.">2. Blink the Status LED</a></li>
+<li>&nbsp;&nbsp;<a href="#section-2.1.">2.1. Installing and Running</a></li>
+<li><a href="#section-3.">3. Write a File to the SD Card</a></li>
+<li><a href="#section-4.">4. Run PageKite</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.1.">4.1. Installing PageKite</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.2.">4.2. Configuring PageKite</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.3.">4.3. Connecting to Your Pi With PageKite</a></li>
+<li>&nbsp;&nbsp;<a href="#section-4.4.">4.4. Warning!!! Here Be Dragons!</a></li>
+<li><a href="#section-5.">5. Other Approaches</a></li>
+</ul></p></div>
+  <section id="extras" class="body">
+  </section><!-- /#extras -->
+
+
+  </div>
+</div>
+
+  </div> <!-- #mainContent -->
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <div id="footer">
+    <table border="0" align="right"><tbody><tr>
+      <td style="vertical-align:bottom; text-align:left;">
+      <span id="footer-home-link"><a href="/">Pi-Tronics from<br/>the GATE people</a></span>
+      </td>
+      <td style="vertical-align:bottom; text-align:right;">
+      <font size="-2">
+        © Hamish Cunningham and The <a href="https://www.sheffield.ac.uk/">University of Sheffield</a>,
+          1995-<noscript>2014</noscript><script>document.write(new Date().getFullYear())</script>.<br/>
+        This website is licenced under the
+        <a rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike Licence</a>.<br/>
+        <a href="https://gate.ac.uk/">GATE</a> is <a href="https://www.fsf.org/">free software</a> under
+        <a href="https://www.gnu.org/licenses/">the GNU licences</a> and
+        others. All our products and services supplied <b>with no warranty</b>.<br/>
+        <em>Raspberry Pi</em> and the Raspberry Pi logo are trademarks of the
+        <a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>. <a href="/print/pages/blinkip.html">Print</a>.
+      </font>
+      </td>
+      <td style="vertical-align:bottom;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+        alt="Creative Commons License" height="31" width="88" style="border-width: 0pt;" src="/theme/images/cc-by-nc-sa.png"></a><br/><br/>
+      </td>
+      <td>
+        <a href="https://www.sheffield.ac.uk/dcs/"><img src="/theme/images/logo-usfd.png"
+          alt="The University of Sheffield" height="70" width="165"</a>
+      </td>
+    </tr>
+    </tbody></table>
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41812045-1', 'gate.ac.uk');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

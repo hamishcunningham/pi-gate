@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width">
+  <title>Stretch Goals</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css">
+  <link href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pi GATE — Sheffield Pi-Tronics Atom Feed" />
+
+  <link rel="stylesheet" href="/theme/css/gatepage.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!--[if IE]>
+    <script src="/theme/js/html5shiv-googlecode-com-html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+    body {
+      behavior: url('/theme/images/menu/csshover.htc');
+      font-size: 100%;
+    }
+    </style>
+    <link rel="stylesheet" href="/theme/css/ie-menus.css" />
+  <![endif]-->
+
+  <!-- workaround for sup styling prob in default pelican theme -->
+  <style type="text/css"> sup {font-size: 80%; position: relative; bottom: .8ex;} </style>
+
+  <!-- menu accessibility fix from ian -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> -->
+  <script src="/theme/js/prototype-171-min.js"></script>
+  <script src="/theme/js/gatepage.js"></script>
+
+  <!-- yui grids -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/cssgrids-responsive-min.css">
+  <!-- from: http://yui.yahooapis.com/3.10.3/build/cssgrids/cssgrids-min.css
+             http://yui.yahooapis.com/3.10.3/build/cssgrids-responsive/cssgrids-responsive-min.css -->
+</head>
+
+<body id="index" class="home">
+<div class='yui3-g-r'>
+  <div id="leftColumn" class="yui3-u-1-2" style="width: 90%"> <!-- column 1 -->
+        
+<section id="content" class="body">    
+    <h1 class="entry-title">Stretch Goals</h1>
+<div id="socialButtons">
+  <span><a href="http://twitter.com/share?text=Pi.GATE.ac.uk %20@PiTronics&url=https://pi.gate.ac.uk/pages/stretch-goals.html"
+           target="_blank" title="Tweet this page"><img src="/theme/images/tweet.png"
+           height="30" width="30"></a></span>
+  <span><a href="https://pi.gate.ac.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+           title="Syndication feed"><img
+           height="28" width="28" src="/theme/images/icons/rss-large.jpg"/></a></span>
+  <span>&nbsp;<a href="/pages/stretch-goals.html#disqus_thread"
+           title="Leave a comment"><img
+           src="/theme/images/comment.png" height="30" width="30"></a></span>
+  <span>&nbsp;<a href="/print/pages/stretch-goals.html"
+           title="Print"><img
+           src="/theme/images/print.png" height="30" width="30"></a></span>
+</div>    
+    
+<h1 class="cow-title-heading">Stretch Goals</h1>
+
+<p>Thanks to our backers so far we're going beyond our baseline. We've figured
+out a bunch of extras we can offer in MoPi if we get further (and the level of
+funding we'll need to make them viable):</p>
+
+<ul>
+<li>150% (unlocked!): <b>screw terminals</b>, <b>stackable headers</b>, <b>remoting pads</b>
+  and <b>self-resetting fuse</b> added</li>
+<li>175% (nearly there!): <b>two-way communication</b> and <b>remote power-off</b> added</li>
+<li>200%: <b>3.3V supply</b> mod added</li>
+<li>250%: <b>timer-based wake-up</b> added</li>
+<li>300%: <b>The PiBrush</b> reward released</li>
+<li>375%: <b>battery charging</b> added</li>
+<li>430%: <b>The HackCam</b> reward released</li>
+<li>590%: <b>input voltage boost</b> added</li>
+<li>999%: <b>The Pablet</b> reward released</li>
+</ul>
+
+<p>When we reach <u>150% funded</u> (nearly there!) we can make these improvements:</p>
+
+<ul>
+<li><b>Screw terminals</b>. This will make it easier to connect all different types
+  of power supply (from batteries to water turbines) direct to MoPi.</li>
+<li><b>Stackable headers</b>. We'll put a stacking header directly onto the board
+  (and adopt the same case lid style as for the
+  <a class="cow-url" href="http://shop.pimoroni.com/products/model-a-pibow">Pibow Model A</a>). This
+  will make it easier to connect multiple boards at once (e.g. MoPi + XLoBorg,
+  or MoPi + AirPi, or etc.).</li>
+<li><b>Remoting pads</b>. We'll add remoting pads for the power switch to help with
+  applications where MoPi sits away from the edge of the case. This will allow
+  the connection of an additional power switch.</li>
+<li><b>Self-resetting fuse</b>. MoPi supplies power directly through the GPIO pins,
+  which bypasses the Pi's built-in fuse. We think this is safe &mdash; but to be
+  doubly sure we'll add a fuse in MoPi.</li>
+</ul>
+
+<p>When we get to <u>175% funded</u> we will add:</p>
+
+<ul>
+<li><b>Two-way communication</b>. We're moving to I2C for communication between the
+  Pi and MoPi, which will mean complete configurability from the Pi. (It will
+  also minimise our use of GPIO pins and maximise the number of other Pi
+  add-on boards that we can run with.)</li>
+<li><b>Remote power off</b>. You'll be able to tell MoPi to power down the Pi when
+  logged-in remotely (after a clean shutdown, of course).</li>
+</ul>
+
+<p>If we get to <u>200% funded</u> we will add the ability to mod MoPi for <b>3.3V
+operation</b> (overpowering the Pi's on-board regulator and saving the power that
+is dissipated there, for weight and battery life critical applications like
+ballooning).</p>
+
+<p>If we make it to <u>250% funded</u> we'll add timer-based wakeup &mdash; tell MoPi
+what time you want your Pi to wakeup, then power it down and MoPi will boot
+the Pi as requested.</p>
+
+<p>If we get to <u>300% funded</u> we will offer our virtual paintbrush rig &mdash; <b>The
+<a class="cow-url" href="http://pi.gate.ac.uk/pages/pibrush.html">PiBrush</a></b> &mdash; as a reward. PiBrush
+combines a MoPi with an accelerometer and is a great way to engage kids with
+Python programming and the physics of motion. When you've got one you've also
+got a programmable Pi-based Wii-remote-alike, and there are a ton of cool
+applications waiting.</p>
+
+<p>Now, the one you've all been waiting for: <b>charging</b>! That's by a long head
+our most requested feature &mdash; but it is also pretty difficult :-(  In fact,
+dealing with lots of different chemistries may not be possible on a tiny
+device like MoPi (most manufacturers of charging ICs only support one
+chemistry per chip, for example, and some only support charging a <em>single
+cell</em> per chip!). The other challenge is that we've got a really small surface
+area to work with on the PCB. So we need to get quite a bit further to have
+the necessary resources... but if we reach <u>375% funding</u>, then we'll do it!
+We're not promising to charge every battery under the sun, but we'll provide
+charging for at least one popular configuration.</p>
+
+<p>If we make it to <u>430% funded</u> we'll offer <b>The HackCam</b>, a Model A Pi, a
+camera module, wifi and a MoPi, wrapped up in a water-resistant box with a 3
+inch screen and the switching to make it work in the way you'd expect. The
+pictures are served directly to the web by an Apache running on the Pi, and
+with everything open source (of course) you can tweak the photographic
+parameters to your heart's content. A camera you can log in to!</p>
+
+<p>Some applications would benefit from the addition of a
+<b>voltage boost</b>, e.g. when you've got a small surface area of photo-voltaic
+(solar) panel and want to trickle charge a backup battery. If we reach <u>590%
+funding</u> we'll add a buck booster to cater for these applications.</p>
+
+<p>Finally (for now!) if we get to <u>999% funding</u> we'll offer <b>The Pablet</b>,
+combining MoPi with this
+<a class="cow-url" href="http://shop.pimoroni.com/products/pitft-pibow">touchscreen and case rig</a>.
+We'll mod the case to add a couple of PP3 clips, and an external power switch.
+Hey presto! a Pi-based &quot;tablet&quot;!</p>
+
+<p>(And if we reach 4000% Lubo says we can attach a rocket to it, though I'm a
+little suspicious that he's not totally sincere on that one.)</p>
+
+</section>
+
+</div>

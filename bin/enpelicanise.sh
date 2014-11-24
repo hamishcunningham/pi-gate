@@ -3,10 +3,10 @@
 # standard locals
 alias cd='builtin cd'
 P="$0"
-USAGE="`basename ${P}` [-h(elp)] [-d(ebug)] [-n(o) metas] file(s)\n
+USAGE="`basename ${P}` [-h(elp)] [-d(ebug)] [-n(o) metas] [-M metadata] file(s)\n
 \tmunge html files to conform to pelican expectations"
 DBG=:
-OPTIONSTRING=hdn
+OPTIONSTRING=hdnm:
 
 # specific locals
 FILES=
@@ -25,7 +25,7 @@ do
     h)	usage 0 ;;
     d)	DBG=echo ;;
     n)	NOMETAS=1 ;;
-    i)	INSTANCE="${OPTARG}" ;;
+    M)	METADATA="${OPTARG}" ;;
     *)	usage 1 ;;
   esac
 done 
