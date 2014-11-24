@@ -19,7 +19,7 @@ GROOVY=groovy
 JAVA=java
 SCRIPTS=$(BASEDIR)/bin
 Y2H=JAVA_OPTS=-Dfile.encoding=UTF-8 $(SCRIPTS)/yam2html
-PDC=pandoc -S -t html5 --data-dir=content --self-contained
+PDC=pandoc -S -t html5 --template=bin/html.html5 --data-dir=content --self-contained
 EPI=$(SCRIPTS)/enpelicanise.sh
 GETMETAS=$(SCRIPTS)/get-pdc-metas.sh
 FIXIMGS=$(SCRIPTS)/fix-image-sizes.groovy
@@ -155,7 +155,7 @@ prepare: local-prepare
 	    $(EPI) -M "$$MD" $$HTML || \
 	    :; \
 	done
-# the old way (also required  --template=bin/html.html5 in PDC call):
+# the old way:
 #           echo $(PDC) $$f -M "extra-meta=$$MD" -o $$HTML && \
 
 # finalise the output directory
