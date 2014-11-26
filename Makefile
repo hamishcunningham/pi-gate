@@ -146,9 +146,9 @@ prepare: local-prepare
           [ ! -e $$HTML -o $$f -nt $$HTML ] && \
             $(Y2H) $$f && $(EPI) $$HTML || :; \
         done
-	@PDCS=`find $(INPUTDIR) -name '*.pdc'`; \
+	@PDCS=`find $(INPUTDIR) -name '*.mkd'`; \
 	for f in $$PDCS; do \
-          BASE=`echo $$f |sed 's,\.pdc$$,,'`; HTML=$${BASE}.html; \
+          BASE=`echo $$f |sed 's,\.mkd$$,,'`; HTML=$${BASE}.html; \
           [ ! -e $$HTML -o $$f -nt $$HTML ] && \
 	    MD="`$(GETMETAS) $$f`" && \
             $(PDC) $$f -o $$HTML && \
@@ -275,7 +275,7 @@ draft:
 	echo created draft in $${OUT}
 pdc-post:
 	@[ -z "$${SLUG}" ] && { echo 'set SLUG to something!'; exit 1; } || :; \
-	[ -z "$${POSTFILE}" ] && POSTFILE=$${SLUG}.pdc; \
+	[ -z "$${POSTFILE}" ] && POSTFILE=$${SLUG}.mkd; \
         OUT=$(INPUTDIR)/$${POSTFILE}; \
         [ -f $${OUT} ] || echo "---" > $${OUT}; \
 	echo "title: A post about $${SLUG}..." >> $${OUT}; \
