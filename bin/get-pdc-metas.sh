@@ -4,7 +4,7 @@
 alias cd='builtin cd'
 P="$0"
 USAGE="`basename ${P}` [-h(elp)] [-d(ebug)] file\n
-\textract metadata from pdc files and output appropriate html"
+\textract metadata from pandoc mkd files and output appropriate html"
 DBG=:
 OPTIONSTRING=hd
 
@@ -29,11 +29,11 @@ done
 shift `expr $OPTIND - 1`
 $DBG doing summut on $TODAY
 
-# function to extract meta data from a .pdc
+# function to extract meta data from a .mkd
 extract-metadata() {
   f=$1
   case $f in
-    *.pdc) ;;
+    *.mkd) ;;
     *) echo 'ignoring non-pandoc file '$f; return; ;;
   esac
 
