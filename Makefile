@@ -19,7 +19,7 @@ GROOVY=groovy
 JAVA=java
 SCRIPTS=$(BASEDIR)/bin
 Y2H=JAVA_OPTS=-Dfile.encoding=UTF-8 $(SCRIPTS)/yam2html
-PDC=pandoc -S -t html5 --template=bin/html.html5 --data-dir=content --self-contained
+PDC=pandoc -S -t html5 --template=bin/html.html5 --data-dir=content --standalone
 EPI=$(SCRIPTS)/enpelicanise.sh
 GETMETAS=$(SCRIPTS)/get-pdc-metas.sh
 FIXIMGS=$(SCRIPTS)/fix-image-sizes.groovy
