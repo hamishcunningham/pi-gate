@@ -28,4 +28,5 @@ do
 done 
 shift `expr $OPTIND - 1`
 
-sed -n '/^s3cmd /,$p'
+grep -- ' -> s3:' | \
+  sed -e 's, -> s3:.*,,' -e 's,^output,,'

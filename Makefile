@@ -49,6 +49,7 @@ help:
 	@echo '   ec2upload             upload the web site via rsync+ssh    '
 	@echo '   gateupload            upload the web site via rsync+ssh    '
 	@echo '   s3upload              upload the web site to S3 via s3cmd  '
+	@echo '                         (files listed to s3upload-files.txt) '
 	@echo '                                                              '
 	@echo '   prepare               regenerate the sources               '
 	@echo '   finalise              fixup the generated output           '
@@ -106,7 +107,9 @@ gateupload: fix-rss-feeds minify
           --cvs-exclude --exclude '.htaccess' --exclude '.htpasswd'
 s3upload: fix-rss-feeds minify
 	s3cmd sync -r output/ --exclude '.htaccess' --exclude='.htpasswd' \
-          --delete-removed s3://$(SITE)/
+          --progress --delete-removed s3://$(SITE)/ \
+          |tee /tmp/s3upload-files.txt; \
+          cat /tmp/s3upload-files.txt |bin/get-upload-list.sh > s3upload-files.txt
 
 # for each .yam in content/ fix missing image sizes in the .html and do diff
 fix-image-sizes:
