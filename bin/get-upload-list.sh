@@ -28,5 +28,6 @@ do
 done 
 shift `expr $OPTIND - 1`
 
+echo '/'
 grep -- ' -> s3:' | \
   sed -e 's, -> s3:.*,,' -e 's,^output,,'
