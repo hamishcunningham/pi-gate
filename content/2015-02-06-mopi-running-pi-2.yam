@@ -1,6 +1,6 @@
 MoPi running the Pi 2
 
-The Pi foundation just released the Pi 2 B+ (at least I think that's the name
+The Pi foundation just released the Pi 2 B (at least I think that's the name
 -- am I alone in thinking that after A, B, B+ and A+, the name "2 B" isn't
 quite the most obvious of choices?!).
 
@@ -10,17 +10,17 @@ with running the Pi 2 :-)
 %(images/mopi/pi-2-a.jpg,
 %image(images/mopi/pi-2-a-500x375.jpg, MoPi running Pi 2, 500, 375))
 
-%(images/mopi/pi-2-b.jpg,
-%image(images/mopi/pi-2-b-500x375.jpg, MoPi running Pi 2, 500, 375))
-
 (Excuse the hacky power connection -- this is one of the few MoPi I have left;
 waiting for a new batch from Lubo!)
 
-As with the A+ the new CPU position means that the MoPi terminal block sits
-touches the CPU. So far I've had no problems with this; in any case it is
-quite easy to prop the board up a little with small shim or plastic bolt.
+%(images/mopi/pi-2-b.jpg,
+%image(images/mopi/pi-2-b-500x375.jpg, MoPi running Pi 2, 500, 375))
 
-And yes, the Pi 2 is faster :-)  Though not as fast as (currently more
+As with the A+ the new CPU position means that the MoPi terminal block touches
+the CPU. So far I've had no problems with this; in any case it is quite easy
+to prop the board up a little with small shim or plastic bolt.
+
+And yes, the Pi 2 is faster :-)  Though not as fast as (the currently more
 expensive) new generation SBC machines like the
 %(http://www.hardkernel.com/main/products/prdt_info.php?g_code=G140448267127,
 Odroid XU3) or
@@ -29,11 +29,11 @@ Odroid XU3) or
 The Pi 2 wouldn't play a YouTube video out of the box, but probably with a bit
 of poking it will manage. I concluded a while back that the new pokier SBCs
 had a lot going for them, though their Linux stacks are sometimes less mature
-than the Pi.
+than the Pi. The Pi 2 might well be a great base for a media system -- I'm
+eagerly waiting for my Slice from Pimoroni's recent Kickstarter to see if the
+B+ can really fill that slot...
 
-The Pi 2 might well be a great base for a media system -- I'm eagerly waiting
-for my Slice from Pimoroni's recent Kickstarter to see if the B+ can really
-fill that slot...
+Still: not too shabby :-)
 
 %meta(summary=MoPi running the Pi 2 Model B,tags=mo-pi\,mobile power\,raspberrypi\,gate\,mopi)
 
