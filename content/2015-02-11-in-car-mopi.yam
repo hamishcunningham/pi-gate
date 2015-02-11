@@ -1,0 +1,24 @@
+In-Car Pi
+
+Several people have asked about using MoPi for in-car Pi rigs. In this
+scenario we want the Pi to track the car ignition, and shut down cleanly after
+some housekeeping when the car is off, turning itself back on when the car is
+started again.
+
+This requires a little extra circuitry:
+
+%(images/mopi/in-car.png,
+%image(images/mopi/in-car-500x375.png, In-Car MoPi, 500, 375.png))
+
+Click through to the large version for more explanation.
+
+Incidentally there are several other MoPi-related circuits
+%(https://www.circuitlab.com/user/hamish/, on my CircuitLab workbench) waiting
+for the 25-hour day to arrive. If you're scratching your head about how to
+hook the thing up in unusual scenarios that's a good place to look!
+
+Motor on...
+
+%meta(summary=MoPi Circuit for In-Car Pi,tags=mo-pi\,mobile power\,raspberrypi\,gate\,mopi\,in-car)
+
+*%(pages/mopi.html, Read the main article).*

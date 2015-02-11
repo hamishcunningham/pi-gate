@@ -20,6 +20,11 @@ As with the A+ the new CPU position means that the MoPi terminal block touches
 the CPU. So far I've had no problems with this; in any case it is quite easy
 to prop the board up a little with small shim or plastic bolt.
 
+The Pi 2 has broken various things, e.g. the RPi.GPIO library, and we've had a
+report that the latest Pi firmware also breaks our I2C installation routine.
+So ^simbamond^ isn't running on the Pi 2 at present; we'll fix that ASAP. The
+basic power functions work fine though.
+
 And yes, the Pi 2 is faster :-)  Though not as fast as (the currently more
 expensive) new generation SBC machines like the
 %(http://www.hardkernel.com/main/products/prdt_info.php?g_code=G140448267127,
@@ -29,9 +34,10 @@ Odroid XU3) or
 The Pi 2 wouldn't play a YouTube video out of the box, but probably with a bit
 of poking it will manage. I concluded a while back that the new pokier SBCs
 had a lot going for them, though their Linux stacks are sometimes less mature
-than the Pi. The Pi 2 might well be a great base for a media system -- I'm
-eagerly waiting for my Slice from Pimoroni's recent Kickstarter to see if the
-B+ can really fill that slot...
+than the Pi. The Pi 2 might well be a great base for the media system + web
+browser that I've been working towards for several years -- I'm eagerly
+waiting for my Slice from Pimoroni's recent Kickstarter to see if the B+ can
+really fill that slot...
 
 Still: not too shabby :-)
 
