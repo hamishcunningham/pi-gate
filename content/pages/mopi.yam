@@ -119,7 +119,8 @@ If you're in a hurry:
 
 # Install the battery monitoring software and shutdown:
   - sudo apt-get update
-  - sudo apt-get install simbamond
+  - sudo apt-get install simbamond%footnote(Ignore %(#faq-mkmod-error, errors
+    related to kmod).)
   - sudo poweroff
 # Connect your batteries to the MoPi
 # Attach the MoPi to your Pi and press the Power Button for 3 seconds
@@ -587,7 +588,18 @@ it's 8.8 volts. (There are other voltage levels defined too. Read more
 
 -----------------------------------------------------------------------------
 %#faq-mkmod-error
-*>>> Mkmod error when upgrading.*
+*>>> Mkmod or libkmod errors when installing or upgrading.*
+
+The installation of ^simbamond^ requires enabling i2c. There are two ways to
+do this, depending on what version of Raspbian we're running. At present the
+installation script tries to do both, with the intention of catering for the
+maximum number of variants. This does mean that you may see errors like the
+following. If everything works after a reboot, ignore them; otherwise:
+
+- try installing ^i2c-tools^ and ^i2cdetect^ to see if the bus is enabled
+  - ^i2cdetect -l^ will return nothing if i2c is not enabled, or something
+    like "^i2c-1 unknown ...^" if it is enabled
+- %(https://github.com/hamishcunningham/pi-tronics/issues, raise an issue).
 
 If you get a message like "libkmod: ERROR ../libkmod/libkmod.c:554
 kmod_search_moddep: could not open moddep file
@@ -610,6 +622,32 @@ reboot. Sometimes the Python SMBus module appears not to load correctly.
 *>>> How do I add a remote power switch?*
 
 There's a %(#remote-power-switch, description here).
+
+
+-----------------------------------------------------------------------------
+%#faq-status-bits
+
+*>>> What do the status bits mean?*
+
+MoPi returns status data to the Pi over i2C -- if you need to interpret these:
+
+- ^mopicli -sv^ will give you the decoded status
+- %(https://github.com/hamishcunningham/pi-tronics/blob/master/simbamon/simbamond.default,
+  check the source code) to see the meaning of each bit
+
+
+-----------------------------------------------------------------------------
+%#faq-other
+
+*>>> How do I ...?*
+
+Another good place to look is the 
+%(https://github.com/hamishcunningham/pi-tronics/issues,
+GitHub issues list) (click on the "closed" list to see them all).
+
+If you're still stuck, raise a new issue?
+
+Good luck!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1430,6 +1468,9 @@ minutes):
 %code(lang=Bash)<
   sudo apt-get install simbamond
 %>
+
+(You may ignore errors refering to module loading here -- see
+%(%#faq-mkmod-error, below for details).)
 
 And that's it!
 
@@ -2300,9 +2341,12 @@ on Adafruit).):
 - if i2c-tools isn't already installed, install it:
   - ^sudo apt-get install i2c-tools^
 - (you might as well do the same with ^python-smbus^ for testing purpose)
-- edit ^/etc/modules^ and add lines ^i2c-bcm2708^ and ^i2c-dev^
-- edit ^/etc/modprobe.d/raspi-blacklist^ (if it exists) and comment out the
-  line ^blacklist i2c-bcm2708^ (by adding a ^#^ at the start of the line)
+- on older Raspbians (using modules):
+  - edit ^/etc/modules^ and add lines ^i2c-bcm2708^ and ^i2c-dev^
+  - edit ^/etc/modprobe.d/raspi-blacklist^ (if it exists) and comment out the
+    line ^blacklist i2c-bcm2708^ (by adding a ^#^ at the start of the line)
+- on newer Raspbians (using device tree):
+  - add ^dtparam=i2c=on^ to ^/boot/config.txt^
 
 (The ^postinst^ script in our Debian package for simbamon does all this for
 you, by the way.)

@@ -20,6 +20,7 @@ As with the A+ the new CPU position means that the MoPi terminal block touches
 the CPU. So far I've had no problems with this; in any case it is quite easy
 to prop the board up a little with small shim or plastic bolt.
 
+[*Note:* fixed as of ^simbamond^ release 4.1, February 17th 2015.] %br
 The Pi 2 has broken various things, e.g. the RPi.GPIO library, and we've had a
 report that the latest Pi firmware also breaks our I2C installation routine.
 So ^simbamond^ isn't running on the Pi 2 at present; we'll fix that ASAP. The
