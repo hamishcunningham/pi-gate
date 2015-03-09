@@ -651,24 +651,27 @@ Good luck!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%3 Pi Models: A, A+, B, B+, 2/B+, Compute Module
+%3 Pi Models: A, A+, B, B+, 2/B+
 
-MoPi will work fine with the Raspberry Pi models A, B, and the
+MoPi will work fine with the Raspberry Pi models A, B, the
 %(http://www.raspberrypi.org/introducing-raspberry-pi-model-b-plus/, Model B
-Plus Pi) released summer 2014. (We don't currently support the Compute Module
-directly, but we're working on it!) The A+ also works fine, but if you're a
-stickler for detail you may want to shim the terminal connector to raise it
-over the CPU in its new position.
+Plus Pi), the A+, and the Model B 2. If you're a stickler for detail you may
+want to shim the terminal connector to raise it over the CPU in its new
+position on the Model 2 and the A+.
 
-_Coming soon_: tests on the Pi 2! (Why didn't they call it the Model C
-though?!)
+And %(/posts/2015/02/06/mopi-running-pi-2, here's MoPi on the Pi 2)! (Why
+didn't they call it the Model C though?!) The Pi 2 was released in February
+2015, and looks like this:
 
-The Model B+ is an evolution on the original Model B; it looks like this:
+%(images/pi2.jpg, %image(images/pi2-500x283.jpg, Pi 2, 500, 283))
+
+Prior to version 2, the Model B+ was released, as an evolution on the original
+Model B; it looks like this:
 
 %image(images/model-b-plus-500x337.jpg, Model B+ Pi, 500, 337)
 
-From a mobile power point of view the B+ will perform a bit better than the B
--- they're replaced the rather wasteful LDO regulator of the original with a
+From a mobile power point of view the B+ performed a bit better than the B --
+they replaced the rather wasteful LDO regulator of the original with a
 switched-mode supply, and with the revamp and extension of the USB subsystem
 they've also improved power handling there.
 
