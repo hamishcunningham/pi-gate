@@ -110,6 +110,8 @@ s3upload: fix-rss-feeds minify
           --progress --delete-removed s3://$(SITE)/ \
           |tee /tmp/s3upload-files.txt; \
           cat /tmp/s3upload-files.txt |bin/get-upload-list.sh > s3upload-files.txt
+	grep 'index.html$$' s3upload-files.txt |sed 's,index.html$$,,' \
+          >>s3upload-files.txt
 
 # for each .yam in content/ fix missing image sizes in the .html and do diff
 fix-image-sizes:
