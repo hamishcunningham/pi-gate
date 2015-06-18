@@ -33,7 +33,6 @@ shift `expr $OPTIND - 1`
 # what's left should be a directory name
 DIR=$1
 [ -d "$DIR" ] || { echo $P: no directory name; usage 2; }
-cd $DIR
 echo creating picpage in `pwd`...
 sleep 1
 
@@ -43,16 +42,16 @@ doit() {
   echo -e "Images from `pwd`\\n\\n" >$OUT
   for pat in jpg jpeg png
   do
-    for f in `find . -name '*.'"${pat}"`
+    for f in `find $DIR -name '*.'"${pat}" |grep -v thumbs`
     do
       SIZING=""
       set `identify $f`
       SIZE=`echo $3 |sed 's,x.*,,'`
       [ "$SIZE" -gt 600 ] && SIZING=", 500"
-      echo '%('`echo $f |sed 's,-[x0-9]*\.,.,'`', %image('$f', CAPTION '${SIZING}'))'
+      echo '%(/'`echo $f |sed 's,-[x0-9]*\.,.,'`', %image(/'$f', CAPTION '${SIZING}'))'
       echo
     done >>$OUT
   done
-  yam2html -n picpage.yam
+  yam2html -n $OUT
 }
 doit

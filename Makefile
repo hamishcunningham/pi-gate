@@ -327,7 +327,8 @@ s3list:
 
 # call picpage.sh to create content/picpage.html
 picpage:
-	cd content/images && $(PICPAGE) .
+	cd content && $(PICPAGE) images && $(EPI) picpage.html || :
+	mv content/picpage.html content/pages
 
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post
 .PHONY: draft fix-rss-feeds checklinks linkchecker s3list local-prepare
