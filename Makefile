@@ -23,6 +23,7 @@ PDC=pandoc -S -t html5 --template=bin/html.html5 --data-dir=content --standalone
 EPI=$(SCRIPTS)/enpelicanise.sh
 GETMETAS=$(SCRIPTS)/get-pdc-metas.sh
 FIXIMGS=$(SCRIPTS)/fix-image-sizes.groovy
+PICPAGE=$(SCRIPTS)/picpage.sh
 
 # generated targets #########################################################
 help:
@@ -70,6 +71,7 @@ help:
 	@echo '                                                              '
 	@echo '   checklinks/linchecker check links locally                  '
 	@echo '   s3list                list all the bucket .htmls           '
+	@echo '   picpage               create a page containing all images  '
 	@echo '                                                              '
 
 # local stuff
@@ -322,6 +324,10 @@ linkchecker:
 s3list:
 	s3cmd -r ls s3://$(SITE)                   >/tmp/$(SITE)-all.txt
 #	s3cmd -r ls s3://$(SITE) | grep '\.html$$' >/tmp/$(SITE)-htmls.txt
+
+# call picpage.sh to create content/picpage.html
+picpage:
+	cd content/images && $(PICPAGE) .
 
 .PHONY: prepare specials finalise minify archive archive-diff yam-clean post
 .PHONY: draft fix-rss-feeds checklinks linkchecker s3list local-prepare
