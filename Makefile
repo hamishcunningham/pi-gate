@@ -20,6 +20,7 @@ JAVA=java
 SCRIPTS=$(BASEDIR)/bin
 Y2H=JAVA_OPTS=-Dfile.encoding=UTF-8 $(SCRIPTS)/yam2html
 PDC=pandoc -S -t html5 --template=bin/html.html5 --data-dir=content --standalone
+RUNJINJA=$(SCRIPTS)/run-jinja.py
 EPI=$(SCRIPTS)/enpelicanise.sh
 GETMETAS=$(SCRIPTS)/get-pdc-metas.sh
 FIXIMGS=$(SCRIPTS)/fix-image-sizes.groovy
@@ -147,6 +148,16 @@ record-image-size-diffs:
 
 # this does regeneration from GATEwiki sources, Pandoc and the like
 prepare: local-prepare
+	@JINJAFILES=`find $(INPUTDIR) -name '*.jinja'`; \
+	for f in $$JINJAFILES; do \
+          BASE=`echo $$f |sed 's,\.jinja$$,,'`; \
+          MKDF=$${BASE}.mkd; HTML=$${BASE}.html; \
+          [ ! -e $$MKDF -o $$f -nt $$MKDF ] && \
+	    MD="`$(GETMETAS) $$f`" && \
+            $(RUNJINJA) $$f $$MKDF && \
+	    $(EPI) -M "$$MD" $$HTML || \
+	    :; \
+	done
 	@YAMS=`find $(INPUTDIR) -name '*.yam'`; \
         for f in $$YAMS; do \
           BASE=`echo $$f |sed 's,\.yam$$,,'`; HTML=$${BASE}.html; \
