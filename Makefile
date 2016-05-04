@@ -154,9 +154,7 @@ prepare: local-prepare
           MKDF=$${BASE}.mkd; HTML=$${BASE}.html; \
           [ ! -e $$MKDF -o $$f -nt $$MKDF ] && \
 	    MD="`$(GETMETAS) $$f`" && \
-            $(RUNJINJA) $$f $$MKDF && \
-	    $(EPI) -M "$$MD" $$HTML || \
-	    :; \
+            $(RUNJINJA) $$f $$MKDF || :; \
 	done
 	@YAMS=`find $(INPUTDIR) -name '*.yam'`; \
         for f in $$YAMS; do \
