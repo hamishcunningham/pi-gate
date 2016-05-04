@@ -147,15 +147,15 @@ record-image-size-diffs:
 # other targets ###############################################################
 
 # this does regeneration from GATEwiki sources, Pandoc and the like
+#@JINJAFILES=`find $(INPUTDIR) -name '*.jinja'`; \
+#for f in $$JINJAFILES; do \
+#         BASE=`echo $$f |sed 's,\.jinja$$,,'`; \
+#         MKDF=$${BASE}.mkd; HTML=$${BASE}.html; \
+#         [ ! -e $$MKDF -o $$f -nt $$MKDF ] && \
+#    MD="`$(GETMETAS) $$f`" && \
+#           $(RUNJINJA) $$f $$MKDF || :; \
+#done
 prepare: local-prepare
-	@JINJAFILES=`find $(INPUTDIR) -name '*.jinja'`; \
-	for f in $$JINJAFILES; do \
-          BASE=`echo $$f |sed 's,\.jinja$$,,'`; \
-          MKDF=$${BASE}.mkd; HTML=$${BASE}.html; \
-          [ ! -e $$MKDF -o $$f -nt $$MKDF ] && \
-	    MD="`$(GETMETAS) $$f`" && \
-            $(RUNJINJA) $$f $$MKDF || :; \
-	done
 	@YAMS=`find $(INPUTDIR) -name '*.yam'`; \
         for f in $$YAMS; do \
           BASE=`echo $$f |sed 's,\.yam$$,,'`; HTML=$${BASE}.html; \
