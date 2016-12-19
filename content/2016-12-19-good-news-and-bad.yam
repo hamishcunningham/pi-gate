@@ -1,0 +1,37 @@
+MoPi and the Pi 3: Good News and Bad
+
+The *bad news* is that we've decided to withdraw support for the Pi 3 with
+MoPi.
+
+(The *good news* is that there's a *new MoPi* almost ready! More below...)
+
+It turns out that there are just too many occasions when the higher current
+requirements of the Pi 3 trigger undervoltage conditions, and/or flip the
+built in autoresetting fuse :-(
+
+So: *don't buy MoPi to run a Pi 3*!
+
+If you've bought one for this purpose, our apologies. You have two options:
+
+- Send it back to us with your bank details and purchase invoice and we'll
+  make you a full refund.
+- Use MoPi's high current configuration by slaving an additional PSU (e.g. a
+  UBEC).
+
+Here's an example circuit which we used to drive a power-hungry Qi display:
+
+%(images/mopi/mopi-high-current.png,
+%image(images/mopi/mopi-high-current-500x205.png, High current MoPi, 500, 205))
+
+Ok, moving swiftly on: *the new MoPi* is nearing readiness, and it will 
+
+- run at up to 2.5A, enough even for the Pi 3 and peripherals
+- incorporate the UPS circuitry on-board
+- lots of other upgrades and goodies!
+
+So, apologies for the gotcha with the Pi 3, and please watch this space for
+the new MoPi.
+
+%meta(summary=MoPi and the Pi 3,tags=mo-pi\,mobile power\,raspberrypi\,gate\,mopi\,pi 3)
+
+*%(pages/mopi.html, Read the main article).*

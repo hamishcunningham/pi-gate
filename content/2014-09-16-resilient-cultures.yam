@@ -91,18 +91,18 @@ The Exhibits:
 %%% Plus Bo and Anna's performance ...
 
 %(images/fotm-charlotte-wearables.png, %image(images/fotm-charlotte-wearables-500x707.png, 
-Open Source Wearables, 500, 707.png))
+Open Source Wearables, 500, 707))
 
-%(images/fotm-gtac.png, %image(images/fotm-gtac-500x707.png, GTAC, 500, 707.png))
+%(images/fotm-gtac.png, %image(images/fotm-gtac-500x707.png, GTAC, 500, 707))
 
 %(images/fotm-sam-chaos.png, %image(images/fotm-sam-chaos-500x707.png,
-Predictable Chaos, 500, 707.png))
+Predictable Chaos, 500, 707))
 
 %(images/rescult-3.jpg,
 %image(images/rescult-3-500x500.jpg, Resilient Cultures, 500, 500))
 
 %(images/growing-futures.png, %image(images/growing-futures-500x273.png,
-Everyday Growing Futures, 500, 273.png))
+Everyday Growing Futures, 500, 273))
 
 %(images/jo-weather-station.jpg, %image(images/jo-weather-station-500x255.jpg,
 Pi Weather Station, 500, 255))
