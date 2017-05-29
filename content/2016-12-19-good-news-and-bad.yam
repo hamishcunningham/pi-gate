@@ -1,15 +1,16 @@
 MoPi and the Pi 3: Good News and Bad
 
-The *bad news* is that we've decided to withdraw support for the Pi 3 with
-MoPi.
+The *bad news* is that we've decided to withdraw comprehensive support for the
+Pi 3 with MoPi.
 
 (The *good news* is that there's a *new MoPi* almost ready! More below...)
 
-It turns out that there are just too many occasions when the higher current
+It turns out that there are some occasions when the higher current
 requirements of the Pi 3 trigger undervoltage conditions, and/or flip the
 built in autoresetting fuse :-(
 
-So: *don't buy MoPi to run a Pi 3*!
+So: don't buy MoPi to run a Pi 3 unless you're not running demanding
+applications, or you don't need to attach power-hungry peripherals.
 
 If you've bought one for this purpose, our apologies. You have two options:
 
@@ -25,7 +26,7 @@ Here's an example circuit which we used to drive a power-hungry Qi display:
 
 Ok, moving swiftly on: *the new MoPi* is nearing readiness, and it will 
 
-- run at up to 2.5A, enough even for the Pi 3 and peripherals
+- run at up to 2.5A, enough even for the Pi 3 and plenty of peripherals
 - incorporate the UPS circuitry on-board
 - lots of other upgrades and goodies!
 

@@ -14,7 +14,7 @@ and %(about.html#fred, Fred Sonnenwald),
 Raise an issue).
 
 _(In early 2014 we ran a %(http://tinyurl.com/mobile-pi, Kickstarter campaign)
-to fund the first production version, which is due for delivery in June 2014.
+to fund the first production version, which was delivered in June 2014.
 If you missed it, you can
 %(http://shop.pimoroni.com/products/mopi-mobile-pi-power, get one from
 Pimoroni).)_%footnote(_A huge thank you to Bo Meson, Fred Sonnenwald, Gen
@@ -64,7 +64,8 @@ Features:
 - 3.3V supply mod: swap three resistors and supply 3.3V, overpowering the Pi's
   on-board regulator and saving the power that is dissipated there, for weight
   and battery life critical applications like ballooning
-- supports Pi models A, B and B+
+- supports Pi models A, B, B+, Zero and Pi 3 (but the latter
+  %(/posts/2016/12/19/good-news-and-bad/, at low current only))
 - wide input voltage range: 6.2V to 20V%footnote(We quote a 20V max voltage to
   leave some headroom. We've run the board up to 25V but don't recommend it as
   a general rule.)
@@ -158,7 +159,7 @@ MoPi software, and to reboot between each step:
 %#no-mopi-warning
 Note that if you're installing the software without MoPi attached, or without
 power attached to MoPi, you will get a warning message%footnote(This warning
-means MoPi is not attached or powered up: "/usr/sbin/simbamon:
+means MoPi is not attached or not powered up: "/usr/sbin/simbamon:
 /usr/sbin/mopicli not working; MoPi not attached or powered? \(mopicli. I2C
 bus input/output error on read word. Check bus? Check connection?\)".); just
 ignore it at this point!
@@ -651,14 +652,17 @@ Good luck!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%3 Pi Models: A, A+, B, B+, 2/B+, Zero (NOT the 3!)
+%3 Pi Models: A, A+, B, B+, 2/B+, Zero, 3 (low current only!)
 
 MoPi will work fine with the Raspberry Pi models A, B, the
 %(http://www.raspberrypi.org/introducing-raspberry-pi-model-b-plus/, Model B
-Plus Pi), the A+, and the Model B 2. It will also run the Pi Zero, but it
-%(/posts/2016/12/19/good-news-and-bad/, won't run the Pi 3).
-If you're a stickler for detail you may want to shim the terminal connector to
-raise it over the CPU in its new position on the Model 2 and the A+.
+Plus Pi), the A+, and the Model B 2. It will also %(/posts/2016/04/01/zero/,
+run the Pi Zero), but it
+%(/posts/2016/12/19/good-news-and-bad/, only runs the Pi 3 at low current
+levels). If you're a stickler for detail you may want to shim the terminal
+connector to raise it over the CPU in its new position on the Model 2 and the
+A+. (MoPi++, version 5, scheduled for release in 2017, is specifically
+designed to support the Pi 3.)
 
 And %(/posts/2015/02/06/mopi-running-pi-2, here's MoPi on the Pi 2)! (Why
 didn't they call it the Model C though?!) The Pi 2 was released in February
@@ -1185,12 +1189,12 @@ do we know what the chemistry is? Two ways:
 - We have %(#default-profiles, two built-in defaults), one for 8 NiMH cells
   (which is the battery pack that we're supplying to backers who requested
   one), and one for 8   Alkaline non-rechargeables. The latter is what MoPi
-  will assume when running out of the box; the former is activated by
-  removing the on-board jumper provided for the purpose%footnote(Configuration
-  provided by the user overrides the jumper for the current power cycle --
-  and beyond, when simbamon is running as the daemon will persist the config
-  values. The firmware reads the jumper at each power up and initializes the
-  cut-off points with Ni-MH or Alkaline values.).
+  will assume when running out of the box; the former is activated by removing
+  the on-board jumper provided for the purpose%footnote(Configuration provided
+  by the user overrides the jumper for the current power cycle -- and beyond,
+  when simbamon is running as the daemon it will persist the config values.
+  The firmware reads the jumper at each power up and initializes the cut-off
+  points with Ni-MH or Alkaline values.).
 - You tell us! To this end we have developed a configuration UI on the Pi,
   which is the last piece in our four part software puzzle.
 
@@ -1648,7 +1652,7 @@ cron) on the Pi activating briefly before going back to being an idle process.
 Let's look at a less ideal scenario. Two sets of the same batteries connected
 to a Model A, but this time they're old. They've been through at least a dozen
 or two recharge cycles. There's USB Ethernet%footnote(This is an old USB 1.1
-device, which means it's current draw is limited by the spec. It's not too too
+device, which means it's current draw is limited by the spec. It's not too
 high.) with an active SSH connection. What happens now?
 %image(images/mopi/graphs/mopia2.16old.usbethernet.png)
 

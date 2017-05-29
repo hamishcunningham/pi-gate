@@ -73,11 +73,15 @@ Implications:
 - we can only support these use cases with specific defined battery
   configurations
 - configurations requiring external charging are excluded (which rules out the
-  8x NiMH holder configuration, for example)
-- we should support several configurations of different weight -- a user may
-  want to power a whole laptop rig and have plenty of space for heavy
-  batteries, or just power a Model A+ with a small LCD and a few buttons on it
-  for a music player, for example)
+  8x NiMH holder configuration, for example, unless we manage to build in a
+  specific charger for that configuration)
+- we should support several combined battery/board configurations of different
+  weight -- a user may want to power a whole laptop rig and have plenty of
+  space for heavy batteries, or just power a Model A+ with a small LCD and a
+  few buttons on it for a music player, for example)
+
+Another common use case is in-car; in which case the ability to track the
+vehicular power supply is important.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -109,7 +113,7 @@ big suppliers are working in similar directions.
 The main choice for us is between
 
 # an integrated board that combines both circuitry from MoPi and from the
-  Würth, or
+  Würth demo boards, or
 # a composite device that includes a MoPi and a 3rd-party receiver-side coil
   as separate circuits 
 
@@ -182,26 +186,28 @@ underlying flexible engine that we have in MoPi Classic.
 # To support the maximum number of boxes and combinations with other boards a 
   separate "bus board" PCB that duplicates the GPIO pins looks like a good
   solution. This could be arranged in both horizontal and vertical versions,
-  with 2-way and 3-way options, and variants for the Model A/B and for the B+. 
+  with 2-way and 3-way options.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %1 Candidate Requirements
 
-*All Pi models.* Improve support for the B+ by avoiding resting on C1.
-Continue to support the Models A and B. Support the Compute Module (though
-this is not yet a major use case, it is likely to increase in future). This
-means:
+*All Pi models.* Improve support for the 3 by avoiding resting on C1 (is this
+still an issue with the latest boards?). Continue to support the Models A, B,
+B+ and Zero. Support the Compute Module (though this is not yet a major use
+case, it is likely to increase in future). This means:
 
-- 2A max output. (The B+ will supply close to 2A over its USB connections, and
-  also requires power for other components.)
+- 2.5A max output. (The 3 will supply close to 2A over its USB connections,
+  and also requires power for other components.)
 - More flexible / lower cost GPIO connection. We need only 6 pins now, and
   might use a small low-profile connector coupled with an optional "bus board"
   to allow stacking of additional boards as required (with versions for both
-  A/B and B+). For better ground connectivity we might also go with 10 pins.
+  A/B/B+, 3 and Zero). For better ground connectivity we might also go with 10
+  pins.
 - For the compute module we should copy the open developer host board and add
   MoPi functionality to it.
-- Switch and LED's to be side-facing (to support both A/B and B+), with
+- Switch and LED's to be side-facing (to support both A/B and B+/3), with
   enhanced remoting options.
+- HAT.
 
 *5V input.* If we support 5V input then we can support wireless charging, and
 more battery pack configurations. If we support input voltages down to 3.7V we
