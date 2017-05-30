@@ -298,12 +298,15 @@ The tool operates in the same way as the Raspberry Pi's configuration tool
 supplies, and then:
 
 - _Type of supply_. This is one of *rechargeable battery*, *non-rechargeables*
-  (like standard Alkaline batteries), or *non-battery* (like an AC adapter).
+  (like standard Alkaline batteries), or *non-battery* (like an AC adapter, or
+  50kW wind turbine, or hydoelectric dam, or electrical delusions of
+  grandeur).
 - _Number of cells_. This is the *number of individual battery cells* in your
-  supply. Note that some batteries incorporate several cells -- e.g. a9V PP3
+  supply. Note that some batteries incorporate several cells -- e.g. a 9V PP3
   has 6 cells internally. If you're not using batteries select "1". We shipped
-  out sets of 8 NiMH batteries, you would select 8 here.
-- _Battery chemistry_. The *type of battery* you're connecting. For example 
+  out sets of 8 NiMH batteries; if you were using those you would select 8
+  here.
+- _Battery chemistry_. The *type of battery* you're connecting. For example
   "Alkaline" or "NiMH" (or "N/A" for non-battery supplies).
 
 After entering this data the tool will give details of the values it has
