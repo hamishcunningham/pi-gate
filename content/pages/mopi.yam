@@ -390,7 +390,7 @@ allow fitting of a remote power switch.
 
 If you want to use MoPi in combination with another Pi add-on board (e.g.
 AirPi) you need a) to have ordered the version with stackable header pins, and
-b) to remove the plastic collar that the board is shipped with the prevent
+b) to remove the plastic collar that the board is shipped with to prevent
 bending. Then the other board will just slip down onto the MoPi headers just
 like those on the Pi.
 
