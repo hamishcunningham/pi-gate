@@ -9,7 +9,7 @@ about.html download.html basics.html schools.html notipi.html legocases.html \
 hardware.html mopi.html blinkip.html snowcam.html package.html pibrush.html \
 index.html ks1.html get-mopi.html mopi-v5.html festival.html adverts.html \
 contact.html
-NO_META_PAGES=piroomba.html
+NO_META_PAGES=piroomba.html mopi2.html
 DRAFT_PAGES=press-14.html airpi-files
 
 # prepare stuff specific to this site
