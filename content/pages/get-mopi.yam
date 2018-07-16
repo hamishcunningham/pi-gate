@@ -1,11 +1,12 @@
 How to Order a MoPi
 
-%1* I want %(/pages/mopi.html, a MoPi)!
+%1* I want %(/pages/mopi2, a MoPi)!
 (Hot-swap mobile and 24/7 power for the Pi.)
 
 %2* MoPi is now %(http://shop.pimoroni.com/products/mopi-mobile-pi-power,
-available from Pimoroni),
+available from Pimoroni)
 
+%/*
 %%% %2* from %(http://shop.cyntech.co.uk/products/mopi-mobile-power, Cyntech),
 
 %2* from %(http://www.buyapi.ca/product/mopi-mobile-pi-power-stackable-version/, Buy a Pi.ca) in Canada,
@@ -21,5 +22,6 @@ Pi-Shop.ch), and
 %%% You can also join our pre-orders and future announcements list here:
 
 %%% PREORDER XXX COMMENTED OUT XXX FORM HERE
+%*/
 
 %meta(summary=Hot-Swap Mobile Power for the Pi)
