@@ -6,10 +6,10 @@ SITE=pi.gate.ac.uk
 # list of pages etc. ########################################################
 STANDARD_PAGES=\
 about.html download.html basics.html schools.html notipi.html legocases.html \
-hardware.html mopi.html blinkip.html snowcam.html package.html pibrush.html \
+hardware.html blinkip.html snowcam.html package.html pibrush.html \
 index.html ks1.html get-mopi.html mopi-v5.html festival.html adverts.html \
-contact.html
-NO_META_PAGES=piroomba.html mopi2.html
+contact.html mopi1.html
+NO_META_PAGES=piroomba.html mopi.html
 DRAFT_PAGES=press-14.html airpi-files
 
 # prepare stuff specific to this site
@@ -22,6 +22,7 @@ local-prepare:
 	  done; \
           cp basics.html ../pages
 	@cp $(INPUTDIR)/piroomba/piroomba.html $(INPUTDIR)/pages
+	@cp $(INPUTDIR)/mopi2/mopi.html $(INPUTDIR)/pages
 	cd $(INPUTDIR)/pages && $(Y2H) -Fna && \
           $(EPI) $(STANDARD_PAGES) && $(EPI) -n $(NO_META_PAGES)
 
@@ -52,6 +53,8 @@ local-finalise:
             `find output -name '*.html'`; \
         rm $${TMPF} $${TMPF2} $${TMPF3} $${TMPF4} $${TMPF5} $${TMPF6} $${TMPF7}
 
+#	mv output/pages/mopi.html output/pages/mopi.html
+
 # make any necessary local mods to the print tree
 local-print:
 	@cd $(OUTPUTDIR); for f in `find . -name '*.html'`; do \
@@ -63,4 +66,5 @@ local-print:
               -e '/<div id="[a-z]*[mM]iddleColumn" class="yui3-u-1-/,/<.body>/d' \
               -e '/<div id="disqus_thread">/,/<.body>/d' \
             >print/$${f}; \
-        done
+        done; \
+        cp -a images print; cp -a pages/images print/pages
