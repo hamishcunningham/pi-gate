@@ -19,7 +19,7 @@ GROOVY=groovy
 JAVA=java
 SCRIPTS=$(BASEDIR)/bin
 Y2H=JAVA_OPTS=-Dfile.encoding=UTF-8 $(SCRIPTS)/yam2html
-PDC=pandoc -S -t html5 --template=bin/html.html5 --data-dir=content --standalone
+PDC=pandoc -S -t html5 --template=$(SCRIPTS)/html.html5 --data-dir=content --standalone
 RUNJINJA=$(SCRIPTS)/run-jinja.py
 EPI=$(SCRIPTS)/enpelicanise.sh
 GETMETAS=$(SCRIPTS)/get-pdc-metas.sh
@@ -112,7 +112,7 @@ s3upload: fix-rss-feeds minify
 	s3cmd sync -r output/ --exclude '.htaccess' --exclude='.htpasswd' \
           --progress --delete-removed s3://$(SITE)/ \
           |tee /tmp/s3upload-files.txt; \
-          cat /tmp/s3upload-files.txt |bin/get-upload-list.sh > s3upload-files.txt
+          cat /tmp/s3upload-files.txt |$(SCRIPTS)/get-upload-list.sh > s3upload-files.txt
 	grep 'index.html$$' s3upload-files.txt |sed 's,index.html$$,,' \
           >>s3upload-files.txt
 
@@ -211,7 +211,7 @@ favicon:
 
 # compress html using http://code.google.com/p/htmlcompressor/
 minify:
-	java -jar bin/htmlcompressor-1.5.3.jar --preserve-line-breaks \
+	java -jar $(SCRIPTS)/htmlcompressor-1.5.3.jar --preserve-line-breaks \
           -r output/ -o compressed-output/
 	cd compressed-output && for f in `find . -name '*.html'`; do \
           mv $$f ../output/$${f}; done
