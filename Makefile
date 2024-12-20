@@ -52,6 +52,7 @@ help:
 	@echo '   gateupload            upload the web site via rsync+ssh    '
 	@echo '   s3upload              upload the web site to S3 via s3cmd  '
 	@echo '                         (files listed to s3upload-files.txt) '
+	@echo '   s3upload-simple       sync the web site to S3 via s3cmd    '
 	@echo '                                                              '
 	@echo '   prepare               regenerate the sources               '
 	@echo '   finalise              fixup the generated output           '
